@@ -24,7 +24,6 @@ body {
 
 .maintenance-page {
   background: transparent linear-gradient(180deg, #1D2859 0%, #060812 100%) 0% 0% no-repeat padding-box;
-  position: relative;
 }
 
 .maintenance-page-image {
@@ -32,11 +31,19 @@ body {
 }
 
 .maintenance-input-email {
-  width: 500px;
   box-shadow: 0px 0px 20px #00000029;
 }
 
 .maintenance-input-button {
   background: #348F41 0% 0% no-repeat padding-box;
-  min-width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .maintenance-input-email {
+    font-size: 12px;
+  }
+
+  .maintenance-input-button {
+    font-size: 12px;
+  }
 }

@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export function Maintenance() {
   return (
-    <div className="py-72 flex flex-col lg:flex-row items-center justify-center	maintenance-page">
+    <div className="md:py-72 py-28 flex flex-col lg:flex-row items-center justify-center relative	maintenance-page">
       <Image className="opacity-80 maintenance-page-image" src="/assets/blog/Miaron_0048-149358 (1).jpg" alt="maintenance-page" fill></Image>
-      <h2 className="mb-8 text-4xl md:text-6xl absolute text-white opacity-100">
+      <h2 className="mb-8 text-2m md:text-6xl absolute text-white opacity-100 flex justify-center">
         This webpage will be developed further.
       </h2>
-      <div className="flex-row absolute mt-36">
-        <input className="min-h-16 maintenance-input-email pl-8" placeholder="Enter your email"></input>
-        <button className="min-h-16 maintenance-input-button text-white">NOTIFY US</button>
+      <div className="flex flex-row justify-center absolute md:mt-36 mt-16 lg:w-full">
+        <input className="md:min-h-16 lg:w-1/4 maintenance-input-email block pl-4" placeholder="Enter your email"></input>
+        <button className="md:min-h-16 maintenance-input-button text-white space-x-4 p-1 lg:p-4">NOTIFY US</button>
       </div>
     </div>
   );
