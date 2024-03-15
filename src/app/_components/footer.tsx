@@ -25,9 +25,9 @@ export function Footer() {
       </div>
       <div className="bg-white">
       <div className="logo-section flex flex-row justify-evenly">
-            <Image src="/assets/blog/Jeap-transparent.png" width={300} height={100}></Image>
-            <Image src="/assets/blog/AfricaCDCLogo.png" width={300} height={100}></Image>
-            <Image src="/assets/blog/WHO_Logo.png" width={300} height={100}></Image>
+            <Image src="/assets/blog/Jeap-transparent.png" width={300} height={100} alt="logo"></Image>
+            <Image src="/assets/blog/AfricaCDCLogo.png" width={300} height={100} alt="logo"></Image>
+            <Image src="/assets/blog/WHO_Logo.png" width={300} height={100} alt="logo"></Image>
         </div>
         
       </div>
