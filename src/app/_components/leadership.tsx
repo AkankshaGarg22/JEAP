@@ -30,7 +30,7 @@ export function Leadership() {
 
 const leaderCard = (leaderData: { image: string, title: string, description: string }, key: number) => {
     return <div className="leader min-h-full" key={key}>
-        <Image className="leader-image" src={leaderData.image} width={500} height={700}></Image>
+        <Image className="leader-image" src={leaderData.image} width={500} height={700} alt={leaderData.title + 'image'}></Image>
         <div className="leader-details-box flex flex-col items-center md:pt-8">
             <h2 className="text-white text-base md:text-lg font-bold flex text-center">{leaderData.title}</h2>
             <p className="text-white text-base md:text-lg p-4 flex text-center">{leaderData.description}</p>
