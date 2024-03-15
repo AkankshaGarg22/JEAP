@@ -47,13 +47,33 @@ body {
 .leader-image {
   border-top-left-radius: 200px;
   border-top-right-radius: 200px;
-  height: 50vh;
 }
 
 .leader-details-box {
   background: #1D2859 0% 0% no-repeat padding-box;
   height: 160px;
   max-width: 500px;
+}
+.footer {
+  background-color: #348F41;
+}
+
+.footer-links > p {
+  font-size: 20px;
+}
+
+.social-media-icon {
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+}
+
+.social-media-icon-wrapper {
+  margin: 10px;
+}
+
+.youtube {
+  margin-top: 13px !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -65,7 +85,7 @@ body {
     font-size: 12px;
   }
 
-  .leader-image {
-    height: 25vh;
+  .footer-link {
+    font-size: 16px;
   }
 }
