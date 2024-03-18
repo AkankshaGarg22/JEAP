@@ -118,6 +118,14 @@ body {
   background-color: #fff;
 }
 
+.header img {
+  clip-path: ellipse(53% 92% at 50% 7%);
+}
+
+.header-bar {
+  background: transparent linear-gradient(90deg, #00205C 0%, #348F41 100%) 0% 0% no-repeat padding-box;
+}
+
 @media only screen and (max-width: 600px) {
   .maintenance-input-email {
     font-size: 12px;

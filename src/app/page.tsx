@@ -14,12 +14,12 @@ export default function Index() {
 
   return (
     <main>
-      <Container>
-        {/* <Tabs />
-        <TimeLine /> */}
+      {/* <Container> */}
+        <Tabs />
+        <TimeLine />
         <Resources />
         <Leadership />
-      </Container>
+      {/* </Container> */}
     </main>
   );
 }
