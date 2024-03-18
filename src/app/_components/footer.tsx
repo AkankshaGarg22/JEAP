@@ -39,7 +39,17 @@ export function Footer() {
             <Image src="/assets/blog/WHO_Logo.png" layout="fill" alt="logo-3" className="footer-image"></Image>
           </div>
         </div>
-
+      </div>
+      <div className="bg-white md:px-8">
+        <div className="border-t-2 p-4">
+          <div className="flex flex-row justify-between">
+            <div>All rights reserved</div>
+            <div className="flex flex-row gap-4 md:gap-12">
+              <p>Terms</p>
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
