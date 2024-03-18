@@ -20,16 +20,23 @@ export function Footer() {
               <p className="p-2">LEADERSHIP</p>
             </div>
           </div>
-          <SocialMediaLinks/>
+          <SocialMediaLinks />
         </Container>
       </div>
       <div className="bg-white">
-      <div className="logo-section flex flex-row justify-evenly">
-            <Image src="/assets/blog/Jeap-transparent.png" width={300} height={100} alt="logo"></Image>
-            <Image src="/assets/blog/AfricaCDCLogo.png" width={300} height={100} alt="logo"></Image>
-            <Image src="/assets/blog/WHO_Logo.png" width={300} height={100} alt="logo"></Image>
+        <div className="logo-section flex flex-row justify-evenly relative w-full">
+          <div>
+            <Image src="/assets/blog/Jeap-transparent.png" layout="fill" className="footer-image"></Image>
+          </div>
+          <div>
+            <Image src="/assets/blog/AfricaCDCLogo.png" layout="fill" className="footer-image"></Image>
+
+          </div>
+          <div>
+            <Image src="/assets/blog/WHO_Logo.png" layout="fill" className="footer-image"></Image>
+          </div>
         </div>
-        
+
       </div>
     </footer>
   );

@@ -54,11 +54,12 @@ body {
   height: 160px;
   max-width: 500px;
 }
+
 .footer {
   background-color: #348F41;
 }
 
-.footer-links > p {
+.footer-links>p {
   font-size: 20px;
 }
 
@@ -74,6 +75,17 @@ body {
 
 .youtube {
   margin-top: 13px !important;
+}
+
+.logo-section > div {
+  position: unset !important;
+}
+
+.footer-image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
 
 @media only screen and (max-width: 600px) {
