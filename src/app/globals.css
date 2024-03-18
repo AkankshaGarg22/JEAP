@@ -77,8 +77,24 @@ body {
   margin-top: 13px !important;
 }
 
-.logo-section > div {
+.logo-section>div {
   position: unset !important;
+}
+
+.email-section input {
+  background: none;
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+}
+
+.email-section .submit-button {
+  margin: 20px auto;
+  background: white;
+  border-radius: 100px;
+  padding: 10px;
+  font-weight: 600;
+  color: #348F41;
+  width: 190px;
 }
 
 .footer-image {
@@ -86,6 +102,13 @@ body {
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+}
+
+.bg-custom {
+  height: 350px;
+  position: relative;
+  margin-top: -5px;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -99,5 +122,8 @@ body {
 
   .footer-link {
     font-size: 16px;
+  }
+  .bg-custom {
+    height: 100px;
   }
 }

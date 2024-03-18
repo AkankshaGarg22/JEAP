@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Maintenance></Maintenance>
-      <div className="footer py-16 flex flex-col lg:flex-row items-center">
+      <div className="footer pt-16 flex flex-col lg:flex-row items-center">
         <Container>
           <div className="flex flex-col p-4 lg:gap-20 lg:flex-row">
             <div className="footer-links text-white ">
@@ -23,17 +23,20 @@ export function Footer() {
           <SocialMediaLinks />
         </Container>
       </div>
+      <div className="bg-custom">
+        <Image src="/assets/blog/Group 3031.png" layout="fill" alt="image background"></Image>
+      </div>
       <div className="bg-white">
         <div className="logo-section flex flex-row justify-evenly relative w-full">
           <div>
-            <Image src="/assets/blog/Jeap-transparent.png" layout="fill" className="footer-image"></Image>
+            <Image src="/assets/blog/Jeap-transparent.png" layout="fill" alt="logo" className="footer-image"></Image>
           </div>
           <div>
-            <Image src="/assets/blog/AfricaCDCLogo.png" layout="fill" className="footer-image"></Image>
+            <Image src="/assets/blog/AfricaCDCLogo.png" layout="fill" alt="logo-2" className="footer-image"></Image>
 
           </div>
           <div>
-            <Image src="/assets/blog/WHO_Logo.png" layout="fill" className="footer-image"></Image>
+            <Image src="/assets/blog/WHO_Logo.png" layout="fill" alt="logo-3" className="footer-image"></Image>
           </div>
         </div>
 
