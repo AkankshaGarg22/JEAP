@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Header = () => {
   return (
-    <div className="header h-[900px] min-h-[900px] relative ">
-      <div className="header-bar flex justify-between p-[10px] absolute z-[100] left-[25%] top-[5%] rounded-[50px] md:min-w-[900px]">
+    <div className="header relative">
+      <div className="header-bar mt-10 flex justify-between p-[10px] absolute z-[100] left-[25%] top-[5%] rounded-[50px] md:min-w-[900px]">
         <div className="header-logos flex flex-row">
           <div className="p-4">
             <Image src="/assets/blog/home.png" height={40} width={40} alt="home-logo"></Image>
