@@ -41,11 +41,11 @@ const config: Config = {
       },
       keyframes: {
         changeImage: {
-          '0%': { backgroundImage: 'url("/assets/blog/Header-image.jpg")' },
+          '0%': { backgroundImage: 'url("/assets/blog/header.jpg")' },
           '25%': { backgroundImage: 'url("/assets/blog/AK402864-145979.jpg")' },
           '50%': { backgroundImage: 'url("/assets/blog/Guinea_Hawkey_ebola_76657.jpg")' },
           '75%': { backgroundImage: 'url("/assets/blog/WHO-PANOS-PAKISTAN-47.JPG")' },
-          '100%': { backgroundImage: 'url("/assets/blog/Header-image.jpg")' },
+          '100%': { backgroundImage: 'url("/assets/blog/header.jpg")' },
         }
       }
     },

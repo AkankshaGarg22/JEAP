@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="399.532" height="512.865" viewBox="0 0 399.532 512.865">
+  <defs>
+    <clipPath id="clip-path">
+      <line id="Line_191" data-name="Line 191" y2="1.122" fill="none" stroke="#1a5632" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_3052" data-name="Group 3052" transform="translate(5711.378 -4736.771)">
+    <line id="Line_213" data-name="Line 213" y1="296.862" transform="translate(-5311.846 4769.862) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_13615" data-name="Path 13615" d="M181.165,42.225V32.175L156.479,16.629H25.6L0,0" transform="translate(-5667.653 4776.169) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_212" data-name="Line 212" y1="296.862" transform="translate(-5311.846 4924.013) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_214" data-name="Line 214" y1="296.862" transform="translate(-5311.846 5058.723) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_13616" data-name="Path 13616" d="M69.549,43.092V29.442L38.464,11.1,1.791,7.737-5.857-2.107" transform="translate(-5666.786 4925.29) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_13617" data-name="Path 13617" d="M35.568,131.027V114.959L0,92.388H67.549l9.565-6.449" transform="translate(-5578.851 4985.547) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_13618" data-name="Path 13618" d="M13.45,131.027v-19.9L0,103.875H202.538l10.76-7.054V-263.5" transform="translate(-5578.851 5034.838) rotate(90)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    <g id="Layer_9" data-name="Layer 9" transform="translate(-5709.878 4736.771) rotate(90)">
+      <g id="Group_1621" data-name="Group 1621" transform="translate(181.714)" style="isolation: isolate">
+        <g id="Group_1620" data-name="Group 1620">
+          <g id="Group_1619" data-name="Group 1619" clip-path="url(#clip-path)">
+            <path id="Path_8689" data-name="Path 8689" d="M-2730.6,785.2" transform="translate(2730.605 -784.639)" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="1"/>
+          </g>
+        </g>
+      </g>
+      <line id="Line_192" data-name="Line 192" x2="312.112" fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
