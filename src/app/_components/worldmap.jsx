@@ -20,31 +20,32 @@ const WorldMap = () => {
   return (
     <div className="min-h-screen flex flex-col gap-1">
       <div className="!h-1/2 !w-full">
-      <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{
-          scale: 100,
-        }}
-      >
-        {/* <Sphere stroke="#E4E5E6" strokeWidth={0.5} /> */}
-        {/* <Graticule stroke="#E4E5E6" strokeWidth={0.5} /> */}
         {data.length > 0 && (
-          <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                const d = data.find((s) => s.ISO3 === geo.id);
-                return <Geography key={geo.rsmKey} geography={geo} fill={d ? colorScale(d["2017"]) : "#F5F4F6"} />;
-              })
-            }
-          </Geographies>
+          <ComposableMap
+            projection="geoMercator"
+            projectionConfig={{
+              scale: 100,
+            }}
+          >
+            {/* <Sphere stroke="#E4E5E6" strokeWidth={0.5} /> */}
+            {/* <Graticule stroke="#E4E5E6" strokeWidth={0.5} /> */}
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  const d = data.find((s) => s.ISO3 === geo.id);
+                  return <Geography key={geo.rsmKey} geography={geo} fill={d ? colorScale(d["2017"]) : "#F5F4F6"} />;
+                })
+              }
+            </Geographies>
+          </ComposableMap>
         )}
-      </ComposableMap>
       </div>
-    <div className="">
-      <p>
-      The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and humanitarian crises, and increasingly climate-related disasters.
-      </p>
-    </div>
+      <div className="">
+        <p>
+          The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
+          humanitarian crises, and increasingly climate-related disasters.
+        </p>
+      </div>
     </div>
   );
 };
