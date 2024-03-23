@@ -7,9 +7,9 @@ import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-
 const WorldMap = () => {
   const geoUrl = "/features.json";
 
-  const colorScale = scaleLinear().domain([0.29, 0.68]).range(["#006400", "#90EE90"]);
+  const colorScale = scaleLinear<string>().domain([0.29, 0.68]).range(["#006400", "#90EE90"]);
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
     csv(`/vulnerability.csv`).then((data) => {
@@ -33,7 +33,7 @@ const WorldMap = () => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const d = data.find((s) => s.ISO3 === geo.id);
-                  return <Geography key={geo.rsmKey} geography={geo} fill={d ? colorScale(d["2017"]) : "#F5F4F6"} />;
+                  return <Geography key={geo.rsmKey} geography={geo} fill={d ? `${colorScale(d["2017"])}` : "#F5F4F6"} />;
                 })
               }
             </Geographies>
