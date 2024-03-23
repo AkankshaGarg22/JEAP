@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Modal from "./modal";
+import { PopUpState, TimeLineItem } from "@/interfaces/timeline";
 
 export function TimeLine() {
   const [selectedYear, setSelectedYear] = useState(2024);
+  const [popUp, setPopUp] = useState<PopUpState>({ isOpen: false, item: null });
 
   const backgroundImageUrl = "/assets/blog/WHO_Ghana-151560.jpg";
-  const items = [
+  const items: TimeLineItem[] = [
     {
       key: 1,
       year: 2023,
@@ -24,6 +27,7 @@ export function TimeLine() {
         "The JEAP launched during the 2023 World Health Assembly, now unites partners to address critical challenges in preparedness, detection, and response across six programmatic areas. AVoHC-SURGE, a product of Africa CDC and WHO collaboration, enables African nations to respond rapidly (within 24-48 hours) to health emergencies and humanitarian crises. It welcomes stakeholders from humanitarian, development, and government agencies, ensuring life-saving care reaches all. So far, 9 countries have utilized AVoHC-SURGE members for local responses (Botswana, Mauritania, Niger, Togo, Congo, DRC, Rwanda, Ethiopia, Tanzania), while 5 countries have deployed them internationally (Botswana, Congo, DRC, Rwanda, Ethiopia).",
     },
   ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <div className="text-center p-3">
@@ -58,7 +62,10 @@ export function TimeLine() {
                       <h1 className="text-xl font-bold mb-2">{item.cardTitle}</h1>
                       <h1 className="text-lg my-2">{item.cardSubtitle}</h1>
                       <p className="hidden md:block">{item.cardDetailedText}</p>
-                      <button className="md:hidden border-2 p-1">Read More</button>
+                      <button className="md:hidden border-2 p-1" onClick={() => setPopUp({isOpen : true, item : item})}>
+                        Read More
+                      </button>
+                      
                     </div>
                   ) : null}
                 </div>
@@ -67,6 +74,7 @@ export function TimeLine() {
           </div>
         </div>
       </div>
+      {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp}  />}
     </div>
   );
 }
