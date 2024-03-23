@@ -7,12 +7,14 @@ import Resources from "./_components/resources";
 import Operation from "./_components/operation";
 import { Tabs } from "./_components/tabs";
 import { TimeLine } from "./_components/time-line";
+import TurnAroundTime from "./_components/turnaround-time";
 
 export default function Index() {
   return (
     <main>
       <Landing />
       <Mission />
+      <TurnAroundTime />
       <WorldMap />
       <Tabs />
       <TimeLine />

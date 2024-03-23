@@ -42,12 +42,12 @@ export function Footer() {
       </div>
       <div className="bg-white md:px-8">
         <div className="border-t-2 p-4">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-center">
             <div>All rights reserved</div>
-            <div className="flex flex-row gap-4 md:gap-12">
+            {/* <div className="flex flex-row gap-4 md:gap-12">
               <p>Terms</p>
               <p>Privacy Policy</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
