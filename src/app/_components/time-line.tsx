@@ -36,7 +36,7 @@ export function TimeLine() {
       <div className="relative h-[720px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#348F41] opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
 
           {/* Timeline */}
           <div className="absolute inset-0 flex items-center justify-center">

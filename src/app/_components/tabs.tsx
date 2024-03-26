@@ -51,7 +51,7 @@ export function Tabs() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-evenly">
       <div className="text-center md:p-3">
-        <h2 className="text-[#00205C] text-6xl font-bold my-4">THE JEAP VISION</h2>
+        <h2 className="text-[#1A5632] text-6xl font-bold my-4">THE JEAP VISION</h2>
         <p className="font-medium md:px-48 py-4">
           At the heart of the JEAP is a vision of 'One Africa for Health Security.' This vision outlines six collaboration areas and provides a comprehensive framework for coordinated action, to
           safeguard African populations from public health emergencies.
@@ -59,9 +59,9 @@ export function Tabs() {
       </div>
       {/* tab */}
       <div className="hidden md:block">
-        <div className="bg-[#00205C] flex justify-evenly grow">
+        <div className="bg-[#1A5632] flex justify-evenly grow">
           {Menu.map((item) => (
-            <button key={item.id} className={active === item.id ? " text-[#FFFFFF] px-8 py-4 flex-auto"  : "bg-[#F1F1F3] text-[#00205C] border border-r-1 flex-auto"} onClick={() => handleClick(item.id)}>
+            <button key={item.id} className={active === item.id ? " text-[#FFFFFF] px-8 py-4 flex-auto font-semibold"  : "bg-[#F1F1F3] text-[#1A5632] border border-r-1 flex-auto font-semibold"} onClick={() => handleClick(item.id)}>
               {item.title}
             </button>
           ))}

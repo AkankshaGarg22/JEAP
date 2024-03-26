@@ -56,9 +56,9 @@ export function TurnAroundTime() {
     }, [outerProgress, shouldOuterFill])
 
     return (
-        <div className="md:py-28 py-16 flex flex-col lg:flex-row items-center justify-center relative">
+        <div className="flex flex-col lg:flex-row items-center justify-center relative">
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
-            <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#348F41] opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
 
             {/* <div className="flex justify-center"> */}
             <svg className="relative rotate-180" viewBox="0 0 10 10" >
@@ -68,7 +68,7 @@ export function TurnAroundTime() {
                 <use xlinkHref="#circle" stroke="#00205C" strokeDasharray="0,10.47,8.38,30" >
                 </use>
                 <use xlinkHref="#circle" stroke="#F1F1F3" strokeDasharray="0,2.09,8.38,30" />
-                <use xlinkHref="#circle" stroke="#348F41" strokeDasharray="2.09,16.75,6.3" />
+                <use xlinkHref="#circle" stroke="#1A5632" strokeDasharray="2.09,16.75,6.3" />
 
             </svg>
             <div className="absolute w-[300px] h-[300px] bg-white">
@@ -93,7 +93,7 @@ export function TurnAroundTime() {
                                                     value={innerPercentage}
                                                     styles={buildStyles({
                                                         pathTransitionDuration: 1.15,
-                                                        pathColor: "#348F41",
+                                                        pathColor: "#1A5632",
                                                         trailColor: 'white'
                                                     })}
                                                     strokeWidth={20}

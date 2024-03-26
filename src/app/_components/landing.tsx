@@ -1,5 +1,5 @@
 export default function Landing() {
-  const backgroundImageUrl = "/assets/blog/Header-image.jpg";
+  const backgroundImageUrl = "/assets/blog/Header_image.png";
   return (
     <div className="min-h-screen">
       <section

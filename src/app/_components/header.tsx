@@ -7,15 +7,15 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div className="header relative ">
-      <div className="header-bar flex justify-between p-[10px] absolute z-[100] md:left-[25%] top-[5%] rounded-[50px] md:min-w-[900px]">
-        <div className="header-logos flex flex-row">
+    <div className="header relative">
+      <div className="header-bar flex justify-between p-[10px] absolute z-[100] md:left-[22%] top-[15%] rounded-[50px] md:min-w-[900px] m-10">
+        <div className="header-logos flex flex-row gap-5">
           <div className="p-4">
             <Image src="/assets/blog/home.png" height={40} width={40} alt="home-logo"></Image>
           </div>
-          <div>
-            <Image src="/assets/blog/Jeap-transparent.png" height={180} width={180} alt="home-logo"></Image>
-          </div>
+         <div className="p-2 pt-3">
+         <Image src="/assets/blog/JEAP-white.png" height={120} width={120} alt="home-logo"></Image>
+         </div>    
         </div>
         <div className="header-links flex flex-row gap-4 md:gap-8 md:p-5">
           <h2 className="font-semibold text-white">LEADERSHIP</h2>
@@ -24,15 +24,6 @@ const Header = () => {
         </div>
 
       </div>
-
-      {/* <Carousel>
-        <div>
-          <Image src="/assets/blog/Header-image.jpg" width={0} height={0} alt="header" />
-        </div>
-        <div></div>
-      </Carousel> */}
-
-
     </div>
   );
 };

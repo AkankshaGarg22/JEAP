@@ -47,10 +47,10 @@ export function SocialMediaLinks() {
             </div>
         </div>
 
-        <div className="email-section flex flex-col">
+        {/* <div className="email-section flex flex-col">
             <input placeholder="Email ID">
             </input>
             <button className="submit-button">Submit</button>
-        </div>
+        </div> */}
     </div>
 }

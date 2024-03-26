@@ -35,18 +35,13 @@ body {
 }
 
 .maintenance-input-button {
-  background: #348F41 0% 0% no-repeat padding-box;
+  background: #1A5632 0% 0% no-repeat padding-box;
 }
 
 .leadership-header {
   font-size: 56px;
   color: #1D2859;
   font-weight: 800;
-}
-
-.leader-image {
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
 }
 
 .leader-details-box {
@@ -56,7 +51,8 @@ body {
 }
 
 .footer {
-  background-color: #348F41;
+  background: transparent linear-gradient(180deg, #1A5632 99%, #00205C 100%) 0% 0% no-repeat padding-box;
+
 }
 
 .footer-links>p {
@@ -93,7 +89,7 @@ body {
   border-radius: 100px;
   padding: 10px;
   font-weight: 600;
-  color: #348F41;
+  color: #1A5632;
   width: 190px;
 }
 
@@ -118,12 +114,8 @@ body {
   background-color: #fff;
 }
 
-.header img {
-  clip-path: ellipse(53% 92% at 50% 7%);
-}
-
 .header-bar {
-  background: transparent linear-gradient(90deg, #00205C 0%, #348F41 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(270deg, #00205C 0%, #13483D 52%, #1A5632 100%) 0% 0% no-repeat padding-box;
 }
 
 @media only screen and (max-width: 600px) {
