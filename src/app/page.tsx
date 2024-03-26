@@ -14,8 +14,8 @@ export default function Index() {
     <main>
       <Landing />
       <Mission />
-      <TurnAroundTime />
       <WorldMap />
+      <TurnAroundTime />
       <Tabs />
       <TimeLine />
       <Operation />
