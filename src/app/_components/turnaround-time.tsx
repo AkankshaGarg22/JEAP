@@ -73,7 +73,7 @@ export function TurnAroundTime() {
             </svg>
             <div className="absolute w-[300px] h-[300px] bg-white">
                 <VisibilitySensor>
-                    {({ isVisible }) => {
+                    {(isVisible: any) => {
                         const Outerpercentage = isVisible && innerProgress === 100 ? outerProgress : 0;
                         return (
                             <CircularProgressbarWithChildren value={Outerpercentage} styles={buildStyles({
@@ -86,7 +86,7 @@ export function TurnAroundTime() {
                                 <div className="absolute w-[200px] h-[200px]">
 
                                     <VisibilitySensor>
-                                        {({ isVisible }) => {
+                                        {(isVisible: any) => {
                                             const innerPercentage = isVisible ? innerProgress : 0;
                                             return (
                                                 <CircularProgressbarWithChildren
