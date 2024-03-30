@@ -5,7 +5,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import React, { useState } from 'react';
 import { isMobile } from "./utility/helper";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Dropdown from "./dropdown";
 
 const Header = () => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
