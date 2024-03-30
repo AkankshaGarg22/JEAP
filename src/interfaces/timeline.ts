@@ -1,6 +1,6 @@
 export interface TimeLineItem {
   key: number;
-  year: number;
+  year: string;
   cardTitle: string;
   cardSubtitle: string;
   cardDetailedText: string;
