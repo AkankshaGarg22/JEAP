@@ -16,9 +16,9 @@ const LeadersArray = [{
 
 export function Leadership() {
     return (
-        <div className="flex flex-col items-center pb-8 md:p-16">
-            <h1 className="leadership-header md:p-16">LEADERSHIP</h1>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-28 sm:items-center">
+        <div id="leadership" className="flex flex-col items-center pb-8 md:p-16">
+            <h1 className="font-bold p-5 text-black md:text-[56px] text-[28px] md:p-16">LEADERSHIP</h1>
+            <div className="flex flex-col md:flex-row gap-8 md:gap-28 sm:items-center">
                 {LeadersArray.map((leader, index) => {
                     return leaderCard(leader, index)
                 })}

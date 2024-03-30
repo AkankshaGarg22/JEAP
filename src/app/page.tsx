@@ -8,19 +8,22 @@ import Operation from "./_components/operation";
 import { Tabs } from "./_components/tabs";
 import { TimeLine } from "./_components/time-line";
 import TurnAroundTime from "./_components/turnaround-time";
+import ErrorBoundary from "./_components/ErrorBoundary";
 
 export default function Index() {
   return (
-    <main>
-      <Landing />
-      <Mission />
-      <WorldMap />
-      <TurnAroundTime />
-      <Tabs />
-      <TimeLine />
-      {/* <Operation /> */}
-      <Resources />
-      <Leadership />
-    </main>
+      <main>
+         <ErrorBoundary>
+        <Landing />
+        <Mission />
+        <WorldMap />
+        <TurnAroundTime />
+        <Tabs />
+        <TimeLine />
+        {/* <Operation /> */}
+        <Resources />
+        <Leadership />
+        </ErrorBoundary>
+      </main>
   );
 }

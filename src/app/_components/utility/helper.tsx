@@ -1,4 +1,5 @@
 // useIsMobile.js
+"use client"
 import { useMediaQuery } from '@react-hook/media-query';
 
 export const isMobile = () => {
