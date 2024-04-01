@@ -1,7 +1,7 @@
 import React from "react";
 
 const Mission = () => {
-  const backgroundImageUrl = "/assets/blog/bgmission.jpg";
+  const backgroundImageUrl = "/assets/blog/bgmission.svg";
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-auto bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
       <div className="flex flex-1 flex-col items-center justify-center text-center text-white" >

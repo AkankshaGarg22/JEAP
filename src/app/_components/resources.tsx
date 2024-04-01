@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Resources() {
 
   return (
-    <div className="md:pt-72 py-8 relative">
+    <div id="resources" className="md:pt-72 py-8 relative">
       <Image className="" src="/assets/blog/Resoruces_Background.png" alt="resource-page" fill></Image>
       <div className="flex flex-col lg:flex-row items-center justify-center ">
         <h2 className="text-2m md:text-6xl absolute text-white opacity-100 flex justify-center font-extrabold md:top-20">

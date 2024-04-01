@@ -12,8 +12,8 @@ import ErrorBoundary from "./_components/ErrorBoundary";
 
 export default function Index() {
   return (
-      <main>
-         <ErrorBoundary>
+    <main>
+      <ErrorBoundary>
         <Landing />
         <Mission />
         <WorldMap />
@@ -23,7 +23,7 @@ export default function Index() {
         {/* <Operation /> */}
         <Resources />
         <Leadership />
-        </ErrorBoundary>
-      </main>
+      </ErrorBoundary>
+    </main>
   );
 }

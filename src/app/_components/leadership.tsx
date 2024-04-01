@@ -16,9 +16,9 @@ const LeadersArray = [{
 
 export function Leadership() {
     return (
-        <div id="leadership" className="flex flex-col items-center pb-8 md:p-16">
+        <div className="flex flex-col items-center pb-8 md:p-16">
             <h1 className="font-bold p-5 text-black md:text-[56px] text-[28px] md:p-16">LEADERSHIP</h1>
-            <div className="flex flex-col md:flex-row gap-8 md:gap-28 sm:items-center">
+            <div id="leadership" className="flex flex-col md:flex-row gap-8 md:gap-28 sm:items-center">
                 {LeadersArray.map((leader, index) => {
                     return leaderCard(leader, index)
                 })}
@@ -29,7 +29,7 @@ export function Leadership() {
 
 const leaderCard = (leaderData: { image: string, title: string, description: string }, key: number) => {
     return <div className="leader min-h-full flex flex-col items-center justify-center" key={key}>
-        <Image className="max-h-[250px] border-[10px] border-[#1A5632] rounded-full" src={leaderData.image} width={250} height={0} alt={leaderData.title + 'image'}></Image>
+        <Image className="max-h-[180px] max-w-[180px] md:max-h-[250px] md:max-w-[250px] border-[10px] border-[#1A5632] rounded-full" src={leaderData.image} width={250} height={0} alt={leaderData.title + 'image'}></Image>
         <div className="flex flex-col items-center md:pt-8">
             <h2 className="text-[#00205C] text-base md:text-lg font-bold flex text-center">{leaderData.title}</h2>
             <p className="text-[#00205C] text-base md:text-lg p-4 flex text-center">{leaderData.description}</p>

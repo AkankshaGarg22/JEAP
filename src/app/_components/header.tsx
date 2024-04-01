@@ -11,12 +11,12 @@ const Header = () => {
 
   return (
     <div className="header relative">
-      <div className="header-bar flex justify-between p-[10px] md:left-[22%] absolute z-[100] rounded-[50px] min-w-[370px] md:max-w-[900px] mt-3 md:m-10 w-full">
+      <div className="header-bar flex justify-between md:p-[10px] md:left-[22%] absolute z-[100] rounded-[50px] min-w-[370px] md:max-w-[900px] mt-3 md:m-10 w-full">
         <div className="header-logos flex flex-row gap-5">
           {!isMobile() && <div className="p-4">
             <Image src="/assets/blog/home.png" height={40} width={40} alt="home-logo"></Image>
           </div>}
-          <div className="p-2 pt-3">
+          <div className="p-2 pt-3 ml-2 mb-2">
             <Image src="/assets/blog/JEAP-white.png" height={!isMobile() ? 120 : 80} width={!isMobile() ? 140 : 90} alt="home-logo"></Image>
           </div>
         </div>
@@ -24,16 +24,22 @@ const Header = () => {
           <AnchorLink href="#leadership">
             <h2 className="font-semibold text-white">LEADERSHIP</h2>
           </AnchorLink>
+          <AnchorLink href="#resources">
+            <h2 className="font-semibold text-white">RESOURCES</h2>
+          </AnchorLink>
           {/* <h2 className="font-semibold text-white">CONTACT US</h2>
           <h2 className="font-semibold text-white">RESOURCES</h2> */}
         </div>
         }
-        {isMobile() && <div className="p-2 pr-4">
-          <Image src={"/assets/blog/menu.png"} width={30} height={30} alt="menu" onClick={() => setDropDownOpen(!dropDownOpen)}></Image>
+        {isMobile() && <div className="m-5">
+          <Image src={!dropDownOpen ? "/assets/blog/menu.svg": "/assets/blog/cross-button.svg"} width={30} height={30} alt="menu" onClick={() => setDropDownOpen(!dropDownOpen)}></Image>
         </div>}
-        {isMobile() && dropDownOpen && <div className="absolute right-[1%] top-[30%] header-bar h-[100px] rounded-[10px] flex items-center z-[-1]">
+        {isMobile() && dropDownOpen && <div className="divide-y divide-black justify-evenly absolute right-[5%] top-[96%] bg-white h-[100px] flex flex-col items-center z-[-1]">
           <AnchorLink href="#leadership">
-            <h2 className="font-semibold text-white">LEADERSHIP</h2>
+            <h2 className="px-3 font-semibold">LEADERSHIP</h2>
+          </AnchorLink>
+          <AnchorLink href="#resources">
+            <h2 className="px-3 font-semibold pt-2">RESOURCES</h2>
           </AnchorLink>
       </div>}
       </div>
