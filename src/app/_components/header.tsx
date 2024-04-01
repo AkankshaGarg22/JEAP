@@ -20,7 +20,7 @@ const Header = () => {
             <Image src="/assets/blog/JEAP-white.png" height={!isMobile() ? 120 : 80} width={!isMobile() ? 140 : 90} alt="home-logo"></Image>
           </div>
         </div>
-        {!isMobile() && <div className="header-links flex flex-row gap-4 md:gap-8 md:p-5">
+        {!isMobile() && <div className="header-links flex flex-row items-center gap-4 md:gap-8 md:p-5">
           <AnchorLink href="#leadership">
             <h2 className="font-semibold text-white">LEADERSHIP</h2>
           </AnchorLink>

@@ -2,9 +2,11 @@ import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 
 import "./globals.css";
 import Header from "./_components/header";
+import Loading from "./_components/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <head>
@@ -57,9 +60,11 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className + ' font-Compasseregular'}>
-      <Header />
+        <Suspense fallback={<Loading></Loading>}>
+        <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
+        </Suspense>
       </body>
     </html>
   );
