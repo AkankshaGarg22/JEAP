@@ -38,13 +38,13 @@ export function TimeLine() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="text-center p-3">
+      <div className="text-center p-10">
         <h2 className="text-[#000000] text-4xl md:text-6xl font-bold my-4">THE JEAP JOURNEY</h2>
       </div>
       <div className="relative h-[720px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" onScroll={() => console.log('scrolling')}></div>
 
           {/* Timeline */}
           <div className="absolute inset-0 flex flex-col items-center justify-center py-8 px-4">
