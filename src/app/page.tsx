@@ -23,11 +23,10 @@ export default function Index() {
           <TurnAroundTime />
           <Tabs />
           <TimeLine />
-          {/* <Operation /> */}
+          <Operation />
           <Resources />
           <Leadership />
         </Suspense>
-
       </ErrorBoundary>
     </main>
   );
