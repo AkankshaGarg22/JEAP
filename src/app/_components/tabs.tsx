@@ -58,8 +58,15 @@ const Menu: MenuItem[] = [
 
 export function Tabs() {
   const [active, setActive] = useState<number>(1);
+  const [selectedAccordion, setSelectedAccordion] = useState<number | null>(null);
 
-  const handleClick = (index: number) => setActive(index);
+  const handleClick = (index: number) => {
+    setActive(index);
+  };
+
+  const handleAccordionClick = (id: number) => {
+    setSelectedAccordion(selectedAccordion === id ? null : id);
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-evenly">
@@ -94,7 +101,7 @@ export function Tabs() {
       {/* accordian */}
       <div className="md:hidden">
         {Menu.map((item) => (
-          <Accordion key={item.id} title={item.title}>
+          <Accordion key={item.id} title={item.title} isOpen={selectedAccordion === item.id} onToggle={() => handleAccordionClick(item.id)}>
             <Carousel item={item} />
           </Accordion>
         ))}
