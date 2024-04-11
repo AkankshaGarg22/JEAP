@@ -9,7 +9,7 @@ const Menu: MenuItem[] = [
   {
     id: 1,
     title: "Country Preparedness assessments",
-    slides: ["/assets/blog/Group 3029.png", "/assets/blog/Miaron_0002-129399 (1).jpg"],
+    slides: ["/assets/blog/jpgs/1 Country Assessment in the Preparedness Context.jpg", "/assets/blog/Miaron_0002-129399 (1).jpg"],
     from: "A fragmented understanding of the current state of preparedness acts as a hindrance to data-driven decision-making.",
     to: "Improved overall visibility of the core capacities of countries, enabling more accurate and resource-efficient interventions.",
     how: "The JEAP will assess continental preparedness by supporting countries to:\n    Analyze their EPR capacity assessments using existing assessment tools.\n    Map potential threats, challenges, and opportunities for EPR interventions.\n    Develop or refine National Action Plans for Health Security (NAPHS).\n    Strengthen regional cooperation for public health emergencies, through cross-border collaboration meetings, simulation exercises, the creation of MoUs and the annual development of Points of Entry (PoE) contingency plans and SoPs.",
@@ -17,7 +17,7 @@ const Menu: MenuItem[] = [
   {
     id: 2,
     title: "Surveillance and Laboratory Capacity",
-    slides: ["/assets/blog/Group 3029.png", "/assets/blog/Miaron_0002-129399 (1).jpg"],
+    slides: ["/assets/blog/jpgs/2 Surveillance Including Laboratory & Genome Sequencing .jpg", "/assets/blog/Miaron_0002-129399 (1).jpg"],
     from: "Surveillance systems and technologies within the region are lacking, with some countries not meeting the IDSR standards, leading to delays in detecting health emergencies",
     to: "Strengthened national public health surveillance and response systems with updated IDSR and EBS practices, digital technologies, and genomic surveillance capacities at the country level.",
     how: "The JEAP will harness the collective power of genomic surveillance capabilities present in countries across the continent. This involves supporting countries to: \n     Implement and expand Integrated Disease Surveillance and Response (IDSR) systems, including event-based surveillance.\n    Assist member states in developing operational surveillance plans, ensuring seamless health information exchange.\n     Leverage digital technologies and data analytics for Event-Based Surveillance (EBS) and Integrated Biological Surveillance (IBS).\n    Harmonize coordination of diagnostics among Africa CDC and WHO, strengthening strategy and capacity at national and sub-national levels.\n    Map 100% of national reference laboratories and their capacities for diagnosing potential pandemic and epidemic pathogens, while training a workforce of approximately 2090 people on priority pathogens with pandemic potential.\n    Establish Environmental Surveillance (ES) and mechanisms for integrating sequencing into routine surveillance for public health response.\n    Enhance in-country genomic surveillance capacity and promote the sharing of sequencing data.",
@@ -25,7 +25,7 @@ const Menu: MenuItem[] = [
   {
     id: 3,
     title: "Supply Chain Management",
-    slides: ["/assets/blog/Group 3029.png", "/assets/blog/Miaron_0002-129399 (1).jpg"],
+    slides: ["/assets/blog/jpgs/3 Logistics, Supply Chain, and Local Manufacturing.jpg", "/assets/blog/Miaron_0002-129399 (1).jpg"],
     from: "Insufficient supplies, logistics hubs and manufacturers in the region result in delays of up to 20 days to deliver emergency supplies (Only 12 countries have fully functional Public Health Emergency Operations Centres (PHEOCs).",
     to: "Timely availability of high-quality supplies and logistics through PHEOCs which resolve supply chain barriers and reduce the delivery time of life-saving supplies from 20 days to within 24 to 48 hours.",
     how: "The JEAP will help countries address the logistical bottleneck head-on through: \n    Establishing PHEOCs in at least 90% of member states \n Reinforce human resource capacity through a joint regional roster for Supply Chain and Logistics Officers, provide training to Operations Support and Logistics staff, and establish a community of practice to learn from previous emergency responses. \n Strengthen and harmonise Supply Chain Management System (SCMS) at national, regional, and continental levels \n  Improve medical supply availability and distribution during emergencies by advocating for a blanket customs clearance waiver (Green Light) to expedite supply clearance, enabling prequalification of regional manufacturers, and implementing pooled procurement initiatives in partnership with WHO and Africa CDC.\n Enhance coordination and reporting between Africa CDC and WHO through the development of joint Standard Operating Procedures (SOPs) for deployment, resource, and expertise sharing, along with the establishment of a shared monitoring framework incorporating Key Performance Indicators (KPIs) for response effectiveness",
@@ -33,7 +33,7 @@ const Menu: MenuItem[] = [
   {
     id: 4,
     title: "Workforce Development",
-    slides: ["/assets/blog/Group 3029.png", "/assets/blog/Miaron_0002-129399 (1).jpg"],
+    slides: ["/assets/blog/jpgs/4 Workforce Development.jpg", "/assets/blog/Miaron_0002-129399 (1).jpg"],
     from: "A shortage in the health workforce with fewer than 10% of African countries adequately staffed to prepare for and respond to health emergencie",
     to: "A workforce of 3000 roving, qualified and multi-sectoral first responders will be deployed within the first 24-48 hours of an emergency, led by a harmonized leadership and complementing institutionalized national community health worker programs",
     how: "The JEAP initiative aims to help countries by: \n   Building and retaining a proficient emergency workforce: In early 2022, Africa CDC and WHO merged Africa CDC's African Volunteer Health Corps (AVoHC) program with WHO's Strengthening and Utilizing Response Groups for Emergencies (SURGE) program to establish a unified initiative known as AVoHC-SURGE. \n  Ensuring workforce coordination and deployment during health emergencies \n Reinforcing leadership within this workforce by creating a community of leaders at both national and regional levels \n  Institutionalizing, sustainably expanding and/or building capacity of Community Health Worker programs within Member States. \n",
@@ -41,7 +41,7 @@ const Menu: MenuItem[] = [
   {
     id: 5,
     title: "Response Readiness",
-    slides: ["/assets/blog/Group 3029.png", "/assets/blog/Miaron_0002-129399 (1).jpg"],
+    slides: ["/assets/blog/jpgs/5 Response Readiness and Coordination.jpg", "/assets/blog/Miaron_0002-129399 (1).jpg"],
     from: "Disjointed governance mechanisms lead to delays and inefficiencies in crisis response. ",
     to: "Proactive, streamlined and effective approaches to managing health crises. By the end of 2027, the JEAP will ensure that 90% of Member States have set up fully equipped and functional PHEOCs that have implemented core policies and procedures. ",
     how: "The JEAP will collaborate with Member States to ensure that PHEOCs are: \n Meeting standardized minimum requirements with information and communication technology as well as physical infrastructure.\n     Developing and implementing core PHEOC policy, plans and procedures \n     Establishing a unified information management platform.\n     Strengthening the capabilities of the PHEOC workforce (routine and surge staff) to support preparedness and response coordination.",
@@ -49,7 +49,7 @@ const Menu: MenuItem[] = [
   {
     id: 6,
     title: "Risk Communications and Community Engagement",
-    slides: ["/assets/blog/Group 3029.png", "/assets/blog/Miaron_0002-129399 (1).jpg"],
+    slides: ["/assets/blog/jpgs/6 Risk Communications and Community Engagement.jpg", "/assets/blog/Miaron_0002-129399 (1).jpg"],
     from: "Communities lack adequate access to information and platforms to participate meaningfully in planning, which hampers their ability to protect themselves, respond to health emergencies adequately as well as weakening EPR planning overall.",
     to: "Well-informed and crisis-ready communities that are empowered to participate in emergency preparedness planning and response, protecting themselves and their communities from the impact of disease outbreaks.",
     how: "The JEAP will support countries to engage communities through:\n Strengthening indigenous knowledge of and community engagement with EPR practices \n  Promoting public awareness of EPR through advocacy \n  Encouraging behavioural change through Risk Communication and Community Engagement (RCCE). \n    Strengthen the Public Health RCCE Community of Practice for Africa.\n    Tackling rumours and misinformation.",
