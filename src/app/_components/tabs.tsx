@@ -49,7 +49,7 @@ export function Tabs() {
   const handleClick = (index: number) => setActive(index);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-evenly">
+    <div id="vision" className="min-h-screen flex flex-col items-center justify-evenly">
       <div className="text-center md:p-3">
         <h2 className="text-[#000] text-6xl font-bold my-4">THE JEAP VISION</h2>
         <p className="font-medium md:px-48 py-4">

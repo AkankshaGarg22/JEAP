@@ -3,7 +3,7 @@ import React from "react";
 const Mission = () => {
   const backgroundImageUrl = "/assets/blog/header.png";
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-auto bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
+    <div id="mission" className="min-h-screen flex flex-col justify-center items-center bg-auto bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
       <div className="flex flex-1 flex-col items-center justify-center text-center text-white" >
         <h2 className="leading-1 md:leading-[1.5] text-2xl md:text-6xl font-medium md:font-bold">THE JEAP MISSION</h2>
         <p className="text-lg md:text-3xl">Currently, over a hundred health emergencies occur annually in Africa, disrupting the growth and well-being of communities.</p>
