@@ -12,23 +12,28 @@ export function Footer() {
         <Container>
           <div className="flex flex-col p-4 lg:gap-20 lg:flex-row">
             <div className="footer-links text-white ">
-              <AnchorLink href="#mission">
-                <p className="p-2">THE JEAP MISSION</p>
+            <p className="p-2">THE JEAP MISSION</p>
+            <p className="p-2">THE JEAP VISION</p>
+            <p className="p-2">OPERATIONALIZING THE JEAP</p>
+            
+              {/* <AnchorLink href="#mission">
+               
               </AnchorLink>
               <AnchorLink href="#vision">
-                <p className="p-2">THE JEAP VISION</p>
+              
               </AnchorLink>
               <AnchorLink href="#operation">
-                <p className="p-2">OPERATIONALIZING THE JEAP</p>
-              </AnchorLink>
+                
+              </AnchorLink> */}
             </div>
             <div className="footer-links text-white ">
-              <AnchorLink href="#jeap-journey">
-                <p className="p-2">THE JEAP JOURNEY</p>
+            <p className="p-2">THE JEAP JOURNEY</p>
+            <p className="p-2">LEADERSHIP</p>
+
+              {/* <AnchorLink href="#jeap-journey">
               </AnchorLink>
               <AnchorLink href="#leadership">
-                <p className="p-2">LEADERSHIP</p>
-              </AnchorLink>
+              </AnchorLink> */}
             </div>
           </div>
           {/* <SocialMediaLinks /> */}
