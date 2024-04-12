@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
-import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
+{ /*import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";*/}
 
 const WorldMap = () => {
   const geoUrl = "/features.json";

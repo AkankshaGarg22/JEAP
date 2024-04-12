@@ -5,6 +5,8 @@ import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-pro
 import 'react-circular-progressbar/dist/styles.css';
 import useOnScreen from "./hooks/useOnScreen";
 import { isMobile } from "./utility/helper";
+import MyLottieComponent from "./svg-animation";
+import animationlottie from './animate1.json';
 
 export function TurnAroundTime() {
 
@@ -66,15 +68,20 @@ export function TurnAroundTime() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
 
             <div className="z-10">
-                {!isMobile() && <img className="absolute right-[33%] top-[7%]" src={"/assets/blog/top-gif1.gif"} alt="image"></img>}
-                <img className="hover:opacity-0 relative z-[10] h-[400px] md:h-[1000px]" src={"/assets/blog/top-image.svg"} alt="image" />
+                
+            <MyLottieComponent height={400} width={600} animationSource={(animationlottie)}/> 
+
+            {/*<img className="hover:opacity-0 relative z-[10] h-[400px] md:h-[1000px]" src={"/assets/blog/top-image.svg"} alt="image" />*/}
+
+
+
             </div>
             <div className="absolute z-10">
-            {!isMobile() && <img className="absolute right-[1%] top-[29%] md:h-[400px]" src={"/assets/blog/gif-2.gif"} alt="image"></img>}
-                <img className="hover:opacity-0 relative z-[10] h-[300px] md:h-[770px]" src={"/assets/blog/24 to 48[1]-02.svg"} alt="image"></img>
+            {/*!isMobile() && <img className="absolute right-[1%] top-[29%] md:h-[400px]" src={"/assets/blog/gif-2.gif"} alt="image"></img>
+                <img className="hover:opacity-0 relative z-[10] h-[300px] md:h-[770px]" src={"/assets/blog/24 to 48[1]-02.svg"} alt="image"></img>*/}
             </div>
             <div className="absolute z-10">
-                <img className="z-10 h-[310px] md:h-[780px]" src={"/assets/blog/24 to 48[1]-01.svg"} alt="image"></img>
+                {/*<img className="z-10 h-[310px] md:h-[780px]" src={"/assets/blog/24 to 48[1]-01.svg"} alt="image"></img>*/}
             </div>
 
             <div className="absolute w-[100px] h-[100px] md:w-[220px] md:h-[220px] bg-white z-20 rounded-full">
