@@ -8,7 +8,7 @@ import { SocialMediaLinks } from "./social-media-links";
 export function Footer() {
   const scrollIntoView = (id: string) => {
     if (typeof document !== 'undefined') {
-      document.getElementById(id)?.scrollIntoView(true, {behaviour: 'smooth'});
+      document.getElementById(id)?.scrollIntoView(true);
     }
   }
   return (
