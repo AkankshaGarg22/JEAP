@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
+    "@types/aos": "^3.0.7",
     "@types/vivus": "^0.4.7",
+    "aos": "^2.3.4",
     "classnames": "^2.5.1",
     "d3-fetch": "^3.0.1",
     "d3-scale": "^4.0.2",
@@ -28,8 +30,8 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "swiper": "^11.0.7",
-    "vivus": "^0.4.6",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "vivus": "^0.4.6"
   },
   "devDependencies": {
     "@types/d3-fetch": "^3.0.7",
