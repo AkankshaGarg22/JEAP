@@ -15,7 +15,7 @@ const MyLottieComponent = ({ height, width, animationSource }: MyLottieComponent
   //const animationData: any = require(`${animationSource}`);  
   //console.log(animationSource);
   return (
-    <div 
+    <div style={{height, width}}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
