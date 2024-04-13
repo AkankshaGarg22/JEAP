@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
 
 const WorldMap = () => {
+  const [content, setContent] = useState("");
   const geoUrl = "/features.json";
 
   const colorScale = scaleLinear<string>().domain([0, 0.3, 0.6, 1]).range(["#f1686b", "#fcbe79", "#fbe884", "#62bf7b"]);
@@ -18,42 +19,48 @@ const WorldMap = () => {
   }, []);
 
   return (
-    <div className="min-h-screen max-h-screen flex flex-col gap-1">
-      <div className="max-h-[720px] !w-full overflow-scroll">
+    <div className="min-h-screen flex flex-col items-center justify-center gap-2 ">
+      <h1 className="font-extrabold text-4xl tracking-wide text-center">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+      <div className="h-[480px] md:h-[800px] relative" >
         {data.length > 0 && (
-          <ComposableMap
-            projection="geoMercator"
-            projectionConfig={{
-              scale: 100,
-            }}
-          >
-            {/* <Sphere stroke="#E4E5E6" strokeWidth={0.5} /> */}
-            {/* <Graticule stroke="#E4E5E6" strokeWidth={0.5} /> */}
+          <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={800} height={400} style={{ height: "100%", width: "100%" }}>
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const d = data.find((s) => s.ISO3 === geo.id);
-                  return <Geography key={geo.rsmKey} geography={geo} fill={d ? `${colorScale(d["Overall Score Normed"])}` : "#F5F4F6"} />;
+                  return (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill={d ? `${colorScale(d["Overall Score Normed"])}` : "#F5F4F6"}
+                      onMouseEnter={() => {
+                        console.log("here", geo);
+                        setContent(geo.properties.name ? geo.properties.name : "");
+                      }}
+                      onMouseLeave={() => {
+                        setContent("");
+                      }}
+                      style={{
+                        default: { outline: "none" },
+                        hover: { outline: "none" },
+                        pressed: { outline: "none" },
+                      }}
+                    />
+                  );
                 })
               }
             </Geographies>
           </ComposableMap>
         )}
+      {content ? <div className="absolute bg-black text-white text-md rounded py-1 px-4 right-0 bottom-0 left-[50%] max-w-max">{content}</div> : null}
       </div>
-      <div className="flex flex-col align-center text-center">
-        <h2 className="font-semibold text-3xl">
-          The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
-          humanitarian crises, and increasingly climate-related disasters.
-        </h2>
-        <p className="md:py-10 text-lg">
-          The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
-        </p>
-        <p className="md:py-10 font-bold text-2xl">
-          The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
-        </p>
-      </div>
+
+      <h2 className="font-semibold text-lg md:text-3xl w-full md:w-4/5 text-center">
+        The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
+        humanitarian crises, and increasingly climate-related disasters.
+      </h2>
     </div>
   );
 };
 
-export default WorldMap;
+export default memo(WorldMap);
