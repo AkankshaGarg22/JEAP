@@ -1,4 +1,3 @@
-import Container from "@/app/_components/container";
 import Landing from "./_components/landing";
 import Mission from "./_components/mission";
 import WorldMap from "./_components/worldmap";

@@ -37,7 +37,7 @@ export function TimeLine() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div id="jeap-journey" className="min-h-screen flex flex-col">
       <div className="text-center p-10">
         <h2 className="text-[#000000] text-4xl md:text-6xl font-bold my-4">THE JEAP JOURNEY</h2>
       </div>
