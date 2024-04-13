@@ -68,6 +68,12 @@ export function TurnAroundTime() {
 
     return (
         <div className="md:min-h-screen flex flex-col lg:flex-row items-center justify-center relative">
+            <p className="md:py-4 text-lg">
+            The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
+            </p>
+            <p className="md:py-4 font-bold text-2xl">
+            The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
+            </p>
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
 

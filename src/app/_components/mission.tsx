@@ -20,13 +20,13 @@ const Mission = () => {
           onInit={(typewriter) => {
             typewriter
               .typeString(" Of the ")
-              .pauseFor(1000)
+              .pauseFor(600)
               .typeString("<strong className=`font-bold ml-1`>25 countries<strong>")
-              .pauseFor(2500)
+              .pauseFor(600)
               .typeString(" most susceptible to infectious outbreaks globally, ")
-              .pauseFor(2500)
+              .pauseFor(1000)
               .typeString("<strong className=`font-bold ml-1`>22 are located in Africa .<strong>")
-              .pauseFor(2500)
+              .pauseFor(600)
               .start();
           }}
           options={{loop :true}}
