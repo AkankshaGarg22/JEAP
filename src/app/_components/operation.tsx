@@ -6,7 +6,7 @@ import useOnScreen from "./hooks/useOnScreen";
 const Operation = () => {
 
   const ref = useRef(null);
-  const [imageSrc, setImageSrc] = useState(null);
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
   const isVisible = useOnScreen(ref);
 
   useEffect(() => {
