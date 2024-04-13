@@ -28,7 +28,8 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "swiper": "^11.0.7",
-    "vivus": "^0.4.6"
+    "vivus": "^0.4.6",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/d3-fetch": "^3.0.7",

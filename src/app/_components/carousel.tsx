@@ -22,7 +22,10 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
           <img key={i} className=" md:min-w-full object-cover" src={img} alt="Picture" />
         ))}
       </div>
-      <div className="absolute inset-0 bg-transparent text-white flex flex-row items-center justify-center gap-4">
+      <div className="absolute inset-0 bg-transparent text-white text-center pt-4 md:pt-8 text-2xl md:text-4xl font-bold uppercase">
+        {item.title}
+      </div>
+      <div className="absolute inset-0 md:top-40 bg-transparent text-white flex flex-row items-center md:items-start justify-center  gap-4">
         <div className="flex flex-col gap-2 basis-1/4 justify-items-end items-end">
           <button className={`text-lg md:text-3xl ${selected === item.from ? "border-r-white " : "text-[#FFFFFF7D] border-r-[#FFFFFF7D]"} border-r-8 px-4 w-28`} onClick={() => setSelected(item.from)}>
             From
