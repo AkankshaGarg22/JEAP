@@ -3,16 +3,19 @@ import Lottie from 'lottie-react';
 
 // Define props interface for type-safety
 interface MyLottieComponentProps {
-  height: number;  // Height in pixels
-  width: number;   // Width in pixels
+  height: any;  // Height in pixels
+  width: any;   // Width in pixels
   animationSource: any;  // Path or URL to JSON animation data 
 }
 
 const MyLottieComponent = ({ height, width, animationSource }: MyLottieComponentProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
+
+  //const animationData: any = require(`${animationSource}`);  
+  //console.log(animationSource);
   return (
-    <div 
+    <div style={{height, width}}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

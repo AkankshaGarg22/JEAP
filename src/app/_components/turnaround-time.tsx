@@ -10,7 +10,6 @@ import animationlottie_2 from '../../../public/assets/animations/animate2.json';
 import animationlottie_3 from '../../../public/assets/animations/animate3.json';
 import { isMobile } from "./utility/helper";
 
-
 export function TurnAroundTime() {
 
     const ref = useRef(null);
@@ -77,14 +76,16 @@ export function TurnAroundTime() {
             </p>
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
-            <div className="z-10">
-                <MyLottieComponent height={770} width={isMobile() ? 600 : 1000} animationSource={(animationlottie_1)} />
+
+            <div className="absolute z-10 top-[0%] border-8 border-blue">
+                <MyLottieComponent height={450} width={isMobile() ? 600 : 1000} animationSource={(animationlottie_1)} />
             </div>
-            <div className="absolute z-10">
-                <MyLottieComponent height={770} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_2)} />
+            <div className="absolute z-10 right-[30%] top-[30%] border-8">
+                <MyLottieComponent height={550} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_2)} />
             </div>
-            <div className="absolute z-10">
-                <MyLottieComponent height={770} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_3)} />
+            <div className="absolute z-10 left-[30%] top-[30%] border-8 border-red">
+                <MyLottieComponent height={550} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_3)} />
+
             </div>
 
             <div className="absolute w-[100px] h-[100px] md:w-[220px] md:h-[220px] bg-white z-20 rounded-full">
