@@ -11,11 +11,8 @@ interface MyLottieComponentProps {
 const MyLottieComponent = ({ height, width, animationSource }: MyLottieComponentProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  //const animationData: any = require(`${animationSource}`);  
-console.log(animationSource);
   return (
     <div 
-      className={"w-[50%] flex item-center border-8 "}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

@@ -4,9 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import useOnScreen from "./hooks/useOnScreen";
-import { isMobile } from "./utility/helper";
 import MyLottieComponent from "./svg-animation";
-import animationlottie from './animate1.json';
+import animationlottie_1 from '../../../public/assets/animations/animate1.json';
+import animationlottie_2 from '../../../public/assets/animations/animate2.json';
+import animationlottie_3 from '../../../public/assets/animations/animate3.json';
+import { isMobile } from "./utility/helper";
+
 
 export function TurnAroundTime() {
 
@@ -19,6 +22,8 @@ export function TurnAroundTime() {
 
     const [shouldFill, setShouldFill] = useState(false);
     const [shouldOuterFill, setShouldOuterFill] = useState(false);
+
+    console.log('IS MOBILE', isMobile())
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -66,22 +71,14 @@ export function TurnAroundTime() {
         <div className="md:min-h-screen flex flex-col lg:flex-row items-center justify-center relative">
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
-
             <div className="z-10">
-                
-            <MyLottieComponent height={400} width={600} animationSource={(animationlottie)}/> 
-
-            {/*<img className="hover:opacity-0 relative z-[10] h-[400px] md:h-[1000px]" src={"/assets/blog/top-image.svg"} alt="image" />*/}
-
-
-
+                <MyLottieComponent height={770} width={isMobile() ? 600 : 1000} animationSource={(animationlottie_1)} />
             </div>
             <div className="absolute z-10">
-            {/*!isMobile() && <img className="absolute right-[1%] top-[29%] md:h-[400px]" src={"/assets/blog/gif-2.gif"} alt="image"></img>
-                <img className="hover:opacity-0 relative z-[10] h-[300px] md:h-[770px]" src={"/assets/blog/24 to 48[1]-02.svg"} alt="image"></img>*/}
+                <MyLottieComponent height={770} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_2)} />
             </div>
             <div className="absolute z-10">
-                {/*<img className="z-10 h-[310px] md:h-[780px]" src={"/assets/blog/24 to 48[1]-01.svg"} alt="image"></img>*/}
+                <MyLottieComponent height={770} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_3)} />
             </div>
 
             <div className="absolute w-[100px] h-[100px] md:w-[220px] md:h-[220px] bg-white z-20 rounded-full">
