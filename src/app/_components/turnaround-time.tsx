@@ -6,7 +6,9 @@ import 'react-circular-progressbar/dist/styles.css';
 import useOnScreen from "./hooks/useOnScreen";
 import { isMobile } from "./utility/helper";
 import MyLottieComponent from "./svg-animation";
-import animationlottie from './animate1.json';
+import animationlottie1 from './animate1.json';
+import animationlottie2 from './animate2.json';
+import animationlottie3 from './animate3.json';
 
 export function TurnAroundTime() {
 
@@ -67,21 +69,26 @@ export function TurnAroundTime() {
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
 
-            <div className="z-10">
+            <div className="z-10 absolute bottom-[42%]">
                 
-            <MyLottieComponent height={400} width={600} animationSource={(animationlottie)}/> 
-
+            <MyLottieComponent height={450} width={650} animationSource={(animationlottie1)}/> 
+            
             {/*<img className="hover:opacity-0 relative z-[10] h-[400px] md:h-[1000px]" src={"/assets/blog/top-image.svg"} alt="image" />*/}
 
 
 
             </div>
-            <div className="absolute z-10">
+            <div className="absolute z-10 right-[37%] top-[23%]">
             {/*!isMobile() && <img className="absolute right-[1%] top-[29%] md:h-[400px]" src={"/assets/blog/gif-2.gif"} alt="image"></img>
                 <img className="hover:opacity-0 relative z-[10] h-[300px] md:h-[770px]" src={"/assets/blog/24 to 48[1]-02.svg"} alt="image"></img>*/}
+                          
+                            <MyLottieComponent height={550} width={750} animationSource={(animationlottie2)}/> 
             </div>
-            <div className="absolute z-10">
+            <div className="absolute z-10 left-[37%] top-[23%]">
                 {/*<img className="z-10 h-[310px] md:h-[780px]" src={"/assets/blog/24 to 48[1]-01.svg"} alt="image"></img>*/}
+            
+                <MyLottieComponent height={550} width={750} animationSource={(animationlottie3)}/> 
+
             </div>
 
             <div className="absolute w-[100px] h-[100px] md:w-[220px] md:h-[220px] bg-white z-20 rounded-full">
