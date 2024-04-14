@@ -11,12 +11,21 @@ const WorldMap = () => {
   const colorScale = scaleLinear<string>().domain([0, 0.3, 0.6, 1]).range(["#f1686b", "#fcbe79", "#fbe884", "#62bf7b"]);
 
   const [data, setData] = useState<any[]>([]);
+  const [left, setLeft] = useState(0)
+  const [top, setTop] = useState(0)
 
   useEffect(() => {
     csv(`/Book1.csv`).then((data) => {
       setData(data);
     });
   }, []);
+
+  const getPos = (event: any) => {
+    var bounding = document.getElementById('anchor')?.getBoundingClientRect();
+
+    setTop(event.clientY - (bounding ? bounding?.top : 0))
+    setLeft(event.clientX - (bounding ? bounding?.left : 0))
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-2 ">
@@ -33,13 +42,15 @@ const WorldMap = () => {
                       key={geo.rsmKey}
                       geography={geo}
                       fill={d ? `${colorScale(d["Overall Score Normed"])}` : "#F5F4F6"}
-                      onMouseEnter={() => {
+                      onMouseEnter={(event) => {
                         console.log("here", geo);
                         setContent(geo.properties.name ? geo.properties.name : "");
+                        getPos(event)
                       }}
                       onMouseLeave={() => {
                         setContent("");
                       }}
+                      id="map-country"
                       style={{
                         default: { outline: "none" },
                         hover: { outline: "none" },
@@ -52,7 +63,7 @@ const WorldMap = () => {
             </Geographies>
           </ComposableMap>
         )}
-      {content ? <div className="absolute bg-black text-white text-md rounded py-1 px-4 right-0 bottom-0 left-[50%] max-w-max">{content}</div> : null}
+        {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
       </div>
 
       <h2 className="font-semibold text-lg md:text-3xl w-full md:w-4/5 text-center">
