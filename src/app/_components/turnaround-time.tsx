@@ -77,14 +77,14 @@ export function TurnAroundTime() {
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
 
-            <div className="absolute z-10 top-[0%] border-8 border-blue">
-                <MyLottieComponent height={450} width={isMobile() ? 600 : 1000} animationSource={(animationlottie_1)} />
+            <div className="absolute z-10 top-[7%]">
+                <MyLottieComponent height={350} width={isMobile() ? 600 : 935} animationSource={(animationlottie_1)} />
             </div>
-            <div className="absolute z-10 right-[30%] top-[30%] border-8">
-                <MyLottieComponent height={550} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_2)} />
+            <div className="absolute z-10 right-[30%] top-[30%]">
+                <MyLottieComponent height={450} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_2)} />
             </div>
-            <div className="absolute z-10 left-[30%] top-[30%] border-8 border-red">
-                <MyLottieComponent height={550} width={isMobile() ? 600 : 1000}  animationSource={(animationlottie_3)} />
+            <div className="absolute z-10 left-[30%] top-[30%]">
+                <MyLottieComponent height={450} width={isMobile() ? 600 : 950}  animationSource={(animationlottie_3)} />
 
             </div>
 
