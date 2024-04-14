@@ -66,10 +66,19 @@ const WorldMap = () => {
         {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
       </div>
 
-      <h2 className="font-semibold text-lg md:text-3xl w-full md:w-4/5 text-center">
-        The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
-        humanitarian crises, and increasingly climate-related disasters.
-      </h2>
+      <div className="w-full md:w-4/5 text-center">
+        <h2 className="font-semibold text-lg md:text-3xl ">
+          The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
+          humanitarian crises, and increasingly climate-related disasters.
+        </h2>
+        <p className="md:py-4 text-lg">
+          The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
+        </p>
+        <p className="md:py-4 font-bold text-2xl">
+          The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
+        </p>
+      </div>
+
     </div>
   );
 };
