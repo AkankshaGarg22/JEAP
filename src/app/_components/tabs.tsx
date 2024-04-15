@@ -90,12 +90,22 @@ export function Tabs() {
             </button>
           ))}
         </div>
-        <div className="bg-gray-400">
+        <div className="bg-gray-400 relative">
           {Menu.map((item) => (
-            <div key={item.id} className={active === item.id ? "block" : "hidden"}>
-              <Carousel item={item} />
+            <div>
+              <div key={item.id} className={active === item.id ? "block" : "hidden"}>
+                <Carousel item={item} />
+              </div>
             </div>
           ))}
+          <div className="absolute bottom-20 right-10 p-4 flex flex-col">
+            <button onClick={() => handleClick(active - 1)} disabled={active === 1} className="p-1 rounded-full shadow text-gray-800">
+              <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
+            </button>
+            <button onClick={() => handleClick(active + 1)} disabled={active === Menu.length} className="p-1 rounded-full shadow text-gray-800">
+              <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3025.png" alt="next" />
+            </button>
+          </div>
         </div>
       </div>
       {/* accordian */}
