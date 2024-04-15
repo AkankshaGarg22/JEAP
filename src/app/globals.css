@@ -5,22 +5,14 @@
 @font-face {
   font-family: "compasse-regular";
   src: url("../fonts/compasse-regular.ttf");
-  font-weight: 400;
+  /* font-weight: 400;
   font-display: swap;
-  font-style: normal;
+  font-style: normal; */
 }
 
-/* body {
+body {
   font-family: 'compasse-regular';
-} */
-
-/* @font-face {
-    font-family: "AnultraSlabRegular";
-    src: url("/Fonts/AnultraSlabRegular.ttf");
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  } */
+}
 
 .maintenance-page {
   background: transparent linear-gradient(180deg, #1D2859 0%, #060812 100%) 0% 0% no-repeat padding-box;
@@ -129,5 +121,11 @@
   }
   .resource-image {
     width: 60% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .header-bar {
+    max-width: 750px !important;
   }
 }
