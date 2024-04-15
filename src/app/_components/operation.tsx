@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import Device from "./device/device";
 import useOnScreen from "./hooks/useOnScreen";
 
 const Operation = () => {
@@ -8,35 +9,34 @@ const Operation = () => {
   const isVisible = useOnScreen(ref);
 
   function isMobile() {
-   
+
     const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     return mobileRegex.test(navigator.userAgent);
   }
 
   useEffect(() => {
-    if (isVisible) {
-      if (isMobile()) {
-        setMobileImageSrc("/assets/animations/LineAnimationsMobile.svg"); 
-      } else {
-        setImageSrc("/assets/animations/LineAnimation1.svg");
-      }
+    if (isMobile()) {
+      setMobileImageSrc("/assets/animations/LineAnimationsMobile.svg");
+    } else {
+      setImageSrc("/assets/animations/LineAnimation1.svg");
     }
-  }, [isVisible, imageSrc, mobileImageSrc]);
+  }, [imageSrc, mobileImageSrc]);
 
   return (
-      <div id="operation" className="min-h-screen flex flex-col justify-evenly items-center pt-16 font-CompasseRegular md:pt-2">
-      <h1 className="text-[#000000] text-4xl md:text-6xl py-4 my-4 text-center tracking-tighter md:tracking-normal font-extrabold">OPERATIONALIZING THE JEAP</h1>
-      <div className="text-white  bg-gradient-to-br from-[#00205C] to-[#1A5632] text-xl w-[80%] text-center p-4">Steering Committee</div>
-      <div className={"w-[90%] text-center py-6 font-CompasseRegular font-semibold"}>To ensure seamless implementation of the JEAP, the Steering Committee (SteerCo) will stand as a guiding force to harmonize strategies and foster collaboration among senior leadership. Their role will include providing strategic direction to teams implementing the action plan, ensuring alignment with the plan's objectives and acting as liaisons with high-level external stakeholders.</div>
-
-
-      <div ref={ref} className={"py-8 md:pt-2"}> 
-        {imageSrc && !isMobile() && <img src={imageSrc} alt="Image Loaded on Scroll" />}
-        {mobileImageSrc && isMobile() && <img src={mobileImageSrc} alt="Mobile Image" />}
-      </div>
-
-      
-    </div>
+    <Device>
+      {(isMobile) => {
+        return <div ref={ref} id="operation" className="min-h-screen flex flex-col justify-evenly items-center pt-16 font-CompasseRegular md:pt-2">
+          <h1 className="text-[#000000] text-4xl md:text-6xl py-4 my-4 text-center tracking-tighter md:tracking-normal font-extrabold">OPERATIONALIZING THE JEAP</h1>
+          <div className="text-white  bg-gradient-to-br from-[#00205C] to-[#1A5632] text-xl w-[80%] text-center p-4">Steering Committee</div>
+          <div className={"w-[90%] text-center py-6 font-CompasseRegular font-semibold"}>To ensure seamless implementation of the JEAP, the Steering Committee (SteerCo) will stand as a guiding force to harmonize strategies and foster collaboration among senior leadership. Their role will include providing strategic direction to teams implementing the action plan, ensuring alignment with the plan's objectives and acting as liaisons with high-level external stakeholders.</div>
+          {isVisible && <div className={"py-8 md:pt-2"}>
+            {!isMobile && <img src={"/assets/animations/LineAnimationsMobile.svg"} alt="Image Loaded on Scroll" />}
+            {isMobile && <img src={"/assets/animations/LineAnimation1.svg"} alt="Mobile Image" />}
+          </div>
+          }
+        </div>
+      }}
+    </Device>
   );
 };
 
