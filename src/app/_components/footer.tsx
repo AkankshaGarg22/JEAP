@@ -33,19 +33,19 @@ export function Footer() {
         </Container>
       </div>
       <div className="bg-custom">
-        <Image src="/assets/blog/Group 3031.png" layout="fill" alt="image background"></Image>
+        <Image src="/assets/blog/Group 3031.png" priority={false} fill alt="image background"></Image>
       </div>
       <div className="bg-white">
         <div className="logo-section flex flex-row justify-evenly relative w-full">
           <div>
-            <Image src="/assets/blog/Jeap-transparent.png" layout="fill" alt="logo" className="footer-image"></Image>
+            <Image src="/assets/blog/Jeap-transparent.png" fill alt="logo" className="footer-image"></Image>
           </div>
           <div>
-            <Image src="/assets/blog/AfricaCDCLogo.png" layout="fill" alt="logo-2" className="footer-image"></Image>
+            <Image src="/assets/blog/AfricaCDCLogo.png" fill alt="logo-2" className="footer-image"></Image>
 
           </div>
           <div>
-            <Image src="/assets/blog/WHO_Logo.png" layout="fill" alt="logo-3" className="footer-image"></Image>
+            <Image src="/assets/blog/WHO_Logo.png" fill alt="logo-3" className="footer-image"></Image>
           </div>
         </div>
       </div>
