@@ -30,9 +30,9 @@ const WorldMap = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-2 ">
       <h1 className="font-extrabold text-4xl tracking-wide text-center">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
-      <div className="h-[480px] md:h-[800px] relative" >
+      <div className="h-[480px] md:h-[1000px] relative" >
         {data.length > 0 && (
-          <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={800} height={400} style={{ height: "100%", width: "100%" }}>
+          <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={1000} height={200} style={{ height: "100%", width: "100%", marginTop: '20px' }}>
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {
@@ -43,8 +43,7 @@ const WorldMap = () => {
                       geography={geo}
                       fill={d ? `${colorScale(d["Overall Score Normed"])}` : "#F5F4F6"}
                       onMouseEnter={(event) => {
-                        console.log("here", geo);
-                        setContent(geo.properties.name ? geo.properties.name : "");
+                        setContent(geo.properties.name ? geo.properties.name + ": " + (d?.Rank ? d?.Rank : "NA") : "");
                         getPos(event)
                       }}
                       onMouseLeave={() => {
