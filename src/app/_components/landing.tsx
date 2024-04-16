@@ -1,10 +1,10 @@
 "use client";
 export default function Landing({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="min-h-screen fixed h-full">
+    <div className="min-h-screen fixed">
       {isVisible ? null : (
         <section
-          className={`relative text-white w-full h-screen bg-cover bg-center bg-opacity-80 bg-fixed flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] animate-[changeImage_50s_linear_infinite]
+          className={`relative text-white w-full h-screen bg-cover bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] animate-[changeImage_50s_linear_infinite]
         `}
         >
           <div className="flex flex-col justify-center items-center w-3/4 text-center">

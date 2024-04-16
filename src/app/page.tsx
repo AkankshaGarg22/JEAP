@@ -53,15 +53,12 @@ export default function Index() {
             <div className="fixed">
               <Landing isVisible={isVisible} />
             </div>
-            <div ref={ref} className="relative mt-[100%] bg-white">
+            <div className="relative mt-[100vh] bg-white">
               <Mission />
-            </div>
-            <div data-aos="fade-up" data-aos-duration="3000">
+            <div ref={ref} data-aos="fade-up" data-aos-duration="3000">
               <WorldMap />
             </div>
-            {/* <div data-aos="fade-up" data-aos-duration="3000">
-            <TurnAroundTime />
-          </div> */}
+            {/* <div data-aos="fade-up" data-aos-duration="3000"><TurnAroundTime /></div> */}
             <div data-aos="fade-up" data-aos-duration="3000">
               <Tabs />
             </div>
@@ -76,6 +73,7 @@ export default function Index() {
             </div>
             <div>
               <Leadership />
+            </div>
             </div>
             <div className="bottom-0 ">
               <Footer />
