@@ -72,19 +72,19 @@ export function TurnAroundTime() {
                 {({ isMobile }) => {
                     return <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center relative">
                         <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
-                        <div className="absolute z-10 top-[10%]">
-                            <MyLottieComponent height={350} width={isMobile ? 300 : 950} animationSource={(animationlottie_1)} />
-                        </div>
-                        <div className="absolute z-10 top-[31%] right-[44%] md:right-[30%] top-[30%]">
-                            <MyLottieComponent height={isMobile ? 300 : 450} width={isMobile ? 200 : 1000} animationSource={(animationlottie_2)} />
-                        </div>
-                        <div className="absolute z-10 left-[35%] md:left-[30%] top-[30%]">
-                            <MyLottieComponent height={isMobile ? 300 : 450} width={isMobile ? 300 : 950} animationSource={(animationlottie_3)} />
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80 p-0 m-0"></div>
+                         <div className="absolute z-10 p-0 m-0 top-[0%]">
+                             <MyLottieComponent height={500} width={525} animationSource={(animationlottie_1)} />
+                         </div>
+                         <div className="absolute z-10 p-0 m-0 top-[30%] right-[50%]">
+                             <MyLottieComponent height={475} width={500} animationSource={(animationlottie_2)} />
+                         </div>
+                         <div className="absolute z-10 p-0 m-0 top-[30%] left-[50%]">
+                             <MyLottieComponent height={475} width={500} animationSource={(animationlottie_3)} />
+                         </div>
                         
-                        <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full">
-                            <div className="relative">
+                         <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full">
+                           <div className="relative">
                                 <CircularProgressbarWithChildren value={isVisible && innerProgress === 100 ? outerProgress : 0} styles={buildStyles({
                                     pathTransitionDuration: 2,
                                     pathColor: "#00205C",
