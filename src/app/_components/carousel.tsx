@@ -6,14 +6,14 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
   const [curr, setCurr] = useState(0);
   const [selected, setSelected] = useState(item.from);
 
-  const prev = () => setCurr((curr) => (curr === 0 ? item.slides.length - 1 : curr - 1));
-  const next = () => setCurr((curr) => (curr === item.slides.length - 1 ? 0 : curr + 1));
+  // const prev = () => setCurr((curr) => (curr === 0 ? item.slides.length - 1 : curr - 1));
+  // const next = () => setCurr((curr) => (curr === item.slides.length - 1 ? 0 : curr + 1));
 
-  useEffect(() => {
-    if (!autoSlide) return;
-    const slideInterval = setInterval(next, autoSlideInterval);
-    return () => clearInterval(slideInterval);
-  }, []);
+  // useEffect(() => {
+  //   if (!autoSlide) return;
+  //   const slideInterval = setInterval(next, autoSlideInterval);
+  //   return () => clearInterval(slideInterval);
+  // }, []);
 
   return (
     <div className="overflow-hidden relative">
@@ -39,14 +39,14 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
         </div>
         <div className="basis-1/2 text-start text-wrap text-lg md:text-3xl">{selected}</div>
       </div>
-      <div className="absolute bottom-20 right-10 p-4 flex flex-col">
+      {/* <div className="absolute bottom-20 right-10 p-4 flex flex-col">
         <button onClick={prev} className="p-1 rounded-full shadow text-gray-800">
           <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
         </button>
         <button onClick={next} className="p-1 rounded-full shadow text-gray-800">
           <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3025.png" alt="next" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
