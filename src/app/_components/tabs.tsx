@@ -91,8 +91,8 @@ export function Tabs() {
           ))}
         </div>
         <div className="bg-gray-400 relative">
-          {Menu.map((item) => (
-            <div>
+          {Menu.map((item, index) => (
+            <div key={index}>
               <div key={item.id} className={active === item.id ? "block" : "hidden"}>
                 <Carousel item={item} />
               </div>

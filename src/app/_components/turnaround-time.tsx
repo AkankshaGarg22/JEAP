@@ -13,9 +13,7 @@ import Device from "./device";
 export function TurnAroundTime() {
 
     const ref = useRef(null);
-
     const isVisible = useOnScreen(ref)
-    console.log('haha', isVisible)
 
     const [innerProgress, setInnerProgress] = useState(0)
     const [outerProgress, setOuterProgress] = useState(0)
