@@ -1,4 +1,3 @@
-import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -63,7 +62,8 @@ export default function RootLayout({
         <Suspense fallback={<Loading></Loading>}>
         <Header />
         <div className="min-h-screen">{children}</div>
-        <Footer />
+        
+        
         </Suspense>
       </body>
     </html>

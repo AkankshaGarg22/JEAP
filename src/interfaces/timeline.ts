@@ -1,8 +1,8 @@
 export interface TimeLineItem {
   key: number;
-  year: string;
-  cardTitle: string;
-  cardSubtitle: string;
+  year?: string;
+  cardTitle?: string;
+  cardSubtitle?: string;
   cardDetailedText: string;
 }
 
