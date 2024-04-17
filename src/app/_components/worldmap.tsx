@@ -71,6 +71,10 @@ const WorldMap = () => {
           <div className="flex flex-col">
             <p className="text-left">Vulnerability Index</p>
             <div className="h-[50px] w-[200px] bg-gradient-to-r from-[#f1686b] via-[#fcbe79] via-[#fbe884] to-[#62bf7b]"></div>
+            <div className="flex justify-between">
+              <p>Low</p>
+              <p>High</p>
+            </div>
           </div>
           <div className="flex items-center">
             <Link className="underline-offset-1	underline text-[#1A5632]" href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
