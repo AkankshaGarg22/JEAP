@@ -14,7 +14,7 @@ const Header = () => {
             <img className="h-[30px] lg:h-[30px] w-[30px]  lg:w-[30px]" src="/assets/blog/home.png" alt="home-logo" />
           </div>
           <div className="">
-            <img className="h-[36px] lg:h-[40px] w-[80px] lg:w-[100px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
+            <img className="h-[38px] lg:h-[40px] w-[90px] lg:w-[100px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
           </div>
         </div>
         <div className="hidden md:flex header-links  flex-row items-center gap-4 md:gap-8 md:p-5">

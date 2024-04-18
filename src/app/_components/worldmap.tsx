@@ -30,7 +30,7 @@ const WorldMap = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
-      <h1 className="font-[compasse-extrabold] text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+      <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
       <div className="h-[480px] md:h-[1300px] relative" >
         {data.length > 0 && (
           <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={1000} height={200} style={{ height: "100%", width: "100%" }}>
@@ -70,7 +70,7 @@ const WorldMap = () => {
         <div className="flex flex-row justify-between px-4">
           <div className="flex flex-col">
             <p className="text-left">Vulnerability Index</p>
-            <div className="h-[50px] w-[200px] bg-gradient-to-r from-[#f1686b] via-[#fcbe79] via-[#fbe884] to-[#62bf7b]"></div>
+            <div className="h-[50px] w-[150px] md:w-[200px] bg-gradient-to-r from-[#f1686b] via-[#fcbe79] via-[#fbe884] to-[#62bf7b]"></div>
             <div className="flex justify-between">
               <p>High</p>
               <p>Low</p>
@@ -80,14 +80,14 @@ const WorldMap = () => {
             <Link className="underline-offset-1	underline text-[#1A5632]" href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
           </div>
         </div>
-        <h2 className="font-semibold text-lg md:text-3xl pt-[100px]">
+        <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px]">
           The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
           humanitarian crises, and increasingly climate-related disasters.
         </h2>
-        <p className="md:py-4 text-lg">
+        <p className="py-4 text-lg">
           The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
         </p>
-        <p className="md:py-4 font-bold text-2xl">
+        <p className="py-4 font-bold text-lg">
           The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
         </p>
       </div>

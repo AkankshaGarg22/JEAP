@@ -39,7 +39,7 @@ export function TimeLine() {
   return (
     <div id="jeap-journey" className="min-h-screen flex flex-col">
       <div className="text-center p-10 md:pt-[150px]">
-        <h2 className="text-[#000000] text-4xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
+        <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
       <div className="relative h-[720px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
