@@ -72,6 +72,7 @@ export function TurnAroundTime() {
                 {({ isMobile }) => {
                     return <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center relative">
                         <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
+                      
                         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80 p-0 m-0"></div>
                          <div className="absolute z-10 p-0 m-0 top-[0%]">
                              <MyLottieComponent height={500} width={525} animationSource={(animationlottie_1)} />
@@ -82,6 +83,7 @@ export function TurnAroundTime() {
                          <div className="absolute z-10 p-0 m-0 top-[30%] left-[50%]">
                              <MyLottieComponent height={475} width={500} animationSource={(animationlottie_3)} />
                          </div>
+                        
                         
                          <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full">
                            <div className="relative">
