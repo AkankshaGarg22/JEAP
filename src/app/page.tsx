@@ -71,7 +71,7 @@ export default function Index() {
             <div data-aos="fade-up" data-aos-duration="3000">
               <Resources />
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="3000">
               <Leadership />
             </div>
             </div>

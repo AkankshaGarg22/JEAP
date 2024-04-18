@@ -10,6 +10,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'compasse-extrabold';
+  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.TTF'), format('truetype');
+  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.woff'), format('woff');;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 body {
   font-family: 'compasse-regular';
 }
@@ -88,7 +97,7 @@ body {
 
 .resource-image {
   object-fit: contain;
-  width: 100% !important;
+  width: 50% !important;
   position: relative !important;
   height: unset !important;
 }
@@ -118,9 +127,6 @@ body {
   }
   .bg-custom {
     height: 100px;
-  }
-  .resource-image {
-    width: 60% !important;
   }
 }
 

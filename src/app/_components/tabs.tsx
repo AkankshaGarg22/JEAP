@@ -68,9 +68,9 @@ export function Tabs() {
   };
 
   return (
-    <div id="vision" className="min-h-screen flex flex-col items-center justify-evenly">
+    <div id="vision" className="min-h-screen flex flex-col items-center justify-evenly md:pt-[150px]">
       <div className="text-center md:p-3">
-        <h2 className="text-[#000] text-6xl font-bold my-4">THE JEAP VISION</h2>
+        <h2 className="text-[#000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP VISION</h2>
         <p className="font-medium md:px-48 py-4">
           At the heart of the JEAP is a vision of 'One Africa for Health Security.' This vision outlines six collaboration areas and provides a comprehensive framework for coordinated action, to
           safeguard African populations from public health emergencies.

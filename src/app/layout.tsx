@@ -58,7 +58,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className={'font-Compasseregular'}>
+      <body>
         <Suspense fallback={<Loading></Loading>}>
         <Header />
         <div className="min-h-screen">{children}</div>
