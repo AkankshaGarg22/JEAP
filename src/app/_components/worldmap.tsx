@@ -30,7 +30,7 @@ const WorldMap = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
-      <h1 className="font-black text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+      <h1 className="font-[compasse-extrabold] text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
       <div className="h-[480px] md:h-[1300px] relative" >
         {data.length > 0 && (
           <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={1000} height={200} style={{ height: "100%", width: "100%" }}>
@@ -72,8 +72,8 @@ const WorldMap = () => {
             <p className="text-left">Vulnerability Index</p>
             <div className="h-[50px] w-[200px] bg-gradient-to-r from-[#f1686b] via-[#fcbe79] via-[#fbe884] to-[#62bf7b]"></div>
             <div className="flex justify-between">
-              <p>Low</p>
               <p>High</p>
+              <p>Low</p>
             </div>
           </div>
           <div className="flex items-center">
