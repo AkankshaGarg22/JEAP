@@ -8,7 +8,7 @@ export function TimeLine() {
   const [selectedKey, setSelectedKey] = useState(1);
   const [popUp, setPopUp] = useState<PopUpState>({ isOpen: false, item: null });
 
-  const backgroundImageUrl = "/assets/blog/WHO_Ghana-151560.jpg";
+  const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
   const items: TimeLineItem[] = [
     {
       key: 1,
