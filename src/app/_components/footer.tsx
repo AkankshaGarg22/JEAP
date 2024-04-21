@@ -18,14 +18,14 @@ export function Footer() {
         <Container>
           <div className="flex flex-col p-4 lg:gap-20 lg:flex-row">
             <div className="footer-links text-white ">
-              <p className="p-2 cursor-pointer" onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
-              <p className="p-2 cursor-pointer" onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
-              <p className="p-2 cursor-pointer" onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
+              <p className="p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
+              <p className="p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
+              <p className="p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
 
             </div>
             <div className="footer-links text-white ">
-              <p className="p-2 cursor-pointer" onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
-              <p className="p-2 cursor-pointer" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
+              <p className="p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
+              <p className="p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
 
             </div>
           </div>
@@ -37,14 +37,13 @@ export function Footer() {
       </div>
       <div className="bg-white">
         <div className="logo-section flex flex-row justify-evenly relative w-full">
-          <div>
+          <div className="max-w-[300px]">
             <Image src="/assets/blog/Jeap-transparent.png" fill alt="logo" className="footer-image"></Image>
           </div>
-          <div>
+          <div className="max-w-[300px]">
             <Image src="/assets/blog/AfricaCDCLogo.png" fill alt="logo-2" className="footer-image"></Image>
-
           </div>
-          <div>
+          <div className="max-w-[300px]"> 
             <Image src="/assets/blog/WHO_Logo.png" fill alt="logo-3" className="footer-image"></Image>
           </div>
         </div>

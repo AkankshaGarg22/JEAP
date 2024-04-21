@@ -10,6 +10,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'compasse-extrabold';
+  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.TTF'), format('truetype');
+  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.woff'), format('woff');;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 body {
   font-family: 'compasse-regular';
 }
@@ -88,7 +97,7 @@ body {
 
 .resource-image {
   object-fit: contain;
-  width: 100% !important;
+  width: 50% !important;
   position: relative !important;
   height: unset !important;
 }
@@ -119,9 +128,6 @@ body {
   .bg-custom {
     height: 100px;
   }
-  .resource-image {
-    width: 60% !important;
-  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
@@ -129,3 +135,57 @@ body {
     max-width: 750px !important;
   }
 }
+
+
+
+
+.timeline {
+  @apply relative min-h-[150px] flex flex-col items-end;
+}
+
+.line {
+  @apply absolute left-[calc(25%_-_1px)] w-0.5 bg-white h-full top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0;
+}
+
+.line-inner {
+  @apply relative w-full h-full bg-[white];
+}
+
+.section {
+  @apply flex flex-col gap-1 lg:gap-2 transition-[600ms] duration-[ease] relative z-[4] items-start min-h-[300px] p-4;
+}
+
+.section .section-title{
+  @apply text-3xl
+}
+
+.section.active .section-title {
+  @apply opacity-[100] text-4xl;
+}
+
+.section.active h2,
+.section.active h5,
+.section.active p {
+  @apply text-[white] opacity-[100];
+}
+
+.section.active h5{
+  @apply text-2xl;
+}
+
+.section.active p {
+ @apply text-xl;
+}
+
+.section button{
+  @apply hidden;
+}
+
+.section.active button{
+  @apply block  p-1 border-2 text-white text-lg;
+}
+
+.section.active .section-ball{
+  @apply w-8 h-8 -top-4 -left-4;
+}
+
