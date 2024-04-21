@@ -75,13 +75,14 @@ export function TurnAroundTime() {
                          <div className="absolute z-10 p-0 m-0 top-[0%]">
                              <MyLottieComponent height={500} width={525} animationSource={(animationlottie_1)} />
                          </div>
-                         <div className="absolute z-10 p-0 m-0 top-[30%] right-[50%]">
-                             <MyLottieComponent height={475} width={500} animationSource={(animationlottie_2)} />
+                         <div className="absolute z-10 p-0 m-0 left-[24%] top-[33%] right-[44%]">
+                            {/*  <MyLottieComponent height={455} width={500} animationSource={(animationlottie_2)} />*/} 
+                           <img src="/assets/blog/animate2.svg" className={"h-[455px] w-[500px]"}/>
                          </div>
-                         <div className="absolute z-10 p-0 m-0 top-[30%] left-[50%]">
-                             <MyLottieComponent height={475} width={500} animationSource={(animationlottie_3)} />
+                         <div className="absolute z-10 p-0 m-0 right-[25%] top-[33%] left-[44%]">
+                          {/*   <MyLottieComponent height={475} width={500} animationSource={(animationlottie_3)} /> */}
+                          <img src="/assets/blog/animate3.svg" className={"h-[455px] w-[500px]"}></img>
                          </div>
-                        
                         
                          <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full">
                            <div className="relative">
