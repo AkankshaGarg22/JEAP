@@ -37,14 +37,13 @@ export function Footer() {
       </div>
       <div className="bg-white">
         <div className="logo-section flex flex-row justify-evenly relative w-full">
-          <div>
+          <div className="max-w-[300px]">
             <Image src="/assets/blog/Jeap-transparent.png" fill alt="logo" className="footer-image"></Image>
           </div>
-          <div>
+          <div className="max-w-[300px]">
             <Image src="/assets/blog/AfricaCDCLogo.png" fill alt="logo-2" className="footer-image"></Image>
-
           </div>
-          <div>
+          <div className="max-w-[300px]"> 
             <Image src="/assets/blog/WHO_Logo.png" fill alt="logo-3" className="footer-image"></Image>
           </div>
         </div>

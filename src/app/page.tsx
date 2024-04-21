@@ -37,7 +37,7 @@ export default function Index() {
         const visiblePercentage = (distanceFromTop / missionHeight) * 100;
 
         // Update isVisible state based on the visible percentage
-        setIsVisible(visiblePercentage >= 80);
+        setIsVisible(visiblePercentage >= 70);
       }
     };
 
@@ -84,7 +84,7 @@ export default function Index() {
                 <Leadership />
               </div>
             </div>
-            <div className="bottom-0 ">
+            <div className="relative">
               <Footer />
             </div>
           </div>
