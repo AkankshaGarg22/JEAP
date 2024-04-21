@@ -148,7 +148,7 @@ body {
 }
 
 .line-inner {
-  @apply relative w-full h-full bg-[green];
+  @apply relative w-full h-full bg-[white];
 }
 
 .section {
