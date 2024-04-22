@@ -182,7 +182,7 @@ body {
 }
 
 .section.active button{
-  @apply block  p-1 border-2 text-white text-lg;
+  @apply block p-1 border-2 text-white text-lg md:hidden;
 }
 
 .section.active .section-ball{
