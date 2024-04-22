@@ -90,8 +90,6 @@ export function TurnAroundTime() {
                                     </div>
                                 </div>
                             </> : <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={isMobile ? 300 : isTablet ? 600 : 600} width={isMobile? 300 : isTablet ? 600 : 600}></Image>}
-
-                                {console.log('isTABLET', isTablet)}
                             <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full lg:bottom-0">
                                 <div className="relative">
                                     <div className="absolute z-[100] top-[45px] right-[2px] md:right-[4px] md:top-[68px]">
