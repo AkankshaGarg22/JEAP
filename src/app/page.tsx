@@ -67,8 +67,7 @@ export default function Index() {
               <div ref={ref} data-aos="fade-up" data-aos-duration="3000">
                 <WorldMap />
               </div>
-             <div data-aos="fade-up" data-aos-duration="3000"><TurnAroundTime /></div>
-             
+              <div data-aos="fade-up" data-aos-duration="3000"><TurnAroundTime /></div>
               <div data-aos="fade-up" data-aos-duration="3000">
                 <Tabs />
               </div>

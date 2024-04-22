@@ -81,7 +81,7 @@ export function TimeLine() {
               <h2 className="text-xl font-bold">{item.cardTitle}</h2>
               <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
               <p className="hidden md:block md:text-lg">{item.cardDetailedText}</p>
-              <button className="md:hidden" onClick={() => setPopUp({ isOpen: true, item: item })}>
+              <button onClick={() => setPopUp({ isOpen: true, item: item })}>
                 Read More
               </button>
             </div>
