@@ -9,6 +9,7 @@ import animationlottie_1 from '../../../public/assets/animations/animate1.json';
 import animationlottie_2 from '../../../public/assets/animations/animate2.json';
 import animationlottie_3 from '../../../public/assets/animations/animate3.json';
 import Device from "./device";
+import MyLotieComponent from "./svg-animate";
 
 export function TurnAroundTime() {
 
