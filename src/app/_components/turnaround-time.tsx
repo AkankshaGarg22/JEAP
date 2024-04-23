@@ -74,7 +74,7 @@ export function TurnAroundTime() {
                         <div className="z-10 h-full w-full flex justify-center items-center">
                             <div className="hidden lg:block relative h-full w-full flex justify-center items-center">
                                 <div className="absolute w-[950px] h-[350px] animation-1">
-                                    <div className="relative cursor-pointer">
+                                    <div className="relative cursor-pointer border-4">
                                         <MyLottieComponent height={350} width={950} animationSource={(animationlottie_1)} />
                                     </div>
                                 </div>
@@ -89,6 +89,7 @@ export function TurnAroundTime() {
                                     </div>
                                 </div>
                             </div>
+
                             <div className="lg:hidden block">
                                 <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={isMobile ? 300 : isTablet ? 600 : 600} width={isMobile ? 300 : isTablet ? 600 : 600}></Image>
                             </div>
