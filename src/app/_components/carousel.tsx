@@ -22,12 +22,12 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
     <div className="overflow-hidden relative">
       <div className="flex transition-transform ease-out duration-500 h-[720px]" style={{ transform: `translateX(-${curr * 100}%)` }}>
         {item.slides.map((img, i) => (
-          <img key={i} className=" md:min-w-full object-cover object-right lg:object-cover" src={img} alt="Picture" />
+          <img key={i} className=" md:min-w-full object-cover object-right lg:object-cover lg:object-left" src={img} alt="Picture" />
         ))}
       </div>
       <div className="absolute inset-0 bg-transparent text-white text-center pt-4 md:pt-8 text-2xl md:text-4xl font-bold uppercase">{item.title}</div>
-      <div className="absolute inset-0 md:top-40 bg-transparent text-white flex flex-col md:flex-row items-center md:items-start justify-start md:justify-center  gap-4">
-        <div className="flex basis-1/6 md:basis-1/4 flex-row md:flex-col gap-2  justify-items-end items-end">
+      <div className="absolute inset-0 md:top-[100px]  bg-transparent text-white flex flex-col md:flex-row items-center md:items-start justify-start md:justify-center gap-4">
+        <div className="flex basis-1/6 md:basis-1/4 flex-row md:flex-col gap-2 justify-items-end items-end">
           <button
             className={`text-lg md:text-3xl ${selected === item.from ? "border-b-white mb:border-r-white " : "text-[#FFFFFF7D] border-r-[#FFFFFF7D]"} border-b-4 md:border-b-0 md:border-r-8 px-4 w-28`}
             onClick={() => setSelected(item.from)}
