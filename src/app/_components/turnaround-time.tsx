@@ -89,6 +89,7 @@ export function TurnAroundTime() {
                                     </div>
                                 </div>
                             </div>
+
                             <div className="lg:hidden block">
                                 <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={isMobile ? 300 : isTablet ? 600 : 600} width={isMobile ? 300 : isTablet ? 600 : 600}></Image>
                             </div>
