@@ -74,7 +74,7 @@ export function TurnAroundTime() {
                         <div className="z-10 h-full w-full flex justify-center items-center">
                             <div className="hidden lg:block relative h-full w-full flex justify-center items-center">
                                 <div className="absolute w-[950px] h-[350px] animation-1">
-                                    <div className="relative cursor-pointer">
+                                    <div className="relative cursor-pointer border-4">
                                         <MyLottieComponent height={350} width={950} animationSource={(animationlottie_1)} />
                                     </div>
                                 </div>
