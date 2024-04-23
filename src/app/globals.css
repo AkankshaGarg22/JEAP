@@ -139,7 +139,130 @@ body {
   }
 }
 
-@media screen and (min-width: 1728px) and (max-width: 1800px) {
+/*Desktop Resolutions*/
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .animation-1 {
+    bottom: 0;
+    right: 6%;
+  }
+
+  .animation-2 {
+    left: calc(-13% + 100vw - 1024px);
+    top: -200px;
+  }
+
+  .animation-3 {
+    right: -7%;
+    top: -196px;
+  }
+
+  .circluar-progress-bar {
+    left: 40%
+  }
+}
+
+/*Desktop Resolutions*/
+@media screen and (min-width: 1280px) and (max-width: 1326px) {
+  .animation-1 {
+    bottom: 0;
+    right: 13%;
+  }
+
+  .animation-2 {
+    left: calc(1% + 100vw - 1280px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 2.3%;
+    top: -201px;
+  }
+  .circluar-progress-bar {
+    left: 43%
+  }
+}
+
+@media screen and (min-width: 1326px) and (max-width: 1366px) {
+  .animation-1 {
+    bottom: 0;
+    right: 13%;
+  }
+
+  .animation-2 {
+    left: calc(4% + 100vw - 1326px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 3%;
+    top: -197px;
+  }
+  .circluar-progress-bar {
+    left: 46%
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+  .animation-1 {
+    bottom: 0;
+    right: 16%;
+  }
+
+  .animation-2 {
+    left: calc(3% + 100vw - 1367px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 6.5%;
+    top: -199px;
+  }
+  .circluar-progress-bar {
+    left: 46%
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+  .animation-1 {
+    bottom: 0;
+    right: 16%;
+  }
+
+  .animation-2 {
+    left: calc(1% + 100vw - 1367px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 7%;
+    top: -199px;
+  }
+  .circluar-progress-bar {
+    left: 50%
+  }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1700) {
+  .animation-1 {
+    bottom: 0;
+    right: 16%;
+  }
+
+  .animation-2 {
+    left: calc(1% + 100vw - 1367px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 7%;
+    top: -199px;
+  }
+  .circluar-progress-bar {
+    left: 50%
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1800px) {
   .animation-1 {
     bottom: 0;
     right: 22%;
@@ -174,61 +297,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1366px) {
-  .animation-1 {
-    bottom: 0;
-    right: 13%;
-  }
-
-  .animation-2 {
-    left: 88px;
-    top: -201px;
-  }
-
-  .animation-3 {
-    right: 3%;
-    top: -197px;
-  }
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1280px) {
-  .animation-1 {
-    bottom: 0;
-    right: 13%;
-  }
-
-  .animation-2 {
-    left: 15px;
-    top: -201px;
-  }
-
-  .animation-3 {
-    right: 2.3%;
-    top: -201px;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1024px) {
-  .animation-1 {
-    bottom: 0;
-    right: 6%;
-  }
-
-  .animation-2 {
-    left: -13%;
-    top: -200px;
-  }
-
-  .animation-3 {
-    right: -7%;
-    top: -196px;
-  }
-
-  .circluar-progress-bar {
-    left: 40%
-  }
-}
-
 @media screen and (min-width: 2000px) and (max-width: 2560px) {
   .animation-1 {
     bottom: 0;
@@ -243,23 +311,6 @@ body {
   .animation-3 {
     right: 26.5%;
     top: -202px;
-  }
-}
-
-@media screen and (min-width: 1370px) and (max-width: 1440px) {
-  .animation-1 {
-    bottom: 0;
-    right: 16%;
-  }
-
-  .animation-2 {
-    left: 108px;
-    top: -201px;
-  }
-
-  .animation-3 {
-    right: 6.5%;
-    top: -199px;
   }
 }
 

@@ -68,7 +68,7 @@ export function TurnAroundTime() {
         <div ref={ref}>
             <Device>
                 {({ isMobile, isTablet }) => {
-                    return <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center relative">
+                    return <div className="min-h-screen h-full flex flex-col lg:flex-row items-center justify-center relative">
                         <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
                         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
                         <div className="z-10 h-full w-full flex justify-center items-center">
