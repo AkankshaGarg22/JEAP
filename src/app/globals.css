@@ -189,13 +189,13 @@ body {
   }
 
   .animation-2 {
-    left: calc(4% + 100vw - 1326px);
+    left: calc(3.5% + 100vw - 1326px);
     top: -201px;
   }
 
   .animation-3 {
     right: 3%;
-    top: -197px;
+    top: -201px;
   }
   .circluar-progress-bar {
     left: 46%
@@ -209,7 +209,7 @@ body {
   }
 
   .animation-2 {
-    left: calc(3% + 100vw - 1367px);
+    left: calc(2.5% + 100vw - 1367px);
     top: -201px;
   }
 
@@ -234,7 +234,7 @@ body {
   }
 
   .animation-3 {
-    right: 7%;
+    right: 7.5%;
     top: -199px;
   }
   .circluar-progress-bar {
@@ -242,23 +242,23 @@ body {
   }
 }
 
-@media screen and (min-width: 1601px) and (max-width: 1700) {
+@media screen and (min-width: 1601px) and (max-width: 1700px) {
   .animation-1 {
     bottom: 0;
     right: 16%;
   }
 
   .animation-2 {
-    left: calc(1% + 100vw - 1367px);
-    top: -201px;
+    left: calc(14% + 100vw - 1601px);
+    top: -199px;
   }
 
   .animation-3 {
-    right: 7%;
-    top: -199px;
+    right: 7.6%;
+    top: -201px;
   }
   .circluar-progress-bar {
-    left: 50%
+    left: 51%
   }
 }
 
