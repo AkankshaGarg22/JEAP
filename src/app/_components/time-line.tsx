@@ -43,7 +43,6 @@ export function TimeLine() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.utils.toArray<HTMLElement>(".section").forEach((section) => {
-      console.log(section);
       gsap.timeline({
         scrollTrigger: {
           trigger: section,

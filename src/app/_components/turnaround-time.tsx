@@ -73,17 +73,17 @@ export function TurnAroundTime() {
                         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
                         <div className="z-10 h-full w-full flex justify-center items-center">
                             <div className="hidden lg:block relative h-full w-full flex justify-center items-center">
-                                <div className="absolute w-[950px] h-[350px] bottom-0 right-[22%]">
+                                <div className="absolute w-[950px] h-[350px] animation-1">
                                     <div className="relative cursor-pointer">
                                         <MyLottieComponent height={350} width={950} animationSource={(animationlottie_1)} />
                                     </div>
                                 </div>
-                                <div className="absolute w-[950px] h-[450px] left-[250px] top-[-200px]">
+                                <div className="absolute w-[950px] h-[450px] animation-2">
                                     <div className="relative cursor-pointer">
                                         <MyLottieComponent height={450} width={950} animationSource={(animationlottie_2)} />
                                     </div>
                                 </div>
-                                <div className="absolute w-[950px] h-[450px] right-[14%] top-[-200px]">
+                                <div className="absolute w-[950px] h-[450px] animation-3">
                                     <div className="relative cursor-pointer">
                                         <MyLottieComponent height={450} width={950} animationSource={(animationlottie_3)} />
                                     </div>
@@ -92,10 +92,13 @@ export function TurnAroundTime() {
                             <div className="lg:hidden block">
                                 <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={isMobile ? 300 : isTablet ? 600 : 600} width={isMobile ? 300 : isTablet ? 600 : 600}></Image>
                             </div>
-                            <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full lg:bottom-[50%]">
+                            <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full lg:bottom-[50%] circluar-progress-bar">
                                 <div className="relative">
-                                    <div className="absolute z-[100] top-[45px] right-[2px] md:right-[4px] md:top-[68px]">
-                                        <Image src="/assets/blog/Group 2501.svg" height={isMobile ? 30 : 50} width={isMobile ? 30 : 50} alt="label"></Image>
+                                    <div className="absolute z-[100] top-[45px] right-[2px] md:right-[4px] md:top-[68px] md:hidden block">
+                                        <Image src="/assets/blog/Group 2501.svg" height={30} width={30} alt="label"></Image>
+                                    </div>
+                                    <div className="absolute z-[100] top-[45px] right-[2px] md:right-[4px] md:top-[68px] hidden md:block">
+                                        <Image src="/assets/blog/Group 2501.svg" height={50} width={50} alt="label"></Image>
                                     </div>
                                     <CircularProgressbarWithChildren value={isVisible && innerProgress === 100 ? outerProgress : 0} styles={buildStyles({
                                         pathTransitionDuration: 2,
@@ -104,8 +107,11 @@ export function TurnAroundTime() {
                                     })}
                                         strokeWidth={15}>
                                         <div className="absolute w-[50px] h-[50px] md:w-[100px] md:h-[100px]">
-                                            <div className="absolute z-[100] top-[2px] left-[1px] md:top-[6px] md:left-[6px]">
-                                                <Image src="/assets/blog/Group 2503.svg" height={isMobile ? 30 : 50} width={isMobile ? 30 : 50} alt="label"></Image>
+                                            <div className="absolute z-[100] top-[2px] left-[1px] md:left-[6px] md:top-[6px] md:hidden block">
+                                                <Image src="/assets/blog/Group 2503.svg" height={30} width={30} alt="label"></Image>
+                                            </div>
+                                            <div className="absolute z-[100] top-[2px] left-[1px] md:left-[6px] md:top-[6px] hidden md:block">
+                                                <Image src="/assets/blog/Group 2503.svg" height={50} width={50} alt="label"></Image>
                                             </div>
                                             <CircularProgressbarWithChildren
                                                 value={isVisible ? innerProgress : 0}
