@@ -21,7 +21,6 @@ export default function Index() {
   const landingRef = useRef<HTMLDivElement | null>(null);
 
   const [isVisible, setIsVisible] = useState(false);
-  console.log(isVisible);
 
   useEffect(() => {
     const handleScroll = () => {
