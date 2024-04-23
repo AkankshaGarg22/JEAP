@@ -5,7 +5,8 @@
 @font-face {
   font-family: 'compasse-regular';
   src: url('../fonts/compasse-regular.ttf?v=1.101'), format('truetype');
-  src: url('../fonts/COMPASSE-REGULAR.woff'), format('woff');;
+  src: url('../fonts/COMPASSE-REGULAR.woff'), format('woff');
+  ;
   font-weight: 400;
   font-style: normal;
 }
@@ -13,7 +14,8 @@
 @font-face {
   font-family: 'compasse-extrabold';
   src: url('../fonts/COMPASSE\ EXTRA\ BOLD.TTF'), format('truetype');
-  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.woff'), format('woff');;
+  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.woff'), format('woff');
+  ;
   font-weight: 900;
   font-style: normal;
 }
@@ -125,8 +127,10 @@ body {
   .footer-link {
     font-size: 16px;
   }
+
   .bg-custom {
     height: 100px;
+    margin-top: -11px;
   }
 }
 
@@ -136,8 +140,180 @@ body {
   }
 }
 
+/*Desktop Resolutions*/
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .animation-1 {
+    bottom: 0;
+    right: 6%;
+  }
+
+  .animation-2 {
+    left: calc(-13% + 100vw - 1024px);
+    top: -200px;
+  }
+
+  .animation-3 {
+    right: -7%;
+    top: -196px;
+  }
+
+  .circluar-progress-bar {
+    left: 40%
+  }
+}
+
+/*Desktop Resolutions*/
+@media screen and (min-width: 1280px) and (max-width: 1326px) {
+  .animation-1 {
+    bottom: 0;
+    right: 13%;
+  }
+
+  .animation-2 {
+    left: calc(1% + 100vw - 1280px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 2.3%;
+    top: -201px;
+  }
+  .circluar-progress-bar {
+    left: 43%
+  }
+}
+
+@media screen and (min-width: 1326px) and (max-width: 1366px) {
+  .animation-1 {
+    bottom: 0;
+    right: 13%;
+  }
+
+  .animation-2 {
+    left: calc(3.5% + 100vw - 1326px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 3%;
+    top: -201px;
+  }
+  .circluar-progress-bar {
+    left: 46%
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+  .animation-1 {
+    bottom: 0;
+    right: 16%;
+  }
+
+  .animation-2 {
+    left: calc(2.5% + 100vw - 1367px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 6.5%;
+    top: -199px;
+  }
+  .circluar-progress-bar {
+    left: 46%
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+  .animation-1 {
+    bottom: 0;
+    right: 16%;
+  }
+
+  .animation-2 {
+    left: calc(1% + 100vw - 1367px);
+    top: -201px;
+  }
+
+  .animation-3 {
+    right: 7.5%;
+    top: -199px;
+  }
+  .circluar-progress-bar {
+    left: 50%
+  }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1700px) {
+  .animation-1 {
+    bottom: 0;
+    right: 16%;
+  }
+
+  .animation-2 {
+    left: calc(14% + 100vw - 1601px);
+    top: -199px;
+  }
+
+  .animation-3 {
+    right: 7.6%;
+    top: -201px;
+  }
+  .circluar-progress-bar {
+    left: 51%
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1800px) {
+  .animation-1 {
+    bottom: 0;
+    right: 22%;
+  }
+
+  .animation-2 {
+    left: 250px;
+    top: -200px;
+  }
+
+  .animation-3 {
+    right: 14%;
+    top: -200px;
+  }
+}
 
 
+@media screen and (min-width: 1800px) and (max-width: 1920px) {
+  .animation-1 {
+    bottom: 0;
+    right: 25%;
+  }
+
+  .animation-2 {
+    left: 340px;
+    top: -200px;
+  }
+
+  .animation-3 {
+    right: 18%;
+    top: -197px;
+  }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2560px) {
+  .animation-1 {
+    bottom: 0;
+    right: 32%;
+  }
+
+  .animation-2 {
+    left: 25%;
+    top: -200px;
+  }
+
+  .animation-3 {
+    right: 26.5%;
+    top: -202px;
+  }
+}
 
 .timeline {
   @apply relative min-h-[150px] flex flex-col items-end;
@@ -188,4 +364,3 @@ body {
 .section.active .section-ball{
   @apply w-8 h-8 -top-4 -left-4;
 }
-

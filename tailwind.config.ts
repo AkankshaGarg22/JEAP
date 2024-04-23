@@ -44,9 +44,9 @@ const config: Config = {
       keyframes: {
         changeImage: {
           '0%': { backgroundImage: 'url("/assets/blog/jpgs/header_image.webp")' },
-          '25%': { backgroundImage: 'url("/assets/blog/jpgs/AK402864-145979.webp")' },
-          '50%': { backgroundImage: 'url("/assets/blog/Guinea_Hawkey_ebola_76657.jpg")' },
-          '75%': { backgroundImage: 'url("/assets/blog/jpgs/WHO-PANOS-PAKISTAN-47.webp")' },
+          '25%': { backgroundImage: 'url("/assets/blog/jpgs/header_1.webp")' },
+          '50%': { backgroundImage: 'url("/assets/blog/jpgs/header_2.webp")' },
+          '75%': { backgroundImage: 'url("/assets/blog/jpgs/header_3.webp")' },
           '100%': { backgroundImage: 'url("/assets/blog/jpgs/header_image.webp")' },
         }
       }

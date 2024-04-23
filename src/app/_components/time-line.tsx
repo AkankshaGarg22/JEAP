@@ -43,7 +43,6 @@ export function TimeLine() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.utils.toArray<HTMLElement>(".section").forEach((section) => {
-      console.log(section);
       gsap.timeline({
         scrollTrigger: {
           trigger: section,
@@ -69,25 +68,20 @@ export function TimeLine() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" />
         <div className="timeline my-4 text-transparent">
           <div className="line">
-            <div className="line-inner">
-              <div className="ball"></div>
-            </div>
           </div>
           {items.map((item) => (
             <div className="section text-wrap text-3xl w-3/4 md:w-3/4" key={item.key}>
-              <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full"></div>
-
+              <div className="section-ball absolute -top-2 -left-2 w-4 h-3 bg-white rounded-full"></div>
               <div className="section-title text-white">{item.year}</div>
               <h2 className="text-xl font-bold">{item.cardTitle}</h2>
               <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
-              <p className="hidden md:block md:text-lg">{item.cardDetailedText}</p>
+              <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
               <button onClick={() => setPopUp({ isOpen: true, item: item })}>
                 Read More
               </button>
             </div>
           ))}
         </div>
-        <div className="relative text-center lg:text-center text-white w-3/4 lg:w-1/2 text-3xl pl-4 lg:pl-20">End</div>
         {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
       </div>
     </div>
