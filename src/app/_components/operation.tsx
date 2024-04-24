@@ -12,7 +12,7 @@ const Operation = ({ isOprVisible }: { isOprVisible: boolean }) => {
           {isOprVisible && <div className={"py-8 md:pt-2"}>
             {<img className="md:hidden block" src={"/assets/animations/LineAnimationsMobile.svg"} alt="Mobile Image" />}
             {<img className="hidden md:block" src={"/assets/animations/LineAnimation1.svg"} alt="Image Loaded on Scroll" />}
-          </div>
+          </div>}
           
         </div>
   );

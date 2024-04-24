@@ -21,21 +21,7 @@ export default function Index() {
   const landingRef = useRef<HTMLDivElement | null>(null);
 
   const [isVisible, setIsVisible] = useState(false);
-
-  const operationRef = useRef<HTMLDivElement | null>(null);
-  const [isOprVisible, setIsOprVisible] = useState(false);
-
-  const elementIsVisibleInViewport = () => {
-    if (operationRef.current) {
-      const rect = operationRef.current.getBoundingClientRect();
-      // Trigger visibility when the element comes into view
-      if (rect.top <= window.innerHeight) {
-        setIsOprVisible(true);
-      } else {
-        setIsOprVisible(false);
-      }
-    }
-  }
+  console.log(isVisible);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +39,6 @@ export default function Index() {
         // Update isVisible state based on the visible percentage
         setIsVisible(visiblePercentage >= 70);
       }
-      elementIsVisibleInViewport();
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -89,8 +74,8 @@ export default function Index() {
               <div data-aos="fade-up" data-aos-duration="3000">
                 <TimeLine />
               </div>
-              <div ref={operationRef} data-aos="fade-up" data-aos-duration="3000">
-                <Operation isOprVisible={isOprVisible} />
+              <div data-aos="fade-up" data-aos-duration="3000">
+                <Operation isOprVisible={false} />
               </div>
               <div data-aos="fade-up" data-aos-duration="3000">
                 <Resources />
