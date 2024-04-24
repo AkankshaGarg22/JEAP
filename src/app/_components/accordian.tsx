@@ -12,7 +12,7 @@ const Accordion = ({ title, children, isOpen, onToggle }: AccordionProps) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="mb-1 relative">
+    <div className="mb-[1px] relative">
       <button
         className={`flex justify-between w-full px-2 py-4  ${isOpen ? "bg-[#00205C] text-[#F1F1F3]" : "bg-[#F1F1F3] text-[#00205C]"}  font-medium`}
         onClick={onToggle}

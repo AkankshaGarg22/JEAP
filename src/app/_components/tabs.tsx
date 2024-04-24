@@ -68,21 +68,21 @@ export function Tabs() {
   };
 
   return (
-    <div id="vision" className="min-h-screen flex flex-col items-center justify-evenly md:pt-[150px]">
-      <div className="text-center md:p-3">
+    <div id="vision" className="min-h-screen lg:min-h-full flex flex-col items-center justify-evenly md:justify-normal lg:block">
+      <div className="text-center lg:my-2">
         <h2 className="text-[#000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP VISION</h2>
-        <p className="text-xl md:px-48 py-4">
+        <p className="text-xl md:px-0 py-2 lg:py-4">
           At the heart of the JEAP is a vision of 'One Africa for Health Security.' This vision outlines six collaboration areas and provides a comprehensive framework for coordinated action, to
           safeguard African populations from public health emergencies.
         </p>
       </div>
       {/* tab */}
       <div className="hidden md:block">
-        <div className="bg-[#1A5632] flex justify-evenly grow">
+        <div className="bg-[#1A5632] flex justify-evenly">
           {Menu.map((item) => (
             <button
               key={item.id}
-              className={active === item.id ? " text-[#FFFFFF] text-2xl px-8 py-4 flex-auto font-semibold hover:opacity-90 shadow-lg" : "bg-[#F1F1F3] text-2xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg"}
+              className={active === item.id ? " text-[#FFFFFF] text-2xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2" : "bg-[#F1F1F3] text-2xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg"}
               onClick={() => handleClick(item.id)}
             >
               {item.title}
