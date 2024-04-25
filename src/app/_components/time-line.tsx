@@ -46,10 +46,11 @@ export function TimeLine() {
       gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 35%",
-          end: "-=50%",
+          start: "top 60%",
+          end: "-35%",
           toggleClass: "active",
          // markers: true,
+          scrub: true,
         },
       });
     });
@@ -64,22 +65,25 @@ export function TimeLine() {
       <div className="text-center p-10 md:pt-[150px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
-      <div className="relative bg-cover bg-center w-full p-4" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
+      <div className="relative bg-cover bg-center w-full p-4 bg-fixed" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" />
-        <div className="timeline my-4 text-transparent">
+         <div className="timeline my-4 text-transparent ">
           <div className="line">
           </div>
           {items.map((item) => (
-            <div className="section text-wrap text-3xl w-3/4 md:w-3/4" key={item.key}>
-              <div className="section-ball absolute -top-2 -left-2 w-4 h-3 bg-white rounded-full"></div>
-              <div className="section-title text-white">{item.year}</div>
-              <h2 className="text-xl font-bold">{item.cardTitle}</h2>
-              <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
-              <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
-              <button onClick={() => setPopUp({ isOpen: true, item: item })}>
+            
+             <div className="section text-wrap text-3xl w-3/4 md:w-3/4 " key={item.key}>
+               <div className="section-ball absolute -top-2 -left-2 w-4 h-3 bg-white rounded-full"></div>
+               <div className="section-title text-white">{item.year}</div>
+               <h2 className="text-xl font-bold">{item.cardTitle}</h2>
+               <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
+               <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
+               <button onClick={() => setPopUp({ isOpen: true, item: item })}>
                 Read More
-              </button>
-            </div>
+               </button>
+              </div>
+            
+            
           ))}
         </div>
         {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
