@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import Device from "./device/device";
-import useOnScreen from "./hooks/useOnScreen";
 
 const Operation = ({ isOprVisible }: { isOprVisible: boolean }) => {
 
