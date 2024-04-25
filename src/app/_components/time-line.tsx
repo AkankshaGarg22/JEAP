@@ -49,7 +49,7 @@ export function TimeLine() {
           start: "top 35%",
           end: "-=50%",
           toggleClass: "active",
-          // markers: true,
+         // markers: true,
         },
       });
     });

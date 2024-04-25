@@ -12,6 +12,7 @@ const Operation = ({ isOprVisible }: { isOprVisible: boolean }) => {
             {<img className="hidden md:block" src={"/assets/animations/LineAnimation1.svg"} alt="Image Loaded on Scroll" />}
           </div>
           }
+          
         </div>
   );
 };

@@ -21,7 +21,7 @@ export default function Index() {
   const landingRef = useRef<HTMLDivElement | null>(null);
 
   const [isVisible, setIsVisible] = useState(false);
-
+  
   const operationRef = useRef<HTMLDivElement | null>(null);
   const [isOprVisible, setIsOprVisible] = useState(false);
 
