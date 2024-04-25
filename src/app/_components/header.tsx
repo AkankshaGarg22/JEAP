@@ -7,9 +7,9 @@ const Header = () => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
 
   return (
-    <div className="header relative">
-      <div className="header-bar flex flex-row items-center justify-between md:p-[10px] md:left-[14%] lg:left-[22%] absolute z-[100] rounded-[50px] min-w-[370px] md:max-w-[510px] lg:max-w-[900px] mt-3 md:m-10 w-full">
-        <div className="header-logos flex flex-row items-center justify-start pl-4 gap-1 md:gap-4 basis-1/2">
+    <div className="relative w-full flex justify-center">
+      <div className="header-bar w-[95%] xl:w-[45%] md:w-[70%] flex flex-row items-center justify-between md:p-[10px] z-[100] rounded-[50px] mt-3 absolute">
+        <div className="header-logos flex flex-row items-center justify-start pl-4 gap-1 md:gap-8 basis-1/2">
           <div className="hidden md:block">
             <img className="h-[30px] lg:h-[30px] w-[30px]  lg:w-[30px]" src="/assets/blog/home.png" alt="home-logo" />
           </div>
