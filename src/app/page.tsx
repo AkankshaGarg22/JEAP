@@ -25,6 +25,9 @@ export default function Index() {
   const operationRef = useRef<HTMLDivElement | null>(null);
   const [isOprVisible, setIsOprVisible] = useState(false);
 
+  const turnAroundTimeRef = useRef<HTMLDivElement | null>(null);
+  const [isTurnAroundTimeVisible, setIsTurnAroundTimeVisible] = useState(false);
+
   const elementIsVisibleInViewport = () => {
     if (operationRef.current) {
       const rect = operationRef.current.getBoundingClientRect();
@@ -33,6 +36,15 @@ export default function Index() {
         setIsOprVisible(true);
       } else {
         setIsOprVisible(false);
+      }
+    }
+    if (turnAroundTimeRef.current) {
+      const rect = turnAroundTimeRef.current.getBoundingClientRect();
+      // Trigger visibility when the element comes into view
+      if (rect.top <= window.innerHeight) {
+        setIsTurnAroundTimeVisible(true);
+      } else {
+        setIsTurnAroundTimeVisible(false);
       }
     }
   }
@@ -82,7 +94,9 @@ export default function Index() {
               <div ref={ref} data-aos="fade-up" data-aos-duration="3000">
                 <WorldMap />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000"><TurnAroundTime /></div>
+              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="3000">
+                <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
+              </div>
               <div className="md:mt-[150px]" data-aos="fade-up" data-aos-duration="3000">
                 <Tabs />
               </div>
