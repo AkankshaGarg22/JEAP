@@ -83,7 +83,7 @@ export default function Index() {
                 <WorldMap />
               </div>
               <div data-aos="fade-up" data-aos-duration="3000"><TurnAroundTime /></div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="md:mt-[150px]" data-aos="fade-up" data-aos-duration="3000">
                 <Tabs />
               </div>
               <div data-aos="fade-up" data-aos-duration="3000">
