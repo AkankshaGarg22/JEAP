@@ -6,7 +6,7 @@ export function Resources() {
     <div id="resources" className="md:pt-24 py-8 relative">
       <Image src="/assets/blog/Resoruces_Background.png" alt="resource-page" fill></Image>
       <div className="flex flex-col lg:flex-row items-center justify-center ">
-        <h2 className="text-2m md:text-6xl absolute text-white opacity-100 flex justify-center font-[compasse-extrabold] md:top-10">
+        <h2 className="text-3xl md:text-7xl absolute text-white opacity-100 flex justify-center font-[compasse-extrabold] md:top-10">
           RESOURCES
         </h2>
       </div>

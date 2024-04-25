@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const Mission = () => {
   return (
-    <div id="mission" className="h-[720px] md:h-[1024px] flex flex-col items-center justify-start md:justify-center bg-contain lg:bg-contain bg-no-repeat  bg-mb-curve md:bg-lg-curve">
+    <div id="mission" className="h-[720px] md:h-[1024px] flex flex-col items-center justify-start md:justify-center bg-contain lg:bg-contain bg-no-repeat  bg-mb-curve md:bg-lg-curve z-[200]">
       <div className="basis-2/3 md:basis-2/3 flex flex-col items-center justify-start md:justify-start md:mt-16 gap-2 md:gap-4 text-center text-white w-4/5 md:w-3/4 pt-8 md:pt-4 ">
         <h2 className="leading-1 md:leading-[1.5] text-3xl md:text-7xl font-[compasse-extrabold]">THE JEAP MISSION</h2>
         <div className="flex flex-col items-center gap-2 md:gap-4 text-md md:text-3xl">

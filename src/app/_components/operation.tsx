@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import Device from "./device/device";
-import Image from "next/image";
 
 const Operation = ({ isOprVisible }: { isOprVisible: boolean }) => {
 
