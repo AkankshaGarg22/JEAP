@@ -7,14 +7,6 @@ import Link from "next/link";
 import Device from "./device/device";
 
 const WorldMap = () => {
-
-  const markerData = [
-    { coordinates: [-74.006, 40.7128], text: "Hello WOrld" },
-    { coordinates: [2.3522, 48.8566], text: "TEXT TEXT", left: "30px" },
-    // ... more markers
-];
-
-
   const [content, setContent] = useState("");
   const geoUrl = "/features.json";
 
@@ -44,7 +36,7 @@ const WorldMap = () => {
         <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
         <div className="h-[480px] md:h-[1300px] relative" >
           {data.length > 0 && (
-            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "100%", width: "100%" }}>
+            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "75%", width: "100%" }}>
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
@@ -72,25 +64,6 @@ const WorldMap = () => {
                   })
                 }
               </Geographies>
-
-              {markerData.map((marker, index) => (
-                <Marker key={index} coordinates={marker.coordinates}>
-                   <circle 
-                    r={3} 
-                    fill="#4E8C43" 
-                    stroke="#FFF"
-                    strokeWidth={2}
-                    onMouseEnter={() => setContent(marker.text)}
-                    onMouseLeave={() => setContent("")}
-                 />
-               </Marker>
-              ))}
-            {content && (
-              <div style={{ position: 'absolute', left, top, background: 'Black', padding: '5px'}}>
-               {content}
-              </div>
-            )}
-
             </ComposableMap>
           )}
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
