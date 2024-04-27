@@ -2,11 +2,19 @@
 import { memo, useEffect, useState } from "react";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
-import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
+import { ComposableMap, Geographies, Geography, Sphere, Graticule, Marker } from "react-simple-maps";
 import Link from "next/link";
 import Device from "./device/device";
 
 const WorldMap = () => {
+
+  const markerData = [
+    { coordinates: [-74.006, 40.7128], text: "Hello WOrld" },
+    { coordinates: [2.3522, 48.8566], text: "TEXT TEXT", left: "30px" },
+    // ... more markers
+];
+
+
   const [content, setContent] = useState("");
   const geoUrl = "/features.json";
 
@@ -56,7 +64,7 @@ const WorldMap = () => {
                         id="map-country"
                         style={{
                           default: { outline: "none" },
-                          hover: { outline: "none" },
+                          hover: { outline: "true" },
                           pressed: { outline: "none" },
                         }}
                       />
@@ -64,6 +72,25 @@ const WorldMap = () => {
                   })
                 }
               </Geographies>
+
+              {markerData.map((marker, index) => (
+                <Marker key={index} coordinates={marker.coordinates}>
+                   <circle 
+                    r={3} 
+                    fill="#4E8C43" 
+                    stroke="#FFF"
+                    strokeWidth={2}
+                    onMouseEnter={() => setContent(marker.text)}
+                    onMouseLeave={() => setContent("")}
+                 />
+               </Marker>
+              ))}
+            {content && (
+              <div style={{ position: 'absolute', left, top, background: 'Black', padding: '5px'}}>
+               {content}
+              </div>
+            )}
+
             </ComposableMap>
           )}
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
@@ -103,3 +130,5 @@ const WorldMap = () => {
 };
 
 export default memo(WorldMap);
+
+
