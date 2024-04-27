@@ -70,8 +70,8 @@ export function Tabs() {
   return (
     <div id="vision" className="min-h-screen lg:min-h-full flex flex-col items-center justify-evenly md:justify-normal lg:block">
       <div className="text-center lg:my-2">
-        <h2 className="text-[#000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP VISION</h2>
-        <p className="text-xl md:px-0 py-2 lg:py-4">
+        <h2 className="text-[#000] text-3xl md:text-6xl xl:text-7xl font-[compasse-extrabold] my-4">THE JEAP VISION</h2>
+        <p className="text-xl xl:px-0 py-2 xl:py-4">
           At the heart of the JEAP is a vision of 'One Africa for Health Security.' This vision outlines six collaboration areas and provides a comprehensive framework for coordinated action, to
           safeguard African populations from public health emergencies.
         </p>
@@ -82,7 +82,7 @@ export function Tabs() {
           {Menu.map((item) => (
             <button
               key={item.id}
-              className={active === item.id ? " text-[#FFFFFF] text-2xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2" : "bg-[#F1F1F3] text-2xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg"}
+              className={active === item.id ? " text-[#FFFFFF] text-lg xl:text-2xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2" : "bg-[#F1F1F3] text-lg xl:text-2xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg"}
               onClick={() => handleClick(item.id)}
             >
               {item.title}
@@ -97,12 +97,12 @@ export function Tabs() {
               </div>
             </div>
           ))}
-          <div className="absolute bottom-20 right-10 p-4 flex flex-col">
+          <div className="absolute bottom-20 left-10 xl:left-[90%] p-4 flex flex-col">
             <button onClick={() => handleClick(active - 1)} disabled={active === 1} className="p-1 rounded-full shadow text-gray-800">
-              <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
+              <img className="h-10 w-10 xl:h-20 xl:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
             </button>
             <button onClick={() => handleClick(active + 1)} disabled={active === Menu.length} className="p-1 rounded-full shadow text-gray-800">
-              <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3025.png" alt="next" />
+              <img className="h-10 w-10 xl:h-20 xl:w-20" src="/assets/blog/Group 3025.png" alt="next" />
             </button>
           </div>
         </div>
