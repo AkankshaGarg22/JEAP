@@ -47,7 +47,7 @@ export function TimeLine() {
         scrollTrigger: {
           trigger: section,
           start: "top 60%",
-          end: "-35%",
+          end: "-40%",
           toggleClass: "active",
          // markers: true,
           scrub: true,
