@@ -3,60 +3,58 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import MyLottieComponent from "./svg-animation";
-import animationlottie_1 from '../../../public/assets/animations/animate1.json';
-import animationlottie_2 from '../../../public/assets/animations/animate2.json';
-import animationlottie_3 from '../../../public/assets/animations/animate3.json';
-
-export function TurnAroundTime({ isVisible }: { isVisible: boolean }) {
-
-    const [innerProgress, setInnerProgress] = useState(0)
-    const [outerProgress, setOuterProgress] = useState(0)
-
-    const [shouldFill, setShouldFill] = useState(false);
-    const [shouldOuterFill, setShouldOuterFill] = useState(false);
+import OuterCircle from './outerCircle';
+import InnerCircle from './innerCircle';
 
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (innerProgress < 100 && isVisible) {
-                setInnerProgress(prevProgress => prevProgress + 1); // Increase progress by 1 (you can adjust this)
-            }
-        }, 10); // Interval in milliseconds (you can adjust this)
-        // Clear interval when component unmounts
-        return () => clearInterval(interval);
-    }, [innerProgress, isVisible]); // Re-run effect when progress changes
+export function TurnAroundTime({ isVisible }) {
 
-    useEffect(() => {
-        if (innerProgress === 100 && isVisible) {
-            setTimeout(() => {
-                setShouldFill(true);
-            }, 1000)
-        } else {
-            setShouldFill(false)
-        }
-    }, [innerProgress, shouldFill])
+    // const [innerProgress, setInnerProgress] = useState(0)
+    // const [outerProgress, setOuterProgress] = useState(0)
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (innerProgress >= 100 && shouldFill && isVisible && outerProgress < 100) {
-                setOuterProgress(prevProgress => prevProgress + 1); // Increase progress by 1 (you can adjust this)
-            }
-        }, 10); // Interval in milliseconds (you can adjust this)
+    // const [shouldFill, setShouldFill] = useState(false);
+    // const [shouldOuterFill, setShouldOuterFill] = useState(false);
 
-        // Clear interval when component unmounts
-        return () => clearInterval(interval);
-    }, [outerProgress, innerProgress, shouldFill]); // Re-run effect when progress changes
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         if (innerProgress < 100 && isVisible) {
+    //             setInnerProgress(prevProgress => prevProgress + 1); // Increase progress by 1 (you can adjust this)
+    //         }
+    //     }, 10); // Interval in milliseconds (you can adjust this)
+    //     // Clear interval when component unmounts
+    //     return () => clearInterval(interval);
+    // }, [innerProgress, isVisible]); // Re-run effect when progress changes
 
-    useEffect(() => {
-        if (outerProgress === 100 && isVisible) {
-            setTimeout(() => {
-                setShouldOuterFill(true);
-            }, 1000)
-        } else {
-            setShouldOuterFill(false)
-        }
-    }, [outerProgress, shouldOuterFill])
+    // useEffect(() => {
+    //     if (innerProgress === 100 && isVisible) {
+    //         setTimeout(() => {
+    //             setShouldFill(true);
+    //         }, 1000)
+    //     } else {
+    //         setShouldFill(false)
+    //     }
+    // }, [innerProgress, shouldFill])
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         if (innerProgress >= 100 && shouldFill && isVisible && outerProgress < 100) {
+    //             setOuterProgress(prevProgress => prevProgress + 1); // Increase progress by 1 (you can adjust this)
+    //         }
+    //     }, 10); // Interval in milliseconds (you can adjust this)
+
+    //     // Clear interval when component unmounts
+    //     return () => clearInterval(interval);
+    // }, [outerProgress, innerProgress, shouldFill]); // Re-run effect when progress changes
+
+    // useEffect(() => {
+    //     if (outerProgress === 100 && isVisible) {
+    //         setTimeout(() => {
+    //             setShouldOuterFill(true);
+    //         }, 1000)
+    //     } else {
+    //         setShouldOuterFill(false)
+    //     }
+    // }, [outerProgress, shouldOuterFill])
 
 
     return (
@@ -64,22 +62,8 @@ export function TurnAroundTime({ isVisible }: { isVisible: boolean }) {
             <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
             <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
             <div className="z-10 h-full w-full flex justify-center items-center">
-                <div className="hidden lg:block relative h-full w-full flex justify-center items-center">
-                    <div className="absolute w-[950px] h-[350px] animation-1">
-                        <div className="relative cursor-pointer">
-                            <MyLottieComponent height={350} width={950} animationSource={(animationlottie_1)} />
-                        </div>
-                    </div>
-                    <div className="absolute w-[950px] h-[450px] animation-2">
-                        <div className="relative cursor-pointer">
-                            <MyLottieComponent height={450} width={950} animationSource={(animationlottie_2)} />
-                        </div>
-                    </div>
-                    <div className="absolute w-[950px] h-[450px] animation-3">
-                        <div className="relative cursor-pointer">
-                            <MyLottieComponent height={450} width={950} animationSource={(animationlottie_3)} />
-                        </div>
-                    </div>
+                <div className="hidden lg:flex relative h-full w-full justify-center items-center">
+                    <OuterCircle isVisible={isVisible}></OuterCircle>
                 </div>
                 <div className="md:hidden block">
                     <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={300} width={300}></Image>
@@ -87,7 +71,9 @@ export function TurnAroundTime({ isVisible }: { isVisible: boolean }) {
                 <div className="hidden md:block lg:hidden">
                     <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={600} width={600}></Image>
                 </div>
-                <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full lg:bottom-[50%] circluar-progress-bar">
+                
+                {/* <InnerCircle isVisible={isVisible}></InnerCircle> */}
+                {/* <div className="absolute w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white z-20 rounded-full lg:bottom-[50%] circluar-progress-bar">
                     <div className="relative">
                         <div className="absolute z-[100] top-[45px] right-[2px] md:right-[4px] md:top-[68px] md:hidden block">
                             <Image src="/assets/blog/Group 2501.svg" height={30} width={30} alt="label"></Image>
@@ -143,7 +129,7 @@ export function TurnAroundTime({ isVisible }: { isVisible: boolean }) {
                             </div>
                         </CircularProgressbarWithChildren>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
