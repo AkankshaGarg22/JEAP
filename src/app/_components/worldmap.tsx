@@ -2,7 +2,7 @@
 import { memo, useEffect, useState } from "react";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
-import { ComposableMap, Geographies, Geography, Sphere, Graticule, Marker } from "react-simple-maps";
+import { ComposableMap, Geographies, Geography, Sphere, Graticule,} from "react-simple-maps";
 import Link from "next/link";
 import Device from "./device/device";
 
@@ -56,7 +56,7 @@ const WorldMap = () => {
                         id="map-country"
                         style={{
                           default: { outline: "none" },
-                          hover: { outline: "true" },
+                          hover: { outline: "none" },
                           pressed: { outline: "none" },
                         }}
                       />
