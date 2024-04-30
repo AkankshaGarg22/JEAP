@@ -47,7 +47,9 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
             {" How"}
           </button>
         </div>
-        <div className="opacity-0 animate__animated animate__fadeIn basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-8">{selected}</div>
+        
+        <SelectedTextComponent selected={selected}></SelectedTextComponent>
+        {/* <div className="opacity-0 animate__animated animate__fadeIn basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5">{selected}</div> */}
         {/* <div className="block md:hidden basis-1/2 text-center text-wrap text-lg">
           {selected.length < 400 ? (
             selected
@@ -73,4 +75,8 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
       {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
     </div>
   );
+}
+
+const SelectedTextComponent = ({selected}: {selected: string}) => {
+  return <div className="basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5">{selected}</div>
 }

@@ -60,12 +60,12 @@ export function TurnAroundTime({ isVisible }) {
 
     return (
         <Device>
-            {({ isMobile }) => {
+            {({ isMobile, isTablet }) => {
                 return <div className="flex flex-col lg:flex-row items-center justify-center relative">
                     <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
                     <div className="z-10 h-full w-full flex justify-center items-center">
-                        {!isMobile && <div className="hidden lg:flex relative h-full w-full justify-center items-center">
+                        {!isMobile && !isTablet && <div className="hidden lg:flex relative h-full w-full justify-center items-center">
                             <OuterCircle isVisible={isVisible}></OuterCircle>
                         </div>}
                         <div className="md:hidden block p-10">
@@ -74,7 +74,7 @@ export function TurnAroundTime({ isVisible }) {
                         <div className="hidden md:block lg:hidden p-10">
                             <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={450} width={450}></Image>
                         </div>
-                        {(isMobile) && <InnerCircle isVisible={isVisible}></InnerCircle>}
+                        {(isMobile || isTablet) && <InnerCircle isVisible={isVisible}></InnerCircle>}
                     </div>
                 </div>
             }}
