@@ -34,7 +34,7 @@ const WorldMap = () => {
       {({isMobile}) => {
         return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
         <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[35px] md:pt-[0px] xl:pt-[20svh] px-8">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
-        <div className="h-[65svh] md:h-[65svh] xl:h-[180svh] relative" >
+        <div className="h-[40svh] md:h-[65svh] xl:h-[180svh] relative" >
           {data.length > 0 && (
             <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "80%", width: "100%" }}>
               <Geographies geography={geoUrl}>
@@ -69,7 +69,7 @@ const WorldMap = () => {
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
         </div>
   
-        <div className="w-full md:w-4/5 text-center bottom-[0svh] md:absolute md:bottom-[0svh] xl:absolute xl:bottom-[0svh]">
+        <div className="w-full md:w-4/5 text-center bottom-[0svh] md:absolute md:bottom-[0svh] xl:absolute xl:bottom-[20svh]">
           <div className="flex flex-row justify-between px-4">
             <div className="flex flex-col">
               <p className="text-left">Vulnerability Index</p>
