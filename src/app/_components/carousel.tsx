@@ -4,6 +4,20 @@ import { CarouselProps } from "@/interfaces/carousel";
 import { PopUpState } from "@/interfaces/timeline";
 import Modal from "./modal";
 
+const SelectedTextComponent = ({ selected }: { selected: string }) => {
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1); // Increment the key to trigger a re-render
+  }, [selected]);
+
+  return (
+    <div key={key} className="basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5 animate-slide-in">
+      {selected}
+    </div>
+  );
+};
+
 export default function Carousel({ item, autoSlide = false, autoSlideInterval = 3000 }: CarouselProps) {
   const [curr, setCurr] = useState(0);
   const [selected, setSelected] = useState(item.from);
@@ -47,8 +61,8 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
             {" How"}
           </button>
         </div>
-        
-        <SelectedTextComponent selected={selected}></SelectedTextComponent>
+
+        <SelectedTextComponent selected={selected} />
         {/* <div className="opacity-0 animate__animated animate__fadeIn basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5">{selected}</div> */}
         {/* <div className="block md:hidden basis-1/2 text-center text-wrap text-lg">
           {selected.length < 400 ? (
@@ -64,19 +78,9 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
           )}
         </div> */}
       </div>
-      {/* <div className="absolute bottom-20 right-10 p-4 flex flex-col">
-        <button onClick={prev} className="p-1 rounded-full shadow text-gray-800">
-          <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
-        </button>
-        <button onClick={next} className="p-1 rounded-full shadow text-gray-800">
-          <img className="h-10 w-10 md:h-20 md:w-20" src="/assets/blog/Group 3025.png" alt="next" />
-        </button>
-      </div> */}
       {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
     </div>
   );
 }
 
-const SelectedTextComponent = ({selected}: {selected: string}) => {
-  return <div className="basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5">{selected}</div>
-}
+
