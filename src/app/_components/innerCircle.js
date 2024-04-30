@@ -48,7 +48,9 @@ export function InnerCircle({ isVisible }) {
 
     useEffect(() => {
         if (isVisible) {
-            init();
+            setTimeout(() => {
+                init();
+            }, 500)
         }
 
         const script = document.createElement('script');
@@ -59,7 +61,7 @@ export function InnerCircle({ isVisible }) {
 
 
     return (
-        <div id="animation_container">
+        <div id="animation_container" className="absolute">
             <canvas id="canvas" style={{ position: "absolute", display: "block" }}></canvas>
             <div id="dom_overlay_container" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", left: "0px", top: "0px", display: "block" }}>
             </div>
