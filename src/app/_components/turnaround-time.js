@@ -72,7 +72,7 @@ export function TurnAroundTime({ isVisible }) {
                             <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={300} width={300}></Image>
                         </div>
                         <div className="hidden md:block lg:hidden p-10">
-                            <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={600} width={600}></Image>
+                            <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={450} width={450}></Image>
                         </div>
                         {(isMobile) && <InnerCircle isVisible={isVisible}></InnerCircle>}
                     </div>

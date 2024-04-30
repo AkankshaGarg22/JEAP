@@ -54,7 +54,7 @@ export function InnerCircle({ isVisible }) {
         }
 
         const script = document.createElement('script');
-        script.setAttribute('src', "/scripts/cir2.js?1714380394461");
+        script.setAttribute('src', "/scripts/inner-circle-100px.js?1714380394461");
         document.body.appendChild(script);
 
     }, [isVisible])
