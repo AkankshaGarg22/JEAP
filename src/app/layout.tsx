@@ -49,6 +49,7 @@ export default function RootLayout({
           href="/favicon/safari-pinned-tab.svg"
           color="#000000"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta

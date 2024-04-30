@@ -82,7 +82,7 @@ export function Tabs() {
           {Menu.map((item) => (
             <button
               key={item.id}
-              className={active === item.id ? " text-[#FFFFFF] text-lg xl:text-2xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2" : "bg-[#F1F1F3] text-lg xl:text-2xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg"}
+              className={active === item.id ? " text-[#FFFFFF] text-lg xl:text-xl flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2" : "bg-[#F1F1F3] text-lg xl:text-xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2"}
               onClick={() => handleClick(item.id)}
             >
               {item.title}
