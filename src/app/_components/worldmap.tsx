@@ -70,7 +70,7 @@ const WorldMap = () => {
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
         </div>
   
-        <div className="w-full xl:w-[85%] text-center xl:absolute xl:bottom-[0]">
+        <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[0]">
           <div className="flex flex-row justify-between px-4">
             <div className="flex flex-col">
               <p className="text-left">Vulnerability Index</p>
