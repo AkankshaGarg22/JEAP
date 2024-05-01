@@ -5,6 +5,7 @@ import Modal from "./modal";
 import { PopUpState, TimeLineItem } from "@/interfaces/timeline";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
 
@@ -38,19 +39,24 @@ const items: TimeLineItem[] = [
 export function TimeLine() {
   const [selectedKey, setSelectedKey] = useState(1);
   const [popUp, setPopUp] = useState<PopUpState>({ isOpen: false, item: null });
+  const [activeSectionId, setActiveSectionId] = useState<String | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
 
     gsap.utils.toArray<HTMLElement>(".section").forEach((section) => {
       gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 60%",
-          end: "-40%",
-          toggleClass: "active",
-         // markers: true,
+          start: "top -40%",
+          end: "bottom -40%",
+          // toggleClass: "active",
+          markers: true,
           scrub: true,
+          onEnter: () => setActiveSectionId(section.id),
+          onLeave: () => setActiveSectionId(null),
+        // onEnterBack: () => setActiveSectionId(section.id),
         },
       });
     });
@@ -60,6 +66,45 @@ export function TimeLine() {
     };
   }, []);
 
+  const scrollToSection = (sectionId : string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = window.innerHeight / 1.75;
+      const sectionTop = section.getBoundingClientRect().top;
+      const scrollToPosition = window.scrollY + sectionTop - yOffset;
+      gsap.to(window, {
+        scrollTo: { y: scrollToPosition, autoKill: true },
+        duration: 1.5
+      });
+    }
+  };
+
+  const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    // Query all sections and remove the 'active' class from them
+    document.querySelectorAll(".section").forEach((section) => {
+      section.classList.remove("active");
+    });
+
+    // const section = document.querySelector<HTMLElement>(`#section-${key}`);
+    // if (section) {
+    //   const yOffset = window.innerHeight / 2; // Half of the viewport height
+    //   const sectionTop = section.getBoundingClientRect().top; // Top position of the section relative to the viewport
+    //   const scrollToPosition = window.scrollY + sectionTop - yOffset;
+    //   gsap.to(window, {
+    //     scrollTo: { y: scrollToPosition, autoKill: true },
+    //     duration: 1.5,
+    //     onComplete: () => {
+    //       // Ensure the class is toggled in sync with the animation if needed
+    //       section.classList.add("active");
+    //     },
+    //   });
+    // }
+    const sectionId = `section-${key}`;
+    setActiveSectionId(sectionId); // Update the active section ID
+    scrollToSection(sectionId);
+  };
+
   return (
     <div id="jeap-journey" className="min-h-screen flex flex-col">
       <div className="text-center p-10 md:pt-[150px]">
@@ -67,20 +112,17 @@ export function TimeLine() {
       </div>
       <div className="relative bg-cover bg-center w-full p-4" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" />
-         <div className="timeline my-4 text-transparent ">
-          <div className="line">
-          </div>
+        <div className="timeline my-4 text-transparent ">
+          <div className="line"></div>
           {items.map((item) => (
-             <div className="section text-wrap text-3xl w-3/4 md:w-3/4 " key={item.key}>
-               <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full"></div>
-               <div className="section-title text-white">{item.year}</div>
-               <h2 className="text-xl font-bold">{item.cardTitle}</h2>
-               <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
-               <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
-               <button onClick={() => setPopUp({ isOpen: true, item: item })}>
-                Read More
-               </button>
-              </div>            
+            <div id={`section-${item.key}`} className={`section text-wrap text-3xl w-3/4 md:w-3/4 ${activeSectionId === `section-${item.key}` ? 'active' : ''}`} key={item.key}>
+              <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full cursor-pointer" onClick={(e) => handleClick(item.key, e)}></div>
+              <div className="section-title text-white">{item.year}</div>
+              <h2 className="text-xl font-bold">{item.cardTitle}</h2>
+              <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
+              <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
+              <button onClick={() => setPopUp({ isOpen: true, item: item })}>Read More</button>
+            </div>
           ))}
         </div>
         {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
@@ -88,5 +130,3 @@ export function TimeLine() {
     </div>
   );
 }
-
-
