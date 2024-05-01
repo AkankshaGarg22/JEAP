@@ -37,7 +37,7 @@ const WorldMap = () => {
         <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
         <div className="h-[400px] md:h-[700px] xl:h-[1300px] relative" >
           {data.length > 0 && (
-            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "100%", width: "100%" }}>
+            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "100%", width: "100%",}}>
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
@@ -56,7 +56,7 @@ const WorldMap = () => {
                         }}
                         id="map-country"
                         style={{
-                          default: { outline: "none" },
+                          default: { outline: "none",},
                           hover: { outline: "none" },
                           pressed: { outline: "none" },
                         }}
