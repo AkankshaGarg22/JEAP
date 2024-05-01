@@ -47,7 +47,7 @@ export function TimeLine() {
         scrollTrigger: {
           trigger: section,
           start: "top 60%",
-          end: "-35%",
+          end: "-40%",
           toggleClass: "active",
          // markers: true,
           scrub: true,
@@ -72,7 +72,7 @@ export function TimeLine() {
           </div>
           {items.map((item) => (
              <div className="section text-wrap text-3xl w-3/4 md:w-3/4 " key={item.key}>
-               <div className="section-ball absolute -top-2 -left-2 w-4 h-3 bg-white rounded-full"></div>
+               <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full"></div>
                <div className="section-title text-white">{item.year}</div>
                <h2 className="text-xl font-bold">{item.cardTitle}</h2>
                <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
