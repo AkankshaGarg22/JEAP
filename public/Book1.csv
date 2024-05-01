@@ -1,6 +1,6 @@
 Rank,Country or Territory,Combatant Command,Overall Score Normed,ISO3
-8,Afghanistan,CENTCOM,0.157034,"AFG"
-118,Albania,EUCOM,0.626259,"ALB"
+8,Afghanistan,CENTCOM,0.157034,AFG
+118,Albania,EUCOM,0.626259,ALB
 72,Algeria,AFRICOM,0.496612,DZA
 115,Andorra,EUCOM,0.625221,AND
 6,Angola,AFRICOM,0.148414,AGO
@@ -44,7 +44,7 @@ Rank,Country or Territory,Combatant Command,Overall Score Normed,ISO3
 132,Cyprus,EUCOM,0.66563,CYP
 172,Czech Republic,EUCOM,0.847175,CZE
 46,Democratic People Republic of Korea (North Korea),PACOM,0.37487,PRK
-11,Democratic Republic of the Congo,AFRICOM,0.181762,CONGO
+11,Congo,AFRICOM,0.181762,CONGO
 190,Denmark,EUCOM,0.953641,DNK
 31,Djibouti,AFRICOM,0.297892,DJI
 107,Dominica,SOUTHCOM,0.60417,DMA
@@ -166,7 +166,7 @@ Grenadines",SOUTHCOM,0.549145,VCT
 Islands",PACOM,0.370311,SLB
 1,Somalia,AFRICOM,0,SOM
 141,South Africa,AFRICOM,0.697292,ZAF
-4,South Sudan,AFRICOM,0.100836,SDN
+4,South Sudan,AFRICOM,0.100836,SSDN
 176,Spain,EUCOM,0.875475,ESP
 99,Sri Lanka,PACOM,0.571001,LKA
 30,Sudan,AFRICOM,0.29158,SDN

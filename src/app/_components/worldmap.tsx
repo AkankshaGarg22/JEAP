@@ -19,6 +19,7 @@ const WorldMap = () => {
   useEffect(() => {
     csv(`/Book1.csv`).then((data) => {
       setData(data);
+      console.log("Number of Countries with Data:", data.length); 
     });
   }, []);
 

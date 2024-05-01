@@ -291,7 +291,7 @@
           {
             "type": "Polygon",
             "arcs": [[-12, 227, 228, -216, -128, -225]],
-            "id": "COG",
+            "id": "CONGO",
             "properties": { "name": "Congo" }
           },
           {
@@ -1034,7 +1034,7 @@
           {
             "type": "Polygon",
             "arcs": [[633, -296, -438, 634, 635, -226, -126, 636, -628]],
-            "id": "SSD",
+            "id": "SSDN",
             "properties": { "name": "South Sudan" }
           },
           {
