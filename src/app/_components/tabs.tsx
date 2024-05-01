@@ -98,10 +98,10 @@ export function Tabs() {
             </div>
           ))}
           <div className="absolute bottom-20 left-10 xl:left-[90%] p-4 flex flex-col">
-            <button onClick={() => handleClick(active - 1)} disabled={active === 1} className="p-1 rounded-full shadow text-gray-800">
+            <button onClick={() => handleClick(active - 1)} disabled={active === 1} className="p-1 rounded-full shadow text-gray-800 opacity-70 hover:opacity-100">
               <img className="h-10 w-10 xl:h-20 xl:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
             </button>
-            <button onClick={() => handleClick(active + 1)} disabled={active === Menu.length} className="p-1 rounded-full shadow text-gray-800">
+            <button onClick={() => handleClick(active + 1)} disabled={active === Menu.length} className="p-1 rounded-full shadow text-gray-800 opacity-70 hover:opacity-100">
               <img className="h-10 w-10 xl:h-20 xl:w-20" src="/assets/blog/Group 3025.png" alt="next" />
             </button>
           </div>
