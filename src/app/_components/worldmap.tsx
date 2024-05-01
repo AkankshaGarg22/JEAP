@@ -2,7 +2,7 @@
 import { memo, useEffect, useState } from "react";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
-import { ComposableMap, Geographies, Geography, Sphere, Graticule,} from "react-simple-maps";
+import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
 import Link from "next/link";
 import Device from "./device/device";
 
@@ -34,10 +34,10 @@ const WorldMap = () => {
     <Device>
       {({isMobile}) => {
         return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
-        <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[35px] md:pt-[0px] xl:pt-[20svh] px-8">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
-        <div className="h-[40svh] md:h-[65svh] xl:h-[150svh] relative" >
+        <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[35px] md:pt-[150px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+        <div className="h-[400px] md:h-[700px] xl:h-[1300px] relative" >
           {data.length > 0 && (
-            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100 }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "100%", width: "100%",}}>
+            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "100%", width: "100%" }}>
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
@@ -70,7 +70,7 @@ const WorldMap = () => {
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
         </div>
   
-        <div className="w-full md:w-4/5 text-center bottom-[0svh] md:absolute md:bottom-[0svh] xl:absolute xl:bottom-[0svh]">
+        <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[0]">
           <div className="flex flex-row justify-between px-4">
             <div className="flex flex-col">
               <p className="text-left">Vulnerability Index</p>
@@ -91,7 +91,7 @@ const WorldMap = () => {
           <p className="py-4 text-xl">
             The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
           </p>
-          <p className="py-4 font-bold text-xl">
+          <p className="py-4 font-bold text-xl pb-8">
             The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
           </p>
         </div>
@@ -104,5 +104,3 @@ const WorldMap = () => {
 };
 
 export default memo(WorldMap);
-
-

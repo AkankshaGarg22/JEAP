@@ -59,9 +59,9 @@ export function OuterCircle({ isVisible }) {
 
 
     return (
-        <div id="animation_container" style={{width:"1024px", height:"576px"}}>
-            <canvas id="canvas" width="1024" height="576" style={{position: "absolute", display: "block"}}></canvas>
-            <div id="dom_overlay_container" style={{pointerEvents:"none", overflow:"hidden", width:"1024px", height:"576px", position: "absolute", left: "0px", top: "0px", display: "block"}}>
+        <div id="animation_container" style={{ width: "1024px", height: "576px" }}>
+            <canvas id="canvas" width="1024" height="576" style={{ position: "absolute", display: "block" }}></canvas>
+            <div id="dom_overlay_container" style={{ pointerEvents: "none", overflow: "hidden", width: "1024px", height: "576px", position: "absolute", left: "0px", top: "0px", display: "block" }}>
             </div>
             {/* <div id='preload_div'><img src=images /preloader.gif style='width: 30%; max-height: 100%;'/><div id="loader-txt">Loading...</div></div> */}
         </div>

@@ -97,13 +97,6 @@ body {
   height: unset !important;
 }
 
-.resource-image {
-  object-fit: contain;
-  width: 50% !important;
-  position: relative !important;
-  height: unset !important;
-}
-
 .bg-custom {
   height: 350px;
   position: relative;

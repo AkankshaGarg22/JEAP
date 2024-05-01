@@ -18,14 +18,14 @@ export function Footer() {
         <Container>
           <div className="flex flex-col p-4 lg:gap-20 lg:flex-row justify-center">
             <div className="footer-links text-white ">
-              <p className="hover:underline p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
-              <p className="hover:underline p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
-              <p className="hover:underline p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
+              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
+              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
+              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
 
             </div>
             <div className="footer-links text-white ">
-              <p className="hover:underline p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
-              <p className="hover:underline p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
+              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
+              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
 
             </div>
           </div>
