@@ -82,7 +82,7 @@ export function Tabs() {
           {Menu.map((item) => (
             <button
               key={item.id}
-              className={active === item.id ? " text-[#FFFFFF] text-lg xl:text-2xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2" : "bg-[#F1F1F3] text-lg xl:text-2xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg"}
+              className={active === item.id ? " text-[#FFFFFF] text-lg xl:text-xl flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2" : "bg-[#F1F1F3] text-lg xl:text-xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2"}
               onClick={() => handleClick(item.id)}
             >
               {item.title}
@@ -98,10 +98,10 @@ export function Tabs() {
             </div>
           ))}
           <div className="absolute bottom-20 left-10 xl:left-[90%] p-4 flex flex-col">
-            <button onClick={() => handleClick(active - 1)} disabled={active === 1} className="p-1 rounded-full shadow text-gray-800">
+            <button onClick={() => handleClick(active - 1)} disabled={active === 1} className="p-1 rounded-full shadow text-gray-800 opacity-70 hover:opacity-100">
               <img className="h-10 w-10 xl:h-20 xl:w-20" src="/assets/blog/Group 3026.png" alt="prev" />
             </button>
-            <button onClick={() => handleClick(active + 1)} disabled={active === Menu.length} className="p-1 rounded-full shadow text-gray-800">
+            <button onClick={() => handleClick(active + 1)} disabled={active === Menu.length} className="p-1 rounded-full shadow text-gray-800 opacity-70 hover:opacity-100">
               <img className="h-10 w-10 xl:h-20 xl:w-20" src="/assets/blog/Group 3025.png" alt="next" />
             </button>
           </div>
