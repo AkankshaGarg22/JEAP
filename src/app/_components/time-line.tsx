@@ -63,9 +63,10 @@ export function TimeLine() {
             end: "-40%",
             markers: true,
             scrub: true,
-            onEnter: () => setActiveSectionId(section.id),
-            onLeave: () => setActiveSectionId(null),
-            onEnterBack: () =>  setActiveSectionId(null),
+            toggleClass: 'active'
+            // onEnter: () => setActiveSectionId(section.id),
+            // onLeave: () => setActiveSectionId(null),
+            // onEnterBack: () =>  setActiveSectionId(null),
             // onRefresh: self => self.update() 
           },
         });
@@ -98,12 +99,12 @@ export function TimeLine() {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = window.innerHeight / 2; // Adjusting to center the section
+      const yOffset = window.innerHeight/ 2.5 // Adjusting to center the section
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
       const scrollToPosition = sectionTop - yOffset;
       gsap.to(window, {
         scrollTo: { y: scrollToPosition, autoKill: true },
-        duration: 1.5,
+        duration: 0.6,
       });
     }
   };
