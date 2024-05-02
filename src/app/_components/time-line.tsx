@@ -42,72 +42,85 @@ export function TimeLine() {
   const [activeSectionId, setActiveSectionId] = useState<String | null>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    gsap.utils.toArray<HTMLElement>(".section").forEach((section) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top -40%",
-          end: "bottom -40%",
-          // toggleClass: "active",
-          markers: true,
-          scrub: true,
-          onEnter: () => setActiveSectionId(section.id),
-          onLeave: () => setActiveSectionId(null),
-        // onEnterBack: () => setActiveSectionId(section.id),
-        },
+    function setupScrollTriggers() {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Clean up existing triggers
+
+      const sections = document.querySelectorAll<HTMLElement>('.section');
+      if (sections.length === 0) {
+        console.log('No sections found, retrying...');
+        setTimeout(setupScrollTriggers, 500);
+        return;
+      }
+
+      sections.forEach((section) => {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            // pin: true,
+            start: "top 60%",
+            end: "-40%",
+            markers: true,
+            scrub: true,
+            onEnter: () => setActiveSectionId(section.id),
+            onLeave: () => setActiveSectionId(null),
+            onEnterBack: () =>  setActiveSectionId(null),
+            // onRefresh: self => self.update() 
+          },
+        });
       });
-    });
+    }
+
+    window.addEventListener('load', setupScrollTriggers);
+    setupScrollTriggers(); // Initial setup to handle pre-load content
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener('load', setupScrollTriggers);
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Cleanup on component unmount
     };
   }, []);
 
-  const scrollToSection = (sectionId : string) => {
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(entries => {
+      ScrollTrigger.refresh();
+    });
+  
+    document.querySelectorAll('.section').forEach(section => {
+      resizeObserver.observe(section);
+    });
+  
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = window.innerHeight / 1.75;
-      const sectionTop = section.getBoundingClientRect().top;
-      const scrollToPosition = window.scrollY + sectionTop - yOffset;
+      const yOffset = window.innerHeight / 2; // Adjusting to center the section
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      const scrollToPosition = sectionTop - yOffset;
       gsap.to(window, {
         scrollTo: { y: scrollToPosition, autoKill: true },
-        duration: 1.5
+        duration: 1.5,
       });
     }
   };
 
   const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
-    // Query all sections and remove the 'active' class from them
     document.querySelectorAll(".section").forEach((section) => {
       section.classList.remove("active");
     });
-
-    // const section = document.querySelector<HTMLElement>(`#section-${key}`);
-    // if (section) {
-    //   const yOffset = window.innerHeight / 2; // Half of the viewport height
-    //   const sectionTop = section.getBoundingClientRect().top; // Top position of the section relative to the viewport
-    //   const scrollToPosition = window.scrollY + sectionTop - yOffset;
-    //   gsap.to(window, {
-    //     scrollTo: { y: scrollToPosition, autoKill: true },
-    //     duration: 1.5,
-    //     onComplete: () => {
-    //       // Ensure the class is toggled in sync with the animation if needed
-    //       section.classList.add("active");
-    //     },
-    //   });
-    // }
     const sectionId = `section-${key}`;
-    setActiveSectionId(sectionId); // Update the active section ID
+    setActiveSectionId(sectionId);
     scrollToSection(sectionId);
   };
 
   return (
     <div id="jeap-journey" className="min-h-screen flex flex-col">
-      <div className="text-center p-10 md:pt-[150px]">
+      <div className="text-center p-10 md:pb-[10px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
       <div className="relative bg-cover bg-center w-full p-4" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
@@ -115,7 +128,7 @@ export function TimeLine() {
         <div className="timeline my-4 text-transparent ">
           <div className="line"></div>
           {items.map((item) => (
-            <div id={`section-${item.key}`} className={`section text-wrap text-3xl w-3/4 md:w-3/4 ${activeSectionId === `section-${item.key}` ? 'active' : ''}`} key={item.key}>
+            <div id={`section-${item.key}`} className={`section text-wrap text-3xl w-3/4 md:w-3/4 ${activeSectionId === `section-${item.key}` ? "active" : ""}`} key={item.key}>
               <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full cursor-pointer" onClick={(e) => handleClick(item.key, e)}></div>
               <div className="section-title text-white">{item.year}</div>
               <h2 className="text-xl font-bold">{item.cardTitle}</h2>
