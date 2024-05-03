@@ -185,3 +185,18 @@ body {
 .section.active .section-ball{
   @apply w-8 h-8 -top-4 -left-4;
 }
+
+
+
+.scroll-background{
+  animation:scroll-background linear forwards;
+  animation-timeline:view();
+  animation-range:exit;
+  opacity:1;
+}
+
+@keyframes scroll-background{
+  to {opacity:0;}
+
+}
+

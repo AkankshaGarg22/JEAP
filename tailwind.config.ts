@@ -42,11 +42,12 @@ const config: Config = {
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
       animation: {
-        'slide-in': 'slideInFromLeft 0.5s ease-out forwards'
+        'slide-in': 'slideInFromLeft 1s ease-out forwards',
+        'slide-out': 'slideOut 0.5s ease-out forwards'
       },
       keyframes: {
         changeImage: {
-          '0%': { backgroundImage: 'url("/assets/blog/jpgs/header_image.webp")' },
+          '0%': { backgroundImage: 'url("/assets/blog/jpgs/header_image.webp")', },
           '25%': { backgroundImage: 'url("/assets/blog/jpgs/header_1.webp")' },
           '50%': { backgroundImage: 'url("/assets/blog/jpgs/header_2.webp")' },
           '75%': { backgroundImage: 'url("/assets/blog/jpgs/header_3.webp")' },
@@ -59,7 +60,16 @@ const config: Config = {
           '100%': {
             opacity: '1',
           }
+        },
+        slideOut:{
+          '0%':{
+            opacity: "1",
+          },
+          '100%': {
+            opacity:"0",
+          }
         }
+
       }
     },
   },
