@@ -61,7 +61,7 @@ export function TimeLine() {
             // pin: true,
             start: "top 60%",
             end: "-40%",
-            markers: true,
+            // markers: true,
             scrub: true,
             toggleClass: 'active'
             // onEnter: () => setActiveSectionId(section.id),
