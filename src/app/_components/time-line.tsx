@@ -5,6 +5,7 @@ import Modal from "./modal";
 import { PopUpState, TimeLineItem } from "@/interfaces/timeline";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
 
@@ -38,49 +39,104 @@ const items: TimeLineItem[] = [
 export function TimeLine() {
   const [selectedKey, setSelectedKey] = useState(1);
   const [popUp, setPopUp] = useState<PopUpState>({ isOpen: false, item: null });
+  const [activeSectionId, setActiveSectionId] = useState<String | null>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    gsap.utils.toArray<HTMLElement>(".section").forEach((section) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top 60%",
-          end: "-40%",
-          toggleClass: "active",
-         // markers: true,
-          scrub: true,
-        },
+    function setupScrollTriggers() {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Clean up existing triggers
+
+      const sections = document.querySelectorAll<HTMLElement>('.section');
+      if (sections.length === 0) {
+        console.log('No sections found, retrying...');
+        setTimeout(setupScrollTriggers, 500);
+        return;
+      }
+
+      sections.forEach((section) => {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            // pin: true,
+            start: "top 60%",
+            end: "-40%",
+            // markers: true,
+            scrub: true,
+            toggleClass: 'active'
+            // onEnter: () => setActiveSectionId(section.id),
+            // onLeave: () => setActiveSectionId(null),
+            // onEnterBack: () =>  setActiveSectionId(null),
+            // onRefresh: self => self.update() 
+          },
+        });
       });
-    });
+    }
+
+    window.addEventListener('load', setupScrollTriggers);
+    setupScrollTriggers(); // Initial setup to handle pre-load content
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener('load', setupScrollTriggers);
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Cleanup on component unmount
     };
   }, []);
 
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(entries => {
+      ScrollTrigger.refresh();
+    });
+  
+    document.querySelectorAll('.section').forEach(section => {
+      resizeObserver.observe(section);
+    });
+  
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = window.innerHeight/ 2.5 // Adjusting to center the section
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      const scrollToPosition = sectionTop - yOffset;
+      gsap.to(window, {
+        scrollTo: { y: scrollToPosition, autoKill: true },
+        duration: 0.6,
+      });
+    }
+  };
+
+  const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    document.querySelectorAll(".section").forEach((section) => {
+      section.classList.remove("active");
+    });
+    const sectionId = `section-${key}`;
+    setActiveSectionId(sectionId);
+    scrollToSection(sectionId);
+  };
+
   return (
     <div id="jeap-journey" className="min-h-screen flex flex-col">
-      <div className="text-center p-10 md:pt-[150px]">
+      <div className="text-center p-10 md:pb-[10px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
       <div className="relative bg-cover bg-center w-full p-4" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" />
-         <div className="timeline my-4 text-transparent ">
-          <div className="line">
-          </div>
+        <div className="timeline my-4 text-transparent ">
+          <div className="line"></div>
           {items.map((item) => (
-             <div className="section text-wrap text-3xl w-3/4 md:w-3/4 " key={item.key}>
-               <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full"></div>
-               <div className="section-title text-white">{item.year}</div>
-               <h2 className="text-xl font-bold">{item.cardTitle}</h2>
-               <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
-               <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
-               <button onClick={() => setPopUp({ isOpen: true, item: item })}>
-                Read More
-               </button>
-              </div>            
+            <div id={`section-${item.key}`} className={`section text-wrap text-3xl w-3/4 md:w-3/4 ${activeSectionId === `section-${item.key}` ? "active" : ""}`} key={item.key}>
+              <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full cursor-pointer" onClick={(e) => handleClick(item.key, e)}></div>
+              <div className="section-title text-white">{item.year}</div>
+              <h2 className="text-xl font-bold">{item.cardTitle}</h2>
+              <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
+              <p className="hidden md:block md:text-lg transition-opacity ease-in duration-700 opacity-100">{item.cardDetailedText}</p>
+              <button onClick={() => setPopUp({ isOpen: true, item: item })}>Read More</button>
+            </div>
           ))}
         </div>
         {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
@@ -88,5 +144,3 @@ export function TimeLine() {
     </div>
   );
 }
-
-
