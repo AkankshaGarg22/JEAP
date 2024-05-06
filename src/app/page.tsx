@@ -91,29 +91,29 @@ export default function Index() {
               <Mission />
             </div>
             <div className="relative bg-white">
-              <div ref={ref} data-aos="fade-up" data-aos-duration="3000">
+              <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
                 <WorldMap />
               </div>
-              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="3000">
+              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500">
                 <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
               </div>
-              <div className="md:mt-[150px]" data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <Tabs />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <TimeLine />
               </div>
-              <div ref={operationRef} data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
                 <Operation isOprVisible={isOprVisible} />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <Resources />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <Leadership />
               </div>
             </div>
-            <div className="relative">
+            <div className="relative pt-[50px] md:pt-[150px]">
               <Footer />
             </div>
           </div>
