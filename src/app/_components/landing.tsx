@@ -29,10 +29,10 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   
       gsap.to(parrallaxRef.current, {
         backgroundPositionY: '-100px', // Adjust the movement value as needed
-        ease: 'none',
+        ease: 'power1.out',
         scrollTrigger: {
           trigger: parrallaxRef.current,
-          start: 'top 5%',
+          start: 'top center',
           end: 'bottom center',
           scrub: true,
          // markers:true,
