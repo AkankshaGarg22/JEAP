@@ -13,11 +13,11 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       gsap.registerPlugin(ScrollTrigger);
   
       gsap.to(parallaxRef.current, {
-        y: '-100px', // Adjust the movement value as needed
+        y: '-50px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parallaxRef.current,
-          start: 'top center',
+          start: 'top 0%',
           end: 'bottom center',
           scrub: true,
         }
@@ -28,13 +28,14 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       gsap.registerPlugin(ScrollTrigger);
   
       gsap.to(parrallaxRef.current, {
-        backgroundPositionY: '-150px', // Adjust the movement value as needed
+        backgroundPositionY: '-100px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parrallaxRef.current,
-          start: 'top center',
+          start: 'top 5%',
           end: 'bottom center',
           scrub: true,
+         // markers:true,
         }
       });
     }, []);

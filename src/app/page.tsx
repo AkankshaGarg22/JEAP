@@ -14,7 +14,6 @@ import Loading from "./_components/loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./_components/footer";
-import Lenis from '@studio-freight/lenis';
 
 
 export default function Index() {
@@ -82,23 +81,7 @@ export default function Index() {
     AOS.init();
   }, []);
 
-  useEffect(() => {
-
   
-    const lenis = new Lenis({
-      duration: 1.5, 
-    });
-    
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-  
-    requestAnimationFrame(raf);
-  
-    return () => lenis.stop(); 
-  }, []); 
-
 
   return (
     <main className="relative">
