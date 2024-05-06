@@ -12,13 +12,13 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       gsap.registerPlugin(ScrollTrigger);
   
       gsap.to(parallaxRef.current, {
-        backgroundPositionY: '0px', // Adjust the movement value as needed
+        backgroundPositionY: '-200px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parallaxRef.current,
           start: 'top center',
           end: 'bottom center',
-          scrub: true
+          scrub: true,
         }
       });
     }, []);
