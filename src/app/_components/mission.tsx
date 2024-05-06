@@ -2,6 +2,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
+
 const Mission = () => {
   return (
     <div id="mission" className="h-[720px] xl:h-[1024px] flex flex-col items-center justify-start xl:justify-center bg-cover bg-center lg:bg-contain bg-no-repeat  bg-mb-curve md:bg-lg-curve z-[200]">

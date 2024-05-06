@@ -1,10 +1,35 @@
 "use client";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+
 export default function Landing({ isVisible }: { isVisible: boolean }) {
+
+    const parallaxRef = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+  
+      gsap.to(parallaxRef.current, {
+        backgroundPositionY: '0px', // Adjust the movement value as needed
+        ease: 'none',
+        scrollTrigger: {
+          trigger: parallaxRef.current,
+          start: 'top center',
+          end: 'bottom center',
+          scrub: true
+        }
+      });
+    }, []);
+
+
   return (
     <div className={` min-h-screen fixed transition-opacity scroll-background`}>
+      
       <section
-        className={`relative text-white w-full h-screen bg-cover bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)]  
-        animate-[changeImage_50s_linear_infinite]`}
+        className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)]  
+        animate-[changeImage_50s_linear_infinite]`} ref={parallaxRef}
       >
         <div className="md:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
           <h1 className="leading-1 md:leading-[1.5] text-3xl md:text-6xl font-[compasse-extrabold]">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
@@ -14,6 +39,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
           </p>
         </div>
       </section>
+      
     </div>
   );
 }

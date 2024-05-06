@@ -14,6 +14,8 @@ import Loading from "./_components/loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./_components/footer";
+import Lenis from '@studio-freight/lenis';
+
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -79,17 +81,41 @@ export default function Index() {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect( () => {
+
+    const lenis = new Lenis()
+
+
+
+    const raf = (time: number) => {
+
+      lenis.raf(time)
+
+      requestAnimationFrame(raf)
+
+    }
+
+
+
+    requestAnimationFrame(raf)
+
+  }, []);
+
+
   return (
     <main className="relative">
       <ErrorBoundary>
         <Suspense fallback={<Loading></Loading>}>
-          <div className="absolute top-0 bg-white">
-            <div className="fixed" ref={landingRef}>
+          <div className="absolute top-0 bg-white" >
+            <div className="fixed" ref={landingRef} >
               <Landing isVisible={isVisible} />
             </div>
+            
             <div className="relative mt-[100vh]" ref={missionRef}>
               <Mission />
             </div>
+
             <div className="relative bg-white">
               <div ref={ref} data-aos="fade-up" data-aos-duration="3000">
                 <WorldMap />
