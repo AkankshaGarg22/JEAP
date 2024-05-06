@@ -1,8 +1,6 @@
 'use client'
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import OuterCircle from './outerCircle';
 import InnerCircle from './innerCircle';
 import Device from "./device";
