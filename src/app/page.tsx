@@ -82,25 +82,22 @@ export default function Index() {
     AOS.init();
   }, []);
 
-  useEffect( () => {
+  useEffect(() => {
 
-    const lenis = new Lenis()
-
-
-
+  
+    const lenis = new Lenis({
+      duration: 1.5, 
+    });
+    
     const raf = (time: number) => {
-
-      lenis.raf(time)
-
-      requestAnimationFrame(raf)
-
-    }
-
-
-
-    requestAnimationFrame(raf)
-
-  }, []);
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+  
+    requestAnimationFrame(raf);
+  
+    return () => lenis.stop(); 
+  }, []); 
 
 
   return (

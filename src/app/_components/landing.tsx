@@ -12,7 +12,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       gsap.registerPlugin(ScrollTrigger);
   
       gsap.to(parallaxRef.current, {
-        backgroundPositionY: '-200px', // Adjust the movement value as needed
+        y: '-100px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parallaxRef.current,
@@ -25,11 +25,11 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
 
 
   return (
-    <div className={` min-h-screen fixed transition-opacity scroll-background`}>
+    <div className={` min-h-screen fixed transition-opacity scroll-background`} ref={parallaxRef}>
       
       <section
         className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)]  
-        animate-[changeImage_50s_linear_infinite]`} ref={parallaxRef}
+        animate-[changeImage_50s_linear_infinite]`} 
       >
         <div className="md:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
           <h1 className="leading-1 md:leading-[1.5] text-3xl md:text-6xl font-[compasse-extrabold]">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
