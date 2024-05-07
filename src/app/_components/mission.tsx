@@ -2,7 +2,7 @@
 import React, {useEffect} from "react";
 import Typewriter from "typewriter-effect";
 import Lenis from '@studio-freight/lenis';
-import useDimension from "./hooks/useDimension"
+
 
 const Mission = () => {
 
