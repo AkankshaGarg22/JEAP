@@ -97,11 +97,6 @@ body {
   height: unset !important;
 }
 
-.bg-custom {
-  height: 350px;
-  position: relative;
-  margin-top: -5px;
-}
 
 .header-bar {
   background: transparent linear-gradient(270deg, #00205C 0%, #13483D 52%, #1A5632 100%) 0% 0% no-repeat padding-box;
@@ -120,10 +115,6 @@ body {
     font-size: 16px;
   }
 
-  .bg-custom {
-    height: 100px;
-    margin-top: -11px;
-  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {

@@ -1,28 +1,8 @@
 "use client";
 import React, {useEffect} from "react";
 import Typewriter from "typewriter-effect";
-import Lenis from '@studio-freight/lenis';
-import useDimension from "./hooks/useDimension"
 
 const Mission = () => {
-
-  useEffect(() => {
-
-    const lenis = new Lenis({
-    duration: 2.0,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-    autoResize:true,
-    });
-    
-    const raf = (time: number) => {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-    return () => lenis.stop();
-  });
-
 
   return (
     <div id="mission" className="h-[720px] xl:h-[1024px] flex flex-col items-center justify-start xl:justify-center bg-cover bg-center lg:bg-contain bg-no-repeat  bg-mb-curve md:bg-lg-curve z-[200]">

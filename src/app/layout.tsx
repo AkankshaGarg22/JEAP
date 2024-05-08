@@ -63,8 +63,6 @@ export default function RootLayout({
         <Suspense fallback={<Loading></Loading>}>
         <Header />
         <div className="min-h-screen">{children}</div>
-        
-        
         </Suspense>
       </body>
     </html>
