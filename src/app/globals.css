@@ -187,7 +187,7 @@ body {
 }
 
 
-
+/* Landing section fade in effect */
 .scroll-background{
   animation:scroll-background linear forwards;
   animation-timeline:view();
@@ -200,3 +200,64 @@ body {
 
 }
 
+
+/*Leadership image hover effect*/
+
+.image-hover {   
+  --s: 300px;              /* the size of the image */
+  --b: 8px;     /* the border thickness*/
+  --g: 14px;    /* the gap */
+  --c: #1A5632; /* the color */
+  
+  aspect-ratio: 1;
+  width:var(--s);
+  outline: calc(var(--s)/2) solid rgba(0, 0, 0, 0);
+  outline-offset: calc(var(--s)/-2);
+  cursor: pointer;
+  transition: .3s;
+}
+.image-hover:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
+
+
+/* Link hover effect*/
+
+.link-hover::before,
+.link-hover::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.link-hover::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #3E8914;
+  border-right: 3px solid #2E640F;
+  transform: translate(-100%, 50%);
+}
+
+.link-hover::after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #2E640F;
+  border-left: 3px solid #3E8914;
+  transform: translate(100%, -50%)
+}
+
+.link-hover:hover::before,
+.link-hover:hover::after{
+  transform: translate(100,50);
+  opacity: 1;
+}
+
+.link-hover:hover {
+  color: #3DA35D;
+}
