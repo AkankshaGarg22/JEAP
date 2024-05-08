@@ -14,7 +14,8 @@ import Loading from "./_components/loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./_components/footer";
-
+import Lenis from '@studio-freight/lenis';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export default function Index() {
   const landingRef = useRef<HTMLDivElement | null>(null);
 
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const operationRef = useRef<HTMLDivElement | null>(null);
   const [isOprVisible, setIsOprVisible] = useState(false);
 
@@ -81,7 +82,28 @@ export default function Index() {
     AOS.init();
   }, []);
 
-  
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector("main");
+    const lenis = new Lenis({
+      duration: 2.0,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      content: scrollContainer ? scrollContainer : undefined
+    });
+    lenis.on('scroll', () => {
+      lenis.resize()
+    });
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    requestAnimationFrame(raf);
+    return () => lenis.stop();
+  }, []);
+
 
   return (
     <main className="relative">
@@ -91,35 +113,35 @@ export default function Index() {
             <div className="fixed" ref={landingRef} >
               <Landing isVisible={isVisible} />
             </div>
-            
+
             <div className="relative mt-[100vh]" ref={missionRef}>
               <Mission />
             </div>
 
             <div className="relative bg-white">
-              <div ref={ref} data-aos="fade-up" data-aos-duration="3000">
+              <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
                 <WorldMap />
               </div>
-              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="3000">
+              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500">
                 <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
               </div>
-              <div className="md:mt-[150px]" data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <Tabs />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <TimeLine />
               </div>
-              <div ref={operationRef} data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
                 <Operation isOprVisible={isOprVisible} />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <Resources />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000">
+              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
                 <Leadership />
               </div>
             </div>
-            <div className="relative">
+            <div className="relative pt-[50px] md:pt-[150px]">
               <Footer />
             </div>
           </div>
