@@ -1,9 +1,6 @@
 'use client'
 import Container from "@/app/_components/container";
 import Image from "next/image";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import Maintenance from "./maintenance";
-import { SocialMediaLinks } from "./social-media-links";
 
 export function Footer() {
   const scrollIntoView = (id: string) => {
@@ -32,7 +29,7 @@ export function Footer() {
           {/* <SocialMediaLinks /> */}
         </Container>
       </div>
-      <div className="bg-custom">
+      <div className="h-[100px] md:h-[350px] relative mt-[-5px]">
         <Image src="/assets/blog/Group 3031.png" priority={false} fill alt="image background"></Image>
       </div>
       <div className="bg-white">
@@ -43,7 +40,7 @@ export function Footer() {
           <div className="max-w-[300px]">
             <Image src="/assets/blog/AfricaCDCLogo.png" fill alt="logo-2" className="footer-image"></Image>
           </div>
-          <div className="max-w-[300px]"> 
+          <div className="max-w-[300px]">
             <Image src="/assets/blog/WHO_Logo.png" fill alt="logo-3" className="footer-image"></Image>
           </div>
         </div>
