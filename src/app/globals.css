@@ -224,6 +224,14 @@ body {
 
 /* Link hover effect*/
 
+.link-hover {
+  padding: .5em .8em;
+  position: relative;
+  width:100%;
+  color:white;
+
+}
+
 .link-hover::before,
 .link-hover::after {
   content: '';
@@ -254,7 +262,7 @@ body {
 
 .link-hover:hover::before,
 .link-hover:hover::after{
-  transform: translate(100,50);
+  transform: translate(0,0);
   opacity: 1;
 }
 

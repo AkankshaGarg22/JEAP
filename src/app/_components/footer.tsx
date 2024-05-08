@@ -17,15 +17,15 @@ export function Footer() {
       <div className="footer pt-16 flex flex-col lg:flex-row items-center">
         <Container>
           <div className="flex flex-col p-4 lg:gap-20 lg:flex-row justify-center">
-            <div className="footer-links text-white ">
-              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
-              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
-              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
+            <div className="footer-links text-white text-center">
+              <p className="link-hover p-0 text-center" onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
+              <p className="link-hover p-0" onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
+              <p className="link-hover p-0" onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
 
             </div>
-            <div className="footer-links text-white ">
-              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
-              <p className="hover:underline p-2 cursor-pointer " onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
+            <div className="footer-links text-white text-center">
+              <p className="link-hover p-0" onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
+              <p className="link-hover p-0" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
 
             </div>
           </div>
