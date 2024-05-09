@@ -205,7 +205,7 @@ html.lenis, html.lenis body {
   --s: 300px;              /* the size of the image */
   --b: 8px;     /* the border thickness*/
   --g: 14px;    /* the gap */
-  --c: #00205c; /* the color */
+  --c: #1A5632; /* the color */
   
   aspect-ratio: 1;
   width:var(--s);
@@ -244,8 +244,8 @@ html.lenis, html.lenis body {
   content: '';
   right: 0;
   top: 0;
-  border-top: 3px solid #3E8914;
-  border-right: 3px solid #2E640F;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
   transform: translate(-100%, 50%);
 }
 
@@ -253,8 +253,8 @@ html.lenis, html.lenis body {
   content: '';
   left: 0;
   bottom: 0;
-  border-bottom: 3px solid #2E640F;
-  border-left: 3px solid #3E8914;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
   transform: translate(100%, -50%)
 }
 
@@ -265,5 +265,40 @@ html.lenis, html.lenis body {
 }
 
 .link-hover:hover {
+  color:#fff;
+}
+
+/*link-hover-footer custom colors
+
+.link-hover-footer:hover {
+  color: #00205c;
+}
+
+.link-hover-footer::after{
+  border-bottom: 3px solid #00205c;
+  border-left: 3px solid #00205c;
+}
+
+.link-hover-footer::before{
+  border-top: 3px solid #00205c;
+  border-right: 3px solid #00205c;
+}
+
+
+/*link hover header customs colors
+.link-hover-header:hover {
   color: #3DA35D;
 }
+
+.link-hover-header::before{
+  border-right: 3px solid #2E640F;
+  border-top: 3px solid #3E8914;
+}
+
+.link-hover-header::after{
+  border-bottom: 3px solid #2E640F;
+  border-left: 3px solid #3E8914;
+}
+
+*/
+
