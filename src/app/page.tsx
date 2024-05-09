@@ -14,8 +14,9 @@ import Loading from "./_components/loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./_components/footer";
-import Lenis from '@studio-freight/lenis';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import Lenis from "@studio-freight/lenis";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { XLTimeLine } from "./_components/XLTimeline";
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -49,7 +50,7 @@ export default function Index() {
         setIsTurnAroundTimeVisible(false);
       }
     }
-  }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,16 +83,15 @@ export default function Index() {
     AOS.init();
   }, []);
 
-
   useEffect(() => {
     const scrollContainer = document.querySelector("main");
     const lenis = new Lenis({
       duration: 2.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      content: scrollContainer ? scrollContainer : undefined
+      content: scrollContainer ? scrollContainer : undefined,
     });
-    lenis.on('scroll', () => {
-      lenis.resize()
+    lenis.on("scroll", () => {
+      lenis.resize();
     });
     const raf = (time: number) => {
       lenis.raf(time);
@@ -104,13 +104,12 @@ export default function Index() {
     return () => lenis.stop();
   }, []);
 
-
   return (
     <main className="relative">
       <ErrorBoundary>
         <Suspense fallback={<Loading></Loading>}>
-          <div className="absolute top-0 bg-white" >
-            <div className="fixed" ref={landingRef} >
+          <div className="absolute top-0 bg-white">
+            <div className="fixed" ref={landingRef}>
               <Landing isVisible={isVisible} />
             </div>
 
@@ -129,7 +128,12 @@ export default function Index() {
                 <Tabs />
               </div>
               <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
-                <TimeLine />
+                <div className="hidden xl:block">
+                  <XLTimeLine />
+                </div>
+                <div className="block xl:hidden">
+                  <TimeLine />
+                </div>
               </div>
               <div className="pt-[50px] md:pt-[150px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
                 <Operation isOprVisible={isOprVisible} />

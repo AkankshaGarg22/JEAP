@@ -9,7 +9,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
 
-const items: TimeLineItem[] = [
+export const items: TimeLineItem[] = [
   {
     key: 1,
     year: "2022",
