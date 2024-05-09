@@ -15,7 +15,7 @@ export function Footer() {
         <Container>
           <div className="flex flex-col p-4 lg:gap-20 lg:flex-row justify-center">
             <div className="footer-links text-white text-center">
-              <p className="link-hover p-0 text-center" onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
+              <p className="link-hover p-0" onClick={() => scrollIntoView('mission')}>THE JEAP MISSION</p>
               <p className="link-hover p-0" onClick={() => scrollIntoView('vision')}> THE JEAP VISION</p>
               <p className="link-hover p-0" onClick={() => scrollIntoView('operation')}> OPERATIONALIZING THE JEAP</p>
 

@@ -205,7 +205,7 @@ html.lenis, html.lenis body {
   --s: 300px;              /* the size of the image */
   --b: 8px;     /* the border thickness*/
   --g: 14px;    /* the gap */
-  --c: #1A5632; /* the color */
+  --c: #00205c; /* the color */
   
   aspect-ratio: 1;
   width:var(--s);
@@ -225,7 +225,7 @@ html.lenis, html.lenis body {
 .link-hover {
   padding: .5em .8em;
   position: relative;
-  width:100%;
+  width:auto;
   color:white;
 
 }
