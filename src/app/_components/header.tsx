@@ -19,12 +19,16 @@ const Header = () => {
         </div>
         <div className="hidden md:flex header-links  flex-row items-center gap-4 md:gap-8 md:p-5">
           
-          <AnchorLink href="#leadership">
-            <h2 className="link-hover link-hover-header font-semibold">LEADERSHIP</h2>
+          <AnchorLink href="#mission">
+            <h2 className="link-hover link-hover-header font-semibold">MISSION</h2>
           </AnchorLink>
           
-          <AnchorLink href="#resources">
-            <h2 className="font-semibold link-hover link-hover-header">RESOURCES</h2>
+          <AnchorLink href="#vision">
+            <h2 className="font-semibold link-hover link-hover-header">VISION</h2>
+          </AnchorLink>
+
+          <AnchorLink href="#leadership">
+            <h2 className="link-hover link-hover-header font-semibold">LEADERSHIP</h2>
           </AnchorLink>
           {/* <h2 className="font-semibold text-white">CONTACT US</h2><h2 className="font-semibold text-white">RESOURCES</h2> */}
         </div>
