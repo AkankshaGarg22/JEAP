@@ -38,11 +38,14 @@ const Header = () => {
         </div>
         {dropDownOpen && (
           <div className="md:hidden divide-y divide-black justify-evenly absolute right-[5%] top-[96%] bg-white h-[100px] flex flex-col items-center z-[-1]">
-            <AnchorLink href="#leadership">
-              <h2 className="px-3 font-semibold">LEADERSHIP</h2>
+            <AnchorLink href="#mission">
+              <h2 className="px-3 font-semibold">MISSION</h2>
             </AnchorLink>
-            <AnchorLink href="#resources">
-              <h2 className="px-3 font-semibold pt-2">RESOURCES</h2>
+            <AnchorLink href="#vision">
+              <h2 className="px-3 font-semibold pt-2">VISION</h2>
+            </AnchorLink>
+            <AnchorLink href="#leadership">
+              <h2 className="px-3 font-semibold pt-2">LEADERSHIP</h2>
             </AnchorLink>
           </div>
         )}
