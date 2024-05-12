@@ -55,6 +55,14 @@ const XLTimeLine: React.FC = () => {
     };
   }, []);
 
+  // preload images
+  useEffect(()=>{
+    bgImages.forEach(image => {
+      const img = new Image();
+      img.src = image.imageUrl;
+    })
+  },[])
+
   const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     const sectionId = `section-${key}`;
