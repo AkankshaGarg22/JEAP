@@ -113,7 +113,7 @@ export function TimeLine() {
     if (section) {
       const yOffset = window.innerHeight/ 2.5 // Adjusting to center the section
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-      const scrollToPosition = sectionTop - yOffset;
+      const scrollToPosition = sectionTop + yOffset;
       gsap.to(window, {
         scrollTo: { y: scrollToPosition, autoKill: true },
         duration: 0.6,

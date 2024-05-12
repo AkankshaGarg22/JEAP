@@ -58,8 +58,10 @@ const XLTimeLine: React.FC = () => {
   const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     const sectionId = `section-${key}`;
-    trigger(sectionId);
-    scrollToSection(sectionId);
+    if (sectionId !== activeSectionId) {
+      trigger(sectionId);
+      scrollToSection(sectionId);
+    }
   };
 
   const scrollToSection = (sectionId: string) => {
