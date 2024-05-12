@@ -3,8 +3,17 @@ import Image from "next/image";
 import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+
+
+
 const Header = () => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
+
+  const scrollIntoView = (id: string) => {
+    if (typeof document !== 'undefined') {
+      document.getElementById(id)?.scrollIntoView(true);
+    }
+  }
 
   return (
     <div className="relative w-full flex justify-center">
@@ -27,9 +36,9 @@ const Header = () => {
             <h2 className="font-semibold link-hover link-hover-header">VISION</h2>
           </AnchorLink>
 
-          <AnchorLink href="#leadership">
-            <h2 className="link-hover link-hover-header font-semibold">LEADERSHIP</h2>
-          </AnchorLink>
+          
+            <h2 className="link-hover link-hover-header font-semibold" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</h2>
+          
           {/* <h2 className="font-semibold text-white">CONTACT US</h2><h2 className="font-semibold text-white">RESOURCES</h2> */}
         </div>
 
