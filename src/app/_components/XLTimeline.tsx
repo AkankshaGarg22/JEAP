@@ -56,13 +56,21 @@ const XLTimeLine: React.FC = () => {
   }, []);
 
   // preload images
-  useEffect(()=>{
-    bgImages.forEach(image => {
-      const img = new Image();
-      img.src = image.imageUrl;
-    })
-  },[])
+  useEffect(() => {
+    const imagePromises = bgImages.map((image) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = image.imageUrl;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
 
+    Promise.all(imagePromises)
+      .then(() => console.log("All images preloaded successfully"))
+      .catch((error) => console.error("Failed to preload images:", error));
+  }, []);
+  
   const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     const sectionId = `section-${key}`;
