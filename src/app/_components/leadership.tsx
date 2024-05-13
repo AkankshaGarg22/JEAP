@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-const LeadersArray = [{
+const LeadersArray = [
+    {
+        image: '/assets/blog/jpgs/jean_kaseya.webp',
+        title: 'Dr Jean Kaseya',
+        description: 'Director General, Africa CDC'
+    },
+    {
         image: '/assets/blog/jpgs/Dr Raji.webp',
         title: 'Dr Raji Tajudeen',
         description: 'Acting Deputy Director General, Africa DDG'
