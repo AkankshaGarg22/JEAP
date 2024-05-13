@@ -266,6 +266,7 @@ html.lenis, html.lenis body {
 
 .link-hover:hover {
   color:#fff;
+  cursor:pointer;
 }
 
 /*link-hover-footer custom colors

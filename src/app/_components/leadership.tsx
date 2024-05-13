@@ -1,18 +1,20 @@
 import Image from "next/image";
 
 const LeadersArray = [{
+        image: '/assets/blog/jpgs/Dr Raji.webp',
+        title: 'Dr Raji Tajudeen',
+        description: 'Acting Deputy Director General, Africa DDG'
+    },
+    {
     image: '/assets/blog/jpgs/Dr Abdou.webp',
     title: 'Dr Abdou Salam Gueye',
     description: 'Regional Emergency Director, WHO AFRO'
-}, {
+}, 
+{
     image: '/assets/blog/jpgs/RickBrenan.webp',
     title: 'Dr Rick Brennan',
     description: 'Regional Emergency Director, WHO EMRO'
-}, {
-    image: '/assets/blog/jpgs/jean_kaseya.webp',
-    title: 'Dr Jean Kaseya',
-    description: 'Director General, Africa CDC'
-}]
+}, ]
 
 export function Leadership() {
     return (

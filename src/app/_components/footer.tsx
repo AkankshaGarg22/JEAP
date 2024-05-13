@@ -22,7 +22,9 @@ export function Footer() {
             </div>
             <div className="footer-links text-white text-center">
               <p className="link-hover link-hover-footer p-0" onClick={() => scrollIntoView('jeap-journey')}>THE JEAP JOURNEY</p>
+              <p className="link-hover link-hover-footer p-0" onClick={() => scrollIntoView('resources')}>RESOURCES</p>
               <p className="link-hover link-hover-footer p-0" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</p>
+              
 
             </div>
           </div>
