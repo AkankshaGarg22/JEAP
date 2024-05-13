@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { items } from "./time-line";
 
 const bgImages = [
-  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.png" },
-  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.png" },
-  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.png" },
+  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.webp" },
+  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.webp" },
+  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.webp" },
 ];
 
 const XLTimeLine: React.FC = () => {
@@ -70,7 +70,7 @@ const XLTimeLine: React.FC = () => {
       .then(() => console.log("All images preloaded successfully"))
       .catch((error) => console.error("Failed to preload images:", error));
   }, []);
-  
+
   const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     const sectionId = `section-${key}`;
