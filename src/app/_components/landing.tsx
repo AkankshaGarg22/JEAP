@@ -1,17 +1,48 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 
 export default function Landing({ isVisible }: { isVisible: boolean }) {
 
-    const parallaxRef = useRef<HTMLDivElement>(null);
-    const parrallaxRef = useRef<HTMLDivElement>(null);
-  
-    useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
-  
+  const parallaxRef = useRef<HTMLDivElement>(null);
+  const parrallaxRef = useRef<HTMLDivElement>(null);
+  const [tl, setTl] = useState<gsap.core.Timeline | null>(null); 
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    if (parallaxRef.current) {
+      
+    
+      const newTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: parallaxRef.current,
+          start: 'top 0%',
+          scrub: true,
+          // markers: true
+        }
+      });
+    
+      gsap.set(parallaxRef.current, { opacity: 1 });
+      newTl.to(parallaxRef.current, { opacity: 0 });
+    
+      setTl(newTl); // Store the timeline instance in state
+    }
+  }, []); 
+
+  useEffect(() => {
+    return () => {
+      if (tl) {
+        tl.kill(); // Kill the timeline on unmount
+        gsap.set(parallaxRef.current, {clearProps:"all"});
+      }
+    };
+  }, [tl]);
+
+
+  useEffect(() => {
+    
       gsap.to(parallaxRef.current, {
         y: '-50px', // Adjust the movement value as needed
         ease: 'none',
@@ -24,8 +55,8 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       });
     }, []);
 
+   
     useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
   
       gsap.to(parrallaxRef.current, {
         backgroundPositionY: '-100px', // Adjust the movement value as needed
@@ -42,11 +73,11 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
 
 
   return (
-    <div className={` min-h-screen fixed transition-opacity scroll-background`} ref={parallaxRef}>
+    <div className={` min-h-screen fixed transition-opacity scroll-opacity`} ref={parallaxRef} >
       
       <section
         className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)]  
-        animate-[changeImage_50s_linear_infinite]`} ref={parrallaxRef}
+        animate-[changeImage_50s_linear_infinite]` } ref={parrallaxRef}
       >
         <div className="md:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
           <h1 className="leading-1 md:leading-[1.5] text-3xl md:text-6xl font-[compasse-extrabold]">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
