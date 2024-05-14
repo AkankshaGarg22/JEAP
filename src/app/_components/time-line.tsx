@@ -10,9 +10,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 // const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
 
 const bgImages = [
-  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.png" },
-  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.png" },
-  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.png" },
+  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.webp" },
+  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.webp" },
+  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.webp" },
 ];
 
 export const items: TimeLineItem[] = [

@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { items } from "./time-line";
 
 const bgImages = [
-  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.png" },
-  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.png" },
-  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.png" },
+  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.webp" },
+  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.webp" },
+  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.webp" },
 ];
 
 const XLTimeLine: React.FC = () => {
@@ -56,12 +56,20 @@ const XLTimeLine: React.FC = () => {
   }, []);
 
   // preload images
-  useEffect(()=>{
-    bgImages.forEach(image => {
-      const img = new Image();
-      img.src = image.imageUrl;
-    })
-  },[])
+  useEffect(() => {
+    const imagePromises = bgImages.map((image) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = image.imageUrl;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => console.log("All images preloaded successfully"))
+      .catch((error) => console.error("Failed to preload images:", error));
+  }, []);
 
   const handleClick = (key: number, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -100,7 +108,7 @@ const XLTimeLine: React.FC = () => {
       <div
         ref={timelineRef}
         className="xltimeline overflow-y-scroll  relative flex flex-col items-end bg-cover bg-center transition-bg-image duration-500 ease-in-out"
-        style={{ backgroundImage: `url(${backgroundImage})`, height: "80vh" }}
+        style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})`, height: "80vh" }}
       >
         <div
           className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[135vh] box-border`}
