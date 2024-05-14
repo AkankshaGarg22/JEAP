@@ -225,8 +225,8 @@ html.lenis, html.lenis body {
 .link-hover {
   padding: .5em .8em;
   position: relative;
-  width:auto;
   color:white;
+  width:fit-content;
 
 }
 
