@@ -57,11 +57,11 @@ export function TimeLine() {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     function setupScrollTriggers() {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Clean up existing triggers
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Clean up existing triggers
 
-      const sections = document.querySelectorAll<HTMLElement>('.section');
+      const sections = document.querySelectorAll<HTMLElement>(".section");
       if (sections.length === 0) {
-        console.log('No sections found, retrying...');
+        console.log("No sections found, retrying...");
         setTimeout(setupScrollTriggers, 500);
         return;
       }
@@ -75,43 +75,59 @@ export function TimeLine() {
             end: "-40%",
             // markers: true,
             scrub: true,
-            toggleClass: 'active',
+            toggleClass: "active",
             onEnter: () => trigger(section.id),
             // onLeave: () => setActiveSectionId(null),
-            onEnterBack: () =>  trigger(section.id),
-            // onRefresh: self => self.update() 
+            onEnterBack: () => trigger(section.id),
+            // onRefresh: self => self.update()
           },
         });
       });
     }
 
-    window.addEventListener('load', setupScrollTriggers);
+    window.addEventListener("load", setupScrollTriggers);
     setupScrollTriggers(); // Initial setup to handle pre-load content
 
     return () => {
-      window.removeEventListener('load', setupScrollTriggers);
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Cleanup on component unmount
+      window.removeEventListener("load", setupScrollTriggers);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Cleanup on component unmount
     };
   }, []);
 
   useEffect(() => {
-    const resizeObserver = new ResizeObserver(entries => {
+    const resizeObserver = new ResizeObserver((entries) => {
       ScrollTrigger.refresh();
     });
-  
-    document.querySelectorAll('.section').forEach(section => {
+
+    document.querySelectorAll(".section").forEach((section) => {
       resizeObserver.observe(section);
     });
-  
+
     return () => {
       resizeObserver.disconnect();
     };
   }, []);
 
+  // preload images
+  useEffect(() => {
+    const imagePromises = bgImages.map((image) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = image.imageUrl;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => console.log("All images preloaded successfully"))
+      .catch((error) => console.error("Failed to preload images:", error));
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = window.innerHeight/ 2.5 // Adjusting to center the section
+      const yOffset = window.innerHeight / 2.5; // Adjusting to center the section
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
       const scrollToPosition = sectionTop + yOffset;
       gsap.to(window, {
@@ -133,11 +149,14 @@ export function TimeLine() {
   };
 
   return (
-    <div id="jeap-journey" className="min-h-screen flex flex-col">
+    <div id="jeap-journey" className="h-full flex flex-col">
       <div className="text-center md:pb-[10px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
-      <div className="relative bg-cover bg-center w-full p-4 transition-bg-image duration-500 ease-in-out" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div
+        className="relative bg-cover bg-center w-full p-4 transition-bg-image duration-500 ease-in-out"
+        style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})` }}
+      >
         {/* <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" /> */}
         <div className="timeline my-4 text-transparent ">
           <div className="line"></div>
