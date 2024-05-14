@@ -48,7 +48,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
         className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)]  
         animate-[changeImage_50s_linear_infinite]`} ref={parrallaxRef}
       >
-        <div className="md:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
+        <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
           <h1 className="leading-1 md:leading-[1.5] text-3xl md:text-6xl font-[compasse-extrabold]">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
           <p className="text-lg md:text-2xl">
             The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response (EPR)
