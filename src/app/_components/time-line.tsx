@@ -137,7 +137,7 @@ export function TimeLine() {
       <div className="text-center md:pb-[10px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
-      <div className="relative bg-cover bg-center w-full p-4 transition-bg-image duration-500 ease-in-out" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="relative bg-cover bg-center w-full p-4 transition-bg-image duration-500 ease-in-out" style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})` }}>
         {/* <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" /> */}
         <div className="timeline my-4 text-transparent ">
           <div className="line"></div>
