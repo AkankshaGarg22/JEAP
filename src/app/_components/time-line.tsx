@@ -7,9 +7,15 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
+// const backgroundImageUrl = "/assets/blog/jpgs/WHO_Ghana-151560.webp";
 
-const items: TimeLineItem[] = [
+const bgImages = [
+  { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.png" },
+  { id: "section-2", imageUrl: "/assets/blog/jpgs/Group3344.png" },
+  { id: "section-3", imageUrl: "/assets/blog/jpgs/Group3345.png" },
+];
+
+export const items: TimeLineItem[] = [
   {
     key: 1,
     year: "2022",
@@ -37,9 +43,15 @@ const items: TimeLineItem[] = [
 ];
 
 export function TimeLine() {
-  const [selectedKey, setSelectedKey] = useState(1);
+  const [backgroundImage, setActiveBackgroundImage] = useState<string>(bgImages[0].imageUrl);
   const [popUp, setPopUp] = useState<PopUpState>({ isOpen: false, item: null });
   const [activeSectionId, setActiveSectionId] = useState<String | null>(null);
+
+  const trigger = (sectionId: string) => {
+    // setActiveSectionId(sectionId);
+    const imageUrl = bgImages.find((bg) => bg.id === sectionId)?.imageUrl;
+    if (imageUrl) setActiveBackgroundImage(imageUrl);
+  };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -63,10 +75,10 @@ export function TimeLine() {
             end: "-40%",
             // markers: true,
             scrub: true,
-            toggleClass: 'active'
-            // onEnter: () => setActiveSectionId(section.id),
+            toggleClass: 'active',
+            onEnter: () => trigger(section.id),
             // onLeave: () => setActiveSectionId(null),
-            // onEnterBack: () =>  setActiveSectionId(null),
+            onEnterBack: () =>  trigger(section.id),
             // onRefresh: self => self.update() 
           },
         });
@@ -101,7 +113,7 @@ export function TimeLine() {
     if (section) {
       const yOffset = window.innerHeight/ 2.5 // Adjusting to center the section
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-      const scrollToPosition = sectionTop - yOffset;
+      const scrollToPosition = sectionTop + yOffset;
       gsap.to(window, {
         scrollTo: { y: scrollToPosition, autoKill: true },
         duration: 0.6,
@@ -115,6 +127,7 @@ export function TimeLine() {
       section.classList.remove("active");
     });
     const sectionId = `section-${key}`;
+    trigger(sectionId);
     setActiveSectionId(sectionId);
     scrollToSection(sectionId);
   };
@@ -124,8 +137,8 @@ export function TimeLine() {
       <div className="text-center md:pb-[10px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
-      <div className="relative bg-cover bg-center w-full p-4" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" />
+      <div className="relative bg-cover bg-center w-full p-4 transition-bg-image duration-500 ease-in-out" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80" /> */}
         <div className="timeline my-4 text-transparent ">
           <div className="line"></div>
           {items.map((item) => (

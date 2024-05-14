@@ -60,9 +60,9 @@ export function TurnAroundTime({ isVisible }) {
         <Device>
             {({ isMobile, isTablet }) => {
                 return <div className="flex flex-col lg:flex-row items-center justify-center relative">
-                    <Image src="/assets/blog/Miaron_0002-129399 (1).jpg" alt="turnaround-page" fill></Image>
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div>
-                    <div className="z-10 h-full w-full flex justify-center items-center">
+                    <img className="w-full md:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3329.webp" alt="turnaround-page"></img>
+                    {/* <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div> */}
+                    <div className="z-10 absolute h-full w-full flex justify-center items-center">
                         {!isMobile && !isTablet && <div className="hidden lg:flex relative h-full w-full justify-center items-center">
                             <OuterCircle isVisible={isVisible}></OuterCircle>
                         </div>}
