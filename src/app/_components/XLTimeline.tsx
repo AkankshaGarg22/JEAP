@@ -108,7 +108,7 @@ const XLTimeLine: React.FC = () => {
       <div
         ref={timelineRef}
         className="xltimeline overflow-y-scroll  relative flex flex-col items-end bg-cover bg-center transition-bg-image duration-500 ease-in-out"
-        style={{ backgroundImage: `url(${backgroundImage})`, height: "80vh" }}
+        style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})`, height: "80vh" }}
       >
         <div
           className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[135vh] box-border`}
