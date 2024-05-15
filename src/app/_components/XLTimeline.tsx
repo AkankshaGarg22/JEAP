@@ -101,7 +101,7 @@ const XLTimeLine: React.FC = () => {
   };
 
   return (
-    <div id="jeap-journey" className="min-h-screen flex flex-col">
+    <div id="jeap-journey" className="min-h-full flex flex-col">
       <div className="text-center md:pb-[10px]">
         <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
       </div>
