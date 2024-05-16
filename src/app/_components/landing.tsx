@@ -11,74 +11,113 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null); 
   gsap.registerPlugin(ScrollTrigger);
 
-  // useEffect(() => {
-  //   if (parallaxRef.current) {
+
+//Background carousel
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  const images = [
+    '/assets/blog/jpgs/header_1.webp',
+    '/assets/blog/jpgs/header_2.webp',
+    '/assets/blog/jpgs/header_3.webp',
+    '/assets/blog/jpgs/header_image.webp',
+    // ... Add more image paths
+  ];
+  const [transitioning, setTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFading(true); // Start fading out the current image
+    }, 2000); // Start fade-out 1 second before image change
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  useEffect(() => {
+    if (fading && !transitioning) {
+      // Delay image change after fade-out starts
+      setTransitioning(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFading(false);
+        setTransitioning(false);
+      }, 2000); // Wait for fade-out transition to complete
+    }
+  }, [fading, transitioning, images.length]);
+
+
+
+
+  useEffect(() => {
+    if (parallaxRef.current) {
       
     
-  //     const newTl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: parallaxRef.current,
-  //         start: 'top 0%',
-  //         end:'bottom top',
-  //         scrub: true,
-  //         // markers: true
-  //       }
-  //     });
+      const newTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: parallaxRef.current,
+          start: 'top 0%',
+          scrub: true,
+          // markers: true
+        }
+      });
     
-  //     gsap.set(parallaxRef.current, { opacity: 1 });
-  //     newTl.to(parallaxRef.current, { opacity: 0 });
+      gsap.set(parallaxRef.current, { opacity: 1 });
+      newTl.to(parallaxRef.current, { opacity: 0 });
     
-  //     setTl(newTl); // Store the timeline instance in state
-  //   }
-  // }, []); 
+      setTl(newTl); // Store the timeline instance in state
+    }
+  }, []); 
 
-  // useEffect(() => {
-  //   return () => {
-  //     if (tl) {
-  //       tl.kill(); // Kill the timeline on unmount
-  //       gsap.set(parallaxRef.current, {clearProps:"all"});
-  //     }
-  //   };
-  // }, [tl]);
+  useEffect(() => {
+    return () => {
+      if (tl) {
+        tl.kill(); // Kill the timeline on unmount
+        gsap.set(parallaxRef.current, {clearProps:"all"});
+      }
+    };
+  }, [tl]);
 
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  //     gsap.to(parallaxRef.current, {
-  //       y: '-50px', // Adjust the movement value as needed
-  //       ease: 'none',
-  //       scrollTrigger: {
-  //         trigger: parallaxRef.current,
-  //         start: 'top 0%',
-  //         end: 'bottom center',
-  //         scrub: true,
-  //       }
-  //     });
-  //   }, []);
+      gsap.to(parallaxRef.current, {
+        y: '-100px', // Adjust the movement value as needed
+        ease: 'none',
+        scrollTrigger: {
+          trigger: parallaxRef.current,
+          start: 'top 0%',
+          end: 'bottom center',
+          scrub: true,
+        }
+      });
+
+      gsap.to(parrallaxRef.current, {
+        backgroundPositionY: '-50px', // Adjust the movement value as needed
+        ease: 'none',
+        scrollTrigger: {
+          trigger: parrallaxRef.current,
+          start: 'top 0%',
+          end: 'bottom center',
+          scrub: true,
+         // markers:true,
+        }
+      });
+
+    }, []);
 
    
-  //   useEffect(() => {
-  
-  //     gsap.to(parrallaxRef.current, {
-  //       backgroundPositionY: '-100px', // Adjust the movement value as needed
-  //       ease: 'none',
-  //       scrollTrigger: {
-  //         trigger: parrallaxRef.current,
-  //         start: 'top 0%',
-  //         end: 'bottom center',
-  //         scrub: true,
-  //        // markers:true,
-  //       }
-  //     });
-  //   }, []);
 
 
   return (
-    <div className={` min-h-screen fixed transition-opacity scroll-opacity`} ref={parallaxRef} >
+    <div className={` min-h-screen fixed transi`} ref={parallaxRef}>
       
-      <section
-        className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center bg-opacity-80 flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)]  
-        animate-[changeImage_50s_linear_infinite]` } ref={parrallaxRef}
+      <section id="bgcarousel"
+        className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
+        flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] 
+        transition-bg-image duration-1000 ease-in-out` }  ref={parrallaxRef}
+        style={{ backgroundImage: `url(${images[currentImageIndex]})`, 
+        opacity: fading ? 1 : 1
+       }}
       >
         <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
           <h1 className="leading-1 md:leading-[1.5] text-3xl md:text-6xl font-[compasse-extrabold]">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
