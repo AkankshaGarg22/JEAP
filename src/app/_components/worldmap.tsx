@@ -102,7 +102,7 @@ const WorldMap = () => {
               <Link className="underline-offset-1	underline text-[#1A5632]"  href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
             </div>
           </div>
-          <p className="px-4 text-left">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
+          <p className="px-4 text-left text-xs md:text-sm w-1/2 md:w-1/4">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
           <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px]">
             The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
             humanitarian crises, and increasingly climate-related disasters.
