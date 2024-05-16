@@ -11,65 +11,66 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null); 
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
-    if (parallaxRef.current) {
+  // useEffect(() => {
+  //   if (parallaxRef.current) {
       
     
-      const newTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: 'top 0%',
-          scrub: true,
-          // markers: true
-        }
-      });
+  //     const newTl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: parallaxRef.current,
+  //         start: 'top 0%',
+  //         end:'bottom top',
+  //         scrub: true,
+  //         // markers: true
+  //       }
+  //     });
     
-      gsap.set(parallaxRef.current, { opacity: 1 });
-      newTl.to(parallaxRef.current, { opacity: 0 });
+  //     gsap.set(parallaxRef.current, { opacity: 1 });
+  //     newTl.to(parallaxRef.current, { opacity: 0 });
     
-      setTl(newTl); // Store the timeline instance in state
-    }
-  }, []); 
+  //     setTl(newTl); // Store the timeline instance in state
+  //   }
+  // }, []); 
 
-  useEffect(() => {
-    return () => {
-      if (tl) {
-        tl.kill(); // Kill the timeline on unmount
-        gsap.set(parallaxRef.current, {clearProps:"all"});
-      }
-    };
-  }, [tl]);
+  // useEffect(() => {
+  //   return () => {
+  //     if (tl) {
+  //       tl.kill(); // Kill the timeline on unmount
+  //       gsap.set(parallaxRef.current, {clearProps:"all"});
+  //     }
+  //   };
+  // }, [tl]);
 
 
-  useEffect(() => {
+  // useEffect(() => {
     
-      gsap.to(parallaxRef.current, {
-        y: '-50px', // Adjust the movement value as needed
-        ease: 'none',
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: 'top 0%',
-          end: 'bottom center',
-          scrub: true,
-        }
-      });
-    }, []);
+  //     gsap.to(parallaxRef.current, {
+  //       y: '-50px', // Adjust the movement value as needed
+  //       ease: 'none',
+  //       scrollTrigger: {
+  //         trigger: parallaxRef.current,
+  //         start: 'top 0%',
+  //         end: 'bottom center',
+  //         scrub: true,
+  //       }
+  //     });
+  //   }, []);
 
    
-    useEffect(() => {
+  //   useEffect(() => {
   
-      gsap.to(parrallaxRef.current, {
-        backgroundPositionY: '-100px', // Adjust the movement value as needed
-        ease: 'power1.out',
-        scrollTrigger: {
-          trigger: parrallaxRef.current,
-          start: 'top center',
-          end: 'bottom center',
-          scrub: true,
-         // markers:true,
-        }
-      });
-    }, []);
+  //     gsap.to(parrallaxRef.current, {
+  //       backgroundPositionY: '-100px', // Adjust the movement value as needed
+  //       ease: 'none',
+  //       scrollTrigger: {
+  //         trigger: parrallaxRef.current,
+  //         start: 'top 0%',
+  //         end: 'bottom center',
+  //         scrub: true,
+  //        // markers:true,
+  //       }
+  //     });
+  //   }, []);
 
 
   return (
