@@ -23,6 +23,33 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
     '/assets/blog/jpgs/header_image.webp',
     // ... Add more image paths
   ];
+
+
+  //preload the images
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        await Promise.all(
+          images.map((src) => {
+            return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = src;
+              img.onload = resolve;
+              img.onerror = reject;
+            });
+          })
+        );
+        console.log("All images preloaded successfully");
+      } catch (error) {
+        console.error("Failed to preload images:", error);
+      }
+    };
+
+    preloadImages(); 
+  }, []); 
+  
+
+
   const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
