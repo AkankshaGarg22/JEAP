@@ -1,87 +1,87 @@
-'use client'
+"use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import OuterCircle from './outerCircle';
-import InnerCircle from './innerCircle';
+import OuterCircle from "./outerCircle";
+import InnerCircle from "./innerCircle";
 import Device from "./device";
-
+import { useMediaQuery } from "@react-hook/media-query";
 
 export function TurnAroundTime({ isVisible }) {
+  const isXlScreen = useMediaQuery("only screen and (min-width: 1200px)"); // adjust the breakpoint as needed
 
-    const [innerProgress, setInnerProgress] = useState(0)
-    const [outerProgress, setOuterProgress] = useState(0)
+  const [innerProgress, setInnerProgress] = useState(0);
+  const [outerProgress, setOuterProgress] = useState(0);
 
-    const [shouldFill, setShouldFill] = useState(false);
-    const [shouldOuterFill, setShouldOuterFill] = useState(false);
+  const [shouldFill, setShouldFill] = useState(false);
+  const [shouldOuterFill, setShouldOuterFill] = useState(false);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (innerProgress < 100 && isVisible) {
-                setInnerProgress(prevProgress => prevProgress + 1); // Increase progress by 1 (you can adjust this)
-            }
-        }, 10); // Interval in milliseconds (you can adjust this)
-        // Clear interval when component unmounts
-        return () => clearInterval(interval);
-    }, [innerProgress, isVisible]); // Re-run effect when progress changes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (innerProgress < 100 && isVisible) {
+        setInnerProgress((prevProgress) => prevProgress + 1); // Increase progress by 1 (you can adjust this)
+      }
+    }, 10); // Interval in milliseconds (you can adjust this)
+    // Clear interval when component unmounts
+    return () => clearInterval(interval);
+  }, [innerProgress, isVisible]); // Re-run effect when progress changes
 
-    useEffect(() => {
-        if (innerProgress === 100 && isVisible) {
-            setTimeout(() => {
-                setShouldFill(true);
-            }, 1000)
-        } else {
-            setShouldFill(false)
-        }
-    }, [innerProgress, shouldFill])
+  useEffect(() => {
+    if (innerProgress === 100 && isVisible) {
+      setTimeout(() => {
+        setShouldFill(true);
+      }, 1000);
+    } else {
+      setShouldFill(false);
+    }
+  }, [innerProgress, shouldFill]);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (innerProgress >= 100 && shouldFill && isVisible && outerProgress < 100) {
-                setOuterProgress(prevProgress => prevProgress + 1); // Increase progress by 1 (you can adjust this)
-            }
-        }, 10); // Interval in milliseconds (you can adjust this)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (innerProgress >= 100 && shouldFill && isVisible && outerProgress < 100) {
+        setOuterProgress((prevProgress) => prevProgress + 1); // Increase progress by 1 (you can adjust this)
+      }
+    }, 10); // Interval in milliseconds (you can adjust this)
 
-        // Clear interval when component unmounts
-        return () => clearInterval(interval);
-    }, [outerProgress, innerProgress, shouldFill]); // Re-run effect when progress changes
+    // Clear interval when component unmounts
+    return () => clearInterval(interval);
+  }, [outerProgress, innerProgress, shouldFill]); // Re-run effect when progress changes
 
-    useEffect(() => {
-        if (outerProgress === 100 && isVisible) {
-            setTimeout(() => {
-                setShouldOuterFill(true);
-            }, 1000)
-        } else {
-            setShouldOuterFill(false)
-        }
-    }, [outerProgress, shouldOuterFill])
+  useEffect(() => {
+    if (outerProgress === 100 && isVisible) {
+      setTimeout(() => {
+        setShouldOuterFill(true);
+      }, 1000);
+    } else {
+      setShouldOuterFill(false);
+    }
+  }, [outerProgress, shouldOuterFill]);
 
-
-    return (
-        <Device>
-            {({ isMobile, isTablet }) => {
-                return <div className="flex flex-col lg:flex-row items-center justify-center relative">
-                    <img className="w-full md:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3346.webp" alt="turnaround-page"></img>
-                    {/* <div className="absolute inset-0 bg-gradient-to-br from-[#00205C] to-[#1A5632] opacity-80"></div> */}
-                    <div className="z-10 absolute h-full w-full flex justify-center items-center">
-                        {!isMobile && !isTablet && <div className="hidden lg:flex relative h-full w-full justify-center items-center">
-                            <OuterCircle isVisible={isVisible}></OuterCircle>
-                        </div>}
-                        <div className="md:hidden block p-10">
-                            <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={300} width={300}></Image>
-                        </div>
-                        <div className="hidden md:block lg:hidden p-10">
-                            <Image alt="bg-image" src="/assets/blog/Group 3337.svg" height={450} width={450}></Image>
-                        </div>
-                        {(isMobile || isTablet) && <InnerCircle isVisible={isVisible}></InnerCircle>}
-                    </div>
-                </div>
-            }}
-        </Device>
-    );
+  return (
+    <div className="flex flex-col lg:flex-row items-center justify-center relative">
+      <img className="w-full md:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3346.webp" alt="turnaround-page"></img>
+      {isVisible ? (
+        <div className="z-10 absolute h-full w-full flex justify-center items-center">
+          {isXlScreen ? (
+            <div className="hidden xl:flex relative h-full w-full justify-center items-center">
+              <OuterCircle isVisible={isVisible}></OuterCircle>
+            </div>
+          ) : null}
+          <div className="md:hidden block p-10">
+            <img alt="bg-image" src="/assets/blog/Group 3337.svg" height={300} width={300}></img>
+          </div>
+          <div className="hidden md:block xl:hidden p-10">
+            <img alt="bg-image" src="/assets/blog/Group 3337.svg" height={450} width={450}></img>
+          </div>
+          {isXlScreen ? null : <InnerCircle isVisible={isVisible}></InnerCircle>}
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 export default TurnAroundTime;
-{/* <div className="absolute w-[70px] h-[70px] bg-white z-20 rounded-full md:hidden block">
+{
+  /* <div className="absolute w-[70px] h-[70px] bg-white z-20 rounded-full md:hidden block">
                 <div className="relative">
                     <div className="absolute z-[100] top-[25px] right-[0] md:hidden block">
                         <Image src="/assets/blog/Group 2501.svg" height={20} width={20} alt="label"></Image>
@@ -137,4 +137,5 @@ export default TurnAroundTime;
                         </div>
                     </CircularProgressbarWithChildren>
                 </div>
-            </div> */}
+            </div> */
+}
