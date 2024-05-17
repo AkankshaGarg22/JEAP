@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { items } from "./time-line";
+import Lenis from "@studio-freight/lenis";
 
 const bgImages = [
   { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.webp" },
@@ -100,6 +101,19 @@ const XLTimeLine: React.FC = () => {
     }
   };
 
+  // useEffect(() => {
+  //   const overflowDiv = document.getElementById('overflowDiv');
+
+  //   // Check if overflowDiv is found and is an HTMLElement
+  //   if (overflowDiv instanceof HTMLElement) {
+  //     new Lenis({
+  //       wrapper: overflowDiv,
+  //       content: overflowDiv,
+  //     });
+  //   }
+
+  //   });
+
   return (
     <div id="jeap-journey" className="min-h-full flex flex-col">
       <div className="text-center md:pb-[10px]">
@@ -109,6 +123,7 @@ const XLTimeLine: React.FC = () => {
         ref={timelineRef}
         className="xltimeline overflow-y-scroll  relative flex flex-col items-end bg-cover bg-center transition-bg-image duration-500 ease-in-out"
         style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})`, height: "80vh" }}
+        id="overflowDiv"
       >
         <div
           className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[135vh] box-border`}

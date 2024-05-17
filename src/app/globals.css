@@ -178,7 +178,7 @@ body {
 }
 
 
-/* Landing section fade in effect */
+/* Landing section fade in effect
 .scroll-background{
   animation:scroll-background linear forwards;
   animation-timeline:view();
@@ -198,8 +198,8 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
-/*Leadership image hover effect*/
-}
+/*Leadership image hover effect
+} */
 
 .image-hover {   
   --s: 300px;              /* the size of the image */
