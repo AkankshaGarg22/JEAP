@@ -115,7 +115,7 @@ export default function Index() {
             </div>
 
             <div className="relative mt-[100vh]" ref={missionRef}>
-              <Mission />
+              <Mission isVisible={isVisible} />
             </div>
 
             <div className="relative bg-white">
