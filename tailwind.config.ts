@@ -70,7 +70,11 @@ const config: Config = {
           }
         }
 
-      }
+      },
+      transitionProperty: {
+        'bg-image': 'background-image',
+      },
+
     },
   },
   plugins: [],

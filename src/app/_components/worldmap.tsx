@@ -6,6 +6,24 @@ import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-
 import Link from "next/link";
 import Device from "./device/device";
 
+function getRankWithSuffix(rank : number) {
+  // Check if the rank is between 11 and 13 (special cases)
+  if (rank >= 11 && rank <= 13) {
+      return rank + "th";
+  }
+  // For other ranks, determine the suffix based on the last digit
+  switch (rank % 10) {
+      case 1:
+          return rank + "st";
+      case 2:
+          return rank + "nd";
+      case 3:
+          return rank + "rd";
+      default:
+          return rank + "th";
+  }
+}
+
 const WorldMap = () => {
   const [content, setContent] = useState("");
   const geoUrl = "/features.json";
@@ -48,7 +66,7 @@ const WorldMap = () => {
                         geography={geo}
                         fill={d ? `${colorScale(d["Overall Score Normed"])}` : "#F5F4F6"}
                         onMouseEnter={(event) => {
-                          setContent(geo.properties.name ? geo.properties.name + ": " + (d?.Rank ? d?.Rank : "NA") : "");
+                          setContent(geo.properties.name ? geo.properties.name + ": " + (d?.Rank ? getRankWithSuffix(d?.Rank) : "NA") : "");
                           getPos(event)
                         }}
                         onMouseLeave={() => {
@@ -81,9 +99,10 @@ const WorldMap = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <Link className="underline-offset-1	underline text-[#1A5632]" href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
+              <Link className="underline-offset-1	underline text-[#1A5632]"  href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
             </div>
           </div>
+          <p className="px-4 text-left text-xs md:text-sm w-1/2 md:w-1/4">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
           <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px]">
             The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
             humanitarian crises, and increasingly climate-related disasters.
