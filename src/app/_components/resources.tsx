@@ -3,10 +3,10 @@ import Image from "next/image";
 export function Resources() {
 
   return (
-    <div id="resources" className="md:pt-18 py-8 relative">
+    <div id="resources" className="md:pt-18 py-6 relative">
       <Image src="/assets/blog/Resoruces_Background.png" alt="resource-page" fill></Image>
       <div className="flex flex-col lg:flex-row items-center justify-center ">
-        <h2 className="text-3xl md:text-7xl text-white opacity-100 flex justify-center font-[compasse-extrabold] p-5 relative">
+        <h2 className="text-3xl md:text-7xl text-white opacity-100 flex justify-center font-[compasse-extrabold] md:p-5 p-2 relative">
           RESOURCES
         </h2>
       </div>
