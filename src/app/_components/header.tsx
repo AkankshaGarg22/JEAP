@@ -26,7 +26,7 @@ const Header = () => {
             <img className="h-[38px] lg:h-[40px] w-[90px] lg:w-[100px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
           </div>
         </div>
-        <div className="hidden md:flex header-links  flex-row items-center gap-4 md:gap-8 md:p-5">
+        <div className="hidden md:flex header-links  flex-row items-center gap-4 md:gap-8 md:p-3">
           
           <AnchorLink href="#mission">
             <h2 className="link-hover font-semibold">MISSION</h2>
