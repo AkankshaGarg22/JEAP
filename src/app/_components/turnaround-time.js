@@ -58,7 +58,7 @@ export function TurnAroundTime({ isVisible }) {
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center relative">
-      <img className="w-full md:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3346.webp" alt="turnaround-page"></img>
+      <img className="w-full md:h-[500px] xl:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3346.webp" alt="turnaround-page"></img>
       {isVisible ? (
         <div className="z-10 absolute h-full w-full flex justify-center items-center">
           {isXlScreen ? (
