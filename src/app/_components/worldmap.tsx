@@ -52,7 +52,7 @@ const WorldMap = () => {
     <Device>
       {({isMobile}) => {
         return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
-        <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[30px] md:pt-[50px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+        <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
         <div className="h-[400px] md:h-[700px] xl:h-[1300px] w-full relative" >
           {data.length > 0 && (
             <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "85%", width: "100%",}}>
@@ -88,7 +88,7 @@ const WorldMap = () => {
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
         </div>
   
-        <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[0]">
+        <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[4%]">
           <div className="flex flex-row justify-between px-4">
             <div className="flex flex-col">
               <p className="text-left">Vulnerability Index</p>
@@ -99,10 +99,12 @@ const WorldMap = () => {
               </div>
             </div>
             <div className="flex items-center">
+            <p className="px-4 text-left text-xs md:text-sm">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
+            </div>
+            <div className="flex items-center">
               <Link className="underline-offset-1	underline text-[#1A5632]"  href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
             </div>
           </div>
-          <p className="px-4 text-left text-xs md:text-sm w-1/2 md:w-1/4">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
           <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px]">
             The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
             humanitarian crises, and increasingly climate-related disasters.

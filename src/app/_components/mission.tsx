@@ -21,16 +21,16 @@ const Mission = () => {
           onInit={(typewriter) => {
             typewriter
               .typeString(" Of the ")
-              .pauseFor(300)
+              .pauseFor(50)
               .typeString(`<strong style="font-size:2.5rem"><span style="font-family:compasse-extrabold">25</span> countries<strong>\n`)
-              .pauseFor(300)
+              .pauseFor(50)
               .typeString("\n\n\n\n\nmost susceptible to infectious outbreaks globally, ")
-              .pauseFor(500)
+              .pauseFor(80)
               .typeString(`<strong style="font-size:2.5rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa .<strong>`)
-              .pauseFor(300)
+              .pauseFor(50)
               .start();
           }}
-          options={{loop :true}}
+          options={{loop :false}}
         />
       </div>
     </div>
