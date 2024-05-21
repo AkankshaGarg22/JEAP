@@ -25,52 +25,52 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   ];
 
 
-  // // //preload the images
-  // useEffect(() => {
-  //   const preloadImages = async () => {
-  //     try {
-  //       await Promise.all(
-  //         images.map((src) => {
-  //           return new Promise((resolve, reject) => {
-  //             const img = new Image();
-  //             img.src = src;
-  //             img.onload = resolve;
-  //             img.onerror = reject;
-  //           });
-  //         })
-  //       );
-  //       console.log("All images preloaded successfully");
-  //     } catch (error) {
-  //       console.error("Failed to preload images:", error);
-  //     }
-  //   };
-
-  //   preloadImages(); 
-  // }, []); 
-
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  // Image preloading (corrected)
+  // //preload the images
   useEffect(() => {
-    let loadedCount = 0;
-    const imageLoadPromises = images.map(src => {
-      return new Promise<void>((resolve, reject) => { // Specify the Promise type as void
-        const img = new Image();
-        img.src = src;
-        img.onload = () => {
-          loadedCount++;
-          if (loadedCount === images.length) {
-            setImagesLoaded(true); 
-          }
-          resolve(); // No return value needed
-        };
-        img.onerror = reject;
-      });
-    });
+    const preloadImages = async () => {
+      try {
+        await Promise.all(
+          images.map((src) => {
+            return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = src;
+              img.onload = resolve;
+              img.onerror = reject;
+            });
+          })
+        );
+        console.log("All images preloaded successfully");
+      } catch (error) {
+        console.error("Failed to preload images:", error);
+      }
+    };
 
-    Promise.all(imageLoadPromises)
-      .then(() => console.log("All images preloaded successfully"))
-      .catch(error => console.error("Failed to preload images:", error));
+    preloadImages(); 
   }, []); 
+
+  // const [imagesLoaded, setImagesLoaded] = useState(false);
+  // // Image preloading (corrected)
+  // useEffect(() => {
+  //   let loadedCount = 0;
+  //   const imageLoadPromises = images.map(src => {
+  //     return new Promise<void>((resolve, reject) => { // Specify the Promise type as void
+  //       const img = new Image();
+  //       img.src = src;
+  //       img.onload = () => {
+  //         loadedCount++;
+  //         if (loadedCount === images.length) {
+  //           setImagesLoaded(true); 
+  //         }
+  //         resolve(); // No return value needed
+  //       };
+  //       img.onerror = reject;
+  //     });
+  //   });
+
+  //   Promise.all(imageLoadPromises)
+  //     .then(() => console.log("All images preloaded successfully"))
+  //     .catch(error => console.error("Failed to preload images:", error));
+  // }, []); 
 
  const [transitioning, setTransitioning] = useState(false);
 
@@ -163,7 +163,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       <section id="bgcarousel"
         className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
         flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] 
-        ${imagesLoaded ? 'transition-bg-image duration-1000 ease-in-out' : ''}
+        transition-bg-image duration-1000 ease-in-out}
       ` }  ref={parrallaxRef}
         style={{ backgroundImage: `url(${images[currentImageIndex]})`, 
         opacity: fading ? 1 : 1
