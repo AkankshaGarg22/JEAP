@@ -2,33 +2,107 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const Mission = ({ isVisible }: { isVisible: boolean }) => {
-  const [isCurved, setIsCurved] = useState(true);
+
+  // const [isCurved, setIsCurved] = useState(true);
 
   const ref = useRef<HTMLDivElement>(null);
 
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        const { top } = ref.current.getBoundingClientRect();
-        const distanceFromTop = top + scrollTop;
-        setIsCurved(distanceFromTop <= window.innerHeight * 0.1); // Set isCurved to false when the div is 90% away from the top
+    gsap.registerPlugin(ScrollTrigger);
+
+    const element = ref.current;
+
+    if (!element) return;
+
+    const animation = gsap.fromTo(
+      element,
+      { clipPath: 'circle(100vh at 49% 100%)' },
+      {
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 90%',
+          end: 'top 10%',
+          scrub: true,
+          id: 'mission', // Give the ScrollTrigger an ID
+          // markers : true,
+          invalidateOnRefresh: true,
+        },
+        duration: 1.5,
+        ease: 'easeInOut',
+        onUpdate: (self) => {
+          const trigger = element || window;
+          const triggerRect = trigger.getBoundingClientRect();
+          const progress = (window.innerHeight - triggerRect.top) / (triggerRect.height + window.innerHeight);
+          // const clipPathValue = `circle(100vh at 49% ${(1 - progress) * 100}%)`;
+          let clipPathValue;
+
+        // Adjust clip path based on scroll progress
+        if (progress < 0.1) {
+          clipPathValue = 'circle(100vh at 49% 100%)'; // Initial circle
+        } else if (progress > 0.9) {
+          clipPathValue = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'; // Final polygon
+        } else {
+          const initialCircleRadius = 100;
+          const finalCircleRadius = 300; // Increase the final circle radius
+          const circleRadius = initialCircleRadius + (progress * (finalCircleRadius - initialCircleRadius)); // Increase circle radius as user scrolls down
+          clipPathValue = `circle(${circleRadius}vh at 49% 100%)`;
+        }
+          gsap.set(element, { clipPath: clipPathValue });
+        },
       }
+    );
+
+    return () => {
+      ScrollTrigger.getById('mission')?.kill(); // Use optional chaining to avoid errors
+      animation.kill(); // Ensure to kill the GSAP animation instance as well
     };
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (ref.current) {
+  //       const { top } = ref.current.getBoundingClientRect();
+  //       console.log("top:", top);
+  //       setIsCurved(top > window.innerHeight * 0.1);
+  //     }
+  //   };
+
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       console.log("IntersectionObserver entry:", entry);
+  //       handleScroll(); // Call handleScroll to set the initial state
+  //     },
+  //     { root: null, threshold: [0] }
+  //   );
+
+  //   if (ref.current) {
+  //     observer.observe(ref.current);
+  //   }
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     if (ref.current) {
+  //       observer.unobserve(ref.current);
+  //     }
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+  // console.log({isCurved})
+
   return (
-    <motion.div
+    <div
       id="mission"
       ref={ref}
-      initial={{ clipPath: "circle(100vh at 49% 100%)" }}
-      animate={{ clipPath: isCurved ? "circle(100vh at 49% 100%)" : "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
-      transition={{ duration: 1, type: "easeInOut" }}
+      // initial={{ clipPath: "circle(100vh at 49% 100%)" }}
+      // animate={{ clipPath: isCurved ? "circle(100vh at 49% 100%)" : "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
+      // transition={{ duration: 2, type: "easeInOut" }}
       className={`min-h-screen flex flex-col items-center justify-start xl:justify-evenly bg-cover bg-center lg:bg-contain bg-no-repeat z-[200] bg-[#1a5632] text-white 
         `}
     >
@@ -59,7 +133,7 @@ const Mission = ({ isVisible }: { isVisible: boolean }) => {
           options={{ loop: false }}
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
