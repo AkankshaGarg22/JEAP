@@ -48,7 +48,7 @@ export function Leadership() {
 const leaderCard = (leaderData: { image: string, title: string, description: string }, key: number) => {
     return(
      <div className="leader min-h-full flex flex-col items-center gap-6 justify-center" key={key}>
-        <Image className="image-hover max-h-[180px] max-w-[180px] md:max-h-[300px] md:max-w-[300px] rounded-full" src={leaderData.image} width={300} height={0} alt={leaderData.title + 'image'}></Image>
+        <Image className="image-hover max-h-[180px] max-w-[180px] md:max-h-[250px] md:max-w-[250px] rounded-full" src={leaderData.image} width={300} height={0} alt={leaderData.title + 'image'}></Image>
         <div className="flex flex-col items-center">
             <h2 className="text-[#00205C] text-base md:text-lg font-bold flex text-center">{leaderData.title}</h2>
             <p className="text-[#00205C] text-base md:text-lg p-1 flex text-center">{leaderData.description}</p>
