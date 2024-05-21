@@ -84,7 +84,7 @@ export default function Index() {
   }, []);
 
 //  useEffect(() => {
-//     const scrollContainer = document.querySelector("main");
+//     const scrollContainer = document.querySelector("main") as HTMLElement | null;
 //     const lenis = new Lenis({
 //       duration: 2.0,
 //       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -99,7 +99,6 @@ export default function Index() {
 //     };
 
 //      lenis.on("scroll", ScrollTrigger.update);
-
 //      requestAnimationFrame(raf);
 //      return () => lenis.stop();
 //    }, []);
