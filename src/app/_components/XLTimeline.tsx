@@ -132,7 +132,7 @@ const XLTimeLine: React.FC = () => {
           <div
             key={item.key}
             id={`section-${item.key}`}
-            className={`xltimeline-item flex flex-col my-4 gap-4 items-start transition-[600ms] duration-[ease]  relative z-[4]  p-4 text-wrap text-3xl w-3/4 group ${
+            className={`xltimeline-item flex flex-col my-2 gap-3 items-start transition-[600ms] duration-[ease]  relative z-[4]  p-4 text-wrap text-3xl w-3/4 group ${
               activeSectionId === `section-${item.key}` ? "active" : ""
             }`}
             style={{ minHeight: "40vh", scrollSnapAlign: "start" }}
