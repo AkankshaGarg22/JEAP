@@ -25,32 +25,54 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   ];
 
 
-  //preload the images
+  // // //preload the images
+  // useEffect(() => {
+  //   const preloadImages = async () => {
+  //     try {
+  //       await Promise.all(
+  //         images.map((src) => {
+  //           return new Promise((resolve, reject) => {
+  //             const img = new Image();
+  //             img.src = src;
+  //             img.onload = resolve;
+  //             img.onerror = reject;
+  //           });
+  //         })
+  //       );
+  //       console.log("All images preloaded successfully");
+  //     } catch (error) {
+  //       console.error("Failed to preload images:", error);
+  //     }
+  //   };
+
+  //   preloadImages(); 
+  // }, []); 
+
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  // Image preloading (corrected)
   useEffect(() => {
-    const preloadImages = async () => {
-      try {
-        await Promise.all(
-          images.map((src) => {
-            return new Promise((resolve, reject) => {
-              const img = new Image();
-              img.src = src;
-              img.onload = resolve;
-              img.onerror = reject;
-            });
-          })
-        );
-        console.log("All images preloaded successfully");
-      } catch (error) {
-        console.error("Failed to preload images:", error);
-      }
-    };
+    let loadedCount = 0;
+    const imageLoadPromises = images.map(src => {
+      return new Promise<void>((resolve, reject) => { // Specify the Promise type as void
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === images.length) {
+            setImagesLoaded(true); 
+          }
+          resolve(); // No return value needed
+        };
+        img.onerror = reject;
+      });
+    });
 
-    preloadImages(); 
+    Promise.all(imageLoadPromises)
+      .then(() => console.log("All images preloaded successfully"))
+      .catch(error => console.error("Failed to preload images:", error));
   }, []); 
-  
 
-
-  const [transitioning, setTransitioning] = useState(false);
+ const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -141,14 +163,15 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       <section id="bgcarousel"
         className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
         flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] 
-        transition-bg-image duration-1000 ease-in-out` }  ref={parrallaxRef}
+        ${imagesLoaded ? 'transition-bg-image duration-1000 ease-in-out' : ''}
+      ` }  ref={parrallaxRef}
         style={{ backgroundImage: `url(${images[currentImageIndex]})`, 
         opacity: fading ? 1 : 1
        }}
       >
         <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
           <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
-          <p className="text-lg md:text-2xl text-balance pt-5">
+          <p className="text-lg md:text-2xl pt-5 text-balance">
             The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response (EPR)
             efforts across the continent to dramatically improve how countries prepare for, detect, and respond to emergencies, while simultaneously ensuring no country is left behind.
           </p>
