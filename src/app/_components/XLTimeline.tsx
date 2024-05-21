@@ -126,16 +126,16 @@ const XLTimeLine: React.FC = () => {
         id="overflowDiv"
       >
         <div
-          className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[135vh] box-border`}
+          className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[132vh] box-border`}
         />
         {items.map((item) => (
           <div
             key={item.key}
             id={`section-${item.key}`}
-            className={`xltimeline-item flex flex-col my-2 gap-3 items-start transition-[600ms] duration-[ease]  relative z-[4]  p-4 text-wrap text-3xl w-3/4 group ${
+            className={`xltimeline-item flex flex-col my-4 gap-3 items-start transition-[600ms] duration-[ease] relative z-[4] px-4 text-wrap text-3xl w-3/4 group ${
               activeSectionId === `section-${item.key}` ? "active" : ""
             }`}
-            style={{ minHeight: "40vh", scrollSnapAlign: "start" }}
+            style={{ minHeight: "38vh", scrollSnapAlign: "start" }}
           >
             <div
               className="timeline-ball absolute -top-2 -left-2 w-4 h-4  group-[.active]:-left-4 group-[.active]:w-8 group-[.active]:h-8   bg-white rounded-full cursor-pointer "
