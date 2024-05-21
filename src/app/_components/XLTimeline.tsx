@@ -135,7 +135,7 @@ const XLTimeLine: React.FC = () => {
             className={`xltimeline-item flex flex-col my-4 gap-3 items-start transition-[600ms] duration-[ease] relative z-[4] px-4 text-wrap text-3xl w-3/4 group ${
               activeSectionId === `section-${item.key}` ? "active" : ""
             }`}
-            style={{ minHeight: "38vh", scrollSnapAlign: "start" }}
+            style={{ minHeight: "45%", scrollSnapAlign: "start" }}
           >
             <div
               className="timeline-ball absolute -top-2 -left-2 w-4 h-4  group-[.active]:-left-4 group-[.active]:w-8 group-[.active]:h-8   bg-white rounded-full cursor-pointer "
