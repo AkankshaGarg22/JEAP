@@ -303,3 +303,6 @@ html.lenis, html.lenis body {
 
 */
 
+[data-lenis-prevent] {
+  overscroll-behavior: contain;
+}

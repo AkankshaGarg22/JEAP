@@ -130,7 +130,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   useEffect(() => {
     
       gsap.to(parallaxRef.current, {
-        y: '-100px', // Adjust the movement value as needed
+        backgroundPositionY: '-50px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parallaxRef.current,
@@ -141,7 +141,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       });
 
       gsap.to(parrallaxRef.current, {
-        backgroundPositionY: '-25px', // Adjust the movement value as needed
+        y: '-100px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parrallaxRef.current,
@@ -173,7 +173,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
           <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
           <p className="text-lg md:text-2xl pt-5 w-[80%] break-normal">
             The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response (EPR)
-            efforts across the continent to dramatically improve how countries prepare for, detect, and respondto emergencies, while simultaneously ensuring no country is left behind.
+            efforts across the continent to dramatically improve how countries prepare for, detect, and respond to emergencies, while simultaneously ensuring no country is left behind.
           </p>
         </div>
       </section>
