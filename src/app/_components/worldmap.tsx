@@ -105,14 +105,14 @@ const WorldMap = () => {
               <Link className="underline-offset-1	underline text-[#1A5632]"  href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
             </div>
           </div>
-          <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px]">
+          <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px] px-4">
             The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
             humanitarian crises, and increasingly climate-related disasters.
           </h2>
-          <p className="py-4 text-xl">
+          <p className="p-4 text-xl">
             The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
           </p>
-          <p className="py-4 font-bold text-xl pb-8 text-balance">
+          <p className="p-4 font-bold text-xl pb-8 text-balance">
             The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
           </p>
         </div>
