@@ -16,17 +16,17 @@ const Mission = () => {
           </p>
         </div>
       </div>
-      <div className="basis-1/3 md:basis-1/3 flex items-center text-center w-2/3 md:w-1/3 text-wrap text-lg md:text-xl xl:text-3xl xl:leading-tight font-bold  md:pt-0">
+      <div className="basis-1/3 md:basis-1/3 flex items-center xl:items-start text-center w-2/3 md:w-1/3 text-wrap text-lg md:text-xl xl:text-3xl xl:leading-tight font-bold  md:pt-0">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
               .typeString(" Of the ").changeDelay(20)
               .pauseFor(50)
-              .typeString(`<strong style="font-size:2.5rem"><span style="font-family:compasse-extrabold">25</span> countries<strong>\n`).changeDelay(25)
+              .typeString(`<strong style="font-size:2.85rem"><span style="font-family:compasse-extrabold">25</span> countries<strong>\n`).changeDelay(25)
               .pauseFor(50)
               .typeString("\n\n\n\n\nmost susceptible to infectious outbreaks globally, ").changeDelay(25)
               .pauseFor(80)
-              .typeString(`<strong style="font-size:2.5rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa.<strong>`).changeDelay(25)
+              .typeString(`<strong style="font-size:2.85rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa.<strong>`).changeDelay(25)
               .pauseFor(50)
               .start();
           }}
