@@ -51,11 +51,11 @@ const WorldMap = () => {
   return (
     <Device>
       {({isMobile}) => {
-        return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative ">
+        return <div className="h-[160vh] md:h-[95vh] xl:h-[165vh] flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative ">
         <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
-        <div className="h-[400px] md:h-[700px] xl:h-[1300px] w-full relative" >
+        <div className="h-[400px] md:h-[700px] xl:h-[100%] w-full relative" >
           {data.length > 0 && (
-            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "85%", width: "100%",}}>
+            <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "100%", width: "100%",}}>
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
@@ -88,7 +88,7 @@ const WorldMap = () => {
           {content ? <div className={`absolute bg-white text-[#0C1F49] text-md rounded py-2 px-4`} style={{ left: left + 'px', top: top + 'px', clipPath: "polygon(0 0,100% 0,100% 90%,60% 90%,50% 100%,40% 90%,0 90%)", boxShadow: "0px 3px 6px #00000029" }}>{content}</div> : null}
         </div>
   
-        <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[4%]">
+        <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[0%]">
           <div className="flex flex-row justify-between px-4 pb-8">
             <div className="flex flex-col">
               <p className="text-left">Vulnerability Index</p>
@@ -112,7 +112,7 @@ const WorldMap = () => {
           <p className="p-4 text-xl">
             The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
           </p>
-          <div className="flex justify-center items-end w-full pb-0 mb-0 md:mb-[-12%] xl:mb-[-3.5%]">
+          <div className="flex justify-center items-end w-full pb-0 ">
           <p className="p-0 font-bold text-xl w-[70%] break-normal ">
             The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
           </p>
