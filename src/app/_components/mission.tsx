@@ -26,7 +26,7 @@ const Mission = () => {
               .pauseFor(50)
               .typeString("\n\n\n\n\nmost susceptible to infectious outbreaks globally, ").changeDelay(25)
               .pauseFor(80)
-              .typeString(`<strong style="font-size:2.5rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa .<strong>`).changeDelay(25)
+              .typeString(`<strong style="font-size:2.5rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa.<strong>`).changeDelay(25)
               .pauseFor(50)
               .start();
           }}

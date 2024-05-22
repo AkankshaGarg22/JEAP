@@ -99,7 +99,7 @@ const WorldMap = () => {
               </div>
             </div>
             <div className="flex items-center">
-            <p className="px-4 text-left text-xs md:text-sm">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
+            <p className="px-4 text-center text-sm md:text-lg">These countries have been ranked from most to least vulnerable. If you hover over each country, you will see their ranking.</p>
             </div>
             <div className="flex items-center">
               <Link className="underline-offset-1	underline text-[#1A5632]"  href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
