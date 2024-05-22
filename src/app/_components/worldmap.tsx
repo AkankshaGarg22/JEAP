@@ -53,7 +53,7 @@ const WorldMap = () => {
       {({isMobile}) => {
         return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
         <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
-        <div className="h-[400px] md:h-[700px] xl:h-[1300px] w-full relative" >
+        <div className="h-[400px] md:h-[700px] xl:h-[1100px] w-full relative" >
           {data.length > 0 && (
             <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0,0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: "85%", width: "100%",}}>
               <Geographies geography={geoUrl}>
@@ -105,15 +105,15 @@ const WorldMap = () => {
               <Link className="underline-offset-1	underline text-[#1A5632]"  href={'https://www.rand.org/pubs/research_reports/RR1605.html'}>Source</Link>
             </div>
           </div>
-          <h2 className="font-black text-2xl md:text-3xl pt-[100px] pb-[30px] px-4">
+          <h2 className="font-black text-2xl md:text-3xl pt-[20px] pb-[0px] px-4">
             The JEAP is a blueprint that amplifies the collective yet unique needs of African nations while strategically charting a course for nations to strengthen their defences against health and
             humanitarian crises, and increasingly climate-related disasters.
           </h2>
           <p className="p-4 text-xl">
             The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
           </p>
-          <div className="flex justify-center items-center w-full">
-          <p className="p-4 font-bold text-xl pb-8 w-[70%] break-normal ">
+          <div className="flex justify-center items-end w-full">
+          <p className="p-0 font-bold text-xl pb-0 w-[70%] break-normal ">
             The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
           </p>
           </div>
