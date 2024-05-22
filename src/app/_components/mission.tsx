@@ -16,7 +16,7 @@ const Mission = () => {
           </p>
         </div>
       </div>
-      <div className="basis-1/3 md:basis-1/3 flex items-center xl:items-start text-center w-2/3 md:w-1/3 text-wrap text-lg md:text-xl xl:text-3xl xl:leading-tight font-bold  md:pt-0">
+      <div className="basis-1/3 md:basis-1/3 flex items-center text-center w-2/3 md:w-1/3 text-wrap text-lg md:text-xl xl:text-3xl xl:leading-tight font-bold  md:pt-0">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
