@@ -126,7 +126,7 @@ const XLTimeLine: React.FC = () => {
         id="overflowDiv"
       >
         <div
-          className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[132vh] box-border`}
+          className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[120vh] box-border`}
         />
         {items.map((item) => (
           <div
@@ -144,7 +144,7 @@ const XLTimeLine: React.FC = () => {
             <div className="timeline-title text-white text-lg group-[.active]:text-4xl">{item.year}</div>
             <h2 className="text-xl font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
             <h5 className="text-xl leading-tight text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
-            <p className="text-lg transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white">{item.cardDetailedText}</p>
+            <p className={`text-lg transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white w-[69%]`}>{item.cardDetailedText}</p>
           </div>
         ))}
       </div>

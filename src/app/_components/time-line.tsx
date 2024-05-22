@@ -41,7 +41,7 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "The Future of the JEAP",
     cardDetailedText:
       "Operating under the Africa CDC - WHO Memorandum of Understanding (MoU), the JEAP emerges as a promising regional framework that can be leveraged for catalytic and inclusive improvements in pandemic preparedness and response.\n Investments in a consolidated, regional pandemic investment plan such as the JEAP are needed to support countries mitigate the impact of future health shocks and empower nations to protect their citizens from emerging health threats.",
-    minHeight: "35%"
+    minHeight: "33%"
     },
 ];
 
