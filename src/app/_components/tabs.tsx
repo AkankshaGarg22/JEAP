@@ -68,10 +68,10 @@ export function Tabs() {
   };
 
   return (
-    <div id="vision" className="min-h-screen lg:min-h-full flex flex-col items-center justify-evenly md:justify-normal lg:block">
-      <div className="text-center lg:my-2">
-        <h2 className="text-[#000] text-3xl md:text-6xl xl:text-7xl font-[compasse-extrabold] my-4">THE JEAP VISION</h2>
-        <p className="text-xl xl:px-0 py-2 xl:py-4 text-balance">
+    <div id="vision" className="min-h-[80dvh] lg:min-h-full flex flex-col items-center md:justify-normal lg:block">
+      <div className="text-center lg:my-2 flex flex-col items-center">
+        <h2 className="text-[#000] text-3xl md:text-6xl xl:text-7xl font-[compasse-extrabold] my-0 md:my-4">THE JEAP VISION</h2>
+        <p className="text-xl xl:px-0 py-2 sm:py-0 xl:py-4 break-normal w-[75%]">
           At the heart of the JEAP is a vision of 'One Africa for Health Security.' This vision outlines six collaboration areas and provides a comprehensive framework for coordinated action, to
           safeguard African populations from public health emergencies.
         </p>
@@ -107,7 +107,7 @@ export function Tabs() {
           </div>
         </div>
       </div>
-      {/* accordian */}
+       {/* accordian */}
       <div className="md:hidden">
         {Menu.map((item) => (
           <Accordion key={item.id} title={item.title} isOpen={selectedAccordion === item.id} onToggle={() => handleAccordionClick(item.id)}>

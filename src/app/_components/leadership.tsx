@@ -7,7 +7,7 @@ const LeadersArray = [
         description: 'Director General, Africa CDC'
     },
     {
-        image: '/assets/blog/jpgs/Dr Matshidiso Moeti.webp',
+        image: '/assets/blog/jpgs/Matshidiso Moeti.webp',
         title: 'Dr Matshidiso Moeti',
         description: 'Regional Director, WHO EMRO'
     },
