@@ -142,9 +142,9 @@ const XLTimeLine: React.FC = () => {
               onClick={(e) => handleClick(item.key, e)}
             ></div>
             <div className="timeline-title text-white text-lg group-[.active]:text-4xl">{item.year}</div>
-            <h2 className="text-xl font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
-            <h5 className="text-xl leading-tight text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
-            <p className={`text-lg transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[69%]" : "w-[80%]"}`}>{item.cardDetailedText}</p>
+            <h2 className="text-2xl leading-normal font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
+            <h5 className="text-xl leading-none text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
+            <p className={`text-xl transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[70%] leading-relaxed" : "w-full"}`}>{item.cardDetailedText}</p>
           </div>
         ))}
       </div>
