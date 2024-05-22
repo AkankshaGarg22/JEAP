@@ -23,7 +23,8 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "Conceptualizing the JEAP",
     cardDetailedText:
       "In response to the challenges posed by COVID-19, Africa CDC and WHO joined forces to revolutionize Emergency Preparedness and Response (EPR) across the continent. A joint Steering Committee was established, driving collective efforts to enhance response activities for improved coverage and impact.",
-  },
+    minHeight: "45%"
+    },
   {
     key: 2,
     year: "2023",
@@ -31,7 +32,8 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "Unveiling the JEAP",
     cardDetailedText:
       "The JEAP launched during the 2023 World Health Assembly, now unites partners to address critical challenges in preparedness, detection, and response across six programmatic areas. AVoHC-SURGE, a product of Africa CDC and WHO collaboration, enables African nations to respond rapidly (within 24-48 hours) to health emergencies and humanitarian crises. It welcomes stakeholders from humanitarian, development, and government agencies, ensuring life-saving care reaches all. So far, 9 countries have utilized AVoHC-SURGE members for local responses (Botswana, Mauritania, Niger, Togo, Congo, DRC, Rwanda, Ethiopia, Tanzania), while 5 countries have deployed them internationally (Botswana, Congo, DRC, Rwanda, Ethiopia).",
-  },
+    minHeight: "45%"
+    },
   {
     key: 3,
     year: "2023 - 2027",
@@ -39,7 +41,8 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "The Future of the JEAP",
     cardDetailedText:
       "Operating under the Africa CDC - WHO Memorandum of Understanding (MoU), the JEAP emerges as a promising regional framework that can be leveraged for catalytic and inclusive improvements in pandemic preparedness and response.\n Investments in a consolidated, regional pandemic investment plan such as the JEAP are needed to support countries mitigate the impact of future health shocks and empower nations to protect their citizens from emerging health threats.",
-  },
+    minHeight: "35%"
+    },
 ];
 
 export function TimeLine() {
