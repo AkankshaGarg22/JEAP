@@ -51,7 +51,7 @@ const WorldMap = () => {
   return (
     <Device>
       {({isMobile}) => {
-        return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
+        return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative ">
         <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
         <div className="h-[400px] md:h-[700px] xl:h-[1100px] w-full relative" >
           {data.length > 0 && (
@@ -89,7 +89,7 @@ const WorldMap = () => {
         </div>
   
         <div className="w-full md:w-[85%] text-center xl:absolute xl:bottom-[4%]">
-          <div className="flex flex-row justify-between px-4">
+          <div className="flex flex-row justify-between px-4 pb-8">
             <div className="flex flex-col">
               <p className="text-left">Vulnerability Index</p>
               <div className="h-[50px] w-[150px] md:w-[200px] bg-gradient-to-r from-[#f1686b] via-[#fcbe79] via-[#fbe884] to-[#62bf7b]"></div>
@@ -112,8 +112,8 @@ const WorldMap = () => {
           <p className="p-4 text-xl">
             The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
           </p>
-          <div className="flex justify-center items-end w-full">
-          <p className="p-0 font-bold text-xl pb-0 w-[70%] break-normal ">
+          <div className="flex justify-center items-end w-full pb-0 mb-0 md:mb-[-12%] xl:mb-[-3.5%]">
+          <p className="p-0 font-bold text-xl w-[70%] break-normal ">
             The JEAP, rooted in this urgent paradigm, will offer unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
           </p>
           </div>
