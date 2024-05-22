@@ -20,13 +20,13 @@ const Mission = () => {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .typeString(" Of the ")
+              .typeString(" Of the ").changeDelay(20)
               .pauseFor(50)
-              .typeString(`<strong style="font-size:2.5rem"><span style="font-family:compasse-extrabold">25</span> countries<strong>\n`)
+              .typeString(`<strong style="font-size:2.5rem"><span style="font-family:compasse-extrabold">25</span> countries<strong>\n`).changeDelay(25)
               .pauseFor(50)
-              .typeString("\n\n\n\n\nmost susceptible to infectious outbreaks globally, ")
+              .typeString("\n\n\n\n\nmost susceptible to infectious outbreaks globally, ").changeDelay(25)
               .pauseFor(80)
-              .typeString(`<strong style="font-size:2.5rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa .<strong>`)
+              .typeString(`<strong style="font-size:2.5rem; padding-top: 4px;"><span style="font-family:compasse-extrabold">22</span> are located in Africa .<strong>`).changeDelay(25)
               .pauseFor(50)
               .start();
           }}
