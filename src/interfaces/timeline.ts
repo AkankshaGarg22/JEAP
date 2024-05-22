@@ -4,6 +4,7 @@ export interface TimeLineItem {
   cardTitle?: string;
   cardSubtitle?: string;
   cardDetailedText: string;
+  minHeight? : string;
 }
 
 export interface PopUpState {

@@ -5,20 +5,22 @@ import { useEffect } from "react";
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
 function init() {
-  canvas = document.getElementById("canvas");
-  anim_container = document.getElementById("animation_container");
-  dom_overlay_container = document.getElementById("dom_overlay_container");
-  var comp = AdobeAn.getComposition("A21712AB28279C479C1EE6271A2DA330");
-  var lib = comp.getLibrary();
-  var loader = new createjs.LoadQueue(false);
-  loader.addEventListener("fileload", function (evt) {
-    handleFileLoad(evt, comp);
-  });
-  loader.addEventListener("complete", function (evt) {
-    handleComplete(evt, comp);
-  });
-  var lib = comp.getLibrary();
-  loader.loadManifest(lib.properties.manifest);
+  if (window && typeof window !== 'undefined' && window.AdobeAn) {
+    canvas = document.getElementById("canvas");
+    anim_container = document.getElementById("animation_container");
+    dom_overlay_container = document.getElementById("dom_overlay_container");
+    var comp = AdobeAn.getComposition("A21712AB28279C479C1EE6271A2DA330");
+    var lib = comp.getLibrary();
+    var loader = new createjs.LoadQueue(false);
+    loader.addEventListener("fileload", function (evt) {
+      handleFileLoad(evt, comp);
+    });
+    loader.addEventListener("complete", function (evt) {
+      handleComplete(evt, comp);
+    });
+    var lib = comp.getLibrary();
+    loader.loadManifest(lib.properties.manifest);
+  }
 }
 function handleFileLoad(evt, comp) {
   var images = comp.getImages();

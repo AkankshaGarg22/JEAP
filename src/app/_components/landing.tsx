@@ -25,7 +25,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   ];
 
 
-  //preload the images
+  // //preload the images
   useEffect(() => {
     const preloadImages = async () => {
       try {
@@ -47,10 +47,32 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
 
     preloadImages(); 
   }, []); 
-  
 
+  // const [imagesLoaded, setImagesLoaded] = useState(false);
+  // // Image preloading (corrected)
+  // useEffect(() => {
+  //   let loadedCount = 0;
+  //   const imageLoadPromises = images.map(src => {
+  //     return new Promise<void>((resolve, reject) => { // Specify the Promise type as void
+  //       const img = new Image();
+  //       img.src = src;
+  //       img.onload = () => {
+  //         loadedCount++;
+  //         if (loadedCount === images.length) {
+  //           setImagesLoaded(true); 
+  //         }
+  //         resolve(); // No return value needed
+  //       };
+  //       img.onerror = reject;
+  //     });
+  //   });
 
-  const [transitioning, setTransitioning] = useState(false);
+  //   Promise.all(imageLoadPromises)
+  //     .then(() => console.log("All images preloaded successfully"))
+  //     .catch(error => console.error("Failed to preload images:", error));
+  // }, []); 
+
+ const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -108,7 +130,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   useEffect(() => {
     
       gsap.to(parallaxRef.current, {
-        y: '-100px', // Adjust the movement value as needed
+        backgroundPositionY: '-50px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parallaxRef.current,
@@ -119,7 +141,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       });
 
       gsap.to(parrallaxRef.current, {
-        backgroundPositionY: '-50px', // Adjust the movement value as needed
+        y: '-100px', // Adjust the movement value as needed
         ease: 'none',
         scrollTrigger: {
           trigger: parrallaxRef.current,
@@ -141,14 +163,15 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       <section id="bgcarousel"
         className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
         flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] 
-        transition-bg-image duration-1000 ease-in-out` }  ref={parrallaxRef}
+        transition-bg-image duration-1000 ease-in-out}
+      ` }  ref={parrallaxRef}
         style={{ backgroundImage: `url(${images[currentImageIndex]})`, 
         opacity: fading ? 1 : 1
        }}
       >
         <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
-          <h1 className="leading-1 md:leading-[1.5] text-3xl md:text-6xl font-[compasse-extrabold]">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
-          <p className="text-lg md:text-2xl">
+          <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP) UNLOCKING AFRICA'S RESILIENCE</h1>
+          <p className="text-lg md:text-2xl pt-5 w-[80%] break-normal">
             The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response (EPR)
             efforts across the continent to dramatically improve how countries prepare for, detect, and respond to emergencies, while simultaneously ensuring no country is left behind.
           </p>
