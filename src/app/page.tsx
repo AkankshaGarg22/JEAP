@@ -121,7 +121,7 @@ export default function Index() {
               <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
                 <WorldMap />
               </div>
-              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500">
+              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500" className="xl:mt-[-60px]">
                 <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
               </div>
               <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
