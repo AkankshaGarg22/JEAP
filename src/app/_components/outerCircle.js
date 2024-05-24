@@ -24,7 +24,7 @@ function init() {
 }
 function handleFileLoad(evt, comp) {
   var images = comp.getImages();
-  if (evt && evt.item.type == "image") {
+  if (evt && (evt.item.type == "image")) {
     images[evt.item.id] = evt.result;
   }
 }
