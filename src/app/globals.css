@@ -25,6 +25,10 @@ body {
   font-family: 'compasse-regular';
 }
 
+ul{
+  list-style: disc;
+}
+
 .maintenance-page {
   background: transparent linear-gradient(180deg, #1D2859 0%, #060812 100%) 0% 0% no-repeat padding-box;
 }
@@ -306,4 +310,8 @@ html.lenis, html.lenis body {
 
 [data-lenis-prevent] {
   overscroll-behavior: contain;
+}
+
+.Typewriter__cursor{
+  display: none;
 }
