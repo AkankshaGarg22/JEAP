@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { items } from "./time-line";
-import Lenis from "@studio-freight/lenis";
 
 const bgImages = [
   { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.webp" },
@@ -144,7 +143,7 @@ const XLTimeLine: React.FC = () => {
             <div className="timeline-title text-white text-lg group-[.active]:text-4xl">{item.year}</div>
             <h2 className="text-2xl leading-normal font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
             <h5 className="text-xl leading-none text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
-            <p className={`text-xl transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[70%] leading-relaxed" : "w-full"}`}>{item.cardDetailedText}</p>
+            <p className={`transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[70%] leading-relaxed text-xl" : "w-full text-lg"}`}>{item.cardDetailedText}</p>
           </div>
         ))}
       </div>
