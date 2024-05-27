@@ -1,29 +1,34 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Head from "next/head";
 
+const bgImages = [
+  { id: 1, imageUrl: "/assets/blog/jpgs/header_image.webp" },
+  { id: 2, imageUrl: "/assets/blog/jpgs/header_1.webp" },
+  { id: 3, imageUrl: "/assets/blog/jpgs/header_2.webp" },
+  { id: 4, imageUrl: "/assets/blog/jpgs/header_3.webp" },
+  { id: 5, imageUrl: "/assets/blog/jpgs/header_image.webp" },
+];
 
 export default function Landing({ isVisible }: { isVisible: boolean }) {
-
   const parallaxRef = useRef<HTMLDivElement>(null);
   const parrallaxRef = useRef<HTMLDivElement>(null);
-  const [tl, setTl] = useState<gsap.core.Timeline | null>(null); 
+  const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
   gsap.registerPlugin(ScrollTrigger);
 
-
-//Background carousel
+  //Background carousel
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fading, setFading] = useState(false);
 
   const images = [
-    '/assets/blog/jpgs/header_1.webp',
-    '/assets/blog/jpgs/header_2.webp',
-    '/assets/blog/jpgs/header_3.webp',
-    '/assets/blog/jpgs/header_image.webp',
+    "/assets/blog/jpgs/header_1.webp",
+    "/assets/blog/jpgs/header_2.webp",
+    "/assets/blog/jpgs/header_3.webp",
+    "/assets/blog/jpgs/header_image.webp",
     // ... Add more image paths
   ];
-
 
   // //preload the images
   useEffect(() => {
@@ -45,8 +50,8 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       }
     };
 
-    preloadImages(); 
-  }, []); 
+    preloadImages();
+  }, []);
 
   // const [imagesLoaded, setImagesLoaded] = useState(false);
   // // Image preloading (corrected)
@@ -59,7 +64,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   //       img.onload = () => {
   //         loadedCount++;
   //         if (loadedCount === images.length) {
-  //           setImagesLoaded(true); 
+  //           setImagesLoaded(true);
   //         }
   //         resolve(); // No return value needed
   //       };
@@ -70,9 +75,9 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   //   Promise.all(imageLoadPromises)
   //     .then(() => console.log("All images preloaded successfully"))
   //     .catch(error => console.error("Failed to preload images:", error));
-  // }, []); 
+  // }, []);
 
- const [transitioning, setTransitioning] = useState(false);
+  const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -94,91 +99,85 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
     }
   }, [fading, transitioning, images.length]);
 
-
-
-
   useEffect(() => {
     if (parallaxRef.current) {
-      
-    
       const newTl = gsap.timeline({
         scrollTrigger: {
           trigger: parallaxRef.current,
-          start: 'top 0%',
+          start: "top 0%",
           scrub: true,
           // markers: true
-        }
+        },
       });
-    
+
       gsap.set(parallaxRef.current, { opacity: 1 });
       newTl.to(parallaxRef.current, { opacity: 0 });
-    
+
       setTl(newTl); // Store the timeline instance in state
     }
-  }, []); 
+  }, []);
 
   useEffect(() => {
     return () => {
       if (tl) {
         tl.kill(); // Kill the timeline on unmount
-        gsap.set(parallaxRef.current, {clearProps:"all"});
+        gsap.set(parallaxRef.current, { clearProps: "all" });
       }
     };
   }, [tl]);
 
-
   useEffect(() => {
-    
-      gsap.to(parallaxRef.current, {
-        backgroundPositionY: '-50px', // Adjust the movement value as needed
-        ease: 'none',
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: 'top 0%',
-          end: 'bottom center',
-          scrub: true,
-        }
-      });
+    gsap.to(parallaxRef.current, {
+      backgroundPositionY: "-50px", // Adjust the movement value as needed
+      ease: "none",
+      scrollTrigger: {
+        trigger: parallaxRef.current,
+        start: "top 0%",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
 
-      gsap.to(parrallaxRef.current, {
-        y: '-100px', // Adjust the movement value as needed
-        ease: 'none',
-        scrollTrigger: {
-          trigger: parrallaxRef.current,
-          start: 'top 0%',
-          end: 'bottom center',
-          scrub: true,
-         // markers:true,
-        }
-      });
-
-    }, []);
-
-   
-
+    gsap.to(parrallaxRef.current, {
+      y: "-100px", // Adjust the movement value as needed
+      ease: "none",
+      scrollTrigger: {
+        trigger: parrallaxRef.current,
+        start: "top 0%",
+        end: "bottom center",
+        scrub: true,
+        // markers:true,
+      },
+    });
+  }, []);
 
   return (
-    <div className={` min-h-screen fixed transi`} ref={parallaxRef}>
-      
-      <section id="bgcarousel"
-        className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
+    <>
+      <Head>
+        {bgImages.map((image) => (
+          <link key={image.id} rel="preload" href={image.imageUrl} as="image" />
+        ))}
+      </Head>
+      <div className={` min-h-screen fixed transi`} ref={parallaxRef}>
+        <section
+          id="bgcarousel"
+          className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
         flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] 
         transition-bg-image duration-1000 ease-in-out}
-      ` }  ref={parrallaxRef}
-        style={{ backgroundImage: `url(${images[currentImageIndex]})`, 
-        opacity: fading ? 1 : 1
-       }}
-      >
-        <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
-          <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP)</h1>
-          <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">UNLOCKING AFRICA'S RESILIENCE</h1>
-          <p className="text-lg md:text-2xl w-[100%] sm:leading-none sm:px-4 md:pt-5 md:w-[80%] xl:pt-6 xl:w-[80%] text-balance break-normal">
-            The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response (EPR)
-            efforts across the continent to dramatically improve how countries prepare for, detect, and respond to emergencies, while simultaneously ensuring no country is left behind.
-          </p>
-        </div>
-      </section>
-      
-    </div>
+      `}
+          ref={parrallaxRef}
+          style={{ backgroundImage: `url(${images[currentImageIndex]})`, opacity: fading ? 1 : 1 }}
+        >
+          <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
+            <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP)</h1>
+            <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">UNLOCKING AFRICA'S RESILIENCE</h1>
+            <p className="text-lg md:text-2xl w-[100%] sm:leading-none sm:px-4 md:pt-5 md:w-[80%] xl:pt-6 xl:w-[80%] text-balance break-normal">
+              The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response
+              (EPR) efforts across the continent to dramatically improve how countries prepare for, detect, and respond to emergencies, while simultaneously ensuring no country is left behind.
+            </p>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
