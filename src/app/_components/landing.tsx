@@ -5,11 +5,11 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Head from "next/head";
 
 const bgImages = [
-  { id: 1, imageUrl: 'url("/assets/blog/jpgs/header_image.webp")' },
-  { id: 2, imageUrl: 'url("/assets/blog/jpgs/header_1.webp")' },
-  { id: 3, imageUrl: 'url("/assets/blog/jpgs/header_2.webp")' },
-  { id: 4, imageUrl: 'url("/assets/blog/jpgs/header_3.webp")' },
-  { id: 5, imageUrl: 'url("/assets/blog/jpgs/header_image.webp")' },
+  { id: 1, imageUrl: "/assets/blog/jpgs/header_image.webp" },
+  { id: 2, imageUrl: "/assets/blog/jpgs/header_1.webp" },
+  { id: 3, imageUrl: "/assets/blog/jpgs/header_2.webp" },
+  { id: 4, imageUrl: "/assets/blog/jpgs/header_3.webp" },
+  { id: 5, imageUrl: "/assets/blog/jpgs/header_image.webp" },
 ];
 
 export default function Landing({ isVisible }: { isVisible: boolean }) {
