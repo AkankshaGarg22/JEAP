@@ -82,7 +82,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setFading(true); // Start fading out the current image
-    }, 2000); // Start fade-out 1 second before image change
+    }, 4000); // Start fade-out 1 second before image change
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -95,7 +95,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFading(false);
         setTransitioning(false);
-      }, 2000); // Wait for fade-out transition to complete
+      }, 1000); // Wait for fade-out transition to complete
     }
   }, [fading, transitioning, images.length]);
 

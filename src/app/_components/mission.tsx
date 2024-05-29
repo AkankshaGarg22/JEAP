@@ -25,7 +25,7 @@ const Mission = () => {
               .typeString(`<strong class="text-[2.25rem] md:text-[2.85rem]"><span style="font-family:compasse-extrabold">25</span> countries<strong>`)
               .changeDelay(25)
               .pauseFor(50)
-              .typeString("<br/><span>most susceptible to infectious outbreaks globally,</span>")
+              .typeString("<br/><span>most susceptible to infectious disease outbreaks globally,</span>")
               .changeDelay(25)
               .pauseFor(80)
               .typeString(`<br/><strong class="text-[2.25rem] md:text-[2.85rem]" style="line-height:1"><span class="xl:mt-2" style="font-family:compasse-extrabold">22</span> are located in Africa.<strong>`)

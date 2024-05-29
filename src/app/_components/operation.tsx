@@ -22,7 +22,7 @@ const Operation = ({ isOprVisible }: { isOprVisible: boolean }) => {
             {<object className="hidden md:block h-full w-[100%]" data={"/assets/animations/LineAnimation1.svg"} type="image/svg+xml" />}
           </div>
           }
-          <div className={"w-[80%] text-center pt-2 font-CompasseRegular text-xl break-normal"}>Together, these stakeholders form a cohesive unit, each contributing uniquely to the realization of the JEAP's objectives and enhancing emergency preparedness across the board</div>
+          <div className={"w-[80%] text-center pt-2 font-CompasseRegular text-xl break-normal"}>Together, these stakeholders form a cohesive unit, each contributing uniquely to the realization of the JEAP's objectives and enhancing emergency preparedness across the board.</div>
         </div>
   );
 };
