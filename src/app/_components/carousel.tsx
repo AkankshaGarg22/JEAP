@@ -11,14 +11,8 @@ const SelectedTextComponent = ({ selected }: { selected: string }) => {
     setKey((prevKey) => prevKey + 1); // Increment the key to trigger a re-render
   }, [selected]);
 
-  const lines = selected.split('\n');
-
   return (
-    <div key={key} className="basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-lg xl:leading-normal px-5 animate-slide-in">
-      {lines.map((line, index) => (
-        <div key={index}>{line}</div>
-      ))}
-    </div>
+    <div key={key} className="basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-lg xl:leading-normal px-5 animate-slide-in" dangerouslySetInnerHTML={{ __html: selected }} />
   );
 };
 

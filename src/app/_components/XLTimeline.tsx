@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { items } from "./time-line";
-import Lenis from "@studio-freight/lenis";
+import Head from "next/head";
 
 const bgImages = [
   { id: "section-1", imageUrl: "/assets/blog/jpgs/Group3343.webp" },
@@ -115,40 +115,49 @@ const XLTimeLine: React.FC = () => {
   //   });
 
   return (
-    <div id="jeap-journey" className="min-h-full flex flex-col"  data-lenis-prevent>
-      <div className="text-center md:pb-[10px]">
-        <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
-      </div>
-      <div
-        ref={timelineRef}
-        className="xltimeline overflow-y-scroll  relative flex flex-col items-end bg-cover bg-center transition-bg-image duration-500 ease-in-out"
-        style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})`, height: "80vh" }}
-        id="overflowDiv"
-      >
-        <div
-          className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[120vh] box-border`}
-        />
-        {items.map((item) => (
-          <div
-            key={item.key}
-            id={`section-${item.key}`}
-            className={`xltimeline-item flex flex-col my-4 gap-3 items-start transition-[600ms] duration-[ease] relative z-[4] px-4 text-wrap text-3xl w-3/4 group ${
-              activeSectionId === `section-${item.key}` ? "active" : ""
-            }`}
-            style={{ minHeight: item.minHeight, scrollSnapAlign: "start" }}
-          >
-            <div
-              className="timeline-ball absolute -top-2 -left-2 w-4 h-4  group-[.active]:-left-4 group-[.active]:w-8 group-[.active]:h-8   bg-white rounded-full cursor-pointer "
-              onClick={(e) => handleClick(item.key, e)}
-            ></div>
-            <div className="timeline-title text-white text-lg group-[.active]:text-4xl">{item.year}</div>
-            <h2 className="text-2xl leading-normal font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
-            <h5 className="text-xl leading-none text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
-            <p className={`text-xl transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[70%] leading-relaxed" : "w-full"}`}>{item.cardDetailedText}</p>
-          </div>
+    <>
+      <Head>
+        {bgImages.map((image) => (
+          <link key={image.id} rel="preload" href={image.imageUrl} as="image" />
         ))}
+      </Head>
+      <div id="jeap-journey" className="min-h-full flex flex-col" data-lenis-prevent>
+        <div className="text-center md:pb-[10px]">
+          <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
+        </div>
+        <div
+          ref={timelineRef}
+          className="xltimeline overflow-y-scroll  relative flex flex-col items-end bg-cover bg-center transition-bg-image duration-500 ease-in-out"
+          style={{ backgroundImage: `url(${backgroundImage}),url(${bgImages[1].imageUrl}),url(${bgImages[2].imageUrl})`, height: "80vh" }}
+          id="overflowDiv"
+        >
+          <div
+            className={`absolute left-[calc(25%_-_1px)] w-0.5 bg-white top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0 mt-6 xl:h-[120vh] box-border`}
+          />
+          {items.map((item) => (
+            <div
+              key={item.key}
+              id={`section-${item.key}`}
+              className={`xltimeline-item flex flex-col my-4 gap-3 items-start transition-[600ms] duration-[ease] relative z-[4] px-4 text-wrap text-3xl w-3/4 group ${
+                activeSectionId === `section-${item.key}` ? "active" : ""
+              }`}
+              style={{ minHeight: item.minHeight, scrollSnapAlign: "start" }}
+            >
+              <div
+                className="timeline-ball absolute -top-2 -left-2 w-4 h-4  group-[.active]:-left-4 group-[.active]:w-8 group-[.active]:h-8   bg-white rounded-full cursor-pointer "
+                onClick={(e) => handleClick(item.key, e)}
+              ></div>
+              <div className="timeline-title text-white text-lg group-[.active]:text-4xl">{item.year}</div>
+              <h2 className="text-2xl leading-normal font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
+              <h5 className="text-xl leading-none text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
+              <p className={`transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[70%] leading-relaxed text-xl" : "w-full text-lg"}`}>
+                {item.cardDetailedText}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
