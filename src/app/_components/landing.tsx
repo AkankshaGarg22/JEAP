@@ -4,12 +4,12 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Head from "next/head";
 
-const bgImages = [
-  { id: 1, imageUrl: "/assets/blog/jpgs/header_image.webp" },
-  { id: 2, imageUrl: "/assets/blog/jpgs/header_1.webp" },
-  { id: 3, imageUrl: "/assets/blog/jpgs/header_2.webp" },
-  { id: 4, imageUrl: "/assets/blog/jpgs/header_3.webp" },
-  { id: 5, imageUrl: "/assets/blog/jpgs/header_image.webp" },
+const images = [
+  "/assets/blog/jpgs/header_1.webp",
+  "/assets/blog/jpgs/header_2.webp",
+  "/assets/blog/jpgs/header_3.webp",
+  "/assets/blog/jpgs/header_image.webp",
+  // ... Add more image paths
 ];
 
 export default function Landing({ isVisible }: { isVisible: boolean }) {
@@ -22,13 +22,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fading, setFading] = useState(false);
 
-  const images = [
-    "/assets/blog/jpgs/header_1.webp",
-    "/assets/blog/jpgs/header_2.webp",
-    "/assets/blog/jpgs/header_3.webp",
-    "/assets/blog/jpgs/header_image.webp",
-    // ... Add more image paths
-  ];
+
 
   // //preload the images
   useEffect(() => {
@@ -82,7 +76,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setFading(true); // Start fading out the current image
-    }, 2000); // Start fade-out 1 second before image change
+    }, 5000); // Start fade-out 1 second before image change
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -95,7 +89,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFading(false);
         setTransitioning(false);
-      }, 2000); // Wait for fade-out transition to complete
+      }, 5000); // Wait for fade-out transition to complete
     }
   }, [fading, transitioning, images.length]);
 
@@ -154,17 +148,15 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   return (
     <>
       <Head>
-        {bgImages.map((image) => (
-          <link key={image.id} rel="preload" href={image.imageUrl} as="image" />
+        {images.map((image,index) => (
+          <link key={index} rel="preload" href={image} as="image" />
         ))}
       </Head>
       <div className={` min-h-screen fixed transi`} ref={parallaxRef}>
         <section
           id="bgcarousel"
-          className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center
-        flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] 
-        transition-bg-image duration-1000 ease-in-out}
-      `}
+          className={`relative text-white w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] transition-bg-image duration-[2000ms] ease-in-out}
+          `}
           ref={parrallaxRef}
           style={{ backgroundImage: `url(${images[currentImageIndex]})`, opacity: fading ? 1 : 1 }}
         >
