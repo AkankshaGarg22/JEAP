@@ -7,7 +7,7 @@ import { MenuItem } from "@/interfaces/carousel";
 const Menu: MenuItem[] = [
   {
     id: 1,
-    title: "Country Preparedness Assessments",
+    title: "Country assessment in the preparedness context",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-01.webp"],
     from: "A fragmented understanding of the current state of preparedness acts as a hindrance to data-driven decision-making.",
     to: "Improved overall visibility of the core capacities of countries, enabling more accurate and resource-efficient interventions.",
@@ -21,7 +21,7 @@ const Menu: MenuItem[] = [
   },
   {
     id: 2,
-    title: "Surveillance and Laboratory Capacity",
+    title: "Surveillance including diagnostics and genome sequencing",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-02.webp"],
     from: "Surveillance systems and technologies within the region are lacking, with some countries not meeting the IDSR standards, leading to delays in detecting health emergencies",
     to: "Strengthened national public health surveillance and response systems with updated IDSR and EBS practices, digital technologies, and genomic surveillance capacities at the country level.",
@@ -38,7 +38,7 @@ const Menu: MenuItem[] = [
   },
   {
     id: 3,
-    title: "Supply Chain Management",
+    title: "Logistics, Stockpiling, Supply chain and Local Manufacturing",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-03.webp"],
     from: "Insufficient supplies, logistics hubs and manufacturers in the region result in delays of up to 20 days to deliver emergency supplies. Only 12 countries have fully functional Public Health Emergency Operations Centres (PHEOCs).",
     to: "Timely availability of high-quality supplies and logistics through PHEOCs which resolve supply chain barriers and reduce the delivery time of life-saving supplies from 20 days to within 24 to 48 hours.",
@@ -48,8 +48,8 @@ const Menu: MenuItem[] = [
     id: 4,
     title: "Workforce Development",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-04.webp"],
-    from: "A shortage in the health workforce with fewer than 10% of African countries adequately staffed to prepare for and respond to health emergencie",
-    to: "A workforce of 3000 roving, qualified and multi-sectoral first responders will be deployed within the first 24-48 hours of an emergency, led by a harmonized leadership and complementing institutionalized national community health worker programs",
+    from: "A shortage in the health workforce with fewer than 10% of African countries adequately staffed to prepare for and respond to health emergencies.",
+    to: "A workforce of 3000 roving, qualified and multi-sectoral first responders will be deployed within the first 24-48 hours of an emergency, led by a harmonized leadership and complementing institutionalized national community health worker programs.",
     how: `The JEAP initiative aims to help countries by:
     <ul className="list-disc"> 
     <li>   Building and retaining a proficient emergency workforce: In early 2022, Africa CDC and WHO merged Africa CDC's African Volunteer Health Corps (AVoHC) program with WHO's Strengthening and Utilizing Response Groups for Emergencies (SURGE) program to establish a unified initiative known as AVoHC-SURGE.</li> 
@@ -60,7 +60,7 @@ const Menu: MenuItem[] = [
   },
   {
     id: 5,
-    title: "Response Readiness",
+    title: "Response readiness and coordination",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-05.webp"],
     from: "Disjointed governance mechanisms lead to delays and inefficiencies in crisis response. ",
     to: "Proactive, streamlined and effective approaches to managing health crises. By the end of 2027, the JEAP will ensure that 90% of Member States have set up fully equipped and functional PHEOCs that have implemented core policies and procedures. ",
@@ -118,8 +118,8 @@ export function Tabs() {
               key={item.id}
               className={
                 active === item.id
-                  ? " text-[#FFFFFF] text-lg xl:text-xl flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2"
-                  : "bg-[#F1F1F3] text-lg xl:text-xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2"
+                  ? " text-[#FFFFFF] text-lg xl:text-xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2 xl:p-4"
+                  : "bg-[#F1F1F3] text-lg xl:text-xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg p-2 xl:p-4  "
               }
               onClick={() => handleClick(item.id)}
             >
