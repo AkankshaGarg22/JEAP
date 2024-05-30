@@ -207,7 +207,7 @@ html.lenis, html.lenis body {
 } */
 
 .image-hover {   
-  --s: 300px;              /* the size of the image */
+  --s: 250px;              /* the size of the image */
   --b: 8px;     /* the border thickness*/
   --g: 14px;    /* the gap */
   --c: #1A5632; /* the color */
