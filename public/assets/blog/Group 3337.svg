@@ -540,7 +540,7 @@
               <rect id="Rectangle_1925" data-name="Rectangle 1925" width="1.25" height="6.252" transform="translate(2.501)" fill="#1a5632"/>
               <rect id="Rectangle_1926" data-name="Rectangle 1926" width="1.25" height="6.252" transform="translate(0 3.751) rotate(-90)" fill="#1a5632"/>
             </g>
-            <path id="Path_14151" data-name="Path 14151" d="M302.7,243.275" transform="translate(-271.613 -236.061)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1" fill-rule="evenodd"/>
+            <path id="Path_14151" data-name="Path 14151" d="M302.7,243.275" transform="translate(-271.613 -236.061)" fill="none" stroke="#fff" stroke-miterlimit="10" strokeWidth="1" fill-rule="evenodd"/>
             <g id="Group_3299" data-name="Group 3299" transform="translate(26.732 5.896)">
               <g id="Group_3296" data-name="Group 3296" transform="translate(0.778)">
                 <path id="Path_14152" data-name="Path 14152" d="M293.5,252.41a7.665,7.665,0,0,1-7.471-6.056.215.215,0,1,1,.42-.089,7.2,7.2,0,1,0,3.27-7.625.215.215,0,0,1-.226-.365A7.635,7.635,0,1,1,293.5,252.41Z" transform="translate(-286.027 -237.141)" fill="#e8f8fc"/>

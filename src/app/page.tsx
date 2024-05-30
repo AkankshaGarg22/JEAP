@@ -16,20 +16,32 @@ import "aos/dist/aos.css";
 import Footer from "./_components/footer";
 import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import  XLTimeLine  from "./_components/XLTimeline";
+import XLTimeLine from "./_components/XLTimeline";
+import Head from "next/head";
+
+const images = [
+  "/assets/blog/jpgs/header_1.webp",
+  "/assets/blog/jpgs/header_2.webp",
+  "/assets/blog/jpgs/header_3.webp",
+  "/assets/blog/jpgs/header_image.webp",
+  // ... Add more image paths
+];
+
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
   const missionRef = useRef<HTMLDivElement | null>(null);
   const landingRef = useRef<HTMLDivElement | null>(null);
 
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
   const operationRef = useRef<HTMLDivElement | null>(null);
   const [isOprVisible, setIsOprVisible] = useState(false);
 
   const turnAroundTimeRef = useRef<HTMLDivElement | null>(null);
   const [isTurnAroundTimeVisible, setIsTurnAroundTimeVisible] = useState(false);
+
+  const [showLoader, setShowLoader] = useState(false);
 
   const elementIsVisibleInViewport = () => {
     if (operationRef.current) {
@@ -66,7 +78,7 @@ export default function Index() {
         const visiblePercentage = (distanceFromTop / missionHeight) * 100;
 
         // Update isVisible state based on the visible percentage
-        setIsVisible(visiblePercentage >= 70);
+        // setIsVisible(visiblePercentage >= 70);
       }
       elementIsVisibleInViewport();
     };
@@ -83,74 +95,106 @@ export default function Index() {
     AOS.init();
   }, []);
 
-//  useEffect(() => {
-//     const scrollContainer = document.querySelector("main") as HTMLElement | null;
-//     const lenis = new Lenis({
-//       duration: 2.0,
-//       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//       content: scrollContainer ? scrollContainer : undefined,
-//   });
-//     lenis.on("scroll", () => {
-//       lenis.resize();
-//     });
-//     const raf = (time: number) => {
-//       lenis.raf(time);
-//       requestAnimationFrame(raf);
-//     };
+  // //preload the images
+  useEffect(() => {
+    setShowLoader(true)
+    const preloadImages = async () => {
+      try {
+        await Promise.all(
+          images.map((src) => {
+            return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = src;
+              img.onload = resolve;
+              img.onerror = reject;
+            });
+          })
+        );
+        console.log("All images preloaded successfully");
+        setShowLoader(false)
+      } catch (error) {
+        console.error("Failed to preload images:", error);
+      }
+    };
 
-//      lenis.on("scroll", ScrollTrigger.update);
-//      requestAnimationFrame(raf);
-//      return () => lenis.stop();
-//    }, []);
+    preloadImages();
+  }, []);
 
-  
+  //  useEffect(() => {
+  //     const scrollContainer = document.querySelector("main") as HTMLElement | null;
+  //     const lenis = new Lenis({
+  //       duration: 2.0,
+  //       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //       content: scrollContainer ? scrollContainer : undefined,
+  //   });
+  //     lenis.on("scroll", () => {
+  //       lenis.resize();
+  //     });
+  //     const raf = (time: number) => {
+  //       lenis.raf(time);
+  //       requestAnimationFrame(raf);
+  //     };
+
+  //      lenis.on("scroll", ScrollTrigger.update);
+  //      requestAnimationFrame(raf);
+  //      return () => lenis.stop();
+  //    }, []);
+
+
   return (
-    <main className="relative">
-      <ErrorBoundary>
-        <Suspense fallback={<Loading></Loading>}>
-          <div className="absolute top-0 bg-white">
-            <div className="fixed" ref={landingRef}>
-              <Landing isVisible={isVisible} />
-            </div>
+    <>
+      <Head>
+        {images.map((image, index) => (
+          <link key={index} rel="preload" href={image} as="image" />
+        ))}
+      </Head>
+      <main className="relative">
+        <ErrorBoundary>
+          <Suspense fallback={<Loading></Loading>}>
+            <div className="absolute top-0 bg-white">
+              <div className="fixed" ref={landingRef}>
+                <Landing images={images} />
+              </div>
 
-            <div className="relative mt-[100vh]" ref={missionRef}>
-              <Mission />
-            </div>
+              <div className="relative mt-[100vh]" ref={missionRef}>
+                <Mission />
+              </div>
 
-            <div className="relative bg-white">
-              <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
-                <WorldMap />
-              </div>
-              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500" className="xl:mt-[-60px]">
-                <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
-              </div>
-              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
-                <Tabs />
-              </div>
-              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
-                <div className="hidden xl:block">
-                  <XLTimeLine />
+              <div className="relative bg-white">
+                <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
+                  <WorldMap />
                 </div>
-                <div className="block xl:hidden">
-                  <TimeLine />
+                <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500" className="xl:mt-[-60px]">
+                  <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
+                </div>
+                <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                  <Tabs />
+                </div>
+                <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                  <div className="hidden xl:block">
+                    <XLTimeLine />
+                  </div>
+                  <div className="block xl:hidden">
+                    <TimeLine />
+                  </div>
+                </div>
+                <div className="pt-[20px] md:pt-[30px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
+                  <Operation isOprVisible={isOprVisible} />
+                </div>
+                <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                  <Resources />
+                </div>
+                <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                  <Leadership />
                 </div>
               </div>
-              <div className="pt-[20px] md:pt-[30px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
-                <Operation isOprVisible={isOprVisible} />
-              </div>
-              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
-                <Resources />
-              </div>
-              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
-                <Leadership />
+              <div className="relative pt-[20px] md:pt-[30px]">
+                <Footer />
               </div>
             </div>
-            <div className="relative pt-[20px] md:pt-[30px]">
-              <Footer />
-            </div>
-          </div>
-        </Suspense>
-      </ErrorBoundary>
-    </main>
+          </Suspense>
+        </ErrorBoundary>
+      </main>
+    </>
   );
 }

@@ -2,7 +2,7 @@
   height="710.822" viewBox="0 0 1950.008 710.822" style="">
   <defs>
     <clipPath id="clip-path">
-      <path id="Line_191" data-name="Line 191" fill="none" stroke="#1a5632" stroke-width="1"
+      <path id="Line_191" data-name="Line 191" fill="none" stroke="#1a5632" strokeWidth="1"
         d="M0,0L0,1.122" class="gQcxWXaq_0"></path>
     </clipPath>
     <style type="text/css">
@@ -17,27 +17,27 @@
   </defs>
   <g id="Group_3327" data-name="Group 3327" transform="translate(15 -9676.77)">
     <path id="Line_202" data-name="Line 202" transform="translate(339.5 10386.092)" fill="none"
-      stroke="#1a5632" stroke-miterlimit="10" stroke-width="3" d="M0,0L1242,0" class="gQcxWXaq_1"></path>
+      stroke="#1a5632" stroke-miterlimit="10" strokeWidth="3" d="M0,0L1242,0" class="gQcxWXaq_1"></path>
     <path id="Line_193" data-name="Line 193" transform="translate(140.264 10013.821)" fill="none"
-      stroke="#1a5632" stroke-miterlimit="10" stroke-width="3" d="M0,0L0,282.943" class="gQcxWXaq_2"></path>
+      stroke="#1a5632" stroke-miterlimit="10" strokeWidth="3" d="M0,0L0,282.943" class="gQcxWXaq_2"></path>
     <path id="Path_8690" data-name="Path 8690"
       d="M-1861.135,1212.31v47.5l-116.69,73.484H-2596.5l-121,78.608"
       transform="translate(2887.586 8465.086)" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-      stroke-width="3" class="gQcxWXaq_3"></path>
+      strokeWidth="3" class="gQcxWXaq_3"></path>
     <path id="Line_194" data-name="Line 194" transform="translate(712.945 10013.821)" fill="none"
-      stroke="#1a5632" stroke-miterlimit="10" stroke-width="3" d="M0,0L0,282.943" class="gQcxWXaq_4"></path>
+      stroke="#1a5632" stroke-miterlimit="10" strokeWidth="3" d="M0,0L0,282.943" class="gQcxWXaq_4"></path>
     <path id="Path_8691" data-name="Path 8691"
       d="M-1825.663,1212.31v64.521l-146.938,86.69h-101.726L-2154.421,1416"
       transform="translate(2887.586 8465.086)" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-      stroke-width="3" class="gQcxWXaq_5"></path>
+      strokeWidth="3" class="gQcxWXaq_5"></path>
     <path id="Path_8692" data-name="Path 8692"
       d="M-1795.992,1212.31v75.953l-168.131,106.7h319.307l45.212,30.484v406.236"
       transform="translate(2887.586 8465.086)" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-      stroke-width="3" class="gQcxWXaq_6"></path>
+      strokeWidth="3" class="gQcxWXaq_6"></path>
     <path id="Path_8693" data-name="Path 8693"
       d="M-1762.084,1212.31v94.053l-63.579,34.295h716.321l50.863,33.342v457.678"
       transform="translate(2887.586 8465.086)" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-      stroke-width="3" class="gQcxWXaq_7"></path>
+      strokeWidth="3" class="gQcxWXaq_7"></path>
     <g id="Group_1623" data-name="Group 1623" transform="translate(2887.586 8465.086)">
       <path id="Path_8694" data-name="Path 8694"
         d="M-2731.617,1476.058c0,8.522-6.746,19.885-14.913,19.885s-14.913-11.363-14.913-19.885,6.745-15.622,14.913-15.622,14.913,7.1,14.913,15.622"
@@ -234,12 +234,12 @@ functions as the operational engine, managing communication materials, data anal
           <g id="Group_1619" data-name="Group 1619" clip-path="url(#clip-path)">
             <path id="Path_8689" data-name="Path 8689" d="M-2730.6,785.2"
               transform="translate(2730.605 -784.639)" fill="none" stroke="#1a5632"
-              stroke-miterlimit="10" stroke-width="1" class="gQcxWXaq_57"></path>
+              stroke-miterlimit="10" strokeWidth="1" class="gQcxWXaq_57"></path>
           </g>
         </g>
       </g>
       <path id="Line_192" data-name="Line 192" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-        stroke-width="3" d="M0,0L1950.008,0" class="gQcxWXaq_58"></path>
+        strokeWidth="3" d="M0,0L1950.008,0" class="gQcxWXaq_58"></path>
     </g>
   </g>
   <style data-made-with="vivus-instant">.gQcxWXaq_0{stroke-dasharray:2
