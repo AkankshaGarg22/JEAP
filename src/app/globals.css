@@ -135,7 +135,7 @@ ul{
 
 
 .line {
-  @apply absolute left-[calc(25%_-_1px)] w-0.5 bg-white h-full top-0 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0;
+  @apply absolute left-[calc(25%_-_1px)] w-0.5 bg-white h-full top-0 md:top-4 after:absolute after:block after:content-[""] after:h-4 after:w-4 after:bg-white after:-translate-x-2/4 after:rounded-[50%] after:left-2/4 after:bottom-0;
 }
 
 
@@ -178,7 +178,7 @@ ul{
 }
 
 .section.active .section-ball{
-  @apply w-8 h-8 -top-4 -left-4;
+  @apply w-8 h-8 md:w-7 md:h-7 -top-4 md:top-4 -left-4;
 }
 
 
