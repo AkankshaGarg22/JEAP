@@ -150,7 +150,7 @@ const XLTimeLine: React.FC = () => {
               <div className="timeline-title text-white text-lg group-[.active]:text-4xl">{item.year}</div>
               <h2 className="text-2xl leading-normal font-bold text-transparent group-[.active]:text-white">{item.cardTitle}</h2>
               <h5 className="text-xl leading-none text-transparent group-[.active]:text-white">{item.cardSubtitle}</h5>
-              <p className={`transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white ${item.key !== 2 ? "w-[70%] leading-relaxed text-xl" : "w-full leading-6 text-lg"}`}>
+              <p className={`transition-opacity ease-in duration-700 opacity-100 text-transparent group-[.active]:text-white leading-relaxed ${item.key !== 2 ? "w-[70%]  text-xl" : "w-full text-lg"}`}>
                 {item.cardDetailedText}
               </p>
             </div>
