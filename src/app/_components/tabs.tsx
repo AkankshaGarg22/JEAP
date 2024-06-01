@@ -7,7 +7,7 @@ import { MenuItem } from "@/interfaces/carousel";
 const Menu: MenuItem[] = [
   {
     id: 1,
-    title: "Country Preparedness Assessments",
+    title: "Country assessment in the preparedness context",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-01.webp"],
     from: "A fragmented understanding of the current state of preparedness acts as a hindrance to data\u2011driven decision\u2011making.",
     to: "Improved overall visibility of the core capacities of countries, enabling more accurate and resource\u2011efficient interventions.",
@@ -21,7 +21,7 @@ const Menu: MenuItem[] = [
   },
   {
     id: 2,
-    title: "Surveillance and Laboratory Capacity",
+    title: "Surveillance including diagnostics and genome sequencing",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-02.webp"],
     from: "Surveillance systems and technologies within the region are lacking, with some countries not meeting the IDSR standards, leading to delays in detecting health emergencies",
     to: "Strengthened national public health surveillance and response systems with updated IDSR and EBS practices, digital technologies, and genomic surveillance capacities at the country level.",
@@ -38,7 +38,7 @@ const Menu: MenuItem[] = [
   },
   {
     id: 3,
-    title: "Supply Chain Management",
+    title: "Logistics, Stockpiling, Supply chain and Local Manufacturing",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-03.webp"],
     from: "Insufficient supplies, logistics hubs and manufacturers in the region result in delays of up to 20 days to deliver emergency supplies. Only 12 countries have fully functional Public Health Emergency Operations Centres (PHEOCs).",
     to: "Timely availability of high\u2011quality supplies and logistics through PHEOCs which resolve supply chain barriers and reduce the delivery time of life\u2011saving supplies from 20 days to within 24 to 48 hours.",
@@ -60,7 +60,7 @@ const Menu: MenuItem[] = [
   },
   {
     id: 5,
-    title: "Response Readiness",
+    title: "Response readiness and coordination",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-05.webp"],
     from: "Disjointed governance mechanisms lead to delays and inefficiencies in crisis response. ",
     to: "Proactive, streamlined and effective approaches to managing health crises. By the end of 2027, the JEAP will ensure that 90% of Member States have set up fully equipped and functional PHEOCs that have implemented core policies and procedures. ",
@@ -102,10 +102,10 @@ export function Tabs() {
   };
 
   return (
-    <div id="vision" className="min-h-[80dvh] lg:min-h-full flex flex-col items-center md:justify-normal lg:block">
+    <div id="vision" className="min-h-[88dvh] lg:min-h-full flex flex-col items-center justify-evenly md:justify-normal lg:block">
       <div className="text-center lg:my-2 flex flex-col items-center">
         <h2 className="text-[#000] text-3xl  md:text-7xl font-[compasse-extrabold] my-0 md:my-4">THE JEAP VISION</h2>
-        <p className="text-xl xl:px-0 py-2 sm:py-0 xl:py-4 break-normal w-[75%]">
+        <p className="text-xl xl:px-0 py-2 sm:py-0 xl:py-4 break-normal w-[90%] md:w-[75%]">
           At the heart of the JEAP is a vision of 'One Africa for Health Security.' This vision outlines six collaboration areas and provides a comprehensive framework for coordinated action to
           safeguard African populations from public health emergencies.
         </p>
@@ -118,8 +118,8 @@ export function Tabs() {
               key={item.id}
               className={
                 active === item.id
-                  ? " text-[#FFFFFF] text-lg xl:text-xl flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2"
-                  : "bg-[#F1F1F3] text-lg xl:text-xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg xl:p-4 p-2"
+                  ? " text-[#FFFFFF] text-lg xl:text-xl flex-auto font-semibold hover:opacity-90 shadow-lg p-2 xl:p-4"
+                  : "bg-[#F1F1F3] text-lg xl:text-xl text-[#1A5632] border border-r-1 flex-auto font-semibold hover:opacity-90 shadow-lg p-2 xl:p-4  "
               }
               onClick={() => handleClick(item.id)}
             >

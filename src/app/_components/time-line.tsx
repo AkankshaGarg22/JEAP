@@ -24,7 +24,7 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "Conceptualizing the JEAP",
     cardDetailedText:
       "In response to the challenges posed by COVID\u201119, Africa CDC and WHO joined forces to revolutionize Emergency Preparedness and Response (EPR) across the continent. A joint Steering Committee was established, driving collective efforts to enhance response activities for improved coverage and impact.",
-    minHeight: "45%",
+    minHeight: "50%",
   },
   {
     key: 2,
@@ -32,8 +32,8 @@ export const items: TimeLineItem[] = [
     cardTitle: "Phase 2",
     cardSubtitle: "Unveiling the JEAP",
     cardDetailedText:
-      "The JEAP was launched during the 2023 World Health Assembly, uniting partners to address critical challenges in preparedness, detection, and response across six programmatic areas. AVoHC\u2011SURGE, a collaborative workforce initiative jointly led by Africa CDC and WHO, enables African nations to respond rapidly (within 24\u201148 hours) to health emergencies and humanitarian crises. It welcomes stakeholders from humanitarian, development, and government agencies, ensuring life\u2011saving care reaches all. So far, 16 countries have utilized AVoHC\u2011SURGE members for local responses (Zanzibar, United Republic of Tanzania, Togo, Senegal, Rwanda, Republic of the Congo, Nigeria, Niger, Namibia, Mauritania, Malawi, Kenya, Ethiopia, Democratic Republic of Congo, Chad, Central African Republic), while 6 countries have deployed them internationally (Ethiopia, Tanzania, Rwanda, DRC, Republic of Congo, Botswana).",
-    minHeight: "45%",
+      "The JEAP was launched during the 2023 World Health Assembly, uniting partners to address critical challenges in preparedness, detection, and response across six programmatic areas. AVoHC\u2011SURGE, a collaborative workforce initiative jointly led by Africa CDC and WHO, enables African nations to respond rapidly (within 24-48 hours) to health emergencies and humanitarian crises. It welcomes stakeholders from humanitarian, development, and government agencies, ensuring life-saving care reaches all. So far, 16 countries have utilized AVoHC-SURGE members for local responses (Zanzibar, United Republic of Tanzania, Togo, Senegal, Rwanda, Republic of the Congo, Nigeria, Niger, Namibia, Mauritania, Malawi, Kenya, Ethiopia, Democratic Republic of Congo, Chad, Central African Republic), while 6 countries have deployed them internationally (Ethiopia, Tanzania, Rwanda, DRC, Republic of Congo, Botswana).",
+    minHeight: "50%",
   },
   {
     key: 3,
@@ -42,7 +42,7 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "The Future of the JEAP",
     cardDetailedText:
       "Operating under the Africa CDC \u2011 WHO Memorandum of Understanding (MoU), the JEAP emerges as a promising regional framework that can be leveraged for catalytic and inclusive improvements in pandemic preparedness and response.\n Investments in a consolidated, regional pandemic investment plan such as the JEAP are needed to support countries mitigate the impact of future health shocks and empower nations to protect their citizens from emerging health threats.",
-    minHeight: "33%",
+    minHeight: "50vh",
   },
 ];
 
@@ -172,7 +172,7 @@ export function TimeLine() {
             <div className="line"></div>
             {items.map((item) => (
               <div id={`section-${item.key}`} className={`section text-wrap text-3xl w-3/4 md:w-3/4 ${activeSectionId === `section-${item.key}` ? "active" : ""}`} key={item.key}>
-                <div className="section-ball absolute -top-2 -left-2 w-4 h-4 bg-white rounded-full cursor-pointer" onClick={(e) => handleClick(item.key, e)}></div>
+                <div className="section-ball absolute -top-2 md:top-0 -left-2 w-4 h-4 bg-white rounded-full cursor-pointer" onClick={(e) => handleClick(item.key, e)}></div>
                 <div className="section-title text-white">{item.year}</div>
                 <h2 className="text-xl font-bold">{item.cardTitle}</h2>
                 <h5 className="text-xl leading-tight">{item.cardSubtitle}</h5>
