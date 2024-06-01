@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="17" viewBox="0 0 26 17">
   <g id="Group_3334" data-name="Group 3334" transform="translate(-363.5 -47.5)">
-    <line id="Line_215" data-name="Line 215" x2="24" transform="translate(364.5 48.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-    <line id="Line_216" data-name="Line 216" x2="18" transform="translate(367.5 56.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-    <line id="Line_217" data-name="Line 217" x2="24" transform="translate(364.5 63.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_215" data-name="Line 215" x2="24" transform="translate(364.5 48.5)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2"/>
+    <line id="Line_216" data-name="Line 216" x2="18" transform="translate(367.5 56.5)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2"/>
+    <line id="Line_217" data-name="Line 217" x2="24" transform="translate(364.5 63.5)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2"/>
   </g>
 </svg>

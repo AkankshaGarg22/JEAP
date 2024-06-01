@@ -4,15 +4,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Head from "next/head";
 
-const images = [
-  "/assets/blog/jpgs/header_1.webp",
-  "/assets/blog/jpgs/header_2.webp",
-  "/assets/blog/jpgs/header_3.webp",
-  "/assets/blog/jpgs/header_image.webp",
-  // ... Add more image paths
-];
-
-export default function Landing({ isVisible }: { isVisible: boolean }) {
+export default function Landing({ images  }: { images: string[] }) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const parrallaxRef = useRef<HTMLDivElement>(null);
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
@@ -22,30 +14,6 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fading, setFading] = useState(false);
 
-
-
-  // //preload the images
-  useEffect(() => {
-    const preloadImages = async () => {
-      try {
-        await Promise.all(
-          images.map((src) => {
-            return new Promise((resolve, reject) => {
-              const img = new Image();
-              img.src = src;
-              img.onload = resolve;
-              img.onerror = reject;
-            });
-          })
-        );
-        console.log("All images preloaded successfully");
-      } catch (error) {
-        console.error("Failed to preload images:", error);
-      }
-    };
-
-    preloadImages();
-  }, []);
 
   // const [imagesLoaded, setImagesLoaded] = useState(false);
   // // Image preloading (corrected)
@@ -147,11 +115,6 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
 
   return (
     <>
-      <Head>
-        {images.map((image,index) => (
-          <link key={index} rel="preload" href={image} as="image" />
-        ))}
-      </Head>
       <div className={` min-h-screen fixed transi`} ref={parallaxRef}>
         <section
           id="bgcarousel"

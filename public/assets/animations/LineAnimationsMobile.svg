@@ -2,7 +2,7 @@
   height="514.365" viewBox="0 0 402.144 514.365" style="">
   <defs>
     <clipPath id="clip-path">
-      <path id="Line_191" data-name="Line 191" fill="none" stroke="#1a5632" stroke-width="1"
+      <path id="Line_191" data-name="Line 191" fill="none" stroke="#1a5632" strokeWidth="1"
         d="M0,0L0,1.122" class="MKQHtnrN_0"></path>
     </clipPath>
     <style type="text/css">
@@ -17,29 +17,29 @@
   </defs>
   <g id="Group_3331" data-name="Group 3331" transform="translate(7030.378 -4664.323)">
     <path id="Line_220" data-name="Line 220" transform="translate(-6630.846 4698.914) rotate(90)"
-      fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3" d="M0,296.862L0,0"
+      fill="none" stroke="#1a5632" stroke-miterlimit="10" strokeWidth="3" d="M0,296.862L0,0"
       class="MKQHtnrN_1"></path>
     <path id="Path_14201" data-name="Path 14201" d="M181.165,42.225V32.175L156.479,16.629H25.6L0,0"
       transform="translate(-6986.653 4705.222) rotate(90)" fill="none" stroke="#1a5632"
-      stroke-miterlimit="10" stroke-width="3" class="MKQHtnrN_2"></path>
+      stroke-miterlimit="10" strokeWidth="3" class="MKQHtnrN_2"></path>
     <path id="Line_218" data-name="Line 218" transform="translate(-6630.846 4853.064) rotate(90)"
-      fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3" d="M0,296.862L0,0"
+      fill="none" stroke="#1a5632" stroke-miterlimit="10" strokeWidth="3" d="M0,296.862L0,0"
       class="MKQHtnrN_3"></path>
     <path id="Line_219" data-name="Line 219" transform="translate(-6630.846 4987.775) rotate(90)"
-      fill="none" stroke="#1a5632" stroke-miterlimit="10" stroke-width="3" d="M0,296.862L0,0"
+      fill="none" stroke="#1a5632" stroke-miterlimit="10" strokeWidth="3" d="M0,296.862L0,0"
       class="MKQHtnrN_4"></path>
     <path id="Path_14202" data-name="Path 14202"
       d="M69.549,43.092V29.442L38.464,11.1,1.791,7.737-5.857-2.107"
       transform="translate(-6985.787 4854.342) rotate(90)" fill="none" stroke="#1a5632"
-      stroke-miterlimit="10" stroke-width="3" class="MKQHtnrN_5"></path>
+      stroke-miterlimit="10" strokeWidth="3" class="MKQHtnrN_5"></path>
     <path id="Path_14203" data-name="Path 14203"
       d="M35.568,131.027V114.959L0,92.388H67.549l9.565-6.449"
       transform="translate(-6897.851 4914.6) rotate(90)" fill="none" stroke="#1a5632"
-      stroke-miterlimit="10" stroke-width="3" class="MKQHtnrN_6"></path>
+      stroke-miterlimit="10" strokeWidth="3" class="MKQHtnrN_6"></path>
     <path id="Path_14200" data-name="Path 14200"
       d="M13.45,131.027v-19.9L0,103.875H202.538l10.76-7.054V-263.5"
       transform="translate(-6897.851 4963.891) rotate(90)" fill="none" stroke="#1a5632"
-      stroke-miterlimit="10" stroke-width="3" class="MKQHtnrN_7"></path>
+      stroke-miterlimit="10" strokeWidth="3" class="MKQHtnrN_7"></path>
     <g id="Layer_9" data-name="Layer 9" transform="translate(-7030 4665.823)">
       <g id="Group_1621" data-name="Group 1621" transform="translate(232.391)"
         style="isolation: isolate">
@@ -47,12 +47,12 @@
           <g id="Group_1619" data-name="Group 1619" clip-path="url(#clip-path)">
             <path id="Path_8689" data-name="Path 8689" d="M-2730.6,785.2"
               transform="translate(2730.605 -784.639)" fill="none" stroke="#1a5632"
-              stroke-miterlimit="10" stroke-width="1" class="MKQHtnrN_8"></path>
+              stroke-miterlimit="10" strokeWidth="1" class="MKQHtnrN_8"></path>
           </g>
         </g>
       </g>
       <path id="Line_192" data-name="Line 192" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-        stroke-width="3" d="M0,0L399.155,0" class="MKQHtnrN_9"></path>
+        strokeWidth="3" d="M0,0L399.155,0" class="MKQHtnrN_9"></path>
     </g>
     <g id="Layer_9-2" data-name="Layer 9" transform="translate(-7028.878 4664.34) rotate(90)">
       <g id="Group_1621-2" data-name="Group 1621" transform="translate(183.111)"
@@ -61,12 +61,12 @@
           <g id="Group_1619-2" data-name="Group 1619" clip-path="url(#clip-path)">
             <path id="Path_8689-2" data-name="Path 8689" d="M-2730.6,785.2"
               transform="translate(2730.605 -784.639)" fill="none" stroke="#1a5632"
-              stroke-miterlimit="10" stroke-width="1" class="MKQHtnrN_10"></path>
+              stroke-miterlimit="10" strokeWidth="1" class="MKQHtnrN_10"></path>
           </g>
         </g>
       </g>
       <path id="Line_192-2" data-name="Line 192" fill="none" stroke="#1a5632" stroke-miterlimit="10"
-        stroke-width="3" d="M0,0L314.512,0" class="MKQHtnrN_11"></path>
+        strokeWidth="3" d="M0,0L314.512,0" class="MKQHtnrN_11"></path>
     </g>
     <text
       id="The_Technical_Working_Groups_TWGs_will_drive_the_plan_s_implementation._Tasked_with_planning_and_coordinating_activities_within_specific_collaboration_areas_TWGs_will_monitor_progress_maintain_role_clarity_and_ensure_accountability_across_tasks."
