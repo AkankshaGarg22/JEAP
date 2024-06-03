@@ -4,7 +4,7 @@ import { useEffect } from "react";
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
 function init() {
-  if (window && typeof window !== 'undefined' && window.AdobeAn) {
+  if (window && typeof window !== 'undefined' && window.AdobeAn && window.createjs) {
     canvas = document.getElementById("canvas");
     anim_container = document.getElementById("animation_container");
     dom_overlay_container = document.getElementById("dom_overlay_container");
@@ -19,6 +19,10 @@ function init() {
     });
     var lib = comp.getLibrary();
     loader.loadManifest(lib.properties.manifest);
+  } else {
+    setTimeout(() => {
+      init()
+    }, 200)
   }
 }
 function handleFileLoad(evt, comp) {
