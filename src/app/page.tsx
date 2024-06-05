@@ -17,6 +17,7 @@ import Footer from "./_components/footer";
 import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import  XLTimeLine  from "./_components/XLTimeline";
+import NewTimeline from "./_components/newTimeline";
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -129,7 +130,8 @@ export default function Index() {
               </div>
               <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <div className="hidden xl:block">
-                  <XLTimeLine />
+                  <NewTimeline />
+                  {/* <XLTimeLine /> */}
                 </div>
                 <div className="block xl:hidden">
                   <TimeLine />
