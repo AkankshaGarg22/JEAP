@@ -5,24 +5,30 @@ import { useEffect } from "react";
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
 function init() {
-  canvas = document.getElementById("canvas");
-  anim_container = document.getElementById("animation_container");
-  dom_overlay_container = document.getElementById("dom_overlay_container");
-  var comp = AdobeAn.getComposition("A21712AB28279C479C1EE6271A2DA330");
-  var lib = comp.getLibrary();
-  var loader = new createjs.LoadQueue(false);
-  loader.addEventListener("fileload", function (evt) {
-    handleFileLoad(evt, comp);
-  });
-  loader.addEventListener("complete", function (evt) {
-    handleComplete(evt, comp);
-  });
-  var lib = comp.getLibrary();
-  loader.loadManifest(lib.properties.manifest);
+  if (window && typeof window !== 'undefined' && window.AdobeAn && window.createjs) {
+    canvas = document.getElementById("canvas");
+    anim_container = document.getElementById("animation_container");
+    dom_overlay_container = document.getElementById("dom_overlay_container");
+    var comp = AdobeAn.getComposition("A21712AB28279C479C1EE6271A2DA330");
+    var lib = comp.getLibrary();
+    var loader = new createjs.LoadQueue(false);
+    loader.addEventListener("fileload", function (evt) {
+      handleFileLoad(evt, comp);
+    });
+    loader.addEventListener("complete", function (evt) {
+      handleComplete(evt, comp);
+    });
+    var lib = comp.getLibrary();
+    loader.loadManifest(lib.properties.manifest);
+  } else {
+    setTimeout(() => {
+      init()
+    }, 200)
+  }
 }
 function handleFileLoad(evt, comp) {
   var images = comp.getImages();
-  if (evt && evt.item.type == "image") {
+  if (evt && (evt.item.type == "image")) {
     images[evt.item.id] = evt.result;
   }
 }
@@ -57,9 +63,9 @@ export function OuterCircle({ isVisible }) {
       loadScript();
     }
 
-    const script = document.createElement("script");
-    script.setAttribute("src", "/scripts/outer-circle.js?1714316498851");
-    document.body.appendChild(script);
+    // const script = document.createElement("script");
+    // script.setAttribute("src", "/scripts/outer-circle.js?1714316498851");
+    // document.body.appendChild(script);
 
     return () => {
       // cleanup the script element when the component is unmounted

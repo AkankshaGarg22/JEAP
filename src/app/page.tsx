@@ -122,13 +122,13 @@ export default function Index() {
               <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
                 <WorldMap />
               </div>
-              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500">
+              <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500" className="xl:mt-[-60px]">
                 <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
               </div>
-              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Tabs />
               </div>
-              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <div className="hidden xl:block">
                   <XLTimeLine />
                 </div>
@@ -136,17 +136,17 @@ export default function Index() {
                   <TimeLine />
                 </div>
               </div>
-              <div className="pt-[50px] md:pt-[150px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
+              <div className="pt-[20px] md:pt-[30px]" ref={operationRef} data-aos="fade-up" data-aos-duration="1500">
                 <Operation isOprVisible={isOprVisible} />
               </div>
-              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Resources />
               </div>
-              <div className="pt-[50px] md:pt-[150px]" data-aos="fade-up" data-aos-duration="1500">
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Leadership />
               </div>
             </div>
-            <div className="relative pt-[50px] md:pt-[150px]">
+            <div className="relative pt-[20px] md:pt-[30px]">
               <Footer />
             </div>
           </div>

@@ -12,9 +12,7 @@ const SelectedTextComponent = ({ selected }: { selected: string }) => {
   }, [selected]);
 
   return (
-    <div key={key} className="basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5 animate-slide-in">
-      {selected}
-    </div>
+    <div key={key} className="basis-5/6 md:basis-1/2 text-start md:text-start text-wrap text-[14px] md:text-lg leading-tight md:leading-[1.05] xl:text-lg xl:leading-[1.25] px-5  animate-slide-in" dangerouslySetInnerHTML={{ __html: selected }} />
   );
 };
 
@@ -39,8 +37,8 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
           <img key={i} className=" md:min-w-full object-cover object-right md:object-cover md:object-left xl:object-cover xl:object-left" src={img} alt="Picture" />
         ))}
       </div>
-      <div className="absolute inset-0 bg-transparent text-white text-center pt-4 md:pt-8 text-2xl md:text-4xl font-bold uppercase">{item.title}</div>
-      <div className="absolute inset-0 md:top-[100px]  bg-transparent text-white flex flex-col md:flex-row items-center md:items-start justify-start md:justify-end xl:justify-center gap-4">
+      <div className="absolute inset-0 bg-transparent text-white text-center pt-4 md:pt-8 xl:pt-16 xl:left-[50] text-xl md:text-3xl font-bold uppercase">{item.title}</div>
+      <div className="absolute inset-0 top-[20px]  md:top-[100px] xl:top-[125px]  bg-transparent text-white flex flex-col md:flex-row items-center md:items-start justify-start md:justify-end xl:justify-center gap-4">
         <div className="flex basis-1/6 md:basis-1/4 flex-row md:flex-col gap-2 justify-items-end items-end">
           <button
             className={`text-lg xl:text-2xl ${selected === item.from ? "border-b-white mb:border-r-white " : "text-[#FFFFFF7D] border-r-[#FFFFFF7D]"} border-b-4 md:border-b-0 md:border-r-8 px-4 w-28`}

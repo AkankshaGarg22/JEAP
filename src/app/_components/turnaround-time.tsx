@@ -1,64 +1,15 @@
 "use client";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import OuterCircle from "./outerCircle";
 import InnerCircle from "./innerCircle";
-import Device from "./device";
 import { useMediaQuery } from "@react-hook/media-query";
 
-export function TurnAroundTime({ isVisible }) {
+export function TurnAroundTime({ isVisible }: {isVisible: boolean}) {
   const isXlScreen = useMediaQuery("only screen and (min-width: 1200px)"); // adjust the breakpoint as needed
-
-  const [innerProgress, setInnerProgress] = useState(0);
-  const [outerProgress, setOuterProgress] = useState(0);
-
-  const [shouldFill, setShouldFill] = useState(false);
-  const [shouldOuterFill, setShouldOuterFill] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (innerProgress < 100 && isVisible) {
-        setInnerProgress((prevProgress) => prevProgress + 1); // Increase progress by 1 (you can adjust this)
-      }
-    }, 10); // Interval in milliseconds (you can adjust this)
-    // Clear interval when component unmounts
-    return () => clearInterval(interval);
-  }, [innerProgress, isVisible]); // Re-run effect when progress changes
-
-  useEffect(() => {
-    if (innerProgress === 100 && isVisible) {
-      setTimeout(() => {
-        setShouldFill(true);
-      }, 1000);
-    } else {
-      setShouldFill(false);
-    }
-  }, [innerProgress, shouldFill]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (innerProgress >= 100 && shouldFill && isVisible && outerProgress < 100) {
-        setOuterProgress((prevProgress) => prevProgress + 1); // Increase progress by 1 (you can adjust this)
-      }
-    }, 10); // Interval in milliseconds (you can adjust this)
-
-    // Clear interval when component unmounts
-    return () => clearInterval(interval);
-  }, [outerProgress, innerProgress, shouldFill]); // Re-run effect when progress changes
-
-  useEffect(() => {
-    if (outerProgress === 100 && isVisible) {
-      setTimeout(() => {
-        setShouldOuterFill(true);
-      }, 1000);
-    } else {
-      setShouldOuterFill(false);
-    }
-  }, [outerProgress, shouldOuterFill]);
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center relative">
-      <img className="w-full md:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3346.webp" alt="turnaround-page"></img>
+      <img className="w-full md:h-[500px] xl:h-[800px] h-[400px]" src="/assets/blog/jpgs/Group 3346.webp" alt="turnaround-page"></img>
       {isVisible ? (
         <div className="z-10 absolute h-full w-full flex justify-center items-center">
           {isXlScreen ? (

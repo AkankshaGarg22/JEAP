@@ -17,13 +17,13 @@ const Header = () => {
 
   return (
     <div className="relative w-full flex justify-center">
-      <div className="header-bar w-[95%] xl:w-[45%] md:w-[70%] flex flex-row items-center justify-between md:p-[10px] z-[100] rounded-[50px] mt-5 absolute">
+      <div className="header-bar w-[95%] xl:w-[60%] md:w-[80%] flex flex-row items-center justify-between md:p-[10px] z-[100] rounded-[50px] mt-5 absolute">
         <div className="header-logos flex flex-row items-center justify-start pl-4 gap-1 md:gap-8 basis-1/2">
           {/* <div className="hidden md:block">
             <img className="h-[30px] lg:h-[30px] w-[30px]  lg:w-[30px]" src="/assets/blog/home.png" alt="home-logo" />
           </div> */}
           <div className="">
-            <img className="h-[38px] lg:h-[40px] w-[90px] lg:w-[100px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
+            <img className="h-[38px] lg:h-[55px] w-[90px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
           </div>
         </div>
         <div className="hidden md:flex header-links  flex-row items-center gap-4 md:gap-8 md:p-3">
