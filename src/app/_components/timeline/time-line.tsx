@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Modal from "./modal";
+import Modal from "../modal";
 import { PopUpState, TimeLineItem } from "@/interfaces/timeline";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

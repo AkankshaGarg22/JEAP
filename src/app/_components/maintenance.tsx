@@ -1,4 +1,4 @@
-import Container from "@/app/_components/container";
+import Container from "@/app/_components/layout/container";
 import Image from "next/image";
 
 export function Maintenance() {

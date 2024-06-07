@@ -61,20 +61,6 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
         </div>
 
         <SelectedTextComponent selected={selected} />
-        {/* <div className="opacity-0 animate__animated animate__fadeIn basis-5/6 md:basis-1/2 text-center md:text-start text-wrap text-lg leading-tight xl:text-xl xl:leading-normal px-5">{selected}</div> */}
-        {/* <div className="block md:hidden basis-1/2 text-center text-wrap text-lg">
-          {selected.length < 400 ? (
-            selected
-          ) : (
-            <>
-            <span className=" h-1/2">{selected.substring(0,200)}...
-              <button className="md:hidden border-2 p-1 ml-1" onClick={() => setPopUp({ isOpen: true, item: { key : 1, cardDetailedText : selected} })}>
-                Read More
-              </button>
-              </span>
-            </>
-          )}
-        </div> */}
       </div>
       {popUp.isOpen && <Modal setPopUp={setPopUp} popUp={popUp} />}
     </div>

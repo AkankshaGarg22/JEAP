@@ -4,7 +4,7 @@ import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
 import Link from "next/link";
-import Device from "./device/device";
+import Device from "./utility/device/device";
 
 function getRankWithSuffix(rank: number) {
   // Check if the rank is between 11 and 13 (special cases)

@@ -47,30 +47,6 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
     preloadImages();
   }, []);
 
-  // const [imagesLoaded, setImagesLoaded] = useState(false);
-  // // Image preloading (corrected)
-  // useEffect(() => {
-  //   let loadedCount = 0;
-  //   const imageLoadPromises = images.map(src => {
-  //     return new Promise<void>((resolve, reject) => { // Specify the Promise type as void
-  //       const img = new Image();
-  //       img.src = src;
-  //       img.onload = () => {
-  //         loadedCount++;
-  //         if (loadedCount === images.length) {
-  //           setImagesLoaded(true);
-  //         }
-  //         resolve(); // No return value needed
-  //       };
-  //       img.onerror = reject;
-  //     });
-  //   });
-
-  //   Promise.all(imageLoadPromises)
-  //     .then(() => console.log("All images preloaded successfully"))
-  //     .catch(error => console.error("Failed to preload images:", error));
-  // }, []);
-
   const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
@@ -144,6 +120,19 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
       },
     });
   }, []);
+
+
+  // Test API
+  useEffect(() => {
+    const fetchMessage = async () => {
+      const response = await fetch('/api/user');
+      const data = await response.json();
+      console.log('serr', data)
+    };
+
+    fetchMessage();
+  }, []);
+
 
   return (
     <>
