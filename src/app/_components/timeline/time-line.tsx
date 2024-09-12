@@ -161,7 +161,7 @@ export function TimeLine() {
       </Head>
       <div id="jeap-journey" className="h-full flex flex-col">
         <div className="text-center md:pb-[10px]">
-          <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
+          <h2 className="text-[#000000] text-3xl md:text-7xl font-[arial-bold] my-4">THE JEAP JOURNEY</h2>
         </div>
         <div
           className="relative bg-cover bg-center w-full p-4 transition-bg-image duration-500 ease-in-out"

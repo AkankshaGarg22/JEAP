@@ -123,7 +123,7 @@ const XLTimeLine: React.FC = () => {
       </Head>
       <div id="jeap-journey" className="min-h-full flex flex-col" data-lenis-prevent>
         <div className="text-center md:pb-[10px]">
-          <h2 className="text-[#000000] text-3xl md:text-7xl font-[compasse-extrabold] my-4">THE JEAP JOURNEY</h2>
+          <h2 className="text-[#000000] text-3xl md:text-7xl font-[arial-bold] my-4">THE JEAP JOURNEY</h2>
         </div>
         <div
           ref={timelineRef}

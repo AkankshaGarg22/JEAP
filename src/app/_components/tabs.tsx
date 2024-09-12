@@ -161,7 +161,7 @@ export function Tabs() {
       className="min-h-[88dvh] lg:min-h-full flex flex-col items-center justify-evenly md:justify-normal lg:block"
     >
       <div className="text-center lg:my-2 flex flex-col items-center">
-        <h2 className="text-[#000] text-3xl  md:text-7xl font-[compasse-extrabold] my-0 md:my-4">
+        <h2 className="text-[#000] text-3xl  md:text-7xl font-[arial-bold] my-0 md:my-4">
           THE JEAP VISION
         </h2>
         <p className="text-xl xl:px-0 py-2 sm:py-0 xl:py-4 break-normal w-[90%] md:w-[75%]">

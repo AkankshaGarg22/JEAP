@@ -52,7 +52,7 @@ const WorldMap = () => {
     <Device>
       {({ isMobile }) => {
         return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
-          <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+          <h1 className="font-[arial-bold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
           <div className="h-[400px] md:h-[700px] xl:h-[1200px] w-full relative" >
             {data.length > 0 && (
               <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0, 0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: isMobile ? "50vh" : "85%", width: "100%", }}>

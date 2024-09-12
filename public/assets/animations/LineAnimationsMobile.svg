@@ -7,9 +7,9 @@
     </clipPath>
     <style type="text/css">
       @font-face {
-      font-family: 'compasse-regular';
-      src: url('../fonts/compasse-regular.ttf?v=1.101'), format('truetype');
-      src: url('../fonts/COMPASSE-REGULAR.woff'), format('woff');
+      font-family: 'arial-regular';
+      src: url('../fonts/arial-regular.ttf'), format('truetype');
+      src: url('../fonts/ArialMT.woff'), format('woff');
       font-weight: 400;
       font-style: normal;
       }
@@ -72,7 +72,7 @@
       id="The_Technical_Working_Groups_TWGs_will_drive_the_plan_s_implementation._Tasked_with_planning_and_coordinating_activities_within_specific_collaboration_areas_TWGs_will_monitor_progress_maintain_role_clarity_and_ensure_accountability_across_tasks."
       data-name="The Technical Working Groups (TWGs) will drive the plan's implementation. Tasked with planning and coordinating activities within specific collaboration areas, TWGs will monitor progress, maintain role clarity, and ensure accountability across tasks."
       transform="translate(-6972.252 4718.914)" font-size="15"
-      font-family="compasse-regular">
+      font-family="arial-regular">
       <tspan x="0" y="12">The Technical Working Groups (TWGs) will drive the </tspan>
       <tspan x="0" y="32">plan's implementation. Tasked with planning and </tspan>
       <tspan x="0" y="52">coordinating activities within specific collaboration </tspan>
@@ -83,7 +83,7 @@
       id="The_Focal_Points_will_be_responsible_for_setting_the_vision_and_strategy._They_act_as_the_bridge_between_the_partnership_s_activities_and_report_to_the_leadership_of_the_respective_organizations_involved."
       data-name="The Focal Points will be responsible for setting the vision and strategy. They act as the bridge between the Partnership's activities and report to the leadership of the respective organizations involved."
       transform="translate(-6971.234 4873.064)" font-size="15"
-      font-family="compasse-regular">
+      font-family="arial-regular">
       <tspan x="0" y="12">The Focal Points will be responsible for setting the </tspan>
       <tspan x="0" y="32">vision and strategy. They act as the bridge between </tspan>
       <tspan x="0" y="52">the Partnership's activities and report to the </tspan>
@@ -93,7 +93,7 @@
       id="The_Project_Management_Office_PMO_functions_as_the_operational_engine_managing_communication_materials_data_analysis_for_performance_evaluation_and_generating_resource_mobilization_tools._Together_these_stakeholders_form_a_cohesive_unit_each_contri"
       data-name="The Project Management Office (PMO) functions as the operational engine, managing communication materials, data analysis for performance evaluation, and generating resource mobilization tools. Together, these stakeholders form a cohesive unit, each contri"
       transform="translate(-6971.234 5007.775)" font-size="15"
-      font-family="compasse-regular">
+      font-family="arial-regular">
       <tspan x="0" y="12">The Project Management Office (PMO) functions as </tspan>
       <tspan x="0" y="32">the operational engine, managing communication </tspan>
       <tspan x="0" y="52">materials, data analysis for performance evaluation, </tspan>
