@@ -33,26 +33,30 @@ function handleFileLoad(evt, comp) {
   }
 }
 function handleComplete(evt, comp) {
-  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-  var lib = comp.getLibrary();
-  var ss = comp.getSpriteSheet();
-  var queue = evt.target;
-  var ssMetadata = lib.ssMetadata;
-  for (let i = 0; i < ssMetadata.length; i++) {
-    ss[ssMetadata[i].name] = new createjs.SpriteSheet({ images: [queue.getResult(ssMetadata[i].name)], frames: ssMetadata[i].frames });
+  try {
+    //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+    var lib = comp.getLibrary();
+    var ss = comp.getSpriteSheet();
+    var queue = evt.target;
+    var ssMetadata = lib.ssMetadata;
+    for (let i = 0; i < ssMetadata.length; i++) {
+      ss[ssMetadata[i].name] = new createjs.SpriteSheet({ images: [queue.getResult(ssMetadata[i].name)], frames: ssMetadata[i].frames });
+    }
+    stage = new lib.Stage(canvas);
+    exportRoot = new lib.cir1(stage);
+    //Registers the "tick" event listener.
+    fnStartAnimation = function () {
+      stage.addChild(exportRoot);
+      createjs.Ticker.framerate = lib.properties.fps;
+      createjs.Ticker.addEventListener("tick", stage);
+    };
+    //Code to support hidpi screens and responsive scaling.
+    AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
+    AdobeAn.compositionLoaded(lib.properties.id);
+    fnStartAnimation();
+  } catch (error) {
+    console.log('error', error)
   }
-  stage = new lib.Stage(canvas);
-  exportRoot = new lib.cir1(stage);
-  //Registers the "tick" event listener.
-  fnStartAnimation = function () {
-    stage.addChild(exportRoot);
-    createjs.Ticker.framerate = lib.properties.fps;
-    createjs.Ticker.addEventListener("tick", stage);
-  };
-  //Code to support hidpi screens and responsive scaling.
-  AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
-  AdobeAn.compositionLoaded(lib.properties.id);
-  fnStartAnimation();
 }
 
 export function OuterCircle({ isVisible }) {

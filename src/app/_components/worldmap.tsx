@@ -112,7 +112,7 @@ const WorldMap = () => {
               The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
             </p>
             <div className="flex justify-center items-end w-full">
-              <p className="px-4 font-bold text-xl w-[70%] break-normal text-balance ">
+              <p className="px-4 font-bold text-xl w-[75%] break-normal text-balance ">
               The JEAP, rooted in this urgent paradigm, will pave the way for unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
               </p>
             </div>

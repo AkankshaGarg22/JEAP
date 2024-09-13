@@ -33,7 +33,7 @@ export const items: TimeLineItem[] = [
     cardSubtitle: "Unveiling the JEAP",
     cardDetailedText:
       "The JEAP was launched during the 2023 World Health Assembly, uniting partners to address critical challenges in preparedness, detection, and response across six programmatic areas. AVoHC\u2011SURGE, a collaborative workforce initiative jointly led by Africa CDC and WHO, enables African nations to respond rapidly (within 24-48 hours) to health emergencies and humanitarian crises. It welcomes stakeholders from humanitarian, development, and government agencies, ensuring life-saving care reaches all. So far, 16 countries have utilized AVoHC-SURGE members for local responses (Zanzibar, United Republic of Tanzania, Togo, Senegal, Rwanda, Republic of the Congo, Nigeria, Niger, Namibia, Mauritania, Malawi, Kenya, Ethiopia, Democratic Republic of Congo, Chad, Central African Republic), while 6 countries have deployed them internationally (Ethiopia, Tanzania, Rwanda, DRC, Republic of Congo, Botswana).",
-    minHeight: "50%",
+    minHeight: "66%",
   },
   {
     key: 3,
