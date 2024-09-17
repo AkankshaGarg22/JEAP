@@ -149,7 +149,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
           ref={parrallaxRef}
           style={{ backgroundImage: `url(${images[currentImageIndex]})`, opacity: fading ? 1 : 1 }}
         >
-          <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[65%] text-center">
+          <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[75%] text-center">
             <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[arial-bold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP)</h1>
             <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[arial-bold] leading-tight">UNLOCKING AFRICA'S RESILIENCE</h1>
             <p className="text-lg md:text-2xl w-[100%] sm:leading-none sm:px-4 md:pt-5 md:w-[80%] xl:pt-6 xl:w-[80%] text-balance break-normal">
