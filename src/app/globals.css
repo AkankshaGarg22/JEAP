@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'compasse-regular';
-  src: url('../fonts/compasse-regular.ttf?v=1.101'), format('truetype');
-  src: url('../fonts/COMPASSE-REGULAR.woff'), format('woff');
+  font-family: 'arial-regular';
+  src: url('../fonts/arial-regular.ttf'), format('truetype');
+  src: url('../fonts/ArialMT.woff'), format('woff');
   ;
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'compasse-extrabold';
-  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.TTF'), format('truetype');
-  src: url('../fonts/COMPASSE\ EXTRA\ BOLD.woff'), format('woff');
+  font-family: 'arial-bold';
+  src: url('../fonts/ARIBLK.TTF'), format('truetype');
+  src: url('../fonts/Arial\ Black.woff'), format('woff');
   ;
   font-weight: 900;
   font-style: normal;
@@ -22,7 +22,7 @@
 
 
 body {
-  font-family: 'compasse-regular';
+  font-family: 'arial-regular';
 }
 
 ul{

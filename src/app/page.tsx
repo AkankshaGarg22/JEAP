@@ -6,17 +6,17 @@ import Leadership from "./_components/leadership";
 import Resources from "./_components/resources";
 import Operation from "./_components/operation";
 import { Tabs } from "./_components/tabs";
-import { TimeLine } from "./_components/time-line";
-import TurnAroundTime from "./_components/turnaround-time";
+import { TimeLine } from "./_components/timeline/time-line";
+import TurnAroundTime from "./_components/turnaround-time/turnaround-time";
 import ErrorBoundary from "./_components/ErrorBoundary";
 import { Suspense, useEffect, useRef, useState } from "react";
-import Loading from "./_components/loading";
+import Loading from "./_components/layout/loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./_components/footer";
+import Footer from "./_components/layout/footer";
 import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import  XLTimeLine  from "./_components/XLTimeline";
+import  XLTimeLine  from "./_components/timeline/XLTimeline";
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);

@@ -47,30 +47,6 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
     preloadImages();
   }, []);
 
-  // const [imagesLoaded, setImagesLoaded] = useState(false);
-  // // Image preloading (corrected)
-  // useEffect(() => {
-  //   let loadedCount = 0;
-  //   const imageLoadPromises = images.map(src => {
-  //     return new Promise<void>((resolve, reject) => { // Specify the Promise type as void
-  //       const img = new Image();
-  //       img.src = src;
-  //       img.onload = () => {
-  //         loadedCount++;
-  //         if (loadedCount === images.length) {
-  //           setImagesLoaded(true);
-  //         }
-  //         resolve(); // No return value needed
-  //       };
-  //       img.onerror = reject;
-  //     });
-  //   });
-
-  //   Promise.all(imageLoadPromises)
-  //     .then(() => console.log("All images preloaded successfully"))
-  //     .catch(error => console.error("Failed to preload images:", error));
-  // }, []);
-
   const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
@@ -145,6 +121,19 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
     });
   }, []);
 
+
+  // Test API
+  useEffect(() => {
+    const fetchMessage = async () => {
+      const response = await fetch('/api/user');
+      const data = await response.json();
+      console.log('serr', data)
+    };
+
+    fetchMessage();
+  }, []);
+
+
   return (
     <>
       <Head>
@@ -160,11 +149,11 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
           ref={parrallaxRef}
           style={{ backgroundImage: `url(${images[currentImageIndex]})`, opacity: fading ? 1 : 1 }}
         >
-          <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[60%] text-center">
-            <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP)</h1>
-            <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[compasse-extrabold] leading-tight">UNLOCKING AFRICA'S RESILIENCE</h1>
+          <div className="xl:pt-[200px] flex flex-col justify-center items-center w-[90%] xl:w-[75%] text-center">
+            <h1 className="xl:leading-[1] text-3xl md:text-6xl font-[arial-bold] leading-tight">THE JOINT EMERGENCY ACTION PLAN (JEAP)</h1>
+            <h1 className="xl:leading-[1] text-2xl md:text-6xl font-[arial-bold] leading-tight">UNLOCKING AFRICA'S RESILIENCE</h1>
             <p className="text-lg md:text-2xl w-[100%] sm:leading-none sm:px-4 md:pt-5 md:w-[80%] xl:pt-6 xl:w-[80%] text-balance break-normal">
-              The JEAP, borne out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response
+              The JEAP, born out of a partnership between the Africa CDC and the World Health Organization, is a regional platform that focuses on consolidating Emergency Preparedness and Response
               (EPR) efforts across the continent to dramatically improve how countries prepare for, detect, and respond to emergencies, while simultaneously ensuring no country is left behind.
             </p>
           </div>

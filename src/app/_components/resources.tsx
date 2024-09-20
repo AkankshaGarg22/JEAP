@@ -6,7 +6,7 @@ export function Resources() {
     <div id="resources" className="md:pt-18 py-6 relative">
       <Image src="/assets/blog/jpgs/Group 3343.webp" alt="resource-page" fill></Image>
       <div className="flex flex-col lg:flex-row items-center justify-center ">
-        <h2 className="text-3xl md:text-7xl text-white opacity-100 flex justify-center font-[compasse-extrabold] md:p-5 p-2 relative">
+        <h2 className="text-3xl md:text-7xl text-white opacity-100 flex justify-center font-[arial-bold] md:p-5 p-2 relative">
           RESOURCES
         </h2>
       </div>
@@ -16,9 +16,11 @@ export function Resources() {
           <div className="absolute inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[360px] w-[250px] m-[18px]">
             <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-4">
               <img height={60} width={60} src="/assets/blog/Path 14204 2.svg"></img>
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="34" viewBox="0 0 219 34">
-                <text id="Download_PDF" data-name="Download PDF" transform="translate(0 27)" fill="#fff" fontSize="34" fontFamily="compasse-regular"><tspan x="0" y="0">Download PDF</tspan></text>
-              </svg>
+              <div className="m-[0 auto] w-[90%]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="34" viewBox="0 0 200 34">
+                  <text id="Download_PDF" data-name="Download PDF" transform="translate(0 27)" fill="#fff" fontSize="24" fontFamily="arial-bold"><tspan x="0" y="0">Download PDF</tspan></text>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -27,9 +29,11 @@ export function Resources() {
           <div className="absolute inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[170px] w-[120px] m-[12px]">
             <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-1">
               <img height={20} width={20} src="/assets/blog/Path 14204 2.svg"></img>
-              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="34" viewBox="0 0 219 34">
-                <text id="Download_PDF" data-name="Download PDF" transform="translate(0 27)" fill="#fff" fontSize="34" fontFamily="compasse-regular"><tspan x="0" y="0">Download PDF</tspan></text>
-              </svg>
+              <div className="m-[0 auto] w-[90%]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="34" viewBox="0 0 200 34">
+                  <text id="Download_PDF" data-name="Download PDF" transform="translate(0 27)" fill="#fff" fontSize="24" fontFamily="arial-bold"><tspan x="0" y="0">Download PDF</tspan></text>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

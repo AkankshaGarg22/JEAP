@@ -9,7 +9,6 @@ interface AccordionProps {
 }
 
 const Accordion = ({ title, children, isOpen, onToggle }: AccordionProps) => {
-  const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
     <div className="mb-[1px] relative">
