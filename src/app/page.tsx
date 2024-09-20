@@ -83,25 +83,25 @@ export default function Index() {
     AOS.init();
   }, []);
 
- useEffect(() => {
-    const scrollContainer = document.querySelector("main") as HTMLElement | null;
-    const lenis = new Lenis({
-      duration: 2.0,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      content: scrollContainer ? scrollContainer : undefined,
-  });
-    lenis.on("scroll", () => {
-      lenis.resize();
-    });
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
+//  useEffect(() => {
+//     const scrollContainer = document.querySelector("main") as HTMLElement | null;
+//     const lenis = new Lenis({
+//       duration: 2.0,
+//       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//       content: scrollContainer ? scrollContainer : undefined,
+//   });
+//     lenis.on("scroll", () => {
+//       lenis.resize();
+//     });
+//     const raf = (time: number) => {
+//       lenis.raf(time);
+//       requestAnimationFrame(raf);
+//     };
 
-     lenis.on("scroll", ScrollTrigger.update);
-     requestAnimationFrame(raf);
-     return () => lenis.stop();
-   }, []);
+//      lenis.on("scroll", ScrollTrigger.update);
+//      requestAnimationFrame(raf);
+//      return () => lenis.stop();
+//    }, []);
 
   
   return (
