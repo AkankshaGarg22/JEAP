@@ -12,7 +12,7 @@ const Menu: MenuItem[] = [
     from: "A fragmented understanding of the current state of preparedness acts as a hindrance to data\u2011driven decision\u2011making.",
     to: "Improved overall visibility of the core capacities of countries, enabling more accurate and resource\u2011efficient interventions.",
     how: `The JEAP will assess continental preparedness by supporting countries to:
-    <ul className="testul">
+    <ul className="list-disc">
     <li>    Map existing assessment tools and processes​.</li>
     <li>    Support countries to conduct and report on EPR capacity assessments​.</li>
     <li>    Develop the continental risk atlas​.</li>
