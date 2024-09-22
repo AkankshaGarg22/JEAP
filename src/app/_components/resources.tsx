@@ -10,7 +10,7 @@ export function Resources() {
           RESOURCES
         </h2>
       </div>
-    <div className="flex flex-col sm:space-y-4 lg:space-y-0 md:space-y-0 lg:flex-row justify-center items-center">
+    <div className="flex flex-col sm:space-y-[60px] lg:space-y-0 md:space-y-0 lg:space-x-[100px] lg:flex-row justify-center items-center">
       <a className="flex justify-center items-center" href="/assets/blog/Joint EPR Detailed Action Plan Final Report.pdf" download="Joint EPR Detailed Action Plan Final Report.pdf" target='_blank'>
         <div className="flex justify-center items-center relative h-[400px] w-[300px] mx-auto md:block hidden">
           <img src="/assets/blog/Resources_plan.png" className="relative h-[380px] w-[280px]" alt="resource-plan"></img>
