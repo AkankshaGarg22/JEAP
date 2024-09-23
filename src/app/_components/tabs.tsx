@@ -60,7 +60,7 @@ const Menu: MenuItem[] = [
     id: 4,
     title: "Workforce Development",
     slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-04.webp"],
-    from: "A shortage in the health workforce with fewer than 10% of African countries adequately staffed to prepare for and respond to health emergencies",
+    from: "A shortage in the health workforce with fewer than 10% of African countries adequately staffed to prepare for and respond to health emergencies.",
     to: "A workforce of 3000 roving, qualified and multi\u2011sectoral first responders will be deployed within the first 24\u201148 hours of an emergency, led by a harmonized leadership and complementing institutionalized national community health worker programs.",
     how: `The JEAP initiative aims to help countries to:
     <ul className="list-disc" style="margin-left: 40px"> 
