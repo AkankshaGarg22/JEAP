@@ -166,7 +166,7 @@ export function Tabs() {
         </h2>
         <p className="text-xl xl:px-0 py-2 sm:py-0 xl:py-4 break-normal w-[90%] md:w-[75%]">
           At the heart of the JEAP is a vision of 'One Africa for Health
-          Security.' This vision outlines six collaboration areas and provides a
+          Security.' This vision outlines eight collaboration areas and provides a
           comprehensive framework for coordinated action to safeguard African
           populations from public health emergencies.
         </p>

@@ -17,6 +17,7 @@ import Footer from "./_components/layout/footer";
 import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import  XLTimeLine  from "./_components/timeline/XLTimeline";
+import Maintenance from "./_components/maintenance";
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -144,8 +145,11 @@ export default function Index() {
               <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Leadership />
               </div>
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                <Maintenance />
+              </div>
             </div>
-            <div className="relative pt-[20px] md:pt-[30px]">
+            <div className="relative">
               <Footer />
             </div>
           </div>

@@ -5,37 +5,43 @@ const LeadersArray = [
         image: '/assets/blog/jpgs/jean_kaseya.webp',
         title: 'Dr Jean Kaseya',
         description: 'Director General, Africa CDC',
-        link: 'https://africacdc.org/people/dr-jean-kaseya/'
+        link: 'https://africacdc.org/people/dr-jean-kaseya/',
+        designation: 'Principal, JEAP'
     },
     {
         image: '/assets/blog/jpgs/Matshidiso Moeti.webp',
         title: 'Dr Matshidiso Moeti',
         description: 'Regional Director, WHO AFRO',
-        link: 'https://www.afro.who.int/regional-director/biography'
+        link: 'https://www.afro.who.int/regional-director/biography',
+        designation: 'Principal, JEAP'
     },
     {
         image: '/assets/blog/jpgs/Hanan Balkhy.webp',
         title: 'Dr Hanan Balkhy',
         description: 'Regional Director, WHO EMRO',
         link: 'https://www.emro.who.int/about-who/regional-director/index.html',
+        designation: 'Principal, JEAP'
     },
     {
         image: '/assets/blog/jpgs/Dr Raji.webp',
         title: 'Dr Raji Tajudeen',
         description: 'Acting Deputy Director General, Africa DDG',
-        link: 'https://africacdc.org/people/raji-tajudeen/'
+        link: 'https://africacdc.org/people/raji-tajudeen/',
+        designation: 'Steering Committee Member, JEAP'
     },
     {
         image: '/assets/blog/jpgs/Dr Abdou.webp',
         title: 'Dr Abdou Salam Gueye',
         description: 'Regional Emergency Director, WHO AFRO',
-        link: 'https://www.afro.who.int/about-us/leadership/dr-gueye-salam'
+        link: 'https://www.afro.who.int/about-us/leadership/dr-gueye-salam',
+        designation: 'Steering Committee Member, JEAP'
     },
     {
         image: '/assets/blog/jpgs/RickBrenan.webp',
         title: 'Dr Rick Brennan',
         description: 'Regional Emergency Director, WHO EMRO',
-        link: 'https://www.emro.who.int/about-who/regional-director/rick-brennan-acting-regional-emergency-director.html'
+        link: 'https://www.emro.who.int/about-who/regional-director/rick-brennan-acting-regional-emergency-director.html',
+        designation: 'Steering Committee Member, JEAP'
     },]
 
 export function Leadership() {
@@ -51,7 +57,7 @@ export function Leadership() {
     );
 }
 
-const leaderCard = (leaderData: { image: string, title: string, description: string, link: string }, key: number) => {
+const leaderCard = (leaderData: { image: string, title: string, description: string, link: string, designation: string }, key: number) => {
     return (
         <a href={leaderData.link} target="_blank" key={key}>
             <div className="leader min-h-full flex flex-col items-center gap-6 justify-center">
@@ -59,6 +65,7 @@ const leaderCard = (leaderData: { image: string, title: string, description: str
                 <div className="flex flex-col items-center">
                     <h2 className="text-[#00205C] text-base md:text-lg font-bold flex text-center">{leaderData.title}</h2>
                     <p className="text-[#00205C] text-base md:text-lg p-1 flex text-center">{leaderData.description}</p>
+                    <p className="text-[#00205C] text-base md:text-lg p-1 flex text-center">{leaderData.designation}</p>
                 </div>
             </div>
         </a>)
