@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Maintenance() {
   return (
-    <div className="md:py-72 py-28 flex flex-col lg:flex-row items-center justify-center relative	maintenance-page">
+    <div className="h-[40vh] flex flex-col lg:flex-row items-center justify-center relative	maintenance-page">
       <Image className="opacity-80 maintenance-page-image" src="/assets/blog/Miaron_0048-149358 (1).jpg" alt="maintenance-page" fill></Image>
       <h2 className="p-5 text-2m md:text-3xl absolute text-white opacity-100 flex justify-center text-center">
         Kindly note that this webpage is a work in progress, and more information will be added soon.
