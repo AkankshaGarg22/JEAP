@@ -18,6 +18,7 @@ import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import  XLTimeLine  from "./_components/timeline/XLTimeline";
 import Maintenance from "./_components/maintenance";
+import GradedEmergencies from "./_components/graded-emergencies";
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -141,6 +142,9 @@ export default function Index() {
               </div>
               <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Resources />
+              </div>
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                <GradedEmergencies />
               </div>
               <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Leadership />
