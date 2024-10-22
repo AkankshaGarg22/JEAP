@@ -4,7 +4,7 @@ export function GradedEmergencies() {
   return (
     <div id="emergencies" className="md:pt-18 py-6 relative">
       <Image
-        src="/assets/blog/jpgs/Group 3343.webp"
+        src="/assets/blog/jpgs/Rectangle 1946.png"
         alt="resource-page"
         fill
       ></Image>
@@ -45,7 +45,8 @@ export function GradedEmergencies() {
             download="MPOX-CONTINENTAL-PREPAREDNESS-AND-RESPONSE-PLAN-FOR-AFRICA_Final-Edit"
             target="_blank"
           >
-            <div className="flex flex-row gap-[5px]">
+            
+            {/* <div className="flex flex-row gap-[5px]">
               <p>Read more</p>
               <Image
                 color="white"
@@ -54,8 +55,15 @@ export function GradedEmergencies() {
                 height={20}
                 width={20}
               ></Image>
-            </div>
+            </div> */}
+  
+             <button className="hover-button">
+               <img className="icon" src="/assets/blog/chevron-right-solid base.png" alt="icon" />
+     
+                 <span className="button-text">Read More</span>
+             </button>
           </a>
+
         </div>
         <a
           className="flex justify-center items-center lg:w-[40%]"

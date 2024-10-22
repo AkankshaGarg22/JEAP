@@ -320,3 +320,68 @@ html.lenis, html.lenis body {
 .Typewriter__cursor{
   display: none;
 }
+
+
+/* Read more button */
+
+.hover-button {
+  display: flex;
+  width:200px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  position: relative;
+  overflow: show;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  border-radius:999px;
+}
+
+.hover-button .icon {
+  width: 16px; /* Set width for the image */
+  height: 22px; /* Set height for the image */
+  margin-right: 8px;
+}
+
+.icon {
+  position: absolute;
+  left: 16px; /* Align the icon to the left */
+  width: 16px; /* Set icon size */
+  height: auto;
+}
+
+.hover-button::before {
+  content:"";
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 49px; /* Initially covers only 10% of the button */
+  height: 49px;
+  background-color: #FFFFFF;
+  /* background-image: url('/assets/blog/chevron-right-solid base.png');
+  background-repeat: no-repeat;
+  background-position: center left; */
+  background-size: 16px;
+  z-index: -1;
+  transition: width 0.9s ease;
+  border-radius:999px;
+
+}
+
+.hover-button:hover::before {
+  width: 100%; /* Expands to cover the full button on hover */
+}
+
+.hover-button:hover {
+  color: green;
+}
+
+.hover-button .button-text {
+  z-index: 1;
+  transition: color 0.3s ease;
+}
