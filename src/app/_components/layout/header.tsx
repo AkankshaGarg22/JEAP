@@ -36,7 +36,11 @@ const Header = () => {
             <h2 className="font-semibold link-hover">VISION</h2>
           </AnchorLink>
 
-          
+          <AnchorLink href="#gradedemergencies">
+            <h2 className="font-semibold link-hover">EMERGENCIES</h2>
+          </AnchorLink>
+
+            
             <h2 className="link-hover font-semibold" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</h2>
           
           {/* <h2 className="font-semibold text-white">CONTACT US</h2><h2 className="font-semibold text-white">RESOURCES</h2> */}
