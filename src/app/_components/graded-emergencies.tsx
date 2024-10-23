@@ -4,12 +4,12 @@ export function GradedEmergencies() {
   return (
     <div id="emergencies" className="md:pt-18 py-6 relative">
       <Image
-        src="/assets/blog/jpgs/Group 3343.webp"
+        src="/assets/blog/jpgs/Rectangle 1946.png"
         alt="resource-page"
         fill
       ></Image>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center ">
+      <div className="flex flex-col lg:flex-row items-center justify-center " id="gradedemergencies">
         <h2 className="text-2xl md:text-7xl text-white opacity-100 flex justify-center font-[arial-bold] md:p-5 p-2 relative">
           GRADED EMERGENCIES
         </h2>
@@ -38,14 +38,15 @@ export function GradedEmergencies() {
             working under a unified plan, budget, and monitoring framework.
           </p>
           <p className="lg:py-10 py-5"></p>
-
+          <div className="flex w-100 xl:justify-start xl:items-start items-center justify-center m-0 p-0">
           <a
-            className="flex justify-start items-start"
+            className="flex justify-start items-start w-[200px] overflow-visible"
             href="/assets/blog/MPOX-CONTINENTAL-PREPAREDNESS-AND-RESPONSE-PLAN-FOR-AFRICA_Final-Edit.pdf"
             download="MPOX-CONTINENTAL-PREPAREDNESS-AND-RESPONSE-PLAN-FOR-AFRICA_Final-Edit"
             target="_blank"
           >
-            <div className="flex flex-row gap-[5px]">
+            
+            {/* <div className="flex flex-row gap-[5px]">
               <p>Read more</p>
               <Image
                 color="white"
@@ -54,8 +55,15 @@ export function GradedEmergencies() {
                 height={20}
                 width={20}
               ></Image>
-            </div>
+            </div> */}
+  
+             <button className="hover-button">
+               <img className="icon" src="/assets/blog/chevron-right-solid base.png" alt="icon" />
+     
+                 <span className="button-text">Read More</span>
+             </button>
           </a>
+          </div>
         </div>
         <a
           className="flex justify-center items-center lg:w-[40%]"
