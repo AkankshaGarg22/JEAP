@@ -50,15 +50,18 @@ const Header = () => {
           <Image src={!dropDownOpen ? "/assets/blog/menu.svg" : "/assets/blog/cross-button.svg"} width={100} height={100} alt="menu" onClick={() => setDropDownOpen(!dropDownOpen)}></Image>
         </div>
         {dropDownOpen && (
-          <div className="md:hidden justify-evenly absolute right-[5%] top-[96%] bg-white h-[100px] flex flex-col items-center z-[-1]">
+          <div className="md:hidden justify-evenly absolute right-[5%] top-[96%] bg-white h-auto flex flex-col items-center z-[-1]">
             <AnchorLink href="#mission" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">MISSION</h2>
             </AnchorLink>
             <AnchorLink href="#vision" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">VISION</h2>
             </AnchorLink>
-            <AnchorLink href="#leadership">
+            <AnchorLink href="#leadership" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">LEADERSHIP</h2>
+            </AnchorLink>
+            <AnchorLink href="#gradedemergencies">
+              <h2 className="px-3 font-semibold pt-2 ">EMERGENCIEES</h2>
             </AnchorLink>
           </div>
         )}
