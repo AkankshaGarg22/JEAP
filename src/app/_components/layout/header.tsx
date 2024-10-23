@@ -57,11 +57,11 @@ const Header = () => {
             <AnchorLink href="#vision" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">VISION</h2>
             </AnchorLink>
+            <AnchorLink href="#gradedemergencies">
+              <h2 className="px-3 font-semibold pt-2 ">EMERGENCIES</h2>
+            </AnchorLink>
             <AnchorLink href="#leadership" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">LEADERSHIP</h2>
-            </AnchorLink>
-            <AnchorLink href="#gradedemergencies">
-              <h2 className="px-3 font-semibold pt-2 ">EMERGENCIEES</h2>
             </AnchorLink>
           </div>
         )}
