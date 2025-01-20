@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import "./globals.css";
 import Header from "./_components/layout/header";
 import Loading from "./_components/layout/loading";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,6 +65,7 @@ export default function RootLayout({
         <Header />
         <div className="min-h-screen">{children}</div>
         </Suspense>
+        <Analytics />
       </body>
     </html>
   );
