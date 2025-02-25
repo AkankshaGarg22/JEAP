@@ -9,7 +9,7 @@ export function Footer() {
     }
   }
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
+    <footer className="bg-neutral-50 border-t border-neutral-200 w-full">
       {/* <Maintenance></Maintenance> */}
       <div className="h-[30vh] sm:h-100 flex items-center justify-center bg-gradient-to-t to-[#00205C] from-[#1B5632] p-2">
   <div className="w-full max-w-6xl flex flex-col items-center justify-between h-full py-2">
