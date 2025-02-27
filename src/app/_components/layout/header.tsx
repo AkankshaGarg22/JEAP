@@ -1,16 +1,17 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+// import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
 
-  const scrollIntoView = (id: string) => {
-    if (typeof document !== "undefined") {
-      document.getElementById(id)?.scrollIntoView(true);
-    }
-  };
+  // const scrollIntoView = (id: string) => {
+  //   if (typeof document !== "undefined") {
+  //     document.getElementById(id)?.scrollIntoView(true);
+  //   }
+  // };
 
   return (
     <div className="relative w-full flex justify-center">
@@ -24,25 +25,25 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:p-3">
-          <AnchorLink href="/about">
+          <Link href="/about">
             <h2 className="link-hover font-semibold">ABOUT THE JEAP</h2>
-          </AnchorLink>
+          </Link>
 
-          <AnchorLink href="#">
+          <Link href="#">
             <h2 className="font-semibold link-hover">FOCUS AREAS</h2>
-          </AnchorLink>
+          </Link>
 
-          <AnchorLink href="#">
+          <Link href="#">
             <h2 className="font-semibold link-hover">CONNECT WITH US</h2>
-          </AnchorLink>
+          </Link>
 
-          <AnchorLink href="#">
+          <Link href="#">
             <h2 className="link-hover font-semibold">IMPACT</h2>
-          </AnchorLink>
+          </Link>
 
-          <AnchorLink href="#">
+          <Link href="#">
             <h2 className="link-hover font-semibold">RESOURCES</h2>
-          </AnchorLink>
+          </Link>
         </div>
 
         <div className="md:hidden m-5 h-[30px] w-[30px] pt-1">
@@ -62,27 +63,26 @@ const Header = () => {
             <AnchorLink href="#leadership" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2">LEADERSHIP</h2>
             </AnchorLink> */}
-             
-            <AnchorLink className={"border-b-2 w-full border-black text-center"} href="/about">
+
+            <Link className={"border-b-2 w-full border-black text-center"} href="/about">
               <h2 className="px-3 font-semibold pt-2">ABOUT THE JEAP</h2>
-            </AnchorLink>
+            </Link>
 
-            <AnchorLink className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="#">
               <h2 className="px-3 font-semibold pt-2">FOCUS AREAS</h2>
-            </AnchorLink>
+            </Link>
 
-            <AnchorLink className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="#">
               <h2 className="px-3 font-semibold pt-2">CONNECT WITH US</h2>
-            </AnchorLink>
+            </Link>
 
-            <AnchorLink className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="#">
               <h2 className="px-3 font-semibold pt-2">IMPACT</h2>
-            </AnchorLink>
+            </Link>
 
-            <AnchorLink className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="#">
               <h2 className="px-3 font-semibold pt-2">RESOURCES</h2>
-            </AnchorLink>
-           
+            </Link>
           </div>
         )}
       </div>
