@@ -385,3 +385,12 @@ html.lenis, html.lenis body {
   z-index: 1;
   transition: color 0.3s ease;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Hides scrollbar in IE & Edge */
+  scrollbar-width: none;  /* Hides scrollbar in Firefox */
+}

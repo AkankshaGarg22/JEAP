@@ -17,6 +17,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "mb-curve" : "url(/assets/blog/mb-curve.svg)",
         "lg-curve" : "url(/assets/blog/header.svg)",
+        "about-landing" : "url(/assets/blog/about/bg/1.jpg)",
+        "mb-about-curve" : "url(/assets/blog/about/curve/mb.png)",
+        "xl-about-curve" : "url(/assets/blog/about/curve/xl.png)",
       },
       colors: {
         "accent-1": "#FAFAFA",
