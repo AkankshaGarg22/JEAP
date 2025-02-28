@@ -69,28 +69,28 @@ export default function PartnerShip() {
   };
 
   return (
-    <div className="h-screen xl:h-[1024px] flex flex-col items-center justify-start xl:justify-center bg-cover  lg:bg-contain bg-no-repeat bg-mb-about-curve md:bg-xl-about-curve z-[200]">
-      <div className="basis-1/5 md:basis-1/4 flex flex-col items-center justify-end md:justify-center xl:justify-end md:mt-8 gap-2 xl:gap-2 text-center text-white md:w-3/4 md:pt-8 ">
-        <h2 className="leading-1 xl:leading-[1.5] text-5xl md:text-[4rem] xl:text-6xl font-[arial-bold]">JEAP: Partnering for Impact</h2>
+    <div className="h-screen xl:h-[1024px] flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-contain bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200]">
+      <div className="basis-1/5 md:basis-1/4 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white md:w-3/4 md:pt-8 ">
+      <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[4rem] xl:text-6xl font-[arial-bold]">JEAP: Partnering for Impact</h2>
       </div>
-      <div className="basis-4/5 md:basis-3/4 flex items-center justify-start xl:justify-center w-full xl:w-4/5">
-        <div className="relative w-full xl:h-full ">
+      <div className="basis-4/5 md:basis-3/4 flex items-center md:items-start justify-start xl:justify-center w-full xl:w-4/5 mb-4 md:mb-auto">
+        <div className="relative w-full md:h-full ">
           {/* Slide Container */}
           <div
             ref={sliderRef}
-            className="w-full xl:h-full overflow-hidden flex transition-transform duration-500 ease-in-out"
+            className="w-full md:h-full overflow-hidden flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `100%` }}
           >
             {slides.map((slide) => (
-              <div key={slide.id} className="w-full flex flex-col xl:justify-center xl:h-full" style={{ flex: "0 0 100%" }}>
-                <div className="xl:basis-1/5 flex flex-col items-center xl:justify-center px-2">
-                  <p className="text-center text-white w-4/5 xl:w-full xl:leading-snug xl:text-xl">{slide.title}</p>
+              <div key={slide.id} className="w-full flex flex-col gap-2 md:gap-0 md:justify-center xl:justify-center md:h-full xl:h-full" style={{ flex: "0 0 100%" }}>
+                <div className="md:basis-1/10 md:shrink xl:shrink-0 xl:basis-1/5 flex flex-col items-center xl:justify-center px-2">
+                  <p className="text-center text-white w-3/4 xl:w-full xl:leading-snug md:text-xl xl:text-xl">{slide.title}</p>
                 </div>
-                <div className="xl:basis-4/5 relative xl:h-full flex flex-col gap-2 xl:gap-4 xl:flex-row items-center justify-center xl:items-start">
+                <div className="md:basis-9/10 md:grow xl:grow-0 xl:basis-4/5  relative md:h-full xl:h-full flex flex-col gap-4 md:gap-6 xl:gap-2 xl:flex-row items-center justify-center xl:items-start">
                   {slide.items.map((item) => (
                     <div className="h-50 border border-white flex flex-col rounded-3xl w-3/4 hover:bg-white text-white hover:text-green-800" onClick={() => openModal(item)}>
-                      <img className="h-40 xl:h-60 w-full rounded-3xl object-cover p-1 xl:p-2" src={item.img} alt={item.header} />
-                      <p className=" text-center text-base xl:text-lg py-1 xl:py-2">{item.header}</p>
+                      <img className="h-40 xl:h-60 w-full rounded-3xl object-cover p-1 md:p-2 xl:p-2" src={item.img} alt={item.header} />
+                      <p className=" text-center text-base xl:text-lg py-1 md:py-2 xl:py-2">{item.header}</p>
                     </div>
                   ))}
                 </div>
@@ -99,14 +99,14 @@ export default function PartnerShip() {
           </div>
 
           {/* Arrows */}
-          <button onClick={handlePrev} className="absolute left-2 top-4 xl:-left-[10%] xl:top-1/3 transform -translate-y-1/2">
+          <button onClick={handlePrev} className="absolute left-2 top-5 xl:-left-[10%] xl:top-1/3 transform -translate-y-1/2">
             <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center hover:bg-red-200 duration-300 ease-in-out">
               <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
               </svg>
             </div>
           </button>
-          <button onClick={handleNext} className="absolute right-2 top-4 xl:-right-[10%] xl:top-1/3  transform -translate-y-1/2">
+          <button onClick={handleNext} className="absolute right-2 top-5 xl:-right-[10%] xl:top-1/3  transform -translate-y-1/2">
             <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center duration-300 ease-in-out">
               <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
@@ -118,13 +118,13 @@ export default function PartnerShip() {
 
       {/* Modal */}
       {modalOpen && selectedItem && (
-        <div className="fixed inset-0 bg-[#185136] xl:bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] bg-opacity-20 xl:bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-[#185136] xl:bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d]  xl:bg-opacity-50 flex items-center justify-center z-50">
           <button onClick={closeModal} className="md:hidden absolute top-4 right-4 text-white hover:text-gray-300">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
-          <div className=" bg-[#185136] xl:bg-[#185136] text-white rounded-xl w-4/5 md:w-3/4 lg:w-2/3 xl:w-2/3 relative overflow-hidden">
+          <div className=" bg-[#185136] text-white rounded-xl w-4/5 md:w-3/4 lg:w-2/3 xl:w-2/3 relative overflow-hidden">
             {/* Close button */}
             <button onClick={closeModal} className="hidden md:block absolute top-4 right-4 text-white hover:text-gray-300">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

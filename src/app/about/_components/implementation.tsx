@@ -73,11 +73,11 @@ export default function Implementation() {
     setSelectedAccordion(selectedAccordion === id ? null : id);
   };
   return (
-    <div className="bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start items-center lg:justify-start">
+    <div className="bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-0">
       <div className="w-5/6 mt-20 xl:mt-40 mb-8">
-        <h2 className="text-center text-2xl xl:text-3xl font-bold tracking-wider">Implementation Highlights by Collaboration Area</h2>
+        <h2 className="text-center text-2xl md:text-3xl xl:text-3xl font-bold tracking-wider">Implementation Highlights by Collaboration Area</h2>
       </div>
-      <div className="flex flex-col gap-2 justify-center items-center w-full lg:w-4/5 px-4 lg:min-h-[400px]">
+      <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-center items-center w-full lg:w-4/5 px-4 lg:min-h-[400px]">
         {highlightsItem.map((item) => (
           <div className="w-full flex flex-col items-center" key={item.id}>
             {/* Accordion Header */}
@@ -87,7 +87,7 @@ export default function Implementation() {
             >
               <img className="size-6" src={item.icon} alt={item.title} />
               <span className="uppercase xl:text-[20px]">{item.title}</span>
-              <span className="border-2 border-white rounded p-1">
+              <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : "" } border-2 border-white rounded p-1`}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                 </svg>
@@ -95,7 +95,7 @@ export default function Implementation() {
             </button>
             {/* Accordion Content */}
             {selectedAccordion === item.id && (
-              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center xl:items-stretch xl:w-4/5">
+              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-4/5">
                 {item.content.map((element, index) => (
                   <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-[20px]" key={index}>
                     {element}

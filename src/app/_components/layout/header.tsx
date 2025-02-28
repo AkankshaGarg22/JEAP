@@ -15,34 +15,34 @@ const Header = () => {
 
   return (
     <div className="relative w-full flex justify-center">
-      <div className="header-bar w-[95%] xl:w-[60%] md:w-[90%] flex flex-row items-center justify-between md:p-[12px] z-[100] rounded-[50px] mt-5 absolute">
-        <div className="header-logos flex flex-row items-center justify-start pl-4 gap-1 md:gap-8 basis-1/2 md:basis-1/6">
+      <div className="header-bar w-[95%] md:w-[90%] xl:w-[60%] flex flex-row items-center justify-between md:p-[12px] z-[100] rounded-[50px] mt-5 absolute">
+        <div className="header-logos flex flex-row items-center justify-start pl-4 gap-1 md:gap-4 xl:gap-8 basis-1/2 md:basis-1/4 xl:basis-1/6">
           {/* <div className="hidden md:block">
             <img className="h-[30px] lg:h-[30px] w-[30px]  lg:w-[30px]" src="/assets/blog/home.png" alt="home-logo" />
           </div> */}
           <div className="">
-            <img className="h-[38px] lg:h-[55px] w-[90px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
+            <img className="h-[38px] lg:h-[55px] w-[90px] md:w-[80px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
           </div>
         </div>
-        <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:p-3">
+        <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:py-3">
           <Link href="/about">
-            <h2 className="link-hover font-semibold">ABOUT THE JEAP</h2>
+            <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">ABOUT THE JEAP</h2>
           </Link>
 
           <Link href="#">
-            <h2 className="font-semibold link-hover">FOCUS AREAS</h2>
+            <h2 className="font-semibold md:text-[12px] xl:text-[14px] link-hover">FOCUS AREAS</h2>
           </Link>
 
           <Link href="#">
-            <h2 className="font-semibold link-hover">CONNECT WITH US</h2>
+            <h2 className="font-semibold md:text-[12px] xl:text-[14px] link-hover">CONNECT WITH US</h2>
           </Link>
 
           <Link href="#">
-            <h2 className="link-hover font-semibold">IMPACT</h2>
+            <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">IMPACT</h2>
           </Link>
 
           <Link href="#">
-            <h2 className="link-hover font-semibold">RESOURCES</h2>
+            <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">RESOURCES</h2>
           </Link>
         </div>
 

@@ -41,27 +41,27 @@ export default function Achievements() {
   }, [current]);
 
   return (
-    <div className="min-h-screen w-full xl:flex xl:flex-col xl:justify-start my-6 xl:my-0 ">
-      <div className="flex flex-col gap-2 xl:gap-4 justify-center items-center w-full">
-        <h2 className="text-center text-3xl xl:text-4xl font-extrabold tracking-wider w-4/5 xl:w-full antialiased font-[arial-bold]">Achievements</h2>
-        <p className="text-lg xl:text-xl font-bold tracking-widest antialiased">Messages from the JEAP community</p>
+    <div className="min-h-screen w-full md:flex md:flex-col md:justify-between xl:flex xl:flex-col xl:justify-start my-6 xl:my-0 ">
+      <div className="flex flex-grow  flex-col gap-2 xl:gap-4 justify-center items-center w-full">
+        <h2 className="text-center text-[32px] xl:text-4xl font-extrabold tracking-wider w-4/5 xl:w-full antialiased font-[arial-bold]">Achievements</h2>
+        <p className="text-lg md:text-[24px] xl:text-xl font-bold tracking-widest antialiased">Messages from the JEAP community</p>
       </div>
       {/* Slides */}
-      <div className="flex flex-col gap-4 mt-4">
+      <div className="flex flex-grow flex-col gap-4 md:gap-8 mt-4">
         <div className="relative flex justify-center items-center h-full">
           {/* Previous */}
-          <div className="hidden md:block absolute left-0 w-1/5 scale-75 opacity-90 -translate-x-1/4 transition-all h-full">
+          <div className="hidden xl:block absolute left-0 w-1/6 scale-75 opacity-90 -translate-x-1/6 transition-all h-full">
             <img src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-lg blur-sm" />
           </div>
 
           {/* Current */}
-          <div className="relative z-10 w-full md:w-3/4 transition-all xl:h-full">
-            <div className="flex flex-col md:flex-row justify-center items-center xl:justify-start xl:items-stretch gap-8 xl:gap-0 mx-2 bg-[#1b5632] rounded-xl">
-              <div className="relative w-full xl:max-w-[360px]">
+          <div className="relative z-10 w-full md:w-4/6 transition-all xl:h-full">
+            <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start xl:items-stretch gap-8 xl:gap-0 mx-2 bg-[#1b5632] rounded-xl">
+              <div className="relative w-full md:max-w-[5600px] xl:max-w-[360px]">
                 <div className="h-full w-full min-h-[240px] xl:min-h-[570px] inset-0">
                   <img className="block w-full h-full rounded-t-xl xl:rounded-l-xl xl:rounded-r-none object-cover" src={slides[current].image} alt={slides[current].name} />
                 </div>
-                <svg className="md:hidden absolute flex -bottom-[40px]" xmlns="http://www.w3.org/2000/svg" width="220" height="65" viewBox="0 0 220 65" fill="none">
+                <svg className="xl:hidden absolute flex -bottom-[40px]" xmlns="http://www.w3.org/2000/svg" width="220" height="65" viewBox="0 0 220 65" fill="none">
                   <path
                     d="M9.59834 13.8314L6.16533 17.2007C-0.31931 23.5649 -3.97264 32.2692 -3.97264 41.3551C-3.97264 60.0465 11.1798 75.1989 29.8712 75.1989L195.967 75.1989C209.235 75.1989 219.991 64.4429 219.991 51.1746C219.991 37.9064 209.235 27.1504 195.967 27.1504L105.3 27.1504C93.3375 27.1504 81.7789 22.3835 73.2415 14.0047C55.6203 -3.28925 27.2196 -3.46254 9.59834 13.8314Z"
                     fill="#1b5632"
@@ -73,7 +73,7 @@ export default function Achievements() {
                     fill="#1b5632"
                   ></path>
                 </svg>
-                <div className="absolute flex justify-center items-center -bottom-[45px] xl:top-[14%] left-[10px] xl:left-[95%]  w-[62px] h-[62px] rounded-full ">
+                <div className="absolute flex justify-center items-center -bottom-[45px]  xl:top-[14%] left-[10px]  xl:left-[95%]  w-[62px] h-[62px] rounded-full ">
                   <img className="w-full h-full" src="/assets/blog/about/accordian/Group 5654.png" alt="" />
                 </div>
               </div>
@@ -89,14 +89,14 @@ export default function Achievements() {
           </div>
 
           {/* Next */}
-          <div className="hidden md:block absolute right-0 w-1/5 scale-75 opacity-90 translate-x-1/4 transition-all h-full">
+          <div className="hidden xl:block absolute right-0 w-1/6 scale-75 opacity-90 translate-x-1/6 transition-all h-full">
             <img src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-lg blur-sm" />
           </div>
         </div>
         {/* Dots */}
-        <div className="md:hidden flex justify-center gap-2">
+        <div className="xl:hidden flex justify-center gap-2">
           {slides.map((_, i) => (
-            <button key={i} onClick={() => setCurrent(i)} className={`w-2 h-2 border-2 border-black rounded-full ${i === current ? "bg-green-800" : ""}`} />
+            <button key={i} onClick={() => setCurrent(i)} className={`w-2 h-2 md:h-4 md:w-4 border-2 border-black rounded-full ${i === current ? "bg-green-800" : ""}`} />
           ))}
         </div>
       </div>
