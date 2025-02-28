@@ -58,11 +58,11 @@ export default function Impact() {
 
   // Array of content data for the five sets
   const contentData = [
-    { image: "/images/image1.jpg", text: "Text 1" },
-    { image: "/images/image2.jpg", text: "Text 2" },
-    { image: "/images/image3.jpg", text: "Text 3" },
-    { image: "/images/image4.jpg", text: "Text 4" },
-    { image: "/images/image5.jpg", text: "Text 5" },
+    { image: "/assets/blog/impact/img1.png", text: "Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security" },
+    { image: "/assets/blog/impact/img2.png", text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative" },
+    { image: "/assets/blog/impact/img3.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
+    { image: "/assets/blog/impact/img4.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
+    { image: "/assets/blog/impact/img5.png", text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund" },
   ];
 
   return (
