@@ -40,19 +40,27 @@ export default function Achievements() {
     return () => clearInterval(timer);
   }, [current]);
 
+  const handlePrev = () => {
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const handleNext = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
   return (
     <div className="min-h-screen w-full md:flex md:flex-col md:justify-between xl:flex xl:flex-col xl:justify-start my-6 xl:my-0 ">
-      <div className="flex flex-grow  flex-col gap-2 xl:gap-4 justify-center items-center w-full">
-        <h2 className="text-center text-[32px] xl:text-4xl font-extrabold tracking-wider w-4/5 xl:w-full antialiased font-[arial-bold]">Achievements</h2>
-        <p className="text-lg md:text-[24px] xl:text-xl font-bold tracking-widest antialiased">Messages from the JEAP community</p>
+      <div className="flex flex-grow flex-col gap-2 xl:gap-4 justify-center items-center w-full border">
+        <h2 className="text-center text-[32px] xl:text-7xl font-extrabold tracking-wider w-4/5 xl:w-full antialiased font-[arial-bold]">Achievements</h2>
+        <p className="text-lg md:text-[24px] xl:text-2xl font-bold  tracking-widest antialiased">Messages from the JEAP community</p>
       </div>
       {/* Slides */}
       <div className="flex flex-grow flex-col gap-4 md:gap-8 mt-4">
         <div className="relative flex justify-center items-center h-full">
           {/* Previous */}
-          <div className="hidden xl:block absolute left-0 w-1/6 scale-75 opacity-90 -translate-x-1/6 transition-all h-full">
+          <button onClick={handlePrev} className="hidden xl:block absolute left-0 w-1/6 scale-75 opacity-90 -translate-x-1/6 transition-all h-full">
             <img src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-lg blur-sm" />
-          </div>
+          </button>
 
           {/* Current */}
           <div className="relative z-10 w-full md:w-4/6 transition-all xl:h-full">
@@ -89,9 +97,9 @@ export default function Achievements() {
           </div>
 
           {/* Next */}
-          <div className="hidden xl:block absolute right-0 w-1/6 scale-75 opacity-90 translate-x-1/6 transition-all h-full">
+          <button onClick={handleNext} className="hidden xl:block absolute right-0 w-1/6 scale-75 opacity-90 translate-x-1/6 transition-all h-full">
             <img src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-lg blur-sm" />
-          </div>
+          </button>
         </div>
         {/* Dots */}
         <div className="xl:hidden flex justify-center gap-2">

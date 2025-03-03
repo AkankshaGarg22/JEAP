@@ -28,6 +28,41 @@ const slides = [
       },
     ],
   },
+  {
+    id: 2,
+    title: "As a Member State, how will the JEAP help me achieve my EPR goals?",
+    items: [
+      {
+        header: "Pooling tools, resources & knowledge",
+        img: "/assets/blog/about/partnership/4.jpg",
+        details: [
+          "Make available tools and information to leverage best practices from other countries",
+          "Provide access to catalytic funding to set up infrastructure in new areas",
+          "Creating a common pool of resources to improve efficiencies",
+          "Commit to and provide support for piloting innovative ways of doing business",
+          "Improve resource efficiency to tackle interrelated problems more effectively",
+        ],
+      },
+      {
+        header: "Building regional leadership and conducting joint advocacy",
+        img: "/assets/blog/about/partnership/5.jpg",
+        details: [
+          "Create opportunities to leverage countries’ complementarities and respective strengths",
+          "Share expertise at global forums, elevating your country’s role in international health security",
+          "Facilitate joint advocacy on behalf of African countries with global and regional partners",
+          "Strengthen community mobilisation, assessments and research on RCCE and SBC",
+        ],
+      },
+      {
+        header: "Facilitate cross border coordination",
+        img: "/assets/blog/about/partnership/6.jpg",
+        details: [
+          "Connect countries facing similar challenges to one another for collaboration",
+          "Share strategies to improve inter-country collaboration e.g. frameworks, partnerships, and platforms",
+        ],
+      },
+    ],
+  },
 ];
 
 interface SlideItem {
@@ -69,51 +104,51 @@ export default function PartnerShip() {
   };
 
   return (
-    <div className="h-screen xl:h-[1024px] flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-contain bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200]">
+    <div className="h-screen xl:h-screen flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-cover bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200]">
       <div className="basis-1/5 md:basis-1/4 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white md:w-3/4 md:pt-8 ">
-      <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[4rem] xl:text-6xl font-[arial-bold]">JEAP: Partnering for Impact</h2>
+        <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[4rem] xl:text-[70px] font-[arial-bold]">JEAP: Partnering for Impact</h2>
       </div>
-      <div className="basis-4/5 md:basis-3/4 flex items-center md:items-start justify-start xl:justify-center w-full xl:w-4/5 mb-4 md:mb-auto">
-        <div className="relative w-full md:h-full ">
-          {/* Slide Container */}
-          <div
-            ref={sliderRef}
-            className="w-full md:h-full overflow-hidden flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `100%` }}
-          >
+      <div className="basis-4/5 md:basis-3/4 w-full xl:w-5/6 relative mb-2 xl:mb-0">
+        {/* Slide Container - Fixed width approach */}
+        <div className="w-full h-full overflow-hidden">
+          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {slides.map((slide) => (
-              <div key={slide.id} className="w-full flex flex-col gap-2 md:gap-0 md:justify-center xl:justify-center md:h-full xl:h-full" style={{ flex: "0 0 100%" }}>
-                <div className="md:basis-1/10 md:shrink xl:shrink-0 xl:basis-1/5 flex flex-col items-center xl:justify-center px-2">
-                  <p className="text-center text-white w-3/4 xl:w-full xl:leading-snug md:text-xl xl:text-xl">{slide.title}</p>
+              <div key={slide.id} className="w-full flex-shrink-0 flex flex-col gap-2 md:gap-0 xl:gap-8 md:justify-around">
+                <div className="md:basis-1/10 xl:basis-1/5 flex flex-col items-center px-2 mb-2 xl:my-4">
+                  <p className="text-center text-white w-4/5 xl:w-full xl:leading-snug md:text-xl xl:text-xl">{slide.title}</p>
                 </div>
-                <div className="md:basis-9/10 md:grow xl:grow-0 xl:basis-4/5  relative md:h-full xl:h-full flex flex-col gap-4 md:gap-6 xl:gap-2 xl:flex-row items-center justify-center xl:items-start">
-                  {slide.items.map((item) => (
-                    <div className="h-50 border border-white flex flex-col rounded-3xl w-3/4 hover:bg-white text-white hover:text-green-800" onClick={() => openModal(item)}>
-                      <img className="h-40 xl:h-60 w-full rounded-3xl object-cover p-1 md:p-2 xl:p-2" src={item.img} alt={item.header} />
-                      <p className=" text-center text-base xl:text-lg py-1 md:py-2 xl:py-2">{item.header}</p>
+
+                <div className="md:basis-9/10 xl:basis-4/5 flex flex-col xl:flex-row items-center xl:items-stretch justify-center gap-2 md:gap-6 xl:gap-2 px-4">
+                  {slide.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[30%] hover:bg-white text-white hover:text-green-800 cursor-pointer transition-colors duration-300"
+                      onClick={() => openModal(item)}
+                    >
+                      <img className="h-40 xl:h-60 w-full rounded-t-3xl object-cover p-1 md:p-2" src={item.img} alt={item.header} />
+                      <p className="text-center text-base xl:text-lg py-2 px-2">{item.header}</p>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-
-          {/* Arrows */}
-          <button onClick={handlePrev} className="absolute left-2 top-5 xl:-left-[10%] xl:top-1/3 transform -translate-y-1/2">
-            <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center hover:bg-red-200 duration-300 ease-in-out">
-              <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
-              </svg>
-            </div>
-          </button>
-          <button onClick={handleNext} className="absolute right-2 top-5 xl:-right-[10%] xl:top-1/3  transform -translate-y-1/2">
-            <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center duration-300 ease-in-out">
-              <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-              </svg>
-            </div>
-          </button>
         </div>
+        <button onClick={handlePrev} className="absolute left-2 top-1/2 xl:-left-[5%] transform -translate-y-1/2 z-10" aria-label="Previous slide">
+          <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center hover:bg-red-200 transition duration-300">
+            <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
+            </svg>
+          </div>
+        </button>
+
+        <button onClick={handleNext} className="absolute right-2 top-1/2 xl:-right-[5%] transform -translate-y-1/2 z-10" aria-label="Next slide">
+          <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center hover:bg-gray-200 transition duration-300">
+            <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+            </svg>
+          </div>
+        </button>
       </div>
 
       {/* Modal */}
