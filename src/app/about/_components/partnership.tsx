@@ -8,7 +8,7 @@ const slides = [
     items: [
       {
         header: "Pooling tools, resources & knowledge",
-        img: "/assets/blog/about/partnership/1.jpg",
+        img: "/assets/blog/about/partnership/1.webp",
         details: [
           "Expertise in scoping, assessing and filling capacity gaps for emergency preparedness and response",
           "Longer sustainability of initiatives undertaken, including with other countries, through JEAP support",
@@ -18,12 +18,12 @@ const slides = [
       },
       {
         header: "Leadership and Advocacy",
-        img: "/assets/blog/about/partnership/2.jpg",
+        img: "/assets/blog/about/partnership/2.webp",
         details: ["Become a model for other African nations by sharing your expertise and strengths", "Collaboration with key global partners, positioning your country as a leader in health EPR"],
       },
       {
         header: "Cross Border Coordination",
-        img: "/assets/blog/about/partnership/3.jpg",
+        img: "/assets/blog/about/partnership/3.webp",
         details: ["Closer ties to a network of countries facing similar challenges", "Enhanced efficiency of your EPR efforts and of those in the region that impact your country"],
       },
     ],
@@ -34,7 +34,7 @@ const slides = [
     items: [
       {
         header: "Pooling tools, resources & knowledge",
-        img: "/assets/blog/about/partnership/4.jpg",
+        img: "/assets/blog/about/partnership/4.webp",
         details: [
           "Make available tools and information to leverage best practices from other countries",
           "Provide access to catalytic funding to set up infrastructure in new areas",
@@ -45,7 +45,7 @@ const slides = [
       },
       {
         header: "Building regional leadership and conducting joint advocacy",
-        img: "/assets/blog/about/partnership/5.jpg",
+        img: "/assets/blog/about/partnership/5.webp",
         details: [
           "Create opportunities to leverage countries’ complementarities and respective strengths",
           "Share expertise at global forums, elevating your country’s role in international health security",
@@ -55,7 +55,7 @@ const slides = [
       },
       {
         header: "Facilitate cross border coordination",
-        img: "/assets/blog/about/partnership/6.jpg",
+        img: "/assets/blog/about/partnership/6.webp",
         details: [
           "Connect countries facing similar challenges to one another for collaboration",
           "Share strategies to improve inter-country collaboration e.g. frameworks, partnerships, and platforms",
