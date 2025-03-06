@@ -65,7 +65,9 @@ export default function Conceptualization() {
       const containerTop = containerRect.top;
       const containerHeight = containerRect.height;
 
-      const scrollThreshold = containerTop + containerHeight * 0.25; // 25% of container height
+      const multiplier = window.innerWidth >= 2560 ? 0.15 : 0.25;
+
+      const scrollThreshold = containerTop + containerHeight * multiplier; // 25% of container height
 
       timelineRefs.current.forEach((ref, index) => {
         if (!ref) return;
@@ -93,15 +95,15 @@ export default function Conceptualization() {
   }, [containerVisible, activeIndex]);
 
   return (
-    <div className="xl:h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 items-center xl:justify-around py-2">
+    <div className="xl:h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 min-[2560px]:gap-8 items-center xl:justify-around py-2">
       <h2 className="mt-4 text-center text-2xl xl:text-[70px] font-bold tracking-wider w-4/5 xl:w-full">JEAP conceptualization and launch</h2>
-      <p className="w-4/5 xl:w-9/10 text-base xl:text-[18px]">
+      <p className="w-4/5 xl:w-9/10 text-base xl:text-[18px] min-[2560px]:text-2xl">
         While the JEAP was formally launched in May 2023, its journey began more than a year earlier. In March 2022, the founding partners held an in-person retreat to begin consolidating regional
         strategies, recognizing that they were pursuing shared objectives in supporting African Member States and that there were opportunities to enhance coordination. The retreat kick-started a
         year-long process to define common priority areas while also piloting initiatives to combine or further align to related programs in service of more efficient support to Member States.
         Discussions including reviewing existing strategies, recent evidence including more than 200 expert recommendations following COVID-19, as well as options for governance and management.
       </p>
-      <p className="w-4/5 xl:w-9/10 text-base xl:text-[18px]">
+      <p className="w-4/5 xl:w-9/10 text-base xl:text-[18px] min-[2560px]:text-2xl">
         As a result, in May 2023, the JEAP Partnership was formally launched. Shortly thereafter, its 5-year plan (2023-2027) was validated as a core document to guide the JEAP’s work with Member
         States to tackle key challenges across the areas of preparation, detection and response. Through implementing this plan, the JEAP strives to achieve several ambitious outcomes:
       </p>
@@ -121,8 +123,8 @@ export default function Conceptualization() {
         <div className="flex-none">
           <h2 className="text-3xl font-bold my-8">JEAP Target Outcomes</h2>
         </div>
-        <div className="flex-1 h-[50vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
-          <div className="relative xl:h-[180vh]">
+        <div className="flex-1 h-[50vh] min-[2560px]:h-[35vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
+          <div className="relative xl:h-[180vh] min-[2560px]:h-[90vh]">
             {/* Vertical timeline line */}
             <div className="absolute z-10 w-0.5 bg-white left-4 mt-5" style={{ top: lineStyles.top, height: lineStyles.height }}></div>
 
@@ -146,7 +148,7 @@ export default function Conceptualization() {
                     className={`bg-white text-teal-900 p-6 rounded-md transition-all duration-300
                         ${activeIndex === i ? "ring-2 ring-teal-300 shadow-lg opacity-100" : "opacity-50"}`}
                   >
-                    <p className="text-lg">{item}</p>
+                    <p className="text-lg 2xl:text-xl">{item}</p>
                   </div>
                 </div>
               ))}
