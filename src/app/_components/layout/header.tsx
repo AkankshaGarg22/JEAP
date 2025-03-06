@@ -20,16 +20,16 @@ const Header = () => {
           {/* <div className="hidden md:block">
             <img className="h-[30px] lg:h-[30px] w-[30px]  lg:w-[30px]" src="/assets/blog/home.png" alt="home-logo" />
           </div> */}
-          <div className="">
+          <Link href="/">
             <img className="h-[38px] lg:h-[55px] w-[90px] md:w-[80px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
-          </div>
+          </Link>
         </div>
         <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:py-3">
           <Link href="/about">
             <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">ABOUT THE JEAP</h2>
           </Link>
 
-          <Link href="#">
+          <Link href="/focus">
             <h2 className="font-semibold md:text-[12px] xl:text-[14px] link-hover">FOCUS AREAS</h2>
           </Link>
 

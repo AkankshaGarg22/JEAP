@@ -73,7 +73,7 @@ export default function Implementation() {
     setSelectedAccordion(selectedAccordion === id ? null : id);
   };
   return (
-    <div className=" bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-0">
+    <div className=" bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start 2xl:justify-center items-center md:gap-8 xl:gap-0">
       <div className="w-5/6 xl:w-3/4 mt-20 xl:mt-32 mb-8">
         <h2 className="text-center text-2xl md:text-3xl xl:text-[70px] font-bold tracking-wider xl:leading-[4rem]">Implementation Highlights by Collaboration Area</h2>
       </div>

@@ -48,7 +48,7 @@ export default function AboutLanding() {
 
   return (
     <div className="min-h-screen fixed" ref={parallaxRef}>
-      <section className="relative text-white w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] bg-about-landing">
+      <section className="relative text-white w-full h-screen 2xl:w-dvw bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] bg-about-landing">
         <div className="flex flex-col justify-center items-center w-[90%] xl:w-[75%] text-center gap-4">
           <h1 className="xl:leading-[1] text-3xl md:text-7xl font-[arial-bold] leading-tight">ABOUT THE JEAP</h1>
           <h1 className="xl:leading-[1] text-2xl md:text-6xl font-[arial-bold] leading-tight">The Join Emergency Action Plan</h1>
