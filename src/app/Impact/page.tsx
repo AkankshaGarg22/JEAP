@@ -6,6 +6,7 @@ import Loading from "../_components/layout/loading";
 import Footer from "../_components/layout/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ImpactLanding from "./_components/ImpactLanding";
 
 // Define props for the alternate content component
 interface AlternateContentProps {
@@ -14,8 +15,6 @@ interface AlternateContentProps {
   isReversed?: boolean;
 }
 
-// AlternateContent component: displays an image and text with alternating order.
-// The image element uses AOS for a fade-up effect.
 const AlternateContent: React.FC<AlternateContentProps> = ({
   imageSrc,
   text,
@@ -23,29 +22,32 @@ const AlternateContent: React.FC<AlternateContentProps> = ({
 }) => {
   return (
     <div
-      className={`transparent flex flex-col md:flex-row ${
+      className={`flex flex-col md:flex-row m-0 p-0 ${
         isReversed ? "md:flex-row-reverse" : ""
-      } items-center justify-center space-y-4 md:space-y-0 md:space-x-8 gap-x-4 my-8`}
+      } items-center justify-center space-y-4 md:space-y-0 md:space-x-8 gap-x-4 pb-16 pt-16`}
     >
-      {/* White image container with fixed dimensions */}
-      <div className="w-[300px] h-[400px] bg-white flex items-center justify-center shadow-md">
+      {/* Translucent white image container with fixed dimensions */}
+      <div className="lg:w-[400px] lg:h-[400px] md:w-[50%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg">
         <img
           src={imageSrc}
           alt={text}
-          className="w-full h-full object-contain"
-          data-aos="fade-up" // AOS animation applied on the image
+          className="w-[300px] h-[300px] object-contain "
+          data-aos="fade-up"
         />
       </div>
 
-      {/* Text container: Arial font at 50px */}
-      <div className="p-4">
-        <p style={{ fontFamily: "Arial" }} className="text-[50px]">
+      {/* Text container with white text and a yellow pseudo-element */}
+      <div className="p-4 relative lg:w-[40%] sm:w-[100%] ">
+        <p
+          className="text-white lg:text-[30px] md:text-[30px] sm:w-100 sm:text-2xl md:w-[80%] lg:w-[70%] text-center lg:text-left relative font-ArialRegular after:absolute after:w-10 after:h-2 after:bg-yellow-400 after:bottom-[-10px] after:left-0 "
+        >
           {text}
         </p>
       </div>
     </div>
   );
 };
+
 
 export default function Impact() {
   // Reference for scroll animations if needed
@@ -66,11 +68,17 @@ export default function Impact() {
   ];
 
   return (
-    <main className="relative ">
+    <main className="relative m-0 p-0 bg-red-950 ">
+      <ImpactLanding></ImpactLanding>
+
       <ErrorBoundary>
         <Suspense fallback={<Loading />}>
-          {/* Main content area with 100vh margin from the top */}
-          <div className="relativebg-gradient-to-b from-[#1B5632] to-[#00205C] mt-[100vh]" ref={contentRef}>
+       
+
+         
+          <div className="relative bg-gradient-to-b from-[#1B5632] to-[#00205C] m-0" ref={contentRef}>
+            <div className="bg-transparent"></div>
+          <h1 className="text-white text-[3rem] font-bold font-ArialRegular p-4 top-[1063px] text-center">Case Studies</h1>
             {contentData.map((item, index) => (
               <AlternateContent
                 key={index}

@@ -135,7 +135,7 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
 
 
   return (
-    <>
+     <>
       <Head>
         {images.map((image,index) => (
           <link key={index} rel="preload" href={image} as="image" />

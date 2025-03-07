@@ -9,10 +9,11 @@ export function Footer() {
     }
   }
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 w-full">
+    <footer className=" border-0 w-full m-0 p-0">
       {/* <Maintenance></Maintenance> */}
       <div className="lg:h-[30vh] h-[50vh]  flex items-center justify-center bg-gradient-to-t to-[#00205C] from-[#1B5632] p-2">
   <div className="w-full max-w-6xl flex flex-col items-center justify-between h-full py-2">
+    
     {/* Column 1: Three Images - responsive arrangement */}
     <div className="flex flex-row space-x-4 items-center justify-center">
       <img
