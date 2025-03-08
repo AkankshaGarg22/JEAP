@@ -60,11 +60,11 @@ export default function Impact() {
 
   // Array of content data for the five sets
   const contentData = [
-    { image: "/assets/blog/impact/img1.png", text: "Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security" },
-    { image: "/assets/blog/impact/img2.png", text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative" },
-    { image: "/assets/blog/impact/img3.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
-    { image: "/assets/blog/impact/img4.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
-    { image: "/assets/blog/impact/img5.png", text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund" },
+    { image: "/assets/blog/impactimages/img1.png", text: "Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security" },
+    { image: "/assets/blog/impactimages/img2.png", text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative" },
+    { image: "/assets/blog/impactimages/img3.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
+    { image: "/assets/blog/impactimages/img4.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
+    { image: "/assets/blog/impactimages/img5.png", text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund" },
   ];
 
   return (
