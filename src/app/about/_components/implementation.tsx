@@ -16,7 +16,7 @@ const highlightsItem = [
       </>,
       <>
         <Bold>14 countries</Bold> have utilized AVoHC-SURGE members locally to respond to different emergencies. WHO has also utilized the roster to deploy <Bold>15 AVoHC-SURGE</Bold> members from
-        <Bold>8 countries</Bold> to support emergency response abroad.
+        <Bold> 8 countries</Bold> to support emergency response abroad.
       </>,
     ],
   },
@@ -87,17 +87,23 @@ export default function Implementation() {
             >
               <img className="size-6" src={item.icon} alt={item.title} />
               <span className="uppercase xl:text-[20px]">{item.title}</span>
-              <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : "" } border-2 border-white rounded p-1`}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-                </svg>
+              <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : ""} border-2 border-white rounded p-1`}>
+                {item.id === selectedAccordion ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+                )}
               </span>
             </button>
             {/* Accordion Content */}
             {selectedAccordion === item.id && (
-              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-full xl:px-2">
+              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-9/10 xl:px-2">
                 {item.content.map((element, index) => (
-                  <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-[20px]" key={index}>
+                  <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-lg" key={index}>
                     {element}
                   </div>
                 ))}

@@ -18,6 +18,7 @@ const config: Config = {
         "mb-curve" : "url(/assets/blog/mb-curve.svg)",
         "lg-curve" : "url(/assets/blog/header.svg)",
         "about-landing" : "url(/assets/blog/about/bg/1.jpg)",
+        "focus-landing" : "url(/assets/blog/focus/bg/1.jpg)",
         "mb-about-curve" : "url(/assets/blog/about/curve/mb.png)",
         "xl-about-curve" : "url(/assets/blog/about/curve/xl.png)",
       },
@@ -77,6 +78,11 @@ const config: Config = {
       transitionProperty: {
         'bg-image': 'background-image',
       },
+      screens: {
+        'xs' : '390px',
+        '3xl': '2560px',
+        '4xl': '3455px'    
+      }
 
     },
   },

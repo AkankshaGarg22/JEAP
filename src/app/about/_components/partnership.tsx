@@ -105,17 +105,17 @@ export default function PartnerShip() {
 
   return (
     <div className="h-screen xl:h-screen flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-cover bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200]">
-      <div className="basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white md:w-3/4 md:pt-8 ">
+      <div className="basis-1/4 xs:basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-2 xs:mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white w-3/4 xs:w-full md:w-3/4 md:pt-8 ">
         <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[4rem] xl:text-[70px] font-[arial-bold]">JEAP: Partnering for Impact</h2>
       </div>
-      <div className="basis-4/5 md:basis-3/4 xl:basis-3/4 2xl:basis-2/3 w-full xl:w-5/6 relative mb-2 xl:mb-0 2xl:mb-4">
+      <div className="basis-3/4 xs:basis-4/5 md:basis-3/4 xl:basis-3/4 2xl:basis-2/3 w-full xl:w-5/6 relative xs:mb-2 xl:mb-0 2xl:mb-4">
         {/* Slide Container - Fixed width approach */}
         <div className="w-full h-full overflow-hidden 2xl:flex 2xl:flex-col 2xl:justify-center">
           <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {slides.map((slide) => (
               <div key={slide.id} className="w-full flex-shrink-0 flex flex-col gap-2 md:gap-0 xl:gap-8 md:justify-around">
-                <div className="md:basis-1/10 xl:basis-1/5 flex flex-col items-center px-2 mb-2 xl:my-4 2xl:my-2">
-                  <p className="text-center text-white w-4/5 xl:w-full xl:leading-snug md:text-xl xl:text-xl 2xl:text-2xl">{slide.title}</p>
+                <div className="md:basis-1/10 xl:basis-1/5 flex flex-col items-center px-2 mb-1 xs:mb-2 xl:my-4 2xl:my-2">
+                  <p className="text-center text-white w-full xl:w-full xl:leading-snug md:text-xl xl:text-xl 2xl:text-2xl">{slide.title}</p>
                 </div>
 
                 <div className="md:basis-9/10 xl:basis-4/5 flex flex-col xl:flex-row items-center xl:items-stretch justify-center gap-2 md:gap-6 xl:gap-2 px-4">
@@ -125,8 +125,8 @@ export default function PartnerShip() {
                       className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[30%] hover:bg-white text-white hover:text-green-800 cursor-pointer transition-colors duration-300"
                       onClick={() => openModal(item)}
                     >
-                      <img className="h-40 xl:max-2xl:h-60 2xl:h-96 w-full rounded-t-3xl object-cover p-1 md:p-2" src={item.img} alt={item.header} />
-                      <p className="text-center text-base xl:text-lg 2xl:text-[20px] py-2 px-2">{item.header}</p>
+                      <img className="h-32 xs:h-40 xl:max-2xl:h-60 2xl:h-96 w-full rounded-t-3xl object-cover p-1 md:p-2" src={item.img} alt={item.header} />
+                      <p className="text-center text-sm xs:text-base xl:text-lg 2xl:text-[20px] py-1 xs:py-2 px-2">{item.header}</p>
                     </div>
                   ))}
                 </div>
@@ -170,14 +170,14 @@ export default function PartnerShip() {
             <div className="flex flex-col md:flex-row h-full">
               {/* Image - full width on mobile, half width on larger screens */}
               <div className="w-full md:w-1/2 xl:aspect-square">
-                <img src={selectedItem.img} alt={selectedItem.header} className="w-full object-cover md:h-full rounded-xl" />
+                <img src={selectedItem.img} alt={selectedItem.header} className="w-full object-cover h-40 xs:h-60 md:h-full rounded-xl" />
               </div>
 
               {/* Right side - Content */}
-              <div className="w-full md:w-1/2 p-6 overflow-y-auto">
-                <h3 className="text-2xl font-bold mb-4">{selectedItem.header}</h3>
+              <div className="w-full md:w-1/2 p-2 xs:p-6 overflow-y-auto">
+                <h3 className="text-xl xs:text-2xl font-bold mb-4">{selectedItem.header}</h3>
 
-                <ul className="space-y-4">
+                <ul className="space-y-2 xs:space-y-4">
                   {selectedItem.details.map((detail, index) => (
                     <li key={index} className="flex">
                       <span className="mr-2 flex-shrink-0">→</span>
