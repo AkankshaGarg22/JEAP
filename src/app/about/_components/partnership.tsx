@@ -159,7 +159,7 @@ export default function PartnerShip() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
-          <div className=" bg-[#46735f] xl:bg-opacity-50 text-white rounded-xl w-4/5 md:w-3/4 lg:w-2/3 xl:w-2/3 p-4 relative overflow-hidden">
+          <div className="bg-[#185136] xl:bg-[#46735f] xl:bg-opacity-50 text-white rounded-xl w-4/5 md:w-3/4 lg:w-2/3 xl:w-2/3 p-4 relative overflow-hidden">
             {/* Close button */}
             <button onClick={closeModal} className="hidden md:block absolute top-4 right-4 text-white hover:text-gray-300">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
