@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 const slides = [
@@ -125,7 +126,15 @@ export default function PartnerShip() {
                       className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[30%] hover:bg-white text-white hover:text-green-800 cursor-pointer transition-colors duration-300"
                       onClick={() => openModal(item)}
                     >
-                      <img className="h-32 xs:h-40 xl:max-2xl:h-60 2xl:h-96 w-full rounded-t-3xl object-cover p-1 md:p-2" src={item.img} alt={item.header} />
+                      <Image
+                        width={800}
+                        height={600}
+                        objectFit="cover"
+                        className="h-32 xs:h-40 xl:max-2xl:h-60 2xl:h-96 w-full rounded-t-3xl object-cover p-1 md:p-2"
+                        sizes="(max-width: 768px) 80vw, (max-width: 1280px) 30vw, (max-width: 1536px) 25vw, 20vw"
+                        src={item.img}
+                        alt={item.header}
+                      />
                       <p className="text-center text-sm xs:text-base xl:text-lg 2xl:text-[20px] py-1 xs:py-2 px-2">{item.header}</p>
                     </div>
                   ))}
