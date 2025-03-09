@@ -73,11 +73,11 @@ export default function Implementation() {
     setSelectedAccordion(selectedAccordion === id ? null : id);
   };
   return (
-    <div className=" bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start 2xl:justify-center items-center md:gap-8 xl:gap-0">
-      <div className="w-5/6 xl:w-3/4 mt-20 xl:mt-32 mb-8">
-        <h2 className="text-center text-2xl md:text-3xl xl:text-[70px] font-bold tracking-wider xl:leading-[4rem]">Implementation Highlights by Collaboration Area</h2>
+    <div className="bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start 2xl:justify-center items-center md:gap-8 xl:gap-0">
+      <div className="w-5/6 xl:w-3/4 mt-20 xl:mt-32 mb-8 xl:mb-0">
+        <h2 className="text-center text-2xl md:text-3xl xl:text-7xl font-bold tracking-wider xl:leading-[5rem]">Implementation Highlights by Collaboration Area</h2>
       </div>
-      <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-center items-center w-full lg:w-4/5 px-4 lg:min-h-[400px]">
+      <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-center items-center w-full lg:w-4/5 px-4 lg:min-h-[650px]">
         {highlightsItem.map((item) => (
           <div className="w-full flex flex-col items-center" key={item.id}>
             {/* Accordion Header */}
@@ -101,7 +101,7 @@ export default function Implementation() {
             </button>
             {/* Accordion Content */}
             {selectedAccordion === item.id && (
-              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-9/10 xl:px-2">
+              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-4/5">
                 {item.content.map((element, index) => (
                   <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-lg" key={index}>
                     {element}

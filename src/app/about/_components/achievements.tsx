@@ -86,10 +86,10 @@ export default function Achievements() {
                 </div>
               </div>
 
-              <div className="w-full h-full xl:w-4/5 xl:min-h-[570px] space-y-4 text-white py-4 px-4 xl:px-20 flex flex-col items-start xl:justify-around xl:items-start">
-                <p className="text-justify">"{slides[current].quote}"</p>
+              <div className="w-full h-full xl:w-4/5 min-h-80 xl:min-h-[570px] space-y-4 text-white py-4 px-4 xl:px-20 flex flex-col items-start xl:justify-around xl:items-start">
+                <p className="text-justify text-base lg:text-xl">"{slides[current].quote}"</p>
                 <div className="text-start">
-                  <h3 className="text-2xl font-bold xl:mb-4">{slides[current].name}</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold xl:mb-4">{slides[current].name}</h3>
                   <p className="text-lg">{slides[current].pos}</p>
                 </div>
               </div>
