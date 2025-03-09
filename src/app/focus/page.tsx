@@ -7,6 +7,7 @@ import Areas from "./_components/areas";
 import Progress from "./_components/progress";
 import Highlights from "./_components/highlights";
 import List from "./_components/list";
+import Footer from "../_components/layout/footer";
 
 export default function Index() {
   return (
@@ -31,6 +32,9 @@ export default function Index() {
               <div>
                 <List />
               </div>
+            </div>
+            <div className="relative">
+              <Footer />
             </div>
           </div>
         </Suspense>

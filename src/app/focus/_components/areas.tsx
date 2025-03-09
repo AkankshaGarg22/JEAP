@@ -6,19 +6,19 @@ const arr = [
     id: 1,
     title: "Climate Change",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches. To address this, the JEAP incorporated a TWG focused on climate change into its action plan.",
   },
   {
     id: 2,
     title: "Country Assessments",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies.",
   },
   {
     id: 3,
     title: "Digitalization",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "The aftermath of the COVID-19 pandemic highlighted the critical need for technology-driven solutions in Africa's health sector to strengthen countries' ability to promptly prepare for, detect, and respond to health emergencies.",
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ export default function Areas() {
       <div className="w-5/6 mt-20 xl:mt-24 mb-8">
         <h2 className="text-center text-2xl md:text-3xl xl:text-7xl font-bold tracking-wider">Focus Areas</h2>
       </div>
-      <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-center items-center w-[90%] xl:w-3/4 lg:min-h-[400px]">
+      <div className="flex flex-col gap-2 md:gap-8 xl:gap-4 justify-center items-center w-[90%] xl:w-3/4 lg:min-h-[400px] md:py-4">
         {arr.map((item) => (
           <div className="w-full flex flex-col items-center" key={item.id}>
             {/* Accordion Header */}
@@ -78,7 +78,7 @@ export default function Areas() {
               </span>
             </button>
             {/* Accordion Content */}
-            {selectedAccordion === item.id && <div className="w-9/10 flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-[18px]">{item.content}</div>}
+            {selectedAccordion === item.id && <div className="w-[85%] flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-[18px] leading-8">{item.content}</div>}
           </div>
         ))}
       </div>

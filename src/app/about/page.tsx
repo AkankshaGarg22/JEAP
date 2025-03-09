@@ -10,7 +10,6 @@ import Conceptualization from "./_components/conceptualization";
 import Footer from "../_components/layout/footer";
 
 export default function Index() {
-
   return (
     <main className="relative">
       <ErrorBoundary>
@@ -34,9 +33,9 @@ export default function Index() {
                 <Implementation />
               </div>
             </div>
-             <div className="relative">
-                          <Footer />
-                        </div>
+            <div className="relative">
+              <Footer />
+            </div>
           </div>
         </Suspense>
       </ErrorBoundary>
