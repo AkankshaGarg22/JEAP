@@ -21,6 +21,7 @@ const config: Config = {
         "focus-landing" : "url(/assets/blog/focus/bg/1.jpg)",
         "mb-about-curve" : "url(/assets/blog/about/curve/mb.png)",
         "xl-about-curve" : "url(/assets/blog/about/curve/xl.png)",
+        "mb-partner-curve" : "url(/assets/blog/about/curve/mb-partner.png)",
       },
       colors: {
         "accent-1": "#FAFAFA",

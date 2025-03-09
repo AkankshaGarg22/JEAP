@@ -104,7 +104,7 @@ export default function PartnerShip() {
   };
 
   return (
-    <div className="h-screen xl:h-screen flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-cover bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200]">
+    <div className="h-screen xl:h-screen flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200]">
       <div className="basis-1/4 xs:basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-2 xs:mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white w-3/4 xs:w-full md:w-3/4 md:pt-8 ">
         <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[4rem] xl:text-[70px] font-[arial-bold]">JEAP: Partnering for Impact</h2>
       </div>
