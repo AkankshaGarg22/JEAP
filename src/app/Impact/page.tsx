@@ -7,6 +7,7 @@ import Footer from "../_components/layout/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ImpactLanding from "./_components/ImpactLanding";
+import "./impact.min.css";
 
 // Define props for the alternate content component
 interface AlternateContentProps {
@@ -27,20 +28,18 @@ const AlternateContent: React.FC<AlternateContentProps> = ({
       } items-center justify-center space-y-4 md:space-y-0 md:space-x-8 gap-x-4 pb-16 pt-16`}
     >
       {/* Translucent white image container with fixed dimensions */}
-      <div className="lg:w-[400px] lg:h-[400px] md:w-[50%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg">
+      <div className="lg:w-[400px] lg:h-[400px] md:w-[80%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg" data-aos="fade-up">
         <img
           src={imageSrc}
           alt={text}
-          className="w-[300px] h-[300px] object-contain "
-          data-aos="fade-up"
+          className="w-[200px] h-auto object-contain custom-shadow"
         />
       </div>
 
       {/* Text container with white text and a yellow pseudo-element */}
-      <div className="p-4 relative lg:w-[40%] sm:w-[100%] ">
+      <div className="p-4 relative lg:w-[40%] sm:w-[80%] flex items-center justify-center">
         <p
-          className="text-white lg:text-[30px] md:text-[30px] sm:w-100 sm:text-2xl md:w-[80%] lg:w-[70%] text-center lg:text-left relative font-ArialRegular after:absolute after:w-10 after:h-2 after:bg-yellow-400 after:bottom-[-10px] after:left-0 "
-        >
+          className="custom-text">
           {text}
         </p>
       </div>
@@ -60,11 +59,11 @@ export default function Impact() {
 
   // Array of content data for the five sets
   const contentData = [
-    { image: "/assets/blog/impact/img1.png", text: "Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security" },
-    { image: "/assets/blog/impact/img2.png", text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative" },
-    { image: "/assets/blog/impact/img3.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
-    { image: "/assets/blog/impact/img4.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
-    { image: "/assets/blog/impact/img5.png", text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund" },
+    { image: "/assets/blog/impactimages/img1.png", text: "Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security" },
+    { image: "/assets/blog/impactimages/img2.png", text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative" },
+    { image: "/assets/blog/impactimages/img3.png", text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa" },
+    { image: "/assets/blog/impactimages/img4.png", text: "Addressing the health impacts of flooding in the Republic of Congo" },
+    { image: "/assets/blog/impactimages/img5.png", text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund" },
   ];
 
   return (
