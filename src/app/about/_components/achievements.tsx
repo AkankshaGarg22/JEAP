@@ -49,10 +49,10 @@ export default function Achievements() {
   };
 
   return (
-    <div className="min-h-screen w-full md:flex md:flex-col md:justify-between xl:flex xl:flex-col xl:justify-start my-6 xl:my-0 ">
-      <div className="flex flex-grow flex-col gap-2 xl:gap-4 justify-center items-center w-full border">
+    <div className="min-h-screen w-full md:flex md:flex-col md:justify-between xl:flex xl:flex-col xl:justify-start my-6 xl:my-0 xl:gap-4">
+      <div className="flex flex-grow flex-col gap-2 xl:gap-2 justify-center items-center w-full">
         <h2 className="text-center text-[32px] xl:text-7xl font-extrabold tracking-wider w-4/5 xl:w-full antialiased font-[arial-bold]">Achievements</h2>
-        <p className="text-lg md:text-[24px] xl:text-2xl font-bold  tracking-widest antialiased">Messages from the JEAP community</p>
+        <p className="text-lg md:text-[24px] xl:text-[2rem] font-bold  tracking-widest antialiased">Messages from the JEAP community</p>
       </div>
       {/* Slides */}
       <div className="flex flex-grow flex-col gap-4 md:gap-8 mt-4">
