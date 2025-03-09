@@ -131,7 +131,7 @@ export default function Conceptualization() {
           <h2 className="text-3xl font-bold my-8">JEAP Target Outcomes</h2>
         </div>
         <div className="flex-1 h-[50vh] 3xl:h-[35vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
-          <div className="relative xl:h-[180vh] 2xl:[h-90vh] 3xl:h-[80vh] 4xl:h-[75vh]">
+          <div className="relative xl:h-[150vh] 2xl:[h-90vh] 3xl:h-[80vh] 4xl:h-[75vh]">
             {/* Vertical timeline line */}
             <div className="absolute z-10 w-0.5 bg-white left-4 mt-5" style={{ top: lineStyles.top, height: lineStyles.height }}></div>
 

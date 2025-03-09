@@ -7,6 +7,7 @@ import PartnerShip from "./_components/partnership";
 import Implementation from "./_components/implementation";
 import Achievements from "./_components/achievements";
 import Conceptualization from "./_components/conceptualization";
+import Footer from "../_components/layout/footer";
 
 export default function Index() {
 
@@ -33,6 +34,9 @@ export default function Index() {
                 <Implementation />
               </div>
             </div>
+             <div className="relative">
+                          <Footer />
+                        </div>
           </div>
         </Suspense>
       </ErrorBoundary>
