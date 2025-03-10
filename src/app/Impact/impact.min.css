@@ -1,11 +1,27 @@
-/* Custom class */
 .custom-text {
-    color: white;
+    color: #ffffff; /* Default text color */
     text-align: center;
     position: relative;
     font-family: "ArialRegular", sans-serif;
-
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color 0.3s ease-in-out, background-size 0.3s ease-in-out;
+    background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+    background-size: 0% 100%; /* Initially, no background is visible */
+    background-repeat: no-repeat;
+    background-position: left;
+    display: inline-block;
 }
+
+
+.custom-text:hover {
+    color: #00205C; /* Change text color on hover */
+    background-size: 100% 100%; /* Expand background to full width */
+}
+
+
+
+
 
 /* Pseudo-element styling */
 .custom-text::after {
@@ -16,6 +32,7 @@
     background-color: #facc15; /* Tailwind yellow-400 */
     bottom: -10px;
     left: 0;
+    transition: 0.3s linear width;
 }
 
 /* Responsive Styles */
@@ -72,6 +89,13 @@
     background-color: #facc15; /* Tailwind yellow-400 */
     bottom: -10px;
     left: 0;
+    .custom-text:hover::after {
+    width: 100%; /* Expand ::after background to full width */
+}
+}
+
+.custom-text:hover::after {
+    width: 100%; /* Expand ::after background to full width */
 }
 
 }

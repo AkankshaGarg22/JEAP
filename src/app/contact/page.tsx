@@ -11,12 +11,7 @@ import "./impact.min.css";
 import Sspace from "./_components/Sspace";
 import Curve from "./_components/curve";
 
-// Define props for the alternate content component
-interface AlternateContentProps {
-  imageSrc: string;
-  text: string;
-  isReversed?: boolean;
-}
+
 
 const AlternateContent: React.FC<AlternateContentProps> = ({
   imageSrc,
@@ -77,7 +72,7 @@ export default function Impact() {
           <ImpactLanding />
          <Sspace/>
          
-          <div className="relative bg-gradient-to-b from-[#1B5632] to-[#00205C] m-0 pt-[10%] [clip-path:circle(80%_at_50%_65%)] md:pt-[20%] sm:pt-[20%]" ref={contentRef}>
+          <div className="relative bg-gradient-to-b from-[#1B5632] to-[#00205C] m-0 pt-[10%] lg:[clip-path:circle(80%_at_50%_65%)] md:[clip-path:circle(80%_at_50%_65%)] sm:[clip-path:circle(80%_at_50%_65%)] " ref={contentRef}>
             <div className="bg-transparent"></div>
           <h1 className="text-white text-[3.8rem] font-bold font-ArialRegular p-4 top-[1063px] text-center">Case Studies</h1>
             {contentData.map((item, index) => (

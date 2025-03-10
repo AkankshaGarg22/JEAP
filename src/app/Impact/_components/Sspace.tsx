@@ -3,7 +3,7 @@ import React from 'react'
 const Sspace = () => {
   return (
     <>  
-      <div className="h-[20vh] w-full"></div> 
+      <div className="h-[100vh] w-full bg-transparent"></div> 
     </>
   )
 }
