@@ -1,5 +1,4 @@
 "use client";
-import { title } from "process";
 import { useState } from "react";
 
 const sections = [
@@ -9,14 +8,24 @@ const sections = [
     subtitle: "",
     content:
       "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches. To address this, the JEAP incorporated a TWG focused on climate change into its action plan. The Climate Change TWG is setting a new standard for resilience in Africa by championing climate-resilient strategies for emergency preparedness and response, enhancing the region's capacity to prepare for, detect, and respond to climate-related health threats effectively.",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
   },
   {
     id: 2,
     title: "Country Assessments",
     subtitle: "Country Assessment in the Preparedness Context",
+    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
     content:
       "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies. Several assessments in line with IHR Monitoring and Evaluation (M&E) Framework and Performance of Veterinary Services (PVS) Pathway have been implemented to monitor and evaluate capacities’ development in preparedness in human health services, veterinary services and aquatic and animal health services. These instruments have assessed the status of preparedness and enabled documentation of progress countries have made in building their capacities.",
+    popupContext: <><p className="my-4 text-gray-300 border-t-2 pt-4 line-clamp-[8]">Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies. Several assessments in line with IHR Monitoring and Evaluation (M&E) Framework and Performance of Veterinary Services (PVS) Pathway have been implemented to monitor and evaluate capacities’ development in preparedness in human health services, veterinary services and aquatic and animal health services. These instruments have assessed the status of preparedness and enabled documentation of progress countries have made in building their capacities. </p> <br /> <p> Across the continent, there has been strong uptake of preparedness tools. In 2023, all African countries completed their required State Parties Annual Reporting (SPAR) assessment. From the beginning of 2023 through May 2024, 4 countries completed inter-action reviews (IARs)12, 1 conducted an after-action review (AAR),12 9 completed national planning workshops with another 8 in the pipeline for this year,13 and 21 completed voluntary Joint External Evaluation (JEE) assessments, with another 13 scheduled this year.14 Additionally, of the 11 countries with NAPHS publicly available on the WHO Strategic Partnership Portal, 7 are from Africa.15 Further, there have been several simulation exercises (SimEx) including cross-border SimEx to help develop, assess and test functional capabilities of emergency systems.</p></>,
+    popupVision: "Despite Commitments to assessments by Member States, there remain opportunities to enhance regional coordination and knowledge-sharing around assessments. The vision of this collaboration area is to support countries in assessing and developing International Health Regulation (IHR) core capacities to prepare for and respond to public health emergencies through enhanced partnership and coordination.",
+    objectives: ['Ensure the harmonization of EPR tools and processes', 'Support countries to conduct and report on EPR capacity assessments', 'Support countries to develop and implement action plans'],
+    progressText: [{
+      textHeading: 'Jointly supported simulation exercises, including cross-border exercises',
+      textContent: 'Under the JEAP umbrella, Africa CDC and WHO supported the organization of a cross-border simulation exercise with Somalia, Ethiopia and Kenya on 21 May in Nairobi, Kenya, resulting in the development of across-border Memorandum of Understanding. Additionally, the Partnership jointly supported national simulation exercises in Malawi, Eswatini, and Zambia.'
+    }, {
+      textHeading: 'Increased information-sharing to harmonize regional support and improve efficiency',
+      textContent: 'Prior to the JEAP, it was observed that there was overlap in regional support to countries around national planning and assessments. Through the Partnership, Africa CDC and WHO developed concept notes and plans to map all existing tools and process for assessments in order to harmonize the guidance to member states, agreed to leverage the existing Strategic Partnership for Health Security and Emergency Preparedness (SPH) Portal as the focal point for information-sharing, and have begun regular coordination around training as well as intra-action after action-reviews for disease outbreaks. For instance, the group is planning for an upcoming inter-action review on mpox in DRC as well as a capacity-building workshop on emergency preparedness & response tools in Ethiopia.'
+    }]
   },
   {
     id: 3,
@@ -105,9 +114,8 @@ export default function List() {
               <div className="relative hover:bg-[#2c5377] group">
                 <button
                   key={section.title}
-                  className={`w-full text-left px-3 py-4 block ${
-                    selected.title === section.title ? "bg-[#4c7fae]" : ""
-                  }`}
+                  className={`w-full text-left px-3 py-4 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""
+                    }`}
                   onClick={() => setSelected(section)}
                 >
                   {section.title}
@@ -138,36 +146,74 @@ export default function List() {
       </div>
 
       {modalOpen && selected.id === currentIndex && (
-        <div className="fixed inset-0 bg-[#fff] flex flex-col items-center justify-center z-50">
-          <button
-            onClick={closeModal}
-            className="absolute top-4 right-4 text-black hover:text-gray-300"
-          >
-            <svg
-              className="w-9 h-9"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+        <div className="fixed inset-0 bg-[#fff] items-center justify-center z-50 overflow-scroll">
+          <button onClick={closeModal} className="absolute top-4 right-4 text-black hover:text-gray-300">
+            <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
-          <div className="flex flex-col md:flex-row h-full justify-center min-w-[80%]">
-            {/* Image - full width on mobile, half width on larger screens */}
-            <div className="md:w-[70%] py-3">
+          <div className="flex flex-col md:flex-row justify-center w-full">
+            <div className="py-3">
               <img
                 src={selected.popupImage}
                 alt={selected.title}
-                className="w-full object-cover rounded-xl md:h-[80%]"
+                className="w-full object-cover md:h-[20%] md:w-[70%] my-0 mx-auto rounded-[100px] py-10"
               />
+              <div className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)]">
+                <div className="text-white flex flex-col items-left justify-left py-10 px-20">
+                  <h2 className="text-lg">{selected.title}</h2>
+                  <div className="text-3xl font-bold my-2">{selected.subtitle}</div>
+                  <div className="font-bold text-3xl my-2">Context</div>
+                  {selected.popupContext}
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div className="">
+                  <div>Circle</div>
+                </div>
+                <div className="">
+                  <div>Line</div>
+                </div>
+                <div className="vision content">
+                  <h2 className="text-black text-3xl font-bold">Vision</h2>
+                  <p className="text-black">{selected.popupVision}</p>
+                </div>
+
+              </div>
+              <div className="flex flex-col items-center py-10">
+                <h2 className="text-black text-3xl font-bold">Objectives</h2>
+                <div className="flex flex-row justify-evenly py-5">
+                  {selected.objectives?.map(value => {
+                    return <div className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-[15%] flex flex-col p-5">
+                      <div>
+                        <img
+                          className="h-10 w-10 xl:h-20 xl:w-20"
+                          src="/assets/blog/Group 3025.png"
+                          alt="next"
+                        />
+                      </div>
+                      <div className="pt-10">
+                        {value}
+                      </div>
+                    </div>
+                  })}
+
+                </div>
+              </div>
+              <div className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)]">
+              <div className="text-white flex flex-col items-center justify-center py-10 px-20">
+                <h2 className="text-white text-3xl">Year 1 Progress</h2>
+                {selected.progressText?.map(text => {
+                  return <div>
+                    <h3>{text?.textHeading}</h3>
+                    <p>{text.textContent}</p>
+                  </div>
+                })}
+              </div>
+              </div>
             </div>
           </div>
+
         </div>
       )}
     </div>
