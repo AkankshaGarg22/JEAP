@@ -1,12 +1,12 @@
 "use client";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 const arr = [
   {
     id: 1,
     title: "Climate Change",
     content:
-      "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches. To address this, the JEAP incorporated a TWG focused on climate change into its action plan.",
+      "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches.",
   },
   {
     id: 2,
@@ -24,31 +24,31 @@ const arr = [
     id: 4,
     title: "Operations, Supply & Logistics",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "Logistics is an essential part of emergency response – yet delays in the delivery of medical supplies and gaps in human resources for logistics remain major challenges across the continent.",
   },
   {
     id: 5,
     title: "RCCE",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "The JEAP recognizes the importance of Improved community preparedness, knowledge, and engagement in responding to health emergencies.",
   },
   {
     id: 6,
     title: "Response readiness",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "While most African countries have now established a Public Health Emergency Operations Centre (PHEOC), recent evaluations highlight that implementation capabilities vary.",
   },
   {
     id: 7,
     title: "Surveillance",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "Surveillance systems and technologies across the continent are lacking, with some countries not meeting the Integrated Diseases Surveillance & Response (IDSR) standards, leading to delays in detecting health emergencies.",
   },
   {
     id: 8,
     title: "Workforce Development",
     content:
-      "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeLorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.",
+      "Human resources are the heart of emergency response, but there continues to be a shortage of trained, equipped emergency responders on the African continent.",
   },
 ];
 
@@ -72,8 +72,8 @@ export default function Areas() {
             >
               <span className="uppercase xl:text-[20px]">{item.title}</span>
               <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : ""} border-2 border-white rounded p-1`}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                 </svg>
               </span>
             </button>
