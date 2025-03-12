@@ -17,7 +17,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "mb-curve" : "url(/assets/blog/mb-curve.svg)",
         "lg-curve" : "url(/assets/blog/header.svg)",
-        "impact-landing" : "url(/assets/blog/impactimages/Impact.jpg)",
+        "about-landing" : "url(/assets/blog/about/bg/1.jpg)",
+        "focus-landing" : "url(/assets/blog/focus/bg/1.jpg)",
+        "mb-about-curve" : "url(/assets/blog/about/curve/mb.png)",
+        "xl-about-curve" : "url(/assets/blog/about/curve/xl.png)",
+        "mb-partner-curve" : "url(/assets/blog/about/curve/mb-partner.png)",
       },
       colors: {
         "accent-1": "#FAFAFA",
@@ -75,8 +79,11 @@ const config: Config = {
       transitionProperty: {
         'bg-image': 'background-image',
       },
-
-      
+      screens: {
+        'xs' : '390px',
+        '3xl': '2560px',
+        '4xl': '3455px'    
+      }
 
     },
    

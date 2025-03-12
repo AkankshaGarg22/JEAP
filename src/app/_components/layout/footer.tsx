@@ -10,6 +10,7 @@ export function Footer() {
   }
   return (
     <footer className=" border-0 w-full m-0 p-0">
+    <footer className=" border-0 w-full m-0 p-0">
       {/* <Maintenance></Maintenance> */}
       <div className="lg:h-[30vh] h-[50vh]  flex items-center justify-center bg-gradient-to-t to-[#00205C] from-[#1B5632] p-2">
   <div className="w-full max-w-6xl flex flex-col items-center justify-between h-full py-2">
@@ -72,6 +73,11 @@ export function Footer() {
           className="w-8 h-8"
         />
       </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </div>
 </div>
