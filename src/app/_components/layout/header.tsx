@@ -2,16 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-// import AnchorLink from "react-anchor-link-smooth-scroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
 
-  // const scrollIntoView = (id: string) => {
-  //   if (typeof document !== "undefined") {
-  //     document.getElementById(id)?.scrollIntoView(true);
-  //   }
-  // };
+  const scrollIntoView = (id: string) => {
+    if (typeof document !== "undefined") {
+      document.getElementById(id)?.scrollIntoView(true);
+    }
+  };
 
   return (
     <div className="relative w-full flex justify-center">
@@ -20,12 +20,15 @@ const Header = () => {
           {/* <div className="hidden md:block">
             <img className="h-[30px] lg:h-[30px] w-[30px]  lg:w-[30px]" src="/assets/blog/home.png" alt="home-logo" />
           </div> */}
-          <Link href="/">
+          {/* <Link href="/">
             <img className="h-[38px] lg:h-[55px] w-[90px] md:w-[80px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
-          </Link>
+          </Link> */}
+          <div className="">
+            <img className="h-[38px] lg:h-[55px] w-[90px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
+          </div>
         </div>
         <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:py-3">
-          <Link href="/about">
+          {/* <Link href="/about">
             <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">ABOUT THE JEAP</h2>
           </Link>
 
@@ -43,7 +46,19 @@ const Header = () => {
 
           <Link href="#">
             <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">RESOURCES</h2>
-          </Link>
+          </Link> */}
+          <AnchorLink href="#mission">
+            <h2 className="link-hover font-semibold">MISSION</h2>
+          </AnchorLink>
+
+          <AnchorLink href="#vision">
+            <h2 className="font-semibold link-hover">VISION</h2>
+          </AnchorLink>
+          <AnchorLink href="#gradedemergencies">
+            <h2 className="font-semibold link-hover">EMERGENCIES</h2>
+          </AnchorLink>
+          <h2 className="link-hover font-semibold" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</h2>
+
         </div>
 
         <div className="md:hidden m-5 h-[30px] w-[30px] pt-1">
@@ -51,7 +66,7 @@ const Header = () => {
         </div>
         {dropDownOpen && (
           <div className="md:hidden justify-evenly absolute right-[5%] top-[96%] bg-white h-auto flex flex-col items-center z-[-1]">
-            {/* <AnchorLink href="#mission" className={"border-b-2 w-full border-black text-center"}>
+            <AnchorLink href="#mission" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">MISSION</h2>
             </AnchorLink>
             <AnchorLink href="#vision" className={"border-b-2 w-full border-black text-center"}>
@@ -62,9 +77,9 @@ const Header = () => {
             </AnchorLink>
             <AnchorLink href="#leadership" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2">LEADERSHIP</h2>
-            </AnchorLink> */}
+            </AnchorLink>
 
-            <Link className={"border-b-2 w-full border-black text-center"} href="/about">
+            {/* <Link className={"border-b-2 w-full border-black text-center"} href="/about">
               <h2 className="px-3 font-semibold pt-2">ABOUT THE JEAP</h2>
             </Link>
 
@@ -82,7 +97,7 @@ const Header = () => {
 
             <Link className={"border-b-2 w-full border-black text-center"} href="#">
               <h2 className="px-3 font-semibold pt-2">RESOURCES</h2>
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>
