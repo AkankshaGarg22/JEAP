@@ -46,9 +46,11 @@ function handleComplete(evt, comp) {
     exportRoot = new lib.cir1(stage);
     //Registers the "tick" event listener.
     fnStartAnimation = function () {
-      stage.addChild(exportRoot);
-      createjs.Ticker.framerate = lib.properties.fps;
-      createjs.Ticker.addEventListener("tick", stage);
+      if (stage && exportRoot && lib) {
+        stage.addChild(exportRoot);
+        createjs.Ticker.framerate = lib.properties.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }
     };
     //Code to support hidpi screens and responsive scaling.
     AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
