@@ -106,8 +106,8 @@ export default function PartnerShip() {
 
   return (
     <div className="h-screen xl:h-screen flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200]">
-      <div className="basis-1/4 xs:basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-2 xs:mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white w-3/4 xs:w-full md:w-3/4 md:pt-8 ">
-        <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[4rem] xl:text-[70px] font-[arial-bold]">JEAP: Partnering for Impact</h2>
+      <div className="basis-1/4 xs:basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-2 xs:mb-4 md:mb-0 md:mt-8 gap-2 xl:gap-2 text-center text-white w-3/4 xs:w-full md:w-3/4 md:pt-8 ">
+        <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[3rem] lg:text-[4rem] xl:text-[70px] font-[arial-bold]">JEAP: Partnering for Impact</h2>
       </div>
       <div className="basis-3/4 xs:basis-4/5 md:basis-3/4 xl:basis-3/4 2xl:basis-2/3 w-full xl:w-5/6 relative xs:mb-2 xl:mb-0 2xl:mb-4">
         {/* Slide Container - Fixed width approach */}
@@ -116,10 +116,10 @@ export default function PartnerShip() {
             {slides.map((slide) => (
               <div key={slide.id} className="w-full flex-shrink-0 flex flex-col gap-2 md:gap-0 xl:gap-8 md:justify-around">
                 <div className="md:basis-1/10 xl:basis-1/5 flex flex-col items-center px-2 mb-1 xs:mb-2 xl:my-4 2xl:my-2">
-                  <p className="text-center text-white w-full xl:w-full xl:leading-snug md:text-xl xl:text-xl 2xl:text-2xl">{slide.title}</p>
+                  <p className="text-center text-white w-full xl:w-full xl:leading-snug md:text-xl xl:text-2xl 2xl:text-3xl">{slide.title}</p>
                 </div>
 
-                <div className="md:basis-9/10 xl:basis-4/5 flex flex-col xl:flex-row items-center xl:items-stretch justify-center gap-2 md:gap-6 xl:gap-2 px-4">
+                <div className="md:basis-9/10 xl:basis-4/5 flex flex-col xl:flex-row items-center xl:items-stretch justify-center gap-2 md:gap-2 xl:gap-2 px-4">
                   {slide.items.map((item, idx) => (
                     <div
                       key={idx}
@@ -130,7 +130,7 @@ export default function PartnerShip() {
                         width={800}
                         height={600}
                         objectFit="cover"
-                        className="h-32 xs:h-40 xl:max-2xl:h-60 2xl:h-96 w-full rounded-t-3xl object-cover p-1 md:p-2"
+                        className="h-32 xs:h-40 xl:max-2xl:h-60 2xl:h-[18rem] w-full rounded-t-3xl object-cover p-1 md:p-2"
                         sizes="(max-width: 768px) 80vw, (max-width: 1280px) 30vw, (max-width: 1536px) 25vw, 20vw"
                         src={item.img}
                         alt={item.header}

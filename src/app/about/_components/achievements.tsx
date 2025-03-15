@@ -58,8 +58,8 @@ export default function Achievements() {
       <div className="flex flex-grow flex-col gap-4 md:gap-8 mt-4">
         <div className="relative flex justify-center items-center h-full">
           {/* Previous */}
-          <button onClick={handlePrev} className="hidden xl:block absolute left-0 w-1/6 scale-75 opacity-90 -translate-x-1/6 transition-all h-full">
-            <img src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-lg blur-sm" />
+          <button onClick={handlePrev} className="hidden xl:block absolute left-0 w-1/6 scale-90  translate-x-[5%] transition-all h-full">
+            <img src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-2xl" />
           </button>
 
           {/* Current */}
@@ -97,8 +97,8 @@ export default function Achievements() {
           </div>
 
           {/* Next */}
-          <button onClick={handleNext} className="hidden xl:block absolute right-0 w-1/6 scale-75 opacity-90 translate-x-1/6 transition-all h-full">
-            <img src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-lg blur-sm" />
+          <button onClick={handleNext} className="hidden xl:block absolute right-0 w-1/6 scale-90 -translate-x-[5%] transition-all h-full">
+            <img src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-2xl" />
           </button>
         </div>
         {/* Dots */}
