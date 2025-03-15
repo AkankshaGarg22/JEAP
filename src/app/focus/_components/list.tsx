@@ -406,7 +406,11 @@ export default function List() {
           <div className="hidden lg:block">
             {sections.map((section) => (
               <div key={section.id} className="relative hover:bg-[#2c5377] group">
-                <button key={section.title} className={`w-full text-left px-3 py-4 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""}`} onClick={() => setSelected(section)}>
+                <button
+                  key={section.title}
+                  className={`w-full text-left px-3 py-4 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""} ${section.id !== sections.length ? " border-b " : ""}`}
+                  onClick={() => setSelected(section)}
+                >
                   {section.title}
                 </button>
                 <span className="absolute top-[1px] left-[12px] text-xs text-gray-300 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">Read about</span>
@@ -417,10 +421,10 @@ export default function List() {
 
         {/* Content Panel */}
         <div className="hidden md:block w-full lg:w-3/4 bg-[rgb(37_73_119)] p-8 relative">
-          <h2 className="text-2xl font-bold">{selected.title}</h2>
+          <h2 className="text-2xl xl:text-4xl font-bold">{selected.title}</h2>
           <div className="text-3xl font-bold my-2">{selected.subtitle}</div>
-          <div className="font-bold my-2">Context</div>
-          <p className="my-4 text-gray-300 border-t-2 pt-4 line-clamp-[8]">{selected.content}</p>
+          <div className="text-2xl font-bold my-2">Context</div>
+          <p className="my-4 text-gray-300 border-t-2 pt-4 line-clamp-[8] text-lg xl:text-xl xl:leading-8">{selected.content}</p>
           <button className="absolute -bottom-4 right-8 bg-white text-blue-900 px-6 py-2 font-semibold flex items-center gap-2 hover:bg-gray-200" onClick={() => handleReadMoreClick()}>
             Read More →
           </button>
@@ -439,56 +443,78 @@ export default function List() {
               <img src={selected.popupImage} alt={selected.title} className="w-11/12 object-cover h-96 md:h-[540px] md:w-[70%] my-0 mx-auto rounded-[100px] py-10" />
               <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
                 <div className="text-white flex flex-col items-left justify-left p-10 lg:py-10 lg:px-40">
-                  <h2 className="text-lg">{selected.title}</h2>
-                  <div className="text-3xl font-bold my-2">{selected.subtitle}</div>
-                  <div className="font-bold text-3xl my-2">Context</div>
-                  <div className="border-t-2 my-4 text-base">{selected.popupContext}</div>
+                  <h2 className="text-xl xl:text-4xl font-bold">{selected.title}</h2>
+                  <div className="text-3xl font-bold  my-2 xl:my-4">{selected.subtitle}</div>
+                  <div className="text-3xl my-2">Context</div>
+                  <div className="border-t-2 my-4 py-4 xl:py-8 text-base xl:text-lg">{selected.popupContext}</div>
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row">
-                <div className="">
-                  <div>Circle</div>
+              <div className="w-full bg-[#1B56321A] py-8">
+              <div className="flex flex-col lg:flex-row items-center justify-center w-3/4 mx-auto ">
+                <div className="w-1/3" >
+                  <img className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
                 </div>
-                <div className="">
-                  <div>Line</div>
+                <div className="w-1/3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="319.7019958496094" height="17.40399932861328" viewBox="0 0 319.702 17.404">
+                    <g id="Group_5650" data-name="Group 5650" transform="translate(1131 5295)">
+                      <line id="Line_243" data-name="Line 243" x2="311" transform="translate(-1131 -5285.5)" fill="none" stroke="#707070" strokeWidth="2" className="svg-elem-1"></line>
+                      <circle
+                        id="Ellipse_228"
+                        data-name="Ellipse 228"
+                        cx="8.702"
+                        cy="8.702"
+                        r="8.702"
+                        transform="translate(-828.702 -5277.596) rotate(-90)"
+                        fill="#296742"
+                        className="svg-elem-2"
+                      ></circle>
+                    </g>
+                  </svg>
                 </div>
-                <div className="vision content text-center my-4">
-                  <h2 className="text-black text-3xl font-bold">Vision</h2>
-                  <p className="text-black">{selected.popupVision}</p>
+                <div className="w-1/3 content text-center my-4">
+                  <h2 className="text-black text-3xl font-bold mb-4">Vision</h2>
+                  <p className="text-black text-xl">{selected.popupVision}</p>
                 </div>
               </div>
+              </div>
+              
               {selected.objectives.length && (
                 <div className="flex flex-col items-center py-10">
-                  <h2 className="text-black text-3xl font-bold">Objectives</h2>
-                  <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly py-5">
+                  <h2 className="text-black text-3xl font-bold my-4">Objectives</h2>
+                  <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly py-5 w-11/12">
                     {selected.objectives?.map((value, i) => {
                       return (
-                        <div key={i} className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-3/4 xl:w-[20%] flex flex-col gap-8 p-4 xl:p-5 h-60">
+                        <div key={i} className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-1/3 xl:w-[20%] flex flex-col gap-8 p-4 xl:p-5 h-60">
                           <div className="">
                             <img className="h-10 w-10 xl:h-20 xl:w-20" src={`/assets/blog/focus/read-more-images/${i + 1}.svg`} alt="next" />
                           </div>
-                          <div className="">{value}</div>
+                          <div className="text-lg xl:text-xl">{value}</div>
                         </div>
                       );
                     })}
                   </div>
                 </div>
               )}
-              <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
-                <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-20">
-                  <h2 className="text-white text-3xl mb-4">Year 1 Progress</h2>
-                  <div className="flex flex-col gap-4 w-full">
-                    {selected.progressText?.map((text) => {
-                      return (
-                        <div className="border-2 border-white rounded-lg p-4">
-                          {text?.textHeading ? <h3>{text?.textHeading}</h3> : null}
-                          <div>{text.textContent}</div>
-                        </div>
-                      );
-                    })}
+              {selected.progressText.length && (
+                <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
+                  <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-20">
+                    <h2 className="text-white text-3xl mb-4">Year 1 Progress</h2>
+                    <div className="flex flex-col w-full">
+                      {selected.progressText?.map((text, i) => {
+                        return (
+                          <div
+                            key={i}
+                            className={`border-white rounded-s-full rounded-e-full py-8 px-28 flex flex-col gap-4 ${selected.progressText.length - 1 !== i ? "border" : "border border-t-0"}`}
+                          >
+                            {text?.textHeading ? <h3 className="text-2xl">{text?.textHeading}</h3> : null}
+                            <div className="text-base xl:text-lg">{text.textContent}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
