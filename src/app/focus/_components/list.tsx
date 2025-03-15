@@ -408,7 +408,7 @@ export default function List() {
               <div key={section.id} className="relative hover:bg-[#2c5377] group">
                 <button
                   key={section.title}
-                  className={`w-full text-left px-3 py-4 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""} ${section.id !== sections.length ? " border-b " : ""}`}
+                  className={`w-full text-left px-3 py-5 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""} ${section.id !== sections.length ? " border-b " : ""}`}
                   onClick={() => setSelected(section)}
                 >
                   {section.title}
@@ -499,15 +499,15 @@ export default function List() {
                 <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
                   <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-20">
                     <h2 className="text-white text-3xl mb-4">Year 1 Progress</h2>
-                    <div className="flex flex-col w-full">
+                    <div className="flex flex-col w-5/6">
                       {selected.progressText?.map((text, i) => {
                         return (
                           <div
                             key={i}
                             className={`border-white rounded-s-full rounded-e-full py-8 px-28 flex flex-col gap-4 ${selected.progressText.length - 1 !== i ? "border" : "border border-t-0"}`}
                           >
-                            {text?.textHeading ? <h3 className="text-2xl">{text?.textHeading}</h3> : null}
-                            <div className="text-base xl:text-lg">{text.textContent}</div>
+                            {text?.textHeading ? <h3 className="text-2xl pl-4">{text?.textHeading}</h3> : null}
+                            <div className="text-base xl:text-lg pl-4">{text.textContent}</div>
                           </div>
                         );
                       })}

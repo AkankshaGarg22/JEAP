@@ -132,7 +132,7 @@ export default function LAnimation() {
         <canvas id="canvas" width="1630" height="830" style={{ position: "absolute", display: "none", backgroundColor: "transparent" }}></canvas>
         <div id="dom_overlay_container" style={{ pointerEvents: "none", overflow: "hidden", width: "1630px", height: "830px", position: "absolute", left: 0, top: 0, display: "block" }}></div>
       </div>
-      <div id="_preload_div_" style={{ position: "absolute", top: "0", left: "0", display: "inline-block", height: "830px", width: "1630px", textAlign: "center" }}>
+      <div id="_preload_div_" style={{ position: "absolute", top: "0", left: "0", display: "none", height: "830px", width: "1630px", textAlign: "center" }}>
         <span style={{ display: "inline-block", height: "100%", verticalAlign: "middle" }}></span>
         <img src="/images/_preloader.gif" style={{ verticalAlign: "middle", maxHeight: "100%" }} alt="Loading..." />
       </div>

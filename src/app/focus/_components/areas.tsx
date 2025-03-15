@@ -58,7 +58,7 @@ export default function Areas() {
     setSelectedAccordion(selectedAccordion === id ? null : id);
   };
   return (
-    <div className="w-full overflow-hidden bg-cover bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-8">
+    <div className="w-full overflow-hidden bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-8">
       <div className="w-5/6 mt-20 xl:mt-24 mb-8">
         <h2 className="text-center text-2xl md:text-3xl xl:text-7xl font-bold tracking-wider">Focus Areas</h2>
       </div>
