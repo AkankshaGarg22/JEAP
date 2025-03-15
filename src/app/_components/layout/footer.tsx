@@ -12,29 +12,29 @@ export function Footer() {
     <footer className=" border-0 w-full m-0 p-0">
       {/* <Maintenance></Maintenance> */}
       <div className="lg:h-[30vh] h-[50vh]  flex items-center justify-center bg-gradient-to-t to-[#00205C] from-[#1B5632] p-2">
-  <div className="w-full max-w-6xl flex flex-col items-center justify-between h-full py-2">
+  <div className="w-full max-w-[80%] flex flex-col items-center lg:justify-between lg:h-full py-2 lg:gap-5">
     
     {/* Column 1: Three Images - responsive arrangement */}
-    <div className="flex flex-row space-x-4 items-center justify-center md:gap-5">
+    <div className="flex flex-row space-x-4 items-center justify-center md:gap-10">
       <img
         src="/assets/blog/social-media/JEAP-white.svg"
         alt="Image 1"
-        className="w-[auto] h-14 md:w-[auto] md:h-12 object-cover rounded"
+        className="w-[auto] object-cover rounded"
       />
       <img
         src="/assets/blog/social-media/Group-121.svg"
         alt="Image 2"
-        className="w-[auto] h-10 md:w-[auto] md:h-8 object-cover rounded"
+        className="w-[auto] object-cover rounded"
       />
       <img
         src="/assets/blog/social-media/Africa-CDC-white.svg"
         alt="Image 3"
-        className="w-[auto] h-10 md:w-[auto] md:h-8 object-cover rounded"
+        className="w-[auto] object-cover rounded"
       />
     </div>
 
     {/* Column 2: Five Text Links - responsive grid for mobile */}
-    <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-4 items-center justify-center text-center font-ArialRegular lg:p-0 pt-4">
+    <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-4 items-center justify-center text-center font-ArialRegular lg:p-0 pt-4 md:gap-5">
       <span><a href="/" className="text-sm md:text-lg text-white link-hover">About the JEAP</a></span>
       <span><a href="/" className="text-sm md:text-lg text-white link-hover">Focus Areas</a></span>
       <span><a href="/" className="text-sm md:text-lg text-white link-hover">Connect With Us</a></span>
@@ -48,9 +48,9 @@ export function Footer() {
     </div>
 
     {/* Column 4: Copyright & Social Links - stacked on mobile, row on desktop */}
-    <div className="w-full flex flex-col-reverse lg:flex-row sm:flex-col-reverse justify-between items-center px-4 space-y-2 md:space-y-0">
+    <div className="w-full flex flex-col-reverse lg:flex-row sm:flex-col-reverse justify-between items-center lg:pb-4 px-4 space-y-2 md:space-y-0">
       <p className="text-s text-white font-ArialRegular text-center lg:p-0 p-4">© 2025 Joint Emergency Action Plan. All rights reserved.</p>
-      <div className="flex flex-row space-x-3 lg:p-0 p-2">
+      {/* <div className="flex flex-row space-x-3 lg:p-0 p-2">
         <img
           src="/assets/blog/social-media/instagram.svg"
           alt="Social 1"
@@ -71,7 +71,7 @@ export function Footer() {
           alt="Social 3"
           className="w-8 h-8"
         />
-      </div>
+      </div> */}
     </div>
   </div>
 </div>
