@@ -19,17 +19,17 @@ export function Footer() {
       <img
         src="/assets/blog/social-media/JEAP-white.svg"
         alt="Image 1"
-        className="w-[auto] object-cover rounded"
+         className="md:w-auto w-[30%] object-cover rounded"
       />
       <img
         src="/assets/blog/social-media/Group-121.svg"
         alt="Image 2"
-        className="w-[auto] object-cover rounded"
+         className="md:w-auto w-[30%] object-cover rounded"
       />
       <img
         src="/assets/blog/social-media/Africa-CDC-white.svg"
         alt="Image 3"
-        className="w-[auto] object-cover rounded"
+         className="md:w-auto w-[30%] object-cover rounded"
       />
     </div>
 
