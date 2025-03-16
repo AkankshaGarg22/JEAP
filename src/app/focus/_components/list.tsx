@@ -450,41 +450,41 @@ export default function List() {
                 </div>
               </div>
               <div className="w-full bg-[#1B56321A] py-8">
-              <div className="flex flex-col lg:flex-row items-center justify-center w-3/4 mx-auto ">
-                <div className="w-1/3" >
-                  <img className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
-                </div>
-                <div className="w-1/3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="319.7019958496094" height="17.40399932861328" viewBox="0 0 319.702 17.404">
-                    <g id="Group_5650" data-name="Group 5650" transform="translate(1131 5295)">
-                      <line id="Line_243" data-name="Line 243" x2="311" transform="translate(-1131 -5285.5)" fill="none" stroke="#707070" strokeWidth="2" className="svg-elem-1"></line>
-                      <circle
-                        id="Ellipse_228"
-                        data-name="Ellipse 228"
-                        cx="8.702"
-                        cy="8.702"
-                        r="8.702"
-                        transform="translate(-828.702 -5277.596) rotate(-90)"
-                        fill="#296742"
-                        className="svg-elem-2"
-                      ></circle>
-                    </g>
-                  </svg>
-                </div>
-                <div className="w-1/3 content text-center my-4">
-                  <h2 className="text-black text-3xl font-bold mb-4">Vision</h2>
-                  <p className="text-black text-xl">{selected.popupVision}</p>
+                <div className="flex flex-col lg:flex-row items-center justify-center w-3/4 mx-auto ">
+                  <div className="lg:w-1/3">
+                    <img className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
+                  </div>
+                  <div className="lg:w-1/3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="319.7019958496094" height="17.40399932861328" viewBox="0 0 319.702 17.404">
+                      <g id="Group_5650" data-name="Group 5650" transform="translate(1131 5295)">
+                        <line id="Line_243" data-name="Line 243" x2="311" transform="translate(-1131 -5285.5)" fill="none" stroke="#707070" strokeWidth="2" className="svg-elem-1"></line>
+                        <circle
+                          id="Ellipse_228"
+                          data-name="Ellipse 228"
+                          cx="8.702"
+                          cy="8.702"
+                          r="8.702"
+                          transform="translate(-828.702 -5277.596) rotate(-90)"
+                          fill="#296742"
+                          className="svg-elem-2"
+                        ></circle>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="lg:w-1/3 content text-center my-4">
+                    <h2 className="text-black text-3xl font-bold mb-4">Vision</h2>
+                    <p className="text-black text-xl">{selected.popupVision}</p>
+                  </div>
                 </div>
               </div>
-              </div>
-              
+
               {selected.objectives.length && (
                 <div className="flex flex-col items-center py-10">
                   <h2 className="text-black text-3xl font-bold my-4">Objectives</h2>
-                  <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly py-5 w-11/12">
+                  <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly 2xl:py-5 w-full  2xl:w-11/12">
                     {selected.objectives?.map((value, i) => {
                       return (
-                        <div key={i} className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-1/3 xl:w-[20%] flex flex-col gap-8 p-4 xl:p-5 h-60">
+                        <div key={i} className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-1/3 xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-64 3xl:h-60">
                           <div className="">
                             <img className="h-10 w-10 xl:h-20 xl:w-20" src={`/assets/blog/focus/read-more-images/${i + 1}.svg`} alt="next" />
                           </div>
@@ -497,17 +497,19 @@ export default function List() {
               )}
               {selected.progressText.length && (
                 <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
-                  <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-20">
+                  <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-16">
                     <h2 className="text-white text-3xl mb-4">Year 1 Progress</h2>
-                    <div className="flex flex-col w-5/6">
+                    <div className="flex flex-col w-full 2xl:w-[90%]">
                       {selected.progressText?.map((text, i) => {
                         return (
                           <div
                             key={i}
-                            className={`border-white rounded-s-full rounded-e-full py-8 px-28 flex flex-col gap-4 ${selected.progressText.length - 1 !== i ? "border" : "border border-t-0"}`}
+                            className={`border-white rounded-s-[4rem] rounded-e-[4rem] xl:rounded-s-full xl:rounded-e-full py-8 px-4 xl:py-20 xl:px-28 2xl:py-16 2xl:px-24 flex flex-col gap-4 ${
+                              selected.progressText.length - 1 !== i ? "border" : "border border-t-0"
+                            }`}
                           >
-                            {text?.textHeading ? <h3 className="text-2xl pl-4">{text?.textHeading}</h3> : null}
-                            <div className="text-base xl:text-lg pl-4">{text.textContent}</div>
+                            {text?.textHeading ? <h3 className="text-2xl lg:pl-8">{text?.textHeading}</h3> : null}
+                            <div className="text-base xl:text-lg lg:pl-8">{text.textContent}</div>
                           </div>
                         );
                       })}
