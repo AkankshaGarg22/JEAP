@@ -1,7 +1,6 @@
 "use client";
 import { useMediaQuery } from "@react-hook/media-query";
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 var canvas,
   stage,
@@ -52,7 +51,7 @@ function handleComplete(evt,comp) {
 		stage.addChild(exportRoot);
 		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
-	}	    
+	}
 	//Code to support hidpi screens and responsive scaling.
 	// AdobeAn.makeResponsive(true,'both',true,1,[canvas, anim_container,dom_overlay_container], stage);	
 	AdobeAn.compositionLoaded(lib.properties.id);
@@ -62,8 +61,10 @@ function handleComplete(evt,comp) {
 export function Outbreak(isVisible) {
   const isXlScreen = useMediaQuery("only screen and (min-width: 1280px)"); // adjust the breakpoint as needed
 
+  const canvasRef = useRef(null)
+
   useEffect(() => {
-    if (isVisible?.isVisible && isXlScreen) {
+    if (isVisible?.isVisible && isXlScreen && canvasRef.current) {
       loadDesktopScript();
     } else if (isVisible.isVisible) {
       loadScript();
@@ -106,20 +107,25 @@ export function Outbreak(isVisible) {
   };
 
   return (
-    <div>
+    <div className="relative min-h-[70vh] mb-[5%]">
       <div
         id="animation_container_outbreak"
         style={{
           display: "flex",
           justifyContent: "center",
           width: "100%",
-          maxWidth: "100%"
+          maxWidth: "100%",
+          flexDirection: "column"
         }}
-        className="absolute bottom-[100%]"
       >
         <canvas
           id="canvas-outbreak"
-          width="1200" height="300"
+          width="1200" height="400"
+          style={{
+            maxWidth: "90%",
+            margin: "0 auto"
+          }}
+          ref={canvasRef}
         ></canvas>
         <div
           id="dom_overlay_container_outbreak"
@@ -131,10 +137,10 @@ export function Outbreak(isVisible) {
             top: "0px"
           }}
         ></div>
-      </div>
-      <p className="text-xl text-balance p-4 flex text-center align-center justify-center my-20 pt-[20px]">
+         <p className="text-xl text-balance p-4 flex text-center align-center justify-center">
       A crucial component of the JEAP is the 7-1-7 strategy which is a comprehensive approach to enhancing global health security. By promoting timely and effective actions in response to infectious disease outbreaks and public health threats, the 7-1-7 strategy has transformative potential to the way the African Region responds to health emergencies. The approach addresses the need for swift detection, notification, and response to potential epidemics, and aims to prevent their escalation and global spread. The strategy sets clear performance standards for three key timeframes: detecting a suspected disease outbreak within 7 days, notifying relevant public health authorities within 1 day, and executing early response actions within 7 days.
       </p>
+      </div>
       </div>
   );
 }

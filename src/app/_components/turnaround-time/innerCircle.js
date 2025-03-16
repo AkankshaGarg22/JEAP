@@ -32,7 +32,8 @@ function handleFileLoad(evt, comp) {
   }
 }
 function handleComplete(evt, comp) {
-  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  try {
+    //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
   var lib = comp.getLibrary();
   var ss = comp.getSpriteSheet();
   var queue = evt.target;
@@ -50,10 +51,16 @@ function handleComplete(evt, comp) {
     createjs.Ticker.framerate = lib.properties.fps;
     createjs.Ticker.addEventListener("tick", stage);
   };
-  //Code to support hidpi screens and responsive scaling.
-  AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
-  AdobeAn.compositionLoaded(lib.properties.id);
-  fnStartAnimation();
+  if (canvas) {
+    //Code to support hidpi screens and responsive scaling.
+    AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
+    AdobeAn.compositionLoaded(lib.properties.id);
+    fnStartAnimation();
+  }
+  } catch (error) {
+    console.log('error', error);
+    init();
+  }
 }
 
 export function InnerCircle({ isVisible }) {
@@ -74,9 +81,9 @@ export function InnerCircle({ isVisible }) {
   const loadScript = () => {
     setTimeout(() => {
       init();
-    }, 500);
+    }, 1500);
     const script = document.createElement("script");
-    script.setAttribute("src", "/scripts/inner-circle-100px.js?1714380394461");
+    script.setAttribute("src", "/scripts/inner-circle-100px.js");
     document.body.appendChild(script);
   };
 
