@@ -58,7 +58,7 @@ export default function Areas() {
     setSelectedAccordion(selectedAccordion === id ? null : id);
   };
   return (
-    <div className="w-full overflow-hidden bg-cover bg-no-repeat bg-mb-about-curve bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-8">
+    <div className="w-full overflow-hidden bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-8">
       <div className="w-5/6 mt-20 xl:mt-24 mb-8">
         <h2 className="text-center text-2xl md:text-3xl xl:text-7xl font-bold tracking-wider">Focus Areas</h2>
       </div>
@@ -73,12 +73,12 @@ export default function Areas() {
               <span className="uppercase xl:text-[20px]">{item.title}</span>
               <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : ""} border-2 border-white rounded p-1`}>
               {item.id === selectedAccordion ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                   </svg>
                 ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                   </svg>
                 )}
               </span>

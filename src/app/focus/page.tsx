@@ -8,6 +8,7 @@ import Progress from "./_components/progress";
 import Highlights from "./_components/highlights";
 import List from "./_components/list";
 import Footer from "../_components/layout/footer";
+import LAnimation from "./_components/l-animation";
 
 export default function Index() {
   return (
@@ -25,6 +26,9 @@ export default function Index() {
             <div className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)]">
               <div>
                 <Progress />
+              </div>
+              <div className="hidden lg:block">
+                <LAnimation />
               </div>
               <div>
                 <Highlights />

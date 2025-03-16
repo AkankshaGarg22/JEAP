@@ -152,8 +152,8 @@ export default function Conceptualization() {
 
                   {/* Content */}
                   <div
-                    className={`bg-white text-teal-900 p-6 rounded-md transition-all duration-300
-                        ${activeIndex === i ? "ring-2 ring-teal-300 shadow-lg opacity-100" : "opacity-50"}`}
+                    className={` p-6 rounded-md transition-all duration-300
+                        ${activeIndex === i ? "ring-2 bg-white text-teal-900 shadow-lg opacity-100" : "opacity-50 text-white"}`}
                   >
                     <p className="text-lg 2xl:text-xl">{item}</p>
                   </div>
