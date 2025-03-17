@@ -6,7 +6,7 @@ const sections = [
     id: 1,
     title: "Climate Change",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/climate-change/WHO_060271-50039.jpg",
     content:
       "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches. To address this, the JEAP incorporated a TWG focused on climate change into its action plan. The Climate Change TWG is setting a new standard for resilience in Africa by championing climate-resilient strategies for emergency preparedness and response, enhancing the region's capacity to prepare for, detect, and respond to climate-related health threats effectively.",
     popupContext: (
@@ -20,14 +20,18 @@ const sections = [
     ),
     popupVision:
       "The goal is to build robust, climate-resilient health systems across Africa that effectively address the health impacts of climate change, foster sustainability, and promote multi-sectoral collaboration to safeguard health—particularly for those most affected by the impacts of climate change.",
-    objectives: ["Climate resilience", "Sustainability", "Multi-sectoral coordination"],
+    objectives: [
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/climate%20change.svg", text: "Climate resilience" },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/survilencwe.svg", text: "Sustainability" },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/multi%20sector%20coordination.svg", text: "Multi-sectoral coordination" },
+    ],
     progressText: [],
   },
   {
     id: 2,
     title: "Country Assessments",
     subtitle: "Country Assessment in the Preparedness Context",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/country%20assesment/PolioNigeria2020_20319b3016edf32a7ca7e64c1d35f932%20(1).jpg",
     content:
       "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies. Several assessments in line with IHR Monitoring and Evaluation (M&E) Framework and Performance of Veterinary Services (PVS) Pathway have been implemented to monitor and evaluate capacities’ development in preparedness in human health services, veterinary services and aquatic and animal health services. These instruments have assessed the status of preparedness and enabled documentation of progress countries have made in building their capacities.",
     popupContext: (
@@ -51,9 +55,9 @@ const sections = [
     popupVision:
       "Despite Commitments to assessments by Member States, there remain opportunities to enhance regional coordination and knowledge-sharing around assessments. The vision of this collaboration area is to support countries in assessing and developing International Health Regulation (IHR) core capacities to prepare for and respond to public health emergencies through enhanced partnership and coordination.",
     objectives: [
-      "Ensure the harmonization of EPR tools and processes",
-      "Support countries to conduct and report on EPR capacity assessments",
-      "Support countries to develop and implement action plans",
+      { icon: "/assets/blog/focus/read-more-images/country-assesment/icons/Untitled-1-01.svg", text: "Ensure the harmonization of EPR tools and processes" },
+      { icon: "/assets/blog/focus/read-more-images/country-assesment/icons/Untitled-1-02.svg", text: "Support countries to conduct and report on EPR capacity assessments" },
+      { icon: "/assets/blog/focus/read-more-images/country-assesment/icons/Untitled-1-03.svg", text: "Support countries to develop and implement action plans" },
     ],
     progressText: [
       {
@@ -72,7 +76,7 @@ const sections = [
     id: 3,
     title: "Digitalization",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/digitization/CW5A5581_141830.jpg",
     content:
       "The aftermath of the COVID-19 pandemic highlighted the critical need for technology-driven solutions in Africa's health sector to strengthen countries' ability to promptly prepare for, detect, and respond to health emergencies. In response, the Digitalization TWG, a cross-cutting initiative within JEAP, was established to address this need and now leads the integration of digital solutions across other TWGs.",
     popupContext: (
@@ -133,7 +137,7 @@ const sections = [
     id: 4,
     title: "Operations, Supply, and Logistics",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/operations,%20supply%20and%20logistics/20220425_Darfur_HCF_20%20(1).jpg",
     content:
       "Logistics is an essential part of emergency response – yet delays in the delivery of medical supplies and gaps in human resources for logistics remain major challenges across the continent.",
     popupContext: (
@@ -173,6 +177,7 @@ const sections = [
     id: 5,
     title: "RCCE",
     subtitle: "",
+    popupImage: "/assets/blog/focus/read-more-images/rcce/WHO_GUINEA_EBOLA_9849-89427.jpg",
     content:
       "The JEAP recognizes the importance of Improved community preparedness, knowledge, and engagement in responding to health emergencies. JEAP is addressing the critical gaps in risk communication and community engagement (RCCE) highlighted during the Covid-19 pandemic by tackling major RCCE challenges such as weak strategies, poor implementation, and fragmented efforts across countries. By enhancing coordination and promoting integrated, results-driven RCCE strategies, JEAP is ensuring that RCCE and information management (IM) are prioritized in health emergencies. ",
     popupContext: (
@@ -215,7 +220,7 @@ const sections = [
     id: 6,
     title: "Response Readiness",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/response-rediness/WHO_Ebola%20DR%20Congo%2017JUN2019_0384-2.jpg",
     content:
       "While most African countries have now established a Public Health Emergency Operations Centre (PHEOC), recent evaluations highlight that implementation capabilities vary.6 A PHEOC is a hub for joint risk assessment, planning, and coordination of information and resources for effective emergency management. Many countries established and operationalized PHEOCs in the aftermath of Ebola Virus Disease (EVD) epidemic in West Africa, supporting stronger emergency coordination.",
     popupContext: (
@@ -230,8 +235,14 @@ const sections = [
     popupVision:
       "The vision of this collaboration area is to improve the public health emergency management capability by putting in place fully functional Public Health Emergency Operations Centres (PHEOCs) in at least 90% of Member States in Africa by the end of 2027.",
     objectives: [
-      "Ensure that at least 90% of Member States in Africa have a PHEOC facility in place equipped with information, communication technology and physical infrastructure that meets the minimum requirements by 2027.",
-      "Ensure that at least 90% of the Member States in Africa have developed and implemented core PHEOC policy, plans and procedures: legal framework, operational and functional plans and procedures.",
+      {
+        icon: "/assets/blog/focus/read-more-images/response-rediness/icons/Untitled-1-01.svg",
+        text: "Ensure that at least 90% of Member States in Africa have a PHEOC facility in place equipped with information, communication technology and physical infrastructure that meets the minimum requirements by 2027.",
+      },
+      {
+        icon: "/assets/blog/focus/read-more-images/response-rediness/icons/Untitled-1-02.svg",
+        text: "Ensure that at least 90% of the Member States in Africa have developed and implemented core PHEOC policy, plans and procedures: legal framework, operational and functional plans and procedures.",
+      },
     ],
     progressText: [
       {
@@ -255,7 +266,7 @@ const sections = [
     id: 7,
     title: "Surveillance",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/surveillance/Surveillance.png",
     content:
       "Surveillance systems and technologies across the continent are lacking, with some countries not meeting the Integrated Diseases Surveillance & Response (IDSR) standards, leading to delays in detecting health emergencies. Despite scientific development to strengthen the health system to protect human health, Africa continues to be confronted by longstanding, emerging, and reemerging infectious disease threats. Unfortunately, the region has a relatively low capacity for risk management of disease epidemics, mainly due to inadequate resources for early detection, identification, and prompt response. The failure in the early detection and response to epidemics in Africa is attributed to several factors, including deficiency in the development and implementation of surveillance and response systems against infectious disease outbreaks.",
     popupContext: (
@@ -272,10 +283,10 @@ const sections = [
     popupVision:
       "The vision of this collaboration area is to strengthen integrated public health surveillance and laboratory systems in all Member States. Through coordination between Africa CDC, WHO AFRO, and WHO EMRO, the Partnership will seek to build national public health surveillance and response systems with updated IDSR and event-based surveillance (EBS) practices, digital technologies, and genomic surveillance capacities at the national level.",
     objectives: [
-      "Ensure all member states have capacity to timely detect and respond to public health threats",
-      "Ensure all member states have laboratory capacity to diagnose and report pathogens that can cause outbreaks",
-      "Establish a functional continental framework for data and information exchange",
-      "Ensure all member states have laboratory sequencing capacity for pathogens that can cause outbreaks",
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-01.svg", text: "Ensure all member states have capacity to timely detect and respond to public health threats" },
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-02.svg", text: "Ensure all member states have laboratory capacity to diagnose and report pathogens that can cause outbreaks" },
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-03.svg", text: "Establish a functional continental framework for data and information exchange" },
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-04.svg", text: "Ensure all member states have laboratory sequencing capacity for pathogens that can cause outbreaks" },
     ],
     progressText: [
       {
@@ -294,7 +305,7 @@ const sections = [
     id: 8,
     title: "Workforce Development",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/workforce-deployment/Miaron_0025-149336.jpg",
     content:
       "Human resources are the heart of emergency response, but there continues to be a shortage of trained, equipped emergency responders on the African continent. According to WHO analysis, fewer than 10% of African countries are adequately staffed to prepare for and respond to health emergencies.",
     popupContext: (
@@ -308,9 +319,9 @@ const sections = [
     popupVision:
       "The JEAP’s vision for workforce development is to develop and sustain an emergency health workforce that is adequate, trained, rapidly deployable, interoperable, supported and connected regionally through existing networks at the leadership, technical and operational levels.",
     objectives: [
-      "Support the identification, capacity building and retainment of emergency health workforce",
-      "Ensure the coordination and deployment of emergency health workforce",
-      "Reinforce the emergency health workforce leadership",
+      { icon: "/assets/blog/focus/read-more-images/workforce-deployment/icons/Untitled-1-01.svg", text: "Support the identification, capacity building and retainment of emergency health workforce" },
+      { icon: "/assets/blog/focus/read-more-images/workforce-deployment/icons/Untitled-1-02.svg", text: "Ensure the coordination and deployment of emergency health workforce" },
+      { icon: "/assets/blog/focus/read-more-images/workforce-deployment/icons/Untitled-1-03.svg", text: "Reinforce the emergency health workforce leadership" },
     ],
     progressText: [
       {
@@ -482,13 +493,16 @@ export default function List() {
                 <div className="flex flex-col items-center py-10">
                   <h2 className="text-black text-3xl font-bold my-4">Objectives</h2>
                   <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly 2xl:py-5 w-full  2xl:w-11/12">
-                    {selected.objectives?.map((value, i) => {
+                    {selected.objectives?.map((obj, i) => {
                       return (
-                        <div key={i} className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-1/3 xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-64 3xl:h-60">
+                        <div
+                          key={i}
+                          className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-full xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-[24rem] 3xl:h-60"
+                        >
                           <div className="">
-                            <img className="h-10 w-10 xl:h-20 xl:w-20" src={`/assets/blog/focus/read-more-images/${i + 1}.svg`} alt="next" />
+                            <img className="h-10 w-10 xl:h-20 xl:w-20" src={obj.icon} alt="next" />
                           </div>
-                          <div className="text-lg xl:text-xl">{value}</div>
+                          <div className="text-lg xl:text-xl">{obj.text}</div>
                         </div>
                       );
                     })}
