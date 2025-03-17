@@ -27,56 +27,56 @@
     
     
     
-    (lib.CachedBmp_39 = function() {
+    (lib.CachedBmp_8 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(0);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_38 = function() {
+    (lib.CachedBmp_7 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(1);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_37 = function() {
+    (lib.CachedBmp_6 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(2);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_36 = function() {
+    (lib.CachedBmp_5 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(3);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_35 = function() {
+    (lib.CachedBmp_4 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(4);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_34 = function() {
+    (lib.CachedBmp_3 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(5);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_33 = function() {
+    (lib.CachedBmp_2 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(6);
     }).prototype = p = new cjs.Sprite();
     
     
     
-    (lib.CachedBmp_32 = function() {
+    (lib.CachedBmp_1 = function() {
         this.initialize(ss["ui_atlas_2"]);
         this.gotoAndStop(7);
     }).prototype = p = new cjs.Sprite();
@@ -139,7 +139,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_39();
+        this.instance = new lib.CachedBmp_8();
         this.instance.setTransform(-45.6,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -162,7 +162,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_38();
+        this.instance = new lib.CachedBmp_7();
         this.instance.setTransform(-61.95,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -185,7 +185,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_37();
+        this.instance = new lib.CachedBmp_6();
         this.instance.setTransform(-37.85,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -208,7 +208,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_36();
+        this.instance = new lib.CachedBmp_5();
         this.instance.setTransform(-41.75,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -231,7 +231,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_35();
+        this.instance = new lib.CachedBmp_4();
         this.instance.setTransform(-45.6,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -253,7 +253,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_34();
+        this.instance = new lib.CachedBmp_3();
         this.instance.setTransform(-46.45,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -275,7 +275,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_33();
+        this.instance = new lib.CachedBmp_2();
         this.instance.setTransform(-72.05,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -297,7 +297,7 @@
         cjs.MovieClip.apply(this,[props]);
     
         // Layer_1
-        this.instance = new lib.CachedBmp_32();
+        this.instance = new lib.CachedBmp_1();
         this.instance.setTransform(-59.65,-17.65,0.5,0.5);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1170,24 +1170,24 @@
     
         // BG
         this.instance = new lib.Main_animation();
-        this.instance.setTransform(615.2,221.1,0.7853,0.7853);
+        this.instance.setTransform(615.2,47.1,0.7853,0.7853);
     
         this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
     
         this._renderFirstFrame();
     
     }).prototype = p = new lib.AnMovieClip();
-    p.nominalBounds = new cjs.Rectangle(229.7,442.4,325.90000000000003,-35.599999999999966);
+    p.nominalBounds = new cjs.Rectangle(229.7,128.4,325.90000000000003,104.4);
     // library properties:
     lib.properties = {
         id: '43D59298A37CE247BFAC71FF180991A9',
         width: 1280,
-        height: 500,
+        height: 220,
         fps: 60,
         color: "#FFFFFF",
         opacity: 1.00,
         manifest: [
-            {src:"images/ui_atlas_2.png?1741704978868", id:"ui_atlas_2"}
+            {src:"images/ui_atlas_2.png?1742210122690", id:"ui_atlas_2"}
         ],
         preloads: []
     };
@@ -1267,16 +1267,12 @@
                     sRatio = Math.max(xRatio, yRatio);				
                 }			
             }
-            if (domContainers && domContainers.length) {
-                domContainers[0].width = w * pRatio * sRatio;			
-                domContainers[0].height = h * pRatio * sRatio;
-                domContainers.forEach(function(container) {			
-                    if (container) {
-                        container.style.width = w * sRatio + 'px';				
-                        container.style.height = h * sRatio + 'px';			
-                    }	
-                });
-            }
+            domContainers[0].width = w * pRatio * sRatio;			
+            domContainers[0].height = h * pRatio * sRatio;
+            domContainers.forEach(function(container) {				
+                container.style.width = w * sRatio + 'px';				
+                container.style.height = h * sRatio + 'px';			
+            });
             stage.scaleX = pRatio*sRatio;			
             stage.scaleY = pRatio*sRatio;
             lastW = iw; lastH = ih; lastS = sRatio;            
