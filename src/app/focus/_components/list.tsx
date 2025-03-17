@@ -376,7 +376,7 @@ export default function List() {
   };
 
   return (
-    <div className="text-white p-4">
+    <div className="text-white p-4 md:w-[90%] my-0 mx-auto">
       <div className="flex flex-col lg:flex-row gap-4">
         {/* Sidebar - Accordion on Mobile, Fixed Sidebar on Desktop */}
         <div className="w-full lg:w-1/4">
@@ -425,7 +425,7 @@ export default function List() {
           <div className="text-3xl font-bold my-2">{selected.subtitle}</div>
           <div className="text-2xl font-bold my-2">Context</div>
           <p className="my-4 text-gray-300 border-t-2 pt-4 line-clamp-[8] text-lg xl:text-xl xl:leading-8">{selected.content}</p>
-          <button className="absolute -bottom-4 right-8 bg-white text-blue-900 px-6 py-2 font-semibold flex items-center gap-2 hover:bg-gray-200" onClick={() => handleReadMoreClick()}>
+          <button className="md:h-[45px] absolute -bottom-4 right-8 bg-white text-blue-900 px-6 py-2 font-semibold flex items-center gap-2 hover:bg-gray-200" onClick={() => handleReadMoreClick()}>
             Read More →
           </button>
         </div>

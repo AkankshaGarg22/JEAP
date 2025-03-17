@@ -218,6 +218,40 @@ html.lenis body {
   outline-offset: var(--g);
 }
 
+.container {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: 0.8;
+  overflow: hidden;
+  height: 0;
+  transition: .5s ease;
+  border-radius: 1.5rem;
+}
+.container:hover .overlay {
+  height: 100%;
+}
+
+.container:hover p {
+  display: none;
+}
+
+.text {
+  color: #1a5632;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0 auto;
+}
+
 /* Link hover effect*/
 
 .link-hover {

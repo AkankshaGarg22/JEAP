@@ -101,7 +101,7 @@ export default function Implementation() {
             </button>
             {/* Accordion Content */}
             {selectedAccordion === item.id && (
-              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-4/5">
+              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-[88%]">
                 {item.content.map((element, index) => (
                   <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-lg" key={index}>
                     {element}

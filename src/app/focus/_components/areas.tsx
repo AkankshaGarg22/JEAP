@@ -60,7 +60,7 @@ export default function Areas() {
   return (
     <div className="w-full overflow-hidden bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200] text-white min-h-screen flex flex-col justify-start md:justify-center xl:justify-start items-center md:gap-8 xl:gap-8">
       <div className="w-5/6 mt-20 xl:mt-24 mb-8">
-        <h2 className="text-center text-2xl md:text-3xl xl:text-7xl font-bold tracking-wider">Focus Areas</h2>
+        <h2 className="text-center text-lg md:text-3xl xl:text-6xl font-bold tracking-wider">Focus Areas</h2>
       </div>
       <div className="flex flex-col gap-2 md:gap-8 xl:gap-4 justify-center items-center w-[90%] xl:w-3/4 lg:min-h-[400px] md:py-4">
         {arr.map((item) => (
@@ -84,7 +84,7 @@ export default function Areas() {
               </span>
             </button>
             {/* Accordion Content */}
-            {selectedAccordion === item.id && <div className="w-[85%] flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-[18px] leading-8">{item.content}</div>}
+            {selectedAccordion === item.id && <div className="w-[90%] flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-[18px] leading-8">{item.content}</div>}
           </div>
         ))}
       </div>
