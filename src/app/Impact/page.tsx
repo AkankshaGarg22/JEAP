@@ -70,16 +70,20 @@ export default function Impact() {
 
   return (
     <main className="relative m-0 p-0 bg-white ">
-      
-
-      <ErrorBoundary>
+            <ErrorBoundary>
         <Suspense fallback={<Loading />}>
+
+        <div className="relative z-20">
           <ImpactLanding />
+          </div>
+
+          <div className="relative z-20">
          <Sspace/>
-         
-          <div className="relative bg-gradient-to-b from-[#1B5632] to-[#00205C] m-0 pt-[10%] [clip-path:circle(80%_at_50%_65%)] md:pt-[20%] sm:pt-[20%]" ref={contentRef}>
-            <div className="bg-transparent"></div>
-          <h1 className="text-white text-[3.8rem] font-bold font-ArialRegular p-4 top-[1063px] text-center">Case Studies</h1>
+         </div>
+
+        <div className="relative z-20">
+        <div className="relative bg-gradient-to-b from-[#1B5632] to-[#00205C] m-0 pt-[0%]">
+          <h1 className="text-white text-[3.8rem] font-bold font-ArialRegular p-4 top-[1063px] text-center z-5">Case Studies</h1>
             {contentData.map((item, index) => (
               <AlternateContent
                 key={index}
@@ -90,9 +94,10 @@ export default function Impact() {
               />
             ))}
           </div>
-
+          </div>
           {/* Footer component with full width */}
-          <Footer />
+          <div className="relative z-10">
+          <Footer /></div>
         </Suspense>
       </ErrorBoundary>
     </main>

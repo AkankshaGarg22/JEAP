@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-export default function ContactLanding() {
+export default function ResourcesLanding() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
   gsap.registerPlugin(ScrollTrigger);
@@ -48,9 +48,9 @@ export default function ContactLanding() {
 
   return (
     <div className="min-h-screen w-full fixed" ref={parallaxRef}>
-      <section className="relative text-white w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] bg-impact-landing">
+      <section className="relative text-white w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center [clip-path:circle(75%_at_49%_29%)] md:[clip-path:circle(180vh_at_50%_-80vh)] bg-resources-landing">
         <div className="flex flex-col justify-center items-center w-[90%] xl:w-[75%] text-center gap-4">
-          <h1 className="xl:leading-[1] text-3xl md:text-7xl font-[arial-bold] leading-tight">IMPACT</h1>
+          <h1 className="xl:leading-[1] text-3xl md:text-7xl font-[arial-bold] leading-tight">RESOURCES</h1>
         
         </div>
       </section>

@@ -9,7 +9,7 @@ export function Footer() {
     }
   }
   return (
-    <footer className=" border-0 w-full m-0 p-0">
+    
     <footer className=" border-0 w-full m-0 p-0">
       {/* <Maintenance></Maintenance> */}
       <div className="lg:h-[30vh] h-[50vh]  flex items-center justify-center bg-gradient-to-t to-[#00205C] from-[#1B5632] p-2">
@@ -76,12 +76,6 @@ export function Footer() {
     </div>
   </div>
 </div>
-
-
-    </div>
-  </div>
-</div>
-
 
     </footer>
   );
