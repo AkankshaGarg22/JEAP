@@ -1,6 +1,6 @@
 export default function Progress() {
   return (
-    <div className="min-h-screen mx-auto flex flex-col justify-center items-center">
+    <div className="mx-auto py-[20px] md:py-[30px] flex flex-col items-center">
       {/* Header */}
       <h2 className="basis-2/5 text-lg md:text-xl lg:text-6xl font-bold text-center p-6 text-white xl:mb-15">Progress of Technical Working Groups</h2>
 
