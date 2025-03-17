@@ -107,23 +107,32 @@ export default function PartnerShip() {
   return (
     <div className="h-screen xl:h-screen flex flex-col items-center justify-start md:justify-center xl:justify-center bg-cover xl:bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200]">
       <div className="basis-1/4 xs:basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center justify-end md:justify-center xl:justify-end mb-2 xs:mb-4 md:mb-0 md:mt-8 gap-2 xl:gap-2 text-center text-white w-3/4 xs:w-full md:w-3/4 md:pt-8 ">
-        <h2 className="leading-none xl:leading-[1.5] text-2xl md:text-[3rem] lg:text-[4rem] xl:text-[70px] font-[arial-bold]">JEAP: Partnering for Impact</h2>
+        <h2 className="leading-none xl:leading-[1.5] text-lg md:text-3xl xl:text-6xl font-bold">JEAP: Partnering for Impact</h2>
       </div>
       <div className="basis-3/4 xs:basis-4/5 md:basis-3/4 xl:basis-3/4 2xl:basis-2/3 w-full xl:w-5/6 relative xs:mb-2 xl:mb-0 2xl:mb-4">
         {/* Slide Container - Fixed width approach */}
-        <div className="w-full h-full overflow-hidden 2xl:flex 2xl:flex-col 2xl:justify-center">
+        <div className="w-full h-full overflow-hidden 2xl:flex 2xl:flex-col 2xl:justify-center xl:pb-[30px] pb-[20px]">
           <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {slides.map((slide) => (
               <div key={slide.id} className="w-full flex-shrink-0 flex flex-col gap-2 md:gap-0 xl:gap-8 md:justify-around">
                 <div className="md:basis-1/10 xl:basis-1/5 flex flex-col items-center px-2 mb-1 xs:mb-2 xl:my-4 2xl:my-2">
-                  <p className="text-center text-white w-full xl:w-full xl:leading-snug md:text-xl xl:text-2xl 2xl:text-3xl">{slide.title}</p>
+                  <p className="text-center text-white w-full xl:w-full xl:leading-snug md:text-lg xl:text-xl 2xl:text-2xl">{slide.title}</p>
                 </div>
 
-                <div className="md:basis-9/10 xl:basis-4/5 flex flex-col xl:flex-row items-center xl:items-stretch justify-center gap-2 md:gap-2 xl:gap-2 px-4">
+                <div className="flex items-center justify-center">
+                <button onClick={handlePrev} className="flex items-end transform -translate-y-1/2 z-10" aria-label="Previous slide">
+                    <div className="h-9 w-9 bg-white rounded-full flex justify-center items-center hover:bg-gray-200 transition duration-300">
+                      <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
+                      </svg>
+                    </div>
+                  </button>
+                  <div className="md:basis-9/10 xl:basis-4/5 flex flex-col lg:flex-row items-center xl:items-stretch justify-evenly gap-2 px-4">
+                  
                   {slide.items.map((item, idx) => (
                     <div
                       key={idx}
-                      className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[30%] hover:bg-white text-white hover:text-green-800 cursor-pointer transition-colors duration-300"
+                      className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[30%] text-white cursor-pointer transition-colors duration-300 container"
                       onClick={() => openModal(item)}
                     >
                       <Image
@@ -135,29 +144,29 @@ export default function PartnerShip() {
                         src={item.img}
                         alt={item.header}
                       />
-                      <p className="text-center text-sm xs:text-base xl:text-lg 2xl:text-[20px] py-1 xs:py-2 px-2">{item.header}</p>
+                      <span className="overlay">
+                      <div className="text text-sm xs:text-base xl:text-lg 2xl:text-[20px] w-[70%] md:w-[90%] top-[70%] md:top-[90%]">{item.header}</div>
+                      </span>
+                      <p className="hover:hidden text-center text-sm xs:text-base xl:text-lg 2xl:text-[20px] py-1 xs:py-2 px-2">{item.header}</p>
                     </div>
                   ))}
                 </div>
+                <button onClick={handleNext} className="flex items-end transform -translate-y-1/2 z-10" aria-label="Next slide">
+                    <div className="h-9 w-9 bg-white rounded-full flex justify-center items-center hover:bg-gray-200 transition duration-300">
+                      <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
               </div>
             ))}
           </div>
         </div>
-        <button onClick={handlePrev} className="absolute left-2 top-1/2 xl:-left-[5%] transform -translate-y-1/2 z-10" aria-label="Previous slide">
-          <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center hover:bg-red-200 transition duration-300">
-            <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
-            </svg>
-          </div>
-        </button>
 
-        <button onClick={handleNext} className="absolute right-2 top-1/2 xl:-right-[5%] transform -translate-y-1/2 z-10" aria-label="Next slide">
-          <div className="h-9 w-9 bg-white rounded-xl flex justify-center items-center hover:bg-gray-200 transition duration-300">
-            <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-            </svg>
-          </div>
-        </button>
+
+
       </div>
 
       {/* Modal */}
