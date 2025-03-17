@@ -226,8 +226,8 @@ html.lenis body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #1a5632;
-  opacity: 0.9;
+  background-color: #fff;
+  opacity: 0.8;
   overflow: hidden;
   height: 0;
   transition: .5s ease;
@@ -242,8 +242,7 @@ html.lenis body {
 }
 
 .text {
-  color: #fff;
-  opacity: 1;
+  color: #1a5632;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

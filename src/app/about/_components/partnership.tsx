@@ -132,7 +132,7 @@ export default function PartnerShip() {
                   {slide.items.map((item, idx) => (
                     <div
                       key={idx}
-                      className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[30%] text-white cursor-pointer transition-colors duration-300 container"
+                      className="border border-white flex flex-col rounded-3xl w-4/5 md:w-[35%] text-white cursor-pointer transition-colors duration-300 container"
                       onClick={() => openModal(item)}
                     >
                       <Image
@@ -145,7 +145,7 @@ export default function PartnerShip() {
                         alt={item.header}
                       />
                       <span className="overlay">
-                      <div className="text text-sm xs:text-base xl:text-lg 2xl:text-[20px] w-[70%] md:w-[90%] top-[70%] md:top-[90%]">{item.header}</div>
+                      <div className="text text-sm xs:text-base xl:text-lg 2xl:text-[20px] w-[70%] md:w-[95%] top-[70%] md:top-[90%]">{item.header}</div>
                       </span>
                       <p className="hover:hidden text-center text-sm xs:text-base xl:text-lg 2xl:text-[20px] py-1 xs:py-2 px-2">{item.header}</p>
                     </div>
