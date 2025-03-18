@@ -62,7 +62,7 @@ export default function Areas() {
       <div className="w-5/6 mt-20 xl:mt-24 mb-8">
         <h2 className="text-center text-lg md:text-3xl xl:text-6xl font-bold tracking-wider">Focus Areas</h2>
       </div>
-      <div className="flex flex-col gap-2 md:gap-8 xl:gap-4 justify-center items-center w-[90%] xl:w-3/4 lg:min-h-[400px] md:py-4">
+      <div className="flex flex-col gap-2 md:gap-8 xl:gap-4 justify-center items-center w-[90%] xl:w-3/4 lg:min-h-[400px] md:pt-4 md:pb-12">
         {arr.map((item) => (
           <div className="w-full flex flex-col items-center" key={item.id}>
             {/* Accordion Header */}
