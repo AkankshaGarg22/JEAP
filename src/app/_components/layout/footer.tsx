@@ -48,7 +48,7 @@ export function Footer() {
     </div>
 
     {/* Column 4: Copyright & Social Links - stacked on mobile, row on desktop */}
-    <div className="w-full flex flex-col-reverse lg:flex-row sm:flex-col-reverse justify-between items-center lg:pb-4 px-4 space-y-2 md:space-y-0">
+    <div className="w-full flex flex-col-reverse lg:flex-row sm:flex-col-reverse justify-center items-center lg:pb-4 px-4 space-y-2 md:space-y-0">
       <p className="text-s text-white font-ArialRegular text-center lg:p-0 p-4">© 2025 Joint Emergency Action Plan. All rights reserved.</p>
       {/* <div className="flex flex-row space-x-3 lg:p-0 p-2">
         <img
