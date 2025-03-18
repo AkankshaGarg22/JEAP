@@ -6,7 +6,7 @@ const sections = [
     id: 1,
     title: "Climate Change",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/climate-change/WHO_060271-50039.jpg",
     content:
       "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches. To address this, the JEAP incorporated a TWG focused on climate change into its action plan. The Climate Change TWG is setting a new standard for resilience in Africa by championing climate-resilient strategies for emergency preparedness and response, enhancing the region's capacity to prepare for, detect, and respond to climate-related health threats effectively.",
     popupContext: (
@@ -20,14 +20,18 @@ const sections = [
     ),
     popupVision:
       "The goal is to build robust, climate-resilient health systems across Africa that effectively address the health impacts of climate change, foster sustainability, and promote multi-sectoral collaboration to safeguard health—particularly for those most affected by the impacts of climate change.",
-    objectives: ["Climate resilience", "Sustainability", "Multi-sectoral coordination"],
+    objectives: [
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/climate%20change.svg", text: "Climate resilience" },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/survilencwe.svg", text: "Sustainability" },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/multi%20sector%20coordination.svg", text: "Multi-sectoral coordination" },
+    ],
     progressText: [],
   },
   {
     id: 2,
     title: "Country Assessments",
     subtitle: "Country Assessment in the Preparedness Context",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/country%20assesment/PolioNigeria2020_20319b3016edf32a7ca7e64c1d35f932%20(1).jpg",
     content:
       "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies. Several assessments in line with IHR Monitoring and Evaluation (M&E) Framework and Performance of Veterinary Services (PVS) Pathway have been implemented to monitor and evaluate capacities’ development in preparedness in human health services, veterinary services and aquatic and animal health services. These instruments have assessed the status of preparedness and enabled documentation of progress countries have made in building their capacities.",
     popupContext: (
@@ -51,9 +55,9 @@ const sections = [
     popupVision:
       "Despite Commitments to assessments by Member States, there remain opportunities to enhance regional coordination and knowledge-sharing around assessments. The vision of this collaboration area is to support countries in assessing and developing International Health Regulation (IHR) core capacities to prepare for and respond to public health emergencies through enhanced partnership and coordination.",
     objectives: [
-      "Ensure the harmonization of EPR tools and processes",
-      "Support countries to conduct and report on EPR capacity assessments",
-      "Support countries to develop and implement action plans",
+      { icon: "/assets/blog/focus/read-more-images/country-assesment/icons/Untitled-1-01.svg", text: "Ensure the harmonization of EPR tools and processes" },
+      { icon: "/assets/blog/focus/read-more-images/country-assesment/icons/Untitled-1-02.svg", text: "Support countries to conduct and report on EPR capacity assessments" },
+      { icon: "/assets/blog/focus/read-more-images/country-assesment/icons/Untitled-1-03.svg", text: "Support countries to develop and implement action plans" },
     ],
     progressText: [
       {
@@ -72,7 +76,7 @@ const sections = [
     id: 3,
     title: "Digitalization",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/digitization/CW5A5581_141830.jpg",
     content:
       "The aftermath of the COVID-19 pandemic highlighted the critical need for technology-driven solutions in Africa's health sector to strengthen countries' ability to promptly prepare for, detect, and respond to health emergencies. In response, the Digitalization TWG, a cross-cutting initiative within JEAP, was established to address this need and now leads the integration of digital solutions across other TWGs.",
     popupContext: (
@@ -133,7 +137,7 @@ const sections = [
     id: 4,
     title: "Operations, Supply, and Logistics",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/operations,%20supply%20and%20logistics/20220425_Darfur_HCF_20%20(1).jpg",
     content:
       "Logistics is an essential part of emergency response – yet delays in the delivery of medical supplies and gaps in human resources for logistics remain major challenges across the continent.",
     popupContext: (
@@ -173,6 +177,7 @@ const sections = [
     id: 5,
     title: "RCCE",
     subtitle: "",
+    popupImage: "/assets/blog/focus/read-more-images/rcce/WHO_GUINEA_EBOLA_9849-89427.jpg",
     content:
       "The JEAP recognizes the importance of Improved community preparedness, knowledge, and engagement in responding to health emergencies. JEAP is addressing the critical gaps in risk communication and community engagement (RCCE) highlighted during the Covid-19 pandemic by tackling major RCCE challenges such as weak strategies, poor implementation, and fragmented efforts across countries. By enhancing coordination and promoting integrated, results-driven RCCE strategies, JEAP is ensuring that RCCE and information management (IM) are prioritized in health emergencies. ",
     popupContext: (
@@ -215,7 +220,7 @@ const sections = [
     id: 6,
     title: "Response Readiness",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/response-rediness/WHO_Ebola%20DR%20Congo%2017JUN2019_0384-2.jpg",
     content:
       "While most African countries have now established a Public Health Emergency Operations Centre (PHEOC), recent evaluations highlight that implementation capabilities vary.6 A PHEOC is a hub for joint risk assessment, planning, and coordination of information and resources for effective emergency management. Many countries established and operationalized PHEOCs in the aftermath of Ebola Virus Disease (EVD) epidemic in West Africa, supporting stronger emergency coordination.",
     popupContext: (
@@ -230,8 +235,14 @@ const sections = [
     popupVision:
       "The vision of this collaboration area is to improve the public health emergency management capability by putting in place fully functional Public Health Emergency Operations Centres (PHEOCs) in at least 90% of Member States in Africa by the end of 2027.",
     objectives: [
-      "Ensure that at least 90% of Member States in Africa have a PHEOC facility in place equipped with information, communication technology and physical infrastructure that meets the minimum requirements by 2027.",
-      "Ensure that at least 90% of the Member States in Africa have developed and implemented core PHEOC policy, plans and procedures: legal framework, operational and functional plans and procedures.",
+      {
+        icon: "/assets/blog/focus/read-more-images/response-rediness/icons/Untitled-1-01.svg",
+        text: "Ensure that at least 90% of Member States in Africa have a PHEOC facility in place equipped with information, communication technology and physical infrastructure that meets the minimum requirements by 2027.",
+      },
+      {
+        icon: "/assets/blog/focus/read-more-images/response-rediness/icons/Untitled-1-02.svg",
+        text: "Ensure that at least 90% of the Member States in Africa have developed and implemented core PHEOC policy, plans and procedures: legal framework, operational and functional plans and procedures.",
+      },
     ],
     progressText: [
       {
@@ -255,7 +266,7 @@ const sections = [
     id: 7,
     title: "Surveillance",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/surveillance/Surveillance.png",
     content:
       "Surveillance systems and technologies across the continent are lacking, with some countries not meeting the Integrated Diseases Surveillance & Response (IDSR) standards, leading to delays in detecting health emergencies. Despite scientific development to strengthen the health system to protect human health, Africa continues to be confronted by longstanding, emerging, and reemerging infectious disease threats. Unfortunately, the region has a relatively low capacity for risk management of disease epidemics, mainly due to inadequate resources for early detection, identification, and prompt response. The failure in the early detection and response to epidemics in Africa is attributed to several factors, including deficiency in the development and implementation of surveillance and response systems against infectious disease outbreaks.",
     popupContext: (
@@ -272,10 +283,10 @@ const sections = [
     popupVision:
       "The vision of this collaboration area is to strengthen integrated public health surveillance and laboratory systems in all Member States. Through coordination between Africa CDC, WHO AFRO, and WHO EMRO, the Partnership will seek to build national public health surveillance and response systems with updated IDSR and event-based surveillance (EBS) practices, digital technologies, and genomic surveillance capacities at the national level.",
     objectives: [
-      "Ensure all member states have capacity to timely detect and respond to public health threats",
-      "Ensure all member states have laboratory capacity to diagnose and report pathogens that can cause outbreaks",
-      "Establish a functional continental framework for data and information exchange",
-      "Ensure all member states have laboratory sequencing capacity for pathogens that can cause outbreaks",
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-01.svg", text: "Ensure all member states have capacity to timely detect and respond to public health threats" },
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-02.svg", text: "Ensure all member states have laboratory capacity to diagnose and report pathogens that can cause outbreaks" },
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-03.svg", text: "Establish a functional continental framework for data and information exchange" },
+      { icon: "/assets/blog/focus/read-more-images/surveillance/icons/Untitled-1-04.svg", text: "Ensure all member states have laboratory sequencing capacity for pathogens that can cause outbreaks" },
     ],
     progressText: [
       {
@@ -294,7 +305,7 @@ const sections = [
     id: 8,
     title: "Workforce Development",
     subtitle: "",
-    popupImage: "/assets/blog/focus/read-more-images/climate-change.jpg",
+    popupImage: "/assets/blog/focus/read-more-images/workforce-deployment/Miaron_0025-149336.jpg",
     content:
       "Human resources are the heart of emergency response, but there continues to be a shortage of trained, equipped emergency responders on the African continent. According to WHO analysis, fewer than 10% of African countries are adequately staffed to prepare for and respond to health emergencies.",
     popupContext: (
@@ -308,9 +319,9 @@ const sections = [
     popupVision:
       "The JEAP’s vision for workforce development is to develop and sustain an emergency health workforce that is adequate, trained, rapidly deployable, interoperable, supported and connected regionally through existing networks at the leadership, technical and operational levels.",
     objectives: [
-      "Support the identification, capacity building and retainment of emergency health workforce",
-      "Ensure the coordination and deployment of emergency health workforce",
-      "Reinforce the emergency health workforce leadership",
+      { icon: "/assets/blog/focus/read-more-images/workforce-deployment/icons/Untitled-1-01.svg", text: "Support the identification, capacity building and retainment of emergency health workforce" },
+      { icon: "/assets/blog/focus/read-more-images/workforce-deployment/icons/Untitled-1-02.svg", text: "Ensure the coordination and deployment of emergency health workforce" },
+      { icon: "/assets/blog/focus/read-more-images/workforce-deployment/icons/Untitled-1-03.svg", text: "Reinforce the emergency health workforce leadership" },
     ],
     progressText: [
       {
@@ -376,7 +387,7 @@ export default function List() {
   };
 
   return (
-    <div className="text-white p-4">
+    <div className="text-white p-4 md:w-[90%] my-0 mx-auto">
       <div className="flex flex-col lg:flex-row gap-4">
         {/* Sidebar - Accordion on Mobile, Fixed Sidebar on Desktop */}
         <div className="w-full lg:w-1/4">
@@ -406,7 +417,11 @@ export default function List() {
           <div className="hidden lg:block">
             {sections.map((section) => (
               <div key={section.id} className="relative hover:bg-[#2c5377] group">
-                <button key={section.title} className={`w-full text-left px-3 py-4 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""}`} onClick={() => setSelected(section)}>
+                <button
+                  key={section.title}
+                  className={`w-full text-left px-3 py-5 block ${selected.title === section.title ? "bg-[#4c7fae]" : ""} ${section.id !== sections.length ? " border-b " : ""}`}
+                  onClick={() => setSelected(section)}
+                >
                   {section.title}
                 </button>
                 <span className="absolute top-[1px] left-[12px] text-xs text-gray-300 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">Read about</span>
@@ -417,11 +432,11 @@ export default function List() {
 
         {/* Content Panel */}
         <div className="hidden md:block w-full lg:w-3/4 bg-[rgb(37_73_119)] p-8 relative">
-          <h2 className="text-2xl font-bold">{selected.title}</h2>
+          <h2 className="text-2xl xl:text-4xl font-bold">{selected.title}</h2>
           <div className="text-3xl font-bold my-2">{selected.subtitle}</div>
-          <div className="font-bold my-2">Context</div>
-          <p className="my-4 text-gray-300 border-t-2 pt-4 line-clamp-[8]">{selected.content}</p>
-          <button className="absolute -bottom-4 right-8 bg-white text-blue-900 px-6 py-2 font-semibold flex items-center gap-2 hover:bg-gray-200" onClick={() => handleReadMoreClick()}>
+          <div className="text-2xl font-bold my-2">Context</div>
+          <p className="my-4 text-gray-300 border-t-2 pt-4 line-clamp-[8] text-lg xl:text-xl xl:leading-8">{selected.content}</p>
+          <button className="md:h-[45px] absolute -bottom-4 right-8 bg-white text-blue-900 px-6 py-2 font-semibold flex items-center gap-2 hover:bg-gray-200" onClick={() => handleReadMoreClick()}>
             Read More →
           </button>
         </div>
@@ -439,56 +454,83 @@ export default function List() {
               <img src={selected.popupImage} alt={selected.title} className="w-11/12 object-cover h-96 md:h-[540px] md:w-[70%] my-0 mx-auto rounded-[100px] py-10" />
               <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
                 <div className="text-white flex flex-col items-left justify-left p-10 lg:py-10 lg:px-40">
-                  <h2 className="text-lg">{selected.title}</h2>
-                  <div className="text-3xl font-bold my-2">{selected.subtitle}</div>
-                  <div className="font-bold text-3xl my-2">Context</div>
-                  <div className="border-t-2 my-4 text-base">{selected.popupContext}</div>
+                  <h2 className="text-xl xl:text-4xl font-bold">{selected.title}</h2>
+                  <div className="text-3xl font-bold  my-2 xl:my-4">{selected.subtitle}</div>
+                  <div className="text-3xl my-2">Context</div>
+                  <div className="border-t-2 my-4 py-4 xl:py-8 text-base xl:text-lg">{selected.popupContext}</div>
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row">
-                <div className="">
-                  <div>Circle</div>
-                </div>
-                <div className="">
-                  <div>Line</div>
-                </div>
-                <div className="vision content text-center my-4">
-                  <h2 className="text-black text-3xl font-bold">Vision</h2>
-                  <p className="text-black">{selected.popupVision}</p>
+              <div className="w-full bg-[#1B56321A] py-8">
+                <div className="flex flex-col lg:flex-row items-center justify-center w-3/4 mx-auto ">
+                  <div className="lg:w-1/3">
+                    <img className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
+                  </div>
+                  <div className="lg:w-1/3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="319.7019958496094" height="17.40399932861328" viewBox="0 0 319.702 17.404">
+                      <g id="Group_5650" data-name="Group 5650" transform="translate(1131 5295)">
+                        <line id="Line_243" data-name="Line 243" x2="311" transform="translate(-1131 -5285.5)" fill="none" stroke="#707070" strokeWidth="2" className="svg-elem-1"></line>
+                        <circle
+                          id="Ellipse_228"
+                          data-name="Ellipse 228"
+                          cx="8.702"
+                          cy="8.702"
+                          r="8.702"
+                          transform="translate(-828.702 -5277.596) rotate(-90)"
+                          fill="#296742"
+                          className="svg-elem-2"
+                        ></circle>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="lg:w-1/3 content text-left my-4">
+                    <h2 className="text-black text-3xl font-bold mb-4">{!selected.objectives.length ? 'Vision and Objectives' : 'Vision'}</h2>
+                    <p className="text-black text-x">{selected.popupVision}</p>
+                  </div>
                 </div>
               </div>
+
               {selected.objectives.length && (
                 <div className="flex flex-col items-center py-10">
-                  <h2 className="text-black text-3xl font-bold">Objectives</h2>
-                  <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly py-5">
-                    {selected.objectives?.map((value, i) => {
+                  <h2 className="text-black text-3xl font-bold my-4">Objectives</h2>
+                  <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly 2xl:py-5 w-full  2xl:w-11/12">
+                    {selected.objectives?.map((obj, i) => {
                       return (
-                        <div key={i} className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-3/4 xl:w-[20%] flex flex-col gap-8 p-4 xl:p-5 h-60">
+                        <div
+                          key={i}
+                          className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-full xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-[24rem] 3xl:h-60 justify-evenly"
+                        >
                           <div className="">
-                            <img className="h-10 w-10 xl:h-20 xl:w-20" src={`/assets/blog/focus/read-more-images/${i + 1}.svg`} alt="next" />
+                            <img className="h-10 w-10 xl:h-20 xl:w-20" src={obj.icon} alt="next" />
                           </div>
-                          <div className="">{value}</div>
+                          <div className="text-lg xl:text-xl">{obj.text}</div>
                         </div>
                       );
                     })}
                   </div>
                 </div>
               )}
-              <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
-                <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-20">
-                  <h2 className="text-white text-3xl mb-4">Year 1 Progress</h2>
-                  <div className="flex flex-col gap-4 w-full">
-                    {selected.progressText?.map((text) => {
-                      return (
-                        <div className="border-2 border-white rounded-lg p-4">
-                          {text?.textHeading ? <h3>{text?.textHeading}</h3> : null}
-                          <div>{text.textContent}</div>
-                        </div>
-                      );
-                    })}
+              {selected.progressText.length && (
+                <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
+                  <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-16">
+                    <h2 className="text-white text-3xl mb-4">{selected.id === 1 || selected.id === 5 ? 'Key activities' : 'Year 1 Progress'}</h2>
+                    <div className="flex flex-col w-full 2xl:w-[90%]">
+                      {selected.progressText?.map((text, i) => {
+                        return (
+                          <div
+                            key={i}
+                            className={`border-white rounded-s-[4rem] rounded-e-[4rem] xl:rounded-s-full xl:rounded-e-full py-8 px-4 xl:py-20 xl:px-28 2xl:py-16 2xl:px-24 flex flex-col gap-4 ${
+                              selected.progressText.length - 1 !== i ? "border" : "border border-t-0"
+                            }`}
+                          >
+                            {text?.textHeading ? <h3 className="text-2xl lg:pl-8">{text?.textHeading}</h3> : null}
+                            <div className="text-base xl:text-lg lg:pl-8">{text.textContent}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

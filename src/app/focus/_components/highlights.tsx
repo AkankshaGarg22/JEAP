@@ -30,7 +30,7 @@ const carouselItems = [
   },
   {
     id: 5,
-    image: "/assets/blog/focus/carousel/5.jpg",
+    image: "/assets/blog/focus/carousel/5.JPG",
     title: "Facilitation cross-border coordination",
     alt: "Conducting joint advocacy to advance African interests",
   },
@@ -62,11 +62,8 @@ export default function Highlights() {
   }, [carouselItems.length]);
 
   return (
-    <div className="text-white flex flex-col gap-4 items-center justify-around">
-      <div>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Highlights from early implementation</h2>
-      </div>
-      <div>{/* img */}</div>
+    <div className="text-white flex flex-col gap-10 items-center justify-around mt-4 mb-8">
+      
       <div className="bg-[rgb(49_93_112)] rounded-xl flex items-center justify-center md:w-5/6">
         <p className="text-center xl:text-[24px] md:w-3/5 p-6">
           Overall, <span className="font-bold text-[16px] xl:text-[30px] tracking-wider">36 of 55 countries</span> have been directly served by key projects of the JEAP initiative since{" "}

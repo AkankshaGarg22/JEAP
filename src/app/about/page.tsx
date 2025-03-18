@@ -22,7 +22,7 @@ export default function Index() {
             <div className="relative mt-[100vh]">
               <PartnerShip />
             </div>
-            <div className="relative bg-white">
+            <div className="bg-white relative md:pt-[30px] pt-[20px]">
               <div>
                 <Achievements />
               </div>

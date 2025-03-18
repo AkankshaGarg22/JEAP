@@ -102,7 +102,7 @@ export default function Conceptualization() {
   }, [containerVisible, activeIndex]);
 
   return (
-    <div className="xl:min-h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 xl:gap-8 3xl:gap-8 items-center xl:justify-around py-2">
+    <div className="xl:min-h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 xl:gap-8 3xl:gap-8 items-center xl:justify-around py-2 md:pt-[40px] pt-[20px]">
       <h2 className="mt-4 text-center text-2xl xl:text-[70px] font-bold tracking-wider w-4/5 xl:w-full">JEAP conceptualization and launch</h2>
       <p className="w-4/5 xl:w-9/10 text-base xl:leading-6 xl:text-xl 3xl:text-2xl lg:text-center">
         While the JEAP was formally launched in May 2023, its journey began more than a year earlier. In March 2022, the founding partners held an in-person retreat to begin consolidating regional
@@ -131,7 +131,7 @@ export default function Conceptualization() {
           <h2 className="text-3xl font-bold my-8">JEAP Target Outcomes</h2>
         </div>
         <div className="flex-1 h-[50vh] 3xl:h-[35vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
-          <div className="relative xl:h-[150vh] 2xl:[h-90vh] 3xl:h-[80vh] 4xl:h-[75vh]">
+          <div className="relative 2xl:h-[150vh] xl:h-[180vh] md:h-[185vh] 4xl:h-[80vh]">
             {/* Vertical timeline line */}
             <div className="absolute z-10 w-0.5 bg-white left-4 mt-5" style={{ top: lineStyles.top, height: lineStyles.height }}></div>
 
@@ -152,8 +152,8 @@ export default function Conceptualization() {
 
                   {/* Content */}
                   <div
-                    className={`bg-white text-teal-900 p-6 rounded-md transition-all duration-300
-                        ${activeIndex === i ? "ring-2 ring-teal-300 shadow-lg opacity-100" : "opacity-50"}`}
+                    className={` p-6 rounded-md transition-all duration-300
+                        ${activeIndex === i ? "ring-2 bg-white text-teal-900 shadow-lg opacity-100" : "opacity-50 text-white"}`}
                   >
                     <p className="text-lg 2xl:text-xl">{item}</p>
                   </div>

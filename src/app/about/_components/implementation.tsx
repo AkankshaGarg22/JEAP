@@ -85,8 +85,8 @@ export default function Implementation() {
               className={`border-t-2 ${item.id === highlightsItem.length && item.id !== selectedAccordion ? " border-b-2" : ""} border-white py-4 flex w-full justify-between items-center`}
               onClick={() => handleAccordionClick(item.id)}
             >
-              <img className="size-6" src={item.icon} alt={item.title} />
-              <span className="uppercase xl:text-[20px]">{item.title}</span>
+              <img className="size-10" src={item.icon} alt={item.title} />
+              <span className="uppercase xl:text-[20px] w-4/5 pl-2 lg:w-11/12 text-start">{item.title}</span>
               <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : ""} border-2 border-white rounded p-1`}>
                 {item.id === selectedAccordion ? (
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
@@ -101,7 +101,7 @@ export default function Implementation() {
             </button>
             {/* Accordion Content */}
             {selectedAccordion === item.id && (
-              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-4/5">
+              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-[88%]">
                 {item.content.map((element, index) => (
                   <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-lg" key={index}>
                     {element}
