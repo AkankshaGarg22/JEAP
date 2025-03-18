@@ -3,7 +3,7 @@ import OutbreakDesktop from "./outbreak-desktop";
 import OutbreakMobile from "./outbreak-mobile";
 import { useMediaQuery } from "@react-hook/media-query";
 
-export default function Outbreak({ isVisible }: { isVisible: boolean }) {
+const Outbreak = ({ isVisible }: { isVisible: boolean }) => {
   const isXlScreen = useMediaQuery("only screen and (min-width: 1200px)"); // adjust the breakpoint as needed
 
   return (
@@ -21,3 +21,5 @@ export default function Outbreak({ isVisible }: { isVisible: boolean }) {
     </div>
   );
 }
+
+export default Outbreak;
