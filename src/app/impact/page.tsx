@@ -5,6 +5,7 @@ import Loading from "../_components/layout/loading";
 import ImpactLanding from "./_components/impact-landing";
 import Reports from "./_components/reports";
 import Footer from "../_components/layout/footer";
+import CaseStudies from "./_components/case-studies";
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
 
             <div className="relative mt-[100vh]">
               <Reports />
+              <CaseStudies />
             </div>
             <div className="relative">
               <Footer />
