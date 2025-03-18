@@ -44,21 +44,21 @@ const LeadersArray = [
         designation: 'Steering Committee Member, JEAP'
     },
     {
-        image: '',
+        image: '/assets/blog/jpgs/landry.jpeg',
         title: 'Dr Landry Dongmo Tsague',
         description: 'Senior Adviser, Africa CDC; UNICEF Senior Health Adviser to the African Union and Economic Commission for Africa.',
         link: '',
         designation: 'JEAP Focal Point'
     },
     {
-        image: '',
+        image: '/assets/blog/jpgs/Omalley.jpg',
         title: 'Helena O’Malley',
         description: 'Strategic Support Unit Manager, EPR Cluster, WHO AFRO',
         link: '',
         designation: 'JEAP Focal Point'
     },
     {
-        image: '',
+        image: '/assets/blog/jpgs/mb-curve.jpg',
         title: 'Aijana Djusupova',
         description: 'Planning Officer, WHO Health Emergencies, WHO EMRO',
         link: '',

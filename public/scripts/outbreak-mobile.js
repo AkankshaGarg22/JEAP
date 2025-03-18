@@ -3,7 +3,7 @@
 	var p; // shortcut to reference prototypes
 	var lib={};var ss={};var img={};
 	lib.ssMetadata = [
-			{name:"ui_atlas_1", frames: [[661,146,183,71],[612,73,248,71],[846,207,151,71],[185,207,167,71],[0,207,183,71],[241,134,186,71],[612,0,288,71],[0,134,239,71],[0,0,610,132],[862,73,131,132],[429,134,114,114],[545,146,114,114]]}
+			{name:"ui_1", frames: [[661,146,183,71],[612,73,248,71],[846,207,151,71],[185,207,167,71],[0,207,183,71],[241,134,186,71],[612,0,288,71],[0,134,239,71],[0,0,610,132],[862,73,131,132],[429,134,114,114],[545,146,114,114]]}
 	];
 	
 	
@@ -28,84 +28,84 @@
 	
 	
 	(lib.CachedBmp_32 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(0);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_31 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(1);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_30 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(2);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_29 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(3);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_28 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(4);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_27 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(5);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_26 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(6);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.CachedBmp_25 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(7);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.Bitmap1 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(8);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.Bitmap2 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(9);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.Bitmap3 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(10);
 	}).prototype = p = new cjs.Sprite();
 	
 	
 	
 	(lib.Bitmap4 = function() {
-		this.initialize(ss["ui_atlas_1"]);
+		this.initialize(ss["ui_1"]);
 		this.gotoAndStop(11);
 	}).prototype = p = new cjs.Sprite();
 	// helper functions:
@@ -1187,7 +1187,7 @@
 		color: "#FFFFFF",
 		opacity: 1.00,
 		manifest: [
-			{src:"images/ui_atlas_1.png?1742210745339", id:"ui_atlas_1"}
+			{src:"images/ui_1.png?1742210745339", id:"ui_1"}
 		],
 		preloads: []
 	};
