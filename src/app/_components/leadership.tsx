@@ -43,27 +43,27 @@ const LeadersArray = [
         link: 'https://www.emro.who.int/about-who/regional-director/rick-brennan-acting-regional-emergency-director.html',
         designation: 'Steering Committee Member, JEAP'
     },
-    // {
-    //     image: '',
-    //     title: 'Dr Landry Dongmo Tsague',
-    //     description: 'Senior Adviser, Africa CDC; UNICEF Senior Health Adviser to the African Union and Economic Commission for Africa.',
-    //     link: '',
-    //     designation: 'JEAP Focal Point'
-    // },
-    // {
-    //     image: '',
-    //     title: 'Helena O’Malley',
-    //     description: 'Strategic Support Unit Manager, EPR Cluster, WHO AFRO',
-    //     link: '',
-    //     designation: 'JEAP Focal Point'
-    // },
-    // {
-    //     image: '',
-    //     title: 'Aijana Djusupova',
-    //     description: 'Planning Officer, WHO Health Emergencies, WHO EMRO',
-    //     link: '',
-    //     designation: 'JEAP Focal Point'
-    // },
+    {
+        image: '',
+        title: 'Dr Landry Dongmo Tsague',
+        description: 'Senior Adviser, Africa CDC; UNICEF Senior Health Adviser to the African Union and Economic Commission for Africa.',
+        link: '',
+        designation: 'JEAP Focal Point'
+    },
+    {
+        image: '',
+        title: 'Helena O’Malley',
+        description: 'Strategic Support Unit Manager, EPR Cluster, WHO AFRO',
+        link: '',
+        designation: 'JEAP Focal Point'
+    },
+    {
+        image: '',
+        title: 'Aijana Djusupova',
+        description: 'Planning Officer, WHO Health Emergencies, WHO EMRO',
+        link: '',
+        designation: 'JEAP Focal Point'
+    },
 ]
 
 export function Leadership() {

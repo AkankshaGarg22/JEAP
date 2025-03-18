@@ -102,7 +102,7 @@ export default function Achievements() {
           </button>
         </div>
         {/* Dots */}
-        <div className="xl:hidden flex justify-center gap-2">
+        <div className="flex justify-center gap-2">
           {slides.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)} className={`w-2 h-2 md:h-4 md:w-4 border-2 border-black rounded-full ${i === current ? "bg-green-800" : ""}`} />
           ))}
