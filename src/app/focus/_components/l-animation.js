@@ -9,16 +9,12 @@ function init() {
     canvas = document.getElementById("canvas");
     anim_container = document.getElementById("animation_container");
     dom_overlay_container = document.getElementById("dom_overlay_container");
-    var comp = AdobeAn.getComposition("43D59298A37CE247BFAC71FF180991A9");
-    var lib = comp.getLibrary();
+    var comp=AdobeAn.getComposition("43D59298A37CE247BFAC71FF180991A9");
+    var lib=comp.getLibrary();
     var loader = new createjs.LoadQueue(false);
-    loader.addEventListener("fileload", function (evt) {
-      handleFileLoad(evt, comp);
-    });
-    loader.addEventListener("complete", function (evt) {
-      handleComplete(evt, comp);
-    });
-    var lib = comp.getLibrary();
+    loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+    loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+    var lib=comp.getLibrary();
     loader.loadManifest(lib.properties.manifest);
   } else {
     setTimeout(() => {
@@ -35,29 +31,29 @@ function handleFileLoad(evt, comp) {
 }
 
 function handleComplete(evt, comp) {
-  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-  var lib = comp.getLibrary();
-  var ss = comp.getSpriteSheet();
-  var queue = evt.target;
-  var ssMetadata = lib.ssMetadata;
-  for (let i = 0; i < ssMetadata.length; i++) {
-    ss[ssMetadata[i].name] = new createjs.SpriteSheet({ images: [queue.getResult(ssMetadata[i].name)], frames: ssMetadata[i].frames });
-  }
-  var preloaderDiv = document.getElementById("_preload_div_");
-  preloaderDiv.style.display = "none";
-  canvas.style.display = "block";
-  stage = new lib.Stage(canvas);
-  exportRoot = new lib.ui(stage);
-  //Registers the "tick" event listener.
-  fnStartAnimation = function () {
-    stage.addChild(exportRoot);
-    createjs.Ticker.framerate = lib.properties.fps;
-    createjs.Ticker.addEventListener("tick", stage);
-  };
-  //Code to support hidpi screens and responsive scaling.
-  AdobeAn.makeResponsive(true, "both", true, 1, [canvas, preloaderDiv, anim_container, dom_overlay_container], stage);
-  AdobeAn.compositionLoaded(lib.properties.id);
-  fnStartAnimation();
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(let i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	canvas.style.display = 'block';
+	exportRoot = new lib.ui();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,preloaderDiv,anim_container,dom_overlay_container], stage);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
 }
 
 export default function LAnimation() {
@@ -124,15 +120,15 @@ export default function LAnimation() {
 
 
   return (
-    <div className=" w-11/12 overflow-clip mx-auto " ref={animationRef}>
+    <div className=" w-11/12 overflow-clip mx-auto flex flex-col justify-center items-center" ref={animationRef}>
       <div className="text-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Highlights from early implementation</h2>
       </div>
-      <div id="animation_container" style={{ backgroundColor: "transparent", width: "1440px", height: "830px", position: "relative" }}>
-        <canvas id="canvas" width="1630" height="830" style={{ position: "absolute", display: "none", backgroundColor: "transparent" }}></canvas>
-        <div id="dom_overlay_container" style={{ pointerEvents: "none", overflow: "hidden", width: "1630px", height: "830px", position: "absolute", left: 0, top: 0, display: "block" }}></div>
+      <div id="animation_container" style={{ backgroundColor: "transparent", position: "relative", height: "300px", width: "1000px" }}>
+        <canvas id="canvas" width="1000" height="390" style={{ position: "absolute", display: "none", backgroundColor: "transparent" }}></canvas>
+        <div id="dom_overlay_container" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", left: 0, top: 0, display: "block" }}></div>
       </div>
-      <div id="_preload_div_" style={{ position: "absolute", top: "0", left: "0", display: "none", height: "830px", width: "1630px", textAlign: "center" }}>
+      <div id="_preload_div_" style={{ position: "absolute", top: "0", left: "0", display: "none", textAlign: "center" }}>
         <span style={{ display: "inline-block", height: "100%", verticalAlign: "middle" }}></span>
         <img src="/images/_preloader.gif" style={{ verticalAlign: "middle", maxHeight: "100%" }} alt="Loading..." />
       </div>

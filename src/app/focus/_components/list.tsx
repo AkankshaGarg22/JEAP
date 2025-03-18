@@ -482,9 +482,9 @@ export default function List() {
                       </g>
                     </svg>
                   </div>
-                  <div className="lg:w-1/3 content text-center my-4">
-                    <h2 className="text-black text-3xl font-bold mb-4">Vision</h2>
-                    <p className="text-black text-xl">{selected.popupVision}</p>
+                  <div className="lg:w-1/3 content text-left my-4">
+                    <h2 className="text-black text-3xl font-bold mb-4">{!selected.objectives.length ? 'Vision and Objectives' : 'Vision'}</h2>
+                    <p className="text-black text-x">{selected.popupVision}</p>
                   </div>
                 </div>
               </div>
@@ -497,7 +497,7 @@ export default function List() {
                       return (
                         <div
                           key={i}
-                          className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-full xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-[24rem] 3xl:h-60"
+                          className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-full xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-[24rem] 3xl:h-60 justify-evenly"
                         >
                           <div className="">
                             <img className="h-10 w-10 xl:h-20 xl:w-20" src={obj.icon} alt="next" />
@@ -512,7 +512,7 @@ export default function List() {
               {selected.progressText.length && (
                 <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
                   <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-16">
-                    <h2 className="text-white text-3xl mb-4">Year 1 Progress</h2>
+                    <h2 className="text-white text-3xl mb-4">{selected.id === 1 || selected.id === 5 ? 'Key activities' : 'Year 1 Progress'}</h2>
                     <div className="flex flex-col w-full 2xl:w-[90%]">
                       {selected.progressText?.map((text, i) => {
                         return (
