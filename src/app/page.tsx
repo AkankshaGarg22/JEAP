@@ -6,17 +6,20 @@ import Leadership from "./_components/leadership";
 import Resources from "./_components/resources";
 import Operation from "./_components/operation";
 import { Tabs } from "./_components/tabs";
-import { TimeLine } from "./_components/time-line";
-import TurnAroundTime from "./_components/turnaround-time";
+import { TimeLine } from "./_components/timeline/time-line";
+import TurnAroundTime from "./_components/turnaround-time/turnaround-time";
 import ErrorBoundary from "./_components/ErrorBoundary";
 import { Suspense, useEffect, useRef, useState } from "react";
-import Loading from "./_components/loading";
+import Loading from "./_components/layout/loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./_components/footer";
+import Footer from "./_components/layout/footer";
 import Lenis from "@studio-freight/lenis";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import  XLTimeLine  from "./_components/XLTimeline";
+import  XLTimeLine  from "./_components/timeline/XLTimeline";
+import Maintenance from "./_components/maintenance";
+import GradedEmergencies from "./_components/graded-emergencies";
+import Outbreak from './_components/outbreak/outbreak';
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -30,6 +33,9 @@ export default function Index() {
 
   const turnAroundTimeRef = useRef<HTMLDivElement | null>(null);
   const [isTurnAroundTimeVisible, setIsTurnAroundTimeVisible] = useState(false);
+
+  const OutbreakRef = useRef<HTMLDivElement | null>(null);
+  const [isWorldMapVisible, setIsWorldMapVisible] = useState(false);
 
   const elementIsVisibleInViewport = () => {
     if (operationRef.current) {
@@ -48,6 +54,16 @@ export default function Index() {
         setIsTurnAroundTimeVisible(true);
       } else {
         setIsTurnAroundTimeVisible(false);
+      }
+    }
+
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      // Trigger visibility when the element comes into view
+      if (rect.top <= window.innerHeight) {
+        setIsWorldMapVisible(true);
+      } else {
+        setIsWorldMapVisible(false);
       }
     }
   };
@@ -119,7 +135,10 @@ export default function Index() {
 
             <div className="relative bg-white">
               <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
-                <WorldMap />
+                <WorldMap/>
+              </div>
+              <div ref={OutbreakRef} data-aos="fade-up" data-aos-duration="1500">
+                <Outbreak isVisible={isWorldMapVisible}> </Outbreak>
               </div>
               <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500" className="xl:mt-[-60px]">
                 <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
@@ -142,10 +161,16 @@ export default function Index() {
                 <Resources />
               </div>
               <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                <GradedEmergencies />
+              </div>
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
                 <Leadership />
               </div>
+              <div className="pt-[20px] md:pt-[30px]" data-aos="fade-up" data-aos-duration="1500">
+                <Maintenance />
+              </div>
             </div>
-            <div className="relative pt-[20px] md:pt-[30px]">
+            <div className="relative">
               <Footer />
             </div>
           </div>

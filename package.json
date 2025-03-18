@@ -6,11 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prisma/client": "^5.15.0",
     "@react-hook/media-query": "^1.1.1",
     "@studio-freight/react-lenis": "^0.0.47",
     "@types/aos": "^3.0.7",
     "@types/gsap": "^3.0.0",
     "@types/vivus": "^0.4.7",
+    "@vercel/analytics": "^1.4.1",
     "aos": "^2.3.4",
     "classnames": "^2.5.1",
     "d3-fetch": "^3.0.1",
@@ -44,6 +46,7 @@
     "@types/react-simple-maps": "^3.0.4",
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
+    "prisma": "^5.15.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

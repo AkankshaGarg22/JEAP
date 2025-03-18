@@ -4,7 +4,7 @@ import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import { ComposableMap, Geographies, Geography, Sphere, Graticule } from "react-simple-maps";
 import Link from "next/link";
-import Device from "./device/device";
+import Device from "./utility/device/device";
 
 function getRankWithSuffix(rank: number) {
   // Check if the rank is between 11 and 13 (special cases)
@@ -52,7 +52,7 @@ const WorldMap = () => {
     <Device>
       {({ isMobile }) => {
         return <div className="min-h-screen flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-[#EEEEEE] to-[#FFFFFF] relative">
-          <h1 className="font-[compasse-extrabold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
+          <h1 className="font-[arial-bold] text-2xl md:text-4xl tracking-wide text-center pt-[20px] md:pt-[30px]">INFECTIOUS DISEASE VULNERABILITY INDEX WORLD MAP</h1>
           <div className="h-[400px] md:h-[700px] xl:h-[1200px] w-full relative" >
             {data.length > 0 && (
               <ComposableMap id="anchor" projection="geoMercator" projectionConfig={{ scale: 100, center: [0, 0] }} width={isMobile ? 600 : 1000} height={isMobile ? 50 : 200} style={{ height: isMobile ? "50vh" : "85%", width: "100%", }}>
@@ -108,16 +108,7 @@ const WorldMap = () => {
             <h2 className="font-black text-2xl md:text-3xl pt-[20px] px-4 text-balance">
               The JEAP is a blueprint that amplifies the collective yet unique strengths of African nations while strategically charting a course for strengthening emergency preparedness, detection, and response in the context of humanitarian crises and climate-related disasters.
             </h2>
-            <p className="p-4 text-xl text-balance">
-              The <span className="font-bold">24-48 hours</span> window is a crucial threshold for decisive action – a pivotal timeframe that can make the difference between life and death.
-            </p>
-            <div className="flex justify-center items-end w-full">
-              <p className="px-4 font-bold text-xl w-[70%] break-normal text-balance">
-              The JEAP, rooted in this urgent paradigm, will pave the way for unparalleled efficiency, and revolutionize how Africa has typically responded to public health emergencies in the following ways:
-              </p>
-            </div>
           </div>
-
         </div>
       }}
     </Device>
