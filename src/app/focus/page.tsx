@@ -27,6 +27,9 @@ export default function Index() {
               <div>
                 <Progress />
               </div>
+              <div className="flex items-center justify-center mb-8 lg:hidden">
+                <img src="/assets/blog/focus/bg/graph.svg" alt="graph" />
+              </div>
               <div className="hidden lg:block">
                 <LAnimation />
               </div>
