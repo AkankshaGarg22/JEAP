@@ -75,7 +75,7 @@ const ResourceReports: React.FC = () => {
   };
 
   return (
-    <div className="resource-reports-container">
+    <div className="w-full h-screen p-16 relative bg-no-repeat bg-cover xl:bg-xl-about-curve lg:bg-xl-about-curve bg-mb-about-curve sm:bg-mb-about-curve">
       <h1 className="title">Reports</h1>
       <div className="slider-wrapper">
         <Slider {...settings}>

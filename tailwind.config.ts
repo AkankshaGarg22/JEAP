@@ -24,7 +24,9 @@ const config: Config = {
         "mb-partner-curve" : "url(/assets/blog/about/curve/mb-partner.png)",
         "impact-landing": "url(/assets/blog/impactimages/Impact.jpg)",
         "resources-landing": "url(/assets/blog/resources/resources.jpg)",
-      },
+        "impact-curvexl":"url(/assets/blog/impactimages/curvexl.png)",
+        "impact-curvemb":"url(/assets/blog/impactimages/curvemb.png)",     
+       },
       colors: {
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",
