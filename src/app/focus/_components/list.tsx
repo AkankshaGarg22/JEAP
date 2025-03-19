@@ -21,17 +21,24 @@ const sections = [
     popupVision:
       "The goal is to build robust, climate-resilient health systems across Africa that effectively address the health impacts of climate change, foster sustainability, and promote multi-sectoral collaboration to safeguard health—particularly for those most affected by the impacts of climate change.",
     objectives: [
-      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/climate%20change.svg", text: "Climate resilience" },
-      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/survilencwe.svg", text: "Sustainability" },
-      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/multi%20sector%20coordination.svg", text: "Multi-sectoral coordination" },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/climate%20change.svg", text: "Support countries in developing and enhancing health systems that are resilient to the impacts of climate change, ensuring their ability to adapt and respond effectively to climate-related public health threats." },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/survilencwe.svg", text: "Facilitate the development of sustainable, low-carbon health systems that minimize environmental impact while maintaining efficiency and effectiveness." },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/multi%20sector%20coordination.svg", text: "Support countries and the region in establishing or strengthening multi-sectoral coordination mechanisms that integrate emergency response efforts at the intersection of climate change and health." },
     ],
-    progressText: [],
+    progressText: [ 
+       {
+      textHeading: "The Climate Change TWG supports countries through the following activities:",
+      textContent:
+        "Conducting Integrated Climate Change Vulnerability and Adaptation assessments. Developing and implementing National Action Plans for Health Security (NAPHS), including climate-related emergency preparedness and management. Enhancing national Early Warning Alert and Response Systems (EWARS) to provide timely responses to climate-sensitive diseases and threats as part of NAPHS. Assessing countries’ health system carbon footprint. Developing and implementing decarbonization guidelines, policies, and roadmaps, including measures to reduce the carbon footprint of logistics and supplies provided during health emergencies. Establishing and operationalizing multi-sectoral climate, environment, and health working groups in countries, in line with the Libreville Declaration on Health and Environment and the RC73 Regional Integrating climate-sensitive intelligence into Public Health Emergency Operations Centres (PHEOCs)"
+,
+    },
+   ],
   },
   {
     id: 2,
     title: "Country Assessments",
     subtitle: "Country Assessment in the Preparedness Context",
-    popupImage: "/assets/blog/focus/read-more-images/country%20assesment/PolioNigeria2020_20319b3016edf32a7ca7e64c1d35f932%20(1).jpg",
+    popupImage: "/assets/blog/focus/read-more-images/country-assesment/Countryassesment.jpg",
     content:
       "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies. Several assessments in line with IHR Monitoring and Evaluation (M&E) Framework and Performance of Veterinary Services (PVS) Pathway have been implemented to monitor and evaluate capacities’ development in preparedness in human health services, veterinary services and aquatic and animal health services. These instruments have assessed the status of preparedness and enabled documentation of progress countries have made in building their capacities.",
     popupContext: (
@@ -444,7 +451,7 @@ export default function List() {
 
       {modalOpen && selected.id === currentIndex && (
         <div className="fixed inset-0 bg-[#fff] items-center justify-center z-50 h-screen overflow-scroll">
-         <div className="sticky h-auto w-full flex justify-end items-end mt-4"> 
+         <div className="sticky top-5 z-20 h-auto w-full flex justify-end items-end mt-4"> 
           <button onClick={closeModal} className="z-40 w-auto h-auto sticky top-4 right-8 bg-green-900 text-white hover:text-gray-300">
             <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
