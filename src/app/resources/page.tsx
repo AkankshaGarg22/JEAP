@@ -23,10 +23,10 @@ export default function Index() {
             </div>
             <div className="relative" data-aos="fade-up" data-aos-duration="1500">
               <div>
-                <Maintenance />
+                <News />
               </div>
               <div>
-                <News />
+                <Maintenance />
               </div>
             </div>
             <div className="relative">
