@@ -6,7 +6,7 @@
     padding: 0 .25rem;
     margin: 0 -.25rem;
     transition: color 0.3s ease-in-out, background-size 0.3s ease-in-out;
-    background-image: linear-gradient(90deg, #1b5632 0%, #1b5632 100%);
+    /* background-image: linear-gradient(90deg, #1b5632 0%, #1b5632 100%); */
     background-size: 0% 100%; /* Initially, no background is visible */
     background-repeat: no-repeat;
     background-position: left;

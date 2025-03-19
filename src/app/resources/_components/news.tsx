@@ -1,12 +1,11 @@
 "use client";
 import Link from "next/link";
-import Footer from "../../_components/layout/footer";
 
 const newsArr = [
   {
     link: "https://www.afro.who.int/countries/united-republic-of-tanzania/news/providing-mental-health-care-wake-marburg-virus-disease-outbreak",
     para: "Providing mental health care in the wake of Marburg virus disease outbreak",
-    img: "https://www.afro.who.int/sites/default/files/styles/article_sidebar_image_360w_/public/2025-03/CAV_0742.JPG?itok=BSb9Plgr",
+    img: "https://www.afro.who.int/sites/default/files/2025-03/CAV_0742.JPG",
   },
   {
     link: "https://www.afro.who.int/countries/angola/news/strengthening-active-cholera-case-finding-angola",
@@ -32,9 +31,9 @@ export default function News() {
           <Link href="/newsroom" className=" mt-4 shadow-[0px_0px_9px] shadow-white border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black">See all</Link>
         </div>
         {/* Desktop Layout */}
-        <div className="hidden md:grid grid-cols-5 gap-6 mb-6">
+        <div className="hidden md:grid grid-cols-6 gap-6 mb-6 w-[90%]">
           {/* Left Side - Main News */}
-          <div className="col-span-3 bg-white text-[#1B5632] rounded-lg shadow-lg p-4">
+          <div className="col-span-3 col-start-2 bg-white text-[#1B5632] rounded-lg shadow-lg p-4">
             <a className="flex flex-col" href="https://www.afro.who.int/countries/nigeria/news/high-level-delegation-visits-nigeria-urges-commitments-government" target="_blank">
               <img className="rounded-lg h-80 w-full" src="https://www.afro.who.int/sites/default/files/styles/article_sidebar_image_360w_/public/2025-02/DSC07937.jpg?itok=Llxb1J6p" alt="Main News" />
               <p className="mt-3 text-lg font-medium">High-level delegation visits Nigeria, urges commitments from government</p>
@@ -46,7 +45,7 @@ export default function News() {
             <div className="rounded-lg pr-4  space-y-4 overflow-y-auto max-h-[450px]">
               {newsArr.map((item, index) => (
                 <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className=" bg-[rgb(49_93_112)] py-3 px-2 rounded-lg flex space-x-2 hover:bg-[rgb(39_83_102)] transition">
-                  <img src={item.img} alt="News Thumbnail" className="rounded-md h-28 w-24" />
+                  <img src={item.img} alt="News Thumbnail" className="rounded-md h-32 w-32" />
                   <p className="text-base">{item.para}</p>
                 </a>
               ))}
@@ -84,9 +83,6 @@ export default function News() {
         </div>
       </div>
     </section>
-    <div>
-                  <Footer />
-                </div>
     </div>
 
   );

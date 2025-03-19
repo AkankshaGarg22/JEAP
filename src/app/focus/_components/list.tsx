@@ -31,7 +31,7 @@ const sections = [
     id: 2,
     title: "Country Assessments",
     subtitle: "Country Assessment in the Preparedness Context",
-    popupImage: "/assets/blog/focus/read-more-images/country%20assesment/PolioNigeria2020_20319b3016edf32a7ca7e64c1d35f932%20(1).jpg",
+    popupImage: "/assets/blog/focus/read-more-images/country-assesment/country-assessment.jpg",
     content:
       "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies. Several assessments in line with IHR Monitoring and Evaluation (M&E) Framework and Performance of Veterinary Services (PVS) Pathway have been implemented to monitor and evaluate capacities’ development in preparedness in human health services, veterinary services and aquatic and animal health services. These instruments have assessed the status of preparedness and enabled documentation of progress countries have made in building their capacities.",
     popupContext: (
