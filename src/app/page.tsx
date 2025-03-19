@@ -19,6 +19,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import  XLTimeLine  from "./_components/timeline/XLTimeline";
 import Maintenance from "./_components/maintenance";
 import GradedEmergencies from "./_components/graded-emergencies";
+import Outbreak from './_components/outbreak/outbreak';
 
 export default function Index() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,6 +33,9 @@ export default function Index() {
 
   const turnAroundTimeRef = useRef<HTMLDivElement | null>(null);
   const [isTurnAroundTimeVisible, setIsTurnAroundTimeVisible] = useState(false);
+
+  const OutbreakRef = useRef<HTMLDivElement | null>(null);
+  const [isWorldMapVisible, setIsWorldMapVisible] = useState(false);
 
   const elementIsVisibleInViewport = () => {
     if (operationRef.current) {
@@ -50,6 +54,16 @@ export default function Index() {
         setIsTurnAroundTimeVisible(true);
       } else {
         setIsTurnAroundTimeVisible(false);
+      }
+    }
+
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      // Trigger visibility when the element comes into view
+      if (rect.top <= window.innerHeight) {
+        setIsWorldMapVisible(true);
+      } else {
+        setIsWorldMapVisible(false);
       }
     }
   };
@@ -121,8 +135,11 @@ export default function Index() {
 
             <div className="relative bg-white">
               <div ref={ref} data-aos="fade-up" data-aos-duration="1500">
-                <WorldMap />
+                <WorldMap/>
               </div>
+              {/* <div ref={OutbreakRef} data-aos="fade-up" data-aos-duration="1500">
+                <Outbreak isVisible={isWorldMapVisible} />
+              </div> */}
               <div ref={turnAroundTimeRef} data-aos="fade-up" data-aos-duration="1500" className="xl:mt-[-60px]">
                 <TurnAroundTime isVisible={isTurnAroundTimeVisible} />
               </div>

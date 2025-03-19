@@ -32,6 +32,8 @@ export default function Index() {
               <div>
                 <Implementation />
               </div>
+              <div>
+              </div>
             </div>
             <div className="relative">
               <Footer />

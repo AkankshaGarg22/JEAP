@@ -1,6 +1,6 @@
 "use client";
 import { useMediaQuery } from "@react-hook/media-query";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 
@@ -46,24 +46,33 @@ function handleComplete(evt, comp) {
     exportRoot = new lib.cir1(stage);
     //Registers the "tick" event listener.
     fnStartAnimation = function () {
-      stage.addChild(exportRoot);
-      createjs.Ticker.framerate = lib.properties.fps;
-      createjs.Ticker.addEventListener("tick", stage);
+      if (stage && exportRoot && lib) {
+        stage.addChild(exportRoot);
+        createjs.Ticker.framerate = lib.properties.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }
     };
+    if (canvas) {
+      AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
+      AdobeAn.compositionLoaded(lib.properties.id);
+      fnStartAnimation();
+    }
     //Code to support hidpi screens and responsive scaling.
-    AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container], stage);
-    AdobeAn.compositionLoaded(lib.properties.id);
-    fnStartAnimation();
   } catch (error) {
     console.log('error', error)
+    init();
   }
 }
 
 export function OuterCircle({ isVisible }) {
   const isXlScreen = useMediaQuery("only screen and (min-width: 1280px)"); // adjust the breakpoint as needed
 
+    const canvasRef = useRef(null)
+  
+
   useEffect(() => {
-    if (isVisible && isXlScreen) {
+    if (isVisible && isXlScreen && canvasRef.current) {
+      console.log(document.getElementById('canvas'))
       loadScript();
     }
 
@@ -91,7 +100,7 @@ export function OuterCircle({ isVisible }) {
 
   return (
     <div id="animation_container" className="hidden xl:block" style={{ width: "1024px", height: "576px" }}>
-      <canvas id="canvas" width="1024" height="576" style={{ position: "absolute", display: "block" }}></canvas>
+      <canvas ref={canvasRef} id="canvas" width="1024" height="576" style={{ position: "absolute", display: "block" }}></canvas>
       <div id="dom_overlay_container" style={{ pointerEvents: "none", overflow: "hidden", width: "1024px", height: "576px", position: "absolute", left: "0px", top: "0px", display: "block" }}></div>
       {/* <div id='preload_div'><img src=images /preloader.gif style='width: 30%; max-height: 100%;'/><div id="loader-txt">Loading...</div></div> */}
     </div>

@@ -424,7 +424,7 @@ export default function List() {
                 >
                   {section.title}
                 </button>
-                <span className="absolute top-[1px] left-[12px] text-xs text-gray-300 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">Read about</span>
+                {/* <span className="absolute top-[1px] left-[12px] text-xs text-gray-300 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">Read about</span> */}
               </div>
             ))}
           </div>
@@ -518,7 +518,7 @@ export default function List() {
                         return (
                           <div
                             key={i}
-                            className={`border-white rounded-s-[4rem] rounded-e-[4rem] xl:rounded-s-full xl:rounded-e-full py-8 px-4 xl:py-20 xl:px-28 2xl:py-16 2xl:px-24 flex flex-col gap-4 ${
+                            className={`border-white rounded-s-[4rem] rounded-e-[4rem] py-8 px-4 xl:py-20 xl:px-28 2xl:py-16 2xl:px-24 flex flex-col gap-4 ${
                               selected.progressText.length - 1 !== i ? "border" : "border border-t-0"
                             }`}
                           >
