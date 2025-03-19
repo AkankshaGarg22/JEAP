@@ -6,6 +6,7 @@ import ResourceLanding from "./_components/resource-landing";
 import Reports from "./_components/reports";
 import Footer from "../_components/layout/footer";
 import Maintenance from "../_components/maintenance";
+import News from "./_components/news";
 
 export default function Index() {
   return (
@@ -20,8 +21,13 @@ export default function Index() {
             <div className="relative mt-[100vh]">
               <Reports />
             </div>
-            <div className="" data-aos="fade-up" data-aos-duration="1500">
-              <Maintenance />
+            <div className="relative" data-aos="fade-up" data-aos-duration="1500">
+              <div>
+                <Maintenance />
+              </div>
+              <div>
+                <News />
+              </div>
             </div>
             <div className="relative">
               <Footer />
