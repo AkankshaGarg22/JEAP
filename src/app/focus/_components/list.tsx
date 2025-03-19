@@ -21,11 +21,18 @@ const sections = [
     popupVision:
       "The goal is to build robust, climate-resilient health systems across Africa that effectively address the health impacts of climate change, foster sustainability, and promote multi-sectoral collaboration to safeguard health—particularly for those most affected by the impacts of climate change.",
     objectives: [
-      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/climate%20change.svg", text: "Climate resilience" },
-      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/survilencwe.svg", text: "Sustainability" },
-      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/multi%20sector%20coordination.svg", text: "Multi-sectoral coordination" },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/climate%20change.svg", text: "Support countries in developing and enhancing health systems that are resilient to the impacts of climate change, ensuring their ability to adapt and respond effectively to climate-related public health threats." },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/survilencwe.svg", text: "Facilitate the development of sustainable, low-carbon health systems that minimize environmental impact while maintaining efficiency and effectiveness." },
+      { icon: "/assets/blog/focus/read-more-images/climate-change/icons/multi%20sector%20coordination.svg", text: "Support countries and the region in establishing or strengthening multi-sectoral coordination mechanisms that integrate emergency response efforts at the intersection of climate change and health." },
     ],
-    progressText: [],
+    progressText: [ 
+       {
+      textHeading: "The Climate Change TWG supports countries through the following activities:",
+      textContent:
+        "Conducting Integrated Climate Change Vulnerability and Adaptation assessments. Developing and implementing National Action Plans for Health Security (NAPHS), including climate-related emergency preparedness and management. Enhancing national Early Warning Alert and Response Systems (EWARS) to provide timely responses to climate-sensitive diseases and threats as part of NAPHS. Assessing countries’ health system carbon footprint. Developing and implementing decarbonization guidelines, policies, and roadmaps, including measures to reduce the carbon footprint of logistics and supplies provided during health emergencies. Establishing and operationalizing multi-sectoral climate, environment, and health working groups in countries, in line with the Libreville Declaration on Health and Environment and the RC73 Regional Integrating climate-sensitive intelligence into Public Health Emergency Operations Centres (PHEOCs)"
+,
+    },
+   ],
   },
   {
     id: 2,
@@ -444,14 +451,18 @@ export default function List() {
 
       {modalOpen && selected.id === currentIndex && (
         <div className="fixed inset-0 bg-[#fff] items-center justify-center z-50 h-screen overflow-scroll">
-          <button onClick={closeModal} className="absolute top-4 right-4 text-black hover:text-gray-300">
+         <div className="sticky top-5 z-20 h-auto w-full flex justify-end items-end mt-4"> 
+          <button onClick={closeModal} className="z-40 w-auto h-auto sticky top-4 right-8 bg-green-900 text-white hover:text-gray-300">
             <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
+          </div>
           <div className="flex flex-col md:flex-row justify-center w-full">
             <div className="pt-3">
-              <img src={selected.popupImage} alt={selected.title} className="w-11/12 object-cover h-96 md:h-[540px] md:w-[70%] my-0 mx-auto rounded-[100px] py-10" />
+              <div className="w-full h-auto md:px-8 px-8 py-16 overflow-hidden flex items-center justify-center">
+              <img src={selected.popupImage} alt={selected.title} className="w-[1000px] h-[400px] rounded-md object-cover object-center mx-auto" />
+              </div>
               <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
                 <div className="text-white flex flex-col items-left justify-left p-10 lg:py-10 lg:px-40">
                   <h2 className="text-xl xl:text-4xl font-bold">{selected.title}</h2>
@@ -460,11 +471,11 @@ export default function List() {
                   <div className="border-t-2 my-4 py-4 xl:py-8 text-base xl:text-lg">{selected.popupContext}</div>
                 </div>
               </div>
-              <div className="w-full bg-[#1B56321A] py-8">
-                <div className="flex flex-col lg:flex-row items-center justify-center w-3/4 mx-auto ">
-                  <div className="lg:w-1/3">
+              <div className="w-full bg-[#1B56321A] py-2">
+                <div className="flex w-full px-10 lg:px-40 mx-auto ">
+                  {/* <div className="lg:w-1/3">
                     <img className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
-                  </div>
+                   </div>
                   <div className="lg:w-1/3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="319.7019958496094" height="17.40399932861328" viewBox="0 0 319.702 17.404">
                       <g id="Group_5650" data-name="Group 5650" transform="translate(1131 5295)">
@@ -481,10 +492,10 @@ export default function List() {
                         ></circle>
                       </g>
                     </svg>
-                  </div>
-                  <div className="lg:w-1/3 content text-left my-4">
+                   </div> */}
+                  <div className="w-full content text-left my-4">
                     <h2 className="text-black text-3xl font-bold mb-4">{!selected.objectives.length ? 'Vision and Objectives' : 'Vision'}</h2>
-                    <p className="text-black text-x">{selected.popupVision}</p>
+                    <p className="text-black text-x pt-4 border-t-2 border-black">{selected.popupVision}</p>
                   </div>
                 </div>
               </div>
@@ -495,15 +506,15 @@ export default function List() {
                   <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly 2xl:py-5 w-full  2xl:w-11/12">
                     {selected.objectives?.map((obj, i) => {
                       return (
-                        <div
-                          key={i}
-                          className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-full xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 h-44 lg:h-[24rem] 3xl:h-60 justify-evenly"
-                        >
-                          <div className="">
-                            <img className="h-10 w-10 xl:h-20 xl:w-20" src={obj.icon} alt="next" />
-                          </div>
-                          <div className="text-lg xl:text-xl">{obj.text}</div>
-                        </div>
+                              <div
+                                   key={i}
+                                     className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] w-5/6 lg:w-full xl:w-[20%] flex flex-col gap-4 2xl:gap-8 p-4 xl:p-5 py-8 min-h-[15em] justify-evenly"
+                              >
+                                 {/* <div className="">
+                                   <img className="h-10 w-10 xl:h-20 xl:w-20" src={obj.icon} alt="next" />
+                                      </div> */}
+                              <div className="text-lg xl:text-xl">{obj.text}</div>
+                              </div>
                       );
                     })}
                   </div>
@@ -518,7 +529,7 @@ export default function List() {
                         return (
                           <div
                             key={i}
-                            className={`border-white rounded-s-[4rem] rounded-e-[4rem] py-8 px-4 xl:py-20 xl:px-28 2xl:py-16 2xl:px-24 flex flex-col gap-4 ${
+                            className={`border-white rounded-s-[2rem] rounded-e-[2rem] py-4 px-4 xl:py-15 xl:px-15 2xl:py-10 2xl:px-15 flex flex-col gap-4 ${
                               selected.progressText.length - 1 !== i ? "border" : "border border-t-0"
                             }`}
                           >
