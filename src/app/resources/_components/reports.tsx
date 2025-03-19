@@ -51,7 +51,7 @@ export default function Reports() {
       <div className="flex flex-col sm:space-y-[60px] lg:space-y-0 md:space-y-0 lg:space-x-[100px] lg:flex-row justify-evenly items-center md:p-4 p-2 gap-[2rem]">
         <div className="shadow-[12px_12px_37px] shadow-[#0000001C] bg-[hsla(0,0%,100%,.1)] backdrop-blur-2xl md:p-[60px] p-[30px]">
           <a className="flex justify-center items-center" href="/assets/blog/resources/Revised JEAP Report (Nov 7) .pdf" download="JEAP Report.pdf" target='_blank'>
-            <div className="flex justify-center items-center relative h-[400px] w-[300px] mx-auto md:block hidden">
+            <div className="flex justify-center items-center relative h-[400px] w-[300px] mx-auto md:block">
               <img src="/assets/blog/resources/Jeap Report.jpg" className="relative h-[400px] w-[300px]" alt="resource-plan"></img>
               <div className="absolute  inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[370px] w-[270px] m-[14px]">
                 <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-4">
@@ -64,7 +64,7 @@ export default function Reports() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center relative h-[200px] w-[150px] mx-auto md:hidden block">
+            <div className="flex justify-center items-center relative h-[200px] w-[150px] mx-auto md:hidden ">
               <img src="/assets/blog/resources/Jeap Report.jpg" className="relative " alt="resource-plan"></img>
               <div className="absolute inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[170px] w-[130px] m-[10px]">
                 <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-1">
