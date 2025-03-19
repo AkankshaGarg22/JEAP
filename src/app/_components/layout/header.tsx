@@ -13,6 +13,10 @@ const Header = () => {
     }
   };
 
+  const goToHomePage = () => {
+    window.location.href = '/'
+  }
+
   return (
     <div className="relative w-full flex justify-center">
       <div className="header-bar w-[95%] md:w-[90%] xl:w-[60%] flex flex-row items-center justify-between md:p-[12px] z-[90] rounded-[50px] mt-5 absolute">
@@ -24,7 +28,7 @@ const Header = () => {
             <img className="h-[38px] lg:h-[55px] w-[90px] md:w-[80px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
           </Link> */}
           <div className="">
-            <img className="h-[38px] lg:h-[55px] w-[90px] lg:w-[145px]" src="/assets/blog/JEAP-white.png" alt="home-logo" />
+            <img className="h-[38px] lg:h-[55px] w-[90px] lg:w-[145px] cursor-pointer" src="/assets/blog/JEAP-white.png" alt="home-logo" onClick={() => {goToHomePage()}} />
           </div>
         </div>
         <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:py-3">

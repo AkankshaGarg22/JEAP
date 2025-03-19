@@ -45,9 +45,9 @@ export default function Index() {
             <button className="bg-emerald-700/50 text-white/80 hover:bg-emerald-700/70 px-6 py-2 rounded-full transition">Newest</button>
           </div>
 
-          <div className="w-full md:w-64">
+          {/* <div className="w-full md:w-64">
             <input type="text" placeholder="Search" className="w-full px-4 py-2 bg-transparent border-b border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-white" />
-          </div>
+          </div> */}
         </div>
 
         {/* News Grid */}

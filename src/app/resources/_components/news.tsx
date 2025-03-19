@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Footer from "../../_components/layout/footer";
 
 const newsArr = [
   {
@@ -12,17 +13,23 @@ const newsArr = [
     para: "Strengthening active cholera case finding in Angola",
     img: "https://www.afro.who.int/sites/default/files/styles/article_sidebar_image_360w_/public/2025-02/IMG_0535.jpg?itok=wc3gYgvR",
   },
+  {
+    link: "https://www.afro.who.int/countries/uganda/news/uganda-discharges-all-eight-ebola-disease-patients",
+    para: "Uganda discharges all eight Ebola disease patients",
+    img: "https://www.afro.who.int/sites/default/files/2025-02/DSC02976%20%281%29.JPG"
+  }
 ];
 
 export default function News() {
   return (
+    <div>
     <section className="bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] text-white py-10 px-4 md:px-16">
       <div className="max-w-7xl mx-auto ">
         <h2 className="text-center xl:leading-[1] text-3xl md:text-7xl font-[arial-bold] leading-tight mb-6">Newsroom</h2>
 
         {/* See All Button (Desktop) */}
         <div className="hidden md:block w-full text-right mb-6">
-          <Link href="/newsroom" className=" mt-4 border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black">See all</Link>
+          <Link href="/newsroom" className=" mt-4 shadow-[0px_0px_9px] shadow-white border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black">See all</Link>
         </div>
         {/* Desktop Layout */}
         <div className="hidden md:grid grid-cols-5 gap-6 mb-6">
@@ -77,5 +84,10 @@ export default function News() {
         </div>
       </div>
     </section>
+    <div>
+                  <Footer />
+                </div>
+    </div>
+
   );
 }
