@@ -42,10 +42,30 @@ const sections = [
     ],
     progressText: [
       {
-        textHeading:
-          "The Climate Change TWG supports countries through the following activities:",
+        textHeading: "",
         textContent:
-          "Conducting Integrated Climate Change Vulnerability and Adaptation assessments. Developing and implementing National Action Plans for Health Security (NAPHS), including climate-related emergency preparedness and management. Enhancing national Early Warning Alert and Response Systems (EWARS) to provide timely responses to climate-sensitive diseases and threats as part of NAPHS. Assessing countries’ health system carbon footprint. Developing and implementing decarbonization guidelines, policies, and roadmaps, including measures to reduce the carbon footprint of logistics and supplies provided during health emergencies. Establishing and operationalizing multi-sectoral climate, environment, and health working groups in countries, in line with the Libreville Declaration on Health and Environment and the RC73 Regional Integrating climate-sensitive intelligence into Public Health Emergency Operations Centres (PHEOCs)",
+          "Conducting Integrated Climate Change Vulnerability and Adaptation assessments.",
+      },
+      {
+        textHeading:"",
+        textContent:
+          "Developing and implementing National Action Plans for Health Security (NAPHS), including climate-related emergency preparedness and management",
+      },
+      {
+        textHeading:"",
+        textContent: "Enhancing national Early Warning Alert and Response Systems (EWARS) to provide timely responses to climate-sensitive diseases and threats as part of NAPHS.",
+      },
+      {
+        textHeading:"",
+        textContent: "Assessing countries’ health system carbon footprint.",
+      },
+      {
+        textHeading:"",
+        textContent: "Developing and implementing decarbonization guidelines, policies, and roadmaps, including measures to reduce the carbon footprint of logistics and supplies provided during health emergencies.",
+      },
+      {
+        textHeading:"",
+        textContent: "Establishing and operationalizing multi-sectoral climate, environment, and health working groups in countries, in line with the Libreville Declaration on Health and Environment and the RC73 Regional Integrating climate-sensitive intelligence into Public Health Emergency Operations Centres (PHEOCs)",
       },
     ],
   },
