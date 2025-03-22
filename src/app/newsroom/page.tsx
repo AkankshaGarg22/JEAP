@@ -1,42 +1,30 @@
-import Image from "next/image";
-import Link from "next/link";
-import Head from "next/head";
+"use client"
+import { useEffect, useState } from "react";
 import Footer from "../_components/layout/footer";
+import { Articles } from "@/interfaces/article";
+import { parseImageFromHtml } from "@/lib/parseImageFromHtml";
 
 export default function Index() {
-  // Static news array - this will be replaced with real data later
-  const newsData = [
-    {
-      id: "1",
-      headline:
-        "High-level delegation visits Nigeria, urges commitments from government",
-      imageUrl:
-        "https://www.afro.who.int/sites/default/files/styles/article_sidebar_image_360w_/public/2025-02/DSC07937.jpg?itok=Llxb1J6p",
-      link: "https://www.afro.who.int/countries/nigeria/news/high-level-delegation-visits-nigeria-urges-commitments-government",
-    },
-    {
-      id: "2",
-      headline:
-        "Providing mental health care in the wake of Marburg virus disease outbreak",
-      imageUrl:
-        "https://www.afro.who.int/sites/default/files/styles/article_sidebar_image_360w_/public/2025-03/CAV_0742.JPG?itok=BSb9Plgr",
-      link: "https://www.afro.who.int/countries/united-republic-of-tanzania/news/providing-mental-health-care-wake-marburg-virus-disease-outbreak",
-    },
-    {
-      id: "3",
-      headline: "Strengthening active cholera case finding in Angola",
-      imageUrl:
-        "https://www.afro.who.int/sites/default/files/styles/article_sidebar_image_360w_/public/2025-02/IMG_0535.jpg?itok=wc3gYgvR",
-      link: "https://www.afro.who.int/countries/angola/news/strengthening-active-cholera-case-finding-angola",
-    },
-    {
-      id: "4",
-      link: "https://www.afro.who.int/countries/uganda/news/uganda-discharges-all-eight-ebola-disease-patients",
-      headline: "Uganda discharges all eight Ebola disease patients",
-      imageUrl:
-        "https://www.afro.who.int/sites/default/files/2025-02/DSC02976%20%281%29.JPG",
-    },
-  ];
+
+  const [articles, setArticles] = useState<Articles[] | undefined>([]);
+  
+    useEffect(() => {
+      fetch("/api/rss")
+        .then((res) => res.json())
+        .then((data) => {
+          const restArticles = data.slice(2);
+          setArticles(restArticles);
+        });
+    }, []);
+  
+    const parseImageFromHtml = (article: Articles | undefined) => {
+      const parser = new DOMParser();
+      if (article && article.content) {
+        const document = parser.parseFromString(article.content, "text/html");
+        const imageSrc = document.getElementsByTagName("img").item(0)?.src;
+        return imageSrc;
+      }
+    };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] pt-16">
@@ -71,21 +59,21 @@ export default function Index() {
 
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {newsData.map((item) => (
+          {articles?.length && articles.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="bg-emerald-700/30 rounded-lg overflow-hidden p-2"
             >
               <div className="relative h-48 w-full">
                 <img
-                  src={item.imageUrl}
-                  alt={item.headline}
+                  src={parseImageFromHtml(item)}
+                  alt={item.title}
                   className="object-cover h-full w-full"
                 />
               </div>
               <div className="p-4 text-white">
                 <p className="text-sm mb-2 min-h-[2.5rem] line-clamp-2">
-                  {item.headline}
+                  {item.title}
                 </p>
                 <a
                   className="mt-3 bg-white text-emerald-800 px-4 py-1 rounded-full text-sm font-medium hover:bg-gray-100 transition"
