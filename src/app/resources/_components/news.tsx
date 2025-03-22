@@ -22,7 +22,7 @@ export default function News() {
     <div>
       <section className="bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] text-white py-10 px-4 md:px-16">
         <div className="max-w-7xl mx-auto ">
-          <h2 className="text-center xl:leading-[1] text-3xl md:text-7xl font-[arial-bold] leading-tight mb-6">
+          <h2 className="text-center xl:leading-[1] text-xl md:text-[2rem] xl:text-[50px] font-bold leading-tight mb-6">
             Newsroom
           </h2>
 
@@ -38,7 +38,7 @@ export default function News() {
           {/* Desktop Layout */}
           <div className="hidden md:grid grid-cols-6 gap-6 mb-6 w-[90%]">
             {/* Left Side - Main News */}
-            <div className="col-span-3 col-start-2 bg-[rgb(49_93_112)] rounded-lg shadow-lg p-4 hover:bg-white hover:text-green-800">
+            {mainArticle ? <div className="col-span-3 col-start-2 bg-[rgb(49_93_112)] rounded-lg shadow-lg p-4 hover:bg-white hover:text-green-800">
               <a
                 className="flex flex-col"
                 href={mainArticle?.link}
@@ -51,12 +51,12 @@ export default function News() {
                 />
                 <p className="mt-3 text-lg font-medium">{mainArticle?.title}</p>
               </a>
-            </div>
+            </div>: null}
 
             {/* Right Side - News List */}
             <div className="col-span-2 flex flex-col">
               <div className="rounded-lg pr-4  space-y-4 overflow-y-auto max-h-[450px]">
-                {articles && articles?.length &&
+                {articles && articles?.length ?
                   articles.map(
                     (item, index) => (
                         <a
@@ -74,7 +74,7 @@ export default function News() {
                           <p className="text-base">{item.title}</p>
                         </a>
                       )
-                  )}
+                  ): null}
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function News() {
 
             {/* News List */}
             <div className="mt-4 space-y-3 w-full">
-              {articles?.length &&
+              {articles?.length ?
                 articles.map((item, index) => (
                   <a
                     key={index}
@@ -118,7 +118,7 @@ export default function News() {
                     />
                     <p className="text-sm">{item.title}</p>
                   </a>
-                ))}
+                )): null}
             </div>
 
             {/* See All Button (Mobile) */}

@@ -47,25 +47,28 @@ const sections = [
           "Conducting Integrated Climate Change Vulnerability and Adaptation assessments.",
       },
       {
-        textHeading:"",
+        textHeading: "",
         textContent:
           "Developing and implementing National Action Plans for Health Security (NAPHS), including climate-related emergency preparedness and management",
       },
       {
-        textHeading:"",
-        textContent: "Enhancing national Early Warning Alert and Response Systems (EWARS) to provide timely responses to climate-sensitive diseases and threats as part of NAPHS.",
+        textHeading: "",
+        textContent:
+          "Enhancing national Early Warning Alert and Response Systems (EWARS) to provide timely responses to climate-sensitive diseases and threats as part of NAPHS.",
       },
       {
-        textHeading:"",
+        textHeading: "",
         textContent: "Assessing countries’ health system carbon footprint.",
       },
       {
-        textHeading:"",
-        textContent: "Developing and implementing decarbonization guidelines, policies, and roadmaps, including measures to reduce the carbon footprint of logistics and supplies provided during health emergencies.",
+        textHeading: "",
+        textContent:
+          "Developing and implementing decarbonization guidelines, policies, and roadmaps, including measures to reduce the carbon footprint of logistics and supplies provided during health emergencies.",
       },
       {
-        textHeading:"",
-        textContent: "Establishing and operationalizing multi-sectoral climate, environment, and health working groups in countries, in line with the Libreville Declaration on Health and Environment and the RC73 Regional Integrating climate-sensitive intelligence into Public Health Emergency Operations Centres (PHEOCs)",
+        textHeading: "",
+        textContent:
+          "Establishing and operationalizing multi-sectoral climate, environment, and health working groups in countries, in line with the Libreville Declaration on Health and Environment and the RC73 Regional Integrating climate-sensitive intelligence into Public Health Emergency Operations Centres (PHEOCs)",
       },
     ],
   },
@@ -376,6 +379,8 @@ const sections = [
           "The regional strategy builds on previous collaboration that helped establish a robust network of Public Health Emergency Operations Centers (PHEOCs) across the African and Eastern Mediterranean Regions beginning in 2015. Since its inception, the network has run simulation exercises, organized 69 webinars on PHEOC management and country experience sharing, trained over 110 experts as emergency management trainers, and established a PHEOC WhatsApp Network that facilitates ongoing information and best practice sharing. Over the past year, the Partnership has continued to manage the network and has begun preparations to deploy information-management software (ePHEM) that will standardize and enhance information management across PHEOCs.",
       },
     ],
+    popupMap:
+      "/assets/blog/focus/read-more-images/response-rediness/response-readiness-map.svg",
   },
   {
     id: 7,
@@ -719,17 +724,17 @@ export default function List() {
                   </h2>
                   <div className="md:grid md:grid-cols-6 mb-6 w-[90%]">
                     <div className="col-span-4 col-start-2 flex w-full justify-evenly gap-5">
-                  {selected.objectives?.map((obj, i) => {
-                      return (
-                        <div
-                          key={i}
-                          className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] p-5 w-[30%]"
-                        >
-                          <div className="text-lg xl:text-xl">{obj.text}</div>
-                        </div>
-                      );
-                    })}
-                  </div>
+                      {selected.objectives?.map((obj, i) => {
+                        return (
+                          <div
+                            key={i}
+                            className="relative bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] p-5 w-[30%]"
+                          >
+                            <div className="text-lg xl:text-xl">{obj.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                   {/* <div className="flex flex-col gap-4 lg:flex-row items-center lg:justify-evenly 2xl:py-5 w-full  2xl:w-11/12">
                     {selected.objectives?.map((obj, i) => {
@@ -744,7 +749,9 @@ export default function List() {
                     })}
                   </div> */}
                 </div>
-              ) : <></>}
+              ) : (
+                <></>
+              )}
               {selected.progressText.length && (
                 <div className="relative bg-gradient-to-b from-[rgb(1_33_91)] via-[rgb(8_48_80)] to-[#1B5632]">
                   <div className="text-white flex flex-col items-center justify-center p-10 lg:py-10 lg:px-16">
@@ -776,6 +783,17 @@ export default function List() {
                         );
                       })}
                     </div>
+                    {selected.popupMap ? (
+                      <div className="h-full md:h-screen">
+                        {
+                          <object
+                            className="h-full w-[100%] hover:cursor-pointer"
+                            data={selected.popupMap}
+                            type="image/svg+xml"
+                          />
+                        }
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               )}
