@@ -21,12 +21,12 @@ const slides = [
     href: "/assets/blog/Final Digital Brochure File.pdf",
     reportText: "Final Digital Brochure",
   },
-  {
-    id: 4,
-    reportSrc: "/assets/blog/Joint EPR Final Case Study.jpg",
-    href: "/assets/blog/Final Case Study File Draft 6.pdf",
-    reportText: "Final Case Study",
-  },
+  // {
+  //   id: 4,
+  //   reportSrc: "/assets/blog/Joint EPR Final Case Study.jpg",
+  //   href: "/assets/blog/Final Case Study File Draft 6.pdf",
+  //   reportText: "Final Case Study",
+  // },
 ];
 
 // interface SlideItem {

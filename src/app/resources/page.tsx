@@ -12,7 +12,6 @@ export default function Index() {
   return (
     <main className="relative">
       <ErrorBoundary>
-        <Suspense fallback={<Loading />}>
           <div className="absolute top-0 bg-white w-full">
             <div className="fixed">
               <ResourceLanding />
@@ -22,9 +21,11 @@ export default function Index() {
               <Reports />
             </div>
             <div className="relative" data-aos="fade-up" data-aos-duration="1500">
+            <Suspense fallback={<Loading />}>
               <div>
                 <News />
               </div>
+            </Suspense>
               <div>
                 <Maintenance />
               </div>
@@ -33,7 +34,6 @@ export default function Index() {
               <Footer />
             </div>
           </div>
-        </Suspense>
       </ErrorBoundary>
     </main>
   );

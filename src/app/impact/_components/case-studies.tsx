@@ -25,13 +25,13 @@ const AlternateContent: React.FC<AlternateContentProps> = ({
     >
       {/* Translucent white image container with fixed dimensions */}
       <div
-        className="lg:w-[350px] lg:h-[350px] md:w-[80%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg"
+        className="lg:w-[400px] lg:h-[360px] md:w-[80%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg"
         data-aos="fade-up"
       >
         <img
           src={imageSrc}
           alt={text}
-          className="w-[250px] h-[250px]"
+          className="w-[300px] h-[260px]"
         />
       </div>
 
