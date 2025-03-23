@@ -102,8 +102,10 @@ export default function Conceptualization() {
   }, [containerVisible, activeIndex]);
 
   const handleClick = (index: number) => {
-    if (timelineRefs.current[index] && containerRef.current) {
-      containerRef.current.scrollTo({ top: timelineRefs.current[index].offsetTop, behavior: "smooth" });
+    const target = timelineRefs.current[index];
+    const container = containerRef.current;
+    if (target !== null && container !== null) {
+      container.scrollTo({ top: target.offsetTop, behavior: "smooth" });
     }
     setActiveIndex(index);
   };
