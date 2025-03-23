@@ -66,11 +66,11 @@ export default function Conceptualization() {
       const containerHeight = containerRect.height;
 
       let multiplier;
-      if(window.innerWidth >=3560){
-        multiplier = 0.10;
-      }else if(window.innerWidth >= 2560){
-        multiplier = 0.15
-      }else{
+      if (window.innerWidth >= 3560) {
+        multiplier = 0.1;
+      } else if (window.innerWidth >= 2560) {
+        multiplier = 0.15;
+      } else {
         multiplier = 0.25;
       }
 
@@ -101,6 +101,15 @@ export default function Conceptualization() {
     };
   }, [containerVisible, activeIndex]);
 
+  const handleClick = (index: number) => {
+    const target = timelineRefs.current[index];
+    const container = containerRef.current;
+    if (target !== null && container !== null) {
+      container.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+    }
+    setActiveIndex(index);
+  };
+
   return (
     <div className="xl:min-h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 xl:gap-8 3xl:gap-8 items-center xl:justify-around py-2 md:pt-[40px] pt-[20px]">
       <h2 className="mt-4 text-center text-2xl xl:text-[70px] font-bold tracking-wider w-4/5 xl:w-full">JEAP conceptualization and launch</h2>
@@ -130,20 +139,20 @@ export default function Conceptualization() {
         <div className="flex-none">
           <h2 className="text-3xl font-bold my-8">JEAP Target Outcomes</h2>
         </div>
-        <div className="flex-1 h-[50vh] 3xl:h-[35vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
-          <div className="relative 2xl:h-[150vh] xl:h-[180vh] md:h-[185vh] 4xl:h-[80vh]">
+        <div className="flex-1 h-[50vh] 2xl:h-[30vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
+          <div className="relative 2xl:h-[125vh] xl:h-[150vh] md:h-[160vh] 4xl:h-[80vh]">
             {/* Vertical timeline line */}
             <div className="absolute z-10 w-0.5 bg-white left-4 mt-5" style={{ top: lineStyles.top, height: lineStyles.height }}></div>
 
             {/* Timeline items */}
-            <div className="pl-2 space-y-16">
+            <div className="pl-2 space-y-2">
               {arr.map((item, i) => (
-                <div key={i} ref={(el) => (timelineRefs.current[i] = el)} className="relative pl-12 transition-opacity duration-300 ">
+                <div key={i} ref={(el) => (timelineRefs.current[i] = el)} className="relative pl-12 transition-opacity duration-300 cursor-pointer " onClick={() => handleClick(i)}>
                   {/* Circle marker - always has checkmark, just highlighted when active */}
                   <div
-                    className={`absolute bg-[#1b5632] -left-1 top-[8px] h-6 w-6 rounded-full  
-                        ${activeIndex === i ? "  ring-2 ring-white" : "border-white/50 border"}
-                        flex items-center justify-center transition-all duration-300 z-20`}
+                    className={`absolute bg-[#1b5632] -left-1 top-[8px] h-6 w-6 rounded-full ${
+                      activeIndex === i ? "  ring-2 ring-white" : "border-white/50 border"
+                    } flex items-center justify-center transition-all duration-300 z-20`}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className={`${activeIndex == i ? "h-6 w-6" : "h-4 w-4"} text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -151,10 +160,7 @@ export default function Conceptualization() {
                   </div>
 
                   {/* Content */}
-                  <div
-                    className={` p-6 rounded-md transition-all duration-300
-                        ${activeIndex === i ? "ring-2 bg-white text-teal-900 shadow-lg opacity-100" : "opacity-50 text-white"}`}
-                  >
+                  <div className={`px-6 py-8 min-h-28 rounded-md transition-all duration-300 ${activeIndex === i ? "ring-2 bg-white text-teal-900 shadow-lg opacity-100" : "opacity-50 text-white"}`}>
                     <p className="text-lg 2xl:text-xl">{item}</p>
                   </div>
                 </div>

@@ -17,15 +17,6 @@ export default function Index() {
         });
     }, []);
   
-    const parseImageFromHtml = (article: Articles | undefined) => {
-      const parser = new DOMParser();
-      if (article && article.content) {
-        const document = parser.parseFromString(article.content, "text/html");
-        const imageSrc = document.getElementsByTagName("img").item(0)?.src;
-        return imageSrc;
-      }
-    };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
