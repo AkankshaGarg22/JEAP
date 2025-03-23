@@ -442,6 +442,8 @@ const sections = [
           "Following the establishment of the JEAP, Africa CDC, WHO/AFRO and WHO/EMRO agreed to work on a harmonized cross-border framework for pathogen collection, handling and shipment. The first draft, developed during an in-person workshop in Addis Ababa, has been developed and shared with all JEAP partners and is under review. The framework will encompass the three JEAP partners and cover sample referral at cross-border and national level. It will leverage the information Management system (NIMS) network, initiated by Africa CDC, which is open source and enables countries to have ownership and storage rights of their data.",
       },
     ],
+    popupMap:
+    "/assets/blog/focus/read-more-images/surveillance/surveillance-map.svg",
   },
   {
     id: 8,
@@ -547,6 +549,8 @@ const sections = [
           "In regional emergency response including pandemic response, success or failure often depends on a highly coordinated response supported by globally connected leaders with unique skills. Leadership in the health sector is challenging as the dynamic and rapidly changing environment during health emergencies requires leaders to understand the complex interaction between politics, access, finance, and local actors. Further,leading in these environments is complicated when authority is shared, resources are dispersed, and expertise is scattered across different agencies and levels of government. To strengthen African leadership for emergency preparedness and response, the JEAP has conceptualized an Emergency Preparedness andResponse Leaders Network. The JEAP is planning to solicit nominations for the network in the coming months.",
       },
     ],
+    popupMap:
+    "/assets/blog/focus/read-more-images/workforce-deployment/workforce-map.svg",
   },
 ];
 
