@@ -21,15 +21,15 @@
     width: 100%;
     height: 0.25rem;
     background-color: white;
-    animation: expandWidth 0.5s ease forwards;
+    animation: expandline 0.5s ease forwards;
   }
   
-  @keyframes expandWidth {
+  @keyframes expandline {
     from {
       width: 4rem;
     }
     to {
-      width: 100%;
+      width: 90%;
     }
   }
   
