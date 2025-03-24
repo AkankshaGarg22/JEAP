@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "../../_components/Case.min.css";
 
 export default function Landing() {
   return (
@@ -23,8 +24,8 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
-            <h2 className="text-xl md:text-2xl font-medium mb-4">THE JEAP PARTNERSHIP'S 'COMMON AFRICA APPROACH' TO THE PANDEMIC FUND</h2>
-            <div className="w-16 h-1 bg-white mb-6 lg:mb-0"></div>
+            <h2 className="text-xl md:text-2xl font-medium mb-4 animated-line">THE JEAP PARTNERSHIP'S 'COMMON AFRICA APPROACH' TO THE PANDEMIC FUND</h2>
+            
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
