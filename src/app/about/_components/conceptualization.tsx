@@ -111,7 +111,7 @@ export default function Conceptualization() {
   };
 
   return (
-    <div className="xl:min-h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 xl:gap-8 3xl:gap-8 items-center xl:justify-around py-2 md:pt-[40px] pt-[20px]">
+    <div className="xl:min-h-screen bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white flex flex-col gap-4 xl:gap-6 3xl:gap-6 items-center xl:justify-around py-2 md:pt-[40px] pt-[20px]">
       <h2 className="mt-4 text-center text-2xl xl:text-[70px] font-bold tracking-wider w-4/5 xl:w-full">JEAP conceptualization and launch</h2>
       <p className="w-4/5 xl:w-9/10 text-base xl:leading-6 xl:text-xl 3xl:text-2xl lg:text-center">
         While the JEAP was formally launched in May 2023, its journey began more than a year earlier. In March 2022, the founding partners held an in-person retreat to begin consolidating regional
@@ -139,7 +139,7 @@ export default function Conceptualization() {
         <div className="flex-none">
           <h2 className="text-3xl font-bold my-8">JEAP Target Outcomes</h2>
         </div>
-        <div className="flex-1 h-[50vh] 2xl:h-[30vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
+        <div className="flex-1 h-[50vh] py-8 2xl:h-[30vh] overflow-y-scroll no-scrollbar" ref={containerRef}>
           <div className="relative 2xl:h-[125vh] xl:h-[150vh] md:h-[160vh] 4xl:h-[80vh]">
             {/* Vertical timeline line */}
             <div className="absolute z-10 w-0.5 bg-white left-4 mt-5" style={{ top: lineStyles.top, height: lineStyles.height }}></div>
@@ -151,7 +151,7 @@ export default function Conceptualization() {
                   {/* Circle marker - always has checkmark, just highlighted when active */}
                   <div
                     className={`absolute bg-[#1b5632] -left-1 top-[8px] h-6 w-6 rounded-full ${
-                      activeIndex === i ? "  ring-2 ring-white" : "border-white/50 border"
+                      activeIndex === i ? "ring-2 ring-white" : "border-white/50 border"
                     } flex items-center justify-center transition-all duration-300 z-20`}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className={`${activeIndex == i ? "h-6 w-6" : "h-4 w-4"} text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -160,7 +160,7 @@ export default function Conceptualization() {
                   </div>
 
                   {/* Content */}
-                  <div className={`px-6 py-8 min-h-28 rounded-md transition-all duration-300 ${activeIndex === i ? "ring-2 bg-white text-teal-900 shadow-lg opacity-100" : "opacity-50 text-white"}`}>
+                  <div className={`px-6 py-[1.75rem] min-h-[6.5rem] rounded-md transition-all duration-300 ${activeIndex === i ? "ring-2 bg-white text-teal-900 shadow-lg opacity-100" : "opacity-50 text-white"}`}>
                     <p className="text-lg 2xl:text-xl">{item}</p>
                   </div>
                 </div>

@@ -73,16 +73,16 @@ export default function Implementation() {
     setSelectedAccordion(selectedAccordion === id ? null : id);
   };
   return (
-    <div className="bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white flex flex-col justify-start md:justify-center xl:justify-start 2xl:justify-center items-center md:gap-8 xl:gap-0">
+    <div className="bg-cover w-full overflow-hidden lg:bg-cover bg-no-repeat bg-mb-about-curve bg-top xl:bg-top md:bg-xl-about-curve z-[200] text-white flex flex-col justify-start md:justify-center xl:justify-start 2xl:justify-center items-center md:gap-8 xl:gap-0 pb-8">
       <div className="w-5/6 xl:w-3/4 mt-20 xl:mt-32 mb-8 xl:mb-0">
         <h2 className="text-center text-2xl md:text-3xl xl:text-7xl font-bold tracking-wider xl:leading-[5rem]">Implementation Highlights by Collaboration Area</h2>
       </div>
-      <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-center items-center w-full lg:w-4/5 p-4">
+      <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-start items-center w-full lg:w-[85%] p-4 xl:my-4 xl:h-[50rem]">
         {highlightsItem.map((item) => (
-          <div className="w-full flex flex-col items-center" key={item.id}>
+          <div className="w-full flex flex-col items-center xl:space-y-1 xl:h-full" key={item.id}>
             {/* Accordion Header */}
             <button
-              className={`border-t-2 ${item.id === highlightsItem.length && item.id !== selectedAccordion ? " border-b-2" : ""} border-white py-4 flex w-full justify-between items-center`}
+              className={`border-t-2 ${item.id === highlightsItem.length && item.id !== selectedAccordion ? " border-b-2" : ""} border-white py-4 xl:py-8 flex w-full justify-between items-center`}
               onClick={() => handleAccordionClick(item.id)}
             >
               <img className="size-10" src={item.icon} alt={item.title} />
@@ -101,9 +101,9 @@ export default function Implementation() {
             </button>
             {/* Accordion Content */}
             {selectedAccordion === item.id && (
-              <div className="flex flex-col lg:flex-row gap-4 my-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-[88%]">
+              <div className="flex flex-col lg:flex-row gap-4 p-2 xl:pb-4 items-center justify-center md:items-stretch xl:items-stretch xl:w-[90%]">
                 {item.content.map((element, index) => (
-                  <div className="w-full flex-1 border border-white rounded-lg p-2 pb-0 xl:py-4 text-center text-sm xl:text-lg" key={index}>
+                  <div className="w-full flex-1 border border-white rounded-lg p-2 xl:py-4 text-center text-sm xl:text-lg" key={index}>
                     {element}
                   </div>
                 ))}
