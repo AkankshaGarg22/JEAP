@@ -116,7 +116,7 @@ export default function Response() {
           {/* Icon row  */}
           <div className="flex justify-around items-center relative mx-8 mb-4">
             {slides.map((slide, index) => (
-              <button key={index} onClick={() => goToSlide(index)} className={`w-12 h-12 rounded-full flex items-center justify-center ${currentSlide === index ? "opacity-100" : "opacity-50"}`}>
+              <button key={index} onClick={() => goToSlide(index)} className={`w-12 h-12 rounded-full flex items-center justify-center`}>
                 <img src={slide.icon} alt="icon" className={`w-12 h-12`} />
               </button>
             ))}
