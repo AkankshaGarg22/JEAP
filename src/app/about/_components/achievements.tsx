@@ -57,13 +57,6 @@ export default function Achievements() {
       {/* Slides */}
       <div className="flex flex-grow flex-col gap-4 md:gap-8 mt-4">
         <div className="relative flex justify-center items-center h-full">
-          <button onClick={handlePrev} className="absolute hidden md:flex items-end left-0 translate-x-[5%] transform z-10" aria-label="Previous slide">
-            <div className="h-9 w-9 bg-[#00205C]  rounded-full flex justify-center items-center hover:bg-blue-500 transition duration-300">
-              <svg className="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
-              </svg>
-            </div>
-          </button>
           {/* Previous */}
           <button onClick={handlePrev} className="hidden xl:block absolute left-0 w-1/6 scale-90  translate-x-[5%] transition-all h-full">
             <img src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-2xl" />
@@ -71,6 +64,13 @@ export default function Achievements() {
 
           {/* Current */}
           <div className="relative z-10 w-full md:w-4/6 transition-all xl:h-full">
+            <button onClick={handlePrev} className="absolute hidden md:flex items-end left-0 translate-x-[5%] top-[50%] transform z-10" aria-label="Previous slide">
+              <div className="h-9 w-9 bg-[#00205C]  rounded-full flex justify-center items-center hover:bg-blue-500 transition duration-300">
+                <svg className="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
+                </svg>
+              </div>
+            </button>
             <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start xl:items-stretch gap-8 xl:gap-0 mx-2 bg-[#1b5632] rounded-xl">
               <div className="relative w-full md:max-w-[5600px] xl:max-w-[360px]">
                 <div className="h-full w-full min-h-[240px] xl:min-h-[570px] inset-0">
@@ -101,19 +101,19 @@ export default function Achievements() {
                 </div>
               </div>
             </div>
+
+            <button onClick={handleNext} className="absolute hidden md:flex items-end right-0 -translate-x-[5%] top-[50%] transform z-10" aria-label="Next slide">
+              <div className="h-9 w-9 bg-[#00205C] rounded-full flex justify-center items-center hover:bg-blue-500 transition duration-300">
+                <svg className="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                </svg>
+              </div>
+            </button>
           </div>
 
           {/* Next */}
           <button onClick={handleNext} className="hidden xl:block absolute right-0 w-1/6 scale-90 -translate-x-[5%] transition-all h-full">
             <img src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-2xl" />
-          </button>
-
-          <button onClick={handleNext} className="absolute hidden md:flex items-end transform right-0 -translate-x-[5%] z-10" aria-label="Next slide">
-            <div className="h-9 w-9 bg-[#00205C] rounded-full flex justify-center items-center hover:bg-blue-500 transition duration-300">
-              <svg className="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-              </svg>
-            </div>
           </button>
         </div>
         {/* Dots */}
