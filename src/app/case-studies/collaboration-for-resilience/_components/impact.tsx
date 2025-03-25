@@ -1,17 +1,6 @@
 "use client";
 import { useState } from "react";
 
-// const impact = [
-//   {
-//     icon: "",
-//     num: "12",
-//     text: "Regional Entity Proposals 1 from Africa CDC, 1 from AU IBAR, 5 from Regional Economic Communitiest",
-//     img: "",
-//   },
-//   { icon: "/assets/blog/case-studies/Collaboration for Resilience/Webp/6.svg", num: "40", text: "Single-country proposals", img: "" },
-//   { icon: ", num: "5", text: "Multi-Country Proposals", img: "" },
-// ];
-
 const proposals = [
   {
     count: 12,
@@ -53,13 +42,13 @@ export default function Impact() {
 
   return (
     <section className="w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white py-12">
-      <div className="max-w-7xl mx-auto mb-8 pb-4 flex flex-col lg:flex-row gap-4 lg:gap-16 lg:justify-between px-4 border-b lg:border-0 lg:px-12">
+      <div className="max-w-7xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center px-4 border-b lg:border-0 lg:px-12">
         <div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase">IMPACT</h2>
           <div className="w-12 h-1 bg-white my-4 lg:my-2"></div>
         </div>
 
-        <p className="text-sm md:text-base">
+        <p className="text-sm md:text-lg">
           As a result of this process, regional consensus was achieved. 57 proposals were submitted with JEAP support, with commitment received from 63 Ministries of Health and Ministries of Finance,
           5 implementing entities and co-financing partners. The proposals submitted across the continent as of 27 May 2024 with JEAP support were:
         </p>
@@ -93,9 +82,9 @@ export default function Impact() {
 
           {/* Panel 2: Content */}
           <div className="p-6 flex flex-col justify-end pb-10 border-r">
-            <div className="text-5xl font-bold">{proposals[currentSlide].count}</div>
-            <div className="text-xl font-medium">{proposals[currentSlide].title}</div>
-            {proposals[currentSlide].description && <div className="text-sm mt-3">{proposals[currentSlide].description}</div>}
+            <div className="text-7xl font-bold">{proposals[currentSlide].count}</div>
+            <div className="text-2xl font-medium">{proposals[currentSlide].title}</div>
+            {proposals[currentSlide].description && <div className="text-base mt-3">{proposals[currentSlide].description}</div>}
           </div>
 
           {/* Panel 3: Image */}
@@ -107,7 +96,7 @@ export default function Impact() {
         {/* Dots indicator */}
         <div className="flex justify-center mt-6 gap-3">
           {proposals.map((_, index) => (
-            <button key={index} onClick={() => goToSlide(index)} className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index ? "bg-white w-6" : "bg-gray-500 w-2"}`} />
+            <button key={index} onClick={() => goToSlide(index)} className={`h-4 rounded-full transition-all duration-300 ${currentSlide === index ? "bg-white w-10" : "bg-gray-500 w-4"}`} />
           ))}
         </div>
       </div>
