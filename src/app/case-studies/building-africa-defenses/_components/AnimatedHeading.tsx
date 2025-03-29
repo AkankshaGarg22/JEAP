@@ -1,0 +1,48 @@
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+
+interface AnimatedHeadingProps {
+  children: React.ReactNode;
+  className?: string;
+  fontSize?: string; // New prop to control the font size
+}
+
+const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, fontSize }) => {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.8 }
+    );
+
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="lg:col-span-4 order-1">
+      <h2
+        ref={headingRef}
+        className={`relative ${!fontSize ? "text-xl md:text-2xl" : ""} mb-4 w-[80%] font-ArialRegular font-bold ${className}`}
+        style={fontSize ? { fontSize } : undefined}
+      >
+        {children}
+        <span
+          className={`absolute left-0 bottom-[-10px] h-1 bg-white transition-all duration-700 ease-out ${
+            isVisible ? "w-full" : "w-[30%]"
+          }`}
+        />
+      </h2>
+    </div>
+  );
+};
+
+export default AnimatedHeading;

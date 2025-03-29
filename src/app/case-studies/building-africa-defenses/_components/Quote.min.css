@@ -1,0 +1,73 @@
+/* Container with a linear gradient background at 110 degrees */
+.quote-container {
+    background: linear-gradient(110deg, #1E2859, #1D5539);
+    color: white;
+    position: relative;
+    padding: 40px;
+    /* Adjust width/height or container settings as needed */
+  }
+  
+  /* Wrapper for the quote text */
+  .quote-content {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    /* Center the container but left-align the text inside */
+    text-align: left;
+    position: relative;
+  }
+  
+  /* Main quote text styling */
+  .quote-text {
+    font-size: 1rem;  /* Base font size */
+    line-height: 1.5;
+    position: relative;
+    padding: 20px;
+  }
+  
+  /* Decorative quotation marks as pseudo-elements */
+  
+  /* Left quotation mark: 7 times larger than the base text */
+  .quote-text::before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    font-size: 7em;
+    line-height: 1;
+    opacity: 0.2;
+  }
+  
+  /* Right quotation mark: 4 times larger than the base text */
+  .quote-text::after {
+    content: "”";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    font-size: 4em;
+    line-height: 1;
+    opacity: 0.2;
+  }
+  
+  /* SVG line positioned absolutely at the given coordinates */
+  .quote-line {
+    position: absolute;
+    left: 576.5px;
+    top: 5657.59px;
+    width: 300px; /* Adjust width as needed */
+    height: 100px;
+    overflow: visible;
+  }
+  
+  /* The caption below the line */
+  .line-caption {
+    position: absolute;
+    left: 576.5px;
+    top: 5757.59px; /* Adjust to position relative to the SVG line */
+    width: 300px;   /* Same width as the SVG line for alignment */
+    font-size: 0.875rem;
+    margin: 0;
+    text-align: center;
+  }
+  
