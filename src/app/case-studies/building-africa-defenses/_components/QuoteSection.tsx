@@ -1,48 +1,65 @@
-'use client';
+import React from "react";
 
-import React from 'react';
+interface BlockQuoteProps {
+  quote: string
+  author?: string
+  position?: string
+  organization?: string
+  className?: string
+  gradientFrom?: string
+  gradientTo?: string
+}
 
-const QuoteSection: React.FC = () => {
+export const BlockQuote = ({
+  quote,
+  author,
+  position,
+  organization,
+  className,
+  gradientFrom = "#1e2859", // Dark blue default
+  gradientTo = "#1d5539", // Green default
+}: BlockQuoteProps) => {
   return (
-    <section className="bg-[linear-gradient(110deg,_#1E2859,_#1D5539)] w-full h-[60vh] relative flex flex-col items-center justify-center">
-      {/* First Div: Contains a paragraph with text */}
-      <div className="w-[70%] mb-4">
-        <p className="text-white">
-          This is the quote text that appears in the first div.
-        </p>
-      </div>
-      
-      {/* Second Div: Contains a paragraph absolutely positioned to the left */}
-      <div className="w-[70%] relative">
-        <p className="absolute left-0 text-white text-left p-with-pseudo">
-          This text is in the second div.
-        </p>
-      </div>
-      
-      {/* Scoped CSS for pseudo elements */}
-      <style jsx>{`
-        .p-with-pseudo::before {
-          content: "";
-          display: inline-block;
-          width: 50px;
-          height: 1px;
-          background: white;
-          margin-right: 10px;
-          vertical-align: middle;
-        }
-        .p-with-pseudo::after {
-          content: "";
-          display: inline-block;
-          width: 10px;
-          height: 10px;
-          background: white;
-          border-radius: 50%;
-          vertical-align: middle;
-          margin-left: 10px;
-        }
-      `}</style>
-    </section>
-  );
-};
+    <div
+      className={`relative w-full overflow-hidden p-20 text-white ${className || ""}`}
+      style={{
+        background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
+      }}
+    >
+      {/* Left quote mark */}
+      <div className="absolute left-8 top-32 text-white/20 text-[300px] leading-none font-serif">&ldquo;</div>
 
-export default QuoteSection;
+      {/* Right quote mark */}
+      <div className="absolute right-24 bottom-40 text-white/20 text-[150px] leading-none font-serif">&rdquo;</div>
+
+      {/* Circle decoration */}
+      <div className="absolute left-1/4 bottom-1/4 w-60 h-60 rounded-full bg-white/5"></div>
+      <div className="absolute right-1/4 top-1/4 w-32 h-32 rounded-full bg-white/5"></div>
+
+      {/* Quote content */}
+      <div className="relative z-10 max-w-3xl mx-auto">
+        <p className="text-md md:text-md text-justify w-[512px] m-auto   leading-relaxed mb-6">{quote}</p>
+
+        {/* Attribution line */}
+        {(author || position || organization) && (
+          <div className="flex items-center gap-8 text-sm">
+            <div className="relative w-[350px] ml-[50px] flex items-center">
+              <div className="h-[1px] w-full bg-white/60"></div>
+              <div className="absolute -right-2 w-2 h-2 rounded-full bg-white/60"></div>
+            </div>
+            <div className="flex flex-wrap items-center">
+              {author && <span className="italic text-white/80">{author}</span>}
+              {position && (
+                <span className="italic text-white/80 whitespace-nowrap">
+                  {author ? ", " : ""}
+                  {position}
+                </span>
+              )}
+              {organization && <span className="w-full mt-1 italic text-white/80">{organization}</span>}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
