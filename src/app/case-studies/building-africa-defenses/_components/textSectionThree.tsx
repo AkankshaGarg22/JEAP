@@ -1,12 +1,12 @@
 import React from 'react'
-import AnimatedHeading from './AnimatedHeading'
+import AnimatedHeading from '../../_components/AnimatedHeading'
 
 const TextSectionThree = () => {
   return (
     <div className="bg-gradient-to-b from-[#1E2859] to-[#1D5539] w-full h-auto flex flex-col items-center justify-center py-10">
     <div className="w-[80%] h-auto bg-transparent flex lg:flex-row flex-col items-center justify-center">
         <div className="w-[40%] h-auto">
-        <AnimatedHeading linecolor="white" className="text-white text-[20px]">
+        <AnimatedHeading linecolor="white" fontSize='20px' className="text-white text-[20px]">
         INCREASED AFRICAN SURVEILLANCE EFFORTS DEMONSTRATE FERTILE GROUND FOR INVESTING IN CONTINENTAL GENOMIC SEQUENCING CAPACITY-BUILDING
       </AnimatedHeading>
         </div>

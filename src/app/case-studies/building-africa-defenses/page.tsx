@@ -2,7 +2,7 @@
 import Footer from "../../_components/layout/footer";
 import LandingDefenses from "./_components/landingDefenses";
 import TextSectionOne from "./_components/textSectionOne";
-import { BlockQuote } from "./_components/QuoteSection";
+import { BlockQuote } from "../_components/QuoteSection";
 import TextSectionTwo from "./_components/textSectionTwo";
 import TextSectionThree from "./_components/textSectionThree";
 import AnimatedHeading from "../_components/AnimatedHeading";
@@ -34,9 +34,9 @@ export default function Index() {
       </div>
 
       <div className="bg-gradient-to-t from-[#1E2859] to-[#1D5539] w-full h-auto flex items-center justify-center py-10">
-      <div>
-         <div className="w-[80%] flex flex-col lg:flex-row justify-center items-center">
-           <AnimatedHeading linecolor="white" fontSize="text-[20px]" className="text-white w-[60%]">
+      <div className="w-[80%] flex flex-col lg:flex-row justify-center items-center ">
+         <div className="w-[80%] ">
+           <AnimatedHeading linecolor="white" fontSize="20px" className="text-white w-[60%]">
              INCREASED AFRICAN SURVEILLANCE EFFORTS DEMONSTRATE FERTILE GROUND FOR INVESTING IN CONTINENTAL GENOMIC SEQUENCING CAPACITY-BUILDING
            </AnimatedHeading>
          </div>
