@@ -15,7 +15,7 @@ export default function Forward() {
 
         {/* Text Section */}
         <div className="bg-gradient-to-b px-2 col-span-4 from-[#00205C] to-[#1A5632] p-6 md:pl-40 md:py-40 text-white">
-          <AnimatedHeading linecolor="white" fontSize="1.5rem" className="w-[35%]">
+          <AnimatedHeading linecolor="white" fontSize="1.5rem" className="w-[30%]">
             WAY FORWARD
           </AnimatedHeading>
           <p className="text-sm md:text-2xl md:pr-2 md:pt-8 w-[90%] md:leading-12">
