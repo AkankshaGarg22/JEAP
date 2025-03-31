@@ -45,11 +45,12 @@ export default function LandingDefenses() {
           </div>
 
         </div>
-        <div className="w-full flex items-center justify-center">
+        <div className="flex items-center justify-center w-[100%]">
           <TranslucentBox 
-        text={"Many of these health threats are preventable or controllable with proven public health interventions, **such as disease surveillance, case management, vaccination, and health promotion.** 4 Yet many countries around the globe are insufficiently prepared to manage disease outbreaks, with Africa being particularly poorly equipped, scoring an average of 50% across the 15 capacities needed to detect, assess, notify, report and respond to public health risks, against a global average of 64%.5 In this context, a crisis anywhere can quickly spread to become a crisis everywhere. By building up genomic sequencing capacities on the African continent, this game-changing technology has the potential to transform health security in Africa and around the globe."}
-        width={1050}
+        text={"Many of these health threats are preventable or controllable with proven public health interventions, **such as disease surveillance, case management, vaccination, and health promotion.** ^^4^^ Yet many countries around the globe are insufficiently prepared to manage disease outbreaks, with Africa being particularly poorly equipped, scoring an average of 50% across the 15 capacities needed to detect, assess, notify, report and respond to public health risks, against a global average of 64%.^^5^^ In this context, a crisis anywhere can quickly spread to become a crisis everywhere. By building up genomic sequencing capacities on the African continent, this game-changing technology has the potential to transform health security in Africa and around the globe."}
         backgroundColor="rgba(255, 255, 255, 0.3)"
+        textsize="text-[25px]"
+        className="w-[70%]"
         />
         </div>
       </div>
