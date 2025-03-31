@@ -1,22 +1,30 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import Footer from "../_components/layout/footer";
 import { Articles } from "@/interfaces/article";
 import { parseImageFromHtml } from "@/lib/parseImageFromHtml";
 
 export default function Index() {
-
   const [articles, setArticles] = useState<Articles[] | undefined>([]);
-  
-    useEffect(() => {
+
+  useEffect(() => {
+    try {
       fetch("/api/rss")
-        .then((res) => res.json())
-        .then((data) => {
-          const restArticles = data.slice(2);
-          setArticles(restArticles);
-        });
-    }, []);
-  
+        .then((res) => {
+          if (typeof res !== "undefined") res.json();
+        })
+        .then((data: any) => {
+          if (data !== null && data?.length) {
+            const restArticles = data?.slice(4);
+            setArticles(restArticles);
+          }
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -50,32 +58,34 @@ export default function Index() {
 
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {articles?.length && articles.map((item, index) => (
-            <div
-              key={index}
-              className="bg-emerald-700/30 rounded-lg overflow-hidden p-2"
-            >
-              <div className="relative h-48 w-full">
-                <img
-                  src={parseImageFromHtml(item)}
-                  alt={item.title}
-                  className="object-cover h-full w-full"
-                />
-              </div>
-              <div className="p-4 text-white">
-                <p className="text-sm mb-2 min-h-[2.5rem] line-clamp-2">
-                  {item.title}
-                </p>
-                <a
-                  className="mt-3 bg-white text-emerald-800 px-4 py-1 rounded-full text-sm font-medium hover:bg-gray-100 transition"
-                  href={item.link}
-                  target="_blank"
+          {articles?.length
+            ? articles.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-emerald-700/30 rounded-lg overflow-hidden p-2"
                 >
-                  Read article
-                </a>
-              </div>
-            </div>
-          ))}
+                  <div className="relative h-48 w-full">
+                    <img
+                      src={parseImageFromHtml(item)}
+                      alt={item.title}
+                      className="object-cover h-full w-full"
+                    />
+                  </div>
+                  <div className="p-4 text-white">
+                    <p className="text-sm mb-2 min-h-[2.5rem] line-clamp-2">
+                      {item.title}
+                    </p>
+                    <a
+                      className="mt-3 bg-white text-emerald-800 px-4 py-1 rounded-full text-sm font-medium hover:bg-gray-100 transition"
+                      href={item.link}
+                      target="_blank"
+                    >
+                      Read article
+                    </a>
+                  </div>
+                </div>
+              ))
+            : null}
         </div>
       </div>
       <div className="relative">
