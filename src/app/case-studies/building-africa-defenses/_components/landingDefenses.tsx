@@ -1,6 +1,6 @@
 import Image from "next/image";
 import TranslucentBox from "./textWhiteBox";
-import AnimatedHeading from "./AnimatedHeading";
+import AnimatedHeading from "../../_components/AnimatedHeading";
 
 export default function LandingDefenses() {
   return (

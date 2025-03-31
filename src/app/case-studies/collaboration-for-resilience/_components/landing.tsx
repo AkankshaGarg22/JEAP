@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimatedHeading from "../../_components/AnimatedHeading";
 
 export default function Landing() {
   return (
@@ -23,13 +24,14 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
-            <h2 className="text-xl md:text-2xl font-medium mb-4">THE JEAP PARTNERSHIP'S 'COMMON AFRICA APPROACH' TO THE PANDEMIC FUND</h2>
-            <div className="w-16 h-1 bg-white mb-6 lg:mb-0"></div>
+            <AnimatedHeading linecolor="white">
+            THE JEAP PARTNERSHIP'S 'COMMON AFRICA APPROACH' TO THE PANDEMIC FUND      
+            </AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
-            <p className="text-base md:text-lg">
+            <p className="text-base md:text-xl md:leading-8">
               Officially launched in 2022, the Pandemic Fund is a majornew source of financing that can benefit African countries seeking to enhance pandemic prevention, preparedness, and response
               capabilities. As of the beginning of 2024, the Fund has raised $2 billion in seed capital from 24 sovereign and three philanthropic contributors. In May 2023, the Pandemic Fund closed
               its first Call for Proposals, receiving 179 applications from 133 countries around the world and thereafter awarded a first round of grants totaling US$338 million. Yet, there were no

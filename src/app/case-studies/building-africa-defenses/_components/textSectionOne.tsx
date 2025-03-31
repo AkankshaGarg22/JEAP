@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimatedHeading from './AnimatedHeading'
+import AnimatedHeading from '../../_components/AnimatedHeading'
 
 const TextSectionOne = () => {
   return (
