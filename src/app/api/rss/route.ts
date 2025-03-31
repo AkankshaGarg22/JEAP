@@ -7,6 +7,6 @@ export async function GET() {
     if (feed) {
         return Response.json(feed.items); // Returns an array of articles
     } else {
-        return null
+        return []
     }
 }
