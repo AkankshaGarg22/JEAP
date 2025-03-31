@@ -25,7 +25,7 @@ export default function LandingDefenses() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
-          <AnimatedHeading>
+          <AnimatedHeading linecolor="white">
         GENOMIC SEQUENCING:<br></br> A GAME-CHANGING INNOVATION FOR DISEASE SURVEILLANCE IN AFRICA
       </AnimatedHeading>
           </div>

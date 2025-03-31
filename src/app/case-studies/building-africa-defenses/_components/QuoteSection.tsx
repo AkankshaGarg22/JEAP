@@ -21,7 +21,7 @@ export const BlockQuote = ({
 }: BlockQuoteProps) => {
   return (
     <div
-      className={`relative w-full overflow-hidden p-20 text-white ${className || ""}`}
+      className={`relative w-full h-[55vh] overflow-hidden p-20 text-white ${className || ""}`}
       style={{
         background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
       }}

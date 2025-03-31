@@ -5,10 +5,11 @@ import React, { useEffect, useRef, useState } from "react";
 interface AnimatedHeadingProps {
   children: React.ReactNode;
   className?: string;
-  fontSize?: string; // New prop to control the font size
+  fontSize?: string; 
+  linecolor?: string;
 }
 
-const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, fontSize }) => {
+const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, fontSize, linecolor }) => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -36,7 +37,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
       >
         {children}
         <span
-          className={`absolute left-0 bottom-[-10px] h-1 bg-white transition-all duration-700 ease-out ${
+          className={`absolute left-0 bottom-[-10px] h-1 bg-${linecolor} transition-all duration-700 ease-out ${
             isVisible ? "w-full" : "w-[30%]"
           }`}
         />
