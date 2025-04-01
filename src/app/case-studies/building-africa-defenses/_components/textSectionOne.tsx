@@ -16,7 +16,7 @@ const TextSectionOne = () => {
         </div>
         <div className="w-[80%] h-auto py-6 flex items-center justify-center relative">
           <div className="w-[100%] h-auto py-6 flex items-center justify-center">
-            <img height="30%" width="80%" alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building Africa’s Defenses/webp/202105_Angola_COVAX_03.webp"
+            <img height="30%" width="80%" alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/202105_Angola_COVAX_03.webp"
             />
          </div>
         </div>
