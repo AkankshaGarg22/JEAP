@@ -171,9 +171,7 @@ export default function Response() {
                 <img
                   src={slide.icon}
                   alt="icon"
-                  className={`w-14 h-15 opacity-[${
-                    index > currentSlide ? 0.5 : 1
-                  }]`}
+                  className={`w-14 h-15 ${index > currentSlide ? 'opacity-50' : 'opacity-100'}`}
                 />
               </button>
             ))}

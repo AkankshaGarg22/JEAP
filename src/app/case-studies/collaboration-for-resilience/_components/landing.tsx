@@ -23,8 +23,8 @@ export default function Landing() {
           {/* Hero Text */}
           <div className="absolute bottom-10 w-full">
             <div className="max-w-6xl mx-auto px-6 md:px-12">
-              <MainHeading>
-                <h1 className="text-white">COLLABORATION FOR RESILIENCE</h1>
+              <MainHeading className="text-white">
+              COLLABORATION FOR RESILIENCE
               </MainHeading>
             </div>
           </div>
@@ -45,7 +45,6 @@ export default function Landing() {
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
             <Paragraph>
-            <p>
               Officially launched in 2022, the Pandemic Fund is a majornew
               source of financing that can benefit African countries seeking to
               enhance pandemic prevention, preparedness, and response
@@ -56,7 +55,6 @@ export default function Landing() {
               around the world and thereafter awarded a first round of grants
               totaling US$338 million. Yet, there were no successful regional or
               multi-country proposals from Africa, a missed opportunity.
-            </p>
             </Paragraph>
           </div>
 
