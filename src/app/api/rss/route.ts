@@ -4,9 +4,5 @@ export async function GET() {
     const parser = new Parser({timeout: 5000});
     
     const feed = await parser.parseURL("https://www.afro.who.int/rss/featured-news.xml"); // Replace with your RSS feed URL
-    if (feed) {
-        return Response.json(feed.items); // Returns an array of articles
-    } else {
-        return []
-    }
+    return Response.json(feed.items); // Returns an array of articles
 }
