@@ -4,8 +4,8 @@ import AnimatedHeading from '../../_components/AnimatedHeading'
 const TextSectionOne = () => {
   return (
     <div className="flex w-full h-auto flex-col bg-white items-center justify-center py-10">
-        <div className="w-[80%] h-auto flex flex-row gap-4 items-center justify-center">
-            <div className="w-[30%]">
+        <div className="lg:w-[80%] w-full h-auto flex lg:flex-row flex-col gap-4 items-center justify-center">
+            <div className="lg:w-[30%] w-[60%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">WHAT IS <br />GENOMIC<br/> SEQUENCING?</AnimatedHeading>
             </div>
             <div className="w-[60%]">
@@ -24,8 +24,8 @@ const TextSectionOne = () => {
           <p className="w-[80%] text-black font-ArialRegular">Genomic surveillance is the process of tracking a virus using genomic sequence data collected from representative populations to detect new variants and monitor trends in circulating variants.6 As such, genomic sequencing improves scientists’ understanding of which variants are circulating, how quickly they are emerging, and which are most important to characterize and monitor. In addition, genomic sequencing results are also valuable for diagnosing patients and developing treatments to combat these diseases. During COVID-19, genomic sequencing helped country governments with the adequate capacities to track – and slow – the spread of disease.</p>
         </div>
 
-        <div className="w-[80%] h-auto flex flex-row gap-4 py-6 items-center justify-center">
-         <div className="w-[30%]">
+        <div className="lg:w-[80%] w-full h-auto flex flex-col lg:flex-row gap-4 py-6 items-center justify-center">
+         <div className="lg:w-[30%] w-[60%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">MISSED OPPORTUNITIES LESSONS LEARNED FROM EBOLA AND COVID-19 OUTBREAKS?</AnimatedHeading>
             </div>
             <div className="w-[60%]">

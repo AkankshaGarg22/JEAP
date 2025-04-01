@@ -1,13 +1,14 @@
 import React from "react";
+import Image from "next/image";
 
 interface BlockQuoteProps {
-  quote: string
-  author?: string
-  position?: string
-  organization?: string
-  className?: string
-  gradientFrom?: string
-  gradientTo?: string
+  quote: string;
+  author?: string;
+  position?: string;
+  organization?: string;
+  className?: string;
+  gradientFrom?: string;
+  gradientTo?: string;
 }
 
 export const BlockQuote = ({
@@ -26,11 +27,23 @@ export const BlockQuote = ({
         background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
       }}
     >
-      {/* Left quote mark */}
-      <div className="absolute left-8 top-32 text-white/20 text-[300px] leading-none font-serif">&ldquo;</div>
+      {/* Left quote mark image */}
+      <Image
+        src="/assets/blog/case-studies/Gender_equality/Group 362.svg"
+        alt="Left quote mark"
+        width={200}
+        height={200}
+        className="absolute left-14 top-32"
+      />
 
-      {/* Right quote mark */}
-      <div className="absolute right-24 bottom-40 text-white/20 text-[150px] leading-none font-serif">&rdquo;</div>
+      {/* Right quote mark image */}
+      <Image
+        src="/assets/blog/case-studies/Gender_equality/Group 401.svg"
+        alt="Right quote mark"
+        width={100}
+        height={100}
+        className="absolute right-28 bottom-40"
+      />
 
       {/* Circle decoration */}
       <div className="absolute left-1/4 bottom-1/4 w-60 h-60 rounded-full bg-white/5"></div>
@@ -38,7 +51,7 @@ export const BlockQuote = ({
 
       {/* Quote content */}
       <div className="relative z-10 max-w-3xl mx-auto">
-        <p className="text-md md:text-md text-justify w-[512px] m-auto   leading-relaxed mb-6">{quote}</p>
+        <p className="text-md md:text-md text-justify w-[512px] m-auto leading-relaxed mb-6">{quote}</p>
 
         {/* Attribution line */}
         {(author || position || organization) && (
@@ -61,5 +74,5 @@ export const BlockQuote = ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};
