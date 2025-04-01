@@ -9,13 +9,21 @@ export default function News() {
   const [mainArticle, setMainArticle] = useState<Articles | undefined>();
 
   useEffect(() => {
-    fetch("/api/rss")
-      .then((res) => res.json())
-      .then((data) => {
-        const restArticles = data.slice(4);
-        setArticles(restArticles);
-        setMainArticle(data[0]);
-      });
+    try {
+      fetch("/api/rss")
+        .then((res) => {
+          if (typeof res !== "undefined") res.json();
+        })
+        .then((data: any) => {
+          if (data !== null && data?.length) {
+            const restArticles = data?.slice(4);
+            setArticles(restArticles);
+          }
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
