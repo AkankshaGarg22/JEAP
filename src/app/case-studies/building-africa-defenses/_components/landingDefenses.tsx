@@ -8,7 +8,7 @@ export default function LandingDefenses() {
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[60vh] md:h-[50vh] lg:h-[80vh] relative">
-          <Image src="/assets/blog/case-studies/Building Africa’s Defenses/Webp/IMG_2547.webp" alt="JEAP Building Africa's Defenses" layout="fill" objectFit="cover" priority />
+          <Image src="/assets/blog/case-studies/Building_Africa_Defenses/Webp/IMG_2547.webp" alt="JEAP Building Africa's Defenses" layout="fill" objectFit="cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
@@ -40,14 +40,14 @@ export default function LandingDefenses() {
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
           <div className="lg:col-span-12 order-3 mt-6">
             <div className="w-full h-64 md:h-80 relative">
-              <img src="/assets/blog/case-studies/Building Africa’s Defenses/webp/JKG_0940.webp" alt="JEAP Partnership Meeting" className="w-full h-full object-cover object-left-top rounded-lg" />
+              <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/JKG_0940.webp" alt="JEAP Partnership Meeting" className="w-full h-full object-cover object-left-top rounded-lg" />
             </div>
           </div>
 
         </div>
         <div className="flex items-center justify-center w-[100%]">
           <TranslucentBox 
-        text={"Many of these health threats are preventable or controllable with proven public health interventions, **such as disease surveillance, case management, vaccination, and health promotion.** ^^4^^ Yet many countries around the globe are insufficiently prepared to manage disease outbreaks, with Africa being particularly poorly equipped, scoring an average of 50% across the 15 capacities needed to detect, assess, notify, report and respond to public health risks, against a global average of 64%.^^5^^ In this context, a crisis anywhere can quickly spread to become a crisis everywhere. By building up genomic sequencing capacities on the African continent, this game-changing technology has the potential to transform health security in Africa and around the globe."}
+        text={"Many of these health threats are preventable or controllable with proven public health interventions, **such as disease surveillance, case management, vaccination, and health promotion.** ^^4^^ Yet many countries around the globe are insufficiently prepared to manage disease outbreaks, with Africa being particularly poorly equipped, scoring an **average of 50% across the 15 capacities** needed to detect, assess, notify, report and respond to public health risks, against a global **average of 64%**.^^5^^ In this context, a crisis anywhere can quickly spread to become a crisis everywhere. By building up genomic sequencing capacities on the African continent, this game-changing technology has the potential to transform health security in Africa and around the globe."}
         backgroundColor="rgba(255, 255, 255, 0.3)"
         textsize="text-[25px]"
         className="w-[70%]"

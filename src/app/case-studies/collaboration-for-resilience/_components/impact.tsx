@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import AnimatedHeading from "../../_components/AnimatedHeading";
+import Paragraph from "../../_components/paragraph";
 
 const proposals = [
   {
@@ -47,18 +48,18 @@ export default function Impact() {
     <section className="w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white py-12">
       <div className="max-w-7xl mx-auto mb-8 pb-4 flex-col md:flex-row flex gap-4 lg:gap-4 lg:justify-between px-4 border-b lg:border-0 lg:px-12">
         <div className="w-[40%] md:w-[15%]">
-          <AnimatedHeading linecolor="white" fontSize="1.5rem">
+          <AnimatedHeading linecolor="white">
             IMPACT
           </AnimatedHeading>
         </div>
 
-        <p className="text-sm md:text-xl lg:items-center w-[70%]">
+        <Paragraph className="lg:items-center md:w-[70%]">
           As a result of this process, regional consensus was achieved. 57
           proposals were submitted with JEAP support, with commitment received
           from 63 Ministries of Health and Ministries of Finance, 5 implementing
           entities and co-financing partners. The proposals submitted across the
           continent as of 27 May 2024 with JEAP support were:
-        </p>
+        </Paragraph>
       </div>
 
       {/* Mobile List View */}
@@ -66,10 +67,10 @@ export default function Impact() {
         {proposals.map((item, index) => (
           <div key={index} className={`p-6 border-b`}>
             <div className="flex items-start gap-4">
+              <div className="text-4xl font-bold">{item.count}</div>
               <div className="text-white">
                 <img className="h-10 w-10" src={item.icon} alt="icon" />
               </div>
-              <div className="text-4xl font-bold">{item.count}</div>
             </div>
             <div>
               <div className="font-medium">{item.title}</div>
@@ -102,9 +103,9 @@ export default function Impact() {
               {proposals[currentSlide].title}
             </div>
             {proposals[currentSlide].description && (
-              <div className="text-xl mt-3">
-                {proposals[currentSlide].description}
-              </div>
+              <Paragraph className="mt-3">
+              {proposals[currentSlide].description}
+              </Paragraph>
             )}
           </div>
 
@@ -132,10 +133,10 @@ export default function Impact() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto hidden md:block mt-6 text-xl">
-        There were also 5 Regional and Multi-Country proposals that were
-        submitted without direct JEAP support. While the results are yet to be seen, this was an important step in aligning African Member States and key stakeholders to take advantage of new financing for EPR
-      </div>
+      <Paragraph className="max-w-6xl mx-auto hidden md:block mt-6 ">
+      There were also 5 Regional and Multi-Country proposals that were
+      submitted without direct JEAP support. While the results are yet to be seen, this was an important step in aligning African Member States and key stakeholders to take advantage of new financing for EPR.
+      </Paragraph>
     </section>
   );
 }
