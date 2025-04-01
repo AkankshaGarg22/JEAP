@@ -53,7 +53,7 @@ export default function Impact() {
           </AnimatedHeading>
         </div>
 
-        <Paragraph className="lg:items-center w-[70%]">
+        <Paragraph className="lg:items-center md:w-[70%]">
           As a result of this process, regional consensus was achieved. 57
           proposals were submitted with JEAP support, with commitment received
           from 63 Ministries of Health and Ministries of Finance, 5 implementing
@@ -67,10 +67,10 @@ export default function Impact() {
         {proposals.map((item, index) => (
           <div key={index} className={`p-6 border-b`}>
             <div className="flex items-start gap-4">
+              <div className="text-4xl font-bold">{item.count}</div>
               <div className="text-white">
                 <img className="h-10 w-10" src={item.icon} alt="icon" />
               </div>
-              <div className="text-4xl font-bold">{item.count}</div>
             </div>
             <div>
               <div className="font-medium">{item.title}</div>

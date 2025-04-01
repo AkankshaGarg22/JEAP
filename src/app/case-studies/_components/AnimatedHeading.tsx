@@ -38,7 +38,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
         {children}
         <span
           className={`absolute left-0 bottom-[-10px] h-1 bg-${linecolor} rounded-full  transition-all duration-700 ease-out ${
-            isVisible ? "w-[40%]" : "w-[10%]"
+            isVisible ? "md:w-[40%] w-[20%]" : "md:w-[10%] w-[5%]"
           }`}
         />
       </h2>

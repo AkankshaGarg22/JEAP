@@ -2,6 +2,7 @@
 import { useState } from "react";
 import SubHeading from "../../_components/sub-heading";
 import Paragraph from "../../_components/paragraph";
+import AnimatedHeading from "../../_components/AnimatedHeading";
 const slides = [
   {
     icon: "/assets/blog/case-studies/Collaboration for Resilience/Webp/1.svg",
@@ -57,10 +58,14 @@ export default function Response() {
 
   const progressPercentages = [9, 22.5, 36, 50, 63.5, 77, 99.5];
   return (
-    <section className="my-12">
-      <SubHeading className="lg:text-center">
-      RESPONSE
-      </SubHeading>
+    <section className="my-12 px-4 md:px-0">
+      <div className="hidden md:block">
+        <SubHeading className="lg:text-center">RESPONSE</SubHeading>
+      </div>
+
+      <div className="block md:hidden">
+        <AnimatedHeading linecolor="black">RESPONSE</AnimatedHeading>
+      </div>
 
       {/* Mobile List View */}
       <div className="pl-4 flex flex-col space-y-4 lg:hidden">
@@ -82,10 +87,14 @@ export default function Response() {
             {/* Left card with text */}
             <div className="w-1/2 bg-gradient-to-b from-[#1A5632] to-[#00205C] rounded-lg p-8 text-white flex flex-col items-start justify-center h-full">
               <div className="bg-white rounded-full p-4 ms-4 mb-6">
-                <img src={slides[currentSlide].icon} alt="" className="w-10 h-10" />
+                <img
+                  src={slides[currentSlide].icon}
+                  alt=""
+                  className="w-10 h-10"
+                />
               </div>
               <Paragraph className="ms-4 font-bold">
-              {slides[currentSlide].text}
+                {slides[currentSlide].text}
               </Paragraph>
             </div>
             {/* Right card with image (if available) */}
@@ -93,21 +102,53 @@ export default function Response() {
               {/* Set full height to match left card */}
               {slides[currentSlide].img && (
                 <div className="bg-red-500 rounded-lg h-80 w-full mb-4 overflow-hidden">
-                  <img src={slides[currentSlide].img} alt="Meeting" className="w-full h-full object-cover object-center" />
+                  <img
+                    src={slides[currentSlide].img}
+                    alt="Meeting"
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
               )}
 
               <div className="flex items-end justify-center space-x-2">
-                <button onClick={prevSlide} className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center">
+                <button
+                  onClick={prevSlide}
+                  className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center"
+                >
                   <span className="sr-only">Previous</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 19.5 8.25 12l7.5-7.5"
+                    />
                   </svg>
                 </button>
-                <button onClick={nextSlide} className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center">
+                <button
+                  onClick={nextSlide}
+                  className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center"
+                >
                   <span className="sr-only">Next</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                    />
                   </svg>
                 </button>
               </div>
@@ -122,8 +163,18 @@ export default function Response() {
           {/* Icon row  */}
           <div className="flex justify-around items-center relative mx-8 mb-4">
             {slides.map((slide, index) => (
-              <button key={index} onClick={() => goToSlide(index)} className={`w-12 h-12 rounded-full flex items-center justify-center`}>
-                <img src={slide.icon} alt="icon" className={`w-12 h-12`} />
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-14 h-15 rounded-full flex items-center justify-center`}
+              >
+                <img
+                  src={slide.icon}
+                  alt="icon"
+                  className={`w-14 h-15 opacity-[${
+                    index > currentSlide ? 0.5 : 1
+                  }]`}
+                />
               </button>
             ))}
           </div>
