@@ -16,7 +16,7 @@ const TextSectionThree = () => {
     </div>
 
     <div className="w-[80%] h-auto bg-transparent flex items-center justify-center py-8">
-        <img src="/assets/blog/case-studies/Building Africa’s Defenses/webp/medical-researcher-with-african-ethnicity-using-microscope-doing-investigation-evaluates-sample-black-healthcare-scientist-biochemistry-laboratory-wearing-sterile-equipment.webp"></img>
+        <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-researcher-with-african-ethnicity-using-microscope-doing-investigation-evaluates-sample-black-healthcare-scientist-biochemistry-laboratory-wearing-sterile-equipment.webp"></img>
     </div>
 
     <div className="w-[80%] h-auto bg-transparent flex items-center justify-center py-4">

@@ -22,7 +22,7 @@ const parseText = (text: string): React.ReactNode[] => {
     }
     
     if (boldText) {
-      parts.push(<strong key={offset}>{boldText}</strong>);
+      parts.push(<strong className='text-4xl font-bold' key={offset}>{boldText}</strong>);
     } else if (supText) {
       parts.push(<sup key={offset}>{supText}</sup>);
     }
