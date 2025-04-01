@@ -32,13 +32,13 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
     <div>
       <h2
         ref={headingRef}
-        className={`relative ${!fontSize ? "text-xl md:text-2xl" : ""} mb-4 font-ArialRegular font-bold ${className}`}
+        className={`relative ${!fontSize ? "text-xl md:text-3xl md:leading-8" : ""} mb-4 font-ArialRegular font-bold ${className}`}
         style={fontSize ? { fontSize } : undefined}
       >
         {children}
         <span
-          className={`absolute left-0 bottom-[-10px] h-1 bg-${linecolor} transition-all duration-700 ease-out ${
-            isVisible ? "w-full" : "w-[30%]"
+          className={`absolute left-0 bottom-[-10px] h-1 bg-${linecolor} rounded-full  transition-all duration-700 ease-out ${
+            isVisible ? "w-[40%]" : "w-[10%]"
           }`}
         />
       </h2>

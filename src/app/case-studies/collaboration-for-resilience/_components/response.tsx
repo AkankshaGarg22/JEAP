@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import SubHeading from "../../_components/sub-heading";
+import Paragraph from "../../_components/paragraph";
 const slides = [
   {
     icon: "/assets/blog/case-studies/Collaboration for Resilience/Webp/1.svg",
@@ -56,7 +58,9 @@ export default function Response() {
   const progressPercentages = [9, 22.5, 36, 50, 63.5, 77, 99.5];
   return (
     <section className="my-12">
-      <h1 className="pl-4 text-2xl lg:text-3xl lg:text-center font-bold mb-6">RESPONSE</h1>
+      <SubHeading className="lg:text-center">
+      RESPONSE
+      </SubHeading>
 
       {/* Mobile List View */}
       <div className="pl-4 flex flex-col space-y-4 lg:hidden">
@@ -80,7 +84,9 @@ export default function Response() {
               <div className="bg-white rounded-full p-4 ms-4 mb-6">
                 <img src={slides[currentSlide].icon} alt="" className="w-10 h-10" />
               </div>
-              <p className="ms-4 text-xl font-medium">{slides[currentSlide].text}</p>
+              <Paragraph className="ms-4 font-bold">
+              {slides[currentSlide].text}
+              </Paragraph>
             </div>
             {/* Right card with image (if available) */}
             <div className="w-1/2 ml-4 flex flex-col items-center">
