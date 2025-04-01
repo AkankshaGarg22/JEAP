@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Paragraph from "../../_components/paragraph";
+import AnimatedHeading from "../../_components/AnimatedHeading";
 
 const slides = [
   {
@@ -60,10 +61,9 @@ export default function Policies() {
     <div className="bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white py-8 mb-12 md:mb-24">
       <div className="max-w-6xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase">
-            AVOHC-SURGE GENDER-SENSITIVE WORKFORCE POLICIES AND PROCESSES HAVE FOSTERED EQUALITY AND EXCELLENCE AT ALL LEVELS OF THE WORKFORCE
-          </h2>
-          <div className="w-12 h-1 bg-white my-4 lg:my-2"></div>
+          <AnimatedHeading linecolor="white">
+          AVOHC-SURGE GENDER-SENSITIVE WORKFORCE POLICIES AND PROCESSES HAVE FOSTERED EQUALITY AND EXCELLENCE AT ALL LEVELS OF THE WORKFORCE
+          </AnimatedHeading>
         </div>
         <Paragraph>
           AVoHC-SURGE has established a set of mechanisms to strive for gender equality and protection in the workforce, from JEAP senior management to the first responders on the ground. These
@@ -107,7 +107,7 @@ export default function Policies() {
           ))}
         </div>
 
-        <Paragraph className="mt-6 md:mt-12">
+        <Paragraph className="mt-6 md:my-12">
           These gender-responsive trainings and targets established by AVoHC-SURGE have given many women opportunities to utilize their technical expertise and leadership capacities within the
           initiative. By creating a supportive and inclusive work environment, JEAP’s efforts to prioritize gender equality will contribute to better meeting the needs of vulnerable populations during
           emergency responses, as well as promoting long-term gender equality on the continent.

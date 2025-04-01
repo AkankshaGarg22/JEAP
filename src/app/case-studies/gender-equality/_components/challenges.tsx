@@ -1,3 +1,4 @@
+import AnimatedHeading from "../../_components/AnimatedHeading";
 import Paragraph from "../../_components/paragraph";
 
 export default function Challenges() {
@@ -21,7 +22,9 @@ export default function Challenges() {
           <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] pt-32 pb-16 relative z-0">
             <div className="max-w-6xl mx-auto flex flex-row gap-8 pt-6 min-h-96">
               <div className="w-[30%]">
-                <h2 className="text-2xl font-bold uppercase tracking-tight text-white">{title}</h2>
+                <AnimatedHeading linecolor="white" className="text-white">
+                {title}
+                </AnimatedHeading>
               </div>
               <div className="w-[70%] text-white ">
                 <Paragraph className="mb-2">{para1}</Paragraph>

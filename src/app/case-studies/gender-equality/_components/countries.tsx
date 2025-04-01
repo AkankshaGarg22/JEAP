@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import AnimatedHeading from "../../_components/AnimatedHeading";
 
 const data = {
   countries: [
@@ -173,8 +174,9 @@ export default function Countries() {
     <div className="max-w-6xl mx-auto my-8">
       <div className="flex flex-col md:flex-row">
         <div className="md:w-[20%] px-2 md:px-4">
-          <h3 className="text-2xl font-bold mb-6 max-w-xs md:max-w-none">MORE THAN A THIRD OF AVOHC-SURGE RESPONDERS ARE WOMEN, WITH LESOTHO AND NAMIBIA AMONG THE COUNTRIES LEADING THE WAY</h3>
-          <div className="w-16 h-1 bg-black mb-6 lg:mb-12"></div>
+          <AnimatedHeading linecolor="black">
+          MORE THAN A THIRD OF AVOHC-SURGE RESPONDERS ARE WOMEN, WITH LESOTHO AND NAMIBIA AMONG THE COUNTRIES LEADING THE WAY
+          </AnimatedHeading>
         </div>
 
         <div className="md:w-[80%] px-2">
@@ -185,7 +187,7 @@ export default function Countries() {
                 <th className="text-right md:p-4 text-xs md:text-lg ">Women</th>
                 <th className="text-right md:p-4 text-xs md:text-lg ">Men</th>
                 <th className="text-right md:p-4 text-xs md:text-lg ">Total</th>
-                <th className="text-right md:p-4 text-xs md:text-lg ">Percentage of Women</th>
+                <th className="text-center md:p-4 text-xs md:text-lg ">Percentage of Women</th>
               </tr>
             </thead>
 
@@ -205,8 +207,8 @@ export default function Countries() {
                         <td className="p-4 text-xs md:text-lg text-right">{countryData.women}</td>
                         <td className="p-4 text-xs md:text-lg text-right">{countryData.men}</td>
                         <td className="p-4 text-xs md:text-lg text-right">{countryData.total}</td>
-                        <td className="p-4 text-xs md:text-lg text-right flex justify-end items-center">
-                          <span className="mr-2">{countryData.percentage_of_women}</span>
+                        <td className="p-4 text-xs md:text-lg text-right flex justify-between items-center">
+                          <span className="mr-2 md:pl-[40%]">{countryData.percentage_of_women}</span>
                           <span className="text-xl font-light">−</span>
                         </td>
                       </>

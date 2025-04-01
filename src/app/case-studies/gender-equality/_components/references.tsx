@@ -1,14 +1,15 @@
 import AnimatedHeading from "../../_components/AnimatedHeading";
+import SubHeading from "../../_components/sub-heading";
 
 export default function References() {
   return (
     <section className="max-w-6xl mx-auto px-4 mb-12">
       <div className="w-full flex flex-col gap-4 justify-between">
-        <AnimatedHeading linecolor="black" fontSize="1.5rem" className="w-[30%]">
+        <SubHeading className="w-[30%]">
           References
-        </AnimatedHeading>
+        </SubHeading>
         
-        <p className="text-sm md:text-base md:leading-8 font-semibold">
+        <p className="text-sm">
           1. Women in Global Health. Policy Brief: Fit for women?: Safe and decent PPE for women Health and Care Workers.[Internet]. Women in Global Health; 2021. Available from:
           https://womeningh.org/wp-content/uploads/2022/11/WGH-Fit-for-Women-report-2021.pdf
           <br />
