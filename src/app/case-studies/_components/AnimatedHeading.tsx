@@ -32,7 +32,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
     <div>
       <h2
         ref={headingRef}
-        className={`relative ${!fontSize ? "text-xl md:text-3xl md:leading-8" : ""} mb-4 font-ArialRegular font-bold ${className}`}
+        className={`relative ${!fontSize ? "text-xl md:text-3xl md:leading-10" : ""} mb-4 font-ArialRegular font-bold ${className}`}
         style={fontSize ? { fontSize } : undefined}
       >
         {children}
