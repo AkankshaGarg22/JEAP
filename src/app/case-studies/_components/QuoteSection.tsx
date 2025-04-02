@@ -117,7 +117,7 @@ export const BlockQuote = ({
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
           <div className="flex items-center gap-8 text-xs md:text-2xl">
-            <div className="relative w-[200px] md:w-[450px] flex items-center">
+            <div className="relative w-[200px] md:w-[500px] flex items-center">
               <div 
                 ref={lineRef}
                 id="line" 
