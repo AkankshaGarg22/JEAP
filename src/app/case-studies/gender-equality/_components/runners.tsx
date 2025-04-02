@@ -6,7 +6,7 @@ export default function Runners() {
   return (
     <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-16 px-6 md:px-12 lg:px-16  my-12 md:my-24 overflow-visible">
       {/* Content Container */}
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="lg:w-3/5 z-10">

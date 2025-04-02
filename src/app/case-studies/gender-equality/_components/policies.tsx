@@ -63,7 +63,7 @@ export default function Policies() {
 
   return (
     <div className="bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white py-8 mb-12 md:mb-24">
-      <div className="max-w-6xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
+      <div className="max-w-7xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
         <div>
           <AnimatedHeading linecolor="white" width="20%">
             AVOHC-SURGE GENDER-SENSITIVE WORKFORCE POLICIES AND PROCESSES HAVE
@@ -77,7 +77,7 @@ export default function Policies() {
         </Paragraph>
       </div>
       {/* Carousel */}
-      <div className="max-w-6xl mx-auto  relative w-full overflow-hidden ">
+      <div className="max-w-7xl mx-auto  relative w-full overflow-hidden ">
         <div
           className="relative flex transition-transform duration-500 ease-in-out h-[500px] pt-12 md:pt-0"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
