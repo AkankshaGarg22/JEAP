@@ -24,6 +24,7 @@ const config: Config = {
         "mb-about-curve" : "url(/assets/blog/about/curve/mb.png)",
         "xl-about-curve" : "url(/assets/blog/about/curve/xl.png)",
         "mb-partner-curve" : "url(/assets/blog/about/curve/mb-partner.png)",
+        "blockquote-bg-desktop": "url(/assets/blog/blockquote.svg)"
       },
       colors: {
         "accent-1": "#FAFAFA",
