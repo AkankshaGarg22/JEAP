@@ -80,7 +80,7 @@ export const BlockQuote = ({
   return (
     <div
       ref={containerRef}
-      className={`blockquote-container relative w-full h-[40vh] min-h-[45vh] overflow-hidden p-8 md:p-12 text-white ${className || ""}`}
+      className={`blockquote-container relative w-full h-[40vh] min-h-[55vh] overflow-hidden p-8 md:p-12 text-white ${className || ""}`}
       style={{
         background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
       }}
