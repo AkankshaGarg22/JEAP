@@ -28,8 +28,8 @@ export default function Challenges() {
               </div>
               <div className="w-[70%] text-white ">
                 <Paragraph className="mb-2">{para1}</Paragraph>
-                <Paragraph className="mb-2">{para1}</Paragraph>
-                <Paragraph>{para1}</Paragraph>
+                <Paragraph className="mb-2">{para2}</Paragraph>
+                <Paragraph>{para3}</Paragraph>
               </div>
             </div>
           </div>
