@@ -81,7 +81,7 @@ export const BlockQuote = ({
   return (
     <div
       ref={containerRef}
-      className={`blockquote-container bg-blockquote-bg-desktop bg-cover bg-no-repeat bg-center relative w-full xl:h-[47vh] md:h-[40vh] md:min-h-[40vh] xl:min-h-[47vh] min-h-[16vh] h-[16vh] overflow-hidden p-4 md:p-12 text-white ${className || ""}`}
+      className={`blockquote-container flex md:block bg-blockquote-bg-mobile md:bg-blockquote-bg-desktop bg-cover bg-no-repeat bg-center relative w-full xl:h-[47vh] md:h-[40vh] md:min-h-[40vh] xl:min-h-[47vh] min-h-[24vh] overflow-hidden p-4 md:p-12 text-white ${className || ""}`}
       // style={{
       //   background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
       // }}
@@ -109,24 +109,24 @@ export const BlockQuote = ({
       <div className="absolute right-[5%] top-1/4 w-12 h-12 md:w-32 md:h-32 rounded-full bg-[#1E2859] mix-blend-luminosity"></div> */}
 
       {/* Quote content */}
-      <div className="relative z-10 max-w-lg md:max-w-3xl mx-auto flex flex-col justify-center items-start md:h-full">
-        <h2 className="w-full leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-xs md:text-2xl">
+      <div className="relative z-10 max-w-lg md:max-w-3xl mx-auto flex flex-col justify-center items-center md:h-full">
+        <h2 className="w-[60%] md:w-full leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-xs md:text-2xl">
           {quote}
         </h2>
 
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
-          <div className="flex items-center gap-4 md:gap-8 text-xs md:text-2xl">
-            <div className="relative w-[150px] md:w-[450px] flex items-center">
+          <div className="flex items-center gap-8 text-xs md:text-2xl">
+            <div className="relative w-[200px] md:w-[450px] flex items-center">
               <div 
                 ref={lineRef}
                 id="line" 
-                className="h-[2px] bg-white/60"
+                className="h-[1px] md:h-[2px] bg-white/60 "
                 style={{ width: '20%' }}
               ></div>
               <div 
                 ref={circleRef}
-                className="absolute -right-3 w-3 h-3 rounded-full bg-white/60"
+                className="absolute -right-2 md:-right-3 md:w-3 md:h-3 w-2 h-2 rounded-full bg-white/60"
                 style={{ opacity: 0 }}
               ></div>
             </div>

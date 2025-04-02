@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="217" viewBox="0 0 428 217">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.293" x2="0.5" y2="0.924" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.039"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.059" y1="0.043" x2="0.845" y2="0.971" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1e2859"/>
+      <stop offset="1" stop-color="#1d5539"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_410" data-name="Rectangle 410" width="59.965" height="45.327" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_410-2" data-name="Rectangle 410" width="21.36" height="16.146" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_6254" data-name="Group 6254" transform="translate(0 -5380)">
+    <rect id="Rectangle_403" data-name="Rectangle 403" width="428" height="217" transform="translate(0 5380)" fill="url(#linear-gradient-3)"/>
+    <g id="Group_1056" data-name="Group 1056" transform="translate(25 5389.269)">
+      <g id="Group_1046" data-name="Group 1046">
+        <ellipse id="Ellipse_35" data-name="Ellipse 35" cx="47.966" cy="47.865" rx="47.966" ry="47.865" transform="translate(25.555)" fill="#1e2859"/>
+        <g id="Group_362" data-name="Group 362" transform="translate(59.965 70.614) rotate(180)">
+          <g id="Group_361" data-name="Group 361" clip-path="url(#clip-path)">
+            <path id="Path_499" data-name="Path 499" d="M1.9,19.758V0h22.28V15.69c0,8.394-1.224,14.5-3.713,18.241-3.279,5.036-8.415,8.814-15.486,11.4L0,38.709c4.267-1.453,7.387-3.584,9.4-6.457,1.975-2.873,3.12-7.038,3.357-12.494Zm35.79,0V0H59.965V15.69c0,8.394-1.224,14.5-3.713,18.241-3.279,5.036-8.414,8.814-15.485,11.4L35.79,38.709c4.267-1.453,7.387-3.584,9.4-6.457,1.975-2.873,3.121-7.038,3.358-12.494Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_1047" data-name="Group 1047" transform="translate(330.969 30)">
+        <ellipse id="Ellipse_37" data-name="Ellipse 37" cx="17.779" cy="17.779" rx="17.779" ry="17.779" transform="translate(12.306)" fill="#1e2859"/>
+        <g id="Group_401" data-name="Group 401" transform="translate(0 9.738)">
+          <g id="Group_361-2" data-name="Group 361" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+            <path id="Path_499-2" data-name="Path 499" d="M.675,7.038V0H8.612V5.589c0,2.99-.436,5.164-1.323,6.5a10.638,10.638,0,0,1-5.516,4.059L0,13.789a6.445,6.445,0,0,0,3.349-2.3,8.5,8.5,0,0,0,1.2-4.451Zm12.749,0V0H21.36V5.589c0,2.99-.436,5.164-1.323,6.5a10.636,10.636,0,0,1-5.516,4.059l-1.773-2.357a6.445,6.445,0,0,0,3.349-2.3,8.5,8.5,0,0,0,1.2-4.451Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
