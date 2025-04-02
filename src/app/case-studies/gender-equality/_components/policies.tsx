@@ -97,10 +97,13 @@ export default function Policies() {
               </div>
 
               {/* Description box overlaid on right side */}
-              <div className="absolute top-[70%] md:top-[30%] transform left-[20%] md:left-[40%] bg-white p-3 md:p-12 w-[75%] md:max-w-[50%] mr-12">
+              <div className="absolute top-[70%] md:top-[30%] md:h-[50%] transform left-[20%] md:left-[40%] bg-white p-3 md:p-12 w-[75%] md:max-w-[50%] mr-12 flex">
+                <div className="m-auto">
                 <Paragraph className="text-black">
                   {slide.description}
                 </Paragraph>
+                </div>
+
               </div>
             </div>
           ))}

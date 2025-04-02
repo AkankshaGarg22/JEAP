@@ -110,13 +110,13 @@ export const BlockQuote = ({
 
       {/* Quote content */}
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col justify-center items-start h-full">
-        <Paragraph className="w-[80%] md:w-[100%] leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-2xl">
+        <h2 className="w-[80%] md:w-[100%] leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-2xl">
           {quote}
-        </Paragraph>
+        </h2>
 
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
-          <div className="flex items-center gap-4 md:gap-8 text-lg md:text-xl">
+          <div className="flex items-center gap-4 md:gap-8 text-lg md:text-2xl">
             <div className="relative w-[150px] md:w-[350px] flex items-center">
               <div 
                 ref={lineRef}
