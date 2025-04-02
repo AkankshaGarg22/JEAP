@@ -97,7 +97,7 @@ export default function Policies() {
               </div>
 
               {/* Description box overlaid on right side */}
-              <div className="absolute top-[70%] md:top-[30%] md:h-[50%] transform left-[20%] md:left-[40%] bg-white p-3 md:p-12 w-[75%] md:max-w-[50%] mr-12 flex">
+              <div className="absolute top-[70%] md:top-[25%] md:h-[50%] transform left-[20%] md:left-[40%] bg-white p-3 md:p-12 w-[75%] md:max-w-[50%] mr-12 flex">
                 <div className="m-auto">
                 <Paragraph className="text-black">
                   {slide.description}
@@ -112,7 +112,7 @@ export default function Policies() {
         {/* Navigation buttons - with dark blue color on white circular background */}
         <button
           onClick={goToPrevSlide}
-          className="absolute z-10 left-[75%] md:left-2 top-6 md:top-[38%] -translate-y-1/2 bg-[#00215B] border border-white text-white rounded-full p-2 "
+          className="absolute z-10 left-[75%] md:left-2 top-6 md:top-[34%] -translate-y-1/2 bg-[#00215B] border border-white text-white rounded-full p-2 "
           aria-label="Previous slide"
         >
           <svg
@@ -132,7 +132,7 @@ export default function Policies() {
         </button>
         <button
           onClick={goToNextSlide}
-          className="absolute right-4 md:right-24 top-6 md:top-[38%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
+          className="absolute right-4 md:right-24 top-6 md:top-[34%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
           aria-label="Next slide"
         >
           <svg

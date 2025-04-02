@@ -8,6 +8,7 @@ import References from "./_components/references";
 import Continent from "./_components/continent";
 import Challenges from "./_components/challenges";
 import Runners from "./_components/runners";
+import Testimonial from "./_components/testimonial";
 
 export default function Index() {
   return (
@@ -29,12 +30,8 @@ export default function Index() {
         organization="WHO Regional Offices for Africa"
       />
       <Runners  />
-      <BlockQuote
-        quote="My newfound confidence and skills in delivering and training on GBV and PSEAH issues will undoubtedly make a significant difference in my role as a mental health and psychosocial support officer."
-        author="Pearl Katleho Malsaaka Letsoela"
-        position="Mental Health and Psychosocial Support Officer"
-        organization="Ministry of Health, Lesotho"
-      />
+      <Testimonial />
+      
       <Challenges />
       <BlockQuote
         quote="When we provide trainings to communities about disease spread, participants will ask us afterwards if we are married. it makes us wonder whether they have been listening to the information, and how much credibility we have in this setting."
