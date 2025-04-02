@@ -14,13 +14,13 @@ export default function Challenges() {
       <div className="hidden md:block bg-white relative">
         <div className="w-full">
           {/* Image container - Placing image half inside the gradient box */}
-          <div className="max-w-6xl mx-auto relative z-10 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
             <img src={imageUrl} alt="Featured image" className="w-full  object-cover h-[30rem] relative -mb-32" />
           </div>
 
           {/* Content section with gradient background */}
           <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] pt-32 pb-16 relative z-0">
-            <div className="max-w-6xl mx-auto flex flex-row gap-8 pt-6 min-h-96">
+            <div className="max-w-7xl mx-auto flex flex-row gap-8 pt-6 min-h-96">
               <div className="w-[30%]">
                 <AnimatedHeading linecolor="white" className="text-white">
                 {title}
@@ -28,8 +28,8 @@ export default function Challenges() {
               </div>
               <div className="w-[70%] text-white ">
                 <Paragraph className="mb-2">{para1}</Paragraph>
-                <Paragraph className="mb-2">{para1}</Paragraph>
-                <Paragraph>{para1}</Paragraph>
+                <Paragraph className="mb-2">{para2}</Paragraph>
+                <Paragraph>{para3}</Paragraph>
               </div>
             </div>
           </div>

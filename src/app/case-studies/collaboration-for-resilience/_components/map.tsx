@@ -5,12 +5,12 @@ export default function Map() {
   return (
     <section className="max-w-6xl mx-auto px-2 md:px-12 mb-12">
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 md:gap-0 mb-8">
-        <div className="md:w-[50%] h-full flex flex-col justify-between gap-12">
+        <div className="md:w-[50%] h-full flex flex-col justify-between">
           <AnimatedHeading linecolor="black" className="w-[70%]">
             MAP OF COUNTRIES THAT HAVE SUBMITTED PROPOSALS WITH JEAP SUPPORT:
           </AnimatedHeading>
 
-          <Paragraph className="order-2">
+          <Paragraph className="order-2 md:pr-2 md:pt-8">
             The Partnership looks forward to reviewing the results and
             continuing to align and strengthen continental resource mobilization
             for EPR. Additionally, an extensive exercise is underway to document

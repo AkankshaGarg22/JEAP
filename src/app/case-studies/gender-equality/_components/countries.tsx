@@ -171,8 +171,8 @@ export default function Countries() {
     }
   };
   return (
-    <div className="max-w-6xl mx-auto my-8">
-      <div className="flex flex-col md:flex-row">
+    <div className="max-w-7xl mx-auto my-8">
+      <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-[20%] px-2 md:px-4">
           <AnimatedHeading linecolor="black">
           MORE THAN A THIRD OF AVOHC-SURGE RESPONDERS ARE WOMEN, WITH LESOTHO AND NAMIBIA AMONG THE COUNTRIES LEADING THE WAY

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import SubHeading from "./sub-heading";
+import Paragraph from "./paragraph";
 
 interface BlockQuoteProps {
   quote: string;
@@ -109,23 +110,23 @@ export const BlockQuote = ({
 
       {/* Quote content */}
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col justify-center items-start h-full">
-        <SubHeading className="text-justify w-[80%] md:w-[100%] leading-relaxed mb-4 md:mb-6 px-2 md:px-0">
+        <Paragraph className="w-[80%] md:w-[100%] leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-2xl">
           {quote}
-        </SubHeading>
+        </Paragraph>
 
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
-          <div className="flex items-center gap-4 md:gap-8 text-xs md:text-sm">
-            <div className="relative w-[150px] md:w-[350px] ml-[30px] md:ml-[50px] flex items-center">
+          <div className="flex items-center gap-4 md:gap-8 text-lg md:text-xl">
+            <div className="relative w-[150px] md:w-[350px] flex items-center">
               <div 
                 ref={lineRef}
                 id="line" 
-                className="h-[1px] bg-white/60"
+                className="h-[2px] bg-white/60"
                 style={{ width: '20%' }}
               ></div>
               <div 
                 ref={circleRef}
-                className="absolute -right-2 w-2 h-2 rounded-full bg-white/60"
+                className="absolute -right-3 w-3 h-3 rounded-full bg-white/60"
                 style={{ opacity: 0 }}
               ></div>
             </div>
