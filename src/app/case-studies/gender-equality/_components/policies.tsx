@@ -132,7 +132,7 @@ export default function Policies() {
         </button>
         <button
           onClick={goToNextSlide}
-          className="absolute right-24 top-6 md:top-[38%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
+          className="absolute right-4 md:right-24 top-6 md:top-[38%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
           aria-label="Next slide"
         >
           <svg
