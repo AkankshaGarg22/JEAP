@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import SubHeading from "./sub-heading";
 
 interface BlockQuoteProps {
   quote: string;
@@ -79,7 +80,7 @@ export const BlockQuote = ({
   return (
     <div
       ref={containerRef}
-      className={`blockquote-container relative w-full h-[40vh] md:min-h-[55vh] min-h-[55vh] overflow-hidden p-8 md:p-20 text-white ${className || ""}`}
+      className={`blockquote-container relative w-full h-[40vh] min-h-[45vh] overflow-hidden p-8 md:p-12 text-white ${className || ""}`}
       style={{
         background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
       }}
@@ -88,9 +89,9 @@ export const BlockQuote = ({
       <Image
         src="/assets/blog/case-studies/Gender_equality/Group 362.svg"
         alt="Left quote mark"
-        width={150}
-        height={150}
-        className="absolute left-4 top-10 md:left-28 md:top-28 w-16 h-16 md:w-40 md:h-40"
+        width={200}
+        height={200}
+        className="absolute left-4 top-10 md:left-[5%] md:top-28 w-16 h-16 md:w-40 md:h-40 z-10"
       />
 
       {/* Right quote mark image - reduced size */}
@@ -99,16 +100,18 @@ export const BlockQuote = ({
         alt="Right quote mark"
         width={100}
         height={100}
-        className="absolute right-4 bottom-[4.5rem] md:right-28 md:bottom-[2.5rem] w-12 h-12 md:w-20 md:h-20"
+        className="absolute right-4 bottom-[4.5rem] md:right-[7%] md:bottom-64 w-12 h-12 md:w-20 md:h-20 z-10"
       />
 
       {/* Circle decoration */}
-      <div className="absolute left-1/4 bottom-1/4 w-24 h-24 md:w-48 md:h-48 rounded-full bg-white/5"></div>
-      <div className="absolute right-1/4 top-1/4 w-12 h-12 md:w-24 md:h-24 rounded-full bg-white/5"></div>
+      <div className="absolute left-[10%] bottom-1/4 w-24 h-24 md:w-60 md:h-60 rounded-full bg-[#1E2859] mix-blend-luminosity"></div>
+      <div className="absolute right-[5%] top-1/4 w-12 h-12 md:w-32 md:h-32 rounded-full bg-[#1E2859] mix-blend-luminosity"></div>
 
       {/* Quote content */}
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col justify-center items-start h-full">
-        <p className="text-[1rem] md:text-[1.5rem] text-justify w-[80%] md:w-[100%] m-auto leading-relaxed mb-4 md:mb-6 px-2 md:px-0">{quote}</p>
+        <SubHeading className="text-justify w-[80%] md:w-[100%] leading-relaxed mb-4 md:mb-6 px-2 md:px-0">
+          {quote}
+        </SubHeading>
 
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
