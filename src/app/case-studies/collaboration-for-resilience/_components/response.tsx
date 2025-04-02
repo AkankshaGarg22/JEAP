@@ -101,7 +101,7 @@ export default function Response() {
             <div className="w-1/2 ml-4 flex flex-col items-center">
               {/* Set full height to match left card */}
               {slides[currentSlide].img && (
-                <div className="bg-red-500 rounded-lg h-80 w-full mb-4 overflow-hidden">
+                <div className="bg-red-500 rounded-lg h-[21rem] w-full mb-2 overflow-hidden">
                   <img
                     src={slides[currentSlide].img}
                     alt="Meeting"
@@ -166,12 +166,12 @@ export default function Response() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-14 h-15 rounded-full flex items-center justify-center`}
+                className={`w-14 h-14 rounded-full flex items-center justify-center`}
               >
                 <img
                   src={slide.icon}
                   alt="icon"
-                  className={`w-14 h-15 ${index > currentSlide ? 'opacity-50' : 'opacity-100'}`}
+                  className={`w-14 h-14 ${index > currentSlide ? 'opacity-50' : 'opacity-100'}`}
                 />
               </button>
             ))}
