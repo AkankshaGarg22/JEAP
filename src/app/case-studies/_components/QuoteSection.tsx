@@ -1,5 +1,7 @@
-import React from "react";
+'use client';
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import SubHeading from "./sub-heading";
 
 interface BlockQuoteProps {
   quote: string;
@@ -20,45 +22,112 @@ export const BlockQuote = ({
   gradientFrom = "#1e2859", // Dark blue default
   gradientTo = "#1d5539", // Green default
 }: BlockQuoteProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
+  const circleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
+    };
+
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Animate the line from 20% to 100% width
+          if (lineRef.current) {
+            lineRef.current.style.width = '20%';
+            lineRef.current.style.transition = 'width 0.5s ease-out';
+            
+            setTimeout(() => {
+              if (lineRef.current) {
+                lineRef.current.style.width = '100%';
+              }
+            }, 300);
+          }
+          
+          // Show the circle when the animation is almost complete
+          if (circleRef.current) {
+            circleRef.current.style.opacity = '0';
+            circleRef.current.style.transition = 'opacity 0.5s ease-out';
+            
+            setTimeout(() => {
+              if (circleRef.current) {
+                circleRef.current.style.opacity = '1';
+              }
+            }, 1400);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div
-      className={`relative w-full h-[55vh] overflow-hidden p-20 text-white ${className || ""}`}
+      ref={containerRef}
+      className={`blockquote-container relative w-full h-[40vh] min-h-[45vh] overflow-hidden p-8 md:p-12 text-white ${className || ""}`}
       style={{
         background: `linear-gradient(110deg, ${gradientFrom}, ${gradientTo})`,
       }}
     >
-      {/* Left quote mark image */}
+      {/* Left quote mark image - reduced size */}
       <Image
         src="/assets/blog/case-studies/Gender_equality/Group 362.svg"
         alt="Left quote mark"
         width={200}
         height={200}
-        className="absolute left-14 top-32"
+        className="absolute left-4 top-10 md:left-[5%] md:top-28 w-16 h-16 md:w-40 md:h-40 z-10"
       />
 
-      {/* Right quote mark image */}
+      {/* Right quote mark image - reduced size */}
       <Image
         src="/assets/blog/case-studies/Gender_equality/Group 401.svg"
         alt="Right quote mark"
         width={100}
         height={100}
-        className="absolute right-28 bottom-40"
+        className="absolute right-4 bottom-[4.5rem] md:right-[7%] md:bottom-64 w-12 h-12 md:w-20 md:h-20 z-10"
       />
 
       {/* Circle decoration */}
-      <div className="absolute left-1/4 bottom-1/4 w-60 h-60 rounded-full bg-white/5"></div>
-      <div className="absolute right-1/4 top-1/4 w-32 h-32 rounded-full bg-white/5"></div>
+      <div className="absolute left-[10%] bottom-1/4 w-24 h-24 md:w-60 md:h-60 rounded-full bg-[#1E2859] mix-blend-luminosity"></div>
+      <div className="absolute right-[5%] top-1/4 w-12 h-12 md:w-32 md:h-32 rounded-full bg-[#1E2859] mix-blend-luminosity"></div>
 
       {/* Quote content */}
-      <div className="relative z-10 max-w-3xl mx-auto">
-        <p className="text-md md:text-md text-justify w-[512px] m-auto leading-relaxed mb-6">{quote}</p>
+      <div className="relative z-10 max-w-3xl mx-auto flex flex-col justify-center items-start h-full">
+        <SubHeading className="text-justify w-[80%] md:w-[100%] leading-relaxed mb-4 md:mb-6 px-2 md:px-0">
+          {quote}
+        </SubHeading>
 
-        {/* Attribution line */}
+        {/* Attribution line - with animation */}
         {(author || position || organization) && (
-          <div className="flex items-center gap-8 text-sm">
-            <div className="relative w-[350px] ml-[50px] flex items-center">
-              <div className="h-[1px] w-full bg-white/60"></div>
-              <div className="absolute -right-2 w-2 h-2 rounded-full bg-white/60"></div>
+          <div className="flex items-center gap-4 md:gap-8 text-xs md:text-sm">
+            <div className="relative w-[150px] md:w-[350px] ml-[30px] md:ml-[50px] flex items-center">
+              <div 
+                ref={lineRef}
+                id="line" 
+                className="h-[1px] bg-white/60"
+                style={{ width: '20%' }}
+              ></div>
+              <div 
+                ref={circleRef}
+                className="absolute -right-2 w-2 h-2 rounded-full bg-white/60"
+                style={{ opacity: 0 }}
+              ></div>
             </div>
             <div className="flex flex-wrap items-center">
               {author && <span className="italic text-white/80">{author}</span>}
