@@ -22,7 +22,7 @@ export default function Landing() {
 
           {/* Hero Text */}
           <div className="absolute bottom-10 w-full">
-            <div className="max-w-6xl mx-auto px-6 md:px-12">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
               <MainHeading className="text-white">
               COLLABORATION FOR RESILIENCE
               </MainHeading>

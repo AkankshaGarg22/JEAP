@@ -22,7 +22,7 @@ export default function Landing() {
 
           {/* Hero Text */}
           <div className="absolute bottom-10 w-full">
-            <div className="max-w-6xl mx-auto px-6 md:px-12">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
               <MainHeading className="mb-4 text-white">
                 GENDER EQUALITY IN EMERGENCY PREPAREDNESS AND RESPONSE
               </MainHeading>
@@ -36,7 +36,7 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-12 order-1 mb-6">
-            <AnimatedHeading linecolor="white" className="mb-4">
+            <AnimatedHeading linecolor="white" width="20%" className="mb-4">
             GENDER INEQUALITIES IN THE HEALTH EMERGENCY WORKFORCE, AFFECTING
               BOTH FRONTLINES ROLES AND LEADERSHIP POSITIONS, LIMIT WOMEN’S
               POTENTIAL AND UNDERMINE THE OVERALL EFFECTIVENESS OF HEALTH
