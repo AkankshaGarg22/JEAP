@@ -14,11 +14,13 @@ const items = [
   },
   {
     id: 2,
-    content: "** Mapped the geographic location of 57,024 vulnerable individuals ** to better assist them, representing 29% of the total displaced population. This group included 7,407 pregnant women, 36,855 children under 5 years old and 12,762 elderly people.",
+    content:
+      "** Mapped the geographic location of 57,024 vulnerable individuals ** to better assist them, representing 29% of the total displaced population. This group included 7,407 pregnant women, 36,855 children under 5 years old and 12,762 elderly people.",
   },
   {
     id: 3,
-    content: "Enhanced the disease control surveillance system, training more than ** 250 surveillance officers and community health workers **, who actively intensified case finding. Case finding revealed a predominance of malaria and acute watery diarrhea cases, as well as suspected cases of mpox and salmonellosis.",
+    content:
+      "Enhanced the disease control surveillance system, training more than ** 250 surveillance officers and community health workers **, who actively intensified case finding. Case finding revealed a predominance of malaria and acute watery diarrhea cases, as well as suspected cases of mpox and salmonellosis.",
   },
   {
     id: 4,
@@ -76,21 +78,27 @@ export default function Achievements() {
       </div>
 
       {/* Desktop view - horizontal list */}
-      <div className="hidden lg:flex w-full">
+      <div className="hidden lg:flex w-full relative">
         {items.map((item) => (
           <div
             key={item.id}
-            className={`flex flex-col items-center justify-end transition-all duration-300 overflow-hidden ${expandedItems[item.id] ? "flex-[2]" : "flex-1"} h-96 border-r-2 last:border-r-0 border-[#1E2859] px-1`}
-            onMouseEnter={() => setExpandedItems((prevState) => ({ ...prevState, [item.id]: true }))}
-            onMouseLeave={() => setExpandedItems((prevState) => ({ ...prevState, [item.id]: false }))}
+            className={`relative transition-[flex] h-[28rem] duration-500 overflow-hidden px-1 border-r-2 last:border-r-0 border-[#1E2859] ${expandedItems[item.id] ? "flex-[2]" : "flex-1"}`}
+            onMouseEnter={() => setExpandedItems((prev) => ({ ...prev, [item.id]: true }))}
+            onMouseLeave={() => {
+              // Immediately hide the text
+              setExpandedItems((prev) => ({ ...prev, [item.id]: false }));
+            }}
           >
-            {expandedItems[item.id] ? (
-              <div className="py-3 text-xl text-gray-700 text-center">{parseBold(item.content)}</div>
-            ) : (
-              <div className="text-center">
-                <div className="font-semibold text-4xl text-blue-900">{item.id}.</div>
-              </div>
-            )}
+            <span
+              className={`absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 text-6xl text-blue-900 font-semibold transition-opacity duration-150 ${expandedItems[item.id] ? "opacity-0" : "opacity-100"}`}
+            >
+              {item.id}.
+            </span>
+
+            {/* Content (Instantly disappears on mouse leave) */}
+            <div className={`absolute left-0 top-0 w-full h-full p-4 text-xl text-gray-700 transition-opacity duration-150 ${expandedItems[item.id] ? "opacity-100 delay-300" : "opacity-0"}`}>
+              {parseBold(item.content)}
+            </div>
           </div>
         ))}
       </div>
