@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="542" height="695" viewBox="0 0 542 695">
+  <g id="Group_5675" data-name="Group 5675" transform="translate(-185 -12835)">
+    <g id="Rectangle_2838" data-name="Rectangle 2838" transform="translate(185 12973)" fill="none" stroke="#00205c" stroke-width="1">
+      <rect width="55" height="557" rx="27.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="54" height="556" rx="27" fill="none"/>
+    </g>
+    <g id="Group_5656" data-name="Group 5656" transform="translate(0 43)">
+      <text id="Dengue" transform="translate(250 13268)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Dengue</tspan></text>
+      <path id="Path_15472" data-name="Path 15472" d="M7.384,0-3.963,8.243.372,21.583H14.4l4.335-13.34Z" transform="translate(205.527 13275)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5657" data-name="Group 5657" transform="translate(0 51)">
+      <text id="Diptheria" transform="translate(250 13313)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Diptheria</tspan></text>
+      <path id="Path_15473" data-name="Path 15473" d="M6.672,0-3.581,12.083,6.672,24.168,16.925,12.083Z" transform="translate(206.145 13319)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5658" data-name="Group 5658" transform="translate(0 59)">
+      <text id="Malaria" transform="translate(250 13357)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Malaria</tspan></text>
+      <path id="Path_15476" data-name="Path 15476" d="M14.768,7.384a11.347,11.347,0,0,0-22.694,0Z" transform="translate(209.49 13372.963)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5654" data-name="Group 5654" transform="translate(0 51)">
+      <text id="Covid_19" data-name="Covid 19" transform="translate(250 13155)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Covid 19</tspan></text>
+      <path id="Path_15474" data-name="Path 15474" d="M7.384,0-3.963,19.653H18.731Z" transform="translate(205.527 13163)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5653" data-name="Group 5653" transform="translate(0 42)">
+      <text id="Cholera" transform="translate(250 13111)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Cholera</tspan></text>
+      <path id="Path_15471" data-name="Path 15471" d="M14.768,7.384A11.347,11.347,0,1,1,3.421-3.963,11.346,11.346,0,0,1,14.768,7.384" transform="translate(209.49 13120.963)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5652" data-name="Group 5652" transform="translate(0 46)">
+      <text id="Accident_Trauma" data-name="Accident &amp; Trauma" transform="translate(250 13054)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Accident &amp; Trauma</tspan></text>
+      <path id="Path_15470" data-name="Path 15470" d="M28.047-85.751H6.771v-21.276H28.047Z" transform="translate(194.793 13168.027)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5655" data-name="Group 5655" transform="translate(0 46)">
+      <text id="Cyclones_Flooding_Landslides" data-name="Cyclones, Flooding &amp; Landslides" transform="translate(250 13212)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Cyclones, Flooding &amp; Landslides</tspan></text>
+      <path id="Path_15475" data-name="Path 15475" d="M7.384,0l3.507,7.1,7.839,1.14-5.672,5.532L14.4,21.583,7.384,17.9.372,21.583l1.337-7.808L-3.963,8.243,3.876,7.1Z" transform="translate(205.527 13219)" fill="#149ed8"/>
+    </g>
+    <g id="Group_5650" data-name="Group 5650" transform="translate(0 55)">
+      <text id="Distribution_Hub_W_are_house_" data-name="Distribution Hub (W are house)" transform="translate(250 12940)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Distribution Hub (W are house)</tspan></text>
+      <path id="Path_15469" data-name="Path 15469" d="M33.872-112.125H4v-23.584H33.872Z" transform="translate(193.564 13081.709)" fill="#195633"/>
+    </g>
+    <g id="Group_5651" data-name="Group 5651" transform="translate(0 51)">
+      <text id="Operations_Response" data-name="Operations Response" transform="translate(250 12997)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Operations Response</tspan></text>
+      <path id="Path_15478" data-name="Path 15478" d="M33.872-112.125H4v-23.584H33.872Z" transform="translate(193.564 13138.709)" fill="#e9e9e9"/>
+    </g>
+    <g id="Group_5659" data-name="Group 5659" transform="translate(0 55)">
+      <text id="Oxygen_Scale-Up" data-name="Oxygen Scale-Up" transform="translate(250 13414)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Oxygen Scale-Up</tspan></text>
+      <path id="Path_15477" data-name="Path 15477" d="M20.8,3.991H8.3V-17.285H20.8Z" transform="translate(198.259 13438.285)" fill="#149ed8"/>
+    </g>
+  </g>
+</svg>

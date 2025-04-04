@@ -21,7 +21,7 @@ export default function Landing() {
           {/* Hero Text */}
           <div className="absolute bottom-10 w-full">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
-              <MainHeading className=" mb-4 text-white">
+              <MainHeading className="mb-4 text-white">
                 ENHANCING OPERATIONS SUPPORT AND LOGISTICS FOR IMPROVED
                 EMERGENCY PREPAREDNESS AND RESPONSE IN AFRICA
               </MainHeading>
@@ -32,10 +32,10 @@ export default function Landing() {
 
       {/* Main Content */}
       <div className=" md:py-10  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
-            <AnimatedHeading linecolor="white">
+            <AnimatedHeading className="mb-8" linecolor="white">
               THE CRITICAL ROLE OF OPERATIONS SUPPORT AND LOGISTICS (OSL)
             </AnimatedHeading>
           </div>
@@ -60,8 +60,8 @@ export default function Landing() {
           </div>
 
           {/** Image on left and text */}
-          <div className="col-span-12 order-3 mt-6 flex gap-10 md:text-xl">
-            <div className="relative w-[60%]">
+          <div className="col-span-12 order-3 mt-6 flex flex-col md:flex-row gap-10 md:text-xl">
+            <div className="relative w-full md:w-[60%]">
               <img
                 src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/landing-image-2.webp"
                 alt="Logistic support"

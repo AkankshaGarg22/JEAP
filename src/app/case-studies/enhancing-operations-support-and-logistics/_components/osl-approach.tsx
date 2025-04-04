@@ -11,12 +11,18 @@ export default function OslApproach() {
           <Image
             src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/osl-approach-partnership.webp"
             alt="Logistic support"
-            className="mt-[-10%] w-[80%] h-[650px]"
+            className="md:mt-[-10%] w-full md:w-[80%] md:h-[650px] h-[300px]"
             width={800}
             height={0}
           />
         </div>
-        <div className="w-[80%] mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-12">
+
+        <div className="w-[80%] mx-auto md:flex justify-evenly md:grid md:grid-cols-1 lg:grid-cols-12">
+        <div className="block md:hidden container mx-auto pt-8">
+          <AnimatedHeading linecolor="white" fontSize="1.2rem">
+            INSTITUTIONAL PARTNERSHIPS AT THE CENTER OF THE JEAP’S OSL APPROACH
+          </AnimatedHeading>
+        </div>
           <Paragraph className="py-12 col-span-8 order-1">
             In addition to forging an innovative partnership with one another,
             the JEAP partners3 are helping to facilitate new partnerships
@@ -34,7 +40,7 @@ export default function OslApproach() {
             towards strengthening healthcare systems on the continent.
           </Paragraph>
           <div className="col-span-4 col-start-10 order-2 flex items-center">
-            <div className="relative w-full bg-[#386d64] text-white p-8 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:-translate-x-full before:border-t-[25px] before:border-b-[25px] before:border-r-[25px] before:border-t-transparent before:border-b-transparent before:border-r-[#386d64]">
+            <div className="hidden md:block relative w-full bg-[#386d64] text-white p-8 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:-translate-x-full before:border-t-[25px] before:border-b-[25px] before:border-r-[25px] before:border-t-transparent before:border-b-transparent before:border-r-[#386d64]">
               <div className="container mx-auto">
                 <AnimatedHeading linecolor="white" fontSize="1.2rem">
                   INSTITUTIONAL PARTNERSHIPS AT THE CENTER OF THE JEAP’S OSL

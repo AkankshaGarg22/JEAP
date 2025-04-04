@@ -4,8 +4,8 @@ import AnimatedHeading from "../../_components/AnimatedHeading";
 
 export default function HumanitarianResponse() {
   return (
-    <section className="min-h-screen bg-white py-20">
-      <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
+    <section className="min-h-screen bg-white md:py-20 py-12">
+      <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white pb-8">
         <div className="mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-12 py-12 w-[80%]">
           <div className="col-span-3 order-1">
             <AnimatedHeading linecolor="white">
@@ -14,7 +14,7 @@ export default function HumanitarianResponse() {
             </AnimatedHeading>
           </div>
 
-          <Paragraph className="col-span-8 col-start-5 order-2 flex items-center">
+          <Paragraph className="col-span-8 md:col-start-5 mt-8 order-2 flex items-center">
             In the face of the ongoing humanitarian crisis in Sudan, an
             estimated 2.9 million people have been displaced from Sudan since
             the crisis erupted on 15 April 2023, of whom 700,000 have moved
