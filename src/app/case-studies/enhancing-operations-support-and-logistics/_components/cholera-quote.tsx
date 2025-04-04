@@ -13,7 +13,7 @@ export default function CholeraQuote() {
           position="Regional Supply Chain Lead"
           organization="EPR, WHO AFRO."
         ></BlockQuote>
-        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 pt-20">
+        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 pt-8 md:pt-20">
           <Paragraph className="col-span-10">
             Beyond this response in Malawi, the JEAP partners are supporting
             other African countries to fight Cholera. In the first half of 2024,

@@ -131,10 +131,10 @@ export const BlockQuote = ({
               ></div>
             </div>
             <div className="flex flex-wrap items-center text-balance whitespace-nowrap">
-              {author && <span className="italic text-white/80">{author} {position ? ", ": ""}</span>}
+              {author && <span className="italic text-white/80">{author}{position ? ", ": ""}</span>}
               {position && (
                 <span className="italic text-white/80 whitespace-nowrap">
-                  {position}
+                 {' ' + position}
                 </span>
               )}
               {organization && <span className="w-full mt-1 italic text-white/80">{organization}</span>}

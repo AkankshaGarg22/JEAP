@@ -3,13 +3,12 @@ import React, { FC } from 'react';
 interface TranslucentBoxProps {
   backgroundColor: string;
   text: string;
-  width: number;  // in pixels
   className?: string;
   style?: React.CSSProperties;
 }
 
 // Helper function to parse **bold** text within a string.
-const parseBold = (text: string): React.ReactNode[] => {
+export const parseBold = (text: string): React.ReactNode[] => {
   // Split the text on any substring that matches **...**
   const regex = /(\*\*[^*]+\*\*)/g;
   const parts = text.split(regex);
@@ -27,7 +26,6 @@ const parseBold = (text: string): React.ReactNode[] => {
 const TranslucentBox: FC<TranslucentBoxProps> = ({
   backgroundColor,
   text,
-  width,
   className,
   style,
 }) => {
@@ -36,7 +34,6 @@ const TranslucentBox: FC<TranslucentBoxProps> = ({
       className={className}
       style={{
         backgroundColor: `${backgroundColor}`, // translucent white background
-        width: `${width}px`,
         height:`auto`,
         padding: '2rem',
         borderRadius: '0px',

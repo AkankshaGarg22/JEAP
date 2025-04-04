@@ -4,13 +4,13 @@ import Paragraph from "../../_components/paragraph";
 
 export default function EmergencyHub() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-16 px-6 md:px-12 lg:px-16  my-12 md:my-24 overflow-visible">
+    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-8 md:py-16 px-6 md:px-12 lg:px-16  my-12 md:my-24 overflow-visible">
       {/* Content Container */}
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="lg:w-3/5 z-10">
-            <AnimatedHeading linecolor="white" className="w-1/2 text-white">
+            <AnimatedHeading linecolor="white" className="md:w-1/2 text-white">
               AN AFRICA-LED RESOURCE CENTER: WHO’S REGIONAL EMERGENCY HUBS{" "}
             </AnimatedHeading>
 
@@ -40,28 +40,28 @@ export default function EmergencyHub() {
           </div>
         </div>
 
-        <div className="bg-[#386d64] my-4 p-4 md:p-8 text-white w-full">
+        <div className="bg-[#386d64] mt-8 md:my-4 p-4 md:p-8 text-white w-full">
           <Paragraph>
             In the first six months of{" "}
-            <span className="font-bold text-3xl">2024 alone</span>, WHO’s Hubs
+            <span className="font-bold md:text-3xl text-xl">2024 alone</span>, WHO’s Hubs
             delivered{" "}
-            <span className="font-bold text-3xl">
+            <span className="font-bold md:text-3xl text-xl">
               {" "}
               71 shipments of supplies to 29 countries
             </span>
             , for a total{" "}
-            <span className="font-bold text-3xl">value of $3,124,064 USD</span>.
+            <span className="font-bold md:text-3xl text-xl">value of $3,124,064 USD</span>.
             These shipments supported EPR efforts for outbreaks of{" "}
-            <span className="font-bold text-3xl">
+            <span className="font-bold md:text-3xl text-xl">
               Cholera, Dengue, Malaria, Diphtheria, and COVID-19
             </span>
             . Additionally, supplies were provided to assist with
             climate-related emergencies, including cyclones, floods, and
             landslides. Kenya has received the greatest amount of supplies
             support valuing
-            <span className="font-bold text-3xl"> $978,095 USD </span>in this
+            <span className="font-bold md:text-3xl text-xl"> $978,095 USD </span>in this
             timeframe, while other recipient countries received between
-            <span className="font-bold text-3xl">
+            <span className="font-bold md:text-3xl text-xl">
               {" "}
               $60,000 and $291,000 USD
             </span>

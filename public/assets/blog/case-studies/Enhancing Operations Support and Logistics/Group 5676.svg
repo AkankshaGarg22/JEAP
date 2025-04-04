@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="542" height="592" viewBox="0 0 542 592">
+  <g id="Group_5676" data-name="Group 5676" transform="translate(-1236 -13979)">
+    <g id="Rectangle_2841" data-name="Rectangle 2841" transform="translate(1236 14116)" fill="none" stroke="#00205c" stroke-width="1">
+      <rect width="55" height="455" rx="27.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="54" height="454" rx="27" fill="none"/>
+    </g>
+    <text id="WHO_Regional_Office_For_Africa" data-name="WHO Regional Office For Africa" transform="translate(1301 14490)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">WHO Regional Office </tspan><tspan x="0" y="66">For Africa</tspan></text>
+    <text id="Hub_Office" data-name="Hub Office" transform="translate(1301 14386)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Hub Office</tspan></text>
+    <text id="Countries_outside_WHO_African_Region" data-name="Countries outside WHO African Region" transform="translate(1301 14296)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Countries outside WHO </tspan><tspan x="0" y="66">African Region</tspan></text>
+    <text id="Not_Applicable" data-name="Not Applicable" transform="translate(1301 14243)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Not Applicable</tspan></text>
+    <text id="Liaison_Office" data-name="Liaison Office" transform="translate(1301 14437)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Liaison Office</tspan></text>
+    <text id="Countries_for_Niarobi_Hub" data-name="Countries for Niarobi Hub" transform="translate(1301 14138)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Countries for Niarobi Hub</tspan></text>
+    <path id="Path_15469" data-name="Path 15469" d="M33.872-112.125H4v-23.584H33.872Z" transform="translate(1244.564 14279.709)" fill="#008ed2"/>
+    <text id="Countries_for_Dakar_Hub" data-name="Countries for Dakar Hub" transform="translate(1301 14191)" font-size="32" font-family="ArialMT, Arial"><tspan x="0" y="29">Countries for Dakar Hub</tspan></text>
+    <path id="Path_15478" data-name="Path 15478" d="M33.872-112.125H4v-23.584H33.872Z" transform="translate(1244.564 14332.709)" fill="#1d4626"/>
+    <path id="Path_15479" data-name="Path 15479" d="M33.872-112.125H4v-23.584H33.872Z" transform="translate(1244.564 14384.917)" fill="#b2b1b1"/>
+    <path id="Path_15480" data-name="Path 15480" d="M33.872-112.125H4v-23.584H33.872Z" transform="translate(1244.564 14437.709)" fill="#a78b53"/>
+    <g id="Group_5672" data-name="Group 5672" transform="translate(2.603 -576.391)">
+      <rect id="Rectangle_2721" data-name="Rectangle 2721" width="28.401" height="28.401" transform="translate(1246.96 14966.19)" fill="#0c1e48"/>
+      <path id="Path_15190" data-name="Path 15190" d="M21.222,121.036a4.643,4.643,0,1,1-4.643-4.643,4.643,4.643,0,0,1,4.643,4.643" transform="translate(1244.582 14859.354)" fill="#fff"/>
+    </g>
+    <g id="Group_5674" data-name="Group 5674" transform="translate(1.657 -574.39)">
+      <path id="Path_15188" data-name="Path 15188" d="M38.292,147.393a15.146,15.146,0,1,1-15.147-15.147,15.148,15.148,0,0,1,15.147,15.147" transform="translate(1238.96 14881.996)" fill="none" stroke="#0c1e48" stroke-width="1"/>
+      <path id="Path_15189" data-name="Path 15189" d="M23.435,141.89a5.791,5.791,0,1,1-5.791-5.791,5.792,5.792,0,0,1,5.791,5.791" transform="translate(1244.462 14887.499)" fill="#0c1e48"/>
+    </g>
+    <path id="Path_15481" data-name="Path 15481" d="M23.147,152.465,8,163.47l5.786,17.806H32.508l5.787-17.806Z" transform="translate(1240.617 14341.129)" fill="#a78b53"/>
+  </g>
+</svg>
