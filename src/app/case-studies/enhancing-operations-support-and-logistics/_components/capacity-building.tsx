@@ -8,7 +8,7 @@ export default function CapacityBuilding() {
   return (
     <section className="bg-white pb-14">
       <div className="relative">
-        <div className="mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-10 w-[80%]">
+        <div className="hidden md:grid mx-auto flex justify-evenly grid-cols-1 lg:grid-cols-10 w-[80%]">
           <div className="col-span-4 order-1">
             <AnimatedHeading linecolor="black">
               THE PEOPLE AT THE HEART OF SUPPLY CHAINS: BOLSTERING AFRICA’S OSL
@@ -34,6 +34,36 @@ export default function CapacityBuilding() {
               className="h-[90%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.webp"
             ></img>
+          </div>
+        </div>
+
+        {/** Mobile Section */}
+        <div className="pb-8 block md:hidden">
+          <img
+            className=""
+            src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.webp"
+          ></img>
+          <div className="w-[80%] mx-auto">
+            <div className="pt-8">
+              <AnimatedHeading linecolor="black">
+                THE PEOPLE AT THE HEART OF SUPPLY CHAINS: BOLSTERING AFRICA’S
+                OSL WORKFORCE THROUGH CAPACITY BUILDING
+              </AnimatedHeading>
+
+              <Paragraph className="pt-14">
+                The JEAP’s OSL team is crucial in ensuring the timely delivery
+                of medical equipment and expert assistance through efficient
+                transportation, delivery, and storage of essential medical and
+                non medical supplies. Additionally, the OSL teams build
+                emergency response capacities to facilitate Africa’s rapid and
+                effective crisis management. They possess a wide array of
+                technical skills utilized during emergency response missions
+                including managers, supply chain specialists, water sanitation
+                and hygiene (WASH) engineers, construction engineers, mechanics,
+                cold chain experts and microbiologists, whose services are
+                tailored to each crisis they are responding to.<sup>5</sup>
+              </Paragraph>
+            </div>
           </div>
         </div>
 

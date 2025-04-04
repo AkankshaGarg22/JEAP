@@ -22,6 +22,3 @@ export default function References() {
     </section>
   );
 }
-
-1;
-2;

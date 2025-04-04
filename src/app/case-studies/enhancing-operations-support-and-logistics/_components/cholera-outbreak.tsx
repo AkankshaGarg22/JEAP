@@ -8,14 +8,14 @@ export default function CholeraOutbreak() {
   return (
     <section className="bg-white">
       <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
-        <div className="mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-12 w-[80%]">
-          <div className="col-span-3 order-1">
+        <div className="mx-auto md:flex justify-evenly md:grid grid-cols-1 lg:grid-cols-12 w-[80%]">
+          <div className="col-span-3 order-1 pt-8 md:pt-0">
             <AnimatedHeading linecolor="white">
               FROM TRAINING TO PRACTICE: A CLOSER LOOK AT OSL SUPPORT TO THE
               CHOLERA OUTBREAK IN MALAWI
             </AnimatedHeading>
           </div>
-          <div className="col-span-7 col-start-5 order-2">
+          <div className="col-span-7 col-start-5 order-2 my-8">
             <Paragraph>
               In 2023, Cyclone Freddy hit Malawi, triggering a natural disaster
               and resulting in the deadliest Cholera outbreak the country had
@@ -34,7 +34,7 @@ export default function CholeraOutbreak() {
           </div>
         </div>
 
-        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 py-16">
+        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 pb-4 md:py-16">
           <Paragraph className="col-span-12">
             Responders trained by the JEAP supported the Ministry of Health of
             Malawi in containing the outbreak through interventions such as Oral
@@ -56,8 +56,8 @@ export default function CholeraOutbreak() {
           </Paragraph>
         </div>
 
-        <div className="mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-12 w-[80%]">
-          <div className="col-span-4 order-1">
+        <div className="mx-auto md:flex justify-evenly md:grid grid-cols-1 lg:grid-cols-12 w-[80%]">
+          <div className="col-span-4 order-1 pb-4">
             <Paragraph>
               Africa CDC donated $100,000 million USD of essential cholera
               medical supplies to the Malawi Government and deployed 1,100
@@ -70,13 +70,13 @@ export default function CholeraOutbreak() {
           </div>
           <div className="col-span-12 col-start-6 order-2">
             <img
-              className="h-[85%] w-[85%]"
+              className="md:h-[85%] md:w-[85%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00093.webp"
             ></img>
           </div>
         </div>
 
-        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10">
+        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 py-8">
           <Paragraph className="col-span-12">
             Thanks to the rapidly deployed emergency response teams, Malawi’s
             largest cholera outbreak was declared contained by March 2022. The
