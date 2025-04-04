@@ -90,14 +90,18 @@ export default function Achievements() {
             }}
           >
             <span
-              className={`absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 text-6xl text-blue-900 font-semibold transition-opacity duration-150 ${expandedItems[item.id] ? "opacity-0" : "opacity-100"}`}
+              className={`absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 text-6xl text-blue-900 font-semibold transition-opacity duration-150 ${
+                expandedItems[item.id] ? "opacity-0" : "opacity-100"
+              }`}
             >
               {item.id}.
             </span>
 
             {/* Content (Instantly disappears on mouse leave) */}
-            <div className={`absolute left-0 top-0 w-full h-full p-4 text-xl text-gray-700 transition-opacity duration-150 ${expandedItems[item.id] ? "opacity-100 delay-300" : "opacity-0"}`}>
-              {parseBold(item.content)}
+            <div
+              className={`absolute left-0 top-0 w-full h-full p-4 text-xl text-gray-700 transition-opacity duration-150 ${expandedItems[item.id] ? "opacity-100 delay-300" : "opacity-0"}`}
+            >
+              <div className="absolute bottom-4 left-0 w-full text-center">{parseBold(item.content)}</div>
             </div>
           </div>
         ))}
