@@ -58,7 +58,7 @@ export default function Response() {
 
   const progressPercentages = [9, 22.5, 36, 50, 63.5, 77, 99.5];
   return (
-    <section className="my-12 px-4 md:px-0">
+    <section className="my-12 px-4 lg:px-0">
       <div className="hidden md:block">
         <SubHeading className="lg:text-center">RESPONSE</SubHeading>
       </div>

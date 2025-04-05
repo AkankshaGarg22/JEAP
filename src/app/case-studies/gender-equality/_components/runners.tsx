@@ -4,7 +4,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Runners() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-16 px-6 md:px-12 lg:px-16  my-12 md:my-24 overflow-visible">
+    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-16 px-6 md:px-12 lg:px-16 my-12 lg:my-24 overflow-visible">
       {/* Content Container */}
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center">

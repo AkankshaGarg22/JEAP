@@ -9,7 +9,7 @@ export default function Challenges() {
  const para2 = "In addition, cultural differences can hinder communication between deployed responders and local communities, especially for women responders. Gender norms in certain cultures might influence how comfortable people are communicating with, receiving assistance from, or learning from women in positions of authority. Such barriers to women’s participation in the health workforce can slow down implementation and impact of interventions."
  const para3 = "The AVoHC-SURGE initiative provides an opportunity for leadership at all levels to continue introducing policies and processes that can improve female emergency responders to work effectively and safely, ultimately improving the care received by the communities."
   return (
-    <div className="w-full my-12 md:my-24">
+    <div className="w-full my-12 lg:my-24">
       {/* Large screen layout (md and above) */}
       <div className="hidden md:block bg-white relative">
         <div className="w-full">
@@ -19,14 +19,14 @@ export default function Challenges() {
           </div>
 
           {/* Content section with gradient background */}
-          <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] pt-32 pb-16 relative z-0">
+          <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] px-8 lg:px-0 pt-32 pb-16 relative z-0">
             <div className="max-w-7xl mx-auto flex flex-row gap-8 pt-6 min-h-96">
-              <div className="w-[30%]">
+              <div className="w-[35%]">
                 <AnimatedHeading linecolor="white" className="text-white">
                 {title}
                 </AnimatedHeading>
               </div>
-              <div className="w-[70%] text-white ">
+              <div className="w-[65%] text-white ">
                 <Paragraph className="mb-2">{para1}</Paragraph>
                 <Paragraph className="mb-2">{para2}</Paragraph>
                 <Paragraph>{para3}</Paragraph>

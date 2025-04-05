@@ -8,7 +8,7 @@ export default function CholeraOutbreak() {
   return (
     <section className="bg-white">
       <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
-        <div className="mx-auto md:flex justify-evenly md:grid grid-cols-1 lg:grid-cols-12 w-[80%]">
+        <div className="mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12 w-[80%]">
           <div className="col-span-3 order-1 pt-8 md:pt-0">
             <AnimatedHeading linecolor="white">
               FROM TRAINING TO PRACTICE: A CLOSER LOOK AT OSL SUPPORT TO THE
@@ -56,7 +56,7 @@ export default function CholeraOutbreak() {
           </Paragraph>
         </div>
 
-        <div className="mx-auto md:flex justify-evenly md:grid grid-cols-1 lg:grid-cols-12 w-[80%]">
+        <div className="mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12 w-[80%]">
           <div className="col-span-4 order-1 flex justify-center">
             <Paragraph className="pb-4 md:pb-0">
               Africa CDC donated $100,000 million USD of essential cholera

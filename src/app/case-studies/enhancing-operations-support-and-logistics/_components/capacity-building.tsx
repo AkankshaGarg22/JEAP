@@ -8,7 +8,7 @@ export default function CapacityBuilding() {
   return (
     <section className="bg-white pb-12">
       <div className="relative">
-        <div className="hidden md:grid mx-auto flex justify-evenly grid-cols-1 lg:grid-cols-10 w-[73%]">
+        <div className="hidden lg:grid mx-auto flex justify-evenly grid-cols-1 lg:grid-cols-10 w-[73%]">
           <div className="col-span-4 order-1">
             <AnimatedHeading linecolor="black">
               THE PEOPLE AT THE HEART OF SUPPLY CHAINS: BOLSTERING AFRICA’S OSL
@@ -38,7 +38,7 @@ export default function CapacityBuilding() {
         </div>
 
         {/** Mobile Section */}
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <img
             className=""
             src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.webp"

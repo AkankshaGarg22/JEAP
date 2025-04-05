@@ -17,7 +17,7 @@ export default function OslApproach() {
           />
         </div>
 
-        <div className="w-[80%] mx-auto md:flex justify-evenly md:grid md:grid-cols-1 lg:grid-cols-12">
+        <div className="w-[80%] mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12">
         <div className="block md:hidden container mx-auto pt-8">
           <AnimatedHeading linecolor="white" fontSize="1.2rem">
             INSTITUTIONAL PARTNERSHIPS AT THE CENTER OF THE JEAP’S OSL APPROACH

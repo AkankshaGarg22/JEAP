@@ -62,7 +62,7 @@ export default function Policies() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white py-8 mb-12 md:mb-24">
+    <div className="bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white md:px-8 lg:px-0 py-8 mb-12 lg:mb-24">
       <div className="max-w-7xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
         <div>
           <AnimatedHeading linecolor="white" width="20%">
@@ -132,7 +132,7 @@ export default function Policies() {
         </button>
         <button
           onClick={goToNextSlide}
-          className="absolute right-4 md:right-24 top-6 md:top-[34%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
+          className="absolute right-4 md:right-20 lg:right-24 top-6 md:top-[34%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
           aria-label="Next slide"
         >
           <svg
