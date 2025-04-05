@@ -44,7 +44,7 @@ export default function Testimonial() {
           {/* Individual slides */}
           {testimonials.map((testimonial, index) => (
             <div key={index}  style={{ width: '100vw', flexShrink: 0 }}>
-              <BlockQuote quote={testimonial.quote} author={testimonial.author} position={testimonial.position} organization={testimonial.organization} className="w-full" />
+              <BlockQuote big={true} quote={testimonial.quote} author={testimonial.author} position={testimonial.position} organization={testimonial.organization} className="w-full" />
             </div>
           ))}
         </div>
