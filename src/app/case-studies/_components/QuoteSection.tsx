@@ -94,7 +94,7 @@ export const BlockQuote = ({
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
           <div className="flex items-center gap-8 text-xs md:text-2xl ">
-            <div className="relative w-[200px] md:w-[500px] flex items-center">
+            <div className="relative w-[100px] md:w-[400px] flex items-center">
               <div ref={lineRef} id="line" className="h-[1px] md:h-[2px] bg-white/60 " style={{ width: "20%" }}></div>
               <div ref={circleRef} className="absolute -right-2 md:-right-3 md:w-3 md:h-3 w-2 h-2 rounded-full bg-white/60" style={{ opacity: 0 }}></div>
             </div>

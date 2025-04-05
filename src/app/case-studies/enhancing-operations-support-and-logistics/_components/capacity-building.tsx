@@ -87,6 +87,7 @@ export default function CapacityBuilding() {
         author="Joshua Tim"
         position="AVoHC-SURGE Responder from Botswana"
         organization="deployed to respond to the Cholera outbreak in Malawi in March 2023"
+        big={true}
       ></BlockQuote>
     </section>
   );
