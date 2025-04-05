@@ -4,17 +4,17 @@ import Paragraph from "../../_components/paragraph";
 
 export default function EmergencyHub() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-8 md:py-16 px-6 md:px-12 lg:px-16  my-12 md:my-24 overflow-visible">
+    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-8 px-6 md:px-12 lg:px-16  my-12 overflow-visible">
       {/* Content Container */}
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
-          <div className="lg:w-3/5 z-10">
+          <div className="lg:w-[65%] z-10">
             <AnimatedHeading linecolor="white" className="md:w-1/2 text-white">
               AN AFRICA-LED RESOURCE CENTER: WHO’S REGIONAL EMERGENCY HUBS{" "}
             </AnimatedHeading>
 
-            <Paragraph className="text-gray-100 my-8 md:my-12">
+            <Paragraph className="text-gray-100 my-10">
               WHO’s Africa Regional Office (AFRO) Emergency Hubs in Africa are
               central to the JEAP’s approach to effective emergency response.
               The Hubs act as command centres for rapid action, efficient
@@ -40,7 +40,7 @@ export default function EmergencyHub() {
           </div>
         </div>
 
-        <div className="bg-[#386d64] mt-8 md:my-4 p-4 md:p-8 text-white w-full">
+        <div className="bg-[#386d64] mt-8 md:mt-0 p-4 md:p-8 text-white w-full">
           <Paragraph>
             In the first six months of{" "}
             <span className="font-bold md:text-3xl text-xl">2024 alone</span>, WHO’s Hubs

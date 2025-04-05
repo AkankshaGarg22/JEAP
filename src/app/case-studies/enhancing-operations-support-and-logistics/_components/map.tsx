@@ -10,7 +10,7 @@ export default function Map() {
           Figure: Response operations and support from WHO AFRO as of June 2024.
         </SubHeading>
         {/**Map 1 */}
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 mb-8 py-20">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 py-10">
           <div className="md:w-[50%] h-full flex flex-col justify-between">
             <AnimatedHeading linecolor="black" width="20%">
               LEGEND
@@ -36,7 +36,7 @@ export default function Map() {
           </div>
         </div>
         {/**Map 2 */}
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-16 mb-8 py-10">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-16">
           <div className="md:w-[70%] flex justify-center items-center p-8 bg-[#A6BCAF] md:rounded-[45px] relative">
             <img
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5240.svg"
