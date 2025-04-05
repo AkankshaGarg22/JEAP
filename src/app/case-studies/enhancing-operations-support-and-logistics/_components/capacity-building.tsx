@@ -6,16 +6,16 @@ import { BlockQuote } from "../../_components/QuoteSection";
 
 export default function CapacityBuilding() {
   return (
-    <section className="bg-white pb-14">
+    <section className="bg-white pb-12">
       <div className="relative">
-        <div className="hidden md:grid mx-auto flex justify-evenly grid-cols-1 lg:grid-cols-10 w-[80%]">
+        <div className="hidden md:grid mx-auto flex justify-evenly grid-cols-1 lg:grid-cols-10 w-[73%]">
           <div className="col-span-4 order-1">
             <AnimatedHeading linecolor="black">
               THE PEOPLE AT THE HEART OF SUPPLY CHAINS: BOLSTERING AFRICA’S OSL
               WORKFORCE THROUGH CAPACITY BUILDING
             </AnimatedHeading>
 
-            <Paragraph className="py-14">
+            <Paragraph className="pt-10">
               The JEAP’s OSL team is crucial in ensuring the timely delivery of
               medical equipment and expert assistance through efficient
               transportation, delivery, and storage of essential medical and non
@@ -29,7 +29,7 @@ export default function CapacityBuilding() {
               they are responding to.<sup>5</sup>
             </Paragraph>
           </div>
-          <div className="col-span-5 col-start-7 order-2">
+          <div className="col-span-5 col-start-7 order-2 flex items-center justify-center">
             <img
               className="h-[90%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.webp"
@@ -67,7 +67,7 @@ export default function CapacityBuilding() {
           </div>
         </div>
 
-        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 pb-20">
+        <div className="w-[73%] m-auto grid grid-cols-1 lg:grid-cols-10 py-10">
           <Paragraph className="col-span-10">
             The JEAP has prioritized investing in in-person training to build
             OSL workforce competencies such as forecasting, inventory
