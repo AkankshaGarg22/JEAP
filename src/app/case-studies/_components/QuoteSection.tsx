@@ -83,13 +83,13 @@ export const BlockQuote = ({
   return (
     <div
       ref={containerRef}
-      className={`blockquote-container flex md:block bg-blockquote-bg-mobile md:bg-blockquote-bg-desktop bg-no-repeat bg-center relative w-full ${
-        big ? "xl:h-[60vh]" : "xl:h-[47vh]"
-      } md:h-[40vh] md:min-h-[40vh] xl:min-h-[47vh] min-h-[24vh] overflow-hidden p-4 md:p-12 text-white ${className || ""}`}
+      className={`blockquote-container flex items-center md:block bg-blockquote-bg-mobile md:bg-blockquote-bg-desktop bg-no-repeat relative w-full ${
+        big ? "min-h-[60vh] xl:h-[60vh] bg-cover" : "min-h-[24vh] xl:h-[47vh] bg-cover"
+      } md:h-[40vh] md:min-h-[40vh] xl:min-h-[47vh] md:bg-auto bg-center  overflow-hidden p-4 md:p-12 text-white ${className || ""}`}
     >
       {/* Quote content */}
-      <div className={`relative z-10 max-w-lg ${big ? "md:max-w-4xl" : "md:max-w-3xl"} mx-auto flex flex-col justify-center items-center md:h-full`}>
-        <h2 className={`w-[60%] md:w-full leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-xs md:text-2xl ${big ? "md:leading-7" : ""}`}>{quote}</h2>
+      <div className={`relative z-10 max-w-lg ${big ? "md:max-w-4xl" : "md:max-w-3xl"} mx-auto flex flex-col justify-center items-center h-full md:h-full`}>
+        <h2 className={`${ big ? "w-full" : "w-[60%]"} md:w-full leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-xs md:text-2xl ${big ? "md:leading-7" : ""}`}>{quote}</h2>
 
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
