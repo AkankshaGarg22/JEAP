@@ -9,13 +9,13 @@ export default function Expertise() {
  const para2 = "In 2024, the hub processed a total of 21 shipments to 16 countries across the continent, with a total value of $452,906. The highest value of shipments were made to the Central African Republic ($136,082 USD) and the Republic of Congo ($105,761 USD)."
  const para3 = "The hub supported six types of Response Operations. The Cholera outbreak emergency response received the greatest budgetary value of products at $208,741 USD. Cyclones, flooding, and landslides received the second largest amount of support from the hub, with items valuing a total of $105,761 USD."
   return (
-    <div className="w-full my-12">
+    <section className="w-full md:my-12">
       {/* Large screen layout (md and above) */}
       <div className="bg-white relative">
         <div className="w-full">         
 
           {/* Content section with gradient background */}
-          <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] md:py-10 relative z-0">
+          <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] pb-10 md:pt-10 relative z-0">
           <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
             <img src={imageUrl} alt="Featured image" className="w-full object-cover md:h-[40rem] h-[30rem] relative" />
           </div>
@@ -34,6 +34,6 @@ export default function Expertise() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

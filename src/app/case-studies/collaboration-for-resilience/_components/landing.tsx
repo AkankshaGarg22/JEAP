@@ -10,7 +10,7 @@ export default function Landing() {
     <section className="min-h-screen bg-white">
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
-        <div className="w-full h-[60vh] md:h-[50vh] lg:h-[80vh] relative">
+        <div className="w-full h-[62vh] md:h-[50vh] lg:h-[80vh] relative">
           <Image
             src="/assets/blog/case-studies/Collaboration for Resilience/Webp/1.webp"
             alt="JEAP Partnership Members"

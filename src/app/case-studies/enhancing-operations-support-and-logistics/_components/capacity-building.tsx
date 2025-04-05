@@ -38,7 +38,7 @@ export default function CapacityBuilding() {
         </div>
 
         {/** Mobile Section */}
-        <div className="pb-8 block md:hidden">
+        <div className="block md:hidden">
           <img
             className=""
             src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.webp"
@@ -50,7 +50,7 @@ export default function CapacityBuilding() {
                 OSL WORKFORCE THROUGH CAPACITY BUILDING
               </AnimatedHeading>
 
-              <Paragraph className="pt-14">
+              <Paragraph className="md:pt-10 pt-8">
                 The JEAP’s OSL team is crucial in ensuring the timely delivery
                 of medical equipment and expert assistance through efficient
                 transportation, delivery, and storage of essential medical and
@@ -67,7 +67,7 @@ export default function CapacityBuilding() {
           </div>
         </div>
 
-        <div className="w-[73%] m-auto grid grid-cols-1 lg:grid-cols-10 py-10">
+        <div className="md:w-[73%] w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 md:py-10 py-8">
           <Paragraph className="col-span-10">
             The JEAP has prioritized investing in in-person training to build
             OSL workforce competencies such as forecasting, inventory

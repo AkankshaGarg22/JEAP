@@ -3,8 +3,8 @@ import SubHeading from "../../_components/sub-heading";
 
 export default function AfricaCDC() {
   return (
-    <section className="max-w-7xl mx-auto px-4 mb-12">
-      <div className="w-full h-64 md:h-[40rem] mb-12">
+    <section className="max-w-7xl mx-auto px-4 md:mb-12 mb-10">
+      <div className="w-full h-64 md:h-[40rem] md:mb-12 mb-8">
         <img className="h-full w-full object-cover object-center" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00644.webp" alt="" />
       </div>
       <div className="w-full flex">

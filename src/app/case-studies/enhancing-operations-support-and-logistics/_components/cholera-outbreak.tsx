@@ -23,8 +23,8 @@ export default function CholeraOutbreak() {
               displacing over 659,000 people, injuring over 2000, killing over
               650, and resulting in the disappearance of another 500<sup>6</sup>
               . The protracted Cholera outbreak lasted over 2 years, with over
-              59,000 cases reported and over 1,700 deaths7. Overall readiness
-              capacity for cholera is limited (48%)8 across the AFRO region,
+              59,000 cases reported and over 1,700 deaths<sup>7</sup>. Overall readiness
+              capacity for cholera is limited (48%)<sup>8</sup> across the AFRO region,
               including in logistics and procurement (48%). Such an increase in
               one country can rapidly spread through the region, as the cyclones
               and flooding which occurred in Mozambique and Malawi in early 2023
@@ -58,7 +58,7 @@ export default function CholeraOutbreak() {
 
         <div className="mx-auto md:flex justify-evenly md:grid grid-cols-1 lg:grid-cols-12 w-[80%]">
           <div className="col-span-4 order-1 flex justify-center">
-            <Paragraph>
+            <Paragraph className="pb-4 md:pb-0">
               Africa CDC donated $100,000 million USD of essential cholera
               medical supplies to the Malawi Government and deployed 1,100
               community health workers to strengthen risk communication and
@@ -70,7 +70,7 @@ export default function CholeraOutbreak() {
           </div>
           <div className="col-span-12 col-start-6 order-2 flex justify-center items-center">
             <img
-              className="md:h-[90%] md:w-[75%]"
+              className="md:w-[60%] pb-4 md:pb-8"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00093.webp"
             ></img>
           </div>

@@ -30,7 +30,7 @@ export default function EmergencyHub() {
 
           {/* Image Container - Positioned for overlap on desktop */}
           <div className="lg:absolute lg:right-0 lg:-top-[15%] lg:transform lg:w-[30%] lg:h-[30rem]">
-            <div className="h-64 lg:h-full w-full relative mt-6 lg:mt-0">
+            <div className="h-64 lg:h-full w-full relative">
               <img
                 src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00792.webp"
                 alt="Woman health worker walking in a green field"

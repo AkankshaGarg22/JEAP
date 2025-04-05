@@ -3,9 +3,9 @@ import Paragraph from "../../_components/paragraph";
 
 export default function AcceleratingEmergency() {
   return (
-    <section className="max-w-7xl mx-auto my-8 md:my-0">
-      <div className="flex flex-col md:flex-row items-stretch justify-center md:justify-between gap-4 md:gap-0 mb-12">
-        <div className="md:w-[45%] h-full flex flex-col justify-center items-start p-8 md:p-4 gap-12 ">
+    <section className="max-w-7xl mx-auto my-4 md:my-0 px-8 md:px-0">
+      <div className="flex flex-col md:flex-row items-stretch justify-center md:justify-between gap-4 md:gap-0 md:mb-12">
+        <div className="md:w-[45%] h-full flex flex-col justify-center items-start md:p-4 gap-12 ">
           <img
             className="w-full h-full object-contain"
             src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Habinshuti M.Gorette_3L7A0736.webp"
@@ -13,7 +13,7 @@ export default function AcceleratingEmergency() {
           />
         </div>
 
-        <div className="md:w-[50%] h-full flex flex-col items-start p-4 gap-12">
+        <div className="md:w-[50%] h-full flex flex-col items-start md:p-4 md:gap-12 gap-8">
           <AnimatedHeading linecolor="black" width="20%" className="">
             ACCELERATING EMERGENCY RESPONSE TIME: A CLOSER LOOK AT THE NAIROBI
             RESPONSE HUB
