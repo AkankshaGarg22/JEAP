@@ -65,7 +65,7 @@ export default function Landing() {
               <img
                 src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/landing-image-2.webp"
                 alt="Logistic support"
-                className="w-full h-[85%]"
+                className="w-full"
               />
             </div>
             <div className="w-full">
