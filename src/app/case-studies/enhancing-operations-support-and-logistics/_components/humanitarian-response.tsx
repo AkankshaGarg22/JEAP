@@ -6,7 +6,7 @@ export default function HumanitarianResponse() {
   return (
     <section className="bg-white py-10">
       <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white pb-8 pt-8">
-        <div className="mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-12 pb-12 w-[80%]">
+        <div className="mx-auto flex justify-evenly lg:grid lg:grid-cols-12 pb-12 w-[80%]">
           <div className="col-span-3 order-1">
             <AnimatedHeading linecolor="white">
               A NEW PARTNERSHIP WITH THE CHADIAN GOVERNMENT TO TACKLE THE SUDAN
@@ -26,7 +26,7 @@ export default function HumanitarianResponse() {
           </Paragraph>
         </div>
 
-        <div className="w-[80%] m-auto grid grid-cols-1 lg:grid-cols-12">
+        <div className="w-[80%] m-auto lg:grid grid-cols-1 lg:grid-cols-12">
           <Paragraph className="col-span-12">
             The Chadian government deployed a chartered aircraft to pick up
             emergency supplies from the WHO AFRO emergency hub in Nairobi and
