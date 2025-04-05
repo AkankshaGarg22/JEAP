@@ -83,7 +83,7 @@ export const BlockQuote = ({
   return (
     <div
       ref={containerRef}
-      className={`blockquote-container flex md:block bg-blockquote-bg-mobile md:bg-blockquote-bg-desktop bg-cover bg-no-repeat bg-center relative w-full ${
+      className={`blockquote-container flex md:block bg-blockquote-bg-mobile md:bg-blockquote-bg-desktop bg-no-repeat bg-center relative w-full ${
         big ? "xl:h-[60vh]" : "xl:h-[47vh]"
       } md:h-[40vh] md:min-h-[40vh] xl:min-h-[47vh] min-h-[24vh] overflow-hidden p-4 md:p-12 text-white ${className || ""}`}
     >
@@ -94,7 +94,7 @@ export const BlockQuote = ({
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
           <div className="flex items-center gap-8 text-xs md:text-2xl ">
-            <div className="relative w-[100px] md:w-[400px] flex items-center">
+            <div className="relative w-[100px] md:w-full flex items-center">
               <div ref={lineRef} id="line" className="h-[1px] md:h-[2px] bg-white/60 " style={{ width: "20%" }}></div>
               <div ref={circleRef} className="absolute -right-2 md:-right-3 md:w-3 md:h-3 w-2 h-2 rounded-full bg-white/60" style={{ opacity: 0 }}></div>
             </div>
