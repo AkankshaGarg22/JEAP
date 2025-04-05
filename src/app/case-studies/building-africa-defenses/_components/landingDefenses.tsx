@@ -7,13 +7,13 @@ export default function LandingDefenses() {
     <section className="min-h-screen bg-white">
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
-        <div className="w-full h-[60vh] md:h-[50vh] lg:h-[80vh] relative">
+        <div className="w-full h-[62vh] md:h-[50vh] lg:h-[80vh] relative">
           <Image src="/assets/blog/case-studies/Building_Africa_Defenses/Webp/IMG_2547.webp" alt="JEAP Building Africa's Defenses" layout="fill" objectFit="cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
           <div className="absolute bottom-10 w-full">
-            <div className="max-w-6xl mx-auto px-6 md:px-12">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">BUILDING AFRICA’S DEFENSES: ADVANCING GENOMIC SEQUENCING TO ENSURE PUBLIC HEALTH SECURITY</h1>
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function LandingDefenses() {
 
       {/* Main Content */}
       <div className=" md:py-10  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
           <AnimatedHeading linecolor="white">

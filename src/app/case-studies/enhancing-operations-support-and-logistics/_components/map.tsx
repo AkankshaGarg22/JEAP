@@ -61,6 +61,7 @@ export default function Map() {
           </div>
         </div>
       </div>
+      {/** Mobile section */}
       <div className="block md:hidden">
         <SubHeading>
           Figure: Response operations and support from WHO AFRO as of June 2024.
@@ -86,7 +87,7 @@ export default function Map() {
           </div>
         </div>
         {/**Map 2 */}
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 mb-8 py-10">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4">
           <div className="md:w-[70%] flex justify-center items-center p-8 bg-[#A6BCAF] md:rounded-[45px] relative">
             <img
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5240.svg"

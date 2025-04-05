@@ -101,7 +101,7 @@ export default function Achievements() {
             <div
               className={`absolute left-0 top-0 w-full h-full p-4 text-xl text-gray-700 transition-opacity duration-150 ${expandedItems[item.id] ? "opacity-100 delay-300" : "opacity-0"}`}
             >
-              <div className="absolute bottom-4 left-0 w-full text-center">{parseBold(item.content)}</div>
+              <div className="absolute bottom-4 left-0 w-full px-2 pb-4">{parseBold(item.content)}</div>
             </div>
           </div>
         ))}

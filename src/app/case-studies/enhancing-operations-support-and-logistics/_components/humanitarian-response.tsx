@@ -5,7 +5,7 @@ import AnimatedHeading from "../../_components/AnimatedHeading";
 export default function HumanitarianResponse() {
   return (
     <section className="bg-white py-10">
-      <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white pb-8">
+      <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white pb-8 pt-8">
         <div className="mx-auto flex justify-evenly grid grid-cols-1 lg:grid-cols-12 pb-12 w-[80%]">
           <div className="col-span-3 order-1">
             <AnimatedHeading linecolor="white">

@@ -5,7 +5,7 @@ import { BlockQuote } from "../../_components/QuoteSection";
 
 export default function CholeraQuote() {
   return (
-    <section className="bg-white pt-14 flex justify-center">
+    <section className="bg-white md:pt-14 pt-10 flex justify-center">
       <div className="relative">
         <BlockQuote
           quote="The ripple effect of this training is the responders go home and are able to apply what they learnt in Malawi. We are providing this support to the country as a best practice."

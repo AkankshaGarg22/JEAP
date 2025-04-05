@@ -23,9 +23,9 @@ export default function OslApproach() {
             INSTITUTIONAL PARTNERSHIPS AT THE CENTER OF THE JEAP’S OSL APPROACH
           </AnimatedHeading>
         </div>
-          <Paragraph className="py-12 col-span-8 order-1">
+          <Paragraph className="py-8 md:py-12 col-span-8 order-1">
             In addition to forging an innovative partnership with one another,
-            the JEAP partners3 are helping to facilitate new partnerships
+            the JEAP partners<sup>3</sup> are helping to facilitate new partnerships
             between governments, airlines, transport companies, and other
             logistics and manufacturing units. The Africa Medical Supplies
             Platform (AMSP) is collaborating with logistics providers to

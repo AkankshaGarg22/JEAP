@@ -5,10 +5,10 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Landing() {
   return (
-    <section className="min-h-screen bg-white">
+    <section className="min-h-screen bg-[##1b5632]">
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
-        <div className="w-full h-[60vh] md:h-[50vh] lg:h-[80vh] relative">
+        <div className="w-full h-[62vh] md:h-[50vh] lg:h-[80vh] relative">
           <Image
             src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/enhancing-logistic-support-landing.webp"
             alt="Enhancing Operations Support and Logistics"
@@ -76,7 +76,7 @@ export default function Landing() {
                 limited domestic budgets, and the harsh reality of supplier
                 nations prioritizing their own needs. For instance, it took 21
                 days for the first shipment of protective equipment such as
-                masks to reach African countries1. Before the pandemic, African
+                masks to reach African countries<sup>1</sup>. Before the pandemic, African
                 countries sourcing emergency medical supplies with support from
                 the World Health Organization (WHO) were primarily reliant on
                 three warehouses located in China, the UAE, and Ghana. Shipping
