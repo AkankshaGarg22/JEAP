@@ -10,6 +10,7 @@ import TextSectionFive from "./_components/textSectionFive";
 import ReferenceList from "../_components/References";
 import MainHeading from "../_components/main-heading";
 import OverflowSection from "./_components/OverflowSection";
+import SubHeading from "../_components/sub-heading";
 
 const references = [
   " https://reliefweb.int/report/mozambique/weekly-bulletin-outbreaks-and-other-emergencies-week-42-16-october-22-october-2023-data-reported-1700-22-october-2023",
@@ -65,8 +66,8 @@ export default function Index() {
       <TextSectionFive/>
       <div className="w-full flex justify-center items-center">
         
-      <div className="w-[80%] py-8">
-        <MainHeading>References</MainHeading>
+      <div className="w-[80%] py-12 flex flex-col items-start justify-center">
+      <SubHeading className="pb-6">References</SubHeading>
       <ReferenceList items={references} className="w-full"></ReferenceList>
       </div>
       </div>

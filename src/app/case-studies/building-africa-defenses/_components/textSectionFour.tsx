@@ -7,7 +7,7 @@ const TextSectionFour = () => {
   return (
     <>
       {/* Close Partenership */}
-      <div className="bg-white flex w-full flex-col items-center justify-center py-10">
+      <div className="bg-white flex w-full flex-col gap-6 items-center justify-center py-12">
         <Paragraph className="w-[80%]">
           The close working partnership between Africa CDC and WHO allows for
           highly coordinated and complementary support to the network. Africa
@@ -32,20 +32,19 @@ const TextSectionFour = () => {
         </Paragraph>
       </div>
       {/* EQUIPPING AND TRAINING */}
-      <div className="bg-gradient-to-t from-[#1E2859] to-[#1D5539] w-full h-auto flex items-center justify-center py-10">
-        <div className="w-[80%] flex flex-col lg:flex-row justify-center items-center ">
-          <div className="w-[100%] flex items-center justify-center">
+      <div className="bg-gradient-to-t from-[#1E2859] to-[#1D5539] w-full h-auto flex items-center justify-center py-12">
+        <div className="w-[80%] flex flex-col lg:flex-row gap-12 justify-center items-start ">
+          <div className="w-[35%] flex items-center justify-center">
             <AnimatedHeading
               linecolor="white"
-              fontSize="20px"
-              className="text-white w-[80%]"
+              className="text-white"
             >
               EQUIPPING AND TRAINING A FIT-FOR-PURPOSE LABORATORY WORKFORCE WITH
               CUTTING-EDGE TECHNOLOGIES
             </AnimatedHeading>
           </div>
-          <div className="flex items-center justify-center">
-            <Paragraph className="text-white w-[80%]">
+          <div className="flex items-center justify-center w-[50%]">
+            <Paragraph className="text-white">
               Regular coordination between the Africa CDC and WHO has also
               helped optimize supply chains for critical laboratory resources
               like reagents, maximizing the network’s efficiency. For example,
@@ -57,13 +56,14 @@ const TextSectionFour = () => {
         </div>
       </div>
       {/*Collaboration CDC*/}
-      <div className="bg-white flex w-full flex-col items-center justify-center py-8">
+
+      <div className="bg-white flex w-full flex-col items-center justify-center">
         {/* APHL */}
-        <div className="w-[80%] flex flex-col lg:flex-row items-center justify-center py-4 pb-12">
-          <div className="w-[40%] p-0 m-0">
+        <div className="w-[80%] flex flex-col lg:flex-row items-center justify-center py-12">
+          <div className="w-[35%] h-[350px]">
             <img
               src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.27 (1).webp"
-              className="h-auto w-[100%] m-0 p-0"
+              className="h-full w-full object-cover object-center"
             ></img>
           </div>
           <div className="w-[60%] p-0 m-0 border-black border-2 border-l-0">
@@ -78,9 +78,10 @@ const TextSectionFour = () => {
             </Paragraph>
           </div>
         </div>
+
         {/* Seychelles and Lesotho */}
-        <div className="p-16 py-8 w-[80%] bg-gradient-to-t from-[#1E2859] to-[#1D5539] flex flex-col items-center justify-center">
-          <Paragraph className="text-white">
+        <div className="p-16 w-[80%] bg-gradient-to-t from-[#1E2859] to-[#1D5539] flex flex-col items-center justify-center py-12">
+          <Paragraph className="text-white pb-6">
             WHO also trained experts in Seychelles and Lesotho on using the
             Oxford Nanopore Technology (ONT) sequencing device, which is a
             portable device that is able to sequence DNA in remote locations and
@@ -94,12 +95,13 @@ const TextSectionFour = () => {
           </Paragraph>
           <img
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/Habimana Jean Pierre_3L7A0512.webp"
-            className="h-[650px] w-[100%] m-0 py-6"
+            className="h-[550px] w-[100%] object-cover object-center pt-6"
           ></img>
         </div>
+
         {/* Seychelles and Lesotho */}
-        <div className="w-[80%] flex flex-col bg-white items-center justify-center py-8">
-          <div className="w-full flex items-center justify-center flex-col lg:flex-row gap-16">
+        <div className="w-[80%] flex flex-col bg-white items-center justify-center py-12">
+          <div className="w-full flex items-start justify-center flex-col lg:flex-row gap-10">
             <div className="w-[45%] flex items-center justify-center flex-col gap-10">
               <AnimatedHeading linecolor="black">
                 IMPACT ON THE GROUND: <br></br>GENOMIC SURVEILLANCE IN RECENT
@@ -113,6 +115,7 @@ const TextSectionFour = () => {
                 Marburg disease, Mpox, Cholera, and others.
               </Paragraph>
             </div>
+
             <div className="w-[55%] h-auto flex items-center justify-center">
               <img
                 src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WHO_Malawi-146985.webp"
@@ -122,7 +125,7 @@ const TextSectionFour = () => {
             </div>
           </div>
 
-          <div className="w-full flex items-center justify-center pt-6">
+          <div className="w-full flex items-center justify-center pt-12">
             <Paragraph>
               At the onset of the COVID-19 pandemic, only seven African
               countries – Kenya, Nigeria, Senegal, South Africa, Egypt, Morocco,
@@ -132,10 +135,13 @@ const TextSectionFour = () => {
           </div>
         </div>
       </div>
+
       {/* Animation Space */}
+
       <Chart />
+
       {/* GLobal genomic survellience strategy */}
-      <div className="w-full h-auto bg-transparent flex items-center justify-center py-8">
+      <div className="w-full h-auto bg-transparent flex items-center justify-center py-12">
         <div className="w-[80%] h-auto bg-white flex flex-col gap-10 items-center justify-center">
           <div className="w-full flex items-center justify-center">
             <Paragraph className="w-full">
@@ -145,10 +151,10 @@ const TextSectionFour = () => {
               epidemic potential, 2022–2032 published in 2022.<sup>20</sup>
             </Paragraph>
           </div>
-          <div className="w-full flex items-center justify-center">
+          <div className="w-full h-[550px] flex items-center justify-center">
             <img
               src="/assets/blog/case-studies/Building_Africa_Defenses/webp/african-american-woman-scientist-holding-test-tube-laboratory.webp"
-              className="w-full h-auto"
+              className="w-full h-full object-cover object-center"
             ></img>
           </div>
         </div>

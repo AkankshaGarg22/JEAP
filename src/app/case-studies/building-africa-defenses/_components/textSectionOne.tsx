@@ -4,8 +4,9 @@ import Paragraph from '../../_components/paragraph'
 
 const TextSectionOne = () => {
   return (
-    <div className="flex w-full h-auto flex-col bg-white items-center justify-center py-10">
-        <div className="lg:w-[80%] w-full h-auto flex lg:flex-row flex-col gap-4 items-center justify-center">
+    <>
+    <div className="flex w-full h-auto flex-col bg-white items-center justify-center">
+        <div className="lg:w-[80%] w-full h-auto flex lg:flex-row flex-col gap-4 items-center justify-center py-12">
             <div className="lg:w-[30%] w-[60%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">WHAT IS <br />GENOMIC<br/> SEQUENCING?</AnimatedHeading>
             </div>
@@ -16,18 +17,21 @@ const TextSectionOne = () => {
             </div>
         </div>
 
-        <div className="w-[80%] h-auto pt-6 flex items-center justify-center relative translate-y-[25%]">
-          <div className="w-[100%] h-auto flex items-center justify-center">
-            <img height="30%" width="80%" alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/202105_Angola_COVAX_03.webp"
-            />
+        <div className="w-[80%] h-auto pb-12 flex items-center justify-center relative">
+          <div className="w-[100%] h-[500px] flex items-center justify-center">
+            <img alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/202105_Angola_COVAX_03.webp"
+            className="object-cover object-center h-full w-[80%]"/>
          </div>
         </div>
 
-        <div className="w-[80%] h-auto  flex items-center justify-center bg-gradient-to-b from-[#1E2859] to-[#1D5539] pt-[15%] pb-8">
+        <div className="w-[80%] h-auto  flex items-center justify-center bg-gradient-to-b from-[#1E2859] to-[#1D5539] py-12">
          <Paragraph className="text-white w-[80%]">Genomic surveillance is the process of tracking a virus using genomic sequence data collected from representative populations to detect new variants and monitor trends in circulating variants.6 As such, genomic sequencing improves scientists’ understanding of which variants are circulating, how quickly they are emerging, and which are most important to characterize and monitor. In addition, genomic sequencing results are also valuable for diagnosing patients and developing treatments to combat these diseases. During COVID-19, genomic sequencing helped country governments with the adequate capacities to track – and slow – the spread of disease.</Paragraph>
         </div>
-
-        <div className="lg:w-[80%] w-full h-auto flex flex-col lg:flex-row gap-4 pt-12 items-center justify-center">
+        
+    </div>
+{/* 2013-2016 Ebola Outbreak */}
+      <div className="w-full h-auto flex justify-center items-center py-12">
+        <div className="lg:w-[80%] w-full h-auto flex flex-col lg:flex-row gap-4  items-center justify-center">
          <div className="lg:w-[30%] w-[60%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">MISSED OPPORTUNITIES LESSONS LEARNED FROM EBOLA AND COVID-19 OUTBREAKS?</AnimatedHeading>
             </div>
@@ -38,6 +42,7 @@ const TextSectionOne = () => {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

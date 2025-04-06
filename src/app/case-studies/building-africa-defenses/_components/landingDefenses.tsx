@@ -33,7 +33,7 @@ export default function LandingDefenses() {
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
             <p className="text-base md:text-lg">
-            Major infectious disease outbreaks around the globe in recent years have underscored the urgent need to strengthen laboratory and surveillance capabilities through genomic sequencing in order to track and mitigate the spread of disease.<sup>1</sup> With more disease outbreaks than any other region globally,<sup>2</sup> Africa reported 148 health emergencies in 2023, despite representing only 17% of the global population. Africa’s vulnerability to the spread of infectious disease epidemics is driven by various factors, including climatic and ecological conditions that harbor pathogens and their vectors as well as frequent movements of people, commodities, animals and animal products across national and international borders.<sub>3</sub>
+            Major infectious disease outbreaks around the globe in recent years have underscored the urgent need to strengthen laboratory and surveillance capabilities through genomic sequencing in order to track and mitigate the spread of disease.<sup>1</sup> With more disease outbreaks than any other region globally,<sup>2</sup> Africa reported 148 health emergencies in 2023, despite representing only 17% of the global population. Africa’s vulnerability to the spread of infectious disease epidemics is driven by various factors, including climatic and ecological conditions that harbor pathogens and their vectors as well as frequent movements of people, commodities, animals and animal products across national and international borders.<sup>3</sup>
             </p>
           </div>
 
