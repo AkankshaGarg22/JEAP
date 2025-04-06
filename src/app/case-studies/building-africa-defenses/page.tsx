@@ -64,10 +64,14 @@ export default function Index() {
           organization="Pathogen Genomics"
         />
       <TextSectionFive/>
-      <div className="w-full flex justify-center items-center">
-        
-      <div className="w-[80%] py-12 flex flex-col items-start justify-center">
-      <SubHeading className="pb-6">References</SubHeading>
+
+
+      <div className="w-[100%] flex items-start justify-center lg:pt-6">
+      <SubHeading className="lg:pb-2 lg:w-[80%] w-[90%]">References</SubHeading>
+      </div>
+      <div className="w-full flex justify-center items-center lg:pb-6">
+      <div className="w-[80%] lg:py-4 py-6 flex flex-col items-start justify-center">
+     
       <ReferenceList items={references} className="w-full"></ReferenceList>
       </div>
       </div>
