@@ -24,8 +24,8 @@ export default function CholeraOutbreak() {
               650, and resulting in the disappearance of another 500<sup>6</sup>
               . The protracted Cholera outbreak lasted over 2 years, with over
               59,000 cases reported and over 1,700 deaths<sup>7</sup>. Overall readiness
-              capacity for cholera is limited (48%)<sup>8</sup> across the AFRO region,
-              including in logistics and procurement (48%). Such an increase in
+              capacity for cholera is limited (48%) across the AFRO region,
+              including in logistics and procurement (48%).<sup>8</sup> Such an increase in
               one country can rapidly spread through the region, as the cyclones
               and flooding which occurred in Mozambique and Malawi in early 2023
               have been driving factors in the emergence of the disease around

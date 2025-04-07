@@ -6,7 +6,7 @@ const TextSectionThree = () => {
   return (
 <>
 <div className="bg-gradient-to-b from-[#1E2859] to-[#1D5539] w-full h-auto flex flex-col items-center justify-center py-12">
-    <div className="lg:w-[80%] w-[90%] h-auto bg-transparent flex lg:flex-row flex-col gap-6 items-start justify-center">
+    <div className="lg:max-w-7xl mx-auto w-[90%] h-auto bg-transparent flex lg:flex-row flex-col gap-6 items-start justify-center">
         <div className="lg:w-[35%] w-full h-auto">
             <AnimatedHeading linecolor="white" className="text-white">
               INCREASED AFRICAN SURVEILLANCE EFFORTS DEMONSTRATE FERTILE GROUND FOR INVESTING IN CONTINENTAL GENOMIC SEQUENCING CAPACITY-BUILDING
@@ -18,11 +18,11 @@ const TextSectionThree = () => {
         </div>
     </div>
 
-    <div className="lg:w-[80%] w-[90%] h-auto lg:h-[750px] bg-transparent flex items-center justify-center py-12">
+    <div className="lg:max-w-7xl mx-auto w-[90%] h-auto lg:h-[750px] bg-transparent flex items-center justify-center py-12">
         <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-researcher-with-african-ethnicity-using-microscope-doing-investigation-evaluates-sample-black-healthcare-scientist-biochemistry-laboratory-wearing-sterile-equipment.webp" className="w-full h-full object-cover object-center"/>
     </div>
 
-    <div className="w-[90%] h-auto bg-transparent flex items-center justify-center">
+    <div className="lg:max-w-7xl mx-auto h-auto bg-transparent flex items-center justify-center">
     <Paragraph className="text-white">Africa has also been at the forefront of innovation in integrated surveillance systems. A prime example is wastewater surveillance, which proved crucial for detecting new variants during COVID-19.<sup>14</sup> Building on experience gained during the pandemic, environmental surveillance remains a key tool for monitoring polio in several countries across the African Region today.</Paragraph>
     </div>   
 </div>

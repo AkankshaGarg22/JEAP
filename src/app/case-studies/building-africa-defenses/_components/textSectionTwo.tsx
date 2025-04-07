@@ -7,7 +7,7 @@ const TextSectionTwo = () => {
     
     <div className="w-full flex flex-col items-center gap-6 justify-center h-auto bg-white lg:py-12 py-4">
       {/* Most recently, the COVID-19 pandemic was met with insufficient genomic sequencing capacities in Africa,  */}
-      <div className="lg:w-[80%] w-full flex flex-col lg:flex-row h-auto bg-white items-center justify-center">
+      <div className="lg:lg:max-w-7xl mx-auto w-full flex flex-col lg:flex-row h-auto bg-white items-center justify-center">
         <div className="bg-transparent lg:w-[35%] w-[80%] lg:h-[450px] h-[200px] lg:translate-y-[0px] translate-y-[35px] ">
           <img
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/Rectangle 2882.webp"
@@ -22,12 +22,12 @@ const TextSectionTwo = () => {
         </div>
       </div>
 
-      <div className="lg:w-[80%] w-[90%] flex h-auto bg-white items-center justify-center">
+      <div className="lg:max-w-7xl mx-auto w-[90%] flex h-auto bg-white items-center justify-center">
        <Paragraph className="w-full p-0">
-          <b className="font-bold text-lg">
+          <strong>
             The impacts of limited genomic sequencing capacity extended beyond
             the continent. <br></br>
-          </b>
+          </strong>
           By November 2020, only 2% of the SARS-CoV-2 sequences submitted to the
           Global Initiative on Sharing All Influenza Data (GISAID), one of the
           world’s largest repositories of COVID-19 sequences, were from the WHO
@@ -38,7 +38,7 @@ const TextSectionTwo = () => {
         </Paragraph>
       </div>
 
-      <div className="lg:w-[80%] w-full flex flex-col-reverse lg:flex-row h-auto bg-white items-center justify-center">
+      <div className="lg:max-w-7xl mx-auto w-full flex flex-col-reverse lg:flex-row h-auto bg-white items-center justify-center">
         <div className="bg-gradient-to-t from-[#1E2859] to-[#1D5539] w-[90%] lg:w-[65%] px-12 py-12">
           <Paragraph className="text-white">Today, surveillance systems and technologies across the continent generally continue to fall behind. Only 12 countries 26% <sup>10</sup> meet the desired target of at least 90<sup>11</sup> health facilities with Integrated Disease Surveillance and Response (IDSR) implementation coverage. African countries face general challenges with laboratory diagnostic capacity and skills to manage large and complex datasets, resulting in inadequate detection and risk management.<sup>12</sup> These gaps continue to lead to delays in detecting health emergencies and containing them.</Paragraph>
         </div>

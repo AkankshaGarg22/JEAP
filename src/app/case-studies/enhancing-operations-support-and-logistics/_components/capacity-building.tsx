@@ -67,7 +67,7 @@ export default function CapacityBuilding() {
           </div>
         </div>
 
-        <div className="md:w-[73%] w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 md:py-10 py-8">
+        <div className="md:w-[73%] w-[80%] m-auto grid grid-cols-1 lg:grid-cols-10 md:py-4 py-8">
           <Paragraph className="col-span-10">
             The JEAP has prioritized investing in in-person training to build
             OSL workforce competencies such as forecasting, inventory

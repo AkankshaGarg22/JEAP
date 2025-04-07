@@ -24,11 +24,11 @@ export default function Landing() {
       </div>
 
       {/* Main Content */}
-      <div className=" md:py-10  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
-          <div className="lg:col-span-12 text-lg lg:text-[32px] font-semibold order-1 lg:mb-8">
-            African emergency responders are on the frontlines of the global climate crisis. WHO and Africa CDC are making sure they have what they need.{" "}
-          </div>
+      <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8">
+          <SubHeading className="lg:col-span-12 lg:mb-8">
+          African emergency responders are on the frontlines of the global climate crisis. WHO and Africa CDC are making sure they have what they need.{" "}
+          </SubHeading >
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-2">
             <AnimatedHeading linecolor="white">ADDRESSING THE HEALTH IMPACTS OF FLOODING IN THE REPUBLIC OF CONGO</AnimatedHeading>
@@ -38,9 +38,9 @@ export default function Landing() {
           <div className="lg:col-span-8 order-3">
             <Paragraph>
               The Africa region records about 2-3 health emergencies every single week of which more than 50% are related to climate change. Floods are fueling outbreaks of cholera and other
-              water-borne diseases, droughts are causing food insecurity associated with poor health and rising temperatures are creating conditions for disease-carrying mosquitos to thrive.1 Between
+              water-borne diseases, droughts are causing food insecurity associated with poor health and rising temperatures are creating conditions for disease-carrying mosquitos to thrive<sup>1</sup>. Between
               2030 and 2050, it is estimated that climate change will take the lives of an additional 250,000 people per year – of which the majority will be in low-income countries, including Africa.
-              Despite contributing only 4% to the world’s carbon emissions, 7 out of the 10 countries most vulnerable to the impacts of climate change globally are located in Africa.
+              Despite contributing only 4% to the world’s carbon emissions, 7 out of the 10 countries most vulnerable to the impacts of climate change globally are located in Africa.<sup>2</sup>
             </Paragraph>
           </div>
 
@@ -50,7 +50,7 @@ export default function Landing() {
               <div className="container mx-auto text-center">
                 <SubHeading>
                   <span className="font-bold text-3xl">In January 2024,</span> the Republic of Congo felt the impact of the growing worldwide climate emergency. The country experienced unprecedented
-                  rainfall that directly impacted over <span className="font-bold text-3xl">320,000 individuals </span>. The disaster disrupted lives and livelihoods, damaged vital infrastructure and
+                  rainfall that directly impacted over <span className="font-bold text-3xl">320,000 individuals</span>. The disaster disrupted lives and livelihoods, damaged vital infrastructure and
                   increased the risk of water-borne diseases.
                 </SubHeading>
               </div>
