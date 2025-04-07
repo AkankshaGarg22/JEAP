@@ -3,6 +3,7 @@ import { useState } from "react";
 import SubHeading from "../../_components/sub-heading";
 import Paragraph from "../../_components/paragraph";
 import AnimatedHeading from "../../_components/AnimatedHeading";
+import Image from "next/image";
 const slides = [
   {
     icon: "/assets/blog/case-studies/Collaboration for Resilience/Webp/1.svg",
@@ -81,74 +82,37 @@ export default function Response() {
 
       {/* Desktop Carousel View */}
       <div className="hidden lg:block">
-        <div className="relative overflow-hidden max-w-7xl mx-auto px-4 py-8">
+        <div className="relative overflow-hidden max-w-7xl mx-auto px-4 pt-9 pb-12">
           <div className="flex h-96 items-end">
             {/* Set a consistent height for the container */}
             {/* Left card with text */}
             <div className="w-1/2 bg-gradient-to-b from-[#1A5632] to-[#00205C] rounded-lg p-8 text-white flex flex-col items-start justify-center h-full">
               <div className="bg-white rounded-full p-4 ms-4 mb-6">
-                <img
-                  src={slides[currentSlide].icon}
-                  alt=""
-                  className="w-10 h-10"
-                />
+                <img src={slides[currentSlide].icon} alt="" className="w-10 h-10" />
               </div>
-              <Paragraph className="ms-4 font-bold">
-                {slides[currentSlide].text}
-              </Paragraph>
+              <Paragraph className="ms-4 font-bold">{slides[currentSlide].text}</Paragraph>
             </div>
             {/* Right card with image (if available) */}
-            <div className="w-1/2 ml-4 flex flex-col items-center">
+            <div className="w-1/2 ml-4 flex flex-col items-center relative">
               {/* Set full height to match left card */}
               {slides[currentSlide].img && (
-                <div className="bg-red-500 rounded-lg h-[21rem] w-full mb-2 overflow-hidden">
-                  <img
-                    src={slides[currentSlide].img}
-                    alt="Meeting"
-                    className="w-full h-full object-cover object-center"
-                  />
+                <div className=" rounded-lg h-[24rem] w-full overflow-hidden">
+                  {/* <img src={slides[currentSlide].img} alt="Meeting" className="w-full h-full object-cover object-center" /> */}
+                  <Image src={slides[currentSlide].img} alt="Meeting" width={800} height={336} priority={currentSlide === 0} loading="eager" className="w-full h-full object-cover object-center" />
                 </div>
               )}
 
-              <div className="flex items-end justify-center space-x-2">
-                <button
-                  onClick={prevSlide}
-                  className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center"
-                >
+              <div className="flex items-end justify-center gap-4 absolute -bottom-[12.5%]">
+                <button onClick={prevSlide} className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center">
                   <span className="sr-only">Previous</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 19.5 8.25 12l7.5-7.5"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                   </svg>
                 </button>
-                <button
-                  onClick={nextSlide}
-                  className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center"
-                >
+                <button onClick={nextSlide} className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center">
                   <span className="sr-only">Next</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </button>
               </div>
@@ -163,16 +127,8 @@ export default function Response() {
           {/* Icon row  */}
           <div className="flex justify-around items-center relative mx-8 mb-4">
             {slides.map((slide, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-14 h-14 rounded-full flex items-center justify-center`}
-              >
-                <img
-                  src={slide.icon}
-                  alt="icon"
-                  className={`w-14 h-14 ${index > currentSlide ? 'opacity-50' : 'opacity-100'}`}
-                />
+              <button key={index} onClick={() => goToSlide(index)} className={`w-14 h-14 rounded-full flex items-center justify-center`}>
+                <img src={slide.icon} alt="icon" className={`w-14 h-14 ${index > currentSlide ? "opacity-50" : "opacity-100"}`} />
               </button>
             ))}
           </div>
