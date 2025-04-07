@@ -173,13 +173,13 @@ export default function Countries() {
   return (
     <div className="max-w-7xl mx-auto my-8">
       <div className="flex flex-col md:flex-row gap-8">
-        <div className="md:w-[20%] px-2 md:px-4">
+        <div className="md:w-[40%] px-2 md:px-4">
           <AnimatedHeading linecolor="black">
           MORE THAN A THIRD OF AVOHC-SURGE RESPONDERS ARE WOMEN, WITH LESOTHO AND NAMIBIA AMONG THE COUNTRIES LEADING THE WAY
           </AnimatedHeading>
         </div>
 
-        <div className="md:w-[80%] px-2">
+        <div className="md:w-[60%] px-2">
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-gray-200">
@@ -187,7 +187,7 @@ export default function Countries() {
                 <th className="text-right md:p-4 text-xs md:text-lg ">Women</th>
                 <th className="text-right md:p-4 text-xs md:text-lg ">Men</th>
                 <th className="text-right md:p-4 text-xs md:text-lg ">Total</th>
-                <th className="text-center md:p-4 text-xs md:text-lg ">Percentage of Women</th>
+                <th className="text-right md:p-4 text-xs md:text-lg ">Percentage of Women</th>
               </tr>
             </thead>
 
@@ -207,10 +207,11 @@ export default function Countries() {
                         <td className="p-4 text-xs md:text-lg text-right">{countryData.women}</td>
                         <td className="p-4 text-xs md:text-lg text-right">{countryData.men}</td>
                         <td className="p-4 text-xs md:text-lg text-right">{countryData.total}</td>
-                        <td className="p-4 text-xs md:text-lg text-right flex justify-between items-center">
+                        <td className="p-4 text-xs md:text-lg text-right">{countryData.percentage_of_women}</td>
+                        {/* <td className="p-4 text-xs md:text-lg text-right flex justify-between items-center">
                           <span className="mr-2 md:pl-[40%]">{countryData.percentage_of_women}</span>
                           <span className="text-xl font-light">−</span>
-                        </td>
+                        </td> */}
                       </>
                     ) : (
                       // Collapsed state - just show country and percentage
@@ -218,9 +219,10 @@ export default function Countries() {
                         <td className="p-4"></td>
                         <td className="p-4"></td>
                         <td className="p-4"></td>
-                        <td className="p-4 text-right flex justify-end items-center">
+                        <td className="p-4"></td>
+                        {/* <td className="p-4 text-right flex justify-end items-center">
                           <span className="text-xl font-light">+</span>
-                        </td>
+                        </td> */}
                       </>
                     )}
                   </tr>

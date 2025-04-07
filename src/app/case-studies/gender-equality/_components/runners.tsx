@@ -9,8 +9,8 @@ export default function Runners() {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
-          <div className="lg:w-3/5 z-10">
-            <AnimatedHeading linecolor="white" className="w-1/2 text-white">
+          <div className="w-full lg:w-3/5 z-10">
+            <AnimatedHeading linecolor="white" className="md:w-3/4 text-white">
               LESOTHO AND NAMIBIA ARE FRONTRUNNERS IN RECRUITING AND DEPLOYING WOMEN TO THEIR HEALTH EMERGENCY RESPONDER TEAMS
             </AnimatedHeading>
             
