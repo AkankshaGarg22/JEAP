@@ -32,8 +32,8 @@ export default function Landing() {
       </div>
 
       {/* Main Content */}
-      <div className=" md:py-10  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
+      <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-12 order-1 mb-6">
             <AnimatedHeading linecolor="white" width="20%" className="mb-4">

@@ -17,7 +17,7 @@ export default function Response() {
             In January 2023, as part of supporting Member States in emergency preparedness and response, WHO and Africa CDC had worked with the Republic of Congo Ministry of Health to identify and
             train a national multisectoral and multi-disciplinary team of 59 experts that could be activated and deployed in the event of any health emergency – including floods. This included
             epidemiologists, surveillance officers, data managers, clinicians, laboratory technicians, vaccinators, operations support and logistics specialists, biologists, hygienists, risk
-            communication and community engagement specialists, and security officers, among others. The effort was conducted under the umbrella of the joint WHO-Africa CDC AVoHC-SURGE3 Initiative.
+            communication and community engagement specialists, and security officers, among others. The effort was conducted under the umbrella of the joint WHO-Africa CDC AVoHC-SURGE<sup>3</sup> Initiative.
             Following the onboarding training, the AVoHC-SURGE Members was deployed to investigate a bacterial gastroenteritis outbreak in Dolisie, Congo, and suspected mpox cases in Likouala
             province.
           </Paragraph>
@@ -30,7 +30,7 @@ export default function Response() {
 
       <div className="bg-gradient-to-t from-[#1D5539] to-[#1E2859] mt-12">
         <TranslucentBox
-          text="Consecutively,** in January 2024 **, the AVoHC-SURGE team was called into action for the third time, with the technical support of WHO and partners.** Within 48 hours **, the team activated to lead a swift response, developing a multi-sectoral plan and conducting strategic activities to evaluate and mitigate the flood’s health impacts."
+          text="Consecutively,** in January 2024**, the AVoHC-SURGE team was called into action for the third time, with the technical support of WHO and partners.** Within 48 hours**, the team activated to lead a swift response, developing a multi-sectoral plan and conducting strategic activities to evaluate and mitigate the flood’s health impacts."
           backgroundColor="rgba(255, 255, 255, 0)"
           className="font-[15px] text-white font-ArialRegular"
         />

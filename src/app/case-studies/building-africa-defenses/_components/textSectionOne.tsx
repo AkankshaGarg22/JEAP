@@ -6,7 +6,7 @@ const TextSectionOne = () => {
   return (
     <>
     <div className="flex w-full h-auto flex-col bg-white items-center justify-center">
-        <div className="lg:w-[80%] w-[90%] h-auto flex lg:flex-row flex-col gap-4 items-center justify-center py-12">
+        <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex lg:flex-row flex-col gap-4 items-center justify-center py-12">
             <div className="lg:w-[30%] w-full ">
                 <AnimatedHeading linecolor="black" className="font-bold lg:w-[40%]">WHAT IS GENOMIC SEQUENCING?</AnimatedHeading>
             </div>
@@ -17,21 +17,21 @@ const TextSectionOne = () => {
             </div>
         </div>
 
-        <div className="lg:w-[80%] w-full h-auto pb-12 flex items-center justify-center relative">
+        <div className="lg:max-w-7xl mx-auto w-full h-auto flex items-center justify-center relative">
           <div className="lg:w-[100%] w-[90%] h-[200px] lg:h-[500px] flex items-center justify-center">
             <img alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/202105_Angola_COVAX_03.webp"
             className="object-cover object-center h-full w-[80%]"/>
          </div>
         </div>
 
-        <div className="lg:w-[80%] w-[90%] h-auto  flex items-center justify-center bg-gradient-to-b from-[#1E2859] to-[#1D5539] py-12">
-         <Paragraph className="text-white w-[80%]">Genomic surveillance is the process of tracking a virus using genomic sequence data collected from representative populations to detect new variants and monitor trends in circulating variants.6 As such, genomic sequencing improves scientists’ understanding of which variants are circulating, how quickly they are emerging, and which are most important to characterize and monitor. In addition, genomic sequencing results are also valuable for diagnosing patients and developing treatments to combat these diseases. During COVID-19, genomic sequencing helped country governments with the adequate capacities to track – and slow – the spread of disease.</Paragraph>
+        <div className="lg:max-w-7xl mx-auto w-[90%] h-auto  flex items-center justify-center bg-gradient-to-b from-[#1E2859] to-[#1D5539] py-12">
+         <Paragraph className="text-white w-[80%]">Genomic surveillance is the process of tracking a virus using genomic sequence data collected from representative populations to detect new variants and monitor trends in circulating variants.<sup>6</sup> As such, genomic sequencing improves scientists’ understanding of which variants are circulating, how quickly they are emerging, and which are most important to characterize and monitor. In addition, genomic sequencing results are also valuable for diagnosing patients and developing treatments to combat these diseases. During COVID-19, genomic sequencing helped country governments with the adequate capacities to track – and slow – the spread of disease.</Paragraph>
         </div>
         
     </div>
 {/* 2013-2016 Ebola Outbreak */}
       <div className="w-full h-auto flex justify-center items-center py-12">
-        <div className="lg:w-[80%] w-full h-auto flex flex-col lg:flex-row gap-4  items-center justify-center">
+        <div className="lg:max-w-7xl mx-auto w-full h-auto flex flex-col lg:flex-row gap-4  items-center justify-between">
          <div className="lg:w-[30%] w-[90%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">MISSED OPPORTUNITIES LESSONS LEARNED FROM EBOLA AND COVID-19 OUTBREAKS?</AnimatedHeading>
             </div>
