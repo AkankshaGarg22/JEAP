@@ -33,7 +33,7 @@ export default function LandingDefenses() {
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
             <p className="text-base md:text-lg">
-            Major infectious disease outbreaks around the globe in recent years have underscored the urgent need to strengthen laboratory and surveillance capabilities through genomic sequencing in order to track and mitigate the spread of disease.<sup>1</sup> With more disease outbreaks than any other region globally,<sup>2</sup> Africa reported 148 health emergencies in 2023, despite representing only 17% of the global population. Africa’s vulnerability to the spread of infectious disease epidemics is driven by various factors, including climatic and ecological conditions that harbor pathogens and their vectors as well as frequent movements of people, commodities, animals and animal products across national and international borders.<sub>3</sub>
+            Major infectious disease outbreaks around the globe in recent years have underscored the urgent need to strengthen laboratory and surveillance capabilities through genomic sequencing in order to track and mitigate the spread of disease.<sup>1</sup> With more disease outbreaks than any other region globally,<sup>2</sup> Africa reported 148 health emergencies in 2023, despite representing only 17% of the global population. Africa’s vulnerability to the spread of infectious disease epidemics is driven by various factors, including climatic and ecological conditions that harbor pathogens and their vectors as well as frequent movements of people, commodities, animals and animal products across national and international borders.<sup>3</sup>
             </p>
           </div>
 
@@ -45,12 +45,12 @@ export default function LandingDefenses() {
           </div>
 
         </div>
-        <div className="flex items-center justify-center w-[100%]">
+        <div className="flex items-center justify-center w-[100%] lg:py-[0] py-12">
           <TranslucentBox 
         text={"Many of these health threats are preventable or controllable with proven public health interventions, **such as disease surveillance, case management, vaccination, and health promotion.** ^^4^^ Yet many countries around the globe are insufficiently prepared to manage disease outbreaks, with Africa being particularly poorly equipped, scoring an **average of 50% across the 15 capacities** needed to detect, assess, notify, report and respond to public health risks, against a global **average of 64%**.^^5^^ In this context, a crisis anywhere can quickly spread to become a crisis everywhere. By building up genomic sequencing capacities on the African continent, this game-changing technology has the potential to transform health security in Africa and around the globe."}
         backgroundColor="rgba(255, 255, 255, 0.3)"
         textsize="text-[25px]"
-        className="w-[70%]"
+        className="lg:w-[70%] w-[90%]"
         />
         </div>
       </div>

@@ -10,6 +10,7 @@ import TextSectionFive from "./_components/textSectionFive";
 import ReferenceList from "../_components/References";
 import MainHeading from "../_components/main-heading";
 import OverflowSection from "./_components/OverflowSection";
+import SubHeading from "../_components/sub-heading";
 
 const references = [
   " https://reliefweb.int/report/mozambique/weekly-bulletin-outbreaks-and-other-emergencies-week-42-16-october-22-october-2023-data-reported-1700-22-october-2023",
@@ -63,10 +64,14 @@ export default function Index() {
           organization="Pathogen Genomics"
         />
       <TextSectionFive/>
-      <div className="w-full flex justify-center items-center">
-        
-      <div className="w-[80%] py-8">
-        <MainHeading>References</MainHeading>
+
+
+      <div className="w-[100%] flex items-start justify-center lg:pt-6">
+      <SubHeading className="lg:pb-2 lg:w-[80%] w-[90%]">References</SubHeading>
+      </div>
+      <div className="w-full flex justify-center items-center lg:pb-6">
+      <div className="w-[80%] lg:py-4 py-6 flex flex-col items-start justify-center">
+     
       <ReferenceList items={references} className="w-full"></ReferenceList>
       </div>
       </div>
