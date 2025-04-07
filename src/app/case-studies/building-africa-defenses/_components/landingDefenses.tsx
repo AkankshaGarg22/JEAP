@@ -8,7 +8,7 @@ export default function LandingDefenses() {
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[62vh] md:h-[50vh] lg:h-[80vh] relative">
-          <Image src="/assets/blog/case-studies/Building_Africa_Defenses/Webp/IMG_2547.webp" alt="JEAP Building Africa's Defenses" layout="fill" objectFit="cover" priority />
+          <Image src="/assets/blog/case-studies/Building_Africa_Defenses/webp/IMG_2547.webp" alt="JEAP Building Africa's Defenses" layout="fill" objectFit="cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
