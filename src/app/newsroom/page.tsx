@@ -8,22 +8,21 @@ export default function Index() {
   const [articles, setArticles] = useState<Articles[] | undefined>([]);
 
   useEffect(() => {
-    try {
-      fetch("/api/rss")
-        .then((res) => {
-          if (typeof res !== "undefined") res.json();
-        })
-        .then((data: any) => {
-          if (data !== null && data?.length) {
-            const restArticles = data?.slice(4);
-            setArticles(restArticles);
-          }
-        })
-        .catch((err) => console.log(err));
-    } catch (error) {
-      console.log(error);
-    }
+    fetchRSS();
   }, []);
+
+  const fetchRSS = async () => {
+    try {
+      const response = await fetch("/api/rss");
+      const data = await response.json();
+      let uniqueArticles = data.filter((article: Articles, index: number, self: Articles[]) =>
+        index === self.findIndex((a) => a.title === article.title)
+      );
+      setArticles(uniqueArticles);
+    } catch (error) {
+      console.error('Failed to fetch RSS feed:', error);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1B5632] via-[rgb(8_48_80)] to-[rgb(1_33_91)] pt-16">
