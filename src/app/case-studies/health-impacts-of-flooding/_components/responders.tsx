@@ -10,7 +10,7 @@ export default function Responders() {
         <div className="flex flex-col-reverse lg:flex-row lg:items-stretch lg:justify-between lg:my-4 ">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="lg:w-3/5 pt-8 pb-4 lg:pt-16 px-6 md:px-12 lg:px-16">
-            <AnimatedHeading linecolor="white" className="w-3/5 text-white">
+            <AnimatedHeading linecolor="white" className="text-white">
               WHAT WE CAN LEARN: INVEST IN PREPAREDNESS, INVEST IN PEOPLE.
             </AnimatedHeading>
 

@@ -37,7 +37,7 @@ export default function Landing() {
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
             <AnimatedHeading linecolor="white">
-                THE JEAP PARTNERSHIP'S 'COMMON AFRICA APPROACH' TO THE PANDEMIC
+                THE JEAP PARTNERSHIP'S COMMON AFRICA APPROACH TO THE PANDEMIC
                 FUND
             </AnimatedHeading>
           </div>
@@ -45,7 +45,7 @@ export default function Landing() {
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
             <Paragraph>
-              Officially launched in 2022, the Pandemic Fund is a majornew
+              Officially launched in 2022, the Pandemic Fund is a major new
               source of financing that can benefit African countries seeking to
               enhance pandemic prevention, preparedness, and response
               capabilities. As of the beginning of 2024, the Fund has raised $2

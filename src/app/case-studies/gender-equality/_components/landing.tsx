@@ -62,7 +62,7 @@ export default function Landing() {
               Although health services are predominantly delivered by women, the
               sector is led by men. As of 2023, women held only 25% of
               leadership roles in health despite occupying around 70% of health
-              worker jobs.<sup>3</sup> The number drops dramatically to 5%4 for women from
+              worker jobs.<sup>3</sup> The number drops dramatically to 5% for women from
               low -middle income countries in leadership.
             </Paragraph>
           </div>
@@ -104,7 +104,7 @@ export default function Landing() {
               ground during emergencies are better taken into account, resulting
               in better response outcomes for those in need.
             </Paragraph>
-            <Paragraph className="mt-1">
+            <Paragraph className="mt-8">
               Studies show that incorporating women's professional expertise and
               perspectives strengthens health systems by promoting a balanced
               workforce, safe and decent working conditions for all health

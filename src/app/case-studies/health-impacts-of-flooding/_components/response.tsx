@@ -15,9 +15,9 @@ export default function Response() {
         <div className="md:w-[70%] flex flex-col justify-center items-center px-4 py-2 md:p-4">
           <Paragraph>
             In January 2023, as part of supporting Member States in emergency preparedness and response, WHO and Africa CDC had worked with the Republic of Congo Ministry of Health to identify and
-            train a national multisectoral and multi-disciplinary team of 59 experts that could be activated and deployed in the event of any health emergency – including floods. This included
+            train a national multisectoral and multi-disciplinary team of <strong>59 experts</strong> that could be activated and deployed in the event of any health emergency – including floods. This included
             epidemiologists, surveillance officers, data managers, clinicians, laboratory technicians, vaccinators, operations support and logistics specialists, biologists, hygienists, risk
-            communication and community engagement specialists, and security officers, among others. The effort was conducted under the umbrella of the joint WHO-Africa CDC AVoHC-SURGE<sup>3</sup> Initiative.
+            communication and community engagement specialists, and security officers, among others. The effort was conducted under the umbrella of the joint WHO-Africa CDC AVoHC-SURGE Initiative.
             Following the onboarding training, the AVoHC-SURGE Members was deployed to investigate a bacterial gastroenteritis outbreak in Dolisie, Congo, and suspected mpox cases in Likouala
             province.
           </Paragraph>
