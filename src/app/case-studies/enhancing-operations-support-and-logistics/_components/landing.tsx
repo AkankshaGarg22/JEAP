@@ -20,19 +20,23 @@ export default function Landing() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
-          <div className="absolute bottom-10 w-full">
+          {/* <div className="absolute bottom-10 w-full">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
               <MainHeading className="mb-4 text-white">
                 ENHANCING OPERATIONS SUPPORT AND LOGISTICS FOR IMPROVED
                 EMERGENCY PREPAREDNESS AND RESPONSE IN AFRICA
               </MainHeading>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Main Content */}
       <div className="md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
+        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 py-8">
+          ENHANCING OPERATIONS SUPPORT AND LOGISTICS FOR IMPROVED EMERGENCY
+          PREPAREDNESS AND RESPONSE IN AFRICA
+        </MainHeading>
         <div className="max-w-7xl mx-auto lg:grid md:grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
