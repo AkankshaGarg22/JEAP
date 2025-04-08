@@ -25,7 +25,7 @@ export default function Landing() {
 
       {/* Main Content */}
       <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <MainHeading className="text-white text-left md:text-center pl-6 md:pl-0">COLLABORATION FOR RESILIENCE</MainHeading>
+        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 py-8">COLLABORATION FOR RESILIENCE</MainHeading>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
