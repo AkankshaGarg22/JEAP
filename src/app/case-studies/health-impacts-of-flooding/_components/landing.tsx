@@ -26,12 +26,12 @@ export default function Landing() {
       {/* Main Content */}
       <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8">
-          <SubHeading className="lg:col-span-12 lg:mb-8">
+          <SubHeading className="lg:col-span-12 lg:mb-8 italic">
           African emergency responders are on the frontlines of the global climate crisis. WHO and Africa CDC are making sure they have what they need.{" "}
           </SubHeading >
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-2">
-            <AnimatedHeading linecolor="white">ADDRESSING THE HEALTH IMPACTS OF FLOODING IN THE REPUBLIC OF CONGO</AnimatedHeading>
+            <AnimatedHeading linecolor="white">THE SITUATION: CONGO HIT HARD BY FLOODING AS CLIMATE-RELATED DISASTERS RISE ACROSS THE CONTINENT.</AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}

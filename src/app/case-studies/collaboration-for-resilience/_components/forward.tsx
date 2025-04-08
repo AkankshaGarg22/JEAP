@@ -6,16 +6,16 @@ export default function Forward() {
     <section className="max-w-7xl mx-auto bg-white my-20 sm:px-10">
       <div className="grid grid-cols-1 md:grid-cols-5 items-center md:gap-6">
         {/* Image Section */}
-        <div className="relative w-full md:w-[20rem] col-span-1 h-96 md:h-96">
+        <div className="relative w-full md:w-[22rem] col-span-1 h-96 md:h-[28rem]">
           <img
-            className="w-full md:w-96 h-full object-cover md:absolute top-0 -right-0"
+            className="w-full md:w-[22rem] h-full object-cover md:absolute top-0 -right-0"
             src="/assets/blog/case-studies/Collaboration for Resilience/Webp/3.webp"
             alt="A Unified Africa for Health Security"
           />
         </div>
 
         {/* Text Section */}
-        <div className="bg-gradient-to-b px-2 col-span-4 from-[#00205C] to-[#1A5632] px-4 md:px-0 p-6 md:pl-40 md:py-20 text-white">
+        <div className="bg-gradient-to-b col-span-4 from-[#00205C] to-[#1A5632] px-4 md:px-0 p-6 md:pl-40 md:py-20 text-white">
           <AnimatedHeading linecolor="white" className="w-[40%]">
             WAY FORWARD
           </AnimatedHeading>

@@ -44,26 +44,36 @@ const TextSectionFive = () => {
         </div>
 
 {/* KlebGen - SANBI */}
-        <div className="w-full h-auto flex flex-col items-center justify-center">
-            <div className="w-full h-auto flex flex-col lg:flex-row items-center justify-center gap-0 p-0 m-0">
-                <div className="lg:w-[50%] w-[90%] bg-transparent">
-                    <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.27.webp" className="w-[100%] h-full object-cover object-center"></img>
-                </div>
-                <div className="lg:w-[50%] w-full p-6 lg:p-[8.25%] lg:bg-[#1E2859]">
-                    <Paragraph className="lg:text-white">Other examples include KlebGEN, a pilot project that aims to strengthen AMR genomic surveillance in nine countries and timely data sharing for evidence-based public health decision-making. Lastly, the DETECT project aims to develop guidance, diagnostic algorithms, training and capacity building to enable outbreak detection, and reporting to inform public health response across 12 countries in Africa.</Paragraph>
-                </div>
-            </div> 
 
-            <div className="w-full h-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-0 p-0 m-0">
-               <div className="lg:w-[50%] w-full p-6 lg:p-[6.15%] lg:bg-[#1E2859]">
-                    <Paragraph className="lg:text-white">WHO AFRO, in collaboration with the South African National Bioinformatics Institute (SANBI) set up the Regional Centre of Excellence for Genomic Surveillance and Bioinformatics in Cape Town, South Africa. The Southern African Development Community (SADC) is taking the lead on implementing this project with technical and financial support. The SANBI is supporting 14 southern African countries, with the goal of enhancing their monthly sequencing capacity by 500%. In the future, these partners aim to expand this project to be able to conduct data sequencing for more countries.</Paragraph>
-                </div>
-                <div className="lg:w-[50%] w-[90%] bg-transparent">
-                    <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/MDP06139_210841.webp" className="w-[100%] h-full object-cover object-center"></img>
-                </div>
 
-            </div>
-        </div>
+<div className="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-fr items-stretch">
+  {/* First Block */}
+  <div className="w-full h-full bg-transparent flex items-stretch justify-center">
+    <img
+      src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.27.webp"
+      className="w-full h-full object-cover object-center"
+    />
+  </div>
+  <div className="w-full h-full p-6 lg:p-[8.25%] lg:bg-[#1E2859] flex items-center">
+    <Paragraph className="lg:text-white">
+      Other examples include KlebGEN, a pilot project that aims to strengthen AMR genomic surveillance in nine countries and timely data sharing for evidence-based public health decision-making. Lastly, the DETECT project aims to develop guidance, diagnostic algorithms, training and capacity building to enable outbreak detection, and reporting to inform public health response across 12 countries in Africa.
+    </Paragraph>
+  </div>
+
+  {/* Second Block (Reverse Order on Large Screens) */}
+  <div className="w-full h-full p-6 lg:p-[6.15%] lg:bg-[#1E2859] flex items-center order-2 lg:order-none">
+    <Paragraph className="lg:text-white">
+      WHO AFRO, in collaboration with the South African National Bioinformatics Institute (SANBI) set up the Regional Centre of Excellence for Genomic Surveillance and Bioinformatics in Cape Town, South Africa. The Southern African Development Community (SADC) is taking the lead on implementing this project with technical and financial support. The SANBI is supporting 14 southern African countries, with the goal of enhancing their monthly sequencing capacity by 500%. In the future, these partners aim to expand this project to be able to conduct data sequencing for more countries.
+    </Paragraph>
+  </div>
+  <div className="w-full h-full bg-transparent flex items-stretch justify-center order-1 lg:order-none">
+    <img
+      src="/assets/blog/case-studies/Building_Africa_Defenses/webp/MDP06139_210841.webp"
+      className="w-full h-full object-cover object-center"
+    />
+  </div>
+</div>
+
     </>
   )
 }

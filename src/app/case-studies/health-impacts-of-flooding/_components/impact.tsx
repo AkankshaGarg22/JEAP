@@ -8,7 +8,7 @@ export default function Impact() {
         {/* Image Section */}
         <div className="relative w-full md:w-[30rem] col-span-1 h-96 md:h-[80%]">
           <img
-            className="w-full md:w-96 h-full object-cover object-center md:absolute top-0 md:right-[10%]"
+            className="w-full md:w-120 h-full object-cover object-center md:absolute top-0"
             src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/3.webp"
             alt="A Unified Africa for Health Security"
           />
@@ -16,7 +16,7 @@ export default function Impact() {
 
         {/* Text Section */}
         <div className="bg-gradient-to-b col-span-4 from-[#00205C] to-[#1A5632] p-4 py-8 md:px-0 md:pl-40 md:py-20 text-white">
-          <AnimatedHeading linecolor="white" width="20%" className="w-[75%]">
+          <AnimatedHeading linecolor="white" className="w-[90%]">
             THE IMPACT: MORE THAN 2,000 PATIENTS IN FLOOD-AFFECTED COMMUNITIES RECEIVED ESSENTIAL HEALTH CARE AND SERVICES, CONGO SAW ZERO FLOOD-RELATED DISEASE OUTBREAKS.
           </AnimatedHeading>
           <Paragraph className="md:pr-2 pt-8 md:w-[90%]">

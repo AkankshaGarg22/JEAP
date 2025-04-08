@@ -10,6 +10,17 @@ interface AnimatedHeadingProps {
   width? : string;
 }
 
+function toTitleCase(str: string) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .join(' ');
+}
+
+function capitalizeFirstLetter(val: String) {
+  return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, fontSize, linecolor, width }) => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +40,10 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
     return () => observer.disconnect();
   }, []);
 
+  if (typeof children !== 'string') return children;
+  let transformed = toTitleCase(children); 
+  transformed = capitalizeFirstLetter(transformed)
+
   return (
     <div>
       <h2
@@ -36,7 +51,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
         className={`relative ${!fontSize ? "text-xl md:text-3xl md:leading-10" : ""} mb-4 font-ArialRegular font-bold ${className}`}
         style={fontSize ? { fontSize } : undefined}
       >
-        {children}
+        {transformed}
         <span
           className={`absolute left-0 bottom-[-10px] h-1 bg-${linecolor} transition-all duration-700 ease-out rounded-full ${
             isVisible ?  width ? `md:w-[${width}] w-[20%]`:  `md:w-[40%] w-[20%]` : "md:w-[10%] w-[5%]"

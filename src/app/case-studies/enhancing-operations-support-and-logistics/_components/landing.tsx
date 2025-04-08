@@ -2,6 +2,7 @@ import Image from "next/image";
 import MainHeading from "../../_components/main-heading";
 import AnimatedHeading from "../../_components/AnimatedHeading";
 import Paragraph from "../../_components/paragraph";
+import TranslucentBox from "../../_components/textWhiteBox";
 
 export default function Landing() {
   return (
@@ -31,7 +32,7 @@ export default function Landing() {
       </div>
 
       {/* Main Content */}
-      <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
+      <div className="md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
         <div className="max-w-7xl mx-auto lg:grid md:grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-10">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
@@ -76,34 +77,28 @@ export default function Landing() {
                 limited domestic budgets, and the harsh reality of supplier
                 nations prioritizing their own needs. For instance, it took 21
                 days for the first shipment of protective equipment such as
-                masks to reach African countries<sup>1</sup>. Before the pandemic, African
-                countries sourcing emergency medical supplies with support from
-                the World Health Organization (WHO) were primarily reliant on
-                three warehouses located in China, the UAE, and Ghana. Shipping
-                supplies from Ghana to other African countries took
-                approximately 25 days, while deliveries from Dubai and China
-                were even slower.<sup>2</sup> These long lead times, which were a
-                significant problem before the pandemic, became even more
-                critical during it, contributing to the loss of millions of
-                lives.
+                masks to reach African countries<sup>1</sup>. Before the
+                pandemic, African countries sourcing emergency medical supplies
+                with support from the World Health Organization (WHO) were
+                primarily reliant on three warehouses located in China, the UAE,
+                and Ghana. Shipping supplies from Ghana to other African
+                countries took approximately 25 days, while deliveries from
+                Dubai and China were even slower.<sup>2</sup> These long lead
+                times, which were a significant problem before the pandemic,
+                became even more critical during it, contributing to the loss of
+                millions of lives.
               </Paragraph>
             </div>
           </div>
 
-          <div className="col-span-12 order-4 mt-6 md:text-2xl bg-[rgb(49_93_112)] p-8">
-            <p className="md:leading-10">
-              Today, Africa is witnessing continent-wide outbreaks of other
-              diseases such as yellow fever, ongoing challenges with cholera and
-              Mpox, persistent polio transmission despite global eradication
-              efforts, and concerning spikes in dengue and measles. The
-              frequency of these disease outbreaks is further worsened by the
-              impact of climate change and conflict, oftentimes generating
-              full-blown humanitarian crises. This reality illustrates the
-              urgent need for Operations Support and Logistics (OSL) support in
-              effective public health emergency responses to ensure the timely
-              delivery of vital resources, personnel, and equipment to those
-              most affected.
-            </p>
+          <div className="col-span-12 order-4 md:text-2xl p-8">
+            <div className="bg-gradient-to-t from-[#1D5539] to-[#1E2859]">
+              <TranslucentBox
+                text="Today, Africa is witnessing continent-wide outbreaks of other diseases such as yellow fever, ongoing challenges with cholera and Mpox, persistent polio transmission despite global eradication efforts, and concerning spikes in dengue and measles. The frequency of these disease outbreaks is further worsened by the impact of climate change and conflict, oftentimes generating full-blown humanitarian crises. This reality illustrates the urgent need for Operations Support and Logistics (OSL) support in effective public health emergency responses to ensure the timely delivery of vital resources, personnel, and equipment to those most affected."
+                backgroundColor="rgba(255, 255, 255, 0)"
+                className="font-[15px] text-white font-ArialRegular"
+              />
+            </div>
           </div>
         </div>
       </div>
