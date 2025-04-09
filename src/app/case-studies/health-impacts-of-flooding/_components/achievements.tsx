@@ -82,7 +82,7 @@ export default function Achievements() {
         {items.map((item) => (
           <div
             key={item.id}
-            className={`relative transition-[flex] h-[28rem] duration-500 overflow-hidden px-1 border-r-2 last:border-r-0 border-[#1E2859] ${expandedItems[item.id] ? "flex-[2]" : "flex-1"}`}
+            className={`relative transition-[flex] h-[24rem] duration-500 overflow-hidden px-1 border-r-2 last:border-r-0 border-[#1E2859] ${expandedItems[item.id] ? "flex-[2]" : "flex-1"}`}
             onMouseEnter={() => setExpandedItems((prev) => ({ ...prev, [item.id]: true }))}
             onMouseLeave={() => {
               // Immediately hide the text

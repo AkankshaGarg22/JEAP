@@ -9,7 +9,7 @@ export default function OslApproach() {
       <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
         <div className="relative h-full w-full mx-auto flex justify-center">
           <Image
-            src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/osl-approach-partnership.webp"
+            src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/osl-approach-partnership.jpg"
             alt="Logistic support"
             className="md:mt-[-10%] w-full md:w-[80%] md:h-[650px] h-[300px]"
             width={800}

@@ -10,8 +10,10 @@ export default function Landing() {
     <section className="min-h-screen bg-white">
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
-        <div className="w-full h-[62vh] md:h-[50vh] lg:h-[80vh] relative">
-          <Image src="/assets/blog/case-studies/Collaboration for Resilience/Webp/1.webp" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
+        <div className="w-full h-[30vh] md:h-[50vh] lg:h-[80vh] relative">
+          <Image className="hidden md:block" src="/assets/blog/case-studies/Collaboration for Resilience/Webp/1.webp" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
+          <Image className="block md:hidden" src="/assets/blog/case-studies/banner/1.jpg" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
+
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
@@ -24,9 +26,9 @@ export default function Landing() {
       </div>
 
       {/* Main Content */}
-      <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 py-8">COLLABORATION FOR RESILIENCE</MainHeading>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8">
+      <div className=" md:pb-10 md:pt-6 bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
+        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 pt-8 md:py-8">COLLABORATION FOR RESILIENCE</MainHeading>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-4 md:py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
             <AnimatedHeading linecolor="white">THE JEAP PARTNERSHIP'S COMMON AFRICA APPROACH TO THE PANDEMIC FUND</AnimatedHeading>

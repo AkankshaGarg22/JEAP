@@ -71,8 +71,8 @@ export default function Response() {
       {/* Mobile List View */}
       <div className="pl-4 flex flex-col space-y-4 lg:hidden">
         {slides.map((slide, index) => (
-          <div key={index} className="flex items-start py-2 gap-4">
-            <div className="w-20 h-20 flex-shrink-0 rounded-full flex items-center justify-center">
+          <div key={index} className="flex items-center justify-center py-2 gap-4">
+            <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center">
               <img src={slide.icon} alt="" className="w-20 h-20" />
             </div>
             <p className="text-sm">{slide.text}</p>
