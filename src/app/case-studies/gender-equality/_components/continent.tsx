@@ -7,14 +7,14 @@ export default function Continent() {
       <div className="flex flex-col md:flex-row items-stretch justify-center md:justify-between gap-4 md:gap-0 mb-4">
         <div className="md:w-[50%] h-full flex flex-col justify-center items-start p-4 gap-12 ">
           <AnimatedHeading linecolor="black" className="w-1/2">
-            17 COUNTRIES HAVE ONBOARDED AVOHC-SURGE MEMBERS
+          17 Countries Have Onboarded AVOHC-SURGE Members
           </AnimatedHeading>
           <img className="w-full h-full object-contain" src="/assets/blog/case-studies/Gender_equality/Webp_format/map.svg" alt="JEAP Supported Countries Map" />
         </div>
 
         <div className="md:w-[50%] h-full flex flex-col items-start p-4 gap-12">
           <AnimatedHeading linecolor="black" width="20%" className="">
-            LOOKING FORWARD: BROADENING THE IMPACT OF AVOHC-SURGE ACROSS THE CONTINENT
+          Looking Forward: Broadening the Impact of AVOHC-SURGE Across the Continent
           </AnimatedHeading>
 
           <Paragraph>

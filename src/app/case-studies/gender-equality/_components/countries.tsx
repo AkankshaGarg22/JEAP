@@ -175,7 +175,7 @@ export default function Countries() {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-[40%] px-2 md:px-4">
           <AnimatedHeading linecolor="black">
-          MORE THAN A THIRD OF AVOHC-SURGE RESPONDERS ARE WOMEN, WITH LESOTHO AND NAMIBIA AMONG THE COUNTRIES LEADING THE WAY
+          More Than a Third of AVOHC-SURGE Responders Are Women, With Lesotho and Namibia Among the Countries Leading the Way
           </AnimatedHeading>
         </div>
 

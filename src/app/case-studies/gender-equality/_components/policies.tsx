@@ -62,7 +62,7 @@ export default function Policies() {
       <div className="max-w-7xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
         <div>
           <AnimatedHeading linecolor="white" width="20%">
-            AVOHC-SURGE GENDER-SENSITIVE WORKFORCE POLICIES AND PROCESSES HAVE FOSTERED EQUALITY AND EXCELLENCE AT ALL LEVELS OF THE WORKFORCE
+            AVOHC-SURGE Gender-Sensitive Workforce Policies and Processes Have Fostered Equality and Excellence at All Levels of the Workforce
           </AnimatedHeading>
         </div>
         <Paragraph>

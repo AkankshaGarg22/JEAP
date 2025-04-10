@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Challenges() {
   const imageUrl = "/assets/blog/case-studies/Gender_equality/Webp_format/5.webp";
-  const title = "DESPITE STRONG PROGRESS IN AVOHC SURGE POLICIES AND IMPLEMENTATION, CONTINUES EFFORTS ARE NEEDED AS ACTIVE RESPONDERS CONTINUE TO FACE CHALLENGES";
+  const title = "Despite Strong Progress in AVOHC SURGE Policies and Implementation, Continues Efforts Are Needed as Active Responders Continue to Face Challenges";
   const para1 =
     "In rural environments in particular, female responders struggle with the fact that there is often limited access to clean water and sanitation facilities. They frequently lack proper lighting and security locks, creating security concerns for women. Studies show that sanitation facilities are locations with heightened risk of harassment and violence against women.";
  const para2 = "In addition, cultural differences can hinder communication between deployed responders and local communities, especially for women responders. Gender norms in certain cultures might influence how comfortable people are communicating with, receiving assistance from, or learning from women in positions of authority. Such barriers to women’s participation in the health workforce can slow down implementation and impact of interventions."

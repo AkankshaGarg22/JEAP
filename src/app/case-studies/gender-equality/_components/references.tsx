@@ -1,4 +1,3 @@
-import AnimatedHeading from "../../_components/AnimatedHeading";
 import SubHeading from "../../_components/sub-heading";
 
 export default function References() {

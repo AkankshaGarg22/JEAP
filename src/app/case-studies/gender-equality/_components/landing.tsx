@@ -33,8 +33,8 @@ export default function Landing() {
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-12 order-1 mb-6">
             <AnimatedHeading linecolor="white" width="20%" className="mb-4">
-              GENDER INEQUALITIES IN THE HEALTH EMERGENCY WORKFORCE, AFFECTING BOTH FRONTLINES ROLES AND LEADERSHIP POSITIONS, LIMIT WOMEN’S POTENTIAL AND UNDERMINE THE OVERALL EFFECTIVENESS OF HEALTH
-              EMERGENCY PREPAREDNESS AND RESPONSE EFFORTS.
+            Gender Inequalities in the Health Emergency Workforce, Affecting Both Frontlines Roles and Leadership Positions, Limit Women’s Potential and Undermine the Overall Effectiveness of Health
+            Emergency Preparedness and Response Efforts.
             </AnimatedHeading>
           </div>
 

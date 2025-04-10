@@ -37,7 +37,7 @@ export default function Landing() {
           </SubHeading>
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-2">
-            <AnimatedHeading linecolor="white">THE SITUATION: CONGO HIT HARD BY FLOODING AS CLIMATE-RELATED DISASTERS RISE ACROSS THE CONTINENT.</AnimatedHeading>
+            <AnimatedHeading linecolor="white">The Situation: Congo Hit Hard by Flooding as Climate-Related Disasters Rise Across the Continent.</AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
