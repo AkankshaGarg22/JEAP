@@ -3,6 +3,7 @@ import MainHeading from "../../_components/main-heading";
 import AnimatedHeading from "../../_components/AnimatedHeading";
 import Paragraph from "../../_components/paragraph";
 import TranslucentBox from "../../_components/textWhiteBox";
+import Link from "next/link";
 
 export default function Landing() {
   return (
@@ -17,6 +18,16 @@ export default function Landing() {
             objectFit="cover"
             priority
           />
+                        {/* Sticky Top-Right Button */}
+      <div className="sticky top-0 z-50 flex justify-end px-4 py-2 bg-transparent">
+        <Link
+          href="#"
+          className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-green-400 text-white hover:bg-white hover:text-green-600 transition-all duration-200"
+        >
+          <span className="hidden md:inline font-semibold">BACK</span>
+          <span className="text-xl font-bold">←</span>
+        </Link>
+      </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}

@@ -1,13 +1,24 @@
+'use client';
+import React from "react";
 import Image from "next/image";
 import TranslucentBox from "./textWhiteBox";
 import AnimatedHeading from "../../_components/AnimatedHeading";
 import MainHeading from "../../_components/main-heading";
+import Paragraph from "../../_components/paragraph";
+import Link from "next/link";
 
 export default function LandingDefenses() {
   return (
-    <section className="min-h-screen bg-white">
+    
+    
+<section className="min-h-screen bg-white">
+
+
+
+
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
+
         <div className="w-full h-[62vh] md:h-[50vh] lg:h-[80vh] relative">
           <Image
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/IMG_2547.webp"
@@ -16,6 +27,18 @@ export default function LandingDefenses() {
             objectFit="cover"
             priority
           />
+
+              {/* Sticky Top-Right Button */}
+      <div className="sticky top-0 z-50 flex justify-end px-4 py-2 bg-transparent">
+        <Link
+          href="#"
+          className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-green-400 text-white hover:bg-white hover:text-green-600 transition-all duration-200"
+        >
+          <span className="hidden md:inline font-semibold">BACK</span>
+          <span className="text-xl font-bold">←</span>
+        </Link>
+      </div>
+
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
@@ -45,7 +68,7 @@ export default function LandingDefenses() {
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
-            <p className="text-base md:text-lg">
+            <Paragraph>
               Major infectious disease outbreaks around the globe in recent
               years have underscored the urgent need to strengthen laboratory
               and surveillance capabilities through genomic sequencing in order
@@ -58,7 +81,7 @@ export default function LandingDefenses() {
               conditions that harbor pathogens and their vectors as well as
               frequent movements of people, commodities, animals and animal
               products across national and international borders.<sup>3</sup>
-            </p>
+            </Paragraph>
           </div>
 
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
