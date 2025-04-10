@@ -7,12 +7,12 @@ import { BlockQuote } from "../../_components/QuoteSection";
 export default function CholeraOutbreak() {
   return (
     <section className="bg-white bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] py-8">
-      <div className="max-w-6xl mx-auto md:p-10 relative  text-white">
-        <div className="mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12 ">
+      <div className="max-w-7xl mx-auto relative text-white">
+        <div className="mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12 gap-6">
           <div className="col-span-3 order-1 pt-8 md:pt-0">
             <AnimatedHeading linecolor="white">From Training to Practice: A Closer Look at OSL Support to the Cholera Outbreak in Malawi</AnimatedHeading>
           </div>
-          <div className="col-span-7 col-start-5 order-2 my-8">
+          <div className="col-span-8 order-2 my-8 md:mt-0">
             <Paragraph>
               In 2023, Cyclone Freddy hit Malawi, triggering a natural disaster and resulting in the deadliest Cholera outbreak the country had ever witnessed. Cyclone Freddy affected over 2 million
               lives, displacing over 659,000 people, injuring over 2000, killing over 650, and resulting in the disappearance of another 500<sup>6</sup>. The protracted Cholera outbreak lasted over 2
@@ -35,7 +35,7 @@ export default function CholeraOutbreak() {
           </Paragraph>
         </div>
 
-        <div className="md:flex items-start justify-between pb-8">
+        <div className="md:flex items-start justify-between pb-4 gap-4">
            <div className=" h-full md:w-1/2">
             <Paragraph className="pb-4 md:pb-0">
               Africa CDC donated $100,000 million USD of essential cholera medical supplies to the Malawi Government and deployed 1,100 community health workers to strengthen risk communication and

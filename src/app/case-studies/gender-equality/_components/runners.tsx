@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AnimatedHeading from "../../_components/AnimatedHeading";
 import Paragraph from "../../_components/paragraph";
 

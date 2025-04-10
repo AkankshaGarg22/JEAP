@@ -3,19 +3,19 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Challenges() {
   const imageUrl = "/assets/blog/case-studies/Gender_equality/Webp_format/5.webp";
-  const title = "Despite Strong Progress in AVOHC Surge Policies and Implementation, Continued Efforts Are Needed as Active Responders Continue to Face Challenges";
+  const title = "Despite Strong Progress in AVOHC SURGE Policies and Implementation, Continues Efforts Are Needed as Active Responders Continue to Face Challenges";
   const para1 =
     "In rural environments in particular, female responders struggle with the fact that there is often limited access to clean water and sanitation facilities. They frequently lack proper lighting and security locks, creating security concerns for women. Studies show that sanitation facilities are locations with heightened risk of harassment and violence against women.";
  const para2 = "In addition, cultural differences can hinder communication between deployed responders and local communities, especially for women responders. Gender norms in certain cultures might influence how comfortable people are communicating with, receiving assistance from, or learning from women in positions of authority. Such barriers to women’s participation in the health workforce can slow down implementation and impact of interventions."
  const para3 = "The AVoHC-SURGE initiative provides an opportunity for leadership at all levels to continue introducing policies and processes that can improve female emergency responders to work effectively and safely, ultimately improving the care received by the communities."
   return (
-    <div className="w-full my-12 lg:my-24">
+    <div className="w-full my-12 lg:my-16">
       {/* Large screen layout (md and above) */}
       <div className="hidden md:block bg-white relative">
         <div className="w-full">
           {/* Image container - Placing image half inside the gradient box */}
           <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
-            <img src={imageUrl} alt="Featured image" className="w-full  object-cover h-[30rem] relative -mb-32" />
+            <img src={imageUrl} alt="Featured image" className="w-full  object-cover h-[40rem] relative -mb-32" />
           </div>
 
           {/* Content section with gradient background */}

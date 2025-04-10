@@ -20,13 +20,13 @@ export default function Continent() {
           <Paragraph>
             Through its initiatives including AVoHC-SURGE, the JEAP is pushing back against the long history of emergency management and technical expertise being male-dominated fields, including in
             areas such as laboratory sciences, logistics, and disease surveillance.
-            <br />
+            <br /> <br/>
             In the years ahead, the JEAP will pursue its vision of seeing each of the 55 African countries form an AVoHC-SURGE initiative and deploy these teams to respond to emergencies both
             nationally and across borders, while simultaneously ensuring the AVoHC-SURGE teams are gender-balanced and GBV and SEAH processes are strengthened and integrated into the response efforts.
           </Paragraph>
         </div>
       </div>
-      <div className="w-full h-64 md:h-[30rem]">
+      <div className="w-full h-64 md:h-[40rem]">
         <img className="h-full w-full object-cover object-top" src="/assets/blog/case-studies/Gender_equality/Webp_format/6.webp" alt="" />
       </div>
     </section>

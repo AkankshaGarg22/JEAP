@@ -3,37 +3,32 @@ import Paragraph from "../../_components/paragraph";
 import MainHeading from "../../_components/main-heading";
 import AnimatedHeading from "../../_components/AnimatedHeading";
 import SubHeading from "../../_components/sub-heading";
-import Link from "next/link";
+import { BackButton } from "../../_components/BackButton";
 
 export default function Landing() {
   return (
     <section className="min-h-screen bg-white">
-
-<div className="fixed top-0 left-0 w-full z-[99999999999] flex justify-end px-4 py-2 bg-transparent">
-  <Link
-    href="#"
-    className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200 shadow-[-2px_2px_0px_0px_#000000]"
-  >
-    <span className="text-xl font-bold flex items-center translate-y-[-2px]">←</span>
-    <span className="hidden md:inline font-semibold leading-none">BACK</span>
-  </Link>
-</div>
+      <BackButton />
 
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[32vh] md:h-[50vh] lg:h-[80vh] relative">
-          <Image className="hidden md:block object-top" src="/assets/blog/case-studies/Gender_equality/Webp_format/1.webp" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
-          <Image className="block md:hidden" src="/assets/blog/case-studies/banner/2.jpg" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
-                        {/* Sticky Top-Right Button */}
-      <div className="sticky top-0 z-50 flex justify-end px-4 py-2 bg-transparent">
-        <Link
-          href="#"
-          className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200"
-        >
-          <span className="hidden md:inline font-semibold">BACK</span>
-          <span className="text-xl font-bold">←</span>
-        </Link>
-      </div>
+          <Image
+            className="hidden md:block object-top"
+            src="/assets/blog/case-studies/Gender_equality/Webp_format/1.webp"
+            alt="JEAP Partnership Members"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <Image
+            className="block md:hidden"
+            src="/assets/blog/case-studies/banner/2.jpg"
+            alt="JEAP Partnership Members"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
@@ -49,33 +44,50 @@ export default function Landing() {
 
       {/* Main Content */}
       <div className=" md:pb-10 md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 pt-8 md:py-8">GENDER EQUALITY IN EMERGENCY PREPAREDNESS AND RESPONSE</MainHeading>
+        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 pt-8 md:py-8">
+          GENDER EQUALITY IN EMERGENCY PREPAREDNESS AND RESPONSE
+        </MainHeading>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-4 md:py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-12 order-1 mb-6">
             <AnimatedHeading linecolor="white" width="20%" className="mb-4">
-            Gender Inequalities in the Health Emergency Workforce, Affecting Both Frontline Roles and Leadership Positions, Limit Women’s Potential and Undermine the Overall Effectiveness of Health Emergency Preparedness and Response Efforts.
+              Gender Inequalities in the Health Emergency Workforce, Affecting
+              Both Frontline Roles and Leadership Positions, Limit Women’s
+              Potential and Undermine the Overall Effectiveness of Health
+              Emergency Preparedness and Response Efforts.
             </AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-12 order-2">
             <Paragraph>
-              The COVID-19 pandemic highlighted these inequalities around the globe. Studies have found that women were less able than their male counterparts to access personal protective equipment
-              (PPE) during shortages, which has been attributed to the fact that women health workers tend to be clustered in lower status roles rather than in leadership positions, putting them at a
-              disadvantage in accessing sparse resources. Studies also find that PPE used during the pandemic was not designed for and did not fit most women’s bodies, putting them at greater risk of
-              infection and working in undignified and uncomfortable conditions.
+              The COVID-19 pandemic highlighted these inequalities around the
+              globe. Studies have found that women were less able than their
+              male counterparts to access personal protective equipment (PPE)
+              during shortages, which has been attributed to the fact that women
+              health workers tend to be clustered in lower status roles rather
+              than in leadership positions, putting them at a disadvantage in
+              accessing sparse resources. Studies also find that PPE used during
+              the pandemic was not designed for and did not fit most women’s
+              bodies, putting them at greater risk of infection and working in
+              undignified and uncomfortable conditions.
             </Paragraph>
             <Paragraph className="mt-1">
-              Although health services are predominantly delivered by women, the sector is led by men. As of 2023, women held only 25% of leadership roles in health despite occupying around 70% of
-              health worker jobs.<sup>3</sup> The number drops dramatically to 5% for women from low -middle income countries in leadership.
+              Although health services are predominantly delivered by women, the
+              sector is led by men. As of 2023, women held only 25% of
+              leadership roles in health despite occupying around 70% of health
+              worker jobs.<sup>3</sup> The number drops dramatically to 5% for
+              women from low -middle income countries in leadership.
             </Paragraph>
           </div>
 
           <div className="lg:col-span-12 order-3">
             <div className="relative w-full bg-[#386d64] text-white py-8 px-4 before:content-[''] before:absolute before:top-0 before:left-1/4 before:-translate-x-1/2 before:-translate-y-1/2 before:border-l-[50px] before:border-r-[50px] before:border-b-[24px] before:border-l-transparent before:border-r-transparent before:border-[#386d64]">
               <div className="container mx-auto text-center">
-                <SubHeading>Women make up 70% of health workers, yet occupy just 23% of leadership roles in the sector.</SubHeading>
+                <SubHeading>
+                  Women make up 70% of health workers, yet occupy just 23% of
+                  leadership roles in the sector.
+                </SubHeading>
               </div>
             </div>
           </div>
@@ -83,23 +95,40 @@ export default function Landing() {
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
           <div className="lg:col-span-5 order-3 mt-6">
             <div className="w-full h-64 md:h-full relative">
-              <img src="/assets/blog/case-studies//Gender_equality/Webp_format/2.webp" alt="JEAP Partnership Meeting" className="w-full h-full object-cover object-center rounded-lg" />
+              <img
+                src="/assets/blog/case-studies//Gender_equality/Webp_format/2.webp"
+                alt="JEAP Partnership Meeting"
+                className="w-full h-full object-cover object-center rounded-lg"
+              />
             </div>
           </div>
 
           <div className="lg:col-span-7 order-4 mt-6">
             <Paragraph>
-              Such gender disparities in the health workforce affect emergency response strategies, policies and programs - ultimately weakening the services provided to vulnerable populations during
-              a crisis. Women and girls are among the most vulnerable groups in any emergency, including in health, armed conflict and humanitarian disasters. Harmful gender norms disproportionately
-              increase their risk of illness and limit their access to health information and services due to reduced decision-making power and less control over resources. When women are able to
-              actively participate in and lead response efforts, the needs and perspectives of women on the ground during emergencies are better taken into account, resulting in better response
-              outcomes for those in need.
+              Such gender disparities in the health workforce affect emergency
+              response strategies, policies and programs - ultimately weakening
+              the services provided to vulnerable populations during a crisis.
+              Women and girls are among the most vulnerable groups in any
+              emergency, including in health, armed conflict and humanitarian
+              disasters. Harmful gender norms disproportionately increase their
+              risk of illness and limit their access to health information and
+              services due to reduced decision-making power and less control
+              over resources. When women are able to actively participate in and
+              lead response efforts, the needs and perspectives of women on the
+              ground during emergencies are better taken into account, resulting
+              in better response outcomes for those in need.
             </Paragraph>
             <Paragraph className="mt-8">
-              Studies show that incorporating women's professional expertise and perspectives strengthens health systems by promoting a balanced workforce, safe and decent working conditions for all
-              health workers, and more equal career progression opportunities for women. When women are leaders, they not only hire new female talent to fill vacancies but also retain the experienced
-              women, thereby providing a stronger foundation for health systems. With the African continent facing multiple and often concurrent crises, it is critical that emergency prevention and
-              response (EPR) initiatives adopt gender-sensitive approaches.
+              Studies show that incorporating women's professional expertise and
+              perspectives strengthens health systems by promoting a balanced
+              workforce, safe and decent working conditions for all health
+              workers, and more equal career progression opportunities for
+              women. When women are leaders, they not only hire new female
+              talent to fill vacancies but also retain the experienced women,
+              thereby providing a stronger foundation for health systems. With
+              the African continent facing multiple and often concurrent crises,
+              it is critical that emergency prevention and response (EPR)
+              initiatives adopt gender-sensitive approaches.
             </Paragraph>
           </div>
         </div>

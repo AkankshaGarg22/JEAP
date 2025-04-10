@@ -40,8 +40,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
     return () => observer.disconnect();
   }, []);
 
-  if (typeof children !== 'string') return children;
-  let transformed = children; 
+
   
 
   return (
@@ -51,7 +50,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
         className={`relative ${!fontSize ? "text-xl md:text-3xl md:leading-10" : ""} mb-4 font-ArialRegular font-bold ${className}`}
         style={fontSize ? { fontSize } : undefined}
       >
-        {transformed}
+        {children}
         <span
           className={`absolute left-0 bottom-[-10px] h-1 bg-${linecolor} transition-all duration-700 ease-out rounded-full ${
             isVisible ?  width ? `md:w-[${width}] w-[20%]`:  `md:w-[40%] w-[20%]` : "md:w-[10%] w-[5%]"

@@ -4,13 +4,13 @@ import Paragraph from "../../_components/paragraph";
 
 export default function EmergencyHub() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-8 px-6 md:px-12 lg:px-16  my-16 overflow-visible">
+    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] py-8 px-6 md:px-12 lg:px-16  my-8 overflow-visible">
       {/* Content Container */}
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col lg:flex-row lg:items-center">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="lg:w-[65%] z-10 text-white">
-            <AnimatedHeading linecolor="white">
+            <AnimatedHeading linecolor="white" width="20%">
             An Africa-Led Resource Center: WHO’s Regional Emergency Hubs
             </AnimatedHeading>
 
@@ -29,7 +29,7 @@ export default function EmergencyHub() {
           </div>
 
           {/* Image Container - Positioned for overlap on desktop */}
-          <div className="lg:absolute lg:right-0 lg:-top-[15%] lg:transform lg:w-[30%] lg:h-[25rem]">
+          <div className="lg:w-[30%] lg:h-[25rem]">
             <div className="h-64 lg:h-full w-full relative">
               <img
                 src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00792.webp"

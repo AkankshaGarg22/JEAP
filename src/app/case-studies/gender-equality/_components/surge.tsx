@@ -5,11 +5,19 @@ export default function Surge() {
   return (
     <section className="max-w-7xl mx-auto my-4">
       <div className="flex flex-col md:flex-row items-start justify-center md:justify-between mb-4 md:mb-8 px-2 md:px-4">
-        <div className="md:w-[30%] h-full flex flex-col items-stretch justify-start px-4 py-2 md:p-4">
+        <div className="md:w-[30%] h-full flex flex-col items-stretch justify-start px-4 py-2 md:p-4 gap-4 md:gap-24">
           <AnimatedHeading linecolor="black" className="mb-4 text-balance">
           AVOHC-SURGE Prioritizes Gender Parity at All Levels – From Frontline Workers to Technical Leadership
           </AnimatedHeading>
+          <div>
+          <img
+          className=""
+          src="/assets/blog/case-studies/Gender_equality/Webp_format/gender-equality-surge.webp"
+          alt="JEAP Surge"
+        />
+          </div>
         </div>
+
 
         <div className="md:w-[70%] flex flex-col justify-center items-center px-4 py-2 md:p-4">
           <Paragraph>
@@ -32,7 +40,7 @@ export default function Surge() {
             practices to recruit women to leadership positions within health
             emergency response teams and broader healthcare governance. For
             instance, women comprise 66% of the Focal Points representing each
-            of the JEAP partner organizations.
+            of the JEAP partner organizations.<br/><br/>
           </Paragraph>
           <Paragraph>
             Ensuring equal gender representation has also been a priority in
@@ -49,7 +57,7 @@ export default function Surge() {
         </div>
       </div>
 
-      <div className="w-full h-64 md:h-[30rem]">
+      <div className="w-full h-64 md:h-[40rem]">
         <img
           className="h-full w-full object-cover object-center"
           src="/assets/blog/case-studies//Gender_equality/Webp_format/3.webp"

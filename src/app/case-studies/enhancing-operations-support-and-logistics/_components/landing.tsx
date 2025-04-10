@@ -4,20 +4,12 @@ import AnimatedHeading from "../../_components/AnimatedHeading";
 import Paragraph from "../../_components/paragraph";
 import TranslucentBox from "../../_components/textWhiteBox";
 import Link from "next/link";
+import { BackButton } from "../../_components/BackButton";
 
 export default function Landing() {
   return (
-    <section className="min-h-screen bg-[##1b5632]">
-
- <div className="fixed top-0 left-0 w-full z-[99999999999] flex justify-end px-4 py-2 bg-transparent">
-  <Link
-    href="#"
-    className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200 shadow-[-2px_2px_0px_0px_#000000]"
-  >
-    <span className="text-xl font-bold flex items-center translate-y-[-2px]">←</span>
-    <span className="hidden md:inline font-semibold leading-none">BACK</span>
-  </Link>
-</div>
+    <section className="min-h-screen bg-[#1b5632]">
+      <BackButton />
 
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
@@ -30,8 +22,15 @@ export default function Landing() {
             objectFit="cover"
             priority
           />
-          <Image className="block md:hidden" src="/assets/blog/case-studies/banner/4.jpg" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
-                          {/* Sticky Top-Right Button */}
+          <Image
+            className="block md:hidden"
+            src="/assets/blog/case-studies/banner/4.jpg"
+            alt="JEAP Partnership Members"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          {/* Sticky Top-Right Button */}
 
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
@@ -50,7 +49,8 @@ export default function Landing() {
       {/* Main Content */}
       <div className="md:pt-6  bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
         <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 py-4 md:py-8">
-          ENHANCING OPERATIONS SUPPORT AND LOGISTICS FOR IMPROVED EMERGENCY PREPAREDNESS AND RESPONSE IN AFRICA
+          ENHANCING OPERATIONS SUPPORT AND LOGISTICS FOR IMPROVED EMERGENCY
+          PREPAREDNESS AND RESPONSE IN AFRICA
         </MainHeading>
         <div className="max-w-7xl mx-auto flex flex-col lg:grid md:grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-4 md:py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
@@ -63,27 +63,48 @@ export default function Landing() {
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
             <Paragraph>
-              The global COVID-19 pandemic presented an unprecedented challenge to the world. The global supply chain for essential supplies collapsed within weeks of the WHO’s declaration of a global
-              pandemic on March 11, 2020. Restrictions on imports and exports, border closures, and national shutdowns caused catastrophic supply chain disruptions. Shortages and price spikes were
-              commonplace, as was the proliferation of inferior products. As the outbreak spread, affecting almost every nation in the world, it became evident that the availability of PPE, for
-              instance, was a critical component to emergency preparedness and response. Yet with the manufacturing of much of the world’s PPE concentrated in China and India, the pandemic exposed the
-              global reliance on a few key suppliers.
+              The global COVID-19 pandemic presented an unprecedented challenge
+              to the world. The global supply chain for essential supplies
+              collapsed within weeks of the WHO’s declaration of a global
+              pandemic on March 11, 2020. Restrictions on imports and exports,
+              border closures, and national shutdowns caused catastrophic supply
+              chain disruptions. Shortages and price spikes were commonplace, as
+              was the proliferation of inferior products. As the outbreak
+              spread, affecting almost every nation in the world, it became
+              evident that the availability of PPE, for instance, was a critical
+              component to emergency preparedness and response. Yet with the
+              manufacturing of much of the world’s PPE concentrated in China and
+              India, the pandemic exposed the global reliance on a few key
+              suppliers.
             </Paragraph>
           </div>
 
           {/** Image on left and text */}
 
           <div className="lg:col-span-4 order-3">
-            <img src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/landing-image-2.jpg" alt="Logistic support" className="h-full w-full object-cover" />
+            <img
+              src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/landing-image-2.jpg"
+              alt="Logistic support"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="lg:col-span-8 order-4">
             <Paragraph>
-              Africa was disproportionately impacted by supply chain disruptions due to a high dependence on imports for essential medical supplies such as PPE, price surges straining their limited
-              domestic budgets, and the harsh reality of supplier nations prioritizing their own needs. For instance, it took 21 days for the first shipment of protective equipment such as masks to
-              reach African countries<sup>1</sup>. Before the pandemic, African countries sourcing emergency medical supplies with support from the World Health Organization (WHO) were primarily
-              reliant on three warehouses located in China, the UAE, and Ghana. Shipping supplies from Ghana to other African countries took approximately 25 days, while deliveries from Dubai and
-              China were even slower.<sup>2</sup> These long lead times, which were a significant problem before the pandemic, became even more critical during it, contributing to the loss of millions
-              of lives.
+              Africa was disproportionately impacted by supply chain disruptions
+              due to a high dependence on imports for essential medical supplies
+              such as PPE, price surges straining their limited domestic
+              budgets, and the harsh reality of supplier nations prioritizing
+              their own needs. For instance, it took 21 days for the first
+              shipment of protective equipment such as masks to reach African
+              countries<sup>1</sup>. Before the pandemic, African countries
+              sourcing emergency medical supplies with support from the World
+              Health Organization (WHO) were primarily reliant on three
+              warehouses located in China, the UAE, and Ghana. Shipping supplies
+              from Ghana to other African countries took approximately 25 days,
+              while deliveries from Dubai and China were even slower.
+              <sup>2</sup> These long lead times, which were a significant
+              problem before the pandemic, became even more critical during it,
+              contributing to the loss of millions of lives.
             </Paragraph>
           </div>
 

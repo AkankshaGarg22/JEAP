@@ -16,10 +16,10 @@ const LeadersArray = [
         designation: 'Principal, JEAP'
     },
     {
-        image: '/assets/blog/jpgs/Hanan Balkhy.webp',
-        title: 'Dr Hanan Balkhy',
+        image: '/assets/blog/jpgs/Dr Ahmed Zouiten.jpg',
+        title: 'Dr Ahmed Zouiten',
         description: 'Regional Director, WHO EMRO',
-        link: 'https://www.emro.who.int/about-who/regional-director/index.html',
+        link: '',
         designation: 'Principal, JEAP'
     },
     {

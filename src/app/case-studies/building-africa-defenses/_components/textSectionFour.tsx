@@ -61,7 +61,7 @@ const TextSectionFour = () => {
         <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center py-12">
           <div className="lg:w-[35%] w-full h-auto lg:h-[350px]">
             <img
-              src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.27 (1).webp"
+              src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-test-tubes-with-blood-desk-laboratory.webp"
               className="h-full w-full object-cover object-center"
             ></img>
           </div>
@@ -115,7 +115,7 @@ const TextSectionFour = () => {
               </Paragraph>
             </div>
 
-            <div className="lg:w-[55%] w-full h-auto flex items-center justify-center">
+            <div className="lg:w-[58%] w-full h-auto flex items-center justify-center">
               <img
                 src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WHO_Malawi-146985.webp"
                 alt="WHO Malawi"
