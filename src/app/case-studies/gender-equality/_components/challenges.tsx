@@ -9,13 +9,13 @@ export default function Challenges() {
  const para2 = "In addition, cultural differences can hinder communication between deployed responders and local communities, especially for women responders. Gender norms in certain cultures might influence how comfortable people are communicating with, receiving assistance from, or learning from women in positions of authority. Such barriers to women’s participation in the health workforce can slow down implementation and impact of interventions."
  const para3 = "The AVoHC-SURGE initiative provides an opportunity for leadership at all levels to continue introducing policies and processes that can improve female emergency responders to work effectively and safely, ultimately improving the care received by the communities."
   return (
-    <div className="w-full my-12 lg:my-24">
+    <div className="w-full my-12 lg:my-16">
       {/* Large screen layout (md and above) */}
       <div className="hidden md:block bg-white relative">
         <div className="w-full">
           {/* Image container - Placing image half inside the gradient box */}
           <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
-            <img src={imageUrl} alt="Featured image" className="w-full  object-cover h-[30rem] relative -mb-32" />
+            <img src={imageUrl} alt="Featured image" className="w-full  object-cover h-[40rem] relative -mb-32" />
           </div>
 
           {/* Content section with gradient background */}

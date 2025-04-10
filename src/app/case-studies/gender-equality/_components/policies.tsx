@@ -81,9 +81,9 @@ export default function Policies() {
               </div>
 
               {/* Description box overlaid on right side */}
-              <div className="absolute top-[70%] md:top-[25%] md:h-[50%] transform left-[20%] md:left-[49%] bg-white p-3 md:p-8 w-[75%] md:max-w-[40%] mr-12 flex">
+              <div className="absolute top-[70%] md:top-[25%] md:h-[50%] transform left-[20%] md:left-[55%] bg-[#386d64] p-3 md:p-8 w-[75%] md:max-w-[40%] mr-12 flex">
                 <div className="m-auto">
-                  <Paragraph className="text-black">{slide.description}</Paragraph>
+                  <Paragraph className="text-white">{slide.description}</Paragraph>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function Policies() {
         </button>
         <button
           onClick={goToNextSlide}
-          className="absolute right-4 md:right-20 lg:right-24 top-6 md:top-[34%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
+          className="absolute right-4 md:right-8 top-6 md:top-[34%] -translate-y-1/2 bg-[#00215B] border border-white  text-white  rounded-full p-2 "
           aria-label="Next slide"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">

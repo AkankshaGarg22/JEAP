@@ -35,7 +35,7 @@ export default function CholeraOutbreak() {
           </Paragraph>
         </div>
 
-        <div className="md:flex items-start justify-between pb-8">
+        <div className="md:flex items-start justify-between pb-8 gap-4">
            <div className=" h-full md:w-1/2">
             <Paragraph className="pb-4 md:pb-0">
               Africa CDC donated $100,000 million USD of essential cholera medical supplies to the Malawi Government and deployed 1,100 community health workers to strengthen risk communication and

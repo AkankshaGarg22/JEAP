@@ -26,7 +26,7 @@ export default function Continent() {
           </Paragraph>
         </div>
       </div>
-      <div className="w-full h-64 md:h-[30rem]">
+      <div className="w-full h-64 md:h-[40rem]">
         <img className="h-full w-full object-cover object-top" src="/assets/blog/case-studies/Gender_equality/Webp_format/6.webp" alt="" />
       </div>
     </section>

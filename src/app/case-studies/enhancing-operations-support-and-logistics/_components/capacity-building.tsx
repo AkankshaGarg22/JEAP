@@ -19,8 +19,8 @@ export default function CapacityBuilding() {
               chain experts and microbiologists, whose services are tailored to each crisis they are responding to.<sup>5</sup>
             </Paragraph>
           </div>
-          <div className="col-span-5  order-2 flex items-center justify-center">
-            <img className="h-[90%] w-full" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
+          <div className="col-span-5  order-2 flex items-end justify-center">
+            <img className="h-[85%] w-full" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
           </div>
         </div>
 
