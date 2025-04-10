@@ -11,7 +11,7 @@ export default function Responders() {
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="lg:w-3/5 pt-8 pb-4 lg:pt-16 px-6 md:px-12 lg:px-16">
             <AnimatedHeading linecolor="white" className="text-white">
-              WHAT WE CAN LEARN: INVEST IN PREPAREDNESS, INVEST IN PEOPLE.
+            What We Can Learn: Invest in Preparedness, Invest in People.
             </AnimatedHeading>
 
             <Paragraph className="text-gray-100 mt-8 md:mt-12">

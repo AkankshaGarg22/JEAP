@@ -11,7 +11,7 @@ export default function Runners() {
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="w-full lg:w-[70%] z-10">
             <AnimatedHeading linecolor="white" className="md:w-3/4 text-white">
-              LESOTHO AND NAMIBIA ARE FRONTRUNNERS IN RECRUITING AND DEPLOYING WOMEN TO THEIR HEALTH EMERGENCY RESPONDER TEAMS
+            Lesotho and Namibia Are Frontrunners in Recruiting and Deploying Women to Their Health Emergency Responder Teams
             </AnimatedHeading>
             
             <Paragraph className="text-gray-100 my-8 md:my-12">

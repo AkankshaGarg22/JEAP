@@ -7,7 +7,7 @@ export default function Map() {
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 md:gap-0 mb-8">
         <div className="md:w-[50%] h-full flex flex-col justify-between">
           <AnimatedHeading linecolor="black" className="w-full md:w-[70%]">
-            MAP OF COUNTRIES THAT HAVE SUBMITTED PROPOSALS WITH JEAP SUPPORT:
+          Map of Countries That Have Submitted Proposals With JEAP Support:
           </AnimatedHeading>
 
           <Paragraph className="order-2 md:pr-2 md:pt-8">

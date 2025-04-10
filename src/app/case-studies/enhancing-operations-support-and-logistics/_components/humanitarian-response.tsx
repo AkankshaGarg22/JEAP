@@ -9,8 +9,7 @@ export default function HumanitarianResponse() {
         <div className="mx-auto flex justify-evenly lg:grid lg:grid-cols-12 pb-12 w-[80%]">
           <div className="col-span-3 order-1">
             <AnimatedHeading linecolor="white">
-              A NEW PARTNERSHIP WITH THE CHADIAN GOVERNMENT TO TACKLE THE SUDAN
-              HUMANITARIAN RESPONSE
+            A New Partnership With the Chadian Government to Tackle the Sudan Humanitarian Response
             </AnimatedHeading>
           </div>
 

@@ -14,7 +14,7 @@ export default function PlanningForFuture() {
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-3 order-2">
             <AnimatedHeading linecolor="white">
-              PLANNING FOR THE FUTURE: FROM SCOPING TO CAPACITY BUILDING
+            Planning for the Future: From Scoping to Capacity Building
             </AnimatedHeading>
           </div>
 
