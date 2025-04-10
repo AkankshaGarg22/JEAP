@@ -9,7 +9,7 @@ export default function Runners() {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center">
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
-          <div className="w-full lg:w-3/5 z-10">
+          <div className="w-full lg:w-[70%] z-10">
             <AnimatedHeading linecolor="white" className="md:w-3/4 text-white">
               LESOTHO AND NAMIBIA ARE FRONTRUNNERS IN RECRUITING AND DEPLOYING WOMEN TO THEIR HEALTH EMERGENCY RESPONDER TEAMS
             </AnimatedHeading>
@@ -21,7 +21,7 @@ export default function Runners() {
           </div>
 
           {/* Image Container - Positioned for overlap on desktop */}
-          <div className="lg:absolute lg:right-0 lg:-top-[15%] lg:transform lg:w-[30%] lg:h-[30rem]">
+          <div className="lg:transform lg:w-[30%] lg:h-[30rem]">
             <div className="h-64 lg:h-full w-full relative mt-6 lg:mt-0">
               <img src="/assets/blog/case-studies/Gender_equality/Webp_format/4.webp" alt="Woman health worker walking in a green field" className="object-cover h-full w-full" />
             </div>
