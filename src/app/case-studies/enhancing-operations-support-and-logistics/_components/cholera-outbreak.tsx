@@ -10,7 +10,7 @@ export default function CholeraOutbreak() {
       <div className="max-w-6xl mx-auto md:p-10 relative  text-white">
         <div className="mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12 ">
           <div className="col-span-3 order-1 pt-8 md:pt-0">
-            <AnimatedHeading linecolor="white">FROM TRAINING TO PRACTICE: A CLOSER LOOK AT OSL SUPPORT TO THE CHOLERA OUTBREAK IN MALAWI</AnimatedHeading>
+            <AnimatedHeading linecolor="white">From Training to Practice: A Closer Look at OSL Support to the Cholera Outbreak in Malawi</AnimatedHeading>
           </div>
           <div className="col-span-7 col-start-5 order-2 my-8">
             <Paragraph>

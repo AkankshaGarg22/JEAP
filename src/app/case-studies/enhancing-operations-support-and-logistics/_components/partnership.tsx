@@ -9,8 +9,7 @@ export default function Partnership() {
         {/* Subtitle - Full width on mobile, 4/12 on desktop */}
         <div className="lg:col-span-3 order-1">
           <AnimatedHeading linecolor="black">
-            THE JEAP PARTNERSHIPS’ EFFORTS TO STRENGTHEN OPERATIONS SUPPORT AND
-            LOGISTICS
+          The JEAP Partnership's Efforts to Strengthen Operations Support and Logistics
           </AnimatedHeading>
         </div>
 

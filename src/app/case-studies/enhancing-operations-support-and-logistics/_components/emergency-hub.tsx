@@ -11,7 +11,7 @@ export default function EmergencyHub() {
           {/* Text Content - Takes full width on mobile, ~60% on desktop */}
           <div className="lg:w-[65%] z-10 text-white">
             <AnimatedHeading linecolor="white">
-              AN AFRICA-LED RESOURCE CENTER: WHO’S REGIONAL EMERGENCY HUBS
+            An Africa-Led Resource Center: WHO’s Regional Emergency Hubs
             </AnimatedHeading>
 
             <Paragraph className="text-gray-100 my-10">

@@ -10,7 +10,7 @@ export default function CapacityBuilding() {
       <div className="relative">
         <div className="hidden lg:grid mx-auto justify-evenly grid-cols-1 lg:grid-cols-10 gap-4 w-[73%]">
           <div className="col-span-5 order-1">
-            <AnimatedHeading linecolor="black">THE PEOPLE AT THE HEART OF SUPPLY CHAINS: BOLSTERING AFRICA’S OSL WORKFORCE THROUGH CAPACITY BUILDING</AnimatedHeading>
+            <AnimatedHeading linecolor="black">The People at the Heart of Supply Chains: Bolstering Africa’s OSL Workforce Through Capacity Building</AnimatedHeading>
 
             <Paragraph className="pt-10">
               The JEAP’s OSL team is crucial in ensuring the timely delivery of medical equipment and expert assistance through efficient transportation, delivery, and storage of essential medical and
@@ -29,7 +29,7 @@ export default function CapacityBuilding() {
           <img className="" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
           <div className="w-[80%] mx-auto">
             <div className="pt-8">
-              <AnimatedHeading linecolor="black">THE PEOPLE AT THE HEART OF SUPPLY CHAINS: BOLSTERING AFRICA’S OSL WORKFORCE THROUGH CAPACITY BUILDING</AnimatedHeading>
+              <AnimatedHeading linecolor="black">The People at the Heart of Supply Chains: Bolstering Africa’s OSL Workforce Through Capacity Building</AnimatedHeading>
 
               <Paragraph className="md:pt-10 pt-8">
                 The JEAP’s OSL team is crucial in ensuring the timely delivery of medical equipment and expert assistance through efficient transportation, delivery, and storage of essential medical

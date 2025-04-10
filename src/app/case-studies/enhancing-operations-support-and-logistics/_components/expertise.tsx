@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Expertise() {
   const imageUrl = "/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/IMG_0527.webp";
-  const title = "AFRICAN EXPERTISE IN SUPPLY CHAIN, DATA, INNOVATION & INTELLIGENCE: A CLOSER LOOK AT THE DAKAR HUB";
+  const title = "African Expertise in Supply Chain, Data, Innovation & Intelligence: A Closer Look at the Dakar Hub";
   const para1 =
     "The Dakar Hub’s OSL achievements have been an exemplary demonstration of African nations helping one another. With 67 staff members working at the Hub in Dakar, Senegal, it hosts experts from a range of technical areas: Emergency Preparedness Program (EMP), Emergency Response Program (EMR), Health Information and Risk Assessment Program (HIR), and OSL. The Hub boasts a warehouse with a storage capacity of 12,000 m³ with racks for both medical and non-medical supplies, along with 90 offices and a 300-seat auditorium for training, workshops, and large gatherings.";
  const para2 = "In 2024, the hub processed a total of 21 shipments to 16 countries across the continent, with a total value of $452,906. The highest value of shipments were made to the Central African Republic ($136,082 USD) and the Republic of Congo ($105,761 USD)."

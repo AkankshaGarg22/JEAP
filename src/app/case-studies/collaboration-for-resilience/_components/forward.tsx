@@ -17,7 +17,7 @@ export default function Forward() {
         {/* Text Section */}
         <div className="bg-gradient-to-b col-span-4 from-[#00205C] to-[#1A5632] px-4 md:px-0 p-6 md:pl-40 md:py-20 text-white">
           <AnimatedHeading linecolor="white" className="w-[40%]">
-            WAY FORWARD
+            Way Forward
           </AnimatedHeading>
           <Paragraph className="md:pr-2 md:pt-8 md:w-[90%]">
             The Partnership looks forward to reviewing the results and

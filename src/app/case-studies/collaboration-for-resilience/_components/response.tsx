@@ -65,7 +65,7 @@ export default function Response() {
       </div>
 
       <div className="block md:hidden">
-        <AnimatedHeading linecolor="black">RESPONSE</AnimatedHeading>
+        <AnimatedHeading linecolor="black">Response</AnimatedHeading>
       </div>
 
       {/* Mobile List View */}

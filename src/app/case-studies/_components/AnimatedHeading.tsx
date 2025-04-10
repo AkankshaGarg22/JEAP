@@ -41,8 +41,8 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ children, className, 
   }, []);
 
   if (typeof children !== 'string') return children;
-  let transformed = toTitleCase(children); 
-  transformed = capitalizeFirstLetter(transformed)
+  let transformed = children; 
+  
 
   return (
     <div>

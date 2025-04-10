@@ -9,7 +9,7 @@ const TextSectionThree = () => {
     <div className="lg:max-w-7xl mx-auto w-[90%] h-auto bg-transparent flex lg:flex-row flex-col gap-6 items-start justify-center">
         <div className="lg:w-[35%] w-full h-auto">
             <AnimatedHeading linecolor="white" className="text-white">
-              INCREASED AFRICAN SURVEILLANCE EFFORTS DEMONSTRATE FERTILE GROUND FOR INVESTING IN CONTINENTAL GENOMIC SEQUENCING CAPACITY-BUILDING
+            Increased African Surveillance Efforts Demonstrate Fertile Ground for Investing in Continental Genomic Sequencing Capacity-Building
             </AnimatedHeading>
         </div>
         

@@ -39,8 +39,7 @@ const TextSectionFour = () => {
               linecolor="white"
               className="text-white"
             >
-              EQUIPPING AND TRAINING A FIT-FOR-PURPOSE LABORATORY WORKFORCE WITH
-              CUTTING-EDGE TECHNOLOGIES
+           Equipping and Training a Fit-for-Purpose Laboratory Workforce With Cutting-Edge Technologies
             </AnimatedHeading>
           </div>
           <div className="flex items-center justify-center lg:w-[50%] w-[90%]">
@@ -104,8 +103,8 @@ const TextSectionFour = () => {
           <div className="w-full flex items-start justify-between flex-col lg:flex-row gap-10">
             <div className="lg:w-[30%] w-[full] flex items-center justify-center flex-col gap-10">
               <AnimatedHeading linecolor="black">
-                IMPACT ON THE GROUND: <br></br>GENOMIC SURVEILLANCE IN RECENT
-                OUTBREAKS
+              Impact on the Ground:<br />
+              Genomic Surveillance in Recent Outbreaks
               </AnimatedHeading>
               <Paragraph className="text-black">
                 Collaborative efforts to scale up Africa’s genomic sequencing

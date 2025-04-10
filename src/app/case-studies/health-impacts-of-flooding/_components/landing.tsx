@@ -4,16 +4,37 @@ import AnimatedHeading from "../../_components/AnimatedHeading";
 import MainHeading from "../../_components/main-heading";
 import SubHeading from "../../_components/sub-heading";
 import Paragraph from "../../_components/paragraph";
+import Link from "next/link";
 
 export default function Landing() {
   return (
     <section className="min-h-screen bg-white">
+
+<div className="fixed top-0 left-0 w-full z-[99999999999] flex justify-end px-4 py-2 bg-transparent">
+  <Link
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200 shadow-[-2px_2px_0px_0px_#000000]"
+  >
+    <span className="text-xl font-bold flex items-center translate-y-[-2px]">←</span>
+    <span className="hidden md:inline font-semibold leading-none">BACK</span>
+  </Link>
+</div>
+
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[30vh] md:h-[50vh] lg:h-[80vh] relative">
           <Image className="hidden md:block" src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/1.webp" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
           <Image className="block md:hidden" src="/assets/blog/case-studies/banner/3.jpg" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
-
+                        {/* Sticky Top-Right Button */}
+      <div className="sticky top-0 z-50 flex justify-end px-4 py-2 bg-transparent">
+        <Link
+          href="#"
+          className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200"
+        >
+          <span className="hidden md:inline font-semibold">BACK</span>
+          <span className="text-xl font-bold">←</span>
+        </Link>
+      </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
           {/* Hero Text */}
