@@ -61,8 +61,8 @@ export default function LandingDefenses() {
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
             <AnimatedHeading linecolor="white">
-              GENOMIC SEQUENCING: A GAME-CHANGING INNOVATION FOR
-              DISEASE SURVEILLANCE IN AFRICA
+              Genomic Sequencing: A Game-Changing Innovation for
+              Diesease Surveilance in Africa
             </AnimatedHeading>
           </div>
 
