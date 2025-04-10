@@ -25,7 +25,7 @@ export default function OslApproach() {
           Institutional Partnerships at the Center of the JEAP’s OSL Approach
           </AnimatedHeading>
         </div>
-          <Paragraph className="py-8 md:py-12 col-span-8 order-1">
+          <Paragraph className="py-8 md:pt-12 md:pb-0 col-span-8 order-1">
             In addition to forging an innovative partnership with one another,
             the JEAP partners<sup>3</sup> are helping to facilitate new partnerships
             between governments, airlines, transport companies, and other

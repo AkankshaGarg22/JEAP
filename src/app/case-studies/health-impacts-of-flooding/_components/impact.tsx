@@ -16,7 +16,7 @@ export default function Impact() {
 
         {/* Text Section */}
         <div className="bg-gradient-to-b col-span-4 from-[#00205C] to-[#1A5632] p-4 py-8 md:px-0 md:pl-40 md:py-20 text-white">
-          <AnimatedHeading linecolor="white" className="w-[90%]">
+          <AnimatedHeading linecolor="white" width="20%" className="w-[90%]">
           The Impact: More Than 2,000 Patients in Flood-Affected Communities Received Essential Health Care and Services, Congo Saw Zero Flood-Related Disease Outbreaks.
           </AnimatedHeading>
           <Paragraph className="md:pr-2 pt-8 md:w-[90%]">

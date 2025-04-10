@@ -10,13 +10,20 @@ interface AlternateContentProps {
   imageSrc: string;
   text: string;
   isReversed?: boolean;
+  link: string;
 }
 
 const AlternateContent: React.FC<AlternateContentProps> = ({
   imageSrc,
   text,
   isReversed = false,
+  link
 }) => {
+
+  const goToReport = (link: string) => {
+    window.location.href = link
+  }
+
   return (
     <div
       className={`flex flex-col md:flex-row m-0 p-0 ${
@@ -36,8 +43,8 @@ const AlternateContent: React.FC<AlternateContentProps> = ({
       </div>
 
       {/* Text container with white text and a yellow pseudo-element */}
-      <div className="p-4 relative lg:w-[40%] sm:w-[80%] flex items-center justify-center">
-        <p className="custom-text">{text}</p>
+      <div className="p-4 relative lg:w-[40%] sm:w-[80%] flex items-center justify-center cursor-pointer">
+        <p onClick={() => goToReport(link)} className="custom-text">{text}</p>
       </div>
     </div>
   );
@@ -57,18 +64,22 @@ export default function CaseStudies() {
     {
       image: "/assets/blog/impact/Angola_COVAX_07-91103.jpg",
       text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative",
+      link: '/case-studies/gender-equality'
     },
     {
       image: "/assets/blog/impact/COVID-19 - Congo 2020_fd7371a717e1e5c4078ca8c2a8ffa7ff (1) (2).jpg",
       text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa",
+      link: '/case-studies/enhancing-operations-support-and-logistics'
     },
     {
       image: "/assets/blog/impact/WHO01455.jpg",
       text: "Addressing the health impacts of flooding in the Republic of Congo",
+      link: '/case-studies/health-impacts-of-flooding'
     },
     {
       image: "/assets/blog/impact/WHO_25.05.23_72dpi©CecileRolland-106.jpg",
       text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund",
+      link: '/case-studies/collaboration-for-resilience'
     },
   ];
   return (
@@ -78,6 +89,7 @@ export default function CaseStudies() {
           key={index}
           imageSrc={item.image}
           text={item.text}
+          link={item.link}
           // Reverse order on even-indexed sets (i.e., second, fourth, etc.)
           isReversed={index % 2 === 1}
         />

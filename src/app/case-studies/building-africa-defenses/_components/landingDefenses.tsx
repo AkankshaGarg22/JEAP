@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import Image from "next/image";
 import TranslucentBox from "./textWhiteBox";
@@ -6,33 +6,33 @@ import AnimatedHeading from "../../_components/AnimatedHeading";
 import MainHeading from "../../_components/main-heading";
 import Paragraph from "../../_components/paragraph";
 import Link from "next/link";
+import { BackButton } from "../../_components/BackButton";
 
 export default function LandingDefenses() {
   return (
-    
-    
-<section className="min-h-screen bg-white">
-
-      
-<div className="fixed top-0 left-0 w-full z-[99999999999] flex justify-end px-4 py-2 bg-transparent">
-  <Link
-    href="#"
-    className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200 shadow-[-2px_2px_0px_0px_#000000]"
-  >
-    <span className="text-xl font-bold flex items-center translate-y-[-2px]">←</span>
-    <span className="hidden md:inline font-semibold leading-none">BACK</span>
-  </Link>
-</div>
-
+    <section className="min-h-screen bg-white">
+      <BackButton />
 
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[30vh] md:h-[50vh] lg:h-[80vh] relative">
-
-
-          <Image className="hidden md:block" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/IMG_2547.webp" alt="JEAP Building Africa's Defenses" layout="fill" objectFit="cover" priority />
-          <Image className="block md:hidden" src="/assets/blog/case-studies/banner/5.jpg" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
-                        {/* Sticky Top-Right Button */}
+          <Image
+            className="hidden md:block"
+            src="/assets/blog/case-studies/Building_Africa_Defenses/webp/IMG_2547.webp"
+            alt="JEAP Building Africa's Defenses"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <Image
+            className="block md:hidden"
+            src="/assets/blog/case-studies/banner/5.jpg"
+            alt="JEAP Partnership Members"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          {/* Sticky Top-Right Button */}
 
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
 
@@ -47,21 +47,35 @@ export default function LandingDefenses() {
 
       {/* Main Content */}
       <div className="md:pb-10 md:pt-6 bg-gradient-to-b from-[#1b5632] via-[#195334] to-[#01205d] text-white">
-        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 pt-8 md:py-8">BUILDING AFRICA’S DEFENSES: ADVANCING GENOMIC SEQUENCING TO ENSURE PUBLIC HEALTH SECURITY</MainHeading>
+        <MainHeading className="text-white max-w-7xl mx-auto text-left px-6 md:px-12 pt-8 md:py-8">
+          BUILDING AFRICA’S DEFENSES: ADVANCING GENOMIC SEQUENCING TO ENSURE
+          PUBLIC HEALTH SECURITY
+        </MainHeading>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-4 md:py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
-            <AnimatedHeading linecolor="white">Genomic Sequencing: A Game-Changing Innovation for Disease Surveillance in Africa</AnimatedHeading>
+            <AnimatedHeading linecolor="white">
+              Genomic Sequencing: A Game-Changing Innovation for Disease
+              Surveillance in Africa
+            </AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
             <p className="text-base md:text-lg">
-              Major infectious disease outbreaks around the globe in recent years have underscored the urgent need to strengthen laboratory and surveillance capabilities through genomic sequencing in
-              order to track and mitigate the spread of disease.<sup>1</sup> With more disease outbreaks than any other region globally,<sup>2</sup> Africa reported 148 health emergencies in 2023,
-              despite representing only 17% of the global population. Africa’s vulnerability to the spread of infectious disease epidemics is driven by various factors, including climatic and
-              ecological conditions that harbor pathogens and their vectors as well as frequent movements of people, commodities, animals and animal products across national and international borders.
+              Major infectious disease outbreaks around the globe in recent
+              years have underscored the urgent need to strengthen laboratory
+              and surveillance capabilities through genomic sequencing in order
+              to track and mitigate the spread of disease.<sup>1</sup> With more
+              disease outbreaks than any other region globally,<sup>2</sup>{" "}
+              Africa reported 148 health emergencies in 2023, despite
+              representing only 17% of the global population. Africa’s
+              vulnerability to the spread of infectious disease epidemics is
+              driven by various factors, including climatic and ecological
+              conditions that harbor pathogens and their vectors as well as
+              frequent movements of people, commodities, animals and animal
+              products across national and international borders.
               <sup>3</sup>
             </p>
           </div>
@@ -69,7 +83,11 @@ export default function LandingDefenses() {
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
           <div className="lg:col-span-12 order-3 mt-6">
             <div className="w-full h-64 md:h-80 relative">
-              <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/JKG_0940.webp" alt="JEAP Partnership Meeting" className="w-full h-full object-cover object-left-top rounded-lg" />
+              <img
+                src="/assets/blog/case-studies/Building_Africa_Defenses/webp/JKG_0940.webp"
+                alt="JEAP Partnership Meeting"
+                className="w-full h-full object-cover object-left-top rounded-lg"
+              />
             </div>
           </div>
         </div>

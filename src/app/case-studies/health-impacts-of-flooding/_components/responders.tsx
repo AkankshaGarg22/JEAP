@@ -34,7 +34,7 @@ export default function Responders() {
           </div>
         </div>
 
-        <div className="w-full p-4 pb-8 md:pt-8 md:pb-16">
+        <div className="w-full p-4 pb-8 md:pb-16">
           <Paragraph className="bg-[#386d64] p-4 lg:p-8  text-white">
             Continuing to invest in Africa’s frontline responders will be essential to addressing public health emergencies across the continent. As climate change increases the frequency and severity
             of extreme weather events, the time is now to prepare. People, including responders and the communities they serve, must be at the center of preparedness.

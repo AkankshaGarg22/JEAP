@@ -115,7 +115,7 @@ const TextSectionFour = () => {
               </Paragraph>
             </div>
 
-            <div className="lg:w-[55%] w-full h-auto flex items-center justify-center">
+            <div className="lg:w-[58%] w-full h-auto flex items-center justify-center">
               <img
                 src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WHO_Malawi-146985.webp"
                 alt="WHO Malawi"

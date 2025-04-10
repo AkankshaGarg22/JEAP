@@ -3,6 +3,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Reports() {
+
+  const goToReport = (link: string) => {
+    window.location.href = link
+  }
   return (
     <div className="h-screen xl:h-screen flex flex-col bg-cover xl:bg-cover bg-no-repeat bg-mb-partner-curve bg-top md:bg-xl-about-curve z-[200]">
       <div className="w-full flex text-center justify-center items-center basis-1/4 xs:basis-1/5 md:basis-1/4 xl:basis-1/4 2xl:basis-1/3 flex flex-col items-center mb-2 xs:mb-4 md:mt-8 gap-2 xl:gap-2 text-center text-white md:pt-8 ">
@@ -24,8 +28,8 @@ export default function Reports() {
       </div>
 
       {/* Text container with white text and a yellow pseudo-element */}
-      <div className="p-4 relative lg:w-[40%] sm:w-[80%] flex items-center justify-center">
-        <p className="custom-text">Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security</p>
+      <div className="p-4 relative lg:w-[40%] sm:w-[80%] flex items-center justify-center cursor-pointer">
+        <p onClick={() => goToReport('/case-studies/building-africa-defenses')} className="custom-text">Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security</p>
       </div>
     </div>
     </div>

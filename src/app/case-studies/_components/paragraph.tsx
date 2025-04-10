@@ -21,7 +21,7 @@ const wrapNumericSequencesWithStrong = (input: ReactNode): ReactNode => {
 
     input.replace(regex, (match, group, offset) => {
       parts.push(input.slice(lastIndex, offset));
-      parts.push(<strong key={offset}>{group}</strong>);
+      parts.push(<strong className="text-[1.5rem]" key={offset}>{group}</strong>);
       lastIndex = offset + group.length;
       return match;
     });
