@@ -8,7 +8,7 @@ export default function AcceleratingEmergency() {
         <div className="md:w-[45%] h-full flex flex-col justify-center items-start md:p-4 gap-12 ">
           <img
             className="w-full h-full object-contain"
-            src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Habinshuti M.Gorette_3L7A0736.webp"
+            src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Habinshuti M.Gorette_3L7A0736.jpg"
             alt="Accelrating Emergency"
           />
         </div>
