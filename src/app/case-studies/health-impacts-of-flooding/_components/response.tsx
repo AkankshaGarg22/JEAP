@@ -8,7 +8,7 @@ export default function Response() {
       <div className="flex flex-col md:flex-row items-start justify-center md:justify-between mb-4 md:mb-8 px-2 md:px-4">
         <div className="md:w-[30%] h-full flex flex-col items-stretch justify-start px-4 py-2 md:p-4">
           <AnimatedHeading linecolor="black" className="mb-4 text-balance">
-            THE RESPONSE: A PRE-ESTABLISHED, MULTI-DISCIPLINARY TEAM OF EMERGENCY EXPERTS LED THE RESPONSE.
+          The Response: A Pre-Established, Multi-Disciplinary Team of Emergency Experts Led the Response.
           </AnimatedHeading>
         </div>
 

@@ -9,6 +9,16 @@ import Paragraph from "../../_components/paragraph";
 export default function Landing() {
   return (
     <section className="min-h-screen bg-white">
+  <div className="fixed top-0 left-0 w-full z-[99999999999] flex justify-end px-4 py-2 bg-transparent">
+  <Link
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200 shadow-[-2px_2px_0px_0px_#000000]"
+  >
+    <span className="text-xl font-bold flex items-center translate-y-[-2px]">←</span>
+    <span className="hidden md:inline font-semibold leading-none">BACK</span>
+  </Link>
+</div>
+
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[30vh] md:h-[50vh] lg:h-[80vh] relative">
@@ -16,16 +26,6 @@ export default function Landing() {
           <Image className="block md:hidden" src="/assets/blog/case-studies/banner/1.jpg" alt="JEAP Partnership Members" layout="fill" objectFit="cover" priority />
 
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1b5632]"></div>
-                        {/* Sticky Top-Right Button */}
-                <div className="sticky top-0 z-50 flex justify-end px-4 py-2 bg-transparent">
-                  <Link
-                    href="#"
-                    className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-green-400 text-white hover:bg-white hover:text-green-600 transition-all duration-200"
-                  >
-                    <span className="hidden md:inline font-semibold">BACK</span>
-                    <span className="text-xl font-bold">←</span>
-                  </Link>
-                </div>
           {/* Hero Text */}
           {/* <div className="absolute bottom-10 w-full">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -41,7 +41,7 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-4 md:py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-1">
-            <AnimatedHeading linecolor="white">THE JEAP PARTNERSHIP'S COMMON AFRICA APPROACH TO THE PANDEMIC FUND</AnimatedHeading>
+            <AnimatedHeading linecolor="white">The JEAP Partnership's Common Africa Approach to the Pandemic Fund</AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}

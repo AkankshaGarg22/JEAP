@@ -9,6 +9,17 @@ import Link from "next/link";
 export default function Landing() {
   return (
     <section className="min-h-screen bg-white">
+
+<div className="fixed top-0 left-0 w-full z-[99999999999] flex justify-end px-4 py-2 bg-transparent">
+  <Link
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200 shadow-[-2px_2px_0px_0px_#000000]"
+  >
+    <span className="text-xl font-bold flex items-center translate-y-[-2px]">←</span>
+    <span className="hidden md:inline font-semibold leading-none">BACK</span>
+  </Link>
+</div>
+
       {/* Main Hero Section with Overlay Text */}
       <div className="relative">
         <div className="w-full h-[30vh] md:h-[50vh] lg:h-[80vh] relative">
@@ -18,7 +29,7 @@ export default function Landing() {
       <div className="sticky top-0 z-50 flex justify-end px-4 py-2 bg-transparent">
         <Link
           href="#"
-          className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-green-400 text-white hover:bg-white hover:text-green-600 transition-all duration-200"
+          className="flex items-center gap-2 px-4 py-2 rounded-md border border-green-600 bg-[#386d64] text-white hover:bg-white hover:text-[#386d64] transition-all duration-200"
         >
           <span className="hidden md:inline font-semibold">BACK</span>
           <span className="text-xl font-bold">←</span>
@@ -47,7 +58,7 @@ export default function Landing() {
           </SubHeading>
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-4 order-2">
-            <AnimatedHeading linecolor="white">THE SITUATION: CONGO HIT HARD BY FLOODING AS CLIMATE-RELATED DISASTERS RISE ACROSS THE CONTINENT.</AnimatedHeading>
+            <AnimatedHeading linecolor="white">The Situation: Congo Hit Hard by Flooding as Climate-Related Disasters Rise Across the Continent.</AnimatedHeading>
           </div>
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}

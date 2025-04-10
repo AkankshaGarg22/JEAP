@@ -17,7 +17,7 @@ export default function Impact() {
         {/* Text Section */}
         <div className="bg-gradient-to-b col-span-4 from-[#00205C] to-[#1A5632] p-4 py-8 md:px-0 md:pl-40 md:py-20 text-white">
           <AnimatedHeading linecolor="white" className="w-[90%]">
-            THE IMPACT: MORE THAN 2,000 PATIENTS IN FLOOD-AFFECTED COMMUNITIES RECEIVED ESSENTIAL HEALTH CARE AND SERVICES, CONGO SAW ZERO FLOOD-RELATED DISEASE OUTBREAKS.
+          The Impact: More Than 2,000 Patients in Flood-Affected Communities Received Essential Health Care and Services, Congo Saw Zero Flood-Related Disease Outbreaks.
           </AnimatedHeading>
           <Paragraph className="md:pr-2 pt-8 md:w-[90%]">
             The strategic deployment of nine mobile clinics staffed by expert professionals was pivotal in delivering critical, life-saving healthcare services. Cumulatively, the clinics reached 2,000

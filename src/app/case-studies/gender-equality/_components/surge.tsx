@@ -7,8 +7,7 @@ export default function Surge() {
       <div className="flex flex-col md:flex-row items-start justify-center md:justify-between mb-4 md:mb-8 px-2 md:px-4">
         <div className="md:w-[30%] h-full flex flex-col items-stretch justify-start px-4 py-2 md:p-4">
           <AnimatedHeading linecolor="black" className="mb-4 text-balance">
-            AVOHC-SURGE PRIORITIZES GENDER PARITY AT ALL LEVELS – FROM FRONTLINE
-            WORKERS TO TECHNICAL LEADERSHIP
+          AVOHC-SURGE Prioritizes Gender Parity at All Levels – From Frontline Workers to Technical Leadership
           </AnimatedHeading>
         </div>
 

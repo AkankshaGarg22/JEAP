@@ -8,7 +8,7 @@ const TextSectionOne = () => {
     <div className="flex w-full h-auto flex-col bg-white items-center justify-center">
         <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex lg:flex-row flex-col gap-4 items-center justify-center py-12">
             <div className="lg:w-[30%] w-full ">
-                <AnimatedHeading linecolor="black" className="font-bold lg:w-[40%]">WHAT IS GENOMIC SEQUENCING?</AnimatedHeading>
+                <AnimatedHeading linecolor="black" className="font-bold lg:w-[40%]">What is Genomic Sequence?</AnimatedHeading>
             </div>
             <div className="lg:w-[60%] w-full">
                 <Paragraph>
@@ -33,7 +33,7 @@ const TextSectionOne = () => {
       <div className="w-full h-auto flex justify-center items-center py-12">
         <div className="lg:max-w-7xl mx-auto w-full h-auto flex flex-col lg:flex-row gap-4  items-center justify-between">
          <div className="lg:w-[30%] w-[90%] ">
-                <AnimatedHeading linecolor="black" className="font-bold ">MISSED OPPORTUNITIES LESSONS LEARNED FROM EBOLA AND COVID-19 OUTBREAKS?</AnimatedHeading>
+                <AnimatedHeading linecolor="black" className="font-bold ">Missed Opportunities Lessons Learned From EBOLA and COVID-19 Outbreaks</AnimatedHeading>
             </div>
             <div className="lg:w-[60%] w-[90%]">
                <Paragraph>

@@ -13,7 +13,7 @@ export default function Map() {
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 py-10">
           <div className="md:w-[50%] h-full flex flex-col justify-between">
             <AnimatedHeading linecolor="black" width="20%">
-              LEGEND
+              Legend
             </AnimatedHeading>
             <img
               className="w-[80%] object-contain mt-[-10%]"
@@ -51,7 +51,7 @@ export default function Map() {
           </div>
           <div className="md:w-[50%] h-full flex flex-col justify-between">
             <AnimatedHeading linecolor="black" width="20%">
-              LEGEND
+              Legend
             </AnimatedHeading>
             <img
               className="w-[80%] object-contain mt-[-10%]"
@@ -77,7 +77,7 @@ export default function Map() {
           </div>
           <div className="md:w-[50%] h-full flex flex-col justify-between">
             <AnimatedHeading linecolor="black" width="20%">
-              LEGEND
+              Legend
             </AnimatedHeading>
             <img
               className="w-[80%] object-contain mt-[-10%]"
@@ -97,7 +97,7 @@ export default function Map() {
           </div>
           <div className="md:w-[50%] h-full flex flex-col justify-between">
             <AnimatedHeading linecolor="black" width="20%">
-              LEGEND
+              Legend
             </AnimatedHeading>
             <img
               className="w-[80%] object-contain mt-[-10%]"

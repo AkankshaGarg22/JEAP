@@ -20,7 +20,7 @@ export default function OslApproach() {
         <div className="w-[80%] mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12">
         <div className="block md:hidden container mx-auto pt-8">
           <AnimatedHeading linecolor="white" fontSize="1.2rem">
-            INSTITUTIONAL PARTNERSHIPS AT THE CENTER OF THE JEAP’S OSL APPROACH
+          Institutional Partnerships at the Center of the JEAP’s OSL Approach
           </AnimatedHeading>
         </div>
           <Paragraph className="py-8 md:py-12 col-span-8 order-1">
@@ -43,8 +43,7 @@ export default function OslApproach() {
             <div className="hidden md:block relative w-full bg-[#386d64] text-white p-8 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:-translate-x-full before:border-t-[25px] before:border-b-[25px] before:border-r-[25px] before:border-t-transparent before:border-b-transparent before:border-r-[#386d64]">
               <div className="container mx-auto">
                 <AnimatedHeading linecolor="white">
-                  INSTITUTIONAL PARTNERSHIPS AT THE CENTER OF THE JEAP’S OSL
-                  APPROACH
+                Institutional Partnerships at the Center of the JEAP’s OSL Approach
                 </AnimatedHeading>
               </div>
             </div>

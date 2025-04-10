@@ -15,8 +15,7 @@ export default function AcceleratingEmergency() {
 
         <div className="md:w-[50%] h-full flex flex-col items-start md:p-4 md:gap-12 gap-8">
           <AnimatedHeading linecolor="black" width="20%" className="">
-            ACCELERATING EMERGENCY RESPONSE TIME: A CLOSER LOOK AT THE NAIROBI
-            RESPONSE HUB
+          Accelerating Emergency Response Time: A Closer Look at the Nairobi Response Hub
           </AnimatedHeading>
 
           <Paragraph>
