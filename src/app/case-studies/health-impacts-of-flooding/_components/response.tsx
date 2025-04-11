@@ -4,7 +4,7 @@ import TranslucentBox from "../../_components/textWhiteBox";
 
 export default function Response() {
   return (
-    <section className="max-w-7xl mx-auto  my-12">
+    <section className="max-w-7xl mx-auto md:my-12 my-4">
       <div className="flex flex-col md:flex-row items-start justify-center md:justify-between mb-4 md:mb-8 px-2 md:px-4">
         <div className="md:w-[30%] h-full flex flex-col items-stretch justify-start px-4 py-2 md:p-4">
           <AnimatedHeading linecolor="black" className="mb-4 text-balance">
@@ -28,7 +28,7 @@ export default function Response() {
         <img className="h-full w-full object-cover object-center" src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/2.webp" alt="JEAP Surge" />
       </div>
 
-      <div className="bg-gradient-to-t from-[#1D5539] to-[#1E2859] mt-12">
+      <div className="bg-gradient-to-t from-[#1D5539] to-[#1E2859] md:mt-12 mt-4">
         <TranslucentBox
           text="Consecutively,** in January 2024**, the AVoHC-SURGE team was called into action for the third time, with the technical support of WHO and partners.** Within 48 hours**, the team activated to lead a swift response, developing a multi-sectoral plan and conducting strategic activities to evaluate and mitigate the flood’s health impacts."
           backgroundColor="rgba(255, 255, 255, 0)"

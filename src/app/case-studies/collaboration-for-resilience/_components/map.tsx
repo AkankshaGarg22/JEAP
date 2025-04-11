@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Map() {
   return (
-    <section className="max-w-7xl mx-auto px-2 md:px-12 mb-12">
+    <section className="max-w-7xl mx-auto px-2 md:px-12 md:mb-12 mb-4">
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 md:gap-0 mb-8">
         <div className="md:w-[50%] h-full flex flex-col justify-between">
           <AnimatedHeading linecolor="black" className="w-full md:w-[70%]">

@@ -7,7 +7,7 @@ const TextSectionFour = () => {
   return (
     <>
       {/* Close Partenership */}
-      <div className="bg-white flex w-full flex-col gap-6 items-center justify-center py-12">
+      <div className="bg-white flex w-full flex-col gap-6 items-center justify-center md:py-12 py-4">
         <Paragraph className="lg:max-w-7xl mx-auto w-[90%]">
           The close working partnership between Africa CDC and WHO allows for
           highly coordinated and complementary support to the network. Africa
@@ -32,8 +32,8 @@ const TextSectionFour = () => {
         </Paragraph>
       </div>
       {/* EQUIPPING AND TRAINING */}
-      <div className="bg-gradient-to-t from-[#1E2859] to-[#1D5539] w-full h-auto flex items-center justify-center py-12">
-        <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col lg:flex-row gap-12 justify-center items-start ">
+      <div className="bg-gradient-to-t from-[#1E2859] to-[#1D5539] w-full h-auto flex items-center justify-center md:py-12 py-4">
+        <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col lg:flex-row md:gap-12 gap-4 justify-center items-start ">
           <div className="lg:w-[35%] w-full flex items-center justify-center">
             <AnimatedHeading
               linecolor="white"
@@ -58,7 +58,7 @@ const TextSectionFour = () => {
 
       <div className="bg-white flex w-full flex-col items-center justify-center">
         {/* APHL */}
-        <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center py-12">
+        <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center md:py-12 py-4">
           <div className="lg:w-[35%] w-full h-auto lg:h-[350px]">
             <img
               src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-test-tubes-with-blood-desk-laboratory.webp"
@@ -79,7 +79,7 @@ const TextSectionFour = () => {
         </div>
 
         {/* Seychelles and Lesotho */}
-        <div className="lg:p-16 lg:max-w-7xl mx-auto w-full bg-gradient-to-t from-[#1E2859] to-[#1D5539] flex flex-col items-center justify-center py-12">
+        <div className="lg:p-16 lg:max-w-7xl mx-auto w-full bg-gradient-to-t from-[#1E2859] to-[#1D5539] flex flex-col items-center justify-center md:py-12 py-4">
           <Paragraph className="text-white pb-6 w-[90%]">
             WHO also trained experts in Seychelles and Lesotho on using the
             Oxford Nanopore Technology (ONT) sequencing device, which is a
@@ -94,14 +94,14 @@ const TextSectionFour = () => {
           </Paragraph>
           <img
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/Habimana Jean Pierre_3L7A0512.webp"
-            className="lg:h-[550px] lg:w-[100%] w-[90%] h-auto object-cover object-center pt-6"
+            className="lg:h-[550px] lg:w-[100%] w-[90%] h-auto object-cover object-center md:pt-6"
           ></img>
         </div>
 
         {/* Seychelles and Lesotho */}
-        <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col bg-white items-center justify-center py-12">
-          <div className="w-full flex items-start justify-between flex-col lg:flex-row gap-10">
-            <div className="lg:w-[30%] w-[full] flex items-center justify-center flex-col gap-10">
+        <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col bg-white items-center justify-center md:py-12 py-4">
+          <div className="w-full flex items-start justify-between flex-col lg:flex-row md:gap-10 gap-4">
+            <div className="lg:w-[30%] w-[full] flex items-center justify-center flex-col md:gap-10 gap-4">
               <AnimatedHeading linecolor="black">
               Impact on the Ground:<br />
               Genomic Surveillance in Recent Outbreaks
@@ -124,7 +124,7 @@ const TextSectionFour = () => {
             </div>
           </div>
 
-          <div className="lg:max-w-7xl mx-auto w-full flex items-center justify-center pt-8">
+          <div className="lg:max-w-7xl mx-auto w-full flex items-center justify-center md:pt-8 pt-4">
             <Paragraph>
               At the onset of the COVID-19 pandemic, only seven African
               countries – Kenya, Nigeria, Senegal, South Africa, Egypt, Morocco,
@@ -140,8 +140,8 @@ const TextSectionFour = () => {
       <Chart />
 
       {/* GLobal genomic survellience strategy */}
-      <div className="w-full h-auto bg-transparent flex items-center justify-center py-12">
-        <div className="lg:max-w-7xl mx-auto w-[90%] h-auto bg-white flex flex-col gap-10 items-center justify-center">
+      <div className="w-full h-auto bg-transparent flex items-center justify-center md:py-12 py-4">
+        <div className="lg:max-w-7xl mx-auto w-[90%] h-auto bg-white flex flex-col md:gap-10 gap-4 items-center justify-center">
           <div className="w-full flex items-center justify-center">
             <Paragraph className="w-full">
               These countries are now sharing their genetic sequence data

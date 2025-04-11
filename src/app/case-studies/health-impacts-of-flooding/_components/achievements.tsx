@@ -59,7 +59,7 @@ export default function Achievements() {
   };
 
   return (
-    <div className="w-full px-4 pt-8 bg-[#F0ECE1] mt-24">
+    <div className="w-full px-4 pt-8 bg-[#F0ECE1] md:mt-24 mt-4">
       <h2 className="text-2xl text-center font-bold text-blue-900 mb-12">Actions and key achievements of the flooding response included:</h2>
 
       {/* Mobile view - vertical list */}

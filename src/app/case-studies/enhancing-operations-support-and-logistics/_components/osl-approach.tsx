@@ -6,7 +6,7 @@ import AnimatedHeading from "../../_components/AnimatedHeading";
 export default function OslApproach() {
   return (
     <section className="min-h-screen bg-white">
-      <div className=" md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
+      <div className="py-4 md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
         <div className="relative h-full w-full mx-auto flex justify-center">
         <img src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/osl-approach-partnership.jpg" alt="Logistic support" className="h-full w-[80%] md:mt-[-10%] md:h-[40rem] object-cover" />
 
@@ -19,13 +19,13 @@ export default function OslApproach() {
           /> */}
         </div>
 
-        <div className="w-[80%] mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12">
+        <div className="md:w-[80%] px-6 md:px-0 mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12">
         <div className="block md:hidden container mx-auto pt-8">
           <AnimatedHeading linecolor="white" fontSize="1.2rem">
           Institutional Partnerships at the Center of the JEAP’s OSL Approach
           </AnimatedHeading>
         </div>
-          <Paragraph className="py-8 md:pt-12 md:pb-0 col-span-8 order-1">
+          <Paragraph className="py-4 md:py-8 md:pt-12 md:pb-0 col-span-8 order-1">
             In addition to forging an innovative partnership with one another,
             the JEAP partners<sup>3</sup> are helping to facilitate new partnerships
             between governments, airlines, transport companies, and other
