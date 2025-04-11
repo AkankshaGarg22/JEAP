@@ -15,11 +15,11 @@ export default function Expertise() {
         <div className="w-full">         
 
           {/* Content section with gradient background */}
-          <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] pb-10 md:pt-10 relative z-0">
+          <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] md:pb-10 pb-4 md:pt-10 relative z-0">
           <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
             <img src={imageUrl} alt="Featured image" className="w-full object-cover md:h-[40rem] h-[30rem] relative" />
           </div>
-            <div className="max-w-7xl mx-auto md:flex flex-row gap-28 pt-10 min-h-96 px-8 md:px-0">
+            <div className="max-w-7xl mx-auto md:flex flex-row gap-28 md:pt-10 pt-4 min-h-96 px-6 md:px-0">
               <div className="md:w-[20%] w-[80%]">
                 <AnimatedHeading linecolor="white" className="text-white">
                 {title}

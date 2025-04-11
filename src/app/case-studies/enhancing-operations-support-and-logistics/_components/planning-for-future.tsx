@@ -10,7 +10,7 @@ export default function PlanningForFuture() {
     <section className="min-h-screen bg-white">
       {/* Main Content */}
       <div className=" md:py-10  bg-gradient-to-b  from-[#01205d] via-[#195334] to-[#1b5632] text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-8 md:px-12 py-8 md:py-0">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-0">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
           <div className="lg:col-span-3 order-2">
             <AnimatedHeading linecolor="white">

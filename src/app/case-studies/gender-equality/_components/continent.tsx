@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Continent() {
   return (
-    <section className="max-w-7xl mx-auto my-12">
+    <section className="max-w-7xl mx-auto md:my-12 my-4">
       <div className="flex flex-col md:flex-row items-stretch justify-center md:justify-between gap-4 md:gap-0 mb-4">
         <div className="md:w-[50%] h-full flex flex-col justify-center items-start p-4 gap-12 ">
           <AnimatedHeading linecolor="black" className="w-1/2">

@@ -113,7 +113,7 @@ export default function Landing() {
               <TranslucentBox
                 text="Today, Africa is witnessing continent-wide outbreaks of other diseases such as yellow fever, ongoing challenges with cholera and Mpox, persistent polio transmission despite global eradication efforts, and concerning spikes in dengue and measles. The frequency of these disease outbreaks is further worsened by the impact of climate change and conflict, oftentimes generating full-blown humanitarian crises. This reality illustrates the urgent need for Operations Support and Logistics (OSL) support in effective public health emergency responses to ensure the timely delivery of vital resources, personnel, and equipment to those most affected."
                 backgroundColor="rgba(255, 255, 255, 0)"
-                className="font-[15px] text-white font-ArialRegular"
+                className="text-white font-ArialRegular"
               />
             </div>
           </div>

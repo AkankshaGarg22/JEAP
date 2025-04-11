@@ -45,7 +45,7 @@ export default function Impact() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white py-12">
+    <section className="w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white md:py-12 py-4">
       <div className="max-w-7xl mx-auto mb-8 pb-4 flex-col md:flex-row flex gap-4 lg:gap-4 lg:justify-between px-4 border-b lg:border-0 lg:px-12">
         <div className="w-[40%] md:w-[15%]">
           <AnimatedHeading linecolor="white">

@@ -3,7 +3,7 @@ import SubHeading from "../../_components/sub-heading";
 
 export default function References() {
   return (
-    <section className="max-w-7xl mx-auto px-4 my-12 break-words">
+    <section className="max-w-7xl mx-auto px-4 md:my-12 my-4 break-words">
       <div className="w-full flex flex-col gap-4 justify-between">
         <SubHeading className="w-[30%]">References</SubHeading>
 

@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Impact() {
   return (
-    <section className="flex justify-end w-full bg-white my-12 md:my-24">
+    <section className="flex justify-end w-full bg-white my-4 md:my-24">
       <div className="grid grid-cols-1 md:grid-cols-5 items-center md:gap-6">
         {/* Image Section */}
         <div className="relative w-full md:w-[30rem] col-span-1 h-96 md:h-[80%]">

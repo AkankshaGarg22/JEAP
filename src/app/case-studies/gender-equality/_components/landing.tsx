@@ -49,7 +49,7 @@ export default function Landing() {
         </MainHeading>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-4 md:py-8">
           {/* Subtitle - Full width on mobile, 4/12 on desktop */}
-          <div className="lg:col-span-12 order-1 mb-6">
+          <div className="lg:col-span-12 order-1 md:mb-6">
             <AnimatedHeading linecolor="white" width="20%" className="mb-4">
               Gender Inequalities in the Health Emergency Workforce, Affecting
               Both Frontline Roles and Leadership Positions, Limit Women’s
@@ -93,7 +93,7 @@ export default function Landing() {
           </div>
 
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
-          <div className="lg:col-span-5 order-3 mt-6">
+          <div className="lg:col-span-5 order-3 md:mt-6">
             <div className="w-full h-64 md:h-full relative">
               <img
                 src="/assets/blog/case-studies//Gender_equality/Webp_format/2.webp"
@@ -103,7 +103,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 order-4 mt-6">
+          <div className="lg:col-span-7 order-4 md:mt-6">
             <Paragraph>
               Such gender disparities in the health workforce affect emergency
               response strategies, policies and programs - ultimately weakening

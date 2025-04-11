@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function AcceleratingEmergency() {
   return (
-    <section className="max-w-7xl mx-auto my-4 md:my-0 px-8 md:px-0">
+    <section className="max-w-7xl mx-auto my-4 md:my-0 px-6 md:px-0">
       <div className="flex flex-col md:flex-row items-stretch justify-center md:justify-between gap-4 md:gap-0 md:mb-12">
         <div className="md:w-[50%] h-full flex flex-col justify-center items-start md:p-4 gap-12 ">
           <img
@@ -13,7 +13,7 @@ export default function AcceleratingEmergency() {
           />
         </div>
 
-        <div className="md:w-[50%] h-full flex flex-col items-start md:p-4 md:gap-12 gap-8">
+        <div className="md:w-[50%] h-full flex flex-col items-start md:p-4 md:gap-12 gap-4">
           <AnimatedHeading linecolor="black" width="20%" className="">
           Accelerating Emergency Response Time: A Closer Look at the Nairobi Response Hub
           </AnimatedHeading>

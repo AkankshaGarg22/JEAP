@@ -6,7 +6,7 @@ const TextSectionOne = () => {
   return (
     <>
     <div className="flex w-full h-auto flex-col bg-white items-center justify-center">
-        <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex lg:flex-row flex-col gap-4 items-center justify-center py-12">
+        <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex lg:flex-row flex-col gap-4 items-center justify-center md:py-12 py-4">
             <div className="lg:w-[30%] w-full ">
                 <AnimatedHeading linecolor="black" className="font-bold lg:w-[40%]">What is Genomic Sequence?</AnimatedHeading>
             </div>
@@ -30,7 +30,7 @@ const TextSectionOne = () => {
         
     </div>
 {/* 2013-2016 Ebola Outbreak */}
-      <div className="w-full h-auto flex justify-center items-center py-12">
+      <div className="w-full h-auto flex justify-center items-center md:py-12 py-4">
         <div className="lg:max-w-7xl mx-auto w-full h-auto flex flex-col lg:flex-row gap-4  items-center justify-between">
          <div className="lg:w-[30%] w-[90%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">Missed Opportunities Lessons Learned From EBOLA and COVID-19 Outbreaks</AnimatedHeading>

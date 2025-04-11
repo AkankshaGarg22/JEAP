@@ -4,7 +4,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Responders() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] my-12 md:mt-24 md:mb-12">
+    <section className="relative w-full bg-gradient-to-br from-[#00205C] to-[#1A5632] my-4 md:mt-24 md:mb-12">
       {/* Content Container */}
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col-reverse lg:flex-row lg:items-stretch lg:justify-between lg:my-4 ">

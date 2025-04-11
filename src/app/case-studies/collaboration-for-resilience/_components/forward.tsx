@@ -3,7 +3,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function Forward() {
   return (
-    <section className="max-w-7xl mx-auto bg-white my-20 sm:px-10">
+    <section className="max-w-7xl mx-auto bg-white my-4 md:my-20 sm:px-10">
       <div className="grid grid-cols-1 md:grid-cols-5 items-center md:gap-6">
         {/* Image Section */}
         <div className="relative w-full md:w-[22rem] col-span-1 h-96 md:h-[28rem]">

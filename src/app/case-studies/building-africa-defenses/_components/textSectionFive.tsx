@@ -6,7 +6,7 @@ const TextSectionFive = () => {
   return (
     <>
         {/*WHO EMR*/}
-       <div className="w-full h-auto flex items-center justify-center py-12"> 
+       <div className="w-full h-auto flex items-center justify-center md:py-12 py-4"> 
         <div className="lg:max-w-7xl mx-auto w-[90%] h-auto bg-white flex flex-col items-center justify-center gap-6">
             <Paragraph>To further bolster these efforts, WHO EMR Office established three regional genomic sequencing hubs including one in Morocco providing extensive support and trainings. These initiatives not only strengthened COVID-19 surveillance but also expanded national next-generation sequencing (NGS) capabilities to other diseases, such as Influenza, Crimean-Congo hemorrhagic fever (CCHF), dengue, cholera, and others, with countries like Sudan receiving specialized training. </Paragraph>
 
@@ -17,7 +17,7 @@ const TextSectionFive = () => {
        </div>
 
 {/* LOOKING AHEAD: EXPANDING THE LABORATORY NETWORK AND PILOTING USE CASES FOR GENOMIC AND EPIDEMIOLOGICAL EVIDENCE IN PUBLIC HEALTH DECISION-MAKING */}
-       <div className="w-full h-auto flex flex-col gap-12 items-center justify-center py-12 bg-gradient-to-t from-[#1E2859] to-[#1D5539]">
+       <div className="w-full h-auto flex flex-col md:gap-12 gap-4 items-center justify-center md:py-12 py-4 bg-gradient-to-t from-[#1E2859] to-[#1D5539]">
             <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col gap-8 lg:flex-row lg:items-start items-center justify-center">
                 <div className="lg:w-[35%] w-full flex items-center justify-center">
                 <AnimatedHeading linecolor='white' className="text-white ">Looking Ahead: Expanding the laborotory Network and Piloting Use Cases For Genomic And Epidemiological Evidence in Public Health Decision-Making</AnimatedHeading>
@@ -37,7 +37,7 @@ const TextSectionFive = () => {
 
        </div>
 {/* CholGen */}
-        <div className="w-full h-auto flex flex-col items-center justify-center py-12">
+        <div className="w-full h-auto flex flex-col items-center justify-center md:py-12 py-4">
             <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex items-center justify-center ">
                 <Paragraph className="text-black">The Africa CDC, for instance, is running several such pilot projects through Africa PGI. The Cholera Genomics Consortium in Africa (“CholGEN”) aims to enhance Cholera genomics in Africa through a collaboration with national public health institutes and national reference laboratories from seven African countries, Johns Hopkins University, and Brigham and Women’s Hospital. The consortium has been working to train and support laboratories and epidemiologists to fill these gaps, leveraging local genomic sequencing capacity built during the COVID-19 pandemic to sequence bacterial isolates from recent cholera outbreaks in each country.</Paragraph>
             </div>
@@ -54,7 +54,7 @@ const TextSectionFive = () => {
       className="w-full h-full object-cover object-center"
     />
   </div>
-  <div className="w-full h-full p-6 lg:p-[8.25%] lg:bg-[#1E2859] flex items-center">
+  <div className="w-full p-2 lg:p-[8.25%] lg:bg-[#1E2859] flex items-center">
     <Paragraph className="lg:text-white">
       Other examples include KlebGEN, a pilot project that aims to strengthen AMR genomic surveillance in nine countries and timely data sharing for evidence-based public health decision-making. Lastly, the DETECT project aims to develop guidance, diagnostic algorithms, training and capacity building to enable outbreak detection, and reporting to inform public health response across 12 countries in Africa.
     </Paragraph>

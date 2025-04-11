@@ -5,7 +5,7 @@ import { BlockQuote } from "../../_components/QuoteSection";
 
 export default function CholeraQuote() {
   return (
-    <section className="bg-white md:pt-14 pt-10 flex flex-col justify-center">
+    <section className="bg-white md:pt-14 pt-4 flex flex-col justify-center">
               <BlockQuote
           quote="The ripple effect of this training is the responders go home and are able to apply what they learnt in Malawi. We are providing this support to the country as a best practice."
           author="Fatima Tafida"
@@ -13,7 +13,7 @@ export default function CholeraQuote() {
           organization="EPR, WHO AFRO."
         ></BlockQuote>
       <div className="relative">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 pt-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-0 grid grid-cols-1 lg:grid-cols-10 md:pt-8 pt-4">
           <Paragraph className="col-span-10">
             Beyond this response in Malawi, the JEAP partners are supporting
             other African countries to fight Cholera. In the first half of 2024,
