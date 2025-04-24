@@ -42,12 +42,12 @@ export default function CapacityBuilding() {
         </div>
 
         <div className="max-w-7xl px-6 md:px-0 mx-auto grid grid-cols-1 lg:grid-cols-10 md:py-4 py-8">
-          <Paragraph className="col-span-10">
+          <p className="col-span-10 text-base md:text-xl md:leading-8">
             The JEAP has prioritized investing in in-person training to build OSL workforce competencies such as forecasting, inventory management, supply chain management, operations support, and
             health logistics. These trainings have by mid-2024 benefited over 125 people, most of whom are government staff. As of June 2024, participants from Ethiopia, ⁠Rwanda, Tanzania, Botswana,
             and Namibia took part in a training in Kenya, while participants from Mauritania, Togo, Senegal and Namibia participated in a training in Senegal. These trainees have since been deployed
             to respond to emergencies both in their country and otherwise.
-          </Paragraph>
+          </p>
         </div>
       </div>
       <BlockQuote

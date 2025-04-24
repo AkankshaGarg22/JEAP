@@ -13,13 +13,13 @@ export default function CholeraOutbreak() {
             <AnimatedHeading linecolor="white">From Training to Practice: A Closer Look at OSL Support to the Cholera Outbreak in Malawi</AnimatedHeading>
           </div>
           <div className="col-span-8 order-2 my-8 md:mt-0">
-            <Paragraph>
+            <p className="text-base md:text-xl md:leading-8">
               In 2023, Cyclone Freddy hit Malawi, triggering a natural disaster and resulting in the deadliest Cholera outbreak the country had ever witnessed. Cyclone Freddy affected over 2 million
               lives, displacing over 659,000 people, injuring over 2000, killing over 650, and resulting in the disappearance of another 500<sup>6</sup>. The protracted Cholera outbreak lasted over 2
               years, with over 59,000 cases reported and over 1,700 deaths<sup>7</sup>. Overall readiness capacity for cholera is limited (48%) across the AFRO region, including in logistics and
               procurement (48%).<sup>8</sup> Such an increase in one country can rapidly spread through the region, as the cyclones and flooding which occurred in Mozambique and Malawi in early 2023
               have been driving factors in the emergence of the disease around the continent.
-            </Paragraph>
+            </p>
           </div>
         </div>
 
@@ -49,14 +49,14 @@ export default function CholeraOutbreak() {
         </div>
 
         <div className=" m-auto grid grid-cols-1 lg:grid-cols-10">
-          <Paragraph className="col-span-12">
+          <p className="text-base md:text-xl md:leading-8 col-span-12">
             Thanks to the rapidly deployed emergency response teams, Malawi’s largest cholera outbreak was declared contained by March 2022. The impact of these response efforts has been long-lasting:
             The number of deaths reported in 2024 have been significantly lower than for the same period in 2023. The Malawian government awarded letters of appreciation to the JEAP workforce, due to
             their impactful emergency response efforts. <br />
             <br /> The OSL experts newly trained by JEAP have been able to apply what they’ve learned from their deployments upon returning to their home countries. In addition, they have shared their
             learnings with OSL teams worldwide: The health logistician from Botswana shared his experience with global audiences at the International Conference on Public Health in Africa (CPHIA) in
             2023.
-          </Paragraph>
+          </p>
         </div>
       </div>
     </section>

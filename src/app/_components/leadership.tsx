@@ -58,7 +58,7 @@ const LeadersArray = [
     //     designation: 'JEAP Focal Point'
     // },
     // {
-    //     image: '/assets/blog/jpgs/mb-curve.jpg',
+    //     image: '/assets/blog/jpgs/Aijana.jpeg',
     //     title: 'Aijana Djusupova',
     //     description: 'Planning Officer, WHO Health Emergencies, WHO EMRO',
     //     link: '',

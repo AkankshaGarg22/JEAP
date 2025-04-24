@@ -15,7 +15,7 @@ export default function Partnership() {
 
         {/* Paragraph - Full width on mobile, 8/12 on desktop */}
         <div className="lg:col-span-8 order-2">
-          <Paragraph>
+          <p className="text-base md:text-xl md:leading-8">
             Recognizing the urgent need to strengthen emergency preparedness and
             response (EPR) in Africa, capacities, the Africa Centres for Disease
             Control and Prevention (Africa CDC) and WHO forged a groundbreaking
@@ -34,7 +34,7 @@ export default function Partnership() {
             mid-2024, OSL efforts have supported COVID-19 response efforts in
             Congo and Gabon, Malaria in Ethiopia, Dengue Fever in Mauritius and
             Diphtheria in Congo and Gabon.
-          </Paragraph>
+          </p>
         </div>
       </div>
     </section>
