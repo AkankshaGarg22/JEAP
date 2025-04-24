@@ -14,11 +14,15 @@ export default function Index() {
   const fetchRSS = async () => {
     try {
       const response = await fetch("/api/rss");
-      const data = await response.json();
-      let uniqueArticles = data.filter((article: Articles, index: number, self: Articles[]) =>
-        index === self.findIndex((a) => a.title === article.title)
-      );
-      setArticles(uniqueArticles);
+      if (response.status === 200) {
+        const data = await response.json();
+        if (data && data.items && data.items.length) {
+          let uniqueArticles = data.items.filter((article: Articles, index: number, self: Articles[]) =>
+            index === self.findIndex((a) => a.title === article.title)
+          );
+          setArticles(uniqueArticles);
+        }
+      }
     } catch (error) {
       console.error('Failed to fetch RSS feed:', error);
     }

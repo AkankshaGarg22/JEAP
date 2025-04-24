@@ -17,12 +17,14 @@ export default function News() {
       const response = await fetch("/api/rss");
       if (response.status === 200) {
         const data = await response.json();
-        const restArticles = data?.slice(1);
-        let uniqueArticles = restArticles.filter((article: Articles, index: number, self: Articles[]) =>
-          index === self.findIndex((a) => a.title === article.title)
-        );
-        setArticles(uniqueArticles);
-        setMainArticle(data[0]);
+        if (data && data.items && data.items.length) {
+          const restArticles = data?.items?.slice(1);
+          let uniqueArticles = restArticles.filter((article: Articles, index: number, self: Articles[]) =>
+            index === self.findIndex((a) => a.title === article.title)
+          );
+          setArticles(uniqueArticles);
+          setMainArticle(data?.items[0]);
+        }
       }
     } catch (error) {
       console.error('Failed to fetch RSS feed:', error);

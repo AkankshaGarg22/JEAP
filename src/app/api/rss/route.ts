@@ -1,7 +1,19 @@
 import Parser from "rss-parser";
 
 export async function GET() {
-    const parser = new Parser({timeout: 5000});
-    const feed = await parser.parseURL("https://www.afro.who.int/rss/featured-news.xml"); // Replace with your RSS feed URL
-    return Response.json(feed.items); // Returns an array of articles
+    const parser = new Parser();
+
+  try {
+    const response = await fetch('https://www.afro.who.int/rss/featured-news.xml', {
+      headers: {
+        'User-Agent': 'Mozilla/5.0',
+      },
+    });
+
+    const xml = await response.text(); // Get raw XML
+    const feed = await parser.parseString(xml); // Parse manually
+    return Response.json(feed);
+  } catch (err: any) {
+    return Response.json({ error: err.message });
+  }
 }
