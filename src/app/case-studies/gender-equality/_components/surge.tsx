@@ -60,7 +60,7 @@ export default function Surge() {
       <div className="w-full h-64 md:h-[40rem]">
         <img
           className="h-full w-full object-cover object-center"
-          src="/assets/blog/case-studies//Gender_equality/Webp_format/3.webp"
+          src="/assets/blog/case-studies//Gender_equality/Webp_format/3.jpg"
           alt="JEAP Surge"
         />
       </div>
