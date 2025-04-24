@@ -15,13 +15,15 @@ export default function News() {
   const fetchRSS = async () => {
     try {
       const response = await fetch("/api/rss");
-      const data = await response.json();
-      const restArticles = data?.slice(1);
-      let uniqueArticles = restArticles.filter((article: Articles, index: number, self: Articles[]) =>
-        index === self.findIndex((a) => a.title === article.title)
-      );
-      setArticles(uniqueArticles);
-      setMainArticle(data[0]);
+      if (response.status === 200) {
+        const data = await response.json();
+        const restArticles = data?.slice(1);
+        let uniqueArticles = restArticles.filter((article: Articles, index: number, self: Articles[]) =>
+          index === self.findIndex((a) => a.title === article.title)
+        );
+        setArticles(uniqueArticles);
+        setMainArticle(data[0]);
+      }
     } catch (error) {
       console.error('Failed to fetch RSS feed:', error);
     }

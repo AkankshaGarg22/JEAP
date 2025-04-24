@@ -6,7 +6,6 @@ import Header from "./header";
 
 export default function HeaderWrapper() {
   const pathname = usePathname();
-  console.log(pathname);
   const hideOnRoutes = "case-studies";
   if (pathname && pathname.includes(hideOnRoutes)) return null;
 

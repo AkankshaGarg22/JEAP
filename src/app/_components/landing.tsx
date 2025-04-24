@@ -123,15 +123,15 @@ export default function Landing({ isVisible }: { isVisible: boolean }) {
 
 
   // Test API
-  useEffect(() => {
-    const fetchMessage = async () => {
-      const response = await fetch('/api/user');
-      const data = await response.json();
-      console.log('serr', data)
-    };
+  // useEffect(() => {
+  //   const fetchMessage = async () => {
+  //     const response = await fetch('/api/user');
+  //     const data = await response.json();
+  //     console.log('serr', data)
+  //   };
 
-    fetchMessage();
-  }, []);
+  //   fetchMessage();
+  // }, []);
 
 
   return (
