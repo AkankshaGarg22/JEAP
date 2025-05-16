@@ -9,15 +9,15 @@ const LeadersArray = [
         designation: 'Principal, JEAP'
     },
     {
-        image: '/assets/blog/jpgs/Matshidiso Moeti.webp',
-        title: 'Dr Matshidiso Moeti',
-        description: 'Regional Director, WHO AFRO',
-        link: 'https://www.afro.who.int/regional-director/biography',
+        image: '/assets/blog/jpgs/Dr Chikwe Ihekweazu_ADG WHO 1_crop.webp',
+        title: 'Dr Chikwe Ihekweazu',
+        description: 'Regional Director a.i., WHO AFRO',
+        link: 'https://www.afro.who.int/node/20675',
         designation: 'Principal, JEAP'
     },
     {
-        image: '/assets/blog/jpgs/Dr Ahmed Zouiten.jpg',
-        title: 'Dr Ahmed Zouiten',
+        image: '/assets/blog/jpgs/Hanan Balkhy.webp',
+        title: 'Dr Hanan Balkhy',
         description: 'Regional Director, WHO EMRO',
         link: '',
         designation: 'Principal, JEAP'
@@ -37,33 +37,33 @@ const LeadersArray = [
         designation: 'Steering Committee Member, JEAP'
     },
     {
-        image: '/assets/blog/jpgs/RickBrenan.webp',
-        title: 'Dr Rick Brennan',
-        description: 'Regional Emergency Director, WHO EMRO',
-        link: 'https://www.emro.who.int/about-who/regional-director/rick-brennan-acting-regional-emergency-director.html',
+        image: '/assets/blog/jpgs/Dr Ahmed Zouiten.jpg',
+        title: 'Dr Ahmed Zouiten',
+        description: 'Regional Emergency Director a.i., WHO EMRO',
+        link: '',
         designation: 'Steering Committee Member, JEAP'
     },
-    // {
-    //     image: '/assets/blog/jpgs/landry.jpeg',
-    //     title: 'Dr Landry Dongmo Tsague',
-    //     description: 'Senior Adviser, Africa CDC; UNICEF Senior Health Adviser to the African Union and Economic Commission for Africa.',
-    //     link: '',
-    //     designation: 'JEAP Focal Point'
-    // },
-    // {
-    //     image: '/assets/blog/jpgs/Omalley.jpg',
-    //     title: 'Helena O’Malley',
-    //     description: 'Strategic Support Unit Manager, EPR Cluster, WHO AFRO',
-    //     link: '',
-    //     designation: 'JEAP Focal Point'
-    // },
-    // {
-    //     image: '/assets/blog/jpgs/Aijana.jpeg',
-    //     title: 'Aijana Djusupova',
-    //     description: 'Planning Officer, WHO Health Emergencies, WHO EMRO',
-    //     link: '',
-    //     designation: 'JEAP Focal Point'
-    // },
+    {
+        image: '/assets/blog/jpgs/landry.jpeg',
+        title: 'Dr Landry Dongmo Tsague',
+        description: 'Senior Adviser, Africa CDC; UNICEF Senior Health Adviser to the African Union and Economic Commission for Africa.',
+        link: '',
+        designation: 'JEAP Focal Point'
+    },
+    {
+        image: '/assets/blog/jpgs/Omalley.jpg',
+        title: 'Helena O’Malley',
+        description: 'Strategic Support Unit Manager, EPR Cluster, WHO AFRO',
+        link: '',
+        designation: 'JEAP Focal Point'
+    },
+    {
+        image: '/assets/blog/jpgs/Aijana.jpeg',
+        title: 'Aijana Djusupova',
+        description: 'Planning Officer, WHO Health Emergencies, WHO EMRO',
+        link: '',
+        designation: 'JEAP Focal Point'
+    },
 ]
 
 export function Leadership() {
