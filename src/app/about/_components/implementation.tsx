@@ -61,7 +61,7 @@ const highlightsItem = [
   },
   {
     id: 6,
-    title: "New Collaboration Area",
+    title: "New Collaboration Areas",
     icon: "/assets/blog/about/accordian/6.svg",
     content: [<>Began harmonizing efforts in climate change, digitalization and risk communication and community engagement by establishing Technical Working Groups and Action Plans.</>],
   },

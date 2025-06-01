@@ -4,21 +4,21 @@ import { useState } from "react";
 const arr = [
   {
     id: 1,
-    title: "Climate Change",
-    content:
-      "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches.",
-  },
-  {
-    id: 2,
     title: "Country Assessments",
     content:
       "Since the launch of International Health Regulations (IHR, 2005), Member States across the African continent have invested in strengthening IHR preparedness capacities to enhance detection, prevention, and response to public health emergencies.",
   },
   {
-    id: 3,
-    title: "Digitalization",
+    id: 2,
+    title: "Workforce Development",
     content:
-      "The aftermath of the COVID-19 pandemic highlighted the critical need for technology-driven solutions in Africa's health sector to strengthen countries' ability to promptly prepare for, detect, and respond to health emergencies.",
+      "Human resources are the heart of emergency response, but there continues to be a shortage of trained, equipped emergency responders on the African continent.",
+  },
+  {
+    id: 3,
+    title: "Surveillance",
+    content:
+      "Surveillance systems and technologies across the continent are lacking, with some countries not meeting the Integrated Diseases Surveillance & Response (IDSR) standards, leading to delays in detecting health emergencies.",
   },
   {
     id: 4,
@@ -28,27 +28,27 @@ const arr = [
   },
   {
     id: 5,
-    title: "RCCE",
-    content:
-      "The JEAP recognizes the importance of Improved community preparedness, knowledge, and engagement in responding to health emergencies.",
-  },
-  {
-    id: 6,
     title: "Response readiness",
     content:
       "While most African countries have now established a Public Health Emergency Operations Centre (PHEOC), recent evaluations highlight that implementation capabilities vary.",
   },
   {
-    id: 7,
-    title: "Surveillance",
+    id: 6,
+    title: "Risk Communication and Community Engagement",
     content:
-      "Surveillance systems and technologies across the continent are lacking, with some countries not meeting the Integrated Diseases Surveillance & Response (IDSR) standards, leading to delays in detecting health emergencies.",
+      "The JEAP recognizes the importance of Improved community preparedness, knowledge, and engagement in responding to health emergencies.",
+  },
+  {
+    id: 7,
+    title: "Climate Change",
+    content:
+      "The rise in climate-related disease outbreaks in Africa highlights the urgent need to strengthen health systems through climate-resilient, sustainable, and low-carbon approaches.",
   },
   {
     id: 8,
-    title: "Workforce Development",
+    title: "Digitalization",
     content:
-      "Human resources are the heart of emergency response, but there continues to be a shortage of trained, equipped emergency responders on the African continent.",
+      "The aftermath of the COVID-19 pandemic highlighted the critical need for technology-driven solutions in Africa's health sector to strengthen countries' ability to promptly prepare for, detect, and respond to health emergencies.",
   },
 ];
 

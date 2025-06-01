@@ -35,11 +35,11 @@ export function Footer() {
 
     {/* Column 2: Five Text Links - responsive grid for mobile */}
     <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-4 items-center justify-center text-center font-ArialRegular lg:p-0 pt-4 md:gap-5">
-      <span><a href="/" className="text-sm md:text-lg text-white link-hover">About the JEAP</a></span>
-      <span><a href="/" className="text-sm md:text-lg text-white link-hover">Focus Areas</a></span>
-      <span><a href="/" className="text-sm md:text-lg text-white link-hover">Connect With Us</a></span>
-      <span><a href="/" className="text-sm md:text-lg text-white link-hover">Impact</a></span>
-      <span className="col-span-2 md:col-span-1"><a href="/" className="text-sm md:text-lg text-white link-hover">Resources</a></span>
+      <span><a href="/about" className="text-sm md:text-lg text-white link-hover">About the JEAP</a></span>
+      <span><a href="/focus" className="text-sm md:text-lg text-white link-hover">Focus Areas</a></span>
+      {/* <span><a href="/" className="text-sm md:text-lg text-white link-hover">Connect With Us</a></span> */}
+      <span><a href="/impact" className="text-sm md:text-lg text-white link-hover">Impact</a></span>
+      <span className="col-span-2 md:col-span-1"><a href="/resources" className="text-sm md:text-lg text-white link-hover">Resources</a></span>
     </div>
 
     {/* Column 3: Horizontal Rule */}

@@ -38,7 +38,8 @@ const AlternateContent: React.FC<AlternateContentProps> = ({
         <img
           src={imageSrc}
           alt={text}
-          className="w-[300px] h-[260px]"
+          className="w-[300px] h-[260px] cursor-pointer"
+          onClick={() => goToReport(link)}
         />
       </div>
 

@@ -8,7 +8,7 @@ const TextSectionOne = () => {
     <div className="flex w-full h-auto flex-col bg-white items-center justify-center">
         <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex lg:flex-row flex-col gap-4 items-center justify-center md:py-12 py-4">
             <div className="lg:w-[30%] w-full ">
-                <AnimatedHeading linecolor="black" className="font-bold lg:w-[40%]">What is Genomic Sequence?</AnimatedHeading>
+                <AnimatedHeading linecolor="black" className="font-bold lg:w-[40%]">What is Genomic Sequencing?</AnimatedHeading>
             </div>
             <div className="lg:w-[60%] w-full">
                 <Paragraph>
@@ -37,7 +37,7 @@ const TextSectionOne = () => {
             </div>
             <div className="lg:w-[60%] w-[90%]">
                <Paragraph>
-                The 2013-2016 Ebola outbreak in West Africa was the largest outbreak of Ebola ever recorded since the virus was first discovered, with 28,616 recorded cases and over 11,000 deaths.<sup>7</sup> The spread of this outbreak exposed a multitude of health system shortcomings across West Africa, notably in disease surveillance. Poor capacity to detect and track the disease for several months after onset allowed the virus to spread from Guinea to neighboring Liberia and Sierra Leone, and eventually far beyond the African continent.<sup>8</sup>
+                The 2013-2016 Ebola outbreak in West Africa was the largest outbreak of Ebola ever recorded since the virus was first discovered, with <strong> 28,616 recorded cases </strong> and over <strong>11,000 deaths.</strong><sup>7</sup> The spread of this outbreak exposed a multitude of health system shortcomings across West Africa, notably in disease surveillance. Poor capacity to detect and track the disease for several months after onset allowed the virus to spread from Guinea to neighboring Liberia and Sierra Leone, and eventually far beyond the African continent.<sup>8</sup>
                 </Paragraph>
             </div>
         </div>

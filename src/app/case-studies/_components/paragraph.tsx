@@ -57,7 +57,8 @@ const wrapNumericSequencesWithStrong = (input: ReactNode): ReactNode => {
 const Paragraph: React.FC<TextProps> = ({ children, className = "" }) => {
   return (
     <p className={`text-base md:text-xl md:leading-8 ${className}`}>
-      {wrapNumericSequencesWithStrong(children)}
+      {/* {wrapNumericSequencesWithStrong(children)} */}
+      {children}
     </p>
   );
 };
