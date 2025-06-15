@@ -32,7 +32,7 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden md:flex header-links flex-row items-center gap-4 md:gap-1 md:py-3">
-          {/* <Link href="/about">
+          <Link href="/about">
             <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">ABOUT THE JEAP</h2>
           </Link>
 
@@ -40,18 +40,18 @@ const Header = () => {
             <h2 className="link-hover font-semibold md:text-[12px] xl:text-[14px] ">FOCUS AREAS</h2>
           </Link>
 
-          <Link href="#">
+          {/* <Link href="#">
             <h2 className="link-hover font-semibold md:text-[12px] xl:text-[14px] ">CONNECT WITH US</h2>
-          </Link>
+          </Link> */}
 
-          <Link href="#">
+          <Link href="/impact">
             <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">IMPACT</h2>
           </Link>
 
-          <Link href="#">
+          <Link href="/resources">
             <h2 className="link-hover md:text-[12px] xl:text-[14px] font-semibold">RESOURCES</h2>
-          </Link> */}
-          <AnchorLink href="#mission">
+          </Link>
+          {/* <AnchorLink href="#mission">
             <h2 className="link-hover font-semibold">MISSION</h2>
           </AnchorLink>
 
@@ -61,7 +61,7 @@ const Header = () => {
           <AnchorLink href="#gradedemergencies">
             <h2 className="font-semibold link-hover">EMERGENCIES</h2>
           </AnchorLink>
-          <h2 className="link-hover font-semibold" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</h2>
+          <h2 className="link-hover font-semibold" onClick={() => scrollIntoView('leadership')}>LEADERSHIP</h2> */}
 
         </div>
 
@@ -70,7 +70,7 @@ const Header = () => {
         </div>
         {dropDownOpen && (
           <div className="md:hidden justify-evenly absolute right-[5%] top-[96%] bg-white h-auto flex flex-col items-center z-[-1]">
-            <AnchorLink href="#mission" className={"border-b-2 w-full border-black text-center"}>
+            {/* <AnchorLink href="#mission" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2 ">MISSION</h2>
             </AnchorLink>
             <AnchorLink href="#vision" className={"border-b-2 w-full border-black text-center"}>
@@ -81,27 +81,27 @@ const Header = () => {
             </AnchorLink>
             <AnchorLink href="#leadership" className={"border-b-2 w-full border-black text-center"}>
               <h2 className="px-3 font-semibold pt-2">LEADERSHIP</h2>
-            </AnchorLink>
+            </AnchorLink> */}
 
-            {/* <Link className={"border-b-2 w-full border-black text-center"} href="/about">
+            <Link className={"border-b-2 w-full border-black text-center"} href="/about">
               <h2 className="px-3 font-semibold pt-2">ABOUT THE JEAP</h2>
             </Link>
 
-            <Link className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="/focus">
               <h2 className="px-3 font-semibold pt-2">FOCUS AREAS</h2>
             </Link>
 
-            <Link className={"border-b-2 w-full border-black text-center"} href="#">
+            {/* <Link className={"border-b-2 w-full border-black text-center"} href="#">
               <h2 className="px-3 font-semibold pt-2">CONNECT WITH US</h2>
-            </Link>
+            </Link> */}
 
-            <Link className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="/impact">
               <h2 className="px-3 font-semibold pt-2">IMPACT</h2>
             </Link>
 
-            <Link className={"border-b-2 w-full border-black text-center"} href="#">
+            <Link className={"border-b-2 w-full border-black text-center"} href="/resources">
               <h2 className="px-3 font-semibold pt-2">RESOURCES</h2>
-            </Link> */}
+            </Link>
           </div>
         )}
       </div>
