@@ -59,7 +59,7 @@ export default function Policies() {
 
   return (
     <div className="bg-gradient-to-br from-[#00205C] to-[#1A5632] text-white md:px-8 lg:px-0 py-8 mb-4 md:mb-12 lg:mb-24">
-      <div className="max-w-7xl mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
+      <div className="max-w-7xl w-[90%] mx-auto mb-8 pb-4 flex flex-col gap-4 lg:gap-4 lg:justify-between lg:items-center border-b lg:border-0 px-4 lg:px-0">
         <div>
           <AnimatedHeading linecolor="white" width="20%">
           AVOHC-SURGE Gender-Sensitive Workforce Policies and Processes Have Fostered Equality and Excellence at All Levels of the Workforce
@@ -117,7 +117,7 @@ export default function Policies() {
           ))}
         </div>
 
-        <Paragraph className="mt-6 md:my-12 px-4 lg:px-0">
+        <Paragraph className="mt-6 md:my-12 px-4 lg:px-0 lg:w-[90%] mx-auto">
           These gender-responsive trainings and targets established by AVoHC-SURGE have given many women opportunities to utilize their technical expertise and leadership capacities within the
           initiative. By creating a supportive and inclusive work environment, JEAP’s efforts to prioritize gender equality will contribute to better meeting the needs of vulnerable populations during
           emergency responses, as well as promoting long-term gender equality on the continent.

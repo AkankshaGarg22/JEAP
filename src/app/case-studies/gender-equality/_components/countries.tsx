@@ -171,7 +171,7 @@ export default function Countries() {
     }
   };
   return (
-    <div className="max-w-7xl mx-auto my-8">
+    <div className="max-w-7xl mx-auto my-8 lg:w-[90%]">
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-[40%] px-2 md:px-4">
           <AnimatedHeading linecolor="black">
@@ -196,10 +196,9 @@ export default function Countries() {
                 <td colSpan={5}></td>
               </tr>
               {data.countries.map((countryData, i) => {
-                const isExpanded = expandedCountry === countryData.country;
-
+                const isExpanded = true;
                 return (
-                  <tr key={i} className={`border-t border-gray-300 cursor-pointer ${isExpanded ? "bg-green-800 text-white" : "hover:bg-gray-200"}`} onClick={() => toggleExpand(countryData.country)}>
+                  <tr key={i} className={`border-t border-gray-300 cursor-pointer ${isExpanded ? "hover:bg-green-800 hover:text-white bg-gray-200" : "hover:bg-gray-200"}`} onClick={() => toggleExpand(countryData.country)}>
                     <td className="p-4 text-xs md:text-lg">{countryData.country}</td>
                     {isExpanded ? (
                       // Expanded state - show all data in this row

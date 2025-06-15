@@ -19,7 +19,7 @@ export default function Expertise() {
           <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
             <img src={imageUrl} alt="Featured image" className="w-full object-cover md:h-[40rem] h-[30rem] relative" />
           </div>
-            <div className="max-w-7xl mx-auto md:flex flex-row gap-28 md:pt-10 pt-4 min-h-96 px-6 md:px-0">
+            <div className="max-w-7xl lg:w-[90%] mx-auto md:flex flex-row gap-28 md:pt-10 pt-4 min-h-96 px-6 md:px-0">
               <div className="md:w-[20%] w-[80%]">
                 <AnimatedHeading linecolor="white" className="text-white">
                 {title}

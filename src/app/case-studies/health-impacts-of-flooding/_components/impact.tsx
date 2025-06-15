@@ -6,7 +6,7 @@ export default function Impact() {
     <section className="flex justify-end w-full bg-white my-4 xl:my-24">
       <div className="grid grid-cols-1 xl:grid-cols-5 items-center xl:gap-6">
         {/* Image Section */}
-        <div className="relative w-full xl:w-[30rem] col-span-1 h-96 xl:h-[80%]">
+        <div className="relative w-full xl:w-[25rem] col-span-1 h-96 xl:h-[80%]">
           <img
             className="w-full xl:w-120 h-full object-cover object-center"
             src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/3.webp"
@@ -16,7 +16,7 @@ export default function Impact() {
 
         {/* Text Section */}
         <div className="bg-gradient-to-b col-span-4 from-[#00205C] to-[#1A5632] p-4 py-8 xl:px-0 xl:py-30 text-white">
-          <div className="xl:pl-52 md:px-12">
+          <div className="xl:pl-48 md:px-12">
             <AnimatedHeading linecolor="white" width="20%" className="w-[90%]">
               The Impact: More Than 2,000 Patients in Flood-Affected Communities
               Received Essential Health Care and Services, Congo Saw Zero

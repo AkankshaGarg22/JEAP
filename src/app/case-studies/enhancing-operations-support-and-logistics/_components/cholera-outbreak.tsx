@@ -7,7 +7,7 @@ import { BlockQuote } from "../../_components/QuoteSection";
 export default function CholeraOutbreak() {
   return (
     <section className="bg-white bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] py-8">
-      <div className="max-w-7xl px-6 md:px-0 mx-auto relative text-white">
+      <div className="max-w-7xl lg:w-[90%] px-6 md:px-0 mx-auto relative text-white">
         <div className="mx-auto md:flex justify-evenly lg:grid lg:grid-cols-12 gap-6">
           <div className="col-span-3 order-1">
             <AnimatedHeading linecolor="white">From Training to Practice: A Closer Look at OSL Support to the Cholera Outbreak in Malawi</AnimatedHeading>

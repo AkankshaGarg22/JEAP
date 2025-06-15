@@ -13,7 +13,7 @@ export default function CholeraQuote() {
           organization="EPR, WHO AFRO."
         ></BlockQuote>
       <div className="relative">
-        <div className="max-w-7xl mx-auto px-6 md:px-0 grid grid-cols-1 lg:grid-cols-10 md:pt-8 pt-4">
+        <div className="max-w-7xl lg:w-[90%] mx-auto px-6 md:px-0 grid grid-cols-1 lg:grid-cols-10 md:pt-8 pt-4">
           <Paragraph className="col-span-10">
             Beyond this response in Malawi, the JEAP partners are supporting
             other African countries to fight Cholera. In the first half of 2024,

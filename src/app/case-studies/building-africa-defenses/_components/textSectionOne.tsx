@@ -31,7 +31,7 @@ const TextSectionOne = () => {
     </div>
 {/* 2013-2016 Ebola Outbreak */}
       <div className="w-full h-auto flex justify-center items-center md:py-12 py-4">
-        <div className="lg:max-w-7xl mx-auto w-full h-auto flex flex-col lg:flex-row gap-4  items-center justify-between">
+        <div className="lg:max-w-7xl mx-auto lg:w-[90%] h-auto flex flex-col lg:flex-row gap-4  items-center justify-between">
          <div className="lg:w-[30%] w-[90%] ">
                 <AnimatedHeading linecolor="black" className="font-bold ">Missed Opportunities Lessons Learned From EBOLA and COVID-19 Outbreaks</AnimatedHeading>
             </div>

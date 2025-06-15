@@ -20,7 +20,7 @@ export default function Challenges() {
 
           {/* Content section with gradient background */}
           <div className="bg-gradient-to-b from-[#00205C] to-[#1A5632] px-8 lg:px-0 pt-32 pb-16 relative z-0">
-            <div className="max-w-7xl mx-auto flex flex-row gap-8 pt-6 min-h-96">
+            <div className="max-w-7xl mx-auto flex flex-row gap-8 pt-6 min-h-96 lg:w-[90%]">
               <div className="w-[35%]">
                 <AnimatedHeading linecolor="white" className="text-white">
                 {title}

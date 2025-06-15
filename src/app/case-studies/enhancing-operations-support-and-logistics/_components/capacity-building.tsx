@@ -8,7 +8,7 @@ export default function CapacityBuilding() {
   return (
     <section className="bg-white md:pb-12 pb-4">
       <div className="relative">
-        <div className="hidden lg:grid mx-auto justify-evenly grid-cols-1 lg:grid-cols-10 gap-4 lg:max-w-7xl mx-auto">
+        <div className="hidden lg:w-[90%] mx-auto lg:grid justify-evenly grid-cols-1 lg:grid-cols-10 gap-4 lg:max-w-7xl mx-auto">
           <div className="col-span-5 order-1">
             <AnimatedHeading linecolor="black">The People at the Heart of Supply Chains: Bolstering Africa’s OSL Workforce Through Capacity Building</AnimatedHeading>
 
@@ -41,7 +41,7 @@ export default function CapacityBuilding() {
           </div>
         </div>
 
-        <div className="max-w-7xl px-6 md:px-0 mx-auto grid grid-cols-1 lg:grid-cols-10 md:py-4 py-8">
+        <div className="max-w-7xl lg:w-[90%] px-6 md:px-0 mx-auto grid grid-cols-1 lg:grid-cols-10 md:py-4 py-8">
           <p className="col-span-10 text-base md:text-xl md:leading-8">
             The JEAP has prioritized investing in in-person training to build OSL workforce competencies such as forecasting, inventory management, supply chain management, operations support, and
             health logistics. These trainings have by mid-2024 benefited over 125 people, most of whom are government staff. As of June 2024, participants from Ethiopia, ⁠Rwanda, Tanzania, Botswana,
