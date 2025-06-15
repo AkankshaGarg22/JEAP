@@ -59,7 +59,7 @@ export default function Index() {
       <TextSectionFour />
       <BlockQuote
           quote="In the face of ongoing global health challenges, The Africa CDC and WHO are committed to working together through the pathogen genomics initiativve to enhance disease outbreak detection and data sharing across Africa strengthening Africa’s genomic sequencing capabilities is essential for regional and global health security"
-          author="Dr. Sofonias Tessema,"
+          author="Dr. Sofonias Tessema"
           position="Africa CDC Program Lead,"
           organization="Pathogen Genomics"
         />
