@@ -84,12 +84,12 @@ export const BlockQuote = ({
     <div
       ref={containerRef}
       className={`blockquote-container flex items-center md:block bg-blockquote-bg-mobile md:bg-blockquote-bg-desktop bg-no-repeat relative w-full ${
-        big ? "min-h-[60vh] md:min-h-[44vh] xl:h-[60vh] bg-cover" : "min-h-[24vh] md:min-h-[40vh] xl:h-[47vh] bg-cover"
+        big ? "min-h-[60vh] md:min-h-[44vh] lg:min-h-[46vh] xl:h-[60vh] bg-cover" : "min-h-[24vh] md:min-h-[40vh] xl:h-[47vh] bg-cover"
       } md:h-[40vh]  xl:min-h-[47vh] md:bg-auto bg-center  overflow-hidden p-4 md:p-12 text-white ${className || ""}`}
     >
       {/* Quote content */}
       <div className={`relative z-10 max-w-lg ${big ? "md:max-w-4xl" : "md:max-w-3xl"} mx-auto flex flex-col justify-center items-center h-full md:h-full`}>
-        <h2 className={`${ big ? "w-full" : "w-[60%]"} md:w-full leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-xs md:text-base xl:text-2xl ${big ? "xl:leading-7" : ""}`}>{quote}</h2>
+        <h2 className={`${ big ? "w-full" : "w-[60%]"} md:w-full leading-relaxed mb-4 md:mb-6 px-2 md:px-0 text-xs md:text-base  ${big ? "xl:text-xl xl:leading-7" : "xl:text-2xl"}`}>{quote}</h2>
 
         {/* Attribution line - with animation */}
         {(author || position || organization) && (
