@@ -13,7 +13,7 @@ import OverflowSection from "./_components/OverflowSection";
 import SubHeading from "../_components/sub-heading";
 
 const references = [
-  " https://reliefweb.int/report/mozambique/weekly-bulletin-outbreaks-and-other-emergencies-week-42-16-october-22-october-2023-data-reported-1700-22-october-2023",
+  " Weekly Bulletin on Outbreaks and other Emergencies: Week 42: 16 October - 22 October 2023 https://reliefweb.int/report/mozambique/weekly-bulletin-outbreaks-and-other-emergencies-week-42-16-october-22-october-2023-data-reported-1700-22-october-2023",
   " WHO Africa, 2022. Available from: https://www.afro.who.int/news/who-partners-seek-reboot-africas-health-emergency-response",
   " Mremi IR, George J, Rumisha SF, Sindato C, Kimera SI, Mboera LEG. Twenty years of integrated disease surveillance and response in Sub-Saharan Africa: challenges and opportunities for effective management of infectious disease epidemics. One Health Outlook. 2021 Nov 9;3(1):22. doi: 10.1186/s42522-021-00052-9. PMID: 34749835; PMCID: PMC8575546.Available here: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8575546/",
   " WHO Africa, 2019. “As risks of outbreaks grow, African health ministers agree to new response strategy” Accessed here: https://www.afro.who.int/news/risks-outbreaks-grow-african-health-ministers-agree-new-response-strategy ",
@@ -25,16 +25,17 @@ const references = [
   " https://gh.bmj.com/content/4/4/e001427",
   " https://gh.bmj.com/content/4/4/e001427",
   " Mremi, I.R., George, J., Rumisha, S.F. et al. Twenty years of integrated disease surveillance and response in Sub-Saharan Africa: challenges and opportunities for effective management of infectious disease epidemics. One Health Outlook 3, 22 (2021). https://doi.org/10.1186/s42522-021-000529 ",
-  " https://www.africakicksoutwildpolio.com/ ",
-  " https://www.afro.who.int/news/how-wastewater-surveillance-helping-covid-19-fight",
+  " AFRICA KICKS OUT WILD POLIO https://www.africakicksoutwildpolio.com/ ",
+  " How wastewater surveillance is helping the COVID-19 fight https://www.afro.who.int/news/how-wastewater-surveillance-helping-covid-19-fight",
   " WHO Africa 2021. Accessed at: https://www.afro.who.int/news/scaling-genomic-sequencing-africa ",
-  " https://africacdc.org/news-item/a-six-year-journey-advancing-pathogen-genomics-in-africa/ ",
-  " https://africacdc.org/news-item/digitizing-public-health-genomics-in-africa/ ",
+  " A Six-Year Journey: Advancing Pathogen Genomics in Africa https://africacdc.org/news-item/a-six-year-journey-advancing-pathogen-genomics-in-africa/ ",
+  " Digitizing public health genomics in Africa https://africacdc.org/news-item/digitizing-public-health-genomics-in-africa/ ",
   " WHO. (2022). Accessed at: https://www.who.int/news/item/16-09-2022-reflecting-on-the-implementation-of-genomic-surveillance-for-COVID-19-and-beyond-in-the-african-region",
-  " WHO EMRO | Genomic sequencing for epidemic and pandemic preparedness and response: EMRO’s vision and strategic interventions | Volume 28 issue 12 | EMHJ volume 28 2022",
-  " https://www.who.int/initiatives/genomic-surveillance-strategy",
+  " WHO EMRO | Genomic sequencing for epidemic and pandemic preparedness and response: EMRO’s vision and strategic interventions | Volume 28 issue 12 | EMHJ volume 28 2022 https://www.emro.who.int/emhj-volume-28-2022/volume-28-issue-12/genomic-sequencing-for-epidemic-and-pandemic-preparedness-and-response-emros-vision-and-strategic-interventions.html",
+  " Global genomic surveillance strategy for pathogens with pandemic and epidemic potential 2022–2032 https://www.who.int/initiatives/genomic-surveillance-strategy",
 
 ];
+
 
 export default function Index() {
   return (
