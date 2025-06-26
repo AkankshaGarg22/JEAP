@@ -120,7 +120,7 @@ export default function Conceptualization() {
         Discussions including reviewing existing strategies, recent evidence including more than 200 expert recommendations following COVID-19, as well as options for governance and management.
       </p>
       <p className="w-4/5 xl:w-9/10 text-base xl:leading-6 xl:text-xl 3xl:text-2xl lg:text-center">
-        As a result, in May 2023, the JEAP Partnership was formally launched. Shortly thereafter, its 5-year plan (2023-2027) was validated as a core document to guide the JEAP’s work with Member
+        As a result, in May 2023, the JEAP Partnership was formally launched. Shortly thereafter, its 5-year plan (2023-2027) was validated as a core document to guide the JEAP's work with Member
         States to tackle key challenges across the areas of preparation, detection and response. Through implementing this plan, the JEAP strives to achieve several ambitious outcomes:
       </p>
 
@@ -147,7 +147,7 @@ export default function Conceptualization() {
             {/* Timeline items */}
             <div className="pl-2 space-y-2">
               {arr.map((item, i) => (
-                <div key={i} ref={(el) => (timelineRefs.current[i] = el)} className="relative pl-12 transition-opacity duration-300 cursor-pointer " onClick={() => handleClick(i)}>
+                <div key={i} ref={(el) => { timelineRefs.current[i] = el; }} className="relative pl-12 transition-opacity duration-300 cursor-pointer " onClick={() => handleClick(i)}>
                   {/* Circle marker - always has checkmark, just highlighted when active */}
                   <div
                     className={`absolute bg-[#1b5632] -left-1 top-[8px] h-6 w-6 rounded-full ${
