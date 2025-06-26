@@ -41,7 +41,7 @@ export default function EmergencyHub() {
         </div>
 
         <div className="bg-[#386d64] mt-8 md:mt-0 p-4 md:p-8 text-white w-full">
-          <Paragraph>
+          <Paragraph className="line-height-fix">
             In the first six months of{" "}
             <span className="font-bold md:text-3xl text-xl">2024 alone</span>, WHO’s Hubs
             delivered{" "}

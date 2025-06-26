@@ -84,7 +84,7 @@ export default function CaseStudies() {
     },
   ];
   return (
-    <div className="xl:min-h-screen bg-gradient-to-b xl:from-[#042658] md:from-[#032559] from-[#0B364B] xl:to-[#01205d] md:to-[#01205d] to-[#01205d] text-white mt-[-5px] md:p-2">
+    <div className="xl:min-h-screen bg-gradient-to-b xl:from-[#042658] md:from-[#032559] from-[#0B364B] xl:to-[#00205c] md:to-[#00205c] to-[#00205c] text-white mt-[-5px] md:p-2">
       {contentData.map((item, index) => (
         <AlternateContent
           key={index}

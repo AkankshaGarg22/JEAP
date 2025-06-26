@@ -79,7 +79,7 @@ export default function Implementation() {
       </div>
       <div className="flex flex-col gap-2 md:gap-8 xl:gap-2 justify-start items-center w-full lg:w-[85%] p-4 xl:my-4 xl:h-[50rem]">
         {highlightsItem.map((item) => (
-          <div className="w-full flex flex-col items-center xl:space-y-1 xl:h-full" key={item.id}>
+          <div className="w-full flex flex-col items-center" key={item.id}>
             {/* Accordion Header */}
             <button
               className={`border-t-2 ${item.id === highlightsItem.length && item.id !== selectedAccordion ? " border-b-2" : ""} border-white py-4 xl:py-8 flex w-full justify-between items-center`}

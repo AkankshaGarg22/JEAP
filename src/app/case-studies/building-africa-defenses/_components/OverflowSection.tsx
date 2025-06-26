@@ -18,7 +18,7 @@ const OverflowSection = () => {
             </div>
             {/* Member States */}
             <div className="lg:max-w-7xl mx-auto flex items-center justify-center lg:pb-8 py-4">
-            <Paragraph className="text-white w-[90%] mx-auto">To do so, the JEAP works to ensure all Member States have laboratory capacity to diagnose and report pathogens that can cause outbreaks, including laboratory sequencing capacity. The JEAP supports countries by strengthening diagnostics strategy and capacity at national and subnational levels. In addition, the JEAP supports countries by creating enabling mechanisms for the integration of sequencing with routine surveillance for public health response, enhancing in-country capacity for genomic surveillance through an end-to-end framework, and enhancing the sharing of sequencing data.</Paragraph>
+            <Paragraph className="text-white w-[90%] md:w-full mx-auto">To do so, the JEAP works to ensure all Member States have laboratory capacity to diagnose and report pathogens that can cause outbreaks, including laboratory sequencing capacity. The JEAP supports countries by strengthening diagnostics strategy and capacity at national and subnational levels. In addition, the JEAP supports countries by creating enabling mechanisms for the integration of sequencing with routine surveillance for public health response, enhancing in-country capacity for genomic surveillance through an end-to-end framework, and enhancing the sharing of sequencing data.</Paragraph>
             </div>
             {/* Image */}
             <div className="lg:max-w-7xl mx-auto h-auto flex items-center justify-center">

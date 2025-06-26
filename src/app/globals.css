@@ -105,6 +105,10 @@ testul {
   background: transparent linear-gradient(270deg, #00205c 0%, #13483d 52%, #1a5632 100%) 0% 0% no-repeat padding-box;
 }
 
+.line-height-fix {
+  line-height: 2 !important;
+}
+
 @media only screen and (max-width: 600px) {
   .maintenance-input-email {
     font-size: 12px;
