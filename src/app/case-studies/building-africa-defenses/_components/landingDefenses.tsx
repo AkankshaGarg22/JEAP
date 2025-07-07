@@ -5,7 +5,6 @@ import TranslucentBox from "./textWhiteBox";
 import AnimatedHeading from "../../_components/AnimatedHeading";
 import MainHeading from "../../_components/main-heading";
 import Paragraph from "../../_components/paragraph";
-import Link from "next/link";
 import { BackButton } from "../../_components/BackButton";
 
 export default function LandingDefenses() {
@@ -63,7 +62,7 @@ export default function LandingDefenses() {
 
           {/* Paragraph - Full width on mobile, 8/12 on desktop */}
           <div className="lg:col-span-8 order-2">
-            <p className="text-base md:text-lg">
+            <Paragraph>
               Major infectious disease outbreaks around the globe in recent
               years have underscored the urgent need to strengthen laboratory
               and surveillance capabilities through genomic sequencing in order
@@ -77,7 +76,7 @@ export default function LandingDefenses() {
               frequent movements of people, commodities, animals and animal
               products across national and international borders.
               <sup>3</sup>
-            </p>
+            </Paragraph>
           </div>
 
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
