@@ -112,7 +112,7 @@ const Menu: MenuItem[] = [
   {
     id: 7,
     title: "Digitalization",
-    slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-07.jpg"],
+    slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-07.webp"],
     from: "Low inclusion and access to digital health tools impacting the overall efficiency of health systems.",
     to: "Increased adoption of digital health technologies by national public health systems of Member States.",
     how: `Through this cross-cutting collaboration area, the JEAP will:
@@ -126,7 +126,7 @@ const Menu: MenuItem[] = [
   {
     id: 8,
     title: "Climate Change in the EPR Context",
-    slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-08.jpg"],
+    slides: ["/assets/blog/jpgs/JEAP_VISION_Slides-08.webp"],
     from: "Climate-vulnerable health systems that are not built to withstand climate disaster.",
     to: "Climate resilient and green health systems that are ready to detect and respond to health emergencies caused by climate crises.",
     how: `The JEAP will support countries to engage communities through:
