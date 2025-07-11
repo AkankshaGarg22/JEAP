@@ -20,7 +20,7 @@ const config: Config = {
         "about-landing" : "url(/assets/blog/about/bg/1.jpg)",
         "focus-landing" : "url(/assets/blog/focus/bg/1.webp)",
         "resource-landing" : "url(/assets/blog/resources/resource-landing.webp)",
-        "impact-landing" : "url(/assets/blog/impact/Impact.jpg)",
+        "impact-landing" : "url(/assets/blog/impact/Impact.webp)",
         "mb-about-curve" : "url(/assets/blog/about/curve/mb.png)",
         "xl-about-curve" : "url(/assets/blog/about/curve/xl.png)",
         "mb-partner-curve" : "url(/assets/blog/about/curve/mb-partner.png)",

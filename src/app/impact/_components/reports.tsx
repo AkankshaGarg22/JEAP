@@ -21,7 +21,7 @@ export default function Reports() {
         data-aos="fade-up"
       >
         <img loading="lazy"
-          src={"/assets/blog/impact/IMG_2547.jpg"}
+          src={"/assets/blog/impact/IMG_2547.webp"}
           alt={"Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security"}
           className="w-[300px] h-[260px] cursor-pointer"
           onClick={() => goToReport('/case-studies/building-africa-defenses')}

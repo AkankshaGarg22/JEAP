@@ -63,22 +63,22 @@ export default function CaseStudies() {
   // Array of content data for the five sets
   const contentData = [
     {
-      image: "/assets/blog/impact/Angola_COVAX_07-91103.jpg",
+      image: "/assets/blog/impact/Angola_COVAX_07-91103.webp",
       text: "Gender Equality in Emergency Preparedness and Response: A Focus on the AVoHC-SURGE Initiative",
       link: '/case-studies/gender-equality'
     },
     {
-      image: "/assets/blog/impact/COVID-19 - Congo 2020_fd7371a717e1e5c4078ca8c2a8ffa7ff (1) (2).jpg",
+      image: "/assets/blog/impact/COVID-19 - Congo 2020_fd7371a717e1e5c4078ca8c2a8ffa7ff (1) (2).webp",
       text: "Enhancing Operations Support and Logistics for Improved Emergency Preparedness and Response in Africa",
       link: '/case-studies/enhancing-operations-support-and-logistics'
     },
     {
-      image: "/assets/blog/impact/WHO01455.jpg",
+      image: "/assets/blog/impact/WHO01455.webp",
       text: "Addressing the health impacts of flooding in the Republic of Congo",
       link: '/case-studies/health-impacts-of-flooding'
     },
     {
-      image: "/assets/blog/impact/WHO_25.05.23_72dpi©CecileRolland-106.jpg",
+      image: "/assets/blog/impact/WHO_25.05.23_72dpi©CecileRolland-106.webp",
       text: "Collaboration for Resilience: The JEAP Partnership’s ‘Common Africa Approach’ to the Pandemic Fund",
       link: '/case-studies/collaboration-for-resilience'
     },
