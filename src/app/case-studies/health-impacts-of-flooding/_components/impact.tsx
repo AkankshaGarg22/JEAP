@@ -7,7 +7,7 @@ export default function Impact() {
       <div className="grid grid-cols-1 xl:grid-cols-5 items-center xl:gap-6">
         {/* Image Section */}
         <div className="relative w-full xl:w-[25rem] col-span-1 h-96 xl:h-[80%]">
-          <img
+          <img loading="lazy"
             className="w-full xl:w-120 h-full object-cover object-center"
             src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/3.webp"
             alt="A Unified Africa for Health Security"

@@ -20,7 +20,7 @@ export default function Reports() {
         className="lg:w-[400px] lg:h-[360px] md:w-[80%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg"
         data-aos="fade-up"
       >
-        <img
+        <img loading="lazy"
           src={"/assets/blog/impact/IMG_2547.jpg"}
           alt={"Building Africa’s Defenses: Advancing Genomic Sequencing to Ensure Public Health Security"}
           className="w-[300px] h-[260px] cursor-pointer"

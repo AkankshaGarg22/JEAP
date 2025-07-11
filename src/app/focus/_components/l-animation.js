@@ -130,7 +130,7 @@ export default function LAnimation() {
       </div>
       <div id="_preload_div_" style={{ position: "absolute", top: "0", left: "0", display: "none", textAlign: "center" }}>
         <span style={{ display: "inline-block", height: "100%", verticalAlign: "middle" }}></span>
-        <img src="/images/_preloader.gif" style={{ verticalAlign: "middle", maxHeight: "100%" }} alt="Loading..." />
+        <img loading="lazy" src="/images/_preloader.gif" style={{ verticalAlign: "middle", maxHeight: "100%" }} alt="Loading..." />
       </div>
     </div>
   );

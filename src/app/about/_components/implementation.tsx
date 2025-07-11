@@ -85,7 +85,7 @@ export default function Implementation() {
               className={`border-t-2 ${item.id === highlightsItem.length && item.id !== selectedAccordion ? " border-b-2" : ""} border-white py-4 xl:py-8 flex w-full justify-between items-center`}
               onClick={() => handleAccordionClick(item.id)}
             >
-              <img className="size-10" src={item.icon} alt={item.title} />
+              <img loading="lazy" className="size-10" src={item.icon} alt={item.title} />
               <span className="uppercase xl:text-[20px] w-4/5 pl-2 lg:w-11/12 text-start">{item.title}</span>
               <span className={`${item.id === selectedAccordion ? "bg-white text-[#1B5632]" : ""} border-2 border-white rounded p-1`}>
                 {item.id === selectedAccordion ? (

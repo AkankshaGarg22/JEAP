@@ -34,7 +34,7 @@ export default function Carousel({ item, autoSlide = false, autoSlideInterval = 
     <div className="overflow-hidden relative h-full">
       <div className="flex transition-transform ease-out duration-500 h-[720px] md:h-[600px] xl:h-[650px] xl:w-auto" style={{ transform: `translateX(-${curr * 100}%)` }}>
         {item.slides.map((img, i) => (
-          <img key={i} className=" md:min-w-full object-cover object-right md:object-cover md:object-left xl:object-cover xl:object-left" src={img} alt="Picture" />
+          <img loading="lazy" key={i} className=" md:min-w-full object-cover object-right md:object-cover md:object-left xl:object-cover xl:object-left" src={img} alt="Picture" />
         ))}
       </div>
       <div className="absolute inset-0 bg-transparent text-white text-center pt-4 md:pt-8 xl:pt-16 xl:left-[50] text-xl md:text-3xl font-bold uppercase">{item.title}</div>

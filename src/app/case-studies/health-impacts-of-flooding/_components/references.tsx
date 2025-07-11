@@ -4,7 +4,7 @@ export default function References() {
   return (
     <section className="max-w-7xl mx-auto px-4 mb-12">
       <div className="w-full h-64 md:h-[30rem] mb-12">
-        <img
+        <img loading="lazy"
           className="h-full w-full object-cover object-center"
           src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/5.webp"
           alt=""

@@ -73,7 +73,7 @@ export default function Response() {
         {slides.map((slide, index) => (
           <div key={index} className="flex items-center justify-center py-2 gap-4">
             <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center">
-              <img src={slide.icon} alt="" className="w-20 h-20" />
+              <img loading="lazy" src={slide.icon} alt="" className="w-20 h-20" />
             </div>
             <p className="text-sm">{slide.text}</p>
           </div>
@@ -88,7 +88,7 @@ export default function Response() {
             {/* Left card with text */}
             <div className="w-1/2 bg-gradient-to-b from-[#1A5632] to-[#00205C] rounded-lg p-8 text-white flex flex-col items-start justify-center h-full">
               <div className="bg-white rounded-full p-4 ms-4 mb-6">
-                <img src={slides[currentSlide].icon} alt="" className="w-10 h-10" />
+                <img loading="lazy" src={slides[currentSlide].icon} alt="" className="w-10 h-10" />
               </div>
               <Paragraph className="ms-4 font-bold">{slides[currentSlide].text}</Paragraph>
             </div>
@@ -97,7 +97,7 @@ export default function Response() {
               {/* Set full height to match left card */}
               {slides[currentSlide].img && (
                 <div className=" rounded-lg h-[24rem] w-full overflow-hidden">
-                  {/* <img src={slides[currentSlide].img} alt="Meeting" className="w-full h-full object-cover object-center" /> */}
+                  {/* <img loading="lazy" src={slides[currentSlide].img} alt="Meeting" className="w-full h-full object-cover object-center" /> */}
                   <Image src={slides[currentSlide].img} alt="Meeting" width={800} height={336} priority={currentSlide === 0} loading="eager" className="w-full h-full object-cover object-center" />
                 </div>
               )}
@@ -128,7 +128,7 @@ export default function Response() {
           <div className="flex justify-around items-center relative mx-8 mb-4">
             {slides.map((slide, index) => (
               <button key={index} onClick={() => goToSlide(index)} className={`w-14 h-14 rounded-full flex items-center justify-center`}>
-                <img src={slide.icon} alt="icon" className={`w-14 h-14 ${index > currentSlide ? "opacity-50" : "opacity-100"}`} />
+                <img loading="lazy" src={slide.icon} alt="icon" className={`w-14 h-14 ${index > currentSlide ? "opacity-50" : "opacity-100"}`} />
               </button>
             ))}
           </div>

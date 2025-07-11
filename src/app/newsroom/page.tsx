@@ -68,7 +68,7 @@ export default function Index() {
                   className="bg-emerald-700/30 rounded-lg overflow-hidden p-2"
                 >
                   <div className="relative h-48 w-full">
-                    <img
+                    <img loading="lazy"
                       src={parseImageFromHtml(item)}
                       alt={item.title}
                       className="object-cover h-full w-full"

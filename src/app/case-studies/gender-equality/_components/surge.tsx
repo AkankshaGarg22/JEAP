@@ -10,7 +10,7 @@ export default function Surge() {
           AVOHC-SURGE Prioritizes Gender Parity at All Levels – From Frontline Workers to Technical Leadership
           </AnimatedHeading>
           <div>
-          <img
+          <img loading="lazy"
           className=""
           src="/assets/blog/case-studies/Gender_equality/Webp_format/gender-equality-surge.webp"
           alt="JEAP Surge"
@@ -58,7 +58,7 @@ export default function Surge() {
       </div>
 
       <div className="w-full h-64 md:h-[40rem]">
-        <img
+        <img loading="lazy"
           className="h-full w-full object-cover object-center"
           src="/assets/blog/case-studies//Gender_equality/Webp_format/3.jpg"
           alt="JEAP Surge"

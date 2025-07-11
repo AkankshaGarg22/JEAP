@@ -58,7 +58,7 @@ export function GradedEmergencies() {
             </div> */}
   
              <button className="hover-button">
-               <img className="icon" src="/assets/blog/chevron-right-solid base.png" alt="icon" />
+               <img loading="lazy" className="icon" src="/assets/blog/chevron-right-solid base.png" alt="icon" />
      
                  <span className="button-text">Read More</span>
              </button>
@@ -72,14 +72,14 @@ export function GradedEmergencies() {
           target="_blank"
         >
           <div className="flex justify-center items-center relative h-[400px] w-[300px] mx-auto md:block hidden">
-            <img
+            <img loading="lazy"
               src="/assets/blog/m-pox-cover.jpg"
               className="relative h-[380px] w-[280px]"
               alt="resource-plan"
             ></img>
             <div className="absolute  inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[350px] w-[250px] m-[14px]">
               <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-4">
-                <img
+                <img loading="lazy"
                   height={60}
                   width={60}
                   src="/assets/blog/Path 14204 2.svg"
@@ -109,14 +109,14 @@ export function GradedEmergencies() {
             </div>
           </div>
           <div className="flex justify-center items-center relative h-[200px] w-[150px] mx-auto md:hidden block">
-            <img
+            <img loading="lazy"
               src="/assets/blog/m-pox-cover.jpg"
               className="relative "
               alt="resource-plan"
             ></img>
             <div className="absolute inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[170px] w-[130px] m-[10px]">
               <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-1">
-                <img
+                <img loading="lazy"
                   height={20}
                   width={20}
                   src="/assets/blog/Path 14204 2.svg"
@@ -150,8 +150,8 @@ export function GradedEmergencies() {
       {/* <div className="flex flex-row justify-around p-8">
         
         <a className="flex justify-center items-center" href="/assets/blog/Joint EPR Detailed Action Plan Final Report.pdf" download="Joint EPR Detailed Action Plan Final Report.pdf" target='_blank'>
-          <img src="/assets/blog/Download-pdf.png" height={400} width={300} className="relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 md:block hidden" alt="download-button"></img>
-          <img src="/assets/blog/Download-pdf.png" height={150} width={100} className="relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 md:hidden block" alt="download-button"></img>
+          <img loading="lazy" src="/assets/blog/Download-pdf.png" height={400} width={300} className="relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 md:block hidden" alt="download-button"></img>
+          <img loading="lazy" src="/assets/blog/Download-pdf.png" height={150} width={100} className="relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 md:hidden block" alt="download-button"></img>
 
         </a>
       </div> */}

@@ -49,7 +49,7 @@ export default function Landing() {
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
           <div className="lg:col-span-12 order-3 mt-6">
             <div className="w-full h-64 md:h-80 relative">
-              <img src="/assets/blog/case-studies/Collaboration for Resilience/Webp/2.webp" alt="JEAP Partnership Meeting" className="w-full h-full object-cover object-left-top rounded-lg" />
+              <img loading="lazy" src="/assets/blog/case-studies/Collaboration for Resilience/Webp/2.webp" alt="JEAP Partnership Meeting" className="w-full h-full object-cover object-left-top rounded-lg" />
             </div>
           </div>
         </div>

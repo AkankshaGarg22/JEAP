@@ -9,7 +9,7 @@ const TextSectionTwo = () => {
       {/* Most recently, the COVID-19 pandemic was met with insufficient genomic sequencing capacities in Africa,  */}
       <div className="lg:lg:max-w-7xl mx-auto w-full flex flex-col lg:flex-row h-auto bg-white items-center justify-center">
         <div className="bg-transparent lg:w-[35%] w-[80%] lg:h-[450px] h-[200px] lg:translate-y-[0px] translate-y-[35px] ">
-          <img
+          <img loading="lazy"
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/Rectangle 2882.webp"
             className="h-full w-[100%] object-cover object-center"
           ></img>
@@ -44,7 +44,7 @@ const TextSectionTwo = () => {
         </div>
 
         <div className="bg-transparent lg:w-[35%] w-[80%] h-[200px] lg:h-[450px] lg:translate-y-[0px] translate-y-[35px]">
-          <img
+          <img loading="lazy"
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/02480.webp"
             className="h-full w-full object-cover object-center"
           ></img>

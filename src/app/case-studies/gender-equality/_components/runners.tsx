@@ -22,7 +22,7 @@ export default function Runners() {
           {/* Image Container - Positioned for overlap on desktop */}
           <div className="lg:transform lg:w-[30%] lg:h-[30rem]">
             <div className="h-64 lg:h-full w-full relative mt-6 lg:mt-0">
-              <img src="/assets/blog/case-studies/Gender_equality/Webp_format/4.webp" alt="Woman health worker walking in a green field" className="object-cover h-full w-full" />
+              <img loading="lazy" src="/assets/blog/case-studies/Gender_equality/Webp_format/4.webp" alt="Woman health worker walking in a green field" className="object-cover h-full w-full" />
             </div>
           </div>
         </div>

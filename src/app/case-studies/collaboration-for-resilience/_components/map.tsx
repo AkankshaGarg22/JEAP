@@ -23,7 +23,7 @@ export default function Map() {
         </div>
 
         <div className="md:w-[70%] flex justify-center items-center p-4">
-          <img
+          <img loading="lazy"
             className="w-full h-full object-contain"
             src="/assets/blog/case-studies/Collaboration for Resilience/Webp/map.svg"
             alt="JEAP Supported Countries Map"
@@ -32,7 +32,7 @@ export default function Map() {
       </div>
 
       <div className="w-full h-64 md:h-[30rem]">
-        <img
+        <img loading="lazy"
           className="h-full w-full object-cover object-center"
           src="/assets/blog/case-studies/Collaboration for Resilience/Webp/4.webp"
           alt=""

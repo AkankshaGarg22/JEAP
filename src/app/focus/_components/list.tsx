@@ -666,7 +666,7 @@ export default function List() {
           <div className="flex flex-col md:flex-row justify-center w-full">
             <div className="pt-3">
               <div className="w-full h-auto md:px-8 px-8 pb-16 overflow-hidden flex items-center justify-center">
-                <img
+                <img loading="lazy"
                   src={selected.popupImage}
                   alt={selected.title}
                   className="w-[1000px] h-[400px] rounded-md object-cover object-center mx-auto"
@@ -689,7 +689,7 @@ export default function List() {
               <div className="w-full bg-[#1B56321A] py-2">
                 <div className="flex w-full px-10 lg:px-40 mx-auto ">
                   {/* <div className="lg:w-1/3">
-                    <img className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
+                    <img loading="lazy" className="h-60 w-full" src="/assets/blog/focus/read-more-images/circle.svg" alt="circle" />
                    </div>
                   <div className="lg:w-1/3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="319.7019958496094" height="17.40399932861328" viewBox="0 0 319.702 17.404">

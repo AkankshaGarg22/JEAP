@@ -121,7 +121,7 @@ export default function Reports() {
             target="_blank"
           >
             <div className="relative h-[400px] w-[300px]">
-              <img
+              <img loading="lazy"
                 src={slides[current].reportSrc}
                 alt="Active Slide"
                 className="h-full w-full object-cover rounded-lg"
@@ -129,7 +129,7 @@ export default function Reports() {
               {/* Hover Overlay */}
               <div className="absolute  inset-0 bg-black bg-opacity-[0.58] opacity-0 transition-opacity duration-500 hover:opacity-100 h-[370px] w-[270px] m-[14px]">
             <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transform transition-transform duration-500 ease-out hover:scale-150 flex flex-col items-center gap-4">
-              <img height={60} width={60} src="/assets/blog/Path 14204 2.svg"></img>
+              <img loading="lazy" height={60} width={60} src="/assets/blog/Path 14204 2.svg"></img>
               <div className="m-[0 auto] w-[90%]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="150" height="34" viewBox="0 0 200 34">
                   <text id="Download_PDF" data-name="Download PDF" transform="translate(0 27)" fill="#fff" fontSize="24" fontFamily="arial-bold"><tspan x="0" y="0">Download PDF</tspan></text>
@@ -143,7 +143,7 @@ export default function Reports() {
           {/* Small Next Image */}
           <div className="bg-[#3a6e63] p-8">
             <div className="h-[250px] w-[180px] opacity-75 transition-opacity duration-500">
-              <img
+              <img loading="lazy"
                 src={slides[(current + 1) % slides.length].reportSrc}
                 alt="Next Slide"
                 className="h-full w-full object-cover rounded-lg"
@@ -159,7 +159,7 @@ export default function Reports() {
           download="JEAP Report.pdf"
           target="_blank"
         >
-          <img
+          <img loading="lazy"
             src={slides[current].reportSrc}
             alt="Mobile Slide"
             className="h-full w-full object-cover rounded-lg"
@@ -167,7 +167,7 @@ export default function Reports() {
           {/* Hover Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 transition-opacity duration-500 hover:opacity-100 flex justify-center items-center">
             <div className="text-center">
-              <img
+              <img loading="lazy"
                 src="/assets/blog/Path 14204 2.svg"
                 alt="Download Icon"
                 className="h-12 w-12 mx-auto"

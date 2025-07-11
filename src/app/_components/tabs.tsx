@@ -205,7 +205,7 @@ export function Tabs() {
               disabled={active === Menu.length}
               className="p-1 rounded-full shadow text-gray-800"
             >
-              <img
+              <img loading="lazy"
                 className="h-10 w-10 xl:h-20 xl:w-20"
                 src="/assets/blog/Group 3025.png"
                 alt="next"
@@ -216,7 +216,7 @@ export function Tabs() {
               disabled={active === 1}
               className="p-1 rounded-full shadow text-gray-800"
             >
-              <img
+              <img loading="lazy"
                 className="h-10 w-10 xl:h-20 xl:w-20"
                 src="/assets/blog/Group 3026.png"
                 alt="prev"

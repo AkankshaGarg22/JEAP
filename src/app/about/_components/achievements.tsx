@@ -59,7 +59,7 @@ export default function Achievements() {
         <div className="relative flex justify-center items-center h-full">
           {/* Previous */}
           <button onClick={handlePrev} className="hidden xl:block absolute left-0 w-1/6 scale-90  translate-x-[5%] transition-all h-full">
-            <img src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-2xl" />
+            <img loading="lazy" src={slides[(current - 1 + slides.length) % slides.length].image} alt="previous" className="w-full h-full object-cover rounded-2xl" />
           </button>
 
           {/* Current */}
@@ -74,7 +74,7 @@ export default function Achievements() {
             <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start xl:items-stretch gap-8 xl:gap-0 mx-2 bg-[#1b5632] rounded-xl">
               <div className="relative w-full md:max-w-[5600px] xl:max-w-[360px]">
                 <div className="h-full w-full min-h-[240px] xl:min-h-[570px] inset-0">
-                  <img className="block w-full h-full rounded-t-xl xl:rounded-l-xl xl:rounded-r-none object-cover" src={slides[current].image} alt={slides[current].name} />
+                  <img loading="lazy" className="block w-full h-full rounded-t-xl xl:rounded-l-xl xl:rounded-r-none object-cover" src={slides[current].image} alt={slides[current].name} />
                 </div>
                 <svg className="xl:hidden absolute flex -bottom-[40px]" xmlns="http://www.w3.org/2000/svg" width="220" height="65" viewBox="0 0 220 65" fill="none">
                   <path
@@ -89,7 +89,7 @@ export default function Achievements() {
                   ></path>
                 </svg>
                 <div className="absolute flex justify-center items-center -bottom-[45px]  xl:top-[14%] left-[10px]  xl:left-[95%]  w-[62px] h-[62px] rounded-full ">
-                  <img className="w-full h-full" src="/assets/blog/about/accordian/Group 5654.png" alt="" />
+                  <img loading="lazy" className="w-full h-full" src="/assets/blog/about/accordian/Group 5654.png" alt="" />
                 </div>
               </div>
 
@@ -113,7 +113,7 @@ export default function Achievements() {
 
           {/* Next */}
           <button onClick={handleNext} className="hidden xl:block absolute right-0 w-1/6 scale-90 -translate-x-[5%] transition-all h-full">
-            <img src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-2xl" />
+            <img loading="lazy" src={slides[(current + 1) % slides.length].image} alt="next" className="w-full h-full object-cover rounded-2xl" />
           </button>
         </div>
         {/* Dots */}

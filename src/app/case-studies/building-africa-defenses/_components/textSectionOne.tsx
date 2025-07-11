@@ -19,7 +19,7 @@ const TextSectionOne = () => {
 
         <div className="lg:max-w-7xl mx-auto w-full h-auto flex items-center justify-center relative">
           <div className="lg:w-[100%] w-[90%] h-[200px] lg:h-[500px] flex items-center justify-center">
-            <img alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/202105_Angola_COVAX_03.webp"
+            <img loading="lazy" alt="Genomic Sequence Image" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/202105_Angola_COVAX_03.webp"
             className="object-cover object-center h-full w-[80%]"/>
          </div>
         </div>

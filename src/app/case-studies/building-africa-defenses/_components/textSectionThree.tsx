@@ -19,7 +19,7 @@ const TextSectionThree = () => {
     </div>
 
     <div className="lg:max-w-7xl mx-auto w-[90%] h-auto lg:h-[750px] bg-transparent flex items-center justify-center md:py-12 py-4">
-        <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-researcher-with-african-ethnicity-using-microscope-doing-investigation-evaluates-sample-black-healthcare-scientist-biochemistry-laboratory-wearing-sterile-equipment.webp" className="w-full h-full object-cover object-center"/>
+        <img loading="lazy" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-researcher-with-african-ethnicity-using-microscope-doing-investigation-evaluates-sample-black-healthcare-scientist-biochemistry-laboratory-wearing-sterile-equipment.webp" className="w-full h-full object-cover object-center"/>
     </div>
 
     <div className="lg:max-w-7xl mx-auto w-[90%] h-auto bg-transparent flex items-center justify-center">

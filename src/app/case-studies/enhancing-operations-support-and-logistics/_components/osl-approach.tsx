@@ -8,7 +8,7 @@ export default function OslApproach() {
     <section className="min-h-screen bg-white">
       <div className="py-4 md:p-10 relative bg-gradient-to-b to-[#1b5632] via-[#195334] from-[#01205d] text-white">
         <div className="relative h-full w-full mx-auto flex justify-center">
-        <img src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/osl-approach-partnership.jpg" alt="Logistic support" className="h-full w-[80%] md:mt-[-10%] md:h-[40rem] object-cover" />
+        <img loading="lazy" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/osl-approach-partnership.jpg" alt="Logistic support" className="h-full w-[80%] md:mt-[-10%] md:h-[40rem] object-cover" />
 
           {/* <Image
             src=""

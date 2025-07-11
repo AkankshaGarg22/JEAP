@@ -15,7 +15,7 @@ export default function Challenges() {
         <div className="w-full">
           {/* Image container - Placing image half inside the gradient box */}
           <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center">
-            <img src={imageUrl} alt="Featured image" className="w-full  object-cover h-[40rem] relative -mb-32" />
+            <img loading="lazy" src={imageUrl} alt="Featured image" className="w-full  object-cover h-[40rem] relative -mb-32" />
           </div>
 
           {/* Content section with gradient background */}
@@ -42,7 +42,7 @@ export default function Challenges() {
           {/* Image section */}
           <div className="w-full">
             <div className="aspect-w-16 aspect-h-9 relative">
-              <img src={imageUrl} alt="Featured image" className="h-full w-full" />
+              <img loading="lazy" src={imageUrl} alt="Featured image" className="h-full w-full" />
             </div>
           </div>
 

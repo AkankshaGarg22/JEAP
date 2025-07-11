@@ -57,7 +57,7 @@ export default function News() {
                 href={mainArticle?.link}
                 target="_blank"
               >
-                <img
+                <img loading="lazy"
                   className="rounded-lg h-80 w-full"
                   src={parseImageFromHtml(mainArticle)}
                   alt="Main News"
@@ -79,7 +79,7 @@ export default function News() {
                           rel="noopener noreferrer"
                           className=" bg-[rgb(49_93_112)] py-3 px-2 rounded-lg flex space-x-2 transition hover:bg-white hover:text-green-800"
                         >
-                          <img
+                          <img loading="lazy"
                             src={parseImageFromHtml(item)}
                             alt="News Thumbnail"
                             className="rounded-md h-36 w-44"
@@ -100,7 +100,7 @@ export default function News() {
                 href={mainArticle?.link}
                 target="_blank"
               >
-                <img
+                <img loading="lazy"
                   src={parseImageFromHtml(mainArticle)}
                   alt="Main News"
                   width={400}
@@ -122,7 +122,7 @@ export default function News() {
                     rel="noopener noreferrer"
                     className="bg-[rgb(49_93_112)] py-4 px-3 rounded-lg flex space-x-4"
                   >
-                    <img
+                    <img loading="lazy"
                       src={parseImageFromHtml(item)}
                       alt="News Thumbnail"
                       width={80}

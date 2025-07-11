@@ -185,7 +185,7 @@ export default function PartnerShip() {
             <div className="flex flex-col md:flex-row h-full">
               {/* Image - full width on mobile, half width on larger screens */}
               <div className="w-full md:w-1/2 xl:aspect-square">
-                <img src={selectedItem.img} alt={selectedItem.header} className="w-full object-cover h-40 xs:h-60 md:h-full rounded-xl" />
+                <img loading="lazy" src={selectedItem.img} alt={selectedItem.header} className="w-full object-cover h-40 xs:h-60 md:h-full rounded-xl" />
               </div>
 
               {/* Right side - Content */}

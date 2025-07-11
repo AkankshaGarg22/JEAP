@@ -44,7 +44,7 @@ export default function CholeraOutbreak() {
             </Paragraph>
           </div>
            <div className=" h-full md:w-1/2">
-            <img className="md:w-full h-64 object-cover pb-4 md:pb-4" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00093.jpg"></img>
+            <img loading="lazy" className="md:w-full h-64 object-cover pb-4 md:pb-4" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/WHO00093.jpg"></img>
           </div>
         </div>
 

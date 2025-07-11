@@ -9,7 +9,7 @@ export default function Continent() {
           <AnimatedHeading linecolor="black" className="w-1/2">
           17 Countries Have Onboarded AVOHC-SURGE Members
           </AnimatedHeading>
-          <img className="w-full h-full object-contain" src="/assets/blog/case-studies/Gender_equality/Webp_format/map.svg" alt="JEAP Supported Countries Map" />
+          <img loading="lazy" className="w-full h-full object-contain" src="/assets/blog/case-studies/Gender_equality/Webp_format/map.svg" alt="JEAP Supported Countries Map" />
         </div>
 
         <div className="md:w-[50%] h-full flex flex-col items-start p-4 gap-12">
@@ -27,7 +27,7 @@ export default function Continent() {
         </div>
       </div>
       <div className="w-full h-64 md:h-[40rem]">
-        <img className="h-full w-full object-cover object-top" src="/assets/blog/case-studies/Gender_equality/Webp_format/6.webp" alt="" />
+        <img loading="lazy" className="h-full w-full object-cover object-top" src="/assets/blog/case-studies/Gender_equality/Webp_format/6.webp" alt="" />
       </div>
     </section>
   );

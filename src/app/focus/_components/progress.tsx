@@ -9,7 +9,7 @@ export default function Progress() {
         {/* Image container - hidden on mobile, shown on md+ screens */}
         <div className="basis-1/3">
           <div className="aspect-square h-full w-full relative rounded-lg overflow-hidden">
-            <img className="object-cover h-full w-full" src="/assets/blog/about/partnership/3.webp" alt="Mother and child" />
+            <img loading="lazy" className="object-cover h-full w-full" src="/assets/blog/about/partnership/3.webp" alt="Mother and child" />
           </div>
         </div>
 

@@ -16,17 +16,17 @@ export function Footer() {
     
     {/* Column 1: Three Images - responsive arrangement */}
     <div className="flex flex-row space-x-4 items-center justify-center md:gap-10">
-      <img
+      <img loading="lazy"
         src="/assets/blog/social-media/JEAP-white.svg"
         alt="Image 1"
          className="md:w-auto w-[30%] object-cover rounded"
       />
-      <img
+      <img loading="lazy"
         src="/assets/blog/social-media/Group-121.svg"
         alt="Image 2"
          className="md:w-auto w-[30%] object-cover rounded"
       />
-      <img
+      <img loading="lazy"
         src="/assets/blog/social-media/Africa-CDC-white.svg"
         alt="Image 3"
          className="md:w-auto w-[30%] object-cover rounded"
@@ -51,22 +51,22 @@ export function Footer() {
     <div className="w-full flex flex-col-reverse lg:flex-row sm:flex-col-reverse justify-center items-center lg:pb-4 px-4 space-y-2 md:space-y-0">
       <p className="text-s text-white font-ArialRegular text-center lg:p-0 p-4">© 2025 Joint Emergency Action Plan. All rights reserved.</p>
       {/* <div className="flex flex-row space-x-3 lg:p-0 p-2">
-        <img
+        <img loading="lazy"
           src="/assets/blog/social-media/instagram.svg"
           alt="Social 1"
           className="w-8 h-8"
         />
-        <img
+        <img loading="lazy"
           src="/assets/blog/social-media/facebook.svg"
           alt="Social 2"
           className="w-8 h-8"
         />
-        <img
+        <img loading="lazy"
           src="/assets/blog/social-media/twitter.svg"
           alt="Social 3"
           className="w-8 h-8"
         />
-        <img
+        <img loading="lazy"
           src="/assets/blog/social-media/linkedin.svg"
           alt="Social 3"
           className="w-8 h-8"

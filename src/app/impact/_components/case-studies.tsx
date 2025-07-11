@@ -35,7 +35,7 @@ const AlternateContent: React.FC<AlternateContentProps> = ({
         className="lg:w-[400px] lg:h-[360px] md:w-[80%] md:h-[60%] bg-white/10 flex items-center justify-center shadow-md backdrop-blur-lg"
         data-aos="fade-up"
       >
-        <img
+        <img loading="lazy"
           src={imageSrc}
           alt={text}
           className="w-[300px] h-[260px] cursor-pointer"

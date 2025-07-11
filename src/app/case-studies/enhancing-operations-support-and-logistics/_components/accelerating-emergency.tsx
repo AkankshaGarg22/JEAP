@@ -6,7 +6,7 @@ export default function AcceleratingEmergency() {
     <section className="max-w-7xl mx-auto my-4 md:my-0 px-6 md:px-0">
       <div className="flex flex-col md:flex-row items-stretch justify-center md:justify-between gap-4 md:gap-0 md:mb-12">
         <div className="md:w-[50%] h-full flex flex-col justify-center items-start md:p-4 gap-12 ">
-          <img
+          <img loading="lazy"
             className="w-full h-full object-contain"
             src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Habinshuti M.Gorette_3L7A0736.JPG"
             alt="Accelrating Emergency"

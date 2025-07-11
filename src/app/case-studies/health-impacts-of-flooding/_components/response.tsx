@@ -25,7 +25,7 @@ export default function Response() {
       </div>
 
       <div className="w-full h-64 md:h-[30rem]">
-        <img className="h-full w-full object-cover object-center" src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/2.webp" alt="JEAP Surge" />
+        <img loading="lazy" className="h-full w-full object-cover object-center" src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/2.webp" alt="JEAP Surge" />
       </div>
 
       <div className="bg-gradient-to-t from-[#1D5539] to-[#1E2859] md:mt-12 mt-4">

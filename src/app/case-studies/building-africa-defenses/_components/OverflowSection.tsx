@@ -13,7 +13,7 @@ const OverflowSection = () => {
                   <Paragraph className="text-white">The Joint Emergency Action Plan (JEAP), a partnership led by the Africa Centres for Disease Control and Prevention (Africa CDC) and the World Health Organization (WHO), recognizes the collective yet unique needs of African nations and provides a blueprint for strengthening the continent’s health emergency preparedness and response capacities. Guided by this mandate, the JEAP seeks to ensure strengthened national public health surveillance and response systems with updated IDSR and EBS practices, as well as genomic surveillance for all 55 African countries.</Paragraph>
                 </div>
                 <div className="md:w-[60%] h-[600px] flex items-center justify-center">
-                  <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WHO_25.05.23_72dpi©CecileRolland-103.jpg" className="w-full h-full object-cover object-center"/>
+                  <img loading="lazy" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WHO_25.05.23_72dpi©CecileRolland-103.jpg" className="w-full h-full object-cover object-center"/>
                 </div>
             </div>
             {/* Member States */}
@@ -22,7 +22,7 @@ const OverflowSection = () => {
             </div>
             {/* Image */}
             <div className="lg:max-w-7xl mx-auto h-auto flex items-center justify-center">
-                  <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.24 (2).webp" className="w-full h-[auto]"/>
+                  <img loading="lazy" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.24 (2).webp" className="w-full h-[auto]"/>
             </div>
         </div>
 

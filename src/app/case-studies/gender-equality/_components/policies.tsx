@@ -77,7 +77,7 @@ export default function Policies() {
             <div key={slide.id} className="min-w-full relative px-2 mt-8 md:px-8">
               {/* Full width image as background */}
               <div className="w-3/4 md:w-[60%] h-[80%] md:h-full relative">
-                <img src={slide.imageUrl} alt={slide.altText} className="w-full h-full object-cover object-top" />
+                <img loading="lazy" src={slide.imageUrl} alt={slide.altText} className="w-full h-full object-cover object-top" />
               </div>
 
               {/* Description box overlaid on right side */}

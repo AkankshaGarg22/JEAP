@@ -82,7 +82,7 @@ export default function Landing() {
           {/** Image on left and text */}
 
           <div className="lg:col-span-4 order-3">
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/landing-image-2.jpg"
               alt="Logistic support"
               className="h-full w-full object-cover"

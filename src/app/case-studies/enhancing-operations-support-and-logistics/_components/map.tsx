@@ -15,7 +15,7 @@ export default function Map() {
             <AnimatedHeading linecolor="black" width="20%">
               Legend
             </AnimatedHeading>
-            <img
+            <img loading="lazy"
               className="w-[80%] object-contain mt-[-10%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/operations-1.svg"
               alt="JEAP Response operations"
@@ -23,12 +23,12 @@ export default function Map() {
           </div>
 
           <div className="md:w-[70%] flex justify-center items-center p-8 bg-[#A6BCAF] md:rounded-[45px] relative">
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5649.svg"
               alt="left arrow"
               className="md:absolute md:right-[95%]"
             ></img>
-            <img
+            <img loading="lazy"
               className="w-full h-full object-contain"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5642.svg"
               alt="JEAP Supported Countries Map"
@@ -38,12 +38,12 @@ export default function Map() {
         {/**Map 2 */}
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-16">
           <div className="md:w-[70%] flex justify-center items-center p-8 bg-[#A6BCAF] md:rounded-[45px] relative">
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5240.svg"
               alt="map"
               className="w-full h-full object-contain"
             ></img>
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5670.svg"
               alt="right arrow"
               className="md:absolute md:left-[95%]"
@@ -53,7 +53,7 @@ export default function Map() {
             <AnimatedHeading linecolor="black" width="20%">
               Legend
             </AnimatedHeading>
-            <img
+            <img loading="lazy"
               className="w-[80%] object-contain mt-[-10%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5676.svg"
               alt="JEAP Response operations"
@@ -69,7 +69,7 @@ export default function Map() {
         {/**Map 1 */}
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 py-8">
           <div className="md:w-[70%] flex justify-center items-center p-8 bg-[#A6BCAF] md:rounded-[45px] relative">
-            <img
+            <img loading="lazy"
               className="w-full h-full object-contain"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5642.svg"
               alt="JEAP Supported Countries Map"
@@ -79,7 +79,7 @@ export default function Map() {
             <AnimatedHeading linecolor="black" width="20%">
               Legend
             </AnimatedHeading>
-            <img
+            <img loading="lazy"
               className="w-[80%] object-contain mt-[-10%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/operations-1.svg"
               alt="JEAP Response operations"
@@ -89,7 +89,7 @@ export default function Map() {
         {/**Map 2 */}
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4">
           <div className="md:w-[70%] flex justify-center items-center p-8 bg-[#A6BCAF] md:rounded-[45px] relative">
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5240.svg"
               alt="map"
               className="w-full h-full object-contain"
@@ -99,7 +99,7 @@ export default function Map() {
             <AnimatedHeading linecolor="black" width="20%">
               Legend
             </AnimatedHeading>
-            <img
+            <img loading="lazy"
               className="w-[80%] object-contain mt-[-10%]"
               src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/Group 5676.svg"
               alt="JEAP Response operations"

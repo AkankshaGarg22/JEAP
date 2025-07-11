@@ -28,7 +28,7 @@ const TextSectionFive = () => {
             </div>
 
             <div className="lg:max-w-7xl mx-auto w-[90%] h-auto flex flex-col items-center justify-center gap-6">
-                <img src="/assets/blog/case-studies/Building_Africa_Defenses/webp/JKG_0276.webp" className="w-[100%] h-auto lg:h-[500px] object-cover object-center"></img>
+                <img loading="lazy" src="/assets/blog/case-studies/Building_Africa_Defenses/webp/JKG_0276.webp" className="w-[100%] h-auto lg:h-[500px] object-cover object-center"></img>
                 <div className="w-full h-auto flex flex-col gap-6 items-center justify-center">
                 <Paragraph className="text-white ">By investing in genomic sequencing infrastructure and expertise, Africa can position itself at the forefront of global health, not only protecting its own population but also contributing invaluable data to the worldwide fight against infectious diseases. The WHO Global Genomics Strategy and the Africa CDC Continental Policy Framework for Pathogen Genomics Surveillance lay the foundation for how to push these efforts forward. </Paragraph><Paragraph className="text-white"> At the country level, there is a need for national genomic sequencing strategies to be created, adopting a One Health approach. To build a case for this strategy among national leaders, the JEAP is strengthening the evidence base for the implementation of public health pathogen genomics in Africa. This will include conducting pilot projects on high-priority use-cases to provide genomic and epidemiological evidence for public health decision-making, and building mechanisms to facilitate using the evidence.</Paragraph>
                 </div>
@@ -49,7 +49,7 @@ const TextSectionFive = () => {
 <div className="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-fr items-stretch">
   {/* First Block */}
   <div className="w-full h-full bg-transparent flex items-stretch justify-center">
-    <img
+    <img loading="lazy"
       src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WhatsApp Image 2025-02-20 at 12.18.27.webp"
       className="w-full h-full object-cover object-center"
     />
@@ -67,7 +67,7 @@ const TextSectionFive = () => {
     </Paragraph>
   </div>
   <div className="w-full h-full bg-transparent flex items-stretch justify-center order-1 lg:order-none">
-    <img
+    <img loading="lazy"
       src="/assets/blog/case-studies/Building_Africa_Defenses/webp/MDP06139_210841.webp"
       className="w-full h-full object-cover object-center"
     />

@@ -60,7 +60,7 @@ const TextSectionFour = () => {
         {/* APHL */}
         <div className="lg:max-w-7xl mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center md:py-12 py-4">
           <div className="lg:w-[35%] w-full h-auto lg:h-[350px]">
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Building_Africa_Defenses/webp/medical-test-tubes-with-blood-desk-laboratory.webp"
               className="h-full w-full object-cover object-center"
             ></img>
@@ -92,7 +92,7 @@ const TextSectionFour = () => {
             Furthermore, NICD hosted laboratory technicians from eSwatini for a
             two-week training on sequencing and bioinformatics.
           </Paragraph>
-          <img
+          <img loading="lazy"
             src="/assets/blog/case-studies/Building_Africa_Defenses/webp/Habimana Jean Pierre_3L7A0512.webp"
             className="lg:h-[550px] lg:w-[100%] w-[90%] h-auto object-cover object-center md:pt-6"
           ></img>
@@ -116,7 +116,7 @@ const TextSectionFour = () => {
             </div>
 
             <div className="lg:w-[58%] w-full h-auto flex items-center justify-center">
-              <img
+              <img loading="lazy"
                 src="/assets/blog/case-studies/Building_Africa_Defenses/webp/WHO_Malawi-146985.webp"
                 alt="WHO Malawi"
                 className="w-100% h-auto"
@@ -151,7 +151,7 @@ const TextSectionFour = () => {
             </Paragraph>
           </div>
           <div className="w-full h-auto lg:h-[550px] flex items-center justify-center">
-            <img
+            <img loading="lazy"
               src="/assets/blog/case-studies/Building_Africa_Defenses/webp/african-american-woman-scientist-holding-test-tube-laboratory.webp"
               className="w-full h-full object-cover object-center"
             ></img>

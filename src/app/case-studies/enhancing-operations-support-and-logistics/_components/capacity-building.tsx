@@ -20,13 +20,13 @@ export default function CapacityBuilding() {
             </Paragraph>
           </div>
           <div className="col-span-5  order-2 flex items-end justify-center">
-            <img className="h-[85%] w-full" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
+            <img loading="lazy" className="h-[85%] w-full" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
           </div>
         </div>
 
         {/** Mobile Section */}
         <div className="block lg:hidden">
-          <img className="" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
+          <img loading="lazy" className="" src="/assets/blog/case-studies/Enhancing Operations Support and Logistics/webp/Nyiraminani_Colette_3L7A1389.jpg"></img>
           <div className="px-6 mx-auto">
             <div className="md:pt-8 pt-4">
               <AnimatedHeading linecolor="black">The People at the Heart of Supply Chains: Bolstering Africa’s OSL Workforce Through Capacity Building</AnimatedHeading>

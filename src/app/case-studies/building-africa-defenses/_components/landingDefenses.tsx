@@ -82,7 +82,7 @@ export default function LandingDefenses() {
           {/* Image - Full width on both mobile and desktop, appears at bottom */}
           <div className="lg:col-span-12 order-3 mt-6">
             <div className="w-full h-64 md:h-80 relative">
-              <img
+              <img loading="lazy"
                 src="/assets/blog/case-studies/Building_Africa_Defenses/webp/JKG_0940.webp"
                 alt="JEAP Partnership Meeting"
                 className="w-full h-full object-cover object-left-top rounded-lg"

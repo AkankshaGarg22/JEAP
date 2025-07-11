@@ -29,7 +29,7 @@ export default function Responders() {
           {/* Image Container - Will stretch to match content height */}
           <div className="lg:w-2/5 lg:p-16">
             <div className="h-80 lg:h-full w-full">
-              <img src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/4.webp" alt="Woman health worker walking in a green field" className="object-cover h-full w-full" />
+              <img loading="lazy" src="/assets/blog/case-studies/flooding in the Republic of Congo/Webp/4.webp" alt="Woman health worker walking in a green field" className="object-cover h-full w-full" />
             </div>
           </div>
         </div>

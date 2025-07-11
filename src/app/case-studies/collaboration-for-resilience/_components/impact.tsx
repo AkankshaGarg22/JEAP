@@ -69,7 +69,7 @@ export default function Impact() {
             <div className="flex items-start gap-4">
               <div className="text-4xl font-bold">{item.count}</div>
               <div className="text-white">
-                <img className="h-10 w-10" src={item.icon} alt="icon" />
+                <img loading="lazy" className="h-10 w-10" src={item.icon} alt="icon" />
               </div>
             </div>
             <div>
@@ -87,7 +87,7 @@ export default function Impact() {
         <div className="grid grid-cols-3 border-t border-b w-full">
           {/* Panel 1: Icon */}
           <div className=" p-6 flex justify-center items-start pt-10 border-r">
-            <img
+            <img loading="lazy"
               className="h-24 w-24"
               src={proposals[currentSlide].icon}
               alt="icon"
@@ -111,7 +111,7 @@ export default function Impact() {
 
           {/* Panel 3: Image */}
           <div className="h-96">
-            <img
+            <img loading="lazy"
               src={proposals[currentSlide].img}
               alt={proposals[currentSlide].title}
               className="w-full h-full object-cover"
