@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
-import OuterCircle from "./outerCircle";
-import InnerCircle from "./innerCircle";
+import dynamic from 'next/dynamic';
 import { useMediaQuery } from "@react-hook/media-query";
+
+const OuterCircle = dynamic(() => import('./outerCircle'), { ssr: false });
+const InnerCircle = dynamic(() => import('./innerCircle'), { ssr: false });
 
 export default function TurnAroundTime({ isVisible }: {isVisible: boolean}) {
   const isXlScreen = useMediaQuery("only screen and (min-width: 1200px)"); // adjust the breakpoint as needed
