@@ -7,7 +7,7 @@ import Paragraph from "../../_components/paragraph";
 
 export default function PlanningForFuture() {
   return (
-    <section className="min-h-screen bg-white">
+    <section className="min-h-full bg-white">
       {/* Main Content */}
       <div className=" md:py-10  bg-gradient-to-b  from-[#01205d] via-[#195334] to-[#1b5632] text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 px-6 md:px-12 py-8 md:py-0">
